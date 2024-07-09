@@ -1,0 +1,959 @@
+-- phpMyAdmin SQL Dump
+-- version 5.2.0
+-- https://www.phpmyadmin.net/
+--
+-- Host: 127.0.0.1
+-- Generation Time: Jul 09, 2024 at 07:11 AM
+-- Server version: 8.0.29
+-- PHP Version: 8.1.27
+
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+START TRANSACTION;
+SET time_zone = "+00:00";
+
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8mb4 */;
+
+--
+-- Database: `top_crm`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `account`
+--
+
+CREATE TABLE `account` (
+  `id` varchar(17) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `name` varchar(249) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `deleted` tinyint(1) DEFAULT '0',
+  `website` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `type` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `industry` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `sic_code` varchar(40) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `billing_address_street` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `billing_address_city` varchar(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `billing_address_state` varchar(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `billing_address_country` varchar(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `billing_address_postal_code` varchar(40) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `shipping_address_street` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `shipping_address_city` varchar(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `shipping_address_state` varchar(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `shipping_address_country` varchar(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `shipping_address_postal_code` varchar(40) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `description` mediumtext CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci,
+  `created_at` datetime DEFAULT NULL,
+  `modified_at` datetime DEFAULT NULL,
+  `campaign_id` varchar(17) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `created_by_id` varchar(17) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `modified_by_id` varchar(17) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `assigned_user_id` varchar(17) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `price_book_id` varchar(17) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3 COLLATE=utf8_unicode_ci;
+
+--
+-- Dumping data for table `account`
+--
+
+INSERT INTO `account` (`id`, `name`, `deleted`, `website`, `type`, `industry`, `sic_code`, `billing_address_street`, `billing_address_city`, `billing_address_state`, `billing_address_country`, `billing_address_postal_code`, `shipping_address_street`, `shipping_address_city`, `shipping_address_state`, `shipping_address_country`, `shipping_address_postal_code`, `description`, `created_at`, `modified_at`, `campaign_id`, `created_by_id`, `modified_by_id`, `assigned_user_id`, `price_book_id`) VALUES
+('66843af62ca32783f', 'Dennis', 0, NULL, NULL, NULL, NULL, 'Jl Sedayu City', 'Kelapa Gading', 'Jakarta Utara', 'Indonesia', '13920', 'Jl Sedayu City', 'Kelapa Gading', 'Jakarta Utara', 'Indonesia', '13920', NULL, '2024-07-02 17:37:58', '2024-07-07 19:05:54', NULL, '667b00193d9ca8e50', '667b00193d9ca8e50', NULL, NULL);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `account_contact`
+--
+
+CREATE TABLE `account_contact` (
+  `id` bigint NOT NULL,
+  `account_id` varchar(17) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `contact_id` varchar(17) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `role` varchar(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `is_inactive` tinyint(1) DEFAULT '0',
+  `deleted` tinyint(1) DEFAULT '0'
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3 COLLATE=utf8_unicode_ci;
+
+--
+-- Dumping data for table `account_contact`
+--
+
+INSERT INTO `account_contact` (`id`, `account_id`, `contact_id`, `role`, `is_inactive`, `deleted`) VALUES
+(1, '66843af62ca32783f', '66843b0c46932b50d', NULL, 0, 0);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `account_document`
+--
+
+CREATE TABLE `account_document` (
+  `id` bigint NOT NULL,
+  `account_id` varchar(17) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `document_id` varchar(17) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `deleted` tinyint(1) DEFAULT '0'
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3 COLLATE=utf8_unicode_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `account_portal_user`
+--
+
+CREATE TABLE `account_portal_user` (
+  `id` bigint NOT NULL,
+  `user_id` varchar(17) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `account_id` varchar(17) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `deleted` tinyint(1) DEFAULT '0'
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3 COLLATE=utf8_unicode_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `account_target_list`
+--
+
+CREATE TABLE `account_target_list` (
+  `id` bigint NOT NULL,
+  `account_id` varchar(17) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `target_list_id` varchar(17) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `opted_out` tinyint(1) DEFAULT '0',
+  `deleted` tinyint(1) DEFAULT '0'
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3 COLLATE=utf8_unicode_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `action_history_record`
+--
+
+CREATE TABLE `action_history_record` (
+  `id` varchar(17) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `deleted` tinyint(1) DEFAULT '0',
+  `number` bigint UNSIGNED NOT NULL,
+  `target_type` varchar(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `data` mediumtext CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci,
+  `action` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `created_at` datetime DEFAULT NULL,
+  `ip_address` varchar(39) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `target_id` varchar(17) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `user_id` varchar(17) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `auth_token_id` varchar(17) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `auth_log_record_id` varchar(17) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3 COLLATE=utf8_unicode_ci;
+
+--
+-- Dumping data for table `action_history_record`
+--
+
+INSERT INTO `action_history_record` (`id`, `deleted`, `number`, `target_type`, `data`, `action`, `created_at`, `ip_address`, `target_id`, `user_id`, `auth_token_id`, `auth_log_record_id`) VALUES
+('667b086b97ef387fc', 0, 1, 'CSalesPurchase', NULL, 'create', '2024-06-25 18:11:55', '127.0.0.1', '667b086b9422d1fb8', '667b00193d9ca8e50', '667b00b3efe57404b', '667b00b3f11f286a2'),
+('667b086ba3cc19ac6', 0, 2, 'CSalesPurchase', NULL, 'read', '2024-06-25 18:11:55', '127.0.0.1', '667b086b9422d1fb8', '667b00193d9ca8e50', '667b00b3efe57404b', '667b00b3f11f286a2'),
+('667b08711d29a9743', 0, 3, 'CSalesPurchase', NULL, 'delete', '2024-06-25 18:12:01', '127.0.0.1', '667b086b9422d1fb8', '667b00193d9ca8e50', '667b00b3efe57404b', '667b00b3f11f286a2'),
+('6682a1eaeb10892f7', 0, 4, 'User', NULL, 'read', '2024-07-01 12:32:42', '127.0.0.1', '667b00193d9ca8e50', '667b00193d9ca8e50', '6682a1d3c05285f60', '6682a1d3c13fc1e85'),
+('668433585445f771e', 0, 5, 'User', NULL, 'read', '2024-07-02 17:05:28', '127.0.0.1', '667b00193d9ca8e50', '667b00193d9ca8e50', '668432116f30b7c77', '668432117247215b0'),
+('6684336edbf16f56c', 0, 6, 'User', NULL, 'read', '2024-07-02 17:05:50', '127.0.0.1', '667b00193d9ca8e50', '667b00193d9ca8e50', '668432116f30b7c77', '668432117247215b0'),
+('668435568f3833728', 0, 7, 'User', NULL, 'read', '2024-07-02 17:13:58', '127.0.0.1', '667b00193d9ca8e50', '667b00193d9ca8e50', '668432116f30b7c77', '668432117247215b0'),
+('66843a141e0f4cc14', 0, 8, 'Attachment', NULL, 'create', '2024-07-02 17:34:12', '127.0.0.1', '66843a140c991441e', '667b00193d9ca8e50', '668432116f30b7c77', '668432117247215b0'),
+('66843a4a8a2abff2b', 0, 9, 'Attachment', NULL, 'create', '2024-07-02 17:35:06', '127.0.0.1', '66843a4a86eb7ab48', '667b00193d9ca8e50', '668432116f30b7c77', '668432117247215b0'),
+('66843af637978658a', 0, 10, 'Account', NULL, 'create', '2024-07-02 17:37:58', '127.0.0.1', '66843af62ca32783f', '667b00193d9ca8e50', '668432116f30b7c77', '668432117247215b0'),
+('66843b0c50d4a4002', 0, 11, 'Contact', NULL, 'create', '2024-07-02 17:38:20', '127.0.0.1', '66843b0c46932b50d', '667b00193d9ca8e50', '668432116f30b7c77', '668432117247215b0'),
+('66843d6ef15bd90a4', 0, 12, 'Product', NULL, 'create', '2024-07-02 17:48:30', '127.0.0.1', '66843d6ee8b916ba7', '667b00193d9ca8e50', '668432116f30b7c77', '668432117247215b0'),
+('66843d6f0e9aae51b', 0, 13, 'Product', NULL, 'read', '2024-07-02 17:48:31', '127.0.0.1', '66843d6ee8b916ba7', '667b00193d9ca8e50', '668432116f30b7c77', '668432117247215b0'),
+('66843db892b4ec2f5', 0, 14, 'SalesOrder', NULL, 'create', '2024-07-02 17:49:44', '127.0.0.1', '66843db887d7d3c23', '667b00193d9ca8e50', '668432116f30b7c77', '668432117247215b0'),
+('66843db8a7cafb8ce', 0, 15, 'SalesOrder', NULL, 'read', '2024-07-02 17:49:44', '127.0.0.1', '66843db887d7d3c23', '667b00193d9ca8e50', '668432116f30b7c77', '668432117247215b0'),
+('66843ecf8f0639422', 0, 16, 'SalesOrder', NULL, 'read', '2024-07-02 17:54:23', '127.0.0.1', '66843db887d7d3c23', '667b00193d9ca8e50', '668432116f30b7c77', '668432117247215b0'),
+('66843fe3089044095', 0, 17, 'Warehouse', NULL, 'create', '2024-07-02 17:58:59', '127.0.0.1', '66843fe2f2c45d1ad', '667b00193d9ca8e50', '668432116f30b7c77', '668432117247215b0'),
+('66843fe319e6d7431', 0, 18, 'Warehouse', NULL, 'read', '2024-07-02 17:58:59', '127.0.0.1', '66843fe2f2c45d1ad', '667b00193d9ca8e50', '668432116f30b7c77', '668432117247215b0'),
+('66843fe656b9a8b0e', 0, 19, 'Warehouse', NULL, 'read', '2024-07-02 17:59:02', '127.0.0.1', '66843fe2f2c45d1ad', '667b00193d9ca8e50', '668432116f30b7c77', '668432117247215b0'),
+('66843febd77a20702', 0, 20, 'Product', NULL, 'read', '2024-07-02 17:59:07', '127.0.0.1', '66843d6ee8b916ba7', '667b00193d9ca8e50', '668432116f30b7c77', '668432117247215b0'),
+('6685220b7bd1d6e5e', 0, 21, 'SalesOrder', NULL, 'read', '2024-07-03 10:03:55', '127.0.0.1', '66843db887d7d3c23', '667b00193d9ca8e50', '668432116f30b7c77', '668432117247215b0'),
+('6685229c08c916c1a', 0, 22, 'Warehouse', NULL, 'read', '2024-07-03 10:06:20', '127.0.0.1', '66843fe2f2c45d1ad', '667b00193d9ca8e50', '668432116f30b7c77', '668432117247215b0'),
+('668522a2bedd27fad', 0, 23, 'Product', NULL, 'read', '2024-07-03 10:06:26', '127.0.0.1', '66843d6ee8b916ba7', '667b00193d9ca8e50', '668432116f30b7c77', '668432117247215b0'),
+('668522ca150fd6b32', 0, 24, 'SalesOrder', NULL, 'read', '2024-07-03 10:07:06', '127.0.0.1', '66843db887d7d3c23', '667b00193d9ca8e50', '668432116f30b7c77', '668432117247215b0'),
+('668522e41a4aeec08', 0, 25, 'SalesOrder', NULL, 'read', '2024-07-03 10:07:32', '127.0.0.1', '66843db887d7d3c23', '667b00193d9ca8e50', '668432116f30b7c77', '668432117247215b0'),
+('66852486beaaaa666', 0, 26, 'SalesOrder', NULL, 'read', '2024-07-03 10:14:30', '127.0.0.1', '66843db887d7d3c23', '667b00193d9ca8e50', '668432116f30b7c77', '668432117247215b0'),
+('668524c4aa81dcce6', 0, 27, 'SalesOrder', NULL, 'read', '2024-07-03 10:15:32', '127.0.0.1', '66843db887d7d3c23', '667b00193d9ca8e50', '668432116f30b7c77', '668432117247215b0'),
+('668524dce9bda53a6', 0, 28, 'Template', NULL, 'read', '2024-07-03 10:15:56', '127.0.0.1', '011', '667b00193d9ca8e50', '668432116f30b7c77', '668432117247215b0'),
+('668524ffab4b5009b', 0, 29, 'Template', NULL, 'read', '2024-07-03 10:16:31', '127.0.0.1', '021', '667b00193d9ca8e50', '668432116f30b7c77', '668432117247215b0'),
+('66859d188eb5bbde6', 0, 30, 'Product', NULL, 'read', '2024-07-03 18:48:56', '127.0.0.1', '66843d6ee8b916ba7', '667b00193d9ca8e50', '66859d08906d5521b', '66859d0892d48dca5'),
+('6685a9ef062eb497d', 0, 31, 'SalesOrder', NULL, 'read', '2024-07-03 19:43:43', '127.0.0.1', '66843db887d7d3c23', '667b00193d9ca8e50', '66859d08906d5521b', '66859d0892d48dca5'),
+('668639e60bc39d942', 0, 32, 'Warehouse', NULL, 'read', '2024-07-04 05:57:58', '127.0.0.1', '66843fe2f2c45d1ad', '667b00193d9ca8e50', '66859d08906d5521b', '66859d0892d48dca5'),
+('66863a9180826f050', 0, 33, 'User', NULL, 'read', '2024-07-04 06:00:49', '127.0.0.1', '667b00193d9ca8e50', '667b00193d9ca8e50', '66859d08906d5521b', '66859d0892d48dca5'),
+('66863b70f214279ca', 0, 34, 'Attachment', NULL, 'create', '2024-07-04 06:04:32', '::1', '66863b70e856c11f7', '667b00193d9ca8e50', '668636e4d17b152ad', '668636e4d2a1af58e'),
+('66863b839650bc1cc', 0, 35, 'Attachment', NULL, 'create', '2024-07-04 06:04:51', '::1', '66863b83955f7f698', '667b00193d9ca8e50', '668636e4d17b152ad', '668636e4d2a1af58e'),
+('668654442fef6fdb9', 0, 36, 'SalesOrder', NULL, 'read', '2024-07-04 07:50:28', '127.0.0.1', '66843db887d7d3c23', '667b00193d9ca8e50', '668653dd12eb23bdf', '668653dd13b28b986'),
+('6686547974ccf1dae', 0, 37, 'SalesOrder', NULL, 'read', '2024-07-04 07:51:21', '127.0.0.1', '66843db887d7d3c23', '667b00193d9ca8e50', '668653dd12eb23bdf', '668653dd13b28b986'),
+('668655a2508b81316', 0, 38, 'User', NULL, 'read', '2024-07-04 07:56:18', '127.0.0.1', '667b00193d9ca8e50', '667b00193d9ca8e50', '668653dd12eb23bdf', '668653dd13b28b986'),
+('668655b93e3757278', 0, 39, 'User', NULL, 'update', '2024-07-04 07:56:41', '127.0.0.1', '667b00193d9ca8e50', '667b00193d9ca8e50', '668653dd12eb23bdf', '668653dd13b28b986'),
+('668655c284ef19f7d', 0, 40, 'User', NULL, 'read', '2024-07-04 07:56:50', '127.0.0.1', '667b00193d9ca8e50', '667b00193d9ca8e50', '668655bd231f47e80', '668655bd235be3e50'),
+('668655db4de1a8fc0', 0, 41, 'User', NULL, 'update', '2024-07-04 07:57:15', '127.0.0.1', '667b00193d9ca8e50', '667b00193d9ca8e50', '668655bd231f47e80', '668655bd235be3e50'),
+('668656927ccdcb2eb', 0, 42, 'User', NULL, 'read', '2024-07-04 08:00:18', '127.0.0.1', '667b00193d9ca8e50', '667b00193d9ca8e50', '668655e19068dbcf1', '668655e190b8e457e'),
+('6686569850f20bb19', 0, 43, 'User', NULL, 'read', '2024-07-04 08:00:24', '127.0.0.1', '667b00193d9ca8e50', '667b00193d9ca8e50', '668655e19068dbcf1', '668655e190b8e457e'),
+('668656f540a984d0f', 0, 44, 'User', NULL, 'create', '2024-07-04 08:01:57', '127.0.0.1', '668656f53dd04a1c0', '667b00193d9ca8e50', '668655e19068dbcf1', '668655e190b8e457e'),
+('668656f54c958ea85', 0, 45, 'User', NULL, 'read', '2024-07-04 08:01:57', '127.0.0.1', '668656f53dd04a1c0', '667b00193d9ca8e50', '668655e19068dbcf1', '668655e190b8e457e'),
+('668656f7c9ec60957', 0, 46, 'User', NULL, 'read', '2024-07-04 08:01:59', '127.0.0.1', '668656f53dd04a1c0', '667b00193d9ca8e50', '668655e19068dbcf1', '668655e190b8e457e'),
+('66865700cac225188', 0, 47, 'User', NULL, 'update', '2024-07-04 08:02:08', '127.0.0.1', '668656f53dd04a1c0', '667b00193d9ca8e50', '668655e19068dbcf1', '668655e190b8e457e'),
+('66865700d7b3c88ca', 0, 48, 'User', NULL, 'read', '2024-07-04 08:02:08', '127.0.0.1', '668656f53dd04a1c0', '667b00193d9ca8e50', '668655e19068dbcf1', '668655e190b8e457e'),
+('66865a0740ac6c153', 0, 49, 'User', NULL, 'read', '2024-07-04 08:15:03', '127.0.0.1', '668656f53dd04a1c0', '667b00193d9ca8e50', '668655e19068dbcf1', '668655e190b8e457e'),
+('66865a08d1bc18a05', 0, 50, 'User', NULL, 'read', '2024-07-04 08:15:04', '127.0.0.1', '668656f53dd04a1c0', '667b00193d9ca8e50', '668655e19068dbcf1', '668655e190b8e457e'),
+('66865a324cdca2b23', 0, 51, 'User', NULL, 'read', '2024-07-04 08:15:46', '127.0.0.1', '668656f53dd04a1c0', '667b00193d9ca8e50', '668655e19068dbcf1', '668655e190b8e457e'),
+('66865a36da2288f55', 0, 52, 'User', NULL, 'read', '2024-07-04 08:15:50', '127.0.0.1', '667b00193d9ca8e50', '667b00193d9ca8e50', '668655e19068dbcf1', '668655e190b8e457e'),
+('66865a3b221462972', 0, 53, 'SalesOrder', NULL, 'read', '2024-07-04 08:15:55', '127.0.0.1', '66843db887d7d3c23', '667b00193d9ca8e50', '668655e19068dbcf1', '668655e190b8e457e'),
+('66865a798307e1f60', 0, 54, 'SalesOrder', NULL, 'read', '2024-07-04 08:16:57', '127.0.0.1', '66843db887d7d3c23', '667b00193d9ca8e50', '668655e19068dbcf1', '668655e190b8e457e'),
+('66865b368dc311204', 0, 55, 'SalesOrder', NULL, 'read', '2024-07-04 08:20:06', '127.0.0.1', '66843db887d7d3c23', '667b00193d9ca8e50', '668655e19068dbcf1', '668655e190b8e457e'),
+('66865b51433457a29', 0, 56, 'SalesOrder', NULL, 'update', '2024-07-04 08:20:33', '127.0.0.1', '66843db887d7d3c23', '667b00193d9ca8e50', '668655e19068dbcf1', '668655e190b8e457e'),
+('66865cc18050bbcb6', 0, 57, 'SalesOrder', NULL, 'read', '2024-07-04 08:26:41', '127.0.0.1', '66843db887d7d3c23', '667b00193d9ca8e50', '668655e19068dbcf1', '668655e190b8e457e'),
+('66865cc8cbb487109', 0, 58, 'SalesOrder', NULL, 'read', '2024-07-04 08:26:48', '127.0.0.1', '66843db887d7d3c23', '667b00193d9ca8e50', '668655e19068dbcf1', '668655e190b8e457e'),
+('66865cdd64e4fa05c', 0, 59, 'SalesOrder', NULL, 'update', '2024-07-04 08:27:09', '127.0.0.1', '66843db887d7d3c23', '667b00193d9ca8e50', '668655e19068dbcf1', '668655e190b8e457e'),
+('66865ce14e607e199', 0, 60, 'SalesOrder', NULL, 'read', '2024-07-04 08:27:13', '127.0.0.1', '66843db887d7d3c23', '667b00193d9ca8e50', '668655e19068dbcf1', '668655e190b8e457e'),
+('66865ce335f104bf3', 0, 61, 'Contact', NULL, 'read', '2024-07-04 08:27:15', '127.0.0.1', '66843b0c46932b50d', '667b00193d9ca8e50', '668655e19068dbcf1', '668655e190b8e457e'),
+('66865d323c0cacddb', 0, 62, 'Contact', NULL, 'update', '2024-07-04 08:28:34', '127.0.0.1', '66843b0c46932b50d', '667b00193d9ca8e50', '668655e19068dbcf1', '668655e190b8e457e'),
+('66865d37c5ca82706', 0, 63, 'SalesOrder', NULL, 'read', '2024-07-04 08:28:39', '127.0.0.1', '66843db887d7d3c23', '667b00193d9ca8e50', '668655e19068dbcf1', '668655e190b8e457e'),
+('66865d555d48b36f1', 0, 64, 'SalesOrder', NULL, 'read', '2024-07-04 08:29:09', '127.0.0.1', '66843db887d7d3c23', '667b00193d9ca8e50', '668655e19068dbcf1', '668655e190b8e457e'),
+('66865d57c7631e76e', 0, 65, 'SalesOrder', NULL, 'read', '2024-07-04 08:29:11', '127.0.0.1', '66843db887d7d3c23', '667b00193d9ca8e50', '668655e19068dbcf1', '668655e190b8e457e'),
+('66865d7f8bb1b81c8', 0, 66, 'Contact', NULL, 'read', '2024-07-04 08:29:51', '127.0.0.1', '66843b0c46932b50d', '667b00193d9ca8e50', '668655e19068dbcf1', '668655e190b8e457e'),
+('66865d86bb7e795a4', 0, 67, 'Contact', NULL, 'read', '2024-07-04 08:29:58', '127.0.0.1', '66843b0c46932b50d', '667b00193d9ca8e50', '668655e19068dbcf1', '668655e190b8e457e'),
+('66865d9988b73415d', 0, 68, 'SalesOrder', NULL, 'read', '2024-07-04 08:30:17', '127.0.0.1', '66843db887d7d3c23', '667b00193d9ca8e50', '668655e19068dbcf1', '668655e190b8e457e'),
+('6686762124a848b73', 0, 69, 'SalesOrder', NULL, 'read', '2024-07-04 10:14:57', '127.0.0.1', '66843db887d7d3c23', '667b00193d9ca8e50', '668655e19068dbcf1', '668655e190b8e457e'),
+('66867627b9eca064c', 0, 70, 'Product', NULL, 'read', '2024-07-04 10:15:03', '127.0.0.1', '66843d6ee8b916ba7', '667b00193d9ca8e50', '668655e19068dbcf1', '668655e190b8e457e'),
+('66867634d1dfc2aa9', 0, 71, 'SalesOrder', NULL, 'read', '2024-07-04 10:15:16', '127.0.0.1', '66843db887d7d3c23', '667b00193d9ca8e50', '668655e19068dbcf1', '668655e190b8e457e'),
+('668676d4dce93e0ea', 0, 72, 'Product', NULL, 'read', '2024-07-04 10:17:56', '127.0.0.1', '66843d6ee8b916ba7', '667b00193d9ca8e50', '668655e19068dbcf1', '668655e190b8e457e'),
+('6688cf252fe17db46', 0, 73, 'User', NULL, 'read', '2024-07-06 04:59:17', '::1', '667b00193d9ca8e50', '667b00193d9ca8e50', '6688ca66d75d82b95', '6688ca66d847830c0'),
+('6688d16d28970d92a', 0, 74, 'Contact', NULL, 'read', '2024-07-06 05:09:01', '::1', '66843b0c46932b50d', '667b00193d9ca8e50', '6688ca66d75d82b95', '6688ca66d847830c0'),
+('6688d2eaa3347d95e', 0, 75, 'Contact', NULL, 'read', '2024-07-06 05:15:22', '::1', '66843b0c46932b50d', '667b00193d9ca8e50', '6688ca66d75d82b95', '6688ca66d847830c0'),
+('6688d3d11003f191b', 0, 76, 'Account', NULL, 'read', '2024-07-06 05:19:13', '::1', '66843af62ca32783f', '667b00193d9ca8e50', '6688ca66d75d82b95', '6688ca66d847830c0'),
+('6688dc2ce06f30cb1', 0, 77, 'Product', NULL, 'read', '2024-07-06 05:54:52', '::1', '66843d6ee8b916ba7', '667b00193d9ca8e50', '6688ca66d75d82b95', '6688ca66d847830c0'),
+('6688dd3f9f34c4d32', 0, 78, 'Product', NULL, 'read', '2024-07-06 05:59:27', '::1', '66843d6ee8b916ba7', '667b00193d9ca8e50', '6688ca66d75d82b95', '6688ca66d847830c0'),
+('6688ddb92449639ca', 0, 79, 'Product', NULL, 'read', '2024-07-06 06:01:29', '::1', '66843d6ee8b916ba7', '667b00193d9ca8e50', '6688ca66d75d82b95', '6688ca66d847830c0'),
+('66895fa65ca8ea613', 0, 80, 'SalesOrder', NULL, 'read', '2024-07-06 15:15:50', '127.0.0.1', '66843db887d7d3c23', '667b00193d9ca8e50', '668655e19068dbcf1', '668655e190b8e457e'),
+('6689e2a0a7c3b740b', 0, 81, 'SalesOrder', NULL, 'read', '2024-07-07 00:34:40', '127.0.0.1', '66843db887d7d3c23', '667b00193d9ca8e50', '668655e19068dbcf1', '668655e190b8e457e'),
+('668ab3fc22106922a', 0, 82, 'User', NULL, 'read', '2024-07-07 15:27:56', '127.0.0.1', '667b00193d9ca8e50', '667b00193d9ca8e50', '668ab0fcba9c7be6e', '668ab0fcbade3c104'),
+('668ab41faf1b23c06', 0, 83, 'Account', NULL, 'read', '2024-07-07 15:28:31', '127.0.0.1', '66843af62ca32783f', '667b00193d9ca8e50', '668ab0fcba9c7be6e', '668ab0fcbade3c104'),
+('668ab42e995012921', 0, 84, 'Account', NULL, 'read', '2024-07-07 15:28:46', '127.0.0.1', '66843af62ca32783f', '667b00193d9ca8e50', '668ab0fcba9c7be6e', '668ab0fcbade3c104'),
+('668ab430a60708de0', 0, 85, 'Contact', NULL, 'read', '2024-07-07 15:28:48', '127.0.0.1', '66843b0c46932b50d', '667b00193d9ca8e50', '668ab0fcba9c7be6e', '668ab0fcbade3c104'),
+('668ab43a4c395a41b', 0, 86, 'Contact', NULL, 'read', '2024-07-07 15:28:58', '127.0.0.1', '66843b0c46932b50d', '667b00193d9ca8e50', '668ab0fcba9c7be6e', '668ab0fcbade3c104'),
+('668ab43b2a3687524', 0, 87, 'Account', NULL, 'read', '2024-07-07 15:28:59', '127.0.0.1', '66843af62ca32783f', '667b00193d9ca8e50', '668ab0fcba9c7be6e', '668ab0fcbade3c104'),
+('668ab454b247a80e8', 0, 88, 'Account', NULL, 'update', '2024-07-07 15:29:24', '127.0.0.1', '66843af62ca32783f', '667b00193d9ca8e50', '668ab0fcba9c7be6e', '668ab0fcbade3c104'),
+('668ab45e81bb7db34', 0, 89, 'Account', NULL, 'read', '2024-07-07 15:29:34', '127.0.0.1', '66843af62ca32783f', '667b00193d9ca8e50', '668ab0fcba9c7be6e', '668ab0fcbade3c104'),
+('668ab460dd5653c71', 0, 90, 'Contact', NULL, 'read', '2024-07-07 15:29:36', '127.0.0.1', '66843b0c46932b50d', '667b00193d9ca8e50', '668ab0fcba9c7be6e', '668ab0fcbade3c104'),
+('668ab48fb5249e08b', 0, 91, 'Contact', NULL, 'read', '2024-07-07 15:30:23', '127.0.0.1', '66843b0c46932b50d', '667b00193d9ca8e50', '668ab0fcba9c7be6e', '668ab0fcbade3c104'),
+('668ab5dabd0c23f4b', 0, 92, 'Account', NULL, 'read', '2024-07-07 15:35:54', '127.0.0.1', '66843af62ca32783f', '667b00193d9ca8e50', '668ab0fcba9c7be6e', '668ab0fcbade3c104'),
+('668ab5dc89dbd51ca', 0, 93, 'Account', NULL, 'read', '2024-07-07 15:35:56', '127.0.0.1', '66843af62ca32783f', '667b00193d9ca8e50', '668ab0fcba9c7be6e', '668ab0fcbade3c104'),
+('668ab5f5f3773695d', 0, 94, 'Contact', NULL, 'read', '2024-07-07 15:36:21', '127.0.0.1', '66843b0c46932b50d', '667b00193d9ca8e50', '668ab0fcba9c7be6e', '668ab0fcbade3c104'),
+('668ab970a0f91559a', 0, 95, 'Account', NULL, 'read', '2024-07-07 15:51:12', '127.0.0.1', '66843af62ca32783f', '667b00193d9ca8e50', '668ab0fcba9c7be6e', '668ab0fcbade3c104'),
+('668ab9735f4de9e2e', 0, 96, 'SalesOrder', NULL, 'read', '2024-07-07 15:51:15', '127.0.0.1', '66843db887d7d3c23', '667b00193d9ca8e50', '668ab0fcba9c7be6e', '668ab0fcbade3c104'),
+('668ab97b8d752208f', 0, 97, 'Account', NULL, 'read', '2024-07-07 15:51:23', '127.0.0.1', '66843af62ca32783f', '667b00193d9ca8e50', '668ab0fcba9c7be6e', '668ab0fcbade3c104'),
+('668ab9a3656ac6bf2', 0, 98, 'SalesOrder', NULL, 'read', '2024-07-07 15:52:03', '127.0.0.1', '66843db887d7d3c23', '667b00193d9ca8e50', '668ab0fcba9c7be6e', '668ab0fcbade3c104'),
+('668abdfc4a068b4bf', 0, 99, 'SalesOrder', NULL, 'read', '2024-07-07 16:10:36', '127.0.0.1', '66843db887d7d3c23', '667b00193d9ca8e50', '668ab0fcba9c7be6e', '668ab0fcbade3c104'),
+('668abe52d97ffae69', 0, 100, 'SalesOrder', NULL, 'read', '2024-07-07 16:12:02', '127.0.0.1', '66843db887d7d3c23', '667b00193d9ca8e50', '668ab0fcba9c7be6e', '668ab0fcbade3c104'),
+('668abe665249aa641', 0, 101, 'SalesOrder', NULL, 'read', '2024-07-07 16:12:22', '127.0.0.1', '66843db887d7d3c23', '667b00193d9ca8e50', '668ab0fcba9c7be6e', '668ab0fcbade3c104'),
+('668abea935d85e793', 0, 102, 'SalesOrder', NULL, 'read', '2024-07-07 16:13:29', '127.0.0.1', '66843db887d7d3c23', '667b00193d9ca8e50', '668ab0fcba9c7be6e', '668ab0fcbade3c104'),
+('668abf0f7604be027', 0, 103, 'SalesOrder', NULL, 'read', '2024-07-07 16:15:11', '127.0.0.1', '66843db887d7d3c23', '667b00193d9ca8e50', '668ab0fcba9c7be6e', '668ab0fcbade3c104'),
+('668abf1e8c8e14f2e', 0, 104, 'SalesOrder', NULL, 'read', '2024-07-07 16:15:26', '127.0.0.1', '66843db887d7d3c23', '667b00193d9ca8e50', '668ab0fcba9c7be6e', '668ab0fcbade3c104'),
+('668abf87664791d8a', 0, 105, 'SalesOrder', NULL, 'read', '2024-07-07 16:17:11', '127.0.0.1', '66843db887d7d3c23', '667b00193d9ca8e50', '668ab0fcba9c7be6e', '668ab0fcbade3c104'),
+('668abf9ca08be05e2', 0, 106, 'SalesOrder', NULL, 'read', '2024-07-07 16:17:32', '127.0.0.1', '66843db887d7d3c23', '667b00193d9ca8e50', '668ab0fcba9c7be6e', '668ab0fcbade3c104'),
+('668ae6c6c61bf3791', 0, 107, 'SalesOrder', NULL, 'read', '2024-07-07 19:04:38', '127.0.0.1', '66843db887d7d3c23', '667b00193d9ca8e50', '668ae4125992d9792', '668ae41259f3ba887'),
+('668ae6eea0996e6d7', 0, 108, 'Account', NULL, 'read', '2024-07-07 19:05:18', '127.0.0.1', '66843af62ca32783f', '667b00193d9ca8e50', '668ae4125992d9792', '668ae41259f3ba887'),
+('668ae71296dddc788', 0, 109, 'Account', NULL, 'update', '2024-07-07 19:05:54', '127.0.0.1', '66843af62ca32783f', '667b00193d9ca8e50', '668ae4125992d9792', '668ae41259f3ba887'),
+('668ae716b6144eb9f', 0, 110, 'SalesOrder', NULL, 'read', '2024-07-07 19:05:58', '127.0.0.1', '66843db887d7d3c23', '667b00193d9ca8e50', '668ae4125992d9792', '668ae41259f3ba887'),
+('668ae7e79d59e1c45', 0, 111, 'SalesOrder', NULL, 'read', '2024-07-07 19:09:27', '127.0.0.1', '66843db887d7d3c23', '667b00193d9ca8e50', '668ae4125992d9792', '668ae41259f3ba887'),
+('668ae82721e1abbc1', 0, 112, 'SalesOrder', NULL, 'read', '2024-07-07 19:10:31', '127.0.0.1', '66843db887d7d3c23', '667b00193d9ca8e50', '668ae4125992d9792', '668ae41259f3ba887'),
+('668ae836801516036', 0, 113, 'SalesOrder', NULL, 'read', '2024-07-07 19:10:46', '127.0.0.1', '66843db887d7d3c23', '667b00193d9ca8e50', '668ae4125992d9792', '668ae41259f3ba887'),
+('668ae85a236068667', 0, 114, 'SalesOrder', NULL, 'read', '2024-07-07 19:11:22', '127.0.0.1', '66843db887d7d3c23', '667b00193d9ca8e50', '668ae4125992d9792', '668ae41259f3ba887'),
+('668ae9c9dd5d98e07', 0, 115, 'SalesOrder', NULL, 'read', '2024-07-07 19:17:29', '127.0.0.1', '66843db887d7d3c23', '667b00193d9ca8e50', '668ae4125992d9792', '668ae41259f3ba887'),
+('668ae9cbb457a78a8', 0, 116, 'SalesOrder', NULL, 'read', '2024-07-07 19:17:31', '127.0.0.1', '66843db887d7d3c23', '667b00193d9ca8e50', '668ae4125992d9792', '668ae41259f3ba887'),
+('668ae9dbde2fccb45', 0, 117, 'SalesOrder', NULL, 'update', '2024-07-07 19:17:47', '127.0.0.1', '66843db887d7d3c23', '667b00193d9ca8e50', '668ae4125992d9792', '668ae41259f3ba887'),
+('668aea0acb69a3be5', 0, 118, 'SalesOrder', NULL, 'update', '2024-07-07 19:18:34', '127.0.0.1', '66843db887d7d3c23', '667b00193d9ca8e50', '668ae4125992d9792', '668ae41259f3ba887'),
+('668be7b5f14213262', 0, 119, 'Product', NULL, 'read', '2024-07-08 13:20:53', '127.0.0.1', '66843d6ee8b916ba7', '667b00193d9ca8e50', '668ae4125992d9792', '668ae41259f3ba887'),
+('668be7be86ff6a4f0', 0, 120, 'SalesOrder', NULL, 'read', '2024-07-08 13:21:02', '127.0.0.1', '66843db887d7d3c23', '667b00193d9ca8e50', '668ae4125992d9792', '668ae41259f3ba887'),
+('668cba796e210a967', 0, 121, 'User', NULL, 'read', '2024-07-09 04:20:09', '127.0.0.1', '668cb9dbad690b66f', '668cb9dbad690b66f', '668cba5086cbac9e9', '668cba5087127d827'),
+('668cbaa864a669dd0', 0, 122, 'User', NULL, 'read', '2024-07-09 04:20:56', '127.0.0.1', '668cb9dbad690b66f', '668cb9dbad690b66f', '668cba5086cbac9e9', '668cba5087127d827'),
+('668cbac7e3bc8b2f3', 0, 123, 'User', NULL, 'read', '2024-07-09 04:21:27', '127.0.0.1', '667b00193d9ca8e50', '667b00193d9ca8e50', '668ae4125992d9792', '668ae41259f3ba887'),
+('668cbae5a6aea3514', 0, 124, 'User', NULL, 'read', '2024-07-09 04:21:57', '127.0.0.1', '667b00193d9ca8e50', '667b00193d9ca8e50', '668ae4125992d9792', '668ae41259f3ba887');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `address_country`
+--
+
+CREATE TABLE `address_country` (
+  `id` varchar(17) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `name` varchar(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `code` varchar(2) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `is_preferred` tinyint(1) NOT NULL DEFAULT '0'
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3 COLLATE=utf8_unicode_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `app_log_record`
+--
+
+CREATE TABLE `app_log_record` (
+  `id` varchar(17) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `deleted` tinyint(1) DEFAULT '0',
+  `number` bigint UNSIGNED NOT NULL,
+  `created_at` datetime DEFAULT NULL,
+  `message` mediumtext CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci,
+  `level` varchar(9) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `code` int DEFAULT NULL,
+  `exception_class` varchar(512) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `file` varchar(512) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `line` int DEFAULT NULL,
+  `request_method` varchar(7) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `request_resource_path` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `request_url` varchar(512) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3 COLLATE=utf8_unicode_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `array_value`
+--
+
+CREATE TABLE `array_value` (
+  `id` varchar(17) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `deleted` tinyint(1) DEFAULT '0',
+  `value` varchar(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `attribute` varchar(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `entity_id` varchar(17) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `entity_type` varchar(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3 COLLATE=utf8_unicode_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `attachment`
+--
+
+CREATE TABLE `attachment` (
+  `id` varchar(17) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `name` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `deleted` tinyint(1) DEFAULT '0',
+  `type` varchar(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `size` bigint DEFAULT NULL,
+  `field` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `is_being_uploaded` tinyint(1) NOT NULL DEFAULT '0',
+  `created_at` datetime DEFAULT NULL,
+  `role` varchar(36) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `storage` varchar(24) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `storage_file_path` varchar(260) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `global` tinyint(1) NOT NULL DEFAULT '0',
+  `parent_id` varchar(17) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `parent_type` varchar(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `related_id` varchar(17) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `related_type` varchar(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `source_id` varchar(17) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `created_by_id` varchar(17) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3 COLLATE=utf8_unicode_ci;
+
+--
+-- Dumping data for table `attachment`
+--
+
+INSERT INTO `attachment` (`id`, `name`, `deleted`, `type`, `size`, `field`, `is_being_uploaded`, `created_at`, `role`, `storage`, `storage_file_path`, `global`, `parent_id`, `parent_type`, `related_id`, `related_type`, `source_id`, `created_by_id`) VALUES
+('66843a140c991441e', 'digitalnestlogo.png', 0, 'image/png', 280087, 'companyLogo', 0, '2024-07-02 17:34:12', 'Attachment', 'EspoUploadDir', NULL, 0, NULL, NULL, NULL, 'Settings', NULL, '667b00193d9ca8e50'),
+('66843a4a86eb7ab48', 'digitalnestlogo-removebg-preview.png', 0, 'image/png', 100247, 'companyLogo', 0, '2024-07-02 17:35:06', 'Attachment', 'EspoUploadDir', NULL, 0, NULL, NULL, NULL, 'Settings', NULL, '667b00193d9ca8e50'),
+('66863b70e856c11f7', 'Screenshot 2024-07-04 at 12.58.19.png', 0, 'image/png', 199366, 'companyLogo', 0, '2024-07-04 06:04:32', 'Attachment', 'EspoUploadDir', NULL, 0, NULL, NULL, NULL, 'Settings', NULL, '667b00193d9ca8e50'),
+('66863b83955f7f698', 'Screenshot_2024-07-04_at_12.58.19-removebg-preview.png', 0, 'image/png', 94800, 'companyLogo', 0, '2024-07-04 06:04:51', 'Attachment', 'EspoUploadDir', NULL, 0, NULL, NULL, NULL, 'Settings', NULL, '667b00193d9ca8e50');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `authentication_provider`
+--
+
+CREATE TABLE `authentication_provider` (
+  `id` varchar(17) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `name` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `deleted` tinyint(1) DEFAULT '0',
+  `method` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `oidc_client_id` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `oidc_client_secret` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `oidc_authorization_endpoint` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `oidc_token_endpoint` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `oidc_jwks_endpoint` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `oidc_jwt_signature_algorithm_list` mediumtext CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci,
+  `oidc_scopes` mediumtext CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci,
+  `oidc_create_user` tinyint(1) NOT NULL DEFAULT '0',
+  `oidc_username_claim` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT 'sub',
+  `oidc_sync` tinyint(1) NOT NULL DEFAULT '0',
+  `oidc_logout_url` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `oidc_authorization_prompt` varchar(14) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3 COLLATE=utf8_unicode_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `auth_log_record`
+--
+
+CREATE TABLE `auth_log_record` (
+  `id` varchar(17) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `deleted` tinyint(1) DEFAULT '0',
+  `username` varchar(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `ip_address` varchar(45) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `created_at` datetime DEFAULT NULL,
+  `is_denied` tinyint(1) NOT NULL DEFAULT '0',
+  `denial_reason` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `request_time` double DEFAULT NULL,
+  `request_url` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `request_method` varchar(15) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `authentication_method` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `portal_id` varchar(17) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `user_id` varchar(17) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `auth_token_id` varchar(17) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3 COLLATE=utf8_unicode_ci;
+
+--
+-- Dumping data for table `auth_log_record`
+--
+
+INSERT INTO `auth_log_record` (`id`, `deleted`, `username`, `ip_address`, `created_at`, `is_denied`, `denial_reason`, `request_time`, `request_url`, `request_method`, `authentication_method`, `portal_id`, `user_id`, `auth_token_id`) VALUES
+('667b00b3f11f286a2', 0, 'admin', '127.0.0.1', '2024-06-25 17:38:59', 0, NULL, 1719337139.8966, 'http://localhost/crm/api/v1/App/user', 'GET', 'Espo', NULL, '667b00193d9ca8e50', '667b00b3efe57404b'),
+('667b0a3eb5d8e1bce', 0, 'admin', '127.0.0.1', '2024-06-25 18:19:42', 0, NULL, 1719339582.6938, 'http://localhost/crm/api/v1/App/user', 'GET', 'Espo', NULL, '667b00193d9ca8e50', '667b0a3eb560bbe61'),
+('667b0be553f05fcdb', 0, 'admin', '127.0.0.1', '2024-06-25 18:26:45', 0, NULL, 1719340005.2985, 'http://localhost/crm/api/v1/App/user', 'GET', 'Espo', NULL, '667b00193d9ca8e50', '667b0be553b4224d6'),
+('667b0d69c52348920', 0, 'admin', '127.0.0.1', '2024-06-25 18:33:13', 0, NULL, 1719340393.7558, 'http://localhost/crm/api/v1/App/user', 'GET', 'Espo', NULL, '667b00193d9ca8e50', '667b0d69c42c249da'),
+('6682a1aacfd849b93', 0, 'admin', '127.0.0.1', '2024-07-01 12:31:38', 0, NULL, 1719837098.7636, 'http://localhost/crm/api/v1/App/user', 'GET', 'Espo', NULL, '667b00193d9ca8e50', '6682a1aace8f63038'),
+('6682a1b2b5d817828', 0, 'admin', '127.0.0.1', '2024-07-01 12:31:46', 0, NULL, 1719837106.637, 'http://localhost/crm/api/v1/App/user', 'GET', 'Espo', NULL, '667b00193d9ca8e50', '6682a1b2b4d95304a'),
+('6682a1bb9a065e151', 0, 'admin', '127.0.0.1', '2024-07-01 12:31:55', 0, NULL, 1719837115.5395, 'http://localhost/crm/api/v1/App/user', 'GET', 'Espo', NULL, '667b00193d9ca8e50', '6682a1bb9966645f8'),
+('6682a1d3c13fc1e85', 0, 'admin', '127.0.0.1', '2024-07-01 12:32:19', 0, NULL, 1719837139.7075, 'http://localhost/crm/api/v1/App/user', 'GET', 'Espo', NULL, '667b00193d9ca8e50', '6682a1d3c05285f60'),
+('668432117247215b0', 0, 'admin', '127.0.0.1', '2024-07-02 17:00:01', 0, NULL, 1719939601.3353, 'http://localhost/crm/api/v1/App/user', 'GET', 'Espo', NULL, '667b00193d9ca8e50', '668432116f30b7c77'),
+('66859d0892d48dca5', 0, 'admin', '127.0.0.1', '2024-07-03 18:48:40', 0, NULL, 1720032520.5461, 'https://localhost/crm/api/v1/App/user', 'GET', 'Espo', NULL, '667b00193d9ca8e50', '66859d08906d5521b'),
+('668636e4d2a1af58e', 0, 'admin', '::1', '2024-07-04 05:45:08', 0, NULL, 1720071908.8254, 'https://localhost/crm/api/v1/App/user', 'GET', 'Espo', NULL, '667b00193d9ca8e50', '668636e4d17b152ad'),
+('668653dd13b28b986', 0, 'admin', '127.0.0.1', '2024-07-04 07:48:45', 0, NULL, 1720079325.0409, 'http://localhost/crm/api/v1/App/user', 'GET', 'Espo', NULL, '667b00193d9ca8e50', '668653dd12eb23bdf'),
+('668655bd235be3e50', 0, 'superadmin', '127.0.0.1', '2024-07-04 07:56:45', 0, NULL, 1720079805.1082, 'http://localhost/crm/api/v1/App/user', 'GET', 'Espo', NULL, '667b00193d9ca8e50', '668655bd231f47e80'),
+('668655e190b8e457e', 0, 'superadmin', '127.0.0.1', '2024-07-04 07:57:21', 0, NULL, 1720079841.5579, 'http://localhost/crm/api/v1/App/user', 'GET', 'Espo', NULL, '667b00193d9ca8e50', '668655e19068dbcf1'),
+('6688c8e554716a9b9', 0, 'admin', '::1', '2024-07-06 04:32:37', 1, 'CREDENTIALS', 1720240357.2307, 'https://localhost/crm/api/v1/App/user', 'GET', 'Espo', NULL, NULL, NULL),
+('6688ca2fac52b14a2', 0, 'admin', '::1', '2024-07-06 04:38:07', 1, 'CREDENTIALS', 1720240687.6694, 'https://localhost/crm/api/v1/App/user', 'GET', 'Espo', NULL, NULL, NULL),
+('6688ca66d847830c0', 0, 'superadmin', '::1', '2024-07-06 04:39:02', 0, NULL, 1720240742.8183, 'https://localhost/crm/api/v1/App/user', 'GET', 'Espo', NULL, '667b00193d9ca8e50', '6688ca66d75d82b95'),
+('668aac4600d63d7bc', 0, 'superadmin', '127.0.0.1', '2024-07-07 14:55:02', 0, NULL, 1720364101.9399, 'http://localhost/crm/api/v1/App/user', 'GET', 'Espo', NULL, '667b00193d9ca8e50', '668aac45f30803ea0'),
+('668aad00774c3d348', 0, 'superadmin', '127.0.0.1', '2024-07-07 14:58:08', 0, NULL, 1720364288.4288, 'http://localhost/crm/api/v1/App/user', 'GET', 'Espo', NULL, '667b00193d9ca8e50', '668aad0076ebcad5e'),
+('668aaebe3e359ae87', 0, 'superadmin', '127.0.0.1', '2024-07-07 15:05:34', 0, NULL, 1720364734.1883, 'http://localhost/crm/api/v1/App/user', 'GET', 'Espo', NULL, '667b00193d9ca8e50', '668aaebe3de1318af'),
+('668ab0fcbade3c104', 0, 'superadmin', '127.0.0.1', '2024-07-07 15:15:08', 0, NULL, 1720365308.7197, 'http://localhost/crm/api/v1/App/user', 'GET', 'Espo', NULL, '667b00193d9ca8e50', '668ab0fcba9c7be6e'),
+('668ac033363f806cb', 0, 'marketing', '127.0.0.1', '2024-07-07 16:20:03', 0, NULL, 1720369203.167, 'http://localhost/crm/api/v1/App/user', 'GET', 'Espo', NULL, '668656f53dd04a1c0', '668ac033359455e4b'),
+('668ae2f8437802dd7', 0, 'superadmin', '127.0.0.1', '2024-07-07 18:48:24', 1, 'CREDENTIALS', 1720378104.2158, 'http://crm.local/api/v1/App/user', 'GET', 'Espo', NULL, NULL, NULL),
+('668ae2fd95329e93b', 0, 'admin', '127.0.0.1', '2024-07-07 18:48:29', 1, 'CREDENTIALS', 1720378109.5792, 'http://crm.local/api/v1/App/user', 'GET', 'Espo', NULL, NULL, NULL),
+('668ae3028c0e6f623', 0, 'marketing', '127.0.0.1', '2024-07-07 18:48:34', 1, 'CREDENTIALS', 1720378114.5064, 'http://crm.local/api/v1/App/user', 'GET', 'Espo', NULL, NULL, NULL),
+('668ae307658240a4e', 0, 'superadmin', '127.0.0.1', '2024-07-07 18:48:39', 1, 'CREDENTIALS', 1720378119.3779, 'http://crm.local/api/v1/App/user', 'GET', 'Espo', NULL, NULL, NULL),
+('668ae3088a3a2a136', 0, 'superadmin', '127.0.0.1', '2024-07-07 18:48:40', 1, 'CREDENTIALS', 1720378120.5245, 'http://crm.local/api/v1/App/user', 'GET', 'Espo', NULL, NULL, NULL),
+('668ae378042fe84a2', 0, 'admin', '127.0.0.1', '2024-07-07 18:50:32', 1, 'CREDENTIALS', 1720378231.9711, 'http://crm.local/api/v1/App/user', 'GET', 'Espo', NULL, NULL, NULL),
+('668ae3802b8c79ce6', 0, 'admin', '127.0.0.1', '2024-07-07 18:50:40', 1, 'CREDENTIALS', 1720378240.1414, 'http://crm.local/api/v1/App/user', 'GET', 'Espo', NULL, NULL, NULL),
+('668ae40c7008d6ff1', 0, 'admin', '127.0.0.1', '2024-07-07 18:53:00', 1, 'CREDENTIALS', 1720378380.4139, 'http://crm.local/api/v1/App/user', 'GET', 'Espo', NULL, NULL, NULL),
+('668ae41259f3ba887', 0, 'superadmin', '127.0.0.1', '2024-07-07 18:53:06', 0, NULL, 1720378386.3193, 'http://crm.local/api/v1/App/user', 'GET', 'Espo', NULL, '667b00193d9ca8e50', '668ae4125992d9792'),
+('668cb83f8a69cbf5b', 0, 'superadmin', '127.0.0.1', '2024-07-09 04:10:39', 0, NULL, 1720498239.5042, 'http://localhost/digitalnestcrm/api/v1/App/user', 'GET', 'Espo', NULL, '667b00193d9ca8e50', '668cb83f88a0c473b'),
+('668cba5087127d827', 0, 'admin', '127.0.0.1', '2024-07-09 04:19:28', 0, NULL, 1720498768.4696, 'http://localhost/digitalnestcrm/api/v1/App/user', 'GET', 'Espo', NULL, '668cb9dbad690b66f', '668cba5086cbac9e9');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `auth_token`
+--
+
+CREATE TABLE `auth_token` (
+  `id` varchar(17) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `deleted` tinyint(1) DEFAULT '0',
+  `token` varchar(36) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `hash` varchar(150) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `secret` varchar(36) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `ip_address` varchar(45) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `is_active` tinyint(1) NOT NULL DEFAULT '1',
+  `last_access` datetime DEFAULT NULL,
+  `created_at` datetime DEFAULT NULL,
+  `modified_at` datetime DEFAULT NULL,
+  `user_id` varchar(17) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `portal_id` varchar(17) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3 COLLATE=utf8_unicode_ci;
+
+--
+-- Dumping data for table `auth_token`
+--
+
+INSERT INTO `auth_token` (`id`, `deleted`, `token`, `hash`, `secret`, `ip_address`, `is_active`, `last_access`, `created_at`, `modified_at`, `user_id`, `portal_id`) VALUES
+('667b00b3efe57404b', 0, '484d6b4a31a45acc097a3363d70dc9ab', 'saEyeJiSqsgLdBh67F/mdt5j8KAERaQUA1eWSMu4yWD5Vr30uOZESUN5l0IhTo2Fp/qGZ9UdevTuICMfm3FKo.', '41482f4a5c7dcef34af7c9e9c15a7054', '127.0.0.1', 0, '2024-06-25 18:19:39', '2024-06-25 17:38:59', '2024-06-25 18:19:39', '667b00193d9ca8e50', NULL),
+('667b0a3eb560bbe61', 0, '0a7dd4cd7b4afb21ac01189dcd99c26a', 'saEyeJiSqsgLdBh67F/mdt5j8KAERaQUA1eWSMu4yWD5Vr30uOZESUN5l0IhTo2Fp/qGZ9UdevTuICMfm3FKo.', '2f8ba5fb6aef118823af0cbe8c1352bf', '127.0.0.1', 0, '2024-06-25 18:26:43', '2024-06-25 18:19:42', '2024-06-25 18:26:43', '667b00193d9ca8e50', NULL),
+('667b0be553b4224d6', 0, '4863fedf6b838b93ad7b33005adf8a24', 'saEyeJiSqsgLdBh67F/mdt5j8KAERaQUA1eWSMu4yWD5Vr30uOZESUN5l0IhTo2Fp/qGZ9UdevTuICMfm3FKo.', '74dea2ee2dd0caed3bb22943bc968ed5', '127.0.0.1', 1, '2024-07-01 12:18:17', '2024-06-25 18:26:45', '2024-07-01 12:18:17', '667b00193d9ca8e50', NULL),
+('667b0d69c42c249da', 0, '66883d1c1418175944d3de8c6ec1ea10', 'saEyeJiSqsgLdBh67F/mdt5j8KAERaQUA1eWSMu4yWD5Vr30uOZESUN5l0IhTo2Fp/qGZ9UdevTuICMfm3FKo.', 'c552e767de992c00f8cf0fb654529895', '127.0.0.1', 1, '2024-06-25 18:49:59', '2024-06-25 18:33:13', '2024-06-25 18:49:59', '667b00193d9ca8e50', NULL),
+('6682a1aace8f63038', 0, '320c915ec04449dc9a44f4ad8c6bd561', 'saEyeJiSqsgLdBh67F/mdt5j8KAERaQUA1eWSMu4yWD5Vr30uOZESUN5l0IhTo2Fp/qGZ9UdevTuICMfm3FKo.', 'ab9ec37f0bd0e64c4ea886b7d6f1a99c', '127.0.0.1', 1, '2024-07-01 12:31:39', '2024-07-01 12:31:38', '2024-07-01 12:31:39', '667b00193d9ca8e50', NULL),
+('6682a1b2b4d95304a', 0, '33dc09cfc6b6caf9ea6952e041e2b64d', 'saEyeJiSqsgLdBh67F/mdt5j8KAERaQUA1eWSMu4yWD5Vr30uOZESUN5l0IhTo2Fp/qGZ9UdevTuICMfm3FKo.', 'e5fec409858f830ca9ccb48a593a7698', '127.0.0.1', 1, '2024-07-01 12:31:47', '2024-07-01 12:31:46', '2024-07-01 12:31:47', '667b00193d9ca8e50', NULL),
+('6682a1bb9966645f8', 0, '60fc79c4e54d44dea16ae90e965fc02b', 'saEyeJiSqsgLdBh67F/mdt5j8KAERaQUA1eWSMu4yWD5Vr30uOZESUN5l0IhTo2Fp/qGZ9UdevTuICMfm3FKo.', '0d06516980751c0312962186e00830fb', '127.0.0.1', 1, '2024-07-01 12:31:55', '2024-07-01 12:31:55', '2024-07-01 12:31:55', '667b00193d9ca8e50', NULL),
+('6682a1d3c05285f60', 0, '90dcceeaa2b70fcf1b05bd3d9e7f9b7c', 'saEyeJiSqsgLdBh67F/mdt5j8KAERaQUA1eWSMu4yWD5Vr30uOZESUN5l0IhTo2Fp/qGZ9UdevTuICMfm3FKo.', 'a7e85e5a78e888e1cb5e2d52abffa139', '127.0.0.1', 1, '2024-07-01 12:33:04', '2024-07-01 12:32:19', '2024-07-01 12:33:04', '667b00193d9ca8e50', NULL),
+('668432116f30b7c77', 0, '01209b168e744028d6f0f6086245cd27', 'saEyeJiSqsgLdBh67F/mdt5j8KAERaQUA1eWSMu4yWD5Vr30uOZESUN5l0IhTo2Fp/qGZ9UdevTuICMfm3FKo.', '038854f82bde1ac132190e254d278485', '127.0.0.1', 1, '2024-07-03 15:13:09', '2024-07-02 17:00:01', '2024-07-03 15:13:09', '667b00193d9ca8e50', NULL),
+('66859d08906d5521b', 0, 'a75912c3cb2c15a311a97bdf74659451', 'saEyeJiSqsgLdBh67F/mdt5j8KAERaQUA1eWSMu4yWD5Vr30uOZESUN5l0IhTo2Fp/qGZ9UdevTuICMfm3FKo.', '83fc7352884c33a1119ddcf11b41fb68', '127.0.0.1', 1, '2024-07-04 06:53:49', '2024-07-03 18:48:40', '2024-07-04 06:53:49', '667b00193d9ca8e50', NULL),
+('668636e4d17b152ad', 0, '22fe8f1637b9ad4b9fcfec5d4e7b00d2', 'saEyeJiSqsgLdBh67F/mdt5j8KAERaQUA1eWSMu4yWD5Vr30uOZESUN5l0IhTo2Fp/qGZ9UdevTuICMfm3FKo.', 'dda45974ac0a9fe4dcdfd98716e57ef2', '::1', 1, '2024-07-04 07:56:16', '2024-07-04 05:45:08', '2024-07-04 07:56:16', '667b00193d9ca8e50', NULL),
+('668653dd12eb23bdf', 0, 'a221c3166d2cabffd32bd19e9cc17dd6', 'saEyeJiSqsgLdBh67F/mdt5j8KAERaQUA1eWSMu4yWD5Vr30uOZESUN5l0IhTo2Fp/qGZ9UdevTuICMfm3FKo.', '48795dbb869182d348c47463250a0130', '127.0.0.1', 1, '2024-07-04 07:56:41', '2024-07-04 07:48:45', '2024-07-04 07:56:41', '667b00193d9ca8e50', NULL),
+('668655bd231f47e80', 0, 'f4d674807c8641fc053e7bb4224a2335', 'saEyeJiSqsgLdBh67F/mdt5j8KAERaQUA1eWSMu4yWD5Vr30uOZESUN5l0IhTo2Fp/qGZ9UdevTuICMfm3FKo.', 'aff04e059d1f10c800cabcef00e8997a', '127.0.0.1', 1, '2024-07-04 07:57:15', '2024-07-04 07:56:45', '2024-07-04 07:57:15', '667b00193d9ca8e50', NULL),
+('668655e19068dbcf1', 0, '88ab76aa86306a565cd70fde9704feb5', 'ktdBpqO7rSZC8xdgdrlu6K8JqxSoaUnYzPnuh.xmtmkp4/Ia5e6ry9z6n2suLta9SfeXkqjRev4qldM.ZX5xC.', 'a50f3a475dd06bcffede7b00392d49cd', '127.0.0.1', 0, '2024-07-07 14:54:55', '2024-07-04 07:57:21', '2024-07-07 14:54:55', '667b00193d9ca8e50', NULL),
+('6688ca66d75d82b95', 0, '18c714eba87f6da9d45f970dc5dddfc7', 'ktdBpqO7rSZC8xdgdrlu6K8JqxSoaUnYzPnuh.xmtmkp4/Ia5e6ry9z6n2suLta9SfeXkqjRev4qldM.ZX5xC.', '0adff662a2232bc7f165a09356166232', '::1', 1, '2024-07-06 06:56:50', '2024-07-06 04:39:02', '2024-07-06 06:56:50', '667b00193d9ca8e50', NULL),
+('668aac45f30803ea0', 0, 'd3779b0d7857b1f7fdbb2a84a08728fb', 'ktdBpqO7rSZC8xdgdrlu6K8JqxSoaUnYzPnuh.xmtmkp4/Ia5e6ry9z6n2suLta9SfeXkqjRev4qldM.ZX5xC.', '53b3ae210084f2f9cb2898da3fc58533', '127.0.0.1', 0, '2024-07-07 14:58:03', '2024-07-07 14:55:01', '2024-07-07 14:58:03', '667b00193d9ca8e50', NULL),
+('668aad0076ebcad5e', 0, 'aae188c392514e0e93854c8e0e3bdb05', 'ktdBpqO7rSZC8xdgdrlu6K8JqxSoaUnYzPnuh.xmtmkp4/Ia5e6ry9z6n2suLta9SfeXkqjRev4qldM.ZX5xC.', '64f6229a1581ac99b7605ab14336c7a3', '127.0.0.1', 0, '2024-07-07 15:05:28', '2024-07-07 14:58:08', '2024-07-07 15:05:28', '667b00193d9ca8e50', NULL),
+('668aaebe3de1318af', 0, '67383fb139918dbca566c66f0fb29df3', 'ktdBpqO7rSZC8xdgdrlu6K8JqxSoaUnYzPnuh.xmtmkp4/Ia5e6ry9z6n2suLta9SfeXkqjRev4qldM.ZX5xC.', '571674767ed029ed58488c6cc89fa2c1', '127.0.0.1', 0, '2024-07-07 15:15:04', '2024-07-07 15:05:34', '2024-07-07 15:15:04', '667b00193d9ca8e50', NULL),
+('668ab0fcba9c7be6e', 0, 'db566d9403d1b3ecdeb5d51c928e95a7', 'ktdBpqO7rSZC8xdgdrlu6K8JqxSoaUnYzPnuh.xmtmkp4/Ia5e6ry9z6n2suLta9SfeXkqjRev4qldM.ZX5xC.', '6a131a0cf1b507200346b71181a4ef1d', '127.0.0.1', 1, '2024-07-07 16:52:49', '2024-07-07 15:15:08', '2024-07-07 16:52:49', '667b00193d9ca8e50', NULL),
+('668ac033359455e4b', 0, '0e97dabf38364b45662aad7ccfae4f07', '39dBoc2ieR5KRCQJRegzXZXoo1jzXC985lufCB5QMyyahQ0RQAXYI6xVCaiE4Uyp4OZZ2SI4Ermq4W.IWbI8x/', '3ead169e959c7224424af649efe2d199', '127.0.0.1', 1, '2024-07-07 16:43:42', '2024-07-07 16:20:03', '2024-07-07 16:43:42', '668656f53dd04a1c0', NULL),
+('668ae4125992d9792', 0, '8504234d97031be4c0b7aaa030da3993', 'ktdBpqO7rSZC8xdgdrlu6K8JqxSoaUnYzPnuh.xmtmkp4/Ia5e6ry9z6n2suLta9SfeXkqjRev4qldM.ZX5xC.', '7bb148263e7f5fd870fc3fe90b1751f6', '127.0.0.1', 1, '2024-07-09 07:11:41', '2024-07-07 18:53:06', '2024-07-09 07:11:41', '667b00193d9ca8e50', NULL),
+('668cb83f88a0c473b', 0, 'e3295247bca51026401c85662337750d', 'ktdBpqO7rSZC8xdgdrlu6K8JqxSoaUnYzPnuh.xmtmkp4/Ia5e6ry9z6n2suLta9SfeXkqjRev4qldM.ZX5xC.', 'f4f37bbddabec086a9957c245d36ce43', '127.0.0.1', 1, '2024-07-09 04:12:40', '2024-07-09 04:10:39', '2024-07-09 04:12:40', '667b00193d9ca8e50', NULL),
+('668cba5086cbac9e9', 0, 'dc766fe249efaaeec95c6e0ae6d8f44e', 'FZ8pgyuu6/6vhC7x7zXI9COC3kTmBehzxHSxuQ0BkM74Jsw1Xj8RJX1F57.210yOB1Xs4kyl.SaO9XSCIFDOY.', 'c518bc00e77b190201b3a9bef9f06f0f', '127.0.0.1', 1, '2024-07-09 07:11:39', '2024-07-09 04:19:28', '2024-07-09 07:11:39', '668cb9dbad690b66f', NULL);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `autofollow`
+--
+
+CREATE TABLE `autofollow` (
+  `id` int NOT NULL,
+  `deleted` tinyint(1) DEFAULT '0',
+  `entity_type` varchar(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `user_id` varchar(17) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3 COLLATE=utf8_unicode_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `call`
+--
+
+CREATE TABLE `call` (
+  `id` varchar(17) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `name` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `deleted` tinyint(1) DEFAULT '0',
+  `status` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT 'Planned',
+  `date_start` datetime DEFAULT NULL,
+  `date_end` datetime DEFAULT NULL,
+  `direction` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT 'Outbound',
+  `description` mediumtext CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci,
+  `created_at` datetime DEFAULT NULL,
+  `modified_at` datetime DEFAULT NULL,
+  `parent_id` varchar(17) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `parent_type` varchar(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `account_id` varchar(17) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `created_by_id` varchar(17) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `modified_by_id` varchar(17) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `assigned_user_id` varchar(17) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3 COLLATE=utf8_unicode_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `call_contact`
+--
+
+CREATE TABLE `call_contact` (
+  `id` bigint NOT NULL,
+  `call_id` varchar(17) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `contact_id` varchar(17) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `status` varchar(36) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT 'None',
+  `deleted` tinyint(1) DEFAULT '0'
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3 COLLATE=utf8_unicode_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `call_lead`
+--
+
+CREATE TABLE `call_lead` (
+  `id` bigint NOT NULL,
+  `call_id` varchar(17) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `lead_id` varchar(17) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `status` varchar(36) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT 'None',
+  `deleted` tinyint(1) DEFAULT '0'
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3 COLLATE=utf8_unicode_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `call_user`
+--
+
+CREATE TABLE `call_user` (
+  `id` bigint NOT NULL,
+  `user_id` varchar(17) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `call_id` varchar(17) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `status` varchar(36) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT 'None',
+  `deleted` tinyint(1) DEFAULT '0'
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3 COLLATE=utf8_unicode_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `campaign`
+--
+
+CREATE TABLE `campaign` (
+  `id` varchar(17) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `name` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `deleted` tinyint(1) DEFAULT '0',
+  `status` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT 'Planning',
+  `type` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT 'Email',
+  `start_date` date DEFAULT NULL,
+  `end_date` date DEFAULT NULL,
+  `description` mediumtext CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci,
+  `created_at` datetime DEFAULT NULL,
+  `modified_at` datetime DEFAULT NULL,
+  `budget` double DEFAULT NULL,
+  `mail_merge_only_with_address` tinyint(1) NOT NULL DEFAULT '1',
+  `budget_currency` varchar(3) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `created_by_id` varchar(17) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `modified_by_id` varchar(17) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `assigned_user_id` varchar(17) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `contacts_template_id` varchar(17) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `leads_template_id` varchar(17) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `accounts_template_id` varchar(17) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `users_template_id` varchar(17) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3 COLLATE=utf8_unicode_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `campaign_log_record`
+--
+
+CREATE TABLE `campaign_log_record` (
+  `id` varchar(17) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `deleted` tinyint(1) DEFAULT '0',
+  `action` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `action_date` datetime DEFAULT NULL,
+  `data` mediumtext CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci,
+  `string_data` varchar(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `string_additional_data` varchar(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `application` varchar(36) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT 'Espo',
+  `created_at` datetime DEFAULT NULL,
+  `is_test` tinyint(1) NOT NULL DEFAULT '0',
+  `created_by_id` varchar(17) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `campaign_id` varchar(17) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `parent_id` varchar(17) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `parent_type` varchar(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `object_id` varchar(17) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `object_type` varchar(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `queue_item_id` varchar(17) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3 COLLATE=utf8_unicode_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `campaign_target_list`
+--
+
+CREATE TABLE `campaign_target_list` (
+  `id` bigint NOT NULL,
+  `campaign_id` varchar(17) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `target_list_id` varchar(17) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `deleted` tinyint(1) DEFAULT '0'
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3 COLLATE=utf8_unicode_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `campaign_target_list_excluding`
+--
+
+CREATE TABLE `campaign_target_list_excluding` (
+  `id` bigint NOT NULL,
+  `campaign_id` varchar(17) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `target_list_id` varchar(17) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `deleted` tinyint(1) DEFAULT '0'
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3 COLLATE=utf8_unicode_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `campaign_tracking_url`
+--
+
+CREATE TABLE `campaign_tracking_url` (
+  `id` varchar(17) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `name` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `deleted` tinyint(1) DEFAULT '0',
+  `url` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `action` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT 'Redirect',
+  `message` mediumtext CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci,
+  `modified_at` datetime DEFAULT NULL,
+  `created_at` datetime DEFAULT NULL,
+  `campaign_id` varchar(17) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `modified_by_id` varchar(17) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `created_by_id` varchar(17) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3 COLLATE=utf8_unicode_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `case`
+--
+
+CREATE TABLE `case` (
+  `id` varchar(17) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `name` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `deleted` tinyint(1) DEFAULT '0',
+  `number` int UNSIGNED NOT NULL,
+  `status` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT 'New',
+  `priority` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT 'Normal',
+  `type` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `description` mediumtext CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci,
+  `created_at` datetime DEFAULT NULL,
+  `modified_at` datetime DEFAULT NULL,
+  `account_id` varchar(17) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `lead_id` varchar(17) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `contact_id` varchar(17) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `inbound_email_id` varchar(17) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `created_by_id` varchar(17) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `modified_by_id` varchar(17) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `assigned_user_id` varchar(17) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3 COLLATE=utf8_unicode_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `case_contact`
+--
+
+CREATE TABLE `case_contact` (
+  `id` bigint NOT NULL,
+  `case_id` varchar(17) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `contact_id` varchar(17) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `deleted` tinyint(1) DEFAULT '0'
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3 COLLATE=utf8_unicode_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `case_knowledge_base_article`
+--
+
+CREATE TABLE `case_knowledge_base_article` (
+  `id` bigint NOT NULL,
+  `case_id` varchar(17) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `knowledge_base_article_id` varchar(17) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `deleted` tinyint(1) DEFAULT '0'
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3 COLLATE=utf8_unicode_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `contact`
+--
+
+CREATE TABLE `contact` (
+  `id` varchar(17) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `deleted` tinyint(1) DEFAULT '0',
+  `salutation_name` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `first_name` varchar(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `last_name` varchar(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `description` mediumtext CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci,
+  `do_not_call` tinyint(1) NOT NULL DEFAULT '0',
+  `address_street` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `address_city` varchar(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `address_state` varchar(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `address_country` varchar(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `address_postal_code` varchar(40) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `created_at` datetime DEFAULT NULL,
+  `modified_at` datetime DEFAULT NULL,
+  `middle_name` varchar(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `account_id` varchar(17) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `campaign_id` varchar(17) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `created_by_id` varchar(17) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `modified_by_id` varchar(17) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `assigned_user_id` varchar(17) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3 COLLATE=utf8_unicode_ci;
+
+--
+-- Dumping data for table `contact`
+--
+
+INSERT INTO `contact` (`id`, `deleted`, `salutation_name`, `first_name`, `last_name`, `description`, `do_not_call`, `address_street`, `address_city`, `address_state`, `address_country`, `address_postal_code`, `created_at`, `modified_at`, `middle_name`, `account_id`, `campaign_id`, `created_by_id`, `modified_by_id`, `assigned_user_id`) VALUES
+('66843b0c46932b50d', 0, 'Mr.', 'Dennis', 'Wijaya', NULL, 0, 'Jl Sedayu City', 'Kelapa Gading', 'Jakarta Utara', 'Indonesia', '13920', '2024-07-02 17:38:20', '2024-07-04 08:28:34', NULL, '66843af62ca32783f', NULL, '667b00193d9ca8e50', '667b00193d9ca8e50', NULL);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `contact_document`
+--
+
+CREATE TABLE `contact_document` (
+  `id` bigint NOT NULL,
+  `contact_id` varchar(17) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `document_id` varchar(17) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `deleted` tinyint(1) DEFAULT '0'
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3 COLLATE=utf8_unicode_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `contact_meeting`
+--
+
+CREATE TABLE `contact_meeting` (
+  `id` bigint NOT NULL,
+  `contact_id` varchar(17) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `meeting_id` varchar(17) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `status` varchar(36) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT 'None',
+  `deleted` tinyint(1) DEFAULT '0'
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3 COLLATE=utf8_unicode_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `contact_opportunity`
+--
+
+CREATE TABLE `contact_opportunity` (
+  `id` bigint NOT NULL,
+  `contact_id` varchar(17) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `opportunity_id` varchar(17) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `role` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `deleted` tinyint(1) DEFAULT '0'
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3 COLLATE=utf8_unicode_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `contact_target_list`
+--
+
+CREATE TABLE `contact_target_list` (
+  `id` bigint NOT NULL,
+  `contact_id` varchar(17) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `target_list_id` varchar(17) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `opted_out` tinyint(1) DEFAULT '0',
+  `deleted` tinyint(1) DEFAULT '0'
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3 COLLATE=utf8_unicode_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `currency`
+--
+
+CREATE TABLE `currency` (
+  `id` varchar(3) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `rate` double DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3 COLLATE=utf8_unicode_ci;
+
+--
+-- Dumping data for table `currency`
+--
+
+INSERT INTO `currency` (`id`, `rate`) VALUES
+('USD', 1);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `c_company`
+--
+
+CREATE TABLE `c_company` (
+  `id` varchar(17) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `name` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `deleted` tinyint(1) DEFAULT '0',
+  `description` mediumtext CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci,
+  `website` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `billing_address_street` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `billing_address_city` varchar(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `billing_address_state` varchar(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `billing_address_country` varchar(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `billing_address_postal_code` varchar(40) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `shipping_address_street` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `shipping_address_city` varchar(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `shipping_address_state` varchar(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `shipping_address_country` varchar(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `shipping_address_postal_code` varchar(40) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `created_at` datetime DEFAULT NULL,
+  `modified_at` datetime DEFAULT NULL,
+  `created_by_id` varchar(17) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `modified_by_id` varchar(17) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `assigned_user_id` varchar(17) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `inactive` tinyint(1) NOT NULL DEFAULT '0',
+  `contact_is_inactive` tinyint(1) NOT NULL DEFAULT '0'
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3 COLLATE=utf8_unicode_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `c_sales_purchase`
+--
+
+CREATE TABLE `c_sales_purchase` (
+  `id` varchar(17) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `name` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `deleted` tinyint(1) DEFAULT '0',
+  `description` mediumtext CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci,
+  `created_at` datetime DEFAULT NULL,
+  `modified_at` datetime DEFAULT NULL,
+  `created_by_id` varchar(17) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `modified_by_id` varchar(17) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `assigned_user_id` varchar(17) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3 COLLATE=utf8_unicode_ci;
+
+--
+-- Dumping data for table `c_sales_purchase`
+--
+
+INSERT INTO `c_sales_purchase` (`id`, `name`, `deleted`, `description`, `created_at`, `modified_at`, `created_by_id`, `modified_by_id`, `assigned_user_id`) VALUES
+('667b086b9422d1fb8', 'dennis', 1, NULL, '2024-06-25 18:11:55', '2024-06-25 18:12:01', '667b00193d9ca8e50', '667b00193d9ca8e50', NULL);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `dashboard_template`
+--
+
+CREATE TABLE `dashboard_template` (
+  `id` varchar(17) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `name` varchar(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `deleted` tinyint(1) DEFAULT '0',
+  `layout` mediumtext CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci,
+  `dashlets_options` mediumtext CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci,
+  `created_at` datetime DEFAULT NULL,
+  `modified_at` datetime DEFAULT NULL,
+  `created_by_id` varchar(17) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `modified_by_id` varchar(17) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3 COLLATE=utf8_unicode_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `delivery_order`
+--
+
+CREATE TABLE `delivery_order` (
+  `id` varchar(17) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `name` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `deleted` tinyint(1) DEFAULT '0',
+  `number` varchar(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `number_a` varchar(36) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `status` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT 'Draft',
+  `date_ordered` date DEFAULT NULL,
+  `shipping_date` date DEFAULT NULL,
+  `delivery_date` date DEFAULT NULL,
+  `description` mediumtext CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci,
+  `shipping_cost` double DEFAULT NULL,
+  `amount` double DEFAULT NULL,
+  `amount_currency` varchar(3) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `weight` double DEFAULT NULL,
+  `is_done` tinyint(1) NOT NULL DEFAULT '0',
+  `is_not_actual` tinyint(1) NOT NULL DEFAULT '0',
+  `is_locked` tinyint(1) NOT NULL DEFAULT '0',
+  `is_hard_locked` tinyint(1) NOT NULL DEFAULT '0',
+  `created_at` datetime DEFAULT NULL,
+  `modified_at` datetime DEFAULT NULL,
+  `shipping_address_street` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `shipping_address_city` varchar(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `shipping_address_state` varchar(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `shipping_address_country` varchar(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `shipping_address_postal_code` varchar(40) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `shipping_cost_currency` varchar(3) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `account_id` varchar(17) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `sales_order_id` varchar(17) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `warehouse_id` varchar(17) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `shipping_contact_id` varchar(17) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `shipping_provider_id` varchar(17) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `created_by_id` varchar(17) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `modified_by_id` varchar(17) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `assigned_user_id` varchar(17) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3 COLLATE=utf8_unicode_ci;
