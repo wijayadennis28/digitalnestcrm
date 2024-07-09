@@ -1,0 +1,41 @@
+[
+    {
+        "tabLabel": "$label:General",
+        "label": "Configuration",
+        "rows": [
+            [{"name": "authenticationMethod"}, {"name": "authTokenLifetime"}],
+            [{"name": "authTokenPreventConcurrent"}, {"name": "authTokenMaxIdleTime"}]
+        ]
+    },
+    {
+        "label": "2-Factor Authentication",
+        "rows": [
+            [{"name": "auth2FA"}, {"name": "auth2FAMethodList"}],
+            [{"name": "auth2FAForced"}, {"name": "auth2FAInPortal"}]
+        ]
+    },
+    {
+        "label": "Access",
+        "rows": [
+            [{"name": "authIpAddressCheck"}, false],
+            [{"name": "authIpAddressWhitelist"}, {"name": "authIpAddressCheckExcludedUsers"}]
+        ]
+    },
+    {
+        "tabBreak": true,
+        "tabLabel": "$label:Passwords",
+        "label": "Strength",
+        "rows": [
+            [{"name": "passwordGenerateLength"}, false],
+            [{"name": "passwordStrengthLength"}, {"name": "passwordStrengthLetterCount"}],
+            [{"name": "passwordStrengthBothCases"}, {"name": "passwordStrengthNumberCount"}]
+        ]
+    },
+    {
+        "label": "Recovery",
+        "rows": [
+            [{"name": "passwordRecoveryDisabled"}, {"name": "passwordRecoveryForAdminDisabled"}],
+            [{"name": "passwordRecoveryNoExposure"}, {"name": "passwordRecoveryForInternalUsersDisabled"}]
+        ]
+    }
+]

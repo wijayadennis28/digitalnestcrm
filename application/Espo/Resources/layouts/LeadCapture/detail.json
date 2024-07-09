@@ -1,0 +1,22 @@
+[
+    {
+        "rows": [
+            [{"name": "name"}, {"name": "isActive"}],
+            [{"name": "subscribeToTargetList", "inlineEditDisabled": true}, {"name": "campaign"}],
+            [{"name": "subscribeContactToTargetList"}, {"name": "targetList"}],
+            [{"name": "targetTeam"}, {"name": "leadSource"}],
+            [{"name": "fieldList"}],
+            [{"name": "duplicateCheck"}, {"name": "phoneNumberCountry"}],
+            [{"name": "apiKey"}, false]
+        ]
+    },
+    {
+        "rows": [
+            [{"name": "optInConfirmation", "inlineEditDisabled": true}, false],
+            [{"name": "createLeadBeforeOptInConfirmation"}, {"name": "skipOptInConfirmationIfSubscribed"}],
+            [{"name": "optInConfirmationEmailTemplate"}, {"name": "optInConfirmationLifetime"}],
+            [{"name": "smtpAccount"}, false],
+            [{"name": "optInConfirmationSuccessMessage", "fullWidth": true}]
+        ]
+    }
+]

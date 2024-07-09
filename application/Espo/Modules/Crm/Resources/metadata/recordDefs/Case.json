@@ -1,0 +1,17 @@
+{
+    "relationships": {
+        "articles": {
+            "linkRequiredAccess": "edit",
+            "linkRequiredForeignAccess": "read"
+        },
+        "emails": {
+            "linkRequiredForeignAccess": "read"
+        }
+    },
+    "beforeCreateHookClassNameList": [
+        "Espo\\Modules\\Crm\\Classes\\RecordHooks\\Case\\BeforeCreate"
+    ],
+    "afterCreateHookClassNameList": [
+        "Espo\\Modules\\Crm\\Classes\\RecordHooks\\Case\\AfterCreate"
+    ]
+}

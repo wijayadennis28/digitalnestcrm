@@ -1,0 +1,42 @@
+{
+    "controller": "controllers/record",
+    "inlineEditDisabled": true,
+    "recordViews": {
+        "list": "views/webhook/record/list"
+    },
+    "menu": {
+        "list": {
+            "dropdown": [
+                {
+                    "labelTranslation": "Global.scopeNamesPlural.WebhookQueueItem",
+                    "link": "#WebhookQueueItem",
+                    "aclScope": "WebhookQueueItem"
+                }
+            ]
+        }
+    },
+    "dynamicLogic": {
+        "fields": {
+            "event": {
+                "readOnly": {
+                    "conditionGroup": [
+                        {
+                            "type": "isNotEmpty",
+                            "attribute": "id"
+                        }
+                    ]
+                }
+            },
+            "secretKey": {
+                "visible": {
+                    "conditionGroup": [
+                        {
+                            "type": "isNotEmpty",
+                            "attribute": "id"
+                        }
+                    ]
+                }
+            }
+        }
+    }
+}

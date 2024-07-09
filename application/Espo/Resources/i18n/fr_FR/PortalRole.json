@@ -1,0 +1,13 @@
+{
+  "links": {
+    "users": "Utilisateurs"
+  },
+  "labels": {
+    "Access": "Accès",
+    "Create PortalRole": "Créer un rôle Portail"
+  },
+  "fields": {
+    "exportPermission": "Permission d'exportation",
+    "massUpdatePermission": "Autorisation de mise à jour en masse"
+  }
+}
