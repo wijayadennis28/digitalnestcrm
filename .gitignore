@@ -4,3 +4,4 @@ data/logs/
 data/tmp/
 data/install/config.php
 install/config.php
+.htaccess
