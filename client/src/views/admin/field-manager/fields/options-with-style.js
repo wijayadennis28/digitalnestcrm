@@ -43,6 +43,15 @@ function (Dep) {
                 'warning',
                 'info',
                 'primary',
+                'ordercreated',
+                'ordercancelled',
+                'blocked',
+                'reschedule',
+                'postponed',
+                'indelivery',
+                'waitingpayment',
+                'paymentreceived',
+                'complete',
             ];
 
             this.events['click [data-action="selectOptionItemStyle"]'] = (e) => {
@@ -112,7 +121,7 @@ function (Dep) {
                         $('<a>')
                             .attr('role', 'button')
                             .attr('tabindex', '0')
-                            .attr('data-action', 'selectOptionItemStyle')
+                            .attr('data-action', '')
                             .attr('data-style', item)
                             .attr('data-value', value)
                             .append(
