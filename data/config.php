@@ -12,30 +12,30 @@ return [
   'recordsPerPageSmall' => 5,
   'recordsPerPageSelect' => 10,
   'recordsPerPageKanban' => 5,
-  'applicationName' => 'EspoCRM',
-  'version' => '8.3.3',
-  'timeZone' => 'UTC',
-  'dateFormat' => 'DD.MM.YYYY',
+  'applicationName' => 'DigitalNestCRM',
+  'version' => '8.3.1',
+  'timeZone' => 'Asia/Jakarta',
+  'dateFormat' => 'DD/MM/YYYY',
   'timeFormat' => 'HH:mm',
-  'weekStart' => 0,
+  'weekStart' => 1,
   'thousandSeparator' => ',',
   'decimalMark' => '.',
   'exportDelimiter' => ',',
   'currencyList' => [
-    0 => 'USD'
+    0 => 'IDR'
   ],
-  'defaultCurrency' => 'USD',
-  'baseCurrency' => 'USD',
+  'defaultCurrency' => 'IDR',
+  'baseCurrency' => 'IDR',
   'currencyRates' => [],
   'currencyNoJoinMode' => false,
-  'outboundEmailIsShared' => true,
-  'outboundEmailFromName' => 'EspoCRM',
-  'outboundEmailFromAddress' => NULL,
-  'smtpServer' => NULL,
+  'outboundEmailIsShared' => false,
+  'outboundEmailFromName' => 'DigitalNestCRM',
+  'outboundEmailFromAddress' => '',
+  'smtpServer' => '',
   'smtpPort' => 587,
-  'smtpAuth' => true,
+  'smtpAuth' => false,
   'smtpSecurity' => 'TLS',
-  'smtpUsername' => NULL,
+  'smtpUsername' => '',
   'language' => 'en_US',
   'authenticationMethod' => 'Espo',
   'globalSearchEntityList' => [
@@ -46,66 +46,63 @@ return [
   ],
   'tabList' => [
     0 => (object) [
-      'type' => 'divider',
-      'id' => '342567',
-      'text' => '$CRM'
+      'type' => 'group',
+      'text' => '$SalesPack',
+      'iconClass' => 'fas fa-boxes',
+      'color' => NULL,
+      'id' => '480021',
+      'itemList' => [
+        0 => 'Product',
+        1 => (object) [
+          'type' => 'divider',
+          'text' => NULL,
+          'id' => '316127'
+        ],
+        2 => 'Quote',
+        3 => 'SalesOrder',
+        4 => 'Invoice',
+        5 => 'DeliveryOrder',
+        6 => 'ReturnOrder',
+        7 => (object) [
+          'type' => 'divider',
+          'text' => NULL,
+          'id' => '820005'
+        ],
+        8 => 'PurchaseOrder',
+        9 => 'ReceiptOrder',
+        10 => (object) [
+          'type' => 'divider',
+          'text' => NULL,
+          'id' => '692280'
+        ],
+        11 => 'TransferOrder',
+        12 => 'InventoryAdjustment',
+        13 => (object) [
+          'type' => 'divider',
+          'text' => NULL,
+          'id' => '216837'
+        ],
+        14 => 'Warehouse',
+        15 => 'InventoryNumber',
+        16 => (object) [
+          'type' => 'divider',
+          'text' => NULL,
+          'id' => '453263'
+        ],
+        17 => 'InventoryTransaction'
+      ]
     ],
-    1 => 'Account',
-    2 => 'Contact',
-    3 => 'Lead',
-    4 => 'Opportunity',
-    5 => (object) [
-      'type' => 'divider',
-      'text' => '$Activities',
-      'id' => '219419'
-    ],
-    6 => 'Email',
-    7 => 'Meeting',
-    8 => 'Call',
-    9 => 'Task',
-    10 => 'Calendar',
-    11 => (object) [
-      'type' => 'divider',
-      'id' => '655187',
-      'text' => '$Support'
-    ],
-    12 => 'Case',
-    13 => 'KnowledgeBaseArticle',
-    14 => (object) [
-      'type' => 'divider',
-      'text' => NULL,
-      'id' => '137994'
-    ],
-    15 => '_delimiter_',
-    16 => (object) [
-      'type' => 'divider',
-      'text' => '$Marketing',
-      'id' => '463280'
-    ],
-    17 => 'Campaign',
-    18 => 'TargetList',
-    19 => (object) [
-      'type' => 'divider',
-      'text' => '$Business',
-      'id' => '518202'
-    ],
-    20 => 'Document',
-    21 => (object) [
-      'type' => 'divider',
-      'text' => '$Organization',
-      'id' => '566592'
-    ],
-    22 => 'User',
-    23 => 'Team',
-    24 => 'WorkingTimeCalendar',
-    25 => (object) [
-      'type' => 'divider',
-      'text' => NULL,
-      'id' => '898671'
-    ],
-    26 => 'EmailTemplate',
-    27 => 'Template',
-    28 => 'Import'
+    1 => (object) [
+      'type' => 'group',
+      'text' => 'Products',
+      'iconClass' => 'fas fa-box-open',
+      'color' => NULL,
+      'id' => '189075',
+      'itemList' => [
+        0 => 'PurchaseOrder',
+        1 => 'Product'
+      ]
+    ]
   ],
   'quickCreateList' => [
     0 => 'Account',
@@ -191,18 +188,18 @@ return [
       'name' => 'My Espo',
       'layout' => [
         0 => (object) [
-          'id' => 'default-activities',
-          'name' => 'Activities',
-          'x' => 2,
-          'y' => 2,
-          'width' => 2,
-          'height' => 4
-        ],
-        1 => (object) [
           'id' => 'default-stream',
           'name' => 'Stream',
           'x' => 0,
           'y' => 0,
+          'width' => 2,
+          'height' => 4
+        ],
+        1 => (object) [
+          'id' => 'default-activities',
+          'name' => 'Activities',
+          'x' => 2,
+          'y' => 2,
           'width' => 2,
           'height' => 4
         ]
@@ -309,11 +306,30 @@ return [
   'authIpAddressWhitelist' => [],
   'authIpAddressCheckExcludedUsersIds' => [],
   'authIpAddressCheckExcludedUsersNames' => (object) [],
-  'cacheTimestamp' => 1721916116,
-  'microtime' => 1721916116.943683,
+  'cacheTimestamp' => 1721916204,
+  'microtime' => 1721916204.775793,
+  'siteUrl' => 'http://localhost/crm',
   'fullTextSearchMinLength' => 4,
-  'appTimestamp' => 1721916116,
-  'maintenanceMode' => NULL,
-  'cronDisabled' => NULL,
-  'adminPanelIframeUrl' => 'https://s.espocrm.com/?sales-pack=bcd3361258b6d66fc350488ed9575786'
+  'appTimestamp' => 1719837180,
+  'maintenanceMode' => false,
+  'cronDisabled' => false,
+  'adminPanelIframeUrl' => 'https://s.espocrm.com/?sales-pack=bcd3361258b6d66fc350488ed9575786',
+  'userThemesDisabled' => false,
+  'avatarsDisabled' => false,
+  'scopeColorsDisabled' => false,
+  'tabIconsDisabled' => false,
+  'dashletsOptions' => (object) [],
+  'companyLogoId' => '66863b83955f7f698',
+  'companyLogoName' => 'Screenshot_2024-07-04_at_12.58.19-removebg-preview.png',
+  'warehousesEnabled' => true,
+  'inventoryTransactionsEnabled' => true,
+  'priceBooksEnabled' => true,
+  'defaultPriceBookName' => NULL,
+  'defaultPriceBookId' => NULL,
+  'fiscalYearShift' => 0,
+  'addressCityList' => [],
+  'addressStateList' => [],
+  'emailAddressIsOptedOutByDefault' => false,
+  'workingTimeCalendarName' => NULL,
+  'workingTimeCalendarId' => NULL
 ];
