@@ -1,0 +1,104 @@
+{
+    "fields": {
+        "priceBook": {
+            "type": "link",
+            "autocompleteOnEmpty": true
+        }
+    },
+    "links": {
+        "supplier": {
+            "type": "hasOne",
+            "foreign": "account",
+            "entity": "Supplier"
+        },
+        "quotes": {
+            "type": "hasMany",
+            "entity": "Quote",
+            "foreign": "account",
+            "audited": true
+        },
+        "quoteItems": {
+            "type": "hasMany",
+            "entity": "QuoteItem",
+            "foreign": "account",
+            "layoutRelationshipsDisabled": true
+        },
+        "salesOrders": {
+            "type": "hasMany",
+            "entity": "SalesOrder",
+            "foreign": "account",
+            "audited": true
+        },
+        "salesOrderItems": {
+            "type": "hasMany",
+            "entity": "SalesOrderItem",
+            "foreign": "account",
+            "layoutRelationshipsDisabled": true
+        },
+        "invoices": {
+            "type": "hasMany",
+            "entity": "Invoice",
+            "foreign": "account",
+            "audited": true
+        },
+        "invoiceItems": {
+            "type": "hasMany",
+            "entity": "InvoiceItem",
+            "foreign": "account",
+            "layoutRelationshipsDisabled": true
+        },
+        "purchaseOrders": {
+            "type": "hasMany",
+            "entity": "PurchaseOrder",
+            "foreign": "account",
+            "audited": true
+        },
+        "purchaseOrderItems": {
+            "type": "hasMany",
+            "entity": "PurchaseOrderItem",
+            "foreign": "account",
+            "layoutRelationshipsDisabled": true
+        },
+        "deliveryOrders": {
+            "type": "hasMany",
+            "entity": "DeliveryOrder",
+            "foreign": "account",
+            "audited": true
+        },
+        "deliveryOrderItems": {
+            "type": "hasMany",
+            "entity": "DeliveryOrderItem",
+            "foreign": "account",
+            "layoutRelationshipsDisabled": true
+        },
+        "receiptOrders": {
+            "type": "hasMany",
+            "entity": "ReceiptOrder",
+            "foreign": "account",
+            "audited": true
+        },
+        "returnOrders": {
+            "type": "hasMany",
+            "entity": "ReturnOrder",
+            "foreign": "account",
+            "audited": true
+        },
+        "receiptOrderItems": {
+            "type": "hasMany",
+            "entity": "ReceiptOrderItem",
+            "foreign": "account",
+            "layoutRelationshipsDisabled": true
+        },
+        "returnOrderItems": {
+            "type": "hasMany",
+            "entity": "ReturnOrderItem",
+            "foreign": "account",
+            "layoutRelationshipsDisabled": true
+        },
+        "priceBook": {
+            "type": "belongsTo",
+            "entity": "PriceBook",
+            "foreign": "accounts"
+        }
+    }
+}

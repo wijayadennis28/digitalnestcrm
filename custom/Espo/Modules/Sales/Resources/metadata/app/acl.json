@@ -1,0 +1,36 @@
+{
+    "mandatory": {
+        "scopeLevel": {
+            "QuoteItem": "Quote",
+            "SalesOrderItem": "SalesOrder",
+            "InvoiceItem": "Invoice",
+            "PurchaseOrderItem": "PurchaseOrder",
+            "DeliveryOrderItem": "DeliveryOrder",
+            "ReceiptOrderItem": "ReceiptOrder",
+            "TransferOrderItem": "TransferOrder",
+            "ReturnOrderItem": "ReturnOrder",
+            "OpportunityItem": "Opportunity",
+            "InventoryAdjustmentItem": "InventoryAdjustment",
+            "ProductPrice": "PriceBook",
+            "PriceRule": "PriceBook",
+            "SupplierProductPrice": "Supplier",
+            "ProductAttributeOption": "ProductAttribute"
+        }
+    },
+    "adminMandatory": {
+        "scopeLevel": {
+            "InventoryTransaction": {
+                "create": "yes",
+                "read": "all",
+                "edit": "all",
+                "delete": "all"
+            },
+            "PriceRuleCondition": {
+                "create": "yes",
+                "read": "all",
+                "edit": "all",
+                "delete": "all"
+            }
+        }
+    }
+}

@@ -1,0 +1,4 @@
+{
+    "ownershipCheckerClassName": "Espo\\Modules\\Sales\\Classes\\Acl\\QuoteItem\\OwnershipChecker",
+    "portalOwnershipCheckerClassName": "Espo\\Modules\\Sales\\Classes\\AclPortal\\QuoteItem\\OwnershipChecker"
+}

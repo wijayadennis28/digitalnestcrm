@@ -1,0 +1,6 @@
+[
+    {"name": "amount"},
+    {"name": "taxAmount"},
+    {"name": "shippingCost"},
+    {"name": "grandTotalAmount"}
+]

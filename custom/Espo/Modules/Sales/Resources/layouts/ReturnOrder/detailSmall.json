@@ -1,0 +1,13 @@
+[
+    {
+        "rows": [
+            [{"name": "number"}],
+            [{"name": "status"}],
+            [{"name": "account"}],
+            [{"name": "salesOrder"}],
+            [{"name": "dateOrdered"}, {"name": "deliveryDate"}],
+            [{"name": "amount"}],
+            [{"name": "warehouse"}]
+        ]
+    }
+]

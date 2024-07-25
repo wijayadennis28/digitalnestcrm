@@ -1,0 +1,9 @@
+{
+  "options": {
+    "job": {
+      "InventoryCompress": "Komprimierung der Inventartransaktion",
+      "NotActualOrderLocking": "Sperren nicht tatsächliche Aufträge",
+      "InventoryDetach": "Trennung der Inventartransaktion"
+    }
+  }
+}

@@ -1,0 +1,288 @@
+{
+    "fields": {
+        "name": {
+            "type": "varchar",
+            "duplicateIgnore": true
+        },
+        "number": {
+            "type": "varchar",
+            "maxLength": 100,
+            "index": true,
+            "readOnly": true,
+            "fieldManagerAdditionalParamList": [
+                {
+                    "name": "useAutoincrement",
+                    "type": "bool"
+                }
+            ],
+            "useAutoincrement": true
+        },
+        "numberA": {
+            "type": "number",
+            "prefix": "RO-",
+            "padLength": 5,
+            "utility": true
+        },
+        "status": {
+            "type": "enum",
+            "options": [
+                "Draft",
+                "Ready",
+                "Completed",
+                "Canceled"
+            ],
+            "style": {
+                "Ready": "primary",
+                "Completed": "success",
+                "Canceled": "info"
+            },
+            "default": "Draft",
+            "fieldManagerAdditionalParamList": [
+                {
+                    "name": "notActualOptions",
+                    "view": "sales:views/admin/field-manager/fields/not-actual-options"
+                }
+            ],
+            "notActualOptions": ["Completed", "Canceled"],
+            "index": true,
+            "audited": true
+        },
+        "dateOrdered": {
+            "type": "date",
+            "default": "javascript: return this.dateTime.getToday();",
+            "audited": true
+        },
+        "dateReceived": {
+            "type": "date",
+            "audited": true
+        },
+        "account": {
+            "type": "link",
+            "readOnly": true
+        },
+        "supplier": {
+            "type": "link",
+            "autocompleteOnEmpty": true
+        },
+        "purchaseOrder": {
+            "type": "link",
+            "view": "sales:views/receipt-order/fields/purchase-order"
+        },
+        "returnOrder": {
+            "type": "link",
+            "view": "sales:views/receipt-order/fields/return-order"
+        },
+        "warehouse": {
+            "type": "link",
+            "validatorClassNameList": [
+                "Espo\\Modules\\Sales\\Classes\\FieldValidators\\DeliveryOrder\\Warehouse\\Required"
+            ],
+            "autocompleteOnEmpty": true
+        },
+        "description": {
+            "type": "text"
+        },
+        "shippingContact": {
+            "type": "link",
+            "view": "sales:views/quote/fields/contact"
+        },
+        "shippingProvider": {
+            "type": "link",
+            "autocompleteOnEmpty": true
+        },
+        "shippingCost": {
+            "type": "currency",
+            "layoutDetailDisabled": true
+        },
+        "amount": {
+            "type": "currency",
+            "notStorable": true,
+            "readOnly": true,
+            "utility": true,
+            "directAccessDisabled": true,
+            "customizationDisabled": true
+        },
+        "amountConverted": {
+            "disabled": true
+        },
+        "amountCurrency": {
+            "utility": true
+        },
+        "weight": {
+            "type": "float",
+            "min": 0,
+            "readOnly": true
+        },
+        "itemList": {
+            "type": "jsonArray",
+            "notStorable": true,
+            "layoutAvailabilityList": [],
+            "dynamicLogicVisibleDisabled": true,
+            "dynamicLogicInvalidDisabled": true,
+            "view": "sales:views/quote/fields/item-list",
+            "templatePlaceholderDisabled": true,
+            "reportDisabled": true,
+            "workflowDisabled": true,
+            "inlineEditDisabled": true,
+            "duplicatorClassName": "Espo\\Modules\\Sales\\Classes\\FieldDuplicators\\Quote\\ItemList"
+        },
+        "receivedItemList": {
+            "type": "jsonArray",
+            "notStorable": true,
+            "layoutAvailabilityList": [],
+            "dynamicLogicVisibleDisabled": true,
+            "dynamicLogicInvalidDisabled": true,
+            "templatePlaceholderDisabled": true,
+            "reportDisabled": true,
+            "workflowDisabled": true,
+            "inlineEditDisabled": true,
+            "duplicatorClassName": "Espo\\Modules\\Sales\\Classes\\FieldDuplicators\\ReceiptOrder\\ReceivedItemList"
+        },
+        "isDone": {
+            "type": "bool",
+            "readOnly": true,
+            "customizationReadOnlyDisabled": true
+        },
+        "isNotActual": {
+            "type": "bool",
+            "readOnly": true,
+            "customizationReadOnlyDisabled": true
+        },
+        "isLocked": {
+            "type": "bool",
+            "readOnly": true,
+            "customizationReadOnlyDisabled": true
+        },
+        "isHardLocked": {
+            "type": "bool",
+            "readOnly": true,
+            "customizationReadOnlyDisabled": true
+        },
+        "products": {
+            "type": "linkMultiple",
+            "entity": "Product",
+            "notStorable": true,
+            "customizationDisabled": true,
+            "directAccessDisabled": true,
+            "layoutAvailabilityList": [
+                "filters"
+            ],
+            "view": "sales:views/quote/fields/products"
+        },
+        "inventoryNumbers": {
+            "type": "linkMultiple",
+            "entity": "InventoryNumber",
+            "notStorable": true,
+            "customizationDisabled": true,
+            "directAccessDisabled": true,
+            "layoutAvailabilityList": [
+                "filters"
+            ],
+            "view": "sales:views/quote/fields/inventory-numbers"
+        },
+        "createdAt": {
+            "type": "datetime",
+            "readOnly": true
+        },
+        "modifiedAt": {
+            "type": "datetime",
+            "readOnly": true
+        },
+        "createdBy": {
+            "type": "link",
+            "readOnly": true
+        },
+        "modifiedBy": {
+            "type": "link",
+            "readOnly": true
+        },
+        "assignedUser": {
+            "type": "link",
+            "view": "views/fields/assigned-user"
+        },
+        "teams": {
+            "type": "linkMultiple"
+        }
+    },
+    "links": {
+        "createdBy": {
+            "type": "belongsTo",
+            "entity": "User"
+        },
+        "modifiedBy": {
+            "type": "belongsTo",
+            "entity": "User"
+        },
+        "shippingProvider": {
+            "type": "belongsTo",
+            "entity": "ShippingProvider"
+        },
+        "account": {
+            "type": "belongsTo",
+            "entity": "Account",
+            "foreign": "receiptOrders"
+        },
+        "supplier": {
+            "type": "belongsTo",
+            "entity": "Supplier"
+        },
+        "purchaseOrder": {
+            "type": "belongsTo",
+            "entity": "PurchaseOrder",
+            "foreign": "receiptOrders"
+        },
+        "returnOrder": {
+            "type": "belongsTo",
+            "entity": "ReturnOrder",
+            "foreign": "receiptOrders"
+        },
+        "shippingContact": {
+            "type": "belongsTo",
+            "entity": "Contact",
+            "foreign": "receiptOrdersShipping"
+        },
+        "warehouse": {
+            "type": "belongsTo",
+            "entity": "Warehouse"
+        },
+        "items": {
+            "type": "hasMany",
+            "entity": "ReceiptOrderItem",
+            "foreign": "receiptOrder",
+            "layoutRelationshipsDisabled": true
+        },
+        "receivedItems": {
+            "type": "hasMany",
+            "entity": "ReceiptOrderReceivedItem",
+            "foreign": "receiptOrder",
+            "layoutRelationshipsDisabled": true
+        },
+        "inventoryTransactions": {
+            "type": "hasChildren",
+            "entity": "InventoryTransaction",
+            "foreign": "parent"
+        },
+        "assignedUser": {
+            "type": "belongsTo",
+            "entity": "User"
+        },
+        "teams": {
+            "type": "hasMany",
+            "entity": "Team",
+            "relationName": "EntityTeam",
+            "layoutRelationshipsDisabled": true
+        }
+    },
+    "collection": {
+        "orderBy": "createdAt",
+        "order": "desc",
+        "textFilterFields": ["name", "number"]
+    },
+    "indexes": {
+        "createdAt": {
+            "columns": [
+                "createdAt"
+            ]
+        }
+    }
+}

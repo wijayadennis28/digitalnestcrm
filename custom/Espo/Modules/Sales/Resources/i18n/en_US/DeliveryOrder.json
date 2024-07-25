@@ -1,0 +1,72 @@
+{
+    "labels": {
+        "Create DeliveryOrder": "Create Delivery Order",
+        "Add Item": "Add Item",
+        "Items": "Items",
+        "Email PDF": "Email PDF",
+        "Valid": "Valid",
+        "Invalid": "Invalid",
+        "Show Availability": "Show Availability",
+        "Availability": "Availability",
+        "Total": "Total"
+    },
+    "fields": {
+        "status": "Status",
+        "number": "Number",
+        "numberA": "Number (auto-incremented)",
+        "account": "Account",
+        "salesOrder": "Sales Order",
+        "shippingAddress": "Shipping Address",
+        "shippingContact": "Shipping Contact",
+        "shippingCost": "Shipping Cost",
+        "amount": "Amount",
+        "shippingCostCurrency": "Shipping Cost Currency",
+        "amountCurrency": "Amount Currency",
+        "shippingProvider": "Shipping Provider",
+        "taxAmount": "Tax Amount",
+        "itemList": "Item List",
+        "dateOrdered": "Date Ordered",
+        "shippingDate": "Shipping Date",
+        "deliveryDate": "Delivery Date",
+        "weight": "Weight",
+        "shippingCostConverted": "Shipping Cost (converted)",
+        "currency": "Currency",
+        "inventoryData": "Inventory Data",
+        "inventoryStatus": "Inventory Status",
+        "warehouse": "Warehouse",
+        "isDone": "Is Done"
+    },
+    "links": {
+        "items": "Items",
+        "shippingContact": "Shipping Contact",
+        "shippingProvider": "Shipping Provider",
+        "salesOrder": "Sales Order",
+        "account": "Account",
+        "tax": "Tax",
+        "inventoryTransactions": "Inventory Transactions",
+        "warehouse": "Warehouse"
+    },
+    "options": {
+        "status": {
+            "Draft": "Draft",
+            "Ready": "Ready",
+            "In Progress": "In Progress",
+            "Completed": "Completed",
+            "Canceled": "Canceled",
+            "Failed": "Failed"
+        }
+    },
+    "presetFilters": {
+        "actual": "Actual",
+        "completed": "Completed"
+    },
+    "messages": {
+        "inventoryIsInAdjustment": "Can't save as inventory is currently in a started adjustment.",
+        "notAvailableInventory": "Not enough inventory is available.",
+        "notAvailableInventoryStatusChanged": "Not enough inventory is available. Cannot change the status."
+    },
+    "texts": {
+        "itemTooMany": "{number} extra needs to be removed.",
+        "itemTooFew": "{number} more needs to be added."
+    }
+}

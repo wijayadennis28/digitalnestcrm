@@ -1,0 +1,47 @@
+{
+    "controller": "controllers/record",
+    "searchPanelDisabled": false,
+    "filterList": [
+        "active"
+    ],
+    "selectDefaultFilters": {
+        "filter": "active"
+    },
+    "viewSetupHandlers": {
+        "list": ["sales:handlers/info"],
+        "record/detail": ["sales:handlers/warehouse/setup-record-detail"]
+    },
+    "mergeDisabled": true,
+    "menu": {
+        "list": {
+            "dropdown": [
+                {
+                    "labelTranslation": "Global.scopeNamesPlural.TransferOrder",
+                    "link": "#TransferOrder",
+                    "acl": "read",
+                    "aclScope": "TransferOrder"
+                }
+            ]
+        }
+    },
+    "bottomPanels": {
+        "detail": [
+            {
+                "name": "products",
+                "view": "sales:views/warehouse/record/panels/products"
+            },
+            {
+                "name": "inventoryNumbers",
+                "view": "sales:views/warehouse/record/panels/inventory-numbers"
+            }
+        ]
+    },
+    "relationshipPanels": {
+        "inventoryTransactions": {
+            "createDisabled": true,
+            "selectDisabled": true,
+            "unlinkDisabled": true
+        }
+    },
+    "iconClass": "fas fa-warehouse"
+}

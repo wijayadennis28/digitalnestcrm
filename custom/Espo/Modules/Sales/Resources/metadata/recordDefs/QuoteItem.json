@@ -1,0 +1,15 @@
+{
+    "actions": {
+        "convertCurrency": {
+            "disabled": true
+        }
+    },
+    "massActions": {
+        "convertCurrency": {
+            "disabled": true
+        },
+        "delete": {
+            "disabled": true
+        }
+    }
+}

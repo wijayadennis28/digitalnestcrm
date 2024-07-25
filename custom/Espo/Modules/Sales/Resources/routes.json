@@ -1,0 +1,205 @@
+[
+    {
+        "route": "Product/:id/warehousesQuantity",
+        "method": "get",
+        "actionClassName": "Espo\\Modules\\Sales\\Tools\\Product\\Api\\GetWarehousesQuantity"
+    },
+    {
+        "route": "InventoryNumber/:id/warehousesQuantity",
+        "method": "get",
+        "actionClassName": "Espo\\Modules\\Sales\\Tools\\InventoryNumber\\Api\\GetWarehousesQuantity"
+    },
+    {
+        "route": "InventoryNumber/:id/history",
+        "method": "get",
+        "actionClassName": "Espo\\Modules\\Sales\\Tools\\InventoryNumber\\Api\\GetHistory"
+    },
+    {
+        "route": "Warehouse/:id/products",
+        "method": "get",
+        "actionClassName": "Espo\\Modules\\Sales\\Tools\\Warehouse\\Api\\GetProducts"
+    },
+    {
+        "route": "Warehouse/:id/inventoryNumbers",
+        "method": "get",
+        "actionClassName": "Espo\\Modules\\Sales\\Tools\\Warehouse\\Api\\GetInventoryNumbers"
+    },
+    {
+        "route": "ReceiptOrder/:id/importSerialNumbers",
+        "method": "post",
+        "actionClassName": "Espo\\Modules\\Sales\\Tools\\ReceiptOrder\\Api\\PostImportSerialNumbers"
+    },
+    {
+        "route": "ProductAttribute/:id/move/:type",
+        "method": "post",
+        "actionClassName": "Espo\\Modules\\Sales\\Tools\\ProductAttribute\\Api\\PostMove"
+    },
+    {
+        "route": "ProductAttributeOption/:id/move/:type",
+        "method": "post",
+        "actionClassName": "Espo\\Modules\\Sales\\Tools\\ProductAttribute\\Api\\PostMoveOption"
+    },
+    {
+        "route": "ProductAttribute/options",
+        "method": "get",
+        "actionClassName": "Espo\\Modules\\Sales\\Tools\\ProductAttribute\\Api\\GetOptions"
+    },
+    {
+        "route": "Product/:id/generateVariants",
+        "method": "post",
+        "actionClassName": "Espo\\Modules\\Sales\\Tools\\Product\\Api\\PostGenerateVariants"
+    },
+    {
+        "route": "Product/:id/variantInventoryNumbers",
+        "method": "get",
+        "actionClassName": "Espo\\Modules\\Sales\\Tools\\Product\\Api\\GetVariantInventoryNumbers"
+    },
+    {
+        "route": "Product/:id/orderItems",
+        "method": "get",
+        "actionClassName": "Espo\\Modules\\Sales\\Tools\\Product\\Api\\GetOrderItems"
+    },
+    {
+        "route": "DeliveryOrder/:id/lock",
+        "method": "post",
+        "actionClassName": "Espo\\Modules\\Sales\\Tools\\Quote\\Api\\PostLock",
+        "params": {
+            "entityType": "DeliveryOrder"
+        }
+    },
+    {
+        "route": "DeliveryOrder/:id/unlock",
+        "method": "post",
+        "actionClassName": "Espo\\Modules\\Sales\\Tools\\Quote\\Api\\PostUnlock",
+        "params": {
+            "entityType": "DeliveryOrder"
+        }
+    },
+    {
+        "route": "Invoice/:id/lock",
+        "method": "post",
+        "actionClassName": "Espo\\Modules\\Sales\\Tools\\Quote\\Api\\PostLock",
+        "params": {
+            "entityType": "Invoice"
+        }
+    },
+    {
+        "route": "Invoice/:id/unlock",
+        "method": "post",
+        "actionClassName": "Espo\\Modules\\Sales\\Tools\\Quote\\Api\\PostUnlock",
+        "params": {
+            "entityType": "Invoice"
+        }
+    },
+    {
+        "route": "Quote/:id/lock",
+        "method": "post",
+        "actionClassName": "Espo\\Modules\\Sales\\Tools\\Quote\\Api\\PostLock",
+        "params": {
+            "entityType": "Quote"
+        }
+    },
+    {
+        "route": "Quote/:id/unlock",
+        "method": "post",
+        "actionClassName": "Espo\\Modules\\Sales\\Tools\\Quote\\Api\\PostUnlock",
+        "params": {
+            "entityType": "Quote"
+        }
+    },
+    {
+        "route": "ReceiptOrder/:id/lock",
+        "method": "post",
+        "actionClassName": "Espo\\Modules\\Sales\\Tools\\Quote\\Api\\PostLock",
+        "params": {
+            "entityType": "ReceiptOrder"
+        }
+    },
+    {
+        "route": "ReceiptOrder/:id/unlock",
+        "method": "post",
+        "actionClassName": "Espo\\Modules\\Sales\\Tools\\Quote\\Api\\PostUnlock",
+        "params": {
+            "entityType": "ReceiptOrder"
+        }
+    },
+    {
+        "route": "ReturnOrder/:id/lock",
+        "method": "post",
+        "actionClassName": "Espo\\Modules\\Sales\\Tools\\Quote\\Api\\PostLock",
+        "params": {
+            "entityType": "ReturnOrder"
+        }
+    },
+    {
+        "route": "ReturnOrder/:id/unlock",
+        "method": "post",
+        "actionClassName": "Espo\\Modules\\Sales\\Tools\\Quote\\Api\\PostUnlock",
+        "params": {
+            "entityType": "ReturnOrder"
+        }
+    },
+    {
+        "route": "SalesOrder/:id/lock",
+        "method": "post",
+        "actionClassName": "Espo\\Modules\\Sales\\Tools\\Quote\\Api\\PostLock",
+        "params": {
+            "entityType": "SalesOrder"
+        }
+    },
+    {
+        "route": "SalesOrder/:id/unlock",
+        "method": "post",
+        "actionClassName": "Espo\\Modules\\Sales\\Tools\\Quote\\Api\\PostUnlock",
+        "params": {
+            "entityType": "SalesOrder"
+        }
+    },
+    {
+        "route": "TransferOrder/:id/lock",
+        "method": "post",
+        "actionClassName": "Espo\\Modules\\Sales\\Tools\\Quote\\Api\\PostLock",
+        "params": {
+            "entityType": "TransferOrder"
+        }
+    },
+    {
+        "route": "TransferOrder/:id/unlock",
+        "method": "post",
+        "actionClassName": "Espo\\Modules\\Sales\\Tools\\Quote\\Api\\PostUnlock",
+        "params": {
+            "entityType": "TransferOrder"
+        }
+    },
+    {
+        "route": "PurchaseOrder/:id/lock",
+        "method": "post",
+        "actionClassName": "Espo\\Modules\\Sales\\Tools\\Quote\\Api\\PostLock",
+        "params": {
+            "entityType": "PurchaseOrder"
+        }
+    },
+    {
+        "route": "PurchaseOrder/:id/unlock",
+        "method": "post",
+        "actionClassName": "Espo\\Modules\\Sales\\Tools\\Quote\\Api\\PostUnlock",
+        "params": {
+            "entityType": "PurchaseOrder"
+        }
+    },
+    {
+        "route": "PriceRuleCondition/list",
+        "method": "get",
+        "actionClassName": "Espo\\Modules\\Sales\\Tools\\Price\\Api\\GetPriceRuleConditionList"
+    },
+    {
+        "route": "ProductPrice/getSalesPrice",
+        "method": "post",
+        "actionClassName": "Espo\\Modules\\Sales\\Tools\\Price\\Api\\PostGetSalesPrice"
+    },
+    {
+        "route": "ProductPrice/getPurchasePrice",
+        "method": "post",
+        "actionClassName": "Espo\\Modules\\Sales\\Tools\\Price\\Api\\PostGetPurchasePrice"
+    }
+]

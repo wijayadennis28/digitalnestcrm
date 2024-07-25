@@ -1,0 +1,15 @@
+{
+    "massActions": {
+        "update": {
+            "disabled": true
+        },
+        "convertCurrency": {
+            "disabled": true
+        }
+    },
+    "actions": {
+        "convertCurrency": {
+            "disabled": true
+        }
+    }
+}

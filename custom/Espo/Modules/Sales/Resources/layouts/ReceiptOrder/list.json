@@ -1,0 +1,22 @@
+[
+    {
+        "name": "name",
+        "link": true
+    },
+    {
+        "name": "status",
+        "width": 15
+    },
+    {
+        "name": "supplier",
+        "width": 25
+    },
+    {
+        "name": "purchaseOrder",
+        "width": 20
+    },
+    {
+        "name": "createdAt",
+        "width": 12
+    }
+]

@@ -1,0 +1,26 @@
+{
+  "fields": {
+    "name": "Nome",
+    "qty": "Quantità",
+    "quantity": "Quantità",
+    "unitPrice": "Prezzo Unitario",
+    "amount": "Importo",
+    "product": "Prodotto",
+    "order": "Numero di riga",
+    "opportunity": "Opportunità",
+    "description": "Descrizione",
+    "amountConverted": "Importo (convertito)",
+    "unitPriceConverted": "Prezzo unitario (convertito)",
+    "opportunityStage": "Fase",
+      "listPriceConverted": "Prezzo di listino (convertito)",
+      "listPrice": "Listino prezzi",
+      "discount": "Sconto (%)"
+  },
+  "links": {
+    "opportunity": "Opportunità",
+    "product": "Prodotto"
+  },
+  "labels": {
+    "Opportunities": "Opportunità"
+  }
+}

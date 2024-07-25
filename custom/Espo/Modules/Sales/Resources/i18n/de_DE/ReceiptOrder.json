@@ -1,0 +1,74 @@
+{
+  "labels": {
+    "Create ReceiptOrder": "Empfangsauftrag erstellen",
+    "Add Item": "Artikel hinzufügen",
+    "Items": "Artikel",
+    "Received Inventory": "Empfangene Inventar",
+    "Email PDF": "E-Mail PDF",
+    "Import Serial Numbers": "Seriennummern importieren",
+    "CSV File": "CSV-Datei"
+  },
+  "fields": {
+    "number": "Nummer",
+    "numberA": "Nummer (auto-inkrement)",
+    "account": "Firma",
+    "supplier": "Lieferant",
+    "purchaseOrder": "Bestellung",
+    "returnOrder": "Rücksendung",
+    "shippingContact": "Kontakt f. Lieferadresse",
+    "shippingCost": "Lieferkosten",
+    "amount": "Betrag",
+    "shippingProvider": "Versender",
+    "shippingCostCurrency": "Lieferkosten Währung",
+    "amountCurrency": "Betragswährung",
+    "itemList": "Artikelliste",
+    "receivedItemList": "Empfangene Artikelliste",
+    "dateOrdered": "Bestelldatum",
+    "dateReceived": "Empfangsdatum",
+    "weight": "Gewicht",
+    "shippingCostConverted": "Lieferkosten (konvertiert)",
+    "currency": "Währung",
+    "isDone": "Erledigt",
+    "warehouse": "Lager",
+    "fieldDelimiter": "Feldbegrenzer",
+    "textQualifier": "Textbegrenzer",
+    "headerRow": "Kopfzeile",
+    "columnNumber": "Spaltennummer",
+    "preview": "In Prüfung"
+  },
+  "links": {
+    "items": "Artikel",
+    "receivedItems": "Empfangene Artikel",
+    "shippingContact": "Kontakt f. Lieferadresse",
+    "shippingProvider": "Versender",
+    "purchaseOrder": "Bestellung",
+    "returnOrder": "Rücksendung",
+    "account": "Firma",
+    "supplier": "Lieferant",
+    "inventoryTransactions": "Inventartransaktionen",
+    "warehouse": "Lager"
+  },
+  "options": {
+    "status": {
+      "Draft": "Entwurf",
+      "Ready": "Bereit",
+      "Completed": "Abgeschlossen",
+      "Canceled": "Storniert"
+    }
+  },
+  "presetFilters": {
+    "actual": "Aktuell",
+    "completed": "Abgeschlossen"
+  },
+  "messages": {
+    "inventoryIsInAdjustment": "Das Speichern ist nicht möglich, da sich das Inventar derzeit in einer begonnenen Anpassung befindet.",
+    "serialNumbersExists": "Einige Seriennummern sind bereits vorhanden.\n\n{numbers}",
+    "serialNumberImportLimitExceeded": "Es können nicht mehr als {maxSize} Seriennummern importiert werden.",
+    "serialNumberAlreadyInStock": "Seriennummer bereits auf Lager.\n\n{numbers}",
+    "receivedSerialNumberNotOne": "Die Menge eines empfangenen Artikels mit einer Seriennummer sollte eins betragen.",
+    "receivedInventoryNumberProductMismatch": "Die Inventarnummer entspricht nicht dem Produkt.",
+    "receivedInventoryNumberIsEmpty": "Keine Inventarnummer angegeben.",
+    "receivedQuantityMismatch": "Die empfangene Menge stimmt nicht überein.",
+    "emptyQuantityReceived": "Vor Abschluss der Bestellung muss die empfangene Menge angegeben werden."
+  }
+}

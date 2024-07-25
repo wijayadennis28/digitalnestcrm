@@ -109,6 +109,62 @@ return (object) [
         'parent' => 'Espo\\Modules\\Crm\\Classes\\Acl\\Task\\LinkCheckers\\ParentLinkChecker',
         'account' => 'Espo\\Modules\\Crm\\Classes\\Acl\\Task\\LinkCheckers\\AccountLinkChecker'
       ]
+    ],
+    'DeliveryOrderItem' => (object) [
+      'ownershipCheckerClassName' => 'Espo\\Modules\\Sales\\Classes\\Acl\\QuoteItem\\OwnershipChecker',
+      'portalOwnershipCheckerClassName' => 'Espo\\Modules\\Sales\\Classes\\AclPortal\\QuoteItem\\OwnershipChecker'
+    ],
+    'InventoryAdjustmentItem' => (object) [
+      'ownershipCheckerClassName' => 'Espo\\Modules\\Sales\\Classes\\Acl\\QuoteItem\\OwnershipChecker',
+      'portalOwnershipCheckerClassName' => 'Espo\\Modules\\Sales\\Classes\\AclPortal\\QuoteItem\\OwnershipChecker'
+    ],
+    'InventoryNumber' => (object) [
+      'accessCheckerClassName' => 'Espo\\Modules\\Sales\\Classes\\Acl\\InventoryNumber\\AccessChecker'
+    ],
+    'InvoiceItem' => (object) [
+      'ownershipCheckerClassName' => 'Espo\\Modules\\Sales\\Classes\\Acl\\QuoteItem\\OwnershipChecker',
+      'portalOwnershipCheckerClassName' => 'Espo\\Modules\\Sales\\Classes\\AclPortal\\QuoteItem\\OwnershipChecker'
+    ],
+    'OpportunityItem' => (object) [
+      'ownershipCheckerClassName' => 'Espo\\Modules\\Sales\\Classes\\Acl\\QuoteItem\\OwnershipChecker',
+      'portalOwnershipCheckerClassName' => 'Espo\\Modules\\Sales\\Classes\\AclPortal\\QuoteItem\\OwnershipChecker'
+    ],
+    'PriceRule' => (object) [
+      'ownershipCheckerClassName' => 'Espo\\Modules\\Sales\\Classes\\Acl\\PriceRule\\OwnershipChecker',
+      'portalOwnershipCheckerClassName' => 'Espo\\Modules\\Sales\\Classes\\AclPortal\\PriceRule\\OwnershipChecker',
+      'accessCheckerClassName' => 'Espo\\Modules\\Sales\\Classes\\Acl\\PriceRule\\AccessChecker'
+    ],
+    'ProductPrice' => (object) [
+      'ownershipCheckerClassName' => 'Espo\\Modules\\Sales\\Classes\\Acl\\ProductPrice\\OwnershipChecker',
+      'portalOwnershipCheckerClassName' => 'Espo\\Modules\\Sales\\Classes\\AclPortal\\ProductPrice\\OwnershipChecker',
+      'accessCheckerClassName' => 'Espo\\Modules\\Sales\\Classes\\Acl\\ProductPrice\\AccessChecker'
+    ],
+    'PurchaseOrderItem' => (object) [
+      'ownershipCheckerClassName' => 'Espo\\Modules\\Sales\\Classes\\Acl\\QuoteItem\\OwnershipChecker',
+      'portalOwnershipCheckerClassName' => 'Espo\\Modules\\Sales\\Classes\\AclPortal\\QuoteItem\\OwnershipChecker'
+    ],
+    'QuoteItem' => (object) [
+      'ownershipCheckerClassName' => 'Espo\\Modules\\Sales\\Classes\\Acl\\QuoteItem\\OwnershipChecker',
+      'portalOwnershipCheckerClassName' => 'Espo\\Modules\\Sales\\Classes\\AclPortal\\QuoteItem\\OwnershipChecker'
+    ],
+    'ReceiptOrderItem' => (object) [
+      'ownershipCheckerClassName' => 'Espo\\Modules\\Sales\\Classes\\Acl\\QuoteItem\\OwnershipChecker',
+      'portalOwnershipCheckerClassName' => 'Espo\\Modules\\Sales\\Classes\\AclPortal\\QuoteItem\\OwnershipChecker'
+    ],
+    'ReturnOrderItem' => (object) [
+      'ownershipCheckerClassName' => 'Espo\\Modules\\Sales\\Classes\\Acl\\QuoteItem\\OwnershipChecker',
+      'portalOwnershipCheckerClassName' => 'Espo\\Modules\\Sales\\Classes\\AclPortal\\QuoteItem\\OwnershipChecker'
+    ],
+    'SalesOrderItem' => (object) [
+      'ownershipCheckerClassName' => 'Espo\\Modules\\Sales\\Classes\\Acl\\QuoteItem\\OwnershipChecker',
+      'portalOwnershipCheckerClassName' => 'Espo\\Modules\\Sales\\Classes\\AclPortal\\QuoteItem\\OwnershipChecker'
+    ],
+    'SupplierProductPrice' => (object) [
+      'ownershipCheckerClassName' => 'Espo\\Modules\\Sales\\Classes\\Acl\\SupplierProductPrice\\OwnershipChecker'
+    ],
+    'TransferOrderItem' => (object) [
+      'ownershipCheckerClassName' => 'Espo\\Modules\\Sales\\Classes\\Acl\\QuoteItem\\OwnershipChecker',
+      'portalOwnershipCheckerClassName' => 'Espo\\Modules\\Sales\\Classes\\AclPortal\\QuoteItem\\OwnershipChecker'
     ]
   ],
   'app' => (object) [
@@ -180,7 +236,21 @@ return (object) [
           'MassEmail' => 'Campaign',
           'CampaignLogRecord' => 'Campaign',
           'CampaignTrackingUrl' => 'Campaign',
-          'EmailQueueItem' => 'Campaign'
+          'EmailQueueItem' => 'Campaign',
+          'QuoteItem' => 'Quote',
+          'SalesOrderItem' => 'SalesOrder',
+          'InvoiceItem' => 'Invoice',
+          'PurchaseOrderItem' => 'PurchaseOrder',
+          'DeliveryOrderItem' => 'DeliveryOrder',
+          'ReceiptOrderItem' => 'ReceiptOrder',
+          'TransferOrderItem' => 'TransferOrder',
+          'ReturnOrderItem' => 'ReturnOrder',
+          'OpportunityItem' => 'Opportunity',
+          'InventoryAdjustmentItem' => 'InventoryAdjustment',
+          'ProductPrice' => 'PriceBook',
+          'PriceRule' => 'PriceBook',
+          'SupplierProductPrice' => 'Supplier',
+          'ProductAttributeOption' => 'ProductAttribute'
         ],
         'fieldLevel' => (object) [],
         'scopeFieldLevel' => (object) [
@@ -269,7 +339,19 @@ return (object) [
             'edit' => 'no',
             'delete' => 'all'
           ],
-          'Stream' => true
+          'Stream' => true,
+          'InventoryTransaction' => (object) [
+            'create' => 'yes',
+            'read' => 'all',
+            'edit' => 'all',
+            'delete' => 'all'
+          ],
+          'PriceRuleCondition' => (object) [
+            'create' => 'yes',
+            'read' => 'all',
+            'edit' => 'all',
+            'delete' => 'all'
+          ]
         ]
       ],
       'valuePermissionList' => [
@@ -365,7 +447,17 @@ return (object) [
           'MassEmail' => 'Campaign',
           'CampaignLogRecord' => 'Campaign',
           'CampaignTrackingUrl' => 'Campaign',
-          'EmailQueueItem' => false
+          'EmailQueueItem' => false,
+          'QuoteItem' => 'Quote',
+          'SalesOrderItem' => 'SalesOrder',
+          'InvoiceItem' => 'Invoice',
+          'PurchaseOrderItem' => 'PurchaseOrder',
+          'DeliveryOrderItem' => 'DeliveryOrder',
+          'ReceiptOrderItem' => 'ReceiptOrder',
+          'TransferOrderItem' => 'TransferOrder',
+          'ReturnOrderItem' => 'ReturnOrder',
+          'OpportunityItem' => 'Opportunity',
+          'ProductPrice' => 'PriceBook'
         ],
         'fieldLevel' => (object) [],
         'scopeFieldLevel' => (object) [
@@ -874,6 +966,24 @@ return (object) [
           ]
         ],
         'order' => 26
+      ],
+      'salesPack' => (object) [
+        'label' => 'Sales Pack',
+        'itemList' => [
+          0 => (object) [
+            'url' => '#Admin/salesPackSettings',
+            'label' => 'Settings',
+            'iconClass' => 'fas fa-cog',
+            'description' => 'salesPackSettings',
+            'recordView' => 'sales:views/settings/record/settings'
+          ],
+          1 => (object) [
+            'url' => '#PriceRuleCondition',
+            'label' => 'Price Rule Conditions',
+            'iconClass' => 'fas fa-code',
+            'description' => 'priceRuleConditions'
+          ]
+        ]
       ]
     ],
     'api' => (object) [
@@ -891,6 +1001,18 @@ return (object) [
       ],
       'addressCountryData' => (object) [
         'className' => 'Espo\\Classes\\AppParams\\AddressCountryData'
+      ],
+      'defaultTaxRateQuote' => (object) [
+        'className' => 'Espo\\Modules\\Sales\\AppParams\\DefaultTaxRateQuote'
+      ],
+      'defaultTaxRateSalesOrder' => (object) [
+        'className' => 'Espo\\Modules\\Sales\\AppParams\\DefaultTaxRateSalesOrder'
+      ],
+      'defaultTaxRateInvoice' => (object) [
+        'className' => 'Espo\\Modules\\Sales\\AppParams\\DefaultTaxRateInvoice'
+      ],
+      'defaultTaxRatePurchaseOrder' => (object) [
+        'className' => 'Espo\\Modules\\Sales\\AppParams\\DefaultTaxRatePurchaseOrder'
       ]
     ],
     'authentication' => (object) [
@@ -963,6 +1085,9 @@ return (object) [
       ],
       'appLog' => (object) [
         'className' => 'Espo\\Classes\\Cleanup\\AppLog'
+      ],
+      'salesIntegrity' => (object) [
+        'className' => 'Espo\\Modules\\Sales\\Classes\\Cleanup\\Integrity'
       ]
     ],
     'client' => (object) [
@@ -1472,7 +1597,23 @@ return (object) [
         ],
         'authIpAddressCheckExcludedUsers' => (object) [
           'level' => 'superAdmin'
-        ]
+        ],
+        'defaultPriceBook' => (object) [],
+        'priceBooksEnabled' => (object) [],
+        'inventoryTransactionsEnabled' => (object) [],
+        'warehousesEnabled' => (object) [],
+        'deliveryOrdersEnabled' => (object) [],
+        'receiptOrdersEnabled' => (object) [],
+        'inventoryCompressJobPeriod' => (object) [
+          'level' => 'admin'
+        ],
+        'inventoryDetachJobPeriod' => (object) [
+          'level' => 'admin'
+        ],
+        'notActualOrderLockingJobPeriod' => (object) [
+          'level' => 'admin'
+        ],
+        'productVariantMaxCount' => (object) []
       ]
     ],
     'consoleCommands' => (object) [
@@ -1547,6 +1688,18 @@ return (object) [
       'migrationVersionStep' => (object) [
         'listed' => false,
         'noSystemUser' => true
+      ],
+      'inventoryAclCheck' => (object) [
+        'className' => 'Espo\\Modules\\Sales\\Classes\\ConsoleCommands\\InventoryAclCheck',
+        'listed' => false
+      ],
+      'inventoryCompress' => (object) [
+        'className' => 'Espo\\Modules\\Sales\\Classes\\ConsoleCommands\\InventoryCompress',
+        'listed' => true
+      ],
+      'inventoryDetach' => (object) [
+        'className' => 'Espo\\Modules\\Sales\\Classes\\ConsoleCommands\\InventoryDetach',
+        'listed' => true
       ]
     ],
     'containerServices' => (object) [
@@ -1908,7 +2061,17 @@ return (object) [
       ]
     ],
     'currencyConversion' => (object) [
-      'entityConverterClassNameMap' => (object) []
+      'entityConverterClassNameMap' => (object) [
+        'Quote' => 'Espo\\Modules\\Sales\\Classes\\EntityCurrencyConverters\\QuoteConverter',
+        'SalesOrder' => 'Espo\\Modules\\Sales\\Classes\\EntityCurrencyConverters\\QuoteConverter',
+        'Invoice' => 'Espo\\Modules\\Sales\\Classes\\EntityCurrencyConverters\\QuoteConverter',
+        'PurchaseOrder' => 'Espo\\Modules\\Sales\\Classes\\EntityCurrencyConverters\\QuoteConverter',
+        'DeliveryOrder' => 'Espo\\Modules\\Sales\\Classes\\EntityCurrencyConverters\\QuoteConverter',
+        'ReceiptOrder' => 'Espo\\Modules\\Sales\\Classes\\EntityCurrencyConverters\\QuoteConverter',
+        'TransferOrder' => 'Espo\\Modules\\Sales\\Classes\\EntityCurrencyConverters\\QuoteConverter',
+        'ReturnOrder' => 'Espo\\Modules\\Sales\\Classes\\EntityCurrencyConverters\\QuoteConverter',
+        'Opportunity' => 'Espo\\Modules\\Sales\\Classes\\EntityCurrencyConverters\\QuoteConverter'
+      ]
     ],
     'databasePlatforms' => (object) [
       'Mysql' => (object) [
@@ -2286,6 +2449,224 @@ return (object) [
             'required' => true,
             'tooltip' => true,
             'view' => 'crm:views/admin/entity-manager/fields/status-list'
+          ]
+        ]
+      ],
+      'Product' => (object) [
+        'variantSyncFieldList' => (object) [
+          'location' => 'scopes',
+          'fieldDefs' => (object) [
+            'type' => 'multiEnum',
+            'view' => 'sales:views/admin/entity-manager/fields/product-variant-sync-field-list',
+            'tooltip' => 'productVariantSyncFieldList'
+          ]
+        ]
+      ],
+      'SalesOrder' => (object) [
+        'softReserveStatusList' => (object) [
+          'location' => 'scopes',
+          'fieldDefs' => (object) [
+            'type' => 'multiEnum',
+            'view' => 'sales:views/admin/entity-manager/fields/sales-order-status-list',
+            'tooltip' => 'salesOrderSoftReserveStatusList'
+          ]
+        ],
+        'doneStatusList' => (object) [
+          'location' => 'scopes',
+          'fieldDefs' => (object) [
+            'type' => 'multiEnum',
+            'view' => 'sales:views/admin/entity-manager/fields/sales-order-status-list',
+            'tooltip' => 'salesOrderDoneStatusList'
+          ]
+        ],
+        'canceledStatusList' => (object) [
+          'location' => 'scopes',
+          'fieldDefs' => (object) [
+            'type' => 'multiEnum',
+            'view' => 'sales:views/admin/entity-manager/fields/sales-order-status-list',
+            'tooltip' => 'salesOrderCanceledStatusList'
+          ]
+        ],
+        'deliveryRequiredStatusList' => (object) [
+          'location' => 'scopes',
+          'fieldDefs' => (object) [
+            'type' => 'multiEnum',
+            'view' => 'sales:views/admin/entity-manager/fields/sales-order-status-list',
+            'tooltip' => 'deliveryRequiredStatusList'
+          ]
+        ]
+      ],
+      'DeliveryOrder' => (object) [
+        'softReserveStatusList' => (object) [
+          'location' => 'scopes',
+          'fieldDefs' => (object) [
+            'type' => 'multiEnum',
+            'view' => 'sales:views/admin/entity-manager/fields/delivery-order-status-list',
+            'tooltip' => 'deliveryOrderSoftReserveStatusList'
+          ]
+        ],
+        'reserveStatusList' => (object) [
+          'location' => 'scopes',
+          'fieldDefs' => (object) [
+            'type' => 'multiEnum',
+            'view' => 'sales:views/admin/entity-manager/fields/delivery-order-status-list',
+            'tooltip' => 'deliveryOrderReserveStatusList'
+          ]
+        ],
+        'canceledStatusList' => (object) [
+          'location' => 'scopes',
+          'fieldDefs' => (object) [
+            'type' => 'multiEnum',
+            'view' => 'sales:views/admin/entity-manager/fields/delivery-order-status-list',
+            'tooltip' => 'deliveryOrderCanceledStatusList'
+          ]
+        ],
+        'doneStatusList' => (object) [
+          'location' => 'scopes',
+          'fieldDefs' => (object) [
+            'type' => 'multiEnum',
+            'view' => 'sales:views/admin/entity-manager/fields/delivery-order-status-list',
+            'tooltip' => 'deliveryOrderDoneStatusList'
+          ]
+        ],
+        'failedStatusList' => (object) [
+          'location' => 'scopes',
+          'fieldDefs' => (object) [
+            'type' => 'multiEnum',
+            'view' => 'sales:views/admin/entity-manager/fields/delivery-order-status-list',
+            'tooltip' => 'deliveryOrderFailedStatusList'
+          ]
+        ]
+      ],
+      'TransferOrder' => (object) [
+        'softReserveStatusList' => (object) [
+          'location' => 'scopes',
+          'fieldDefs' => (object) [
+            'type' => 'multiEnum',
+            'view' => 'sales:views/admin/entity-manager/fields/transfer-order-status-list',
+            'tooltip' => 'transferOrderSoftReserveStatusList'
+          ]
+        ],
+        'reserveStatusList' => (object) [
+          'location' => 'scopes',
+          'fieldDefs' => (object) [
+            'type' => 'multiEnum',
+            'view' => 'sales:views/admin/entity-manager/fields/transfer-order-status-list',
+            'tooltip' => 'transferOrderReserveStatusList'
+          ]
+        ],
+        'canceledStatusList' => (object) [
+          'location' => 'scopes',
+          'fieldDefs' => (object) [
+            'type' => 'multiEnum',
+            'view' => 'sales:views/admin/entity-manager/fields/transfer-order-status-list',
+            'tooltip' => 'transferOrderCanceledStatusList'
+          ]
+        ],
+        'doneStatusList' => (object) [
+          'location' => 'scopes',
+          'fieldDefs' => (object) [
+            'type' => 'multiEnum',
+            'view' => 'sales:views/admin/entity-manager/fields/transfer-order-status-list',
+            'tooltip' => 'transferOrderDoneStatusList'
+          ]
+        ],
+        'failedStatusList' => (object) [
+          'location' => 'scopes',
+          'fieldDefs' => (object) [
+            'type' => 'multiEnum',
+            'view' => 'sales:views/admin/entity-manager/fields/transfer-order-status-list',
+            'tooltip' => 'transferOrderFailedStatusList'
+          ]
+        ]
+      ],
+      'PurchaseOrder' => (object) [
+        'doneStatusList' => (object) [
+          'location' => 'scopes',
+          'fieldDefs' => (object) [
+            'type' => 'multiEnum',
+            'view' => 'sales:views/admin/entity-manager/fields/purchase-order-status-list',
+            'tooltip' => 'purchaseOrderDoneStatusList'
+          ]
+        ],
+        'canceledStatusList' => (object) [
+          'location' => 'scopes',
+          'fieldDefs' => (object) [
+            'type' => 'multiEnum',
+            'view' => 'sales:views/admin/entity-manager/fields/purchase-order-status-list',
+            'tooltip' => 'purchaseOrderCanceledStatusList'
+          ]
+        ]
+      ],
+      'ReceiptOrder' => (object) [
+        'doneStatusList' => (object) [
+          'location' => 'scopes',
+          'fieldDefs' => (object) [
+            'type' => 'multiEnum',
+            'view' => 'sales:views/admin/entity-manager/fields/receipt-order-status-list',
+            'tooltip' => 'receiptOrderDoneStatusList'
+          ]
+        ],
+        'canceledStatusList' => (object) [
+          'location' => 'scopes',
+          'fieldDefs' => (object) [
+            'type' => 'multiEnum',
+            'view' => 'sales:views/admin/entity-manager/fields/receipt-order-status-list',
+            'tooltip' => 'receiptOrderCanceledStatusList'
+          ]
+        ]
+      ],
+      'Quote' => (object) [
+        'doneStatusList' => (object) [
+          'location' => 'scopes',
+          'fieldDefs' => (object) [
+            'type' => 'multiEnum',
+            'view' => 'sales:views/admin/entity-manager/fields/quote-status-list',
+            'tooltip' => 'quoteDoneStatusList'
+          ]
+        ],
+        'canceledStatusList' => (object) [
+          'location' => 'scopes',
+          'fieldDefs' => (object) [
+            'type' => 'multiEnum',
+            'view' => 'sales:views/admin/entity-manager/fields/quote-status-list',
+            'tooltip' => 'quoteCanceledStatusList'
+          ]
+        ]
+      ],
+      'Invoice' => (object) [
+        'doneStatusList' => (object) [
+          'location' => 'scopes',
+          'fieldDefs' => (object) [
+            'type' => 'multiEnum',
+            'view' => 'sales:views/admin/entity-manager/fields/invoice-status-list',
+            'tooltip' => 'invoiceDoneStatusList'
+          ]
+        ],
+        'canceledStatusList' => (object) [
+          'location' => 'scopes',
+          'fieldDefs' => (object) [
+            'type' => 'multiEnum',
+            'view' => 'sales:views/admin/entity-manager/fields/invoice-status-list',
+            'tooltip' => 'invoiceCanceledStatusList'
+          ]
+        ]
+      ],
+      'ReturnOrder' => (object) [
+        'doneStatusList' => (object) [
+          'location' => 'scopes',
+          'fieldDefs' => (object) [
+            'type' => 'multiEnum',
+            'view' => 'sales:views/admin/entity-manager/fields/return-order-status-list',
+            'tooltip' => 'returnOrderDoneStatusList'
+          ]
+        ],
+        'canceledStatusList' => (object) [
+          'location' => 'scopes',
+          'fieldDefs' => (object) [
+            'type' => 'multiEnum',
+            'view' => 'sales:views/admin/entity-manager/fields/return-order-status-list',
+            'tooltip' => 'returnOrderCanceledStatusList'
           ]
         ]
       ]
@@ -3358,7 +3739,9 @@ return (object) [
         'util\\base64Encode' => 'Espo\\Core\\Formula\\Functions\\UtilGroup\\Base64EncodeType',
         'util\\base64Decode' => 'Espo\\Core\\Formula\\Functions\\UtilGroup\\Base64DecodeType',
         'ext\\account\\findByEmailAddress' => 'Espo\\Modules\\Crm\\Classes\\FormulaFunctions\\ExtGroup\\AccountGroup\\FindByEmailAddressType',
-        'ext\\calendar\\userIsBusy' => 'Espo\\Modules\\Crm\\Classes\\FormulaFunctions\\ExtGroup\\CalendarGroup\\UserIsBusyType'
+        'ext\\calendar\\userIsBusy' => 'Espo\\Modules\\Crm\\Classes\\FormulaFunctions\\ExtGroup\\CalendarGroup\\UserIsBusyType',
+        'ext\\priceRule\\productAttribute' => 'Espo\\Modules\\Sales\\Classes\\FormulaFunctions\\PriceRule\\ProductAttribute',
+        'ext\\priceRule\\accountAttribute' => 'Espo\\Modules\\Sales\\Classes\\FormulaFunctions\\PriceRule\\AccountAttribute'
       ]
     ],
     'hook' => (object) [
@@ -3672,6 +4055,132 @@ return (object) [
         'Meeting' => (object) [
           'anyScopeList' => [
             0 => 'Call'
+          ]
+        ],
+        'Opportunity' => (object) [
+          'anyScopeList' => [
+            0 => 'Quote',
+            1 => 'SalesOrder',
+            2 => 'Invoice',
+            3 => 'PurchaseOrder',
+            4 => 'DeliveryOrder',
+            5 => 'ReceiptOrder',
+            6 => 'TransferOrder',
+            7 => 'ReturnOrder'
+          ]
+        ],
+        'Quote' => (object) [
+          'anyScopeList' => [
+            0 => 'SalesOrder',
+            1 => 'Invoice',
+            2 => 'Opportunity',
+            3 => 'PurchaseOrder',
+            4 => 'DeliveryOrder',
+            5 => 'ReceiptOrder',
+            6 => 'TransferOrder',
+            7 => 'ReturnOrder',
+            8 => 'InventoryAdjustment',
+            9 => 'Product'
+          ]
+        ],
+        'QuoteItem' => (object) [
+          'anyScopeList' => [
+            0 => 'Product',
+            1 => 'SalesOrder',
+            2 => 'Invoice',
+            3 => 'Opportunity',
+            4 => 'PurchaseOrder',
+            5 => 'DeliveryOrder',
+            6 => 'ReceiptOrder',
+            7 => 'TransferOrder',
+            8 => 'ReturnOrder',
+            9 => 'InventoryAdjustment'
+          ]
+        ],
+        'SalesOrder' => (object) [
+          'anyScopeList' => [
+            0 => 'Quote',
+            1 => 'Invoice'
+          ]
+        ],
+        'Invoice' => (object) [
+          'anyScopeList' => [
+            0 => 'Quote',
+            1 => 'SalesOrder'
+          ]
+        ],
+        'PurchaseOrder' => (object) [
+          'anyScopeList' => [
+            0 => 'Quote',
+            1 => 'Invoice',
+            2 => 'SalesOrder',
+            3 => 'ReturnOrder'
+          ]
+        ],
+        'ReturnOrder' => (object) [
+          'anyScopeList' => [
+            0 => 'Quote',
+            1 => 'SalesOrder'
+          ]
+        ],
+        'DeliveryOrder' => (object) [
+          'anyScopeList' => [
+            0 => 'Quote',
+            1 => 'SalesOrder',
+            2 => 'TransferOrder'
+          ]
+        ],
+        'DeliveryOrderItem' => (object) [
+          'anyScopeList' => [
+            0 => 'ReceiptOrder'
+          ]
+        ],
+        'ReceiptOrder' => (object) [
+          'anyScopeList' => [
+            0 => 'Quote',
+            1 => 'PurchaseOrder'
+          ]
+        ],
+        'Account' => (object) [
+          'anyScopeList' => [
+            0 => 'Quote',
+            1 => 'SalesOrder',
+            2 => 'Invoice'
+          ]
+        ],
+        'Warehouse' => (object) [
+          'anyScopeList' => [
+            0 => 'SalesOrder',
+            1 => 'DeliveryOrder',
+            2 => 'ReceiptOrder',
+            3 => 'PurchaseOrder',
+            4 => 'TransferOrder',
+            5 => 'InventoryAdjustment',
+            6 => 'InventoryTransaction'
+          ]
+        ],
+        'Product' => (object) [
+          'anyScopeList' => [
+            0 => 'Quote',
+            1 => 'Invoice',
+            2 => 'PurchaseOrder',
+            3 => 'SalesOrder',
+            4 => 'DeliveryOrder',
+            5 => 'ReceiptOrder',
+            6 => 'TransferOrder',
+            7 => 'InventoryTransaction',
+            8 => 'InventoryAdjustment',
+            9 => 'ReturnOrder',
+            10 => 'Warehouse',
+            11 => 'PriceBook',
+            12 => 'Supplier'
+          ]
+        ],
+        'PriceRule' => (object) [
+          'anyScopeList' => [
+            0 => 'Product',
+            1 => 'ProductPrice',
+            2 => 'SupplierProductPrice'
           ]
         ]
       ]
@@ -4072,6 +4581,23 @@ return (object) [
       'CheckInboundEmails' => (object) [
         'preparatorClassName' => 'Espo\\Classes\\JobPreparators\\CheckInboundEmails',
         'jobClassName' => 'Espo\\Classes\\Jobs\\CheckInboundEmails'
+      ],
+      'SalesJob' => (object) [
+        'isSystem' => true,
+        'scheduling' => '3 5 * * *',
+        'jobClassName' => 'Espo\\Modules\\Sales\\Classes\\App\\Job'
+      ],
+      'InventoryCompress' => (object) [
+        'scheduling' => '10 0 * * 6',
+        'jobClassName' => 'Espo\\Modules\\Sales\\Classes\\Jobs\\InventoryCompress'
+      ],
+      'NotActualOrderLocking' => (object) [
+        'scheduling' => '10 1 * * 6',
+        'jobClassName' => 'Espo\\Modules\\Sales\\Classes\\Jobs\\NotActualOrderLocking'
+      ],
+      'InventoryDetach' => (object) [
+        'scheduling' => '10 2 * * 6',
+        'jobClassName' => 'Espo\\Modules\\Sales\\Classes\\Jobs\\InventoryDetach'
       ]
     ],
     'select' => (object) [
@@ -4140,6 +4666,19 @@ return (object) [
           2 => 'Task'
         ],
         'module' => 'Crm'
+      ],
+      'salesEmailPdf' => (object) [
+        'scopeList' => [
+          0 => 'Quote',
+          1 => 'SalesOrder',
+          2 => 'Invoice',
+          3 => 'PurchaseOrder',
+          4 => 'DeliveryOrder',
+          5 => 'ReceiptOrder',
+          6 => 'TransferOrder',
+          7 => 'ReturnOrder'
+        ],
+        'module' => 'Sales'
       ]
     ],
     'webSocket' => (object) [
@@ -4159,7 +4698,10 @@ return (object) [
           ],
           'accessCheckCommand' => 'AclCheck --userId=:userId --scope=:scope --id=:id --action=stream'
         ],
-        'popupNotifications.event' => (object) []
+        'popupNotifications.event' => (object) [],
+        'inventoryQuantityUpdate' => (object) [
+          'accessCheckCommand' => 'InventoryAclCheck --userId=:userId'
+        ]
       ],
       'messagers' => (object) [
         'ZeroMQ' => (object) [
@@ -4180,6 +4722,48 @@ return (object) [
         'useWebSocket' => true,
         'portalDisabled' => true,
         'view' => 'crm:views/meeting/popup-notification'
+      ]
+    ],
+    'workflow' => (object) [
+      'serviceActions' => (object) [
+        'Quote' => (object) [
+          'addQuoteItemList' => (object) [
+            'className' => 'Espo\\Modules\\Sales\\Classes\\ServiceActions\\Quote\\AddItemList'
+          ],
+          'convertCurrency' => (object) [
+            'className' => 'Espo\\Modules\\Sales\\Classes\\ServiceActions\\Quote\\ConvertCurrency'
+          ],
+          'sendInEmail' => (object) [
+            'className' => 'Espo\\Modules\\Sales\\Classes\\ServiceActions\\Quote\\SendInEmail'
+          ]
+        ],
+        'Invoice' => (object) [
+          'addInvoiceItemList' => (object) [
+            'className' => 'Espo\\Modules\\Sales\\Classes\\ServiceActions\\Quote\\AddItemList'
+          ],
+          'convertCurrency' => (object) [
+            'className' => 'Espo\\Modules\\Sales\\Classes\\ServiceActions\\Quote\\ConvertCurrency'
+          ],
+          'sendInEmail' => (object) [
+            'className' => 'Espo\\Modules\\Sales\\Classes\\ServiceActions\\Quote\\SendInEmail'
+          ]
+        ],
+        'SalesOrder' => (object) [
+          'addSalesOrderItemList' => (object) [
+            'className' => 'Espo\\Modules\\Sales\\Classes\\ServiceActions\\Quote\\AddItemList'
+          ],
+          'convertCurrency' => (object) [
+            'className' => 'Espo\\Modules\\Sales\\Classes\\ServiceActions\\Quote\\ConvertCurrency'
+          ],
+          'sendInEmail' => (object) [
+            'className' => 'Espo\\Modules\\Sales\\Classes\\ServiceActions\\Quote\\SendInEmail'
+          ]
+        ],
+        'Opportunity' => (object) [
+          'convertCurrency' => (object) [
+            'className' => 'Espo\\Modules\\Sales\\Classes\\ServiceActions\\Quote\\ConvertCurrency'
+          ]
+        ]
       ]
     ]
   ],
@@ -7293,7 +7877,8 @@ return (object) [
           ]
         ],
         'opportunities' => (object) [
-          'layout' => 'listForAccount'
+          'layout' => 'listForAccount',
+          'createHandler' => 'sales:handlers/account/create-opportunity'
         ],
         'campaignLogRecords' => (object) [
           'rowActionsView' => 'views/record/row-actions/empty',
@@ -7304,6 +7889,42 @@ return (object) [
           'rowActionsView' => 'crm:views/record/row-actions/relationship-target',
           'layout' => 'listForTarget',
           'view' => 'crm:views/record/panels/target-lists'
+        ],
+        'quotes' => (object) [
+          'createAction' => 'createRelatedQuote',
+          'view' => 'sales:views/account/record/panels/quotes',
+          'layout' => 'listForAccount',
+          'selectDisabled' => true,
+          'unlinkDisabled' => true
+        ],
+        'salesOrders' => (object) [
+          'createAction' => 'createRelatedQuote',
+          'view' => 'sales:views/account/record/panels/quotes',
+          'layout' => 'listForAccount',
+          'selectDisabled' => true,
+          'unlinkDisabled' => true
+        ],
+        'invoices' => (object) [
+          'createAction' => 'createRelatedQuote',
+          'view' => 'sales:views/account/record/panels/quotes',
+          'layout' => 'listForAccount',
+          'selectDisabled' => true,
+          'unlinkDisabled' => true
+        ],
+        'deliveryOrders' => (object) [
+          'createAction' => 'createRelatedQuote',
+          'view' => 'sales:views/account/record/panels/quotes',
+          'layout' => 'listForAccount',
+          'selectDisabled' => true,
+          'unlinkDisabled' => true
+        ],
+        'purchaseOrders' => (object) [
+          'createAction' => 'createRelatedPurchaseOrder',
+          'view' => 'sales:views/account/record/panels/purchase-orders',
+          'layout' => 'listForAccount',
+          'selectDisabled' => true,
+          'unlinkDisabled' => true,
+          'createDisabled' => true
         ]
       ],
       'filterList' => [
@@ -8751,6 +9372,34 @@ return (object) [
         ],
         'documents' => (object) [
           'selectHandler' => 'handlers/select-related/same-account-many'
+        ],
+        'quotes' => (object) [
+          'createAction' => 'createRelatedQuote',
+          'view' => 'sales:views/opportunity/record/panels/quotes',
+          'layout' => 'listForAccount',
+          'selectDisabled' => true,
+          'unlinkDisabled' => true
+        ],
+        'salesOrders' => (object) [
+          'createAction' => 'createRelatedSalesOrder',
+          'view' => 'sales:views/opportunity/record/panels/sales-orders',
+          'layout' => 'listForAccount',
+          'selectDisabled' => true,
+          'unlinkDisabled' => true
+        ],
+        'invoices' => (object) [
+          'createAction' => 'createRelatedInvoice',
+          'view' => 'sales:views/opportunity/record/panels/invoices',
+          'layout' => 'listForAccount',
+          'selectDisabled' => true,
+          'unlinkDisabled' => true
+        ],
+        'account' => (object) [
+          'selectFieldHandler' => 'sales:handlers/opportunity/select-account',
+          'selectMandatoryAttributeList' => [
+            0 => 'priceBookId',
+            1 => 'priceBookName'
+          ]
         ]
       ],
       'dynamicLogic' => (object) [
@@ -8769,7 +9418,31 @@ return (object) [
         ]
       ],
       'color' => '#9fc77e',
-      'iconClass' => 'fas fa-dollar-sign'
+      'iconClass' => 'fas fa-dollar-sign',
+      'bottomPanels' => (object) [
+        'detail' => [
+          0 => (object) [
+            'name' => 'items',
+            'label' => 'Items',
+            'view' => 'sales:views/opportunity/record/panels/items',
+            'notRefreshable' => true,
+            'sticked' => true,
+            'isForm' => true,
+            'order' => 1
+          ]
+        ],
+        'edit' => [
+          0 => (object) [
+            'name' => 'items',
+            'label' => 'Items',
+            'view' => 'sales:views/opportunity/record/panels/items',
+            'notRefreshable' => true,
+            'sticked' => true,
+            'isForm' => true,
+            'order' => 1
+          ]
+        ]
+      ]
     ],
     'TargetList' => (object) [
       'controller' => 'controllers/record',
@@ -8990,6 +9663,3841 @@ return (object) [
       ],
       'iconClass' => 'fas fa-tasks',
       'kanbanViewMode' => true
+    ],
+    'DeliveryOrder' => (object) [
+      'controller' => 'controllers/record',
+      'boolFilterList' => [
+        0 => 'onlyMy'
+      ],
+      'filterList' => [
+        0 => 'actual',
+        1 => (object) [
+          'name' => 'completed',
+          'style' => 'success'
+        ]
+      ],
+      'recordViews' => (object) [
+        'detail' => 'sales:views/quote/record/detail',
+        'edit' => 'sales:views/quote/record/edit',
+        'detailSmall' => 'sales:views/quote/record/detail-small',
+        'editSmall' => 'sales:views/quote/record/edit-small'
+      ],
+      'viewSetupHandlers' => (object) [
+        'record/detail' => [
+          0 => 'sales:handlers/quote/setup-record-detail'
+        ],
+        'record/edit' => [
+          0 => 'sales:handlers/quote/setup-record-detail'
+        ]
+      ],
+      'massActionDefs' => (object) [
+        'lock' => (object) [
+          'aclScope' => 'DeliveryOrder',
+          'acl' => 'edit',
+          'handler' => 'sales:handlers/quote/lock-mass-action',
+          'actionFunction' => 'actionLock',
+          'initFunction' => 'initLock'
+        ],
+        'unlock' => (object) [
+          'aclScope' => 'DeliveryOrder',
+          'acl' => 'edit',
+          'handler' => 'sales:handlers/quote/lock-mass-action',
+          'actionFunction' => 'actionUnlock',
+          'initFunction' => 'initUnlock'
+        ]
+      ],
+      'massActionList' => [
+        0 => 'lock',
+        1 => 'unlock'
+      ],
+      'checkAllResultMassActionList' => [
+        0 => 'lock',
+        1 => 'unlock'
+      ],
+      'detailActionList' => [
+        0 => (object) [
+          'name' => 'lock',
+          'acl' => 'edit',
+          'label' => 'Lock',
+          'handler' => 'sales:handlers/quote/lock-action',
+          'data' => (object) [
+            'handler' => 'sales:handlers/quote/lock-action'
+          ],
+          'checkVisibilityFunction' => 'canBeLocked',
+          'actionFunction' => 'actionLock'
+        ],
+        1 => (object) [
+          'name' => 'unlock',
+          'acl' => 'edit',
+          'label' => 'Unlock',
+          'handler' => 'sales:handlers/quote/lock-action',
+          'data' => (object) [
+            'handler' => 'sales:handlers/quote/lock-action'
+          ],
+          'checkVisibilityFunction' => 'canBeUnlocked',
+          'actionFunction' => 'actionUnlock'
+        ]
+      ],
+      'bottomPanels' => (object) [
+        'detail' => [
+          0 => (object) [
+            'name' => 'items',
+            'label' => 'Items',
+            'view' => 'sales:views/quote/record/panels/items',
+            'notRefreshable' => true,
+            'sticked' => true,
+            'isForm' => true
+          ]
+        ],
+        'edit' => [
+          0 => (object) [
+            'name' => 'items',
+            'label' => 'Items',
+            'view' => 'sales:views/quote/record/panels/items',
+            'notRefreshable' => true,
+            'sticked' => true,
+            'isForm' => true
+          ]
+        ]
+      ],
+      'menu' => (object) [
+        'list' => (object) [
+          'dropdown' => [
+            0 => (object) [
+              'labelTranslation' => 'Quote.labels.Templates',
+              'link' => '#Template',
+              'acl' => 'read',
+              'aclScope' => 'Template'
+            ],
+            1 => false,
+            2 => (object) [
+              'labelTranslation' => 'Global.scopeNamesPlural.ShippingProvider',
+              'link' => '#ShippingProvider',
+              'acl' => 'read',
+              'aclScope' => 'ShippingProvider'
+            ],
+            3 => (object) [
+              'labelTranslation' => 'Global.scopeNamesPlural.Warehouse',
+              'link' => '#Warehouse',
+              'acl' => 'read',
+              'aclScope' => 'Warehouse',
+              'configCheck' => 'warehousesEnabled'
+            ],
+            4 => (object) [
+              'labelTranslation' => 'Global.scopeNamesPlural.DeliveryOrderItem',
+              'link' => '#DeliveryOrderItem',
+              'acl' => 'read',
+              'aclScope' => 'DeliveryOrderItem'
+            ]
+          ]
+        ]
+      ],
+      'dynamicLogic' => (object) [
+        'fields' => (object) [
+          'isLocked' => (object) [
+            'visible' => (object) [
+              'conditionGroup' => [
+                0 => (object) [
+                  'type' => 'isTrue',
+                  'attribute' => 'isNotActual'
+                ]
+              ]
+            ]
+          ],
+          'isHardLocked' => (object) [
+            'visible' => (object) [
+              'conditionGroup' => [
+                0 => (object) [
+                  'type' => 'isTrue',
+                  'attribute' => 'isHardLocked'
+                ]
+              ]
+            ]
+          ],
+          'status' => (object) [
+            'readOnly' => (object) [
+              'conditionGroup' => [
+                0 => (object) [
+                  'type' => 'isTrue',
+                  'attribute' => 'isLocked'
+                ]
+              ]
+            ]
+          ],
+          'account' => (object) [
+            'readOnly' => (object) [
+              'conditionGroup' => [
+                0 => (object) [
+                  'type' => 'or',
+                  'value' => [
+                    0 => (object) [
+                      'type' => 'isNotEmpty',
+                      'attribute' => 'salesOrderId',
+                      'data' => (object) [
+                        'field' => 'salesOrder'
+                      ]
+                    ]
+                  ]
+                ]
+              ]
+            ]
+          ],
+          'salesOrder' => (object) [
+            'readOnly' => (object) [
+              'conditionGroup' => [
+                0 => (object) [
+                  'type' => 'isNotEmpty',
+                  'attribute' => 'id'
+                ]
+              ]
+            ]
+          ],
+          'itemList' => (object) [
+            'readOnly' => (object) [
+              'conditionGroup' => [
+                0 => (object) [
+                  'type' => 'or',
+                  'value' => [
+                    0 => (object) [
+                      'type' => 'isTrue',
+                      'attribute' => 'isLocked'
+                    ],
+                    1 => (object) [
+                      'type' => 'and',
+                      'value' => [
+                        0 => (object) [
+                          'type' => 'in',
+                          'attribute' => 'status',
+                          'value' => [
+                            0 => 'In Progress',
+                            1 => 'Completed'
+                          ]
+                        ],
+                        1 => (object) [
+                          'type' => 'isNotEmpty',
+                          'attribute' => 'id'
+                        ]
+                      ]
+                    ]
+                  ]
+                ]
+              ]
+            ]
+          ],
+          'number' => (object) [
+            'visible' => (object) [
+              'conditionGroup' => [
+                0 => (object) [
+                  'type' => 'isNotEmpty',
+                  'attribute' => 'id'
+                ]
+              ]
+            ]
+          ],
+          'inventoryStatus' => (object) [
+            'visible' => (object) [
+              'conditionGroup' => [
+                0 => (object) [
+                  'type' => 'isNotEmpty',
+                  'attribute' => 'inventoryStatus'
+                ]
+              ]
+            ]
+          ]
+        ]
+      ],
+      'relationshipPanels' => (object) [
+        'inventoryTransactions' => (object) [
+          'createDisabled' => true,
+          'selectDisabled' => true,
+          'unlinkDisabled' => true,
+          'layout' => 'listForOrder'
+        ]
+      ],
+      'additionalLayouts' => (object) [
+        'detailBottomTotal' => (object) [
+          'type' => 'list',
+          'dataAttributeList' => [
+            0 => 'name',
+            1 => 'view',
+            2 => 'customLabel'
+          ]
+        ],
+        'listForAccount' => (object) [
+          'type' => 'list'
+        ],
+        'detailCreateFromSalesOrder' => (object) [
+          'type' => 'detail',
+          'allFields' => true
+        ]
+      ],
+      'calculationHandler' => 'sales:quote-calculation-handler',
+      'iconClass' => 'fas fa-shipping-fast'
+    ],
+    'DeliveryOrderItem' => (object) [
+      'controller' => 'controllers/record',
+      'acl' => 'sales:acl/quote-item',
+      'views' => (object) [
+        'list' => 'sales:views/quote-item/list'
+      ],
+      'recordViews' => (object) [
+        'list' => 'sales:views/quote-item/record/list'
+      ],
+      'mergeDisabled' => true,
+      'convertCurrencyDisabled' => true,
+      'menu' => (object) [
+        'list' => (object) [
+          'buttons' => [
+            0 => (object) [
+              'labelTranslation' => 'Global.scopeNamesPlural.DeliveryOrder',
+              'link' => '#DeliveryOrder',
+              'acl' => 'read',
+              'aclScope' => 'DeliveryOrder'
+            ]
+          ]
+        ]
+      ],
+      'additionalLayouts' => (object) [
+        'listItem' => (object) [
+          'type' => 'listSmall',
+          'dataAttributeList' => [
+            0 => 'name',
+            1 => 'align',
+            2 => 'widthComplex',
+            3 => 'width',
+            4 => 'widthPx',
+            5 => 'link',
+            6 => 'view',
+            7 => 'customLabel'
+          ]
+        ]
+      ],
+      'relationshipPanels' => (object) [
+        'inventoryNumber' => (object) [
+          'selectHandler' => 'sales:handlers/delivery-order-item/select-inventory-number',
+          'createDisabled' => true,
+          'selectLayout' => 'listForProduct',
+          'selectOrderBy' => 'createdAt',
+          'selectOrderDirection' => 'asc'
+        ]
+      ]
+    ],
+    'InventoryAdjustment' => (object) [
+      'controller' => 'controllers/record',
+      'boolFilterList' => [
+        0 => 'onlyMy'
+      ],
+      'duplicateDisabled' => true,
+      'filterList' => [
+        0 => 'actual',
+        1 => (object) [
+          'name' => 'completed',
+          'style' => 'success'
+        ]
+      ],
+      'recordViews' => (object) [
+        'detail' => 'sales:views/quote/record/detail',
+        'edit' => 'sales:views/quote/record/edit',
+        'detailSmall' => 'sales:views/quote/record/detail-small',
+        'editSmall' => 'sales:views/quote/record/edit-small'
+      ],
+      'viewSetupHandlers' => (object) [
+        'list' => [
+          0 => 'sales:handlers/info'
+        ],
+        'record/detail' => [
+          0 => 'sales:handlers/quote/setup-record-detail'
+        ],
+        'record/edit' => [
+          0 => 'sales:handlers/quote/setup-record-detail'
+        ]
+      ],
+      'bottomPanels' => (object) [
+        'detail' => [
+          0 => (object) [
+            'name' => 'items',
+            'label' => 'Items',
+            'view' => 'sales:views/quote/record/panels/items',
+            'notRefreshable' => true,
+            'sticked' => true,
+            'isForm' => true
+          ]
+        ],
+        'edit' => [
+          0 => (object) [
+            'name' => 'items',
+            'label' => 'Items',
+            'view' => 'sales:views/quote/record/panels/items',
+            'notRefreshable' => true,
+            'sticked' => true,
+            'isForm' => true
+          ]
+        ]
+      ],
+      'menu' => (object) [
+        'list' => (object) [
+          'dropdown' => [
+            0 => (object) [
+              'labelTranslation' => 'Global.scopeNamesPlural.Warehouse',
+              'link' => '#Warehouse',
+              'acl' => 'read',
+              'aclScope' => 'Warehouse',
+              'configCheck' => 'warehousesEnabled'
+            ],
+            1 => (object) [
+              'labelTranslation' => 'Global.scopeNamesPlural.InventoryAdjustmentItem',
+              'link' => '#InventoryAdjustmentItem',
+              'acl' => 'read',
+              'aclScope' => 'InventoryAdjustmentItem'
+            ]
+          ]
+        ]
+      ],
+      'dynamicLogic' => (object) [
+        'fields' => (object) [
+          'status' => (object) [
+            'readOnly' => (object) [
+              'conditionGroup' => [
+                0 => (object) [
+                  'type' => 'isTrue',
+                  'attribute' => 'isDone'
+                ]
+              ]
+            ]
+          ],
+          'itemList' => (object) [
+            'readOnly' => (object) [
+              'conditionGroup' => [
+                0 => (object) [
+                  'type' => 'or',
+                  'value' => [
+                    0 => (object) [
+                      'type' => 'isTrue',
+                      'attribute' => 'isDone'
+                    ]
+                  ]
+                ]
+              ]
+            ]
+          ],
+          'number' => (object) [
+            'visible' => (object) [
+              'conditionGroup' => [
+                0 => (object) [
+                  'type' => 'isNotEmpty',
+                  'attribute' => 'id'
+                ]
+              ]
+            ]
+          ]
+        ]
+      ],
+      'relationshipPanels' => (object) [
+        'inventoryTransactions' => (object) [
+          'createDisabled' => true,
+          'selectDisabled' => true,
+          'unlinkDisabled' => true,
+          'layout' => 'listForOrder'
+        ]
+      ],
+      'additionalLayouts' => (object) [],
+      'calculationHandler' => 'sales:quote-calculation-handler',
+      'iconClass' => 'fas fa-plus-circle'
+    ],
+    'InventoryAdjustmentItem' => (object) [
+      'controller' => 'controllers/record',
+      'acl' => 'sales:acl/quote-item',
+      'views' => (object) [
+        'list' => 'sales:views/quote-item/list'
+      ],
+      'recordViews' => (object) [
+        'list' => 'sales:views/quote-item/record/list'
+      ],
+      'mergeDisabled' => true,
+      'convertCurrencyDisabled' => true,
+      'menu' => (object) [
+        'list' => (object) [
+          'buttons' => [
+            0 => (object) [
+              'labelTranslation' => 'Global.scopeNamesPlural.InventoryAdjustment',
+              'link' => '#InventoryAdjustment',
+              'acl' => 'read',
+              'aclScope' => 'InventoryAdjustment'
+            ]
+          ]
+        ]
+      ],
+      'additionalLayouts' => (object) [
+        'listItem' => (object) [
+          'type' => 'listSmall',
+          'dataAttributeList' => [
+            0 => 'name',
+            1 => 'align',
+            2 => 'widthComplex',
+            3 => 'width',
+            4 => 'widthPx',
+            5 => 'link',
+            6 => 'view',
+            7 => 'customLabel'
+          ]
+        ],
+        'listForProduct' => (object) [
+          'type' => 'listSmall'
+        ]
+      ],
+      'relationshipPanels' => (object) [
+        'inventoryNumber' => (object) [
+          'selectHandler' => 'sales:handlers/delivery-order-item/select-inventory-number',
+          'selectLayout' => 'listForProduct',
+          'createHandler' => 'sales:handlers/inventory-adjustment-item/create-inventory-number'
+        ]
+      ]
+    ],
+    'InventoryNumber' => (object) [
+      'controller' => 'controllers/record',
+      'mergeDisabled' => true,
+      'viewSetupHandlers' => (object) [
+        'list' => [
+          0 => 'sales:handlers/info'
+        ],
+        'record/detail' => [
+          0 => 'sales:handlers/inventory-number/setup-record-detail'
+        ],
+        'record/edit' => [
+          0 => 'sales:handlers/inventory-number/setup-record-detail'
+        ]
+      ],
+      'filterList' => [
+        0 => (object) [
+          'name' => 'onHand'
+        ]
+      ],
+      'menu' => (object) [
+        'detail' => (object) [
+          'buttons' => [
+            0 => (object) [
+              'name' => 'viewHistory',
+              'action' => 'viewHistory',
+              'label' => 'View History',
+              'data' => (object) [
+                'handler' => 'sales:handlers/inventory-number/view-history-handler'
+              ]
+            ]
+          ]
+        ]
+      ],
+      'bottomPanels' => (object) [
+        'detail' => [
+          0 => (object) [
+            'name' => 'warehousesQuantity',
+            'label' => 'Warehouses',
+            'view' => 'sales:views/inventory-number/record/panels/warehouses-quantity'
+          ]
+        ],
+        'detailSmall' => [
+          0 => (object) [
+            'name' => 'warehousesQuantity',
+            'label' => 'Warehouses',
+            'view' => 'sales:views/inventory-number/record/panels/warehouses-quantity'
+          ]
+        ]
+      ],
+      'relationshipPanels' => (object) [
+        'product' => (object) [
+          'createDisabled' => true,
+          'selectMandatoryAttributeList' => [
+            0 => 'inventoryNumberType',
+            1 => 'expirationDays'
+          ],
+          'selectHandler' => 'sales:handlers/inventory-number/select-product',
+          'selectPrimaryFilterName' => 'available',
+          'selectFieldHandler' => 'sales:handlers/inventory-number/select-field-product'
+        ]
+      ],
+      'additionalLayouts' => (object) [
+        'listForProduct' => (object) [
+          'type' => 'listSmall'
+        ],
+        'listForTemplateProduct' => (object) [
+          'type' => 'listSmall'
+        ],
+        'listForWarehouse' => (object) [
+          'type' => 'listSmall'
+        ]
+      ],
+      'dynamicLogic' => (object) [
+        'panels' => (object) [
+          'quantity' => (object) [
+            'visible' => (object) [
+              'conditionGroup' => [
+                0 => (object) [
+                  'attribute' => 'id',
+                  'type' => 'isNotEmpty'
+                ]
+              ]
+            ]
+          ]
+        ]
+      ],
+      'iconClass' => 'fas fa-barcode'
+    ],
+    'InventoryTransaction' => (object) [
+      'controller' => 'controllers/record',
+      'viewSetupHandlers' => (object) [
+        'list' => [
+          0 => 'sales:handlers/info'
+        ]
+      ],
+      'relationshipPanels' => (object) [
+        'product' => (object) [
+          'selectPrimaryFilterName' => 'inventory',
+          'createDisabled' => true
+        ],
+        'inventoryNumber' => (object) [
+          'selectHandler' => 'sales:handlers/inventory-transaction/select-inventory-number'
+        ]
+      ],
+      'dynamicLogic' => (object) [
+        'fields' => (object) [
+          'number' => (object) [
+            'visible' => (object) [
+              'conditionGroup' => [
+                0 => (object) [
+                  'type' => 'isNotEmpty',
+                  'attribute' => 'id'
+                ]
+              ]
+            ]
+          ],
+          'parent' => (object) [
+            'visible' => (object) [
+              'conditionGroup' => [
+                0 => (object) [
+                  'type' => 'isNotEmpty',
+                  'attribute' => 'id'
+                ]
+              ]
+            ]
+          ],
+          'inventoryNumber' => (object) [
+            'visible' => (object) [
+              'conditionGroup' => [
+                0 => (object) [
+                  'type' => 'in',
+                  'attribute' => 'type',
+                  'value' => [
+                    0 => 'Transfer',
+                    1 => 'Reserve'
+                  ]
+                ]
+              ]
+            ]
+          ]
+        ]
+      ],
+      'inlineEditDisabled' => true,
+      'massUpdateDisabled' => true,
+      'convertCurrencyDisabled' => true,
+      'mergeDisabled' => true,
+      'layoutMassUpdateDisabled' => true,
+      'layoutBottomPanelsDetailDisabled' => true,
+      'layoutSidePanelsDetailDisabled' => true,
+      'layoutSidePanelsEditDisabled' => true,
+      'layoutSidePanelsDetailSmallDisabled' => true,
+      'layoutSidePanelsEditSmallDisabled' => true,
+      'iconClass' => 'fas fa-retweet'
+    ],
+    'Invoice' => (object) [
+      'controller' => 'controllers/record',
+      'boolFilterList' => [
+        0 => 'onlyMy'
+      ],
+      'filterList' => [
+        0 => 'actual',
+        1 => (object) [
+          'name' => 'paid',
+          'style' => 'success'
+        ]
+      ],
+      'recordViews' => (object) [
+        'detail' => 'sales:views/quote/record/detail',
+        'edit' => 'sales:views/quote/record/edit',
+        'detailSmall' => 'sales:views/quote/record/detail-small',
+        'editSmall' => 'sales:views/quote/record/edit-small'
+      ],
+      'viewSetupHandlers' => (object) [
+        'record/detail' => [
+          0 => 'sales:handlers/quote/setup-record-detail'
+        ],
+        'record/edit' => [
+          0 => 'sales:handlers/quote/setup-record-detail'
+        ]
+      ],
+      'massActionDefs' => (object) [
+        'lock' => (object) [
+          'aclScope' => 'Invoice',
+          'acl' => 'edit',
+          'handler' => 'sales:handlers/quote/lock-mass-action',
+          'actionFunction' => 'actionLock',
+          'initFunction' => 'initLock'
+        ],
+        'unlock' => (object) [
+          'aclScope' => 'Invoice',
+          'acl' => 'edit',
+          'handler' => 'sales:handlers/quote/lock-mass-action',
+          'actionFunction' => 'actionUnlock',
+          'initFunction' => 'initUnlock'
+        ]
+      ],
+      'massActionList' => [
+        0 => 'lock',
+        1 => 'unlock'
+      ],
+      'checkAllResultMassActionList' => [
+        0 => 'lock',
+        1 => 'unlock'
+      ],
+      'detailActionList' => [
+        0 => (object) [
+          'name' => 'lock',
+          'acl' => 'edit',
+          'label' => 'Lock',
+          'handler' => 'sales:handlers/quote/lock-action',
+          'data' => (object) [
+            'handler' => 'sales:handlers/quote/lock-action'
+          ],
+          'checkVisibilityFunction' => 'canBeLocked',
+          'actionFunction' => 'actionLock'
+        ],
+        1 => (object) [
+          'name' => 'unlock',
+          'acl' => 'edit',
+          'label' => 'Unlock',
+          'handler' => 'sales:handlers/quote/lock-action',
+          'data' => (object) [
+            'handler' => 'sales:handlers/quote/lock-action'
+          ],
+          'checkVisibilityFunction' => 'canBeUnlocked',
+          'actionFunction' => 'actionUnlock'
+        ]
+      ],
+      'bottomPanels' => (object) [
+        'detail' => [
+          0 => (object) [
+            'name' => 'items',
+            'label' => 'Items',
+            'view' => 'sales:views/quote/record/panels/items',
+            'notRefreshable' => true,
+            'sticked' => true,
+            'isForm' => true
+          ]
+        ],
+        'edit' => [
+          0 => (object) [
+            'name' => 'items',
+            'label' => 'Items',
+            'view' => 'sales:views/quote/record/panels/items',
+            'notRefreshable' => true,
+            'sticked' => true,
+            'isForm' => true
+          ]
+        ]
+      ],
+      'relationshipPanels' => (object) [
+        'tax' => (object) [
+          'selectMandatoryAttributeList' => [
+            0 => 'rate'
+          ]
+        ]
+      ],
+      'menu' => (object) [
+        'list' => (object) [
+          'dropdown' => [
+            0 => (object) [
+              'labelTranslation' => 'Global.scopeNamesPlural.Template',
+              'link' => '#Template',
+              'acl' => 'read',
+              'aclScope' => 'Template'
+            ],
+            1 => false,
+            2 => (object) [
+              'labelTranslation' => 'Global.scopeNamesPlural.Tax',
+              'link' => '#Tax',
+              'acl' => 'read',
+              'aclScope' => 'Tax'
+            ],
+            3 => (object) [
+              'labelTranslation' => 'Global.scopeNamesPlural.ShippingProvider',
+              'link' => '#ShippingProvider',
+              'acl' => 'read',
+              'aclScope' => 'ShippingProvider'
+            ],
+            4 => (object) [
+              'labelTranslation' => 'Global.scopeNamesPlural.InvoiceItem',
+              'link' => '#InvoiceItem',
+              'acl' => 'read',
+              'aclScope' => 'InvoiceItem'
+            ]
+          ]
+        ]
+      ],
+      'dynamicLogic' => (object) [
+        'fields' => (object) [
+          'isLocked' => (object) [
+            'visible' => (object) [
+              'conditionGroup' => [
+                0 => (object) [
+                  'type' => 'isTrue',
+                  'attribute' => 'isNotActual'
+                ]
+              ]
+            ]
+          ],
+          'status' => (object) [
+            'readOnly' => (object) [
+              'conditionGroup' => [
+                0 => (object) [
+                  'type' => 'isTrue',
+                  'attribute' => 'isLocked'
+                ]
+              ]
+            ]
+          ],
+          'account' => (object) [
+            'readOnly' => (object) [
+              'conditionGroup' => [
+                0 => (object) [
+                  'type' => 'or',
+                  'value' => [
+                    0 => (object) [
+                      'type' => 'isNotEmpty',
+                      'attribute' => 'opportunityId',
+                      'data' => (object) [
+                        'field' => 'opportunity'
+                      ]
+                    ],
+                    1 => (object) [
+                      'type' => 'isNotEmpty',
+                      'attribute' => 'quoteId',
+                      'data' => (object) [
+                        'field' => 'quote'
+                      ]
+                    ],
+                    2 => (object) [
+                      'type' => 'isNotEmpty',
+                      'attribute' => 'salesOrderId',
+                      'data' => (object) [
+                        'field' => 'salesOrder'
+                      ]
+                    ]
+                  ]
+                ]
+              ]
+            ]
+          ],
+          'quote' => (object) [
+            'readOnly' => (object) [
+              'conditionGroup' => [
+                0 => (object) [
+                  'type' => 'or',
+                  'value' => [
+                    0 => (object) [
+                      'type' => 'isNotEmpty',
+                      'attribute' => 'salesOrderId',
+                      'data' => (object) [
+                        'field' => 'salesOrder'
+                      ]
+                    ],
+                    1 => (object) [
+                      'type' => 'isNotEmpty',
+                      'attribute' => 'id'
+                    ]
+                  ]
+                ]
+              ]
+            ]
+          ],
+          'salesOrder' => (object) [
+            'readOnly' => (object) [
+              'conditionGroup' => [
+                0 => (object) [
+                  'type' => 'isNotEmpty',
+                  'attribute' => 'id'
+                ]
+              ]
+            ]
+          ],
+          'opportunity' => (object) [
+            'readOnly' => (object) [
+              'conditionGroup' => [
+                0 => (object) [
+                  'type' => 'or',
+                  'value' => [
+                    0 => (object) [
+                      'type' => 'isNotEmpty',
+                      'attribute' => 'quoteId',
+                      'data' => (object) [
+                        'field' => 'quote'
+                      ]
+                    ],
+                    1 => (object) [
+                      'type' => 'isNotEmpty',
+                      'attribute' => 'salesOrderId',
+                      'data' => (object) [
+                        'field' => 'salesOrder'
+                      ]
+                    ]
+                  ]
+                ]
+              ]
+            ]
+          ],
+          'itemList' => (object) [
+            'readOnly' => (object) [
+              'conditionGroup' => [
+                0 => (object) [
+                  'type' => 'or',
+                  'value' => [
+                    0 => (object) [
+                      'type' => 'isTrue',
+                      'attribute' => 'isLocked'
+                    ],
+                    1 => (object) [
+                      'type' => 'and',
+                      'value' => [
+                        0 => (object) [
+                          'type' => 'in',
+                          'attribute' => 'status',
+                          'value' => [
+                            0 => 'Confirmed',
+                            1 => 'Paid'
+                          ]
+                        ],
+                        1 => (object) [
+                          'type' => 'isNotEmpty',
+                          'attribute' => 'id'
+                        ]
+                      ]
+                    ]
+                  ]
+                ]
+              ]
+            ]
+          ],
+          'number' => (object) [
+            'visible' => (object) [
+              'conditionGroup' => [
+                0 => (object) [
+                  'type' => 'isNotEmpty',
+                  'attribute' => 'id'
+                ]
+              ]
+            ]
+          ]
+        ]
+      ],
+      'additionalLayouts' => (object) [
+        'detailBottomTotal' => (object) [
+          'type' => 'list',
+          'dataAttributeList' => [
+            0 => 'name',
+            1 => 'view',
+            2 => 'customLabel'
+          ]
+        ],
+        'listForAccount' => (object) [
+          'type' => 'list'
+        ]
+      ],
+      'calculationHandler' => 'sales:quote-calculation-handler',
+      'iconClass' => 'fas fa-receipt'
+    ],
+    'InvoiceItem' => (object) [
+      'controller' => 'controllers/record',
+      'acl' => 'sales:acl/quote-item',
+      'views' => (object) [
+        'list' => 'sales:views/quote-item/list'
+      ],
+      'recordViews' => (object) [
+        'list' => 'sales:views/quote-item/record/list'
+      ],
+      'mergeDisabled' => true,
+      'convertCurrencyDisabled' => true,
+      'menu' => (object) [
+        'list' => (object) [
+          'buttons' => [
+            0 => (object) [
+              'label' => 'Invoices',
+              'link' => '#Invoice',
+              'acl' => 'read',
+              'aclScope' => 'Invoice'
+            ]
+          ]
+        ]
+      ],
+      'additionalLayouts' => (object) [
+        'listItem' => (object) [
+          'type' => 'listSmall',
+          'dataAttributeList' => [
+            0 => 'name',
+            1 => 'align',
+            2 => 'widthComplex',
+            3 => 'width',
+            4 => 'widthPx',
+            5 => 'link',
+            6 => 'view',
+            7 => 'customLabel'
+          ]
+        ]
+      ]
+    ],
+    'OpportunityItem' => (object) [
+      'controller' => 'controllers/record',
+      'acl' => 'sales:acl/opportunity-item',
+      'createDisabled' => true,
+      'mergeDisabled' => true,
+      'convertCurrencyDisabled' => true,
+      'menu' => (object) [
+        'list' => (object) [
+          'buttons' => [
+            0 => (object) [
+              'label' => 'Opportunities',
+              'link' => '#Opportunity',
+              'acl' => 'read',
+              'aclScope' => 'Opportunity'
+            ]
+          ]
+        ]
+      ],
+      'additionalLayouts' => (object) [
+        'listItem' => (object) [
+          'type' => 'listSmall',
+          'dataAttributeList' => [
+            0 => 'name',
+            1 => 'align',
+            2 => 'widthComplex',
+            3 => 'width',
+            4 => 'widthPx',
+            5 => 'link',
+            6 => 'view',
+            7 => 'customLabel'
+          ]
+        ]
+      ]
+    ],
+    'PriceBook' => (object) [
+      'controller' => 'controllers/record',
+      'viewSetupHandlers' => (object) [
+        'list' => [
+          0 => 'sales:handlers/info'
+        ]
+      ],
+      'menu' => (object) [
+        'list' => (object) [
+          'dropdown' => [
+            0 => (object) [
+              'labelTranslation' => 'Global.scopeNamesPlural.ProductPrice',
+              'link' => '#ProductPrice',
+              'acl' => 'read',
+              'aclScope' => 'ProductPrice',
+              'configCheck' => 'priceBooksEnabled'
+            ]
+          ]
+        ]
+      ],
+      'relationshipPanels' => (object) [
+        'prices' => (object) [
+          'layout' => 'listForPriceBook',
+          'unlinkDisabled' => true,
+          'selectDisabled' => true,
+          'filterList' => [
+            0 => 'all',
+            1 => 'active'
+          ]
+        ],
+        'rules' => (object) [
+          'layout' => 'listForPriceBook',
+          'unlinkDisabled' => true,
+          'selectDisabled' => true,
+          'filterList' => [
+            0 => 'all',
+            1 => 'active'
+          ]
+        ]
+      ],
+      'filterList' => [
+        0 => 'active'
+      ],
+      'selectDefaultFilters' => (object) [
+        'filter' => 'active'
+      ],
+      'mergeDisabled' => true
+    ],
+    'PriceRule' => (object) [
+      'controller' => 'controllers/record',
+      'acl' => 'sales:acl/price-rule',
+      'filterList' => [
+        0 => 'active'
+      ],
+      'textFilterDisabled' => true,
+      'dynamicLogic' => (object) [
+        'fields' => (object) [
+          'supplier' => (object) [
+            'required' => (object) [
+              'conditionGroup' => [
+                0 => (object) [
+                  'type' => 'in',
+                  'attribute' => 'basedOn',
+                  'value' => [
+                    0 => 'Supplier'
+                  ]
+                ]
+              ]
+            ],
+            'visible' => (object) [
+              'conditionGroup' => [
+                0 => (object) [
+                  'type' => 'in',
+                  'attribute' => 'basedOn',
+                  'value' => [
+                    0 => 'Supplier'
+                  ]
+                ]
+              ]
+            ]
+          ],
+          'productCategory' => (object) [
+            'required' => (object) [
+              'conditionGroup' => [
+                0 => (object) [
+                  'type' => 'in',
+                  'attribute' => 'target',
+                  'value' => [
+                    0 => 'Product Category'
+                  ]
+                ]
+              ]
+            ],
+            'visible' => (object) [
+              'conditionGroup' => [
+                0 => (object) [
+                  'type' => 'in',
+                  'attribute' => 'target',
+                  'value' => [
+                    0 => 'Product Category'
+                  ]
+                ]
+              ]
+            ]
+          ],
+          'conditionSelect' => (object) [
+            'required' => (object) [
+              'conditionGroup' => [
+                0 => (object) [
+                  'type' => 'in',
+                  'attribute' => 'target',
+                  'value' => [
+                    0 => 'Conditional'
+                  ]
+                ]
+              ]
+            ],
+            'visible' => (object) [
+              'conditionGroup' => [
+                0 => (object) [
+                  'type' => 'in',
+                  'attribute' => 'target',
+                  'value' => [
+                    0 => 'Conditional'
+                  ]
+                ]
+              ]
+            ]
+          ]
+        ]
+      ],
+      'mergeDisabled' => true
+    ],
+    'PriceRuleCondition' => (object) [
+      'controller' => 'controllers/record',
+      'searchPanelDisabled' => true
+    ],
+    'Product' => (object) [
+      'controller' => 'controllers/record',
+      'views' => (object) [
+        'list' => 'sales:views/product/list'
+      ],
+      'viewSetupHandlers' => (object) [
+        'record/detail' => [
+          0 => 'sales:handlers/product/setup-record-detail'
+        ],
+        'record/edit' => [
+          0 => 'sales:handlers/product/setup-record-detail'
+        ]
+      ],
+      'modalViews' => (object) [
+        'select' => 'views/modals/select-records-with-categories'
+      ],
+      'detailActionList' => [
+        0 => (object) [
+          'name' => 'viewPrice',
+          'label' => 'View Price',
+          'handler' => 'sales:handlers/product/view-price-action',
+          'data' => (object) [
+            'handler' => 'sales:handlers/product/view-price-action'
+          ],
+          'actionFunction' => 'process',
+          'checkVisibilityFunction' => 'isVisible',
+          'configCheck' => 'priceBooksEnabled'
+        ]
+      ],
+      'menu' => (object) [
+        'list' => (object) [
+          'dropdown' => [
+            0 => (object) [
+              'label' => 'Categories',
+              'link' => '#ProductCategory',
+              'acl' => 'edit',
+              'aclScope' => 'ProductCategory'
+            ],
+            1 => (object) [
+              'label' => 'Brands',
+              'link' => '#ProductBrand',
+              'acl' => 'read',
+              'aclScope' => 'ProductBrand'
+            ],
+            2 => (object) [
+              'labelTranslation' => 'Product.links.attributes',
+              'link' => '#ProductAttribute',
+              'acl' => 'read',
+              'aclScope' => 'ProductAttribute'
+            ],
+            3 => false,
+            4 => (object) [
+              'labelTranslation' => 'Global.scopeNamesPlural.PriceBook',
+              'link' => '#PriceBook',
+              'acl' => 'read',
+              'aclScope' => 'PriceBook',
+              'configCheck' => 'priceBooksEnabled'
+            ],
+            5 => (object) [
+              'labelTranslation' => 'Global.scopeNamesPlural.Supplier',
+              'link' => '#Supplier',
+              'acl' => 'read',
+              'aclScope' => 'Supplier'
+            ],
+            6 => false,
+            7 => (object) [
+              'labelTranslation' => 'Global.scopeNamesPlural.Warehouse',
+              'link' => '#Warehouse',
+              'acl' => 'read',
+              'aclScope' => 'Warehouse',
+              'configCheck' => 'warehousesEnabled'
+            ],
+            8 => (object) [
+              'labelTranslation' => 'Global.scopeNamesPlural.InventoryNumber',
+              'link' => '#InventoryNumber',
+              'acl' => 'read',
+              'aclScope' => 'InventoryNumber',
+              'configCheck' => 'inventoryTransactionsEnabled'
+            ],
+            9 => (object) [
+              'labelTranslation' => 'Global.scopeNamesPlural.InventoryAdjustment',
+              'link' => '#InventoryAdjustment',
+              'acl' => 'read',
+              'aclScope' => 'InventoryAdjustment',
+              'configCheck' => 'inventoryTransactionsEnabled'
+            ],
+            10 => false,
+            11 => (object) [
+              'labelTranslation' => 'Global.scopeNamesPlural.InventoryTransaction',
+              'link' => '#InventoryTransaction',
+              'acl' => 'read',
+              'aclScope' => 'InventoryTransaction',
+              'configCheck' => 'inventoryTransactionsEnabled'
+            ]
+          ]
+        ]
+      ],
+      'massActionList' => [
+        0 => 'updatePrice'
+      ],
+      'checkAllResultMassActionList' => [
+        0 => 'updatePrice'
+      ],
+      'massActionDefs' => (object) [
+        'updatePrice' => (object) [
+          'handler' => 'sales:handlers/product-price/mass-update-price',
+          'initFunction' => 'init',
+          'actionFunction' => 'process',
+          'acl' => 'edit',
+          'aclScope' => 'Product'
+        ]
+      ],
+      'filterList' => [
+        0 => 'available'
+      ],
+      'dynamicLogic' => (object) [
+        'fields' => (object) [
+          'pricingFactor' => (object) [
+            'visible' => (object) [
+              'conditionGroup' => [
+                0 => (object) [
+                  'type' => 'in',
+                  'attribute' => 'pricingType',
+                  'value' => [
+                    0 => 'Discount from List',
+                    1 => 'Markup over Cost',
+                    2 => 'Profit Margin'
+                  ]
+                ]
+              ]
+            ]
+          ],
+          'unitPrice' => (object) [
+            'readOnly' => (object) [
+              'conditionGroup' => [
+                0 => (object) [
+                  'type' => 'notEquals',
+                  'attribute' => 'pricingType',
+                  'value' => 'Fixed'
+                ]
+              ]
+            ]
+          ],
+          'inventoryNumberType' => (object) [
+            'visible' => (object) [
+              'conditionGroup' => [
+                0 => (object) [
+                  'type' => 'isTrue',
+                  'attribute' => 'isInventory'
+                ]
+              ]
+            ]
+          ],
+          'expirationDays' => (object) [
+            'visible' => (object) [
+              'conditionGroup' => [
+                0 => (object) [
+                  'type' => 'and',
+                  'value' => [
+                    0 => (object) [
+                      'type' => 'isTrue',
+                      'attribute' => 'isInventory'
+                    ],
+                    1 => (object) [
+                      'type' => 'isNotEmpty',
+                      'attribute' => 'inventoryNumberType'
+                    ]
+                  ]
+                ]
+              ]
+            ]
+          ],
+          'removalStrategy' => (object) [
+            'visible' => (object) [
+              'conditionGroup' => [
+                0 => (object) [
+                  'type' => 'and',
+                  'value' => [
+                    0 => (object) [
+                      'type' => 'isTrue',
+                      'attribute' => 'isInventory'
+                    ],
+                    1 => (object) [
+                      'type' => 'isNotEmpty',
+                      'attribute' => 'inventoryNumberType'
+                    ]
+                  ]
+                ]
+              ]
+            ]
+          ],
+          'quantity' => (object) [
+            'visible' => (object) [
+              'conditionGroup' => [
+                0 => (object) [
+                  'type' => 'isTrue',
+                  'attribute' => 'isInventory'
+                ]
+              ]
+            ]
+          ],
+          'quantityReserved' => (object) [
+            'visible' => (object) [
+              'conditionGroup' => [
+                0 => (object) [
+                  'type' => 'isTrue',
+                  'attribute' => 'isInventory'
+                ]
+              ]
+            ]
+          ],
+          'quantityOnHand' => (object) [
+            'visible' => (object) [
+              'conditionGroup' => [
+                0 => (object) [
+                  'type' => 'isTrue',
+                  'attribute' => 'isInventory'
+                ]
+              ]
+            ]
+          ],
+          'quantitySoftReserved' => (object) [
+            'visible' => (object) [
+              'conditionGroup' => [
+                0 => (object) [
+                  'type' => 'isTrue',
+                  'attribute' => 'isInventory'
+                ]
+              ]
+            ]
+          ],
+          'quantityInTransit' => (object) [
+            'visible' => (object) [
+              'conditionGroup' => [
+                0 => (object) [
+                  'type' => 'isTrue',
+                  'attribute' => 'isInventory'
+                ]
+              ]
+            ]
+          ],
+          'quantityOnOrder' => (object) [
+            'visible' => (object) [
+              'conditionGroup' => [
+                0 => (object) [
+                  'type' => 'isTrue',
+                  'attribute' => 'isInventory'
+                ]
+              ]
+            ]
+          ],
+          'type' => (object) [
+            'readOnly' => (object) [
+              'conditionGroup' => [
+                0 => (object) [
+                  'type' => 'isNotEmpty',
+                  'attribute' => 'id'
+                ]
+              ]
+            ]
+          ]
+        ],
+        'panels' => (object) [
+          'inventoryNumbers' => (object) [
+            'visible' => (object) [
+              'conditionGroup' => [
+                0 => (object) [
+                  'type' => 'isNotEmpty',
+                  'attribute' => 'inventoryNumberType'
+                ]
+              ]
+            ]
+          ],
+          'quantity' => (object) [
+            'visible' => (object) [
+              'conditionGroup' => [
+                0 => (object) [
+                  'type' => 'isTrue',
+                  'attribute' => 'isInventory'
+                ]
+              ]
+            ]
+          ],
+          'inventoryAdjustmentItems' => (object) [
+            'visible' => (object) [
+              'conditionGroup' => [
+                0 => (object) [
+                  'type' => 'isTrue',
+                  'attribute' => 'isInventory'
+                ],
+                1 => (object) [
+                  'type' => 'notIn',
+                  'attribute' => 'type',
+                  'value' => [
+                    0 => 'Template'
+                  ]
+                ]
+              ]
+            ]
+          ]
+        ],
+        'options' => (object) [
+          'type' => [
+            0 => (object) [
+              'optionList' => [
+                0 => 'Regular',
+                1 => 'Template'
+              ],
+              'conditionGroup' => [
+                0 => (object) [
+                  'type' => 'isEmpty',
+                  'attribute' => 'id'
+                ]
+              ]
+            ]
+          ]
+        ]
+      ],
+      'dynamicHandler' => 'sales:product-dynamic-handler',
+      'bottomPanels' => (object) [
+        'detail' => [
+          0 => (object) [
+            'name' => 'warehousesQuantity',
+            'label' => 'Warehouses',
+            'view' => 'sales:views/product/record/panels/warehouses-quantity'
+          ],
+          1 => (object) [
+            'name' => 'orderItems',
+            'label' => 'Orders',
+            'view' => 'sales:views/product/record/panels/order-items',
+            'recordListView' => 'sales:views/quote-item/record/list-union'
+          ]
+        ],
+        'detailSmall' => [
+          0 => (object) [
+            'name' => 'warehousesQuantity',
+            'label' => 'Warehouses',
+            'view' => 'sales:views/product/record/panels/warehouses-quantity'
+          ]
+        ]
+      ],
+      'relationshipPanels' => (object) [
+        'prices' => (object) [
+          'layout' => 'listForProduct',
+          'unlinkDisabled' => true,
+          'selectDisabled' => true,
+          'createHandler' => 'sales:handlers/product/add-price',
+          'filterList' => [
+            0 => 'all',
+            1 => 'active'
+          ]
+        ],
+        'supplierPrices' => (object) [
+          'layout' => 'listForProduct',
+          'unlinkDisabled' => true,
+          'selectDisabled' => true,
+          'filterList' => [
+            0 => 'all',
+            1 => 'active'
+          ]
+        ],
+        'inventoryTransactions' => (object) [
+          'createDisabled' => true,
+          'selectDisabled' => true,
+          'unlinkDisabled' => true
+        ],
+        'inventoryNumbers' => (object) [
+          'selectDisabled' => true,
+          'unlinkDisabled' => true,
+          'filterList' => [
+            0 => 'all',
+            1 => 'onHand'
+          ],
+          'layout' => 'listForProduct',
+          'view' => 'sales:views/product/record/panels/inventory-numbers',
+          'createHandler' => 'sales:handlers/product/create-inventory-number'
+        ],
+        'variants' => (object) [
+          'createDisabled' => true,
+          'selectDisabled' => true,
+          'unlinkDisabled' => true,
+          'layout' => 'listVariant',
+          'view' => 'sales:views/product/record/panels/variants',
+          'filterList' => [
+            0 => 'allVariants',
+            1 => 'availableVariants'
+          ],
+          'orderBy' => 'variantOrder'
+        ],
+        'inventoryAdjustmentItems' => (object) [
+          'createDisabled' => true,
+          'selectDisabled' => true,
+          'unlinkDisabled' => true,
+          'removeDisabled' => true,
+          'primaryFilter' => 'completed',
+          'layout' => 'listForProduct',
+          'orderBy' => 'createdAt',
+          'orderDirection' => 'desc'
+        ]
+      ],
+      'iconClass' => 'fas fa-cube',
+      'additionalLayouts' => (object) [
+        'listForAdd' => (object) [
+          'type' => 'listSmall'
+        ],
+        'listForAddInventory' => (object) [
+          'type' => 'listSmall'
+        ],
+        'listForWarehouse' => (object) [
+          'type' => 'listSmall'
+        ],
+        'listVariant' => (object) [
+          'type' => 'listSmall'
+        ]
+      ]
+    ],
+    'ProductAttribute' => (object) [
+      'controller' => 'controllers/record',
+      'recordViews' => (object) [
+        'list' => 'sales:views/product-attribute/record/list'
+      ],
+      'massRemoveDisabled' => true,
+      'massUpdateDisabled' => true,
+      'mergeDisabled' => true,
+      'relationshipPanels' => (object) [
+        'options' => (object) [
+          'selectDisabled' => true,
+          'unlinkDisabled' => true,
+          'view' => 'sales:views/product-attribute/record/panels/options',
+          'recordListView' => 'sales:views/product-attribute-option/record/list-for-attribute',
+          'rowActionsView' => 'sales:views/product-attribute/record/row-actions/default',
+          'orderBy' => 'order',
+          'orderDirection' => 'asc',
+          'layout' => 'listForAttribute'
+        ],
+        'products' => (object) [
+          'selectDisabled' => true,
+          'unlinkDisabled' => true,
+          'createDisabled' => true
+        ]
+      ],
+      'dynamicLogic' => (object) [
+        'fields' => (object) [
+          'order' => (object) [
+            'visible' => (object) [
+              'conditionGroup' => [
+                0 => (object) [
+                  'type' => 'isNotEmpty',
+                  'attribute' => 'id'
+                ]
+              ]
+            ]
+          ]
+        ]
+      ]
+    ],
+    'ProductAttributeOption' => (object) [
+      'controller' => 'controllers/record',
+      'massRemoveDisabled' => true,
+      'massUpdateDisabled' => true,
+      'mergeDisabled' => true,
+      'relationshipPanels' => (object) [
+        'products' => (object) [
+          'selectDisabled' => true,
+          'unlinkDisabled' => true,
+          'createDisabled' => true
+        ],
+        'productVariants' => (object) [
+          'selectDisabled' => true,
+          'unlinkDisabled' => true,
+          'createDisabled' => true
+        ]
+      ],
+      'dynamicLogic' => (object) [
+        'fields' => (object) [
+          'order' => (object) [
+            'visible' => (object) [
+              'conditionGroup' => [
+                0 => (object) [
+                  'type' => 'isNotEmpty',
+                  'attribute' => 'id'
+                ]
+              ]
+            ]
+          ]
+        ]
+      ]
+    ],
+    'ProductBrand' => (object) [
+      'controller' => 'controllers/record'
+    ],
+    'ProductCategory' => (object) [
+      'controller' => 'controllers/record-tree',
+      'collection' => 'collections/tree',
+      'menu' => (object) [
+        'listTree' => (object) [
+          'buttons' => [
+            0 => (object) [
+              'label' => 'List View',
+              'link' => '#ProductCategory/list',
+              'acl' => 'read',
+              'style' => 'default'
+            ],
+            1 => (object) [
+              'label' => 'Products',
+              'link' => '#Product',
+              'acl' => 'read',
+              'aclScope' => 'Product',
+              'style' => 'default'
+            ]
+          ]
+        ],
+        'list' => (object) [
+          'buttons' => [
+            0 => (object) [
+              'label' => 'Tree View',
+              'link' => '#ProductCategory',
+              'acl' => 'read',
+              'style' => 'default'
+            ],
+            1 => (object) [
+              'label' => 'Products',
+              'link' => '#Product',
+              'acl' => 'read',
+              'aclScope' => 'Product',
+              'style' => 'default'
+            ]
+          ]
+        ]
+      ]
+    ],
+    'ProductPrice' => (object) [
+      'controller' => 'controllers/record',
+      'acl' => 'sales:acl/product-price',
+      'filterList' => [
+        0 => 'active'
+      ],
+      'textFilterDisabled' => true,
+      'mergeDisabled' => true,
+      'massActionList' => [
+        0 => 'updatePrice'
+      ],
+      'checkAllResultMassActionList' => [
+        0 => 'updatePrice'
+      ],
+      'massActionDefs' => (object) [
+        'updatePrice' => (object) [
+          'handler' => 'sales:handlers/product-price/mass-update-price',
+          'initFunction' => 'init',
+          'actionFunction' => 'process',
+          'acl' => 'edit',
+          'aclScope' => 'PriceBook'
+        ]
+      ]
+    ],
+    'PurchaseOrder' => (object) [
+      'controller' => 'controllers/record',
+      'boolFilterList' => [
+        0 => 'onlyMy'
+      ],
+      'filterList' => [
+        0 => 'actual',
+        1 => (object) [
+          'name' => 'completed',
+          'style' => 'success'
+        ]
+      ],
+      'recordViews' => (object) [
+        'detail' => 'sales:views/quote/record/detail',
+        'edit' => 'sales:views/quote/record/edit',
+        'detailSmall' => 'sales:views/quote/record/detail-small',
+        'editSmall' => 'sales:views/quote/record/edit-small'
+      ],
+      'viewSetupHandlers' => (object) [
+        'record/detail' => [
+          0 => 'sales:handlers/quote/setup-record-detail'
+        ],
+        'record/edit' => [
+          0 => 'sales:handlers/quote/setup-record-detail'
+        ]
+      ],
+      'massActionDefs' => (object) [
+        'lock' => (object) [
+          'aclScope' => 'PurchaseOrder',
+          'acl' => 'edit',
+          'handler' => 'sales:handlers/quote/lock-mass-action',
+          'actionFunction' => 'actionLock',
+          'initFunction' => 'initLock'
+        ],
+        'unlock' => (object) [
+          'aclScope' => 'PurchaseOrder',
+          'acl' => 'edit',
+          'handler' => 'sales:handlers/quote/lock-mass-action',
+          'actionFunction' => 'actionUnlock',
+          'initFunction' => 'initUnlock'
+        ]
+      ],
+      'massActionList' => [
+        0 => 'lock',
+        1 => 'unlock'
+      ],
+      'checkAllResultMassActionList' => [
+        0 => 'lock',
+        1 => 'unlock'
+      ],
+      'detailActionList' => [
+        0 => (object) [
+          'name' => 'lock',
+          'acl' => 'edit',
+          'label' => 'Lock',
+          'handler' => 'sales:handlers/quote/lock-action',
+          'data' => (object) [
+            'handler' => 'sales:handlers/quote/lock-action'
+          ],
+          'checkVisibilityFunction' => 'canBeLocked',
+          'actionFunction' => 'actionLock'
+        ],
+        1 => (object) [
+          'name' => 'unlock',
+          'acl' => 'edit',
+          'label' => 'Unlock',
+          'handler' => 'sales:handlers/quote/lock-action',
+          'data' => (object) [
+            'handler' => 'sales:handlers/quote/lock-action'
+          ],
+          'checkVisibilityFunction' => 'canBeUnlocked',
+          'actionFunction' => 'actionUnlock'
+        ]
+      ],
+      'bottomPanels' => (object) [
+        'detail' => [
+          0 => (object) [
+            'name' => 'items',
+            'label' => 'Items',
+            'view' => 'sales:views/quote/record/panels/items',
+            'notRefreshable' => true,
+            'sticked' => true,
+            'isForm' => true
+          ]
+        ],
+        'edit' => [
+          0 => (object) [
+            'name' => 'items',
+            'label' => 'Items',
+            'view' => 'sales:views/quote/record/panels/items',
+            'notRefreshable' => true,
+            'sticked' => true,
+            'isForm' => true
+          ]
+        ]
+      ],
+      'menu' => (object) [
+        'detail' => (object) [
+          'buttons' => [
+            0 => (object) [
+              'name' => 'createReceipt',
+              'action' => 'createReceipt',
+              'label' => 'Create Receipt',
+              'acl' => 'create',
+              'aclScope' => 'ReceiptOrder',
+              'iconHtml' => '<span class="fas fa-dolly-flatbed"></span>',
+              'data' => (object) [
+                'handler' => 'sales:handlers/purchase-order/receipt-button'
+              ],
+              'initFunction' => 'init'
+            ]
+          ]
+        ],
+        'list' => (object) [
+          'dropdown' => [
+            0 => (object) [
+              'labelTranslation' => 'Global.scopeNamesPlural.Template',
+              'link' => '#Template',
+              'acl' => 'read',
+              'aclScope' => 'Template'
+            ],
+            1 => false,
+            2 => (object) [
+              'labelTranslation' => 'Global.scopeNamesPlural.Tax',
+              'link' => '#Tax',
+              'acl' => 'read',
+              'aclScope' => 'Tax'
+            ],
+            3 => (object) [
+              'labelTranslation' => 'Global.scopeNamesPlural.ShippingProvider',
+              'link' => '#ShippingProvider',
+              'acl' => 'read',
+              'aclScope' => 'ShippingProvider'
+            ],
+            4 => (object) [
+              'labelTranslation' => 'Global.scopeNamesPlural.Supplier',
+              'link' => '#Supplier',
+              'acl' => 'read',
+              'aclScope' => 'Supplier'
+            ],
+            5 => (object) [
+              'labelTranslation' => 'Global.scopeNamesPlural.ReceiptOrder',
+              'link' => '#ReceiptOrder',
+              'acl' => 'read',
+              'aclScope' => 'ReceiptOrder'
+            ],
+            6 => (object) [
+              'labelTranslation' => 'Global.scopeNamesPlural.PurchaseOrderItem',
+              'link' => '#PurchaseOrderItem',
+              'acl' => 'read',
+              'aclScope' => 'PurchaseOrderItem'
+            ]
+          ]
+        ]
+      ],
+      'dynamicLogic' => (object) [
+        'fields' => (object) [
+          'isLocked' => (object) [
+            'visible' => (object) [
+              'conditionGroup' => [
+                0 => (object) [
+                  'type' => 'isTrue',
+                  'attribute' => 'isNotActual'
+                ]
+              ]
+            ]
+          ],
+          'status' => (object) [
+            'readOnly' => (object) [
+              'conditionGroup' => [
+                0 => (object) [
+                  'type' => 'isTrue',
+                  'attribute' => 'isLocked'
+                ]
+              ]
+            ]
+          ],
+          'itemList' => (object) [
+            'readOnly' => (object) [
+              'conditionGroup' => [
+                0 => (object) [
+                  'type' => 'or',
+                  'value' => [
+                    0 => (object) [
+                      'type' => 'isTrue',
+                      'attribute' => 'isLocked'
+                    ],
+                    1 => (object) [
+                      'type' => 'and',
+                      'value' => [
+                        0 => (object) [
+                          'type' => 'in',
+                          'attribute' => 'status',
+                          'value' => [
+                            0 => 'Released',
+                            1 => 'Completed'
+                          ]
+                        ],
+                        1 => (object) [
+                          'type' => 'isNotEmpty',
+                          'attribute' => 'id'
+                        ]
+                      ]
+                    ]
+                  ]
+                ]
+              ]
+            ]
+          ],
+          'number' => (object) [
+            'visible' => (object) [
+              'conditionGroup' => [
+                0 => (object) [
+                  'type' => 'isNotEmpty',
+                  'attribute' => 'id'
+                ]
+              ]
+            ]
+          ]
+        ]
+      ],
+      'relationshipPanels' => (object) [
+        'inventoryTransactions' => (object) [
+          'createDisabled' => true,
+          'selectDisabled' => true,
+          'unlinkDisabled' => true,
+          'layout' => 'listForOrder'
+        ],
+        'receiptOrders' => (object) [
+          'createAction' => 'createRelatedReceiptOrder',
+          'view' => 'sales:views/purchase-order/record/panels/receipt-orders',
+          'layout' => 'listForAccount',
+          'selectDisabled' => true,
+          'unlinkDisabled' => true
+        ],
+        'tax' => (object) [
+          'selectMandatoryAttributeList' => [
+            0 => 'rate'
+          ]
+        ]
+      ],
+      'additionalLayouts' => (object) [
+        'detailBottomTotal' => (object) [
+          'type' => 'list',
+          'dataAttributeList' => [
+            0 => 'name',
+            1 => 'view',
+            2 => 'customLabel'
+          ]
+        ],
+        'listForAccount' => (object) [
+          'type' => 'list'
+        ]
+      ],
+      'calculationHandler' => 'sales:purchase-order-calculation-handler',
+      'iconClass' => 'fas fa-cart-plus fa-flip-horizontal'
+    ],
+    'PurchaseOrderItem' => (object) [
+      'controller' => 'controllers/record',
+      'acl' => 'sales:acl/quote-item',
+      'views' => (object) [
+        'list' => 'sales:views/quote-item/list'
+      ],
+      'recordViews' => (object) [
+        'list' => 'sales:views/quote-item/record/list'
+      ],
+      'mergeDisabled' => true,
+      'convertCurrencyDisabled' => true,
+      'menu' => (object) [
+        'list' => (object) [
+          'buttons' => [
+            0 => (object) [
+              'label' => 'Purchase Orders',
+              'link' => '#PurchaseOrder',
+              'acl' => 'read',
+              'aclScope' => 'PurchaseOrder'
+            ]
+          ]
+        ]
+      ],
+      'additionalLayouts' => (object) [
+        'listItem' => (object) [
+          'type' => 'listSmall',
+          'dataAttributeList' => [
+            0 => 'name',
+            1 => 'align',
+            2 => 'widthComplex',
+            3 => 'width',
+            4 => 'widthPx',
+            5 => 'link',
+            6 => 'view',
+            7 => 'customLabel'
+          ]
+        ]
+      ]
+    ],
+    'Quote' => (object) [
+      'controller' => 'controllers/record',
+      'boolFilterList' => [
+        0 => 'onlyMy'
+      ],
+      'filterList' => [
+        0 => 'actual',
+        1 => (object) [
+          'name' => 'approved',
+          'style' => 'success'
+        ]
+      ],
+      'recordViews' => (object) [
+        'detail' => 'sales:views/quote/record/detail',
+        'edit' => 'sales:views/quote/record/edit',
+        'detailSmall' => 'sales:views/quote/record/detail-small',
+        'editSmall' => 'sales:views/quote/record/edit-small'
+      ],
+      'viewSetupHandlers' => (object) [
+        'record/detail' => [
+          0 => 'sales:handlers/quote/setup-record-detail'
+        ],
+        'record/edit' => [
+          0 => 'sales:handlers/quote/setup-record-detail'
+        ]
+      ],
+      'massActionDefs' => (object) [
+        'lock' => (object) [
+          'aclScope' => 'Quote',
+          'acl' => 'edit',
+          'handler' => 'sales:handlers/quote/lock-mass-action',
+          'actionFunction' => 'actionLock',
+          'initFunction' => 'initLock'
+        ],
+        'unlock' => (object) [
+          'aclScope' => 'Quote',
+          'acl' => 'edit',
+          'handler' => 'sales:handlers/quote/lock-mass-action',
+          'actionFunction' => 'actionUnlock',
+          'initFunction' => 'initUnlock'
+        ]
+      ],
+      'massActionList' => [
+        0 => 'lock',
+        1 => 'unlock'
+      ],
+      'checkAllResultMassActionList' => [
+        0 => 'lock',
+        1 => 'unlock'
+      ],
+      'detailActionList' => [
+        0 => (object) [
+          'name' => 'lock',
+          'acl' => 'edit',
+          'label' => 'Lock',
+          'handler' => 'sales:handlers/quote/lock-action',
+          'data' => (object) [
+            'handler' => 'sales:handlers/quote/lock-action'
+          ],
+          'checkVisibilityFunction' => 'canBeLocked',
+          'actionFunction' => 'actionLock'
+        ],
+        1 => (object) [
+          'name' => 'unlock',
+          'acl' => 'edit',
+          'label' => 'Unlock',
+          'handler' => 'sales:handlers/quote/lock-action',
+          'data' => (object) [
+            'handler' => 'sales:handlers/quote/lock-action'
+          ],
+          'checkVisibilityFunction' => 'canBeUnlocked',
+          'actionFunction' => 'actionUnlock'
+        ]
+      ],
+      'bottomPanels' => (object) [
+        'detail' => [
+          0 => (object) [
+            'name' => 'items',
+            'label' => 'Items',
+            'view' => 'sales:views/quote/record/panels/items',
+            'notRefreshable' => true,
+            'sticked' => true,
+            'isForm' => true
+          ]
+        ],
+        'edit' => [
+          0 => (object) [
+            'name' => 'items',
+            'label' => 'Items',
+            'view' => 'sales:views/quote/record/panels/items',
+            'notRefreshable' => true,
+            'sticked' => true,
+            'isForm' => true
+          ]
+        ]
+      ],
+      'menu' => (object) [
+        'list' => (object) [
+          'dropdown' => [
+            0 => (object) [
+              'labelTranslation' => 'Global.scopeNamesPlural.Template',
+              'link' => '#Template',
+              'acl' => 'read',
+              'aclScope' => 'Template'
+            ],
+            1 => false,
+            2 => (object) [
+              'labelTranslation' => 'Global.scopeNamesPlural.Tax',
+              'link' => '#Tax',
+              'acl' => 'read',
+              'aclScope' => 'Tax'
+            ],
+            3 => (object) [
+              'labelTranslation' => 'Global.scopeNamesPlural.ShippingProvider',
+              'link' => '#ShippingProvider',
+              'acl' => 'read',
+              'aclScope' => 'ShippingProvider'
+            ],
+            4 => (object) [
+              'labelTranslation' => 'Global.scopeNamesPlural.QuoteItem',
+              'link' => '#QuoteItem',
+              'acl' => 'read',
+              'aclScope' => 'QuoteItem'
+            ]
+          ]
+        ]
+      ],
+      'dynamicLogic' => (object) [
+        'fields' => (object) [
+          'isLocked' => (object) [
+            'visible' => (object) [
+              'conditionGroup' => [
+                0 => (object) [
+                  'type' => 'isTrue',
+                  'attribute' => 'isNotActual'
+                ]
+              ]
+            ]
+          ],
+          'status' => (object) [
+            'readOnly' => (object) [
+              'conditionGroup' => [
+                0 => (object) [
+                  'type' => 'isTrue',
+                  'attribute' => 'isLocked'
+                ]
+              ]
+            ]
+          ],
+          'dateInvoiced' => (object) [
+            'visible' => (object) [
+              'conditionGroup' => [
+                0 => (object) [
+                  'type' => 'equals',
+                  'attribute' => 'status',
+                  'value' => 'Approved'
+                ]
+              ]
+            ]
+          ],
+          'account' => (object) [
+            'readOnly' => (object) [
+              'conditionGroup' => [
+                0 => (object) [
+                  'type' => 'or',
+                  'value' => [
+                    0 => (object) [
+                      'type' => 'isNotEmpty',
+                      'attribute' => 'opportunityId',
+                      'data' => (object) [
+                        'field' => 'opportunity'
+                      ]
+                    ]
+                  ]
+                ]
+              ]
+            ]
+          ],
+          'itemList' => (object) [
+            'readOnly' => (object) [
+              'conditionGroup' => [
+                0 => (object) [
+                  'type' => 'or',
+                  'value' => [
+                    0 => (object) [
+                      'type' => 'isTrue',
+                      'attribute' => 'isLocked'
+                    ],
+                    1 => (object) [
+                      'type' => 'and',
+                      'value' => [
+                        0 => (object) [
+                          'type' => 'in',
+                          'attribute' => 'status',
+                          'value' => [
+                            0 => 'Approved'
+                          ]
+                        ],
+                        1 => (object) [
+                          'type' => 'isNotEmpty',
+                          'attribute' => 'id'
+                        ]
+                      ]
+                    ]
+                  ]
+                ]
+              ]
+            ]
+          ],
+          'number' => (object) [
+            'visible' => (object) [
+              'conditionGroup' => [
+                0 => (object) [
+                  'type' => 'isNotEmpty',
+                  'attribute' => 'id'
+                ]
+              ]
+            ]
+          ],
+          'inventoryStatus' => (object) [
+            'visible' => (object) [
+              'conditionGroup' => [
+                0 => (object) [
+                  'type' => 'isNotEmpty',
+                  'attribute' => 'inventoryStatus'
+                ]
+              ]
+            ]
+          ]
+        ]
+      ],
+      'additionalLayouts' => (object) [
+        'detailBottomTotal' => (object) [
+          'type' => 'list',
+          'dataAttributeList' => [
+            0 => 'name',
+            1 => 'view',
+            2 => 'customLabel'
+          ]
+        ],
+        'listForAccount' => (object) [
+          'type' => 'list'
+        ]
+      ],
+      'relationshipPanels' => (object) [
+        'salesOrders' => (object) [
+          'createAction' => 'createRelatedSalesOrder',
+          'view' => 'sales:views/quote/record/panels/sales-orders',
+          'layout' => 'listForAccount',
+          'selectDisabled' => true,
+          'unlinkDisabled' => true
+        ],
+        'invoices' => (object) [
+          'createAction' => 'createRelatedInvoice',
+          'view' => 'sales:views/quote/record/panels/invoices',
+          'layout' => 'listForAccount',
+          'selectDisabled' => true,
+          'unlinkDisabled' => true
+        ],
+        'tax' => (object) [
+          'selectMandatoryAttributeList' => [
+            0 => 'rate'
+          ]
+        ]
+      ],
+      'calculationHandler' => 'sales:quote-calculation-handler',
+      'iconClass' => 'fas fa-file-invoice-dollar'
+    ],
+    'QuoteItem' => (object) [
+      'controller' => 'controllers/record',
+      'acl' => 'sales:acl/quote-item',
+      'views' => (object) [
+        'list' => 'sales:views/quote-item/list'
+      ],
+      'recordViews' => (object) [
+        'list' => 'sales:views/quote-item/record/list'
+      ],
+      'convertCurrencyDisabled' => true,
+      'menu' => (object) [
+        'list' => (object) [
+          'buttons' => [
+            0 => (object) [
+              'label' => 'Quotes',
+              'link' => '#Quote',
+              'acl' => 'read',
+              'aclScope' => 'Quote'
+            ]
+          ]
+        ]
+      ],
+      'additionalLayouts' => (object) [
+        'listItem' => (object) [
+          'type' => 'listSmall',
+          'dataAttributeList' => [
+            0 => 'name',
+            1 => 'align',
+            2 => 'widthComplex',
+            3 => 'width',
+            4 => 'widthPx',
+            5 => 'link',
+            6 => 'view',
+            7 => 'customLabel'
+          ]
+        ]
+      ]
+    ],
+    'ReceiptOrder' => (object) [
+      'controller' => 'controllers/record',
+      'boolFilterList' => [
+        0 => 'onlyMy'
+      ],
+      'filterList' => [
+        0 => 'actual',
+        1 => (object) [
+          'name' => 'completed',
+          'style' => 'success'
+        ]
+      ],
+      'recordViews' => (object) [
+        'detail' => 'sales:views/quote/record/detail',
+        'edit' => 'sales:views/quote/record/edit',
+        'detailSmall' => 'sales:views/quote/record/detail-small',
+        'editSmall' => 'sales:views/quote/record/edit-small'
+      ],
+      'viewSetupHandlers' => (object) [
+        'record/detail' => [
+          0 => 'sales:handlers/quote/setup-record-detail'
+        ],
+        'record/edit' => [
+          0 => 'sales:handlers/quote/setup-record-detail'
+        ]
+      ],
+      'massActionDefs' => (object) [
+        'lock' => (object) [
+          'aclScope' => 'ReceiptOrder',
+          'acl' => 'edit',
+          'handler' => 'sales:handlers/quote/lock-mass-action',
+          'actionFunction' => 'actionLock',
+          'initFunction' => 'initLock'
+        ],
+        'unlock' => (object) [
+          'aclScope' => 'ReceiptOrder',
+          'acl' => 'edit',
+          'handler' => 'sales:handlers/quote/lock-mass-action',
+          'actionFunction' => 'actionUnlock',
+          'initFunction' => 'initUnlock'
+        ]
+      ],
+      'massActionList' => [
+        0 => 'lock',
+        1 => 'unlock'
+      ],
+      'checkAllResultMassActionList' => [
+        0 => 'lock',
+        1 => 'unlock'
+      ],
+      'detailActionList' => [
+        0 => (object) [
+          'name' => 'lock',
+          'acl' => 'edit',
+          'label' => 'Lock',
+          'handler' => 'sales:handlers/quote/lock-action',
+          'data' => (object) [
+            'handler' => 'sales:handlers/quote/lock-action'
+          ],
+          'checkVisibilityFunction' => 'canBeLocked',
+          'actionFunction' => 'actionLock'
+        ],
+        1 => (object) [
+          'name' => 'unlock',
+          'acl' => 'edit',
+          'label' => 'Unlock',
+          'handler' => 'sales:handlers/quote/lock-action',
+          'data' => (object) [
+            'handler' => 'sales:handlers/quote/lock-action'
+          ],
+          'checkVisibilityFunction' => 'canBeUnlocked',
+          'actionFunction' => 'actionUnlock'
+        ],
+        2 => (object) [
+          'handler' => 'sales:handlers/receipt-order/import-serial-numbers-button',
+          'name' => 'importSerialNumbers',
+          'label' => 'Import Serial Numbers',
+          'acl' => 'edit',
+          'checkVisibilityFunction' => 'isVisible'
+        ]
+      ],
+      'bottomPanels' => (object) [
+        'detail' => [
+          0 => (object) [
+            'name' => 'items',
+            'label' => 'Items',
+            'view' => 'sales:views/quote/record/panels/items',
+            'notRefreshable' => true,
+            'sticked' => true,
+            'isForm' => true
+          ],
+          1 => (object) [
+            'name' => 'receivedItems',
+            'label' => 'Received Inventory',
+            'view' => 'sales:views/receipt-order/record/panels/received-items',
+            'notRefreshable' => true,
+            'sticked' => true,
+            'isForm' => true
+          ]
+        ],
+        'edit' => [
+          0 => (object) [
+            'name' => 'items',
+            'label' => 'Items',
+            'view' => 'sales:views/quote/record/panels/items',
+            'notRefreshable' => true,
+            'sticked' => true,
+            'isForm' => true
+          ],
+          1 => (object) [
+            'name' => 'receivedItems',
+            'label' => 'Received Inventory',
+            'view' => 'sales:views/receipt-order/record/panels/received-items',
+            'notRefreshable' => true,
+            'sticked' => true,
+            'isForm' => true
+          ]
+        ]
+      ],
+      'menu' => (object) [
+        'list' => (object) [
+          'dropdown' => [
+            0 => (object) [
+              'labelTranslation' => 'Quote.labels.Templates',
+              'link' => '#Template',
+              'acl' => 'read',
+              'aclScope' => 'Template'
+            ],
+            1 => false,
+            2 => (object) [
+              'labelTranslation' => 'Global.scopeNamesPlural.ShippingProvider',
+              'link' => '#ShippingProvider',
+              'acl' => 'read',
+              'aclScope' => 'ShippingProvider'
+            ],
+            3 => (object) [
+              'labelTranslation' => 'Global.scopeNamesPlural.Warehouse',
+              'link' => '#Warehouse',
+              'acl' => 'read',
+              'aclScope' => 'Warehouse',
+              'configCheck' => 'warehousesEnabled'
+            ],
+            4 => (object) [
+              'labelTranslation' => 'Global.scopeNamesPlural.ReceiptOrderItem',
+              'link' => '#ReceiptOrderItem',
+              'acl' => 'read',
+              'aclScope' => 'ReceiptOrderItem'
+            ]
+          ]
+        ]
+      ],
+      'dynamicLogic' => (object) [
+        'fields' => (object) [
+          'isLocked' => (object) [
+            'visible' => (object) [
+              'conditionGroup' => [
+                0 => (object) [
+                  'type' => 'isTrue',
+                  'attribute' => 'isNotActual'
+                ]
+              ]
+            ]
+          ],
+          'isHardLocked' => (object) [
+            'visible' => (object) [
+              'conditionGroup' => [
+                0 => (object) [
+                  'type' => 'isTrue',
+                  'attribute' => 'isHardLocked'
+                ]
+              ]
+            ]
+          ],
+          'account' => (object) [
+            'readOnly' => (object) [
+              'conditionGroup' => [
+                0 => (object) [
+                  'type' => 'or',
+                  'value' => [
+                    0 => (object) [
+                      'type' => 'isNotEmpty',
+                      'attribute' => 'purchaseOrderId',
+                      'data' => (object) [
+                        'field' => 'purchaseOrder'
+                      ]
+                    ]
+                  ]
+                ]
+              ]
+            ]
+          ],
+          'returnOrder' => (object) [
+            'readOnly' => (object) [
+              'conditionGroup' => [
+                0 => (object) [
+                  'type' => 'or',
+                  'value' => [
+                    0 => (object) [
+                      'type' => 'isNotEmpty',
+                      'attribute' => 'id'
+                    ],
+                    1 => (object) [
+                      'type' => 'isNotEmpty',
+                      'attribute' => 'purchaseOrderId',
+                      'data' => (object) [
+                        'field' => 'purchaseOrder'
+                      ]
+                    ],
+                    2 => (object) [
+                      'type' => 'isNotEmpty',
+                      'attribute' => 'supplierId',
+                      'data' => (object) [
+                        'field' => 'supplier'
+                      ]
+                    ]
+                  ]
+                ]
+              ]
+            ],
+            'visible' => (object) [
+              'conditionGroup' => [
+                0 => (object) [
+                  'type' => 'and',
+                  'value' => [
+                    0 => (object) [
+                      'type' => 'isEmpty',
+                      'attribute' => 'purchaseOrderId',
+                      'data' => (object) [
+                        'field' => 'purchaseOrder'
+                      ]
+                    ],
+                    1 => (object) [
+                      'type' => 'isEmpty',
+                      'attribute' => 'supplierId',
+                      'data' => (object) [
+                        'field' => 'supplier'
+                      ]
+                    ]
+                  ]
+                ]
+              ]
+            ]
+          ],
+          'supplier' => (object) [
+            'readOnly' => (object) [
+              'conditionGroup' => [
+                0 => (object) [
+                  'type' => 'or',
+                  'value' => [
+                    0 => (object) [
+                      'type' => 'isNotEmpty',
+                      'attribute' => 'purchaseOrderId',
+                      'data' => (object) [
+                        'field' => 'purchaseOrder'
+                      ]
+                    ]
+                  ]
+                ]
+              ]
+            ],
+            'visible' => (object) [
+              'conditionGroup' => [
+                0 => (object) [
+                  'type' => 'isEmpty',
+                  'attribute' => 'returnOrderId',
+                  'data' => (object) [
+                    'field' => 'returnOrder'
+                  ]
+                ]
+              ]
+            ]
+          ],
+          'purchaseOrder' => (object) [
+            'readOnly' => (object) [
+              'conditionGroup' => [
+                0 => (object) [
+                  'type' => 'isNotEmpty',
+                  'attribute' => 'id'
+                ]
+              ]
+            ],
+            'visible' => (object) [
+              'conditionGroup' => [
+                0 => (object) [
+                  'type' => 'isEmpty',
+                  'attribute' => 'returnOrderId',
+                  'data' => (object) [
+                    'field' => 'returnOrder'
+                  ]
+                ]
+              ]
+            ]
+          ],
+          'itemList' => (object) [
+            'readOnly' => (object) [
+              'conditionGroup' => [
+                0 => (object) [
+                  'type' => 'or',
+                  'value' => [
+                    0 => (object) [
+                      'type' => 'isTrue',
+                      'attribute' => 'isLocked'
+                    ],
+                    1 => (object) [
+                      'type' => 'and',
+                      'value' => [
+                        0 => (object) [
+                          'type' => 'in',
+                          'attribute' => 'status',
+                          'value' => [
+                            0 => 'Completed'
+                          ]
+                        ],
+                        1 => (object) [
+                          'type' => 'isNotEmpty',
+                          'attribute' => 'id'
+                        ],
+                        2 => (object) [
+                          'type' => 'isTrue',
+                          'attribute' => 'isDone'
+                        ]
+                      ]
+                    ]
+                  ]
+                ]
+              ]
+            ]
+          ],
+          'receivedItemList' => (object) [
+            'readOnly' => (object) [
+              'conditionGroup' => [
+                0 => (object) [
+                  'type' => 'in',
+                  'attribute' => 'status',
+                  'value' => [
+                    0 => 'Completed'
+                  ]
+                ],
+                1 => (object) [
+                  'type' => 'isNotEmpty',
+                  'attribute' => 'id'
+                ],
+                2 => (object) [
+                  'type' => 'isTrue',
+                  'attribute' => 'isDone'
+                ]
+              ]
+            ]
+          ],
+          'number' => (object) [
+            'visible' => (object) [
+              'conditionGroup' => [
+                0 => (object) [
+                  'type' => 'isNotEmpty',
+                  'attribute' => 'id'
+                ]
+              ]
+            ]
+          ]
+        ]
+      ],
+      'relationshipPanels' => (object) [
+        'inventoryTransactions' => (object) [
+          'createDisabled' => true,
+          'selectDisabled' => true,
+          'unlinkDisabled' => true,
+          'layout' => 'listForOrder'
+        ]
+      ],
+      'additionalLayouts' => (object) [
+        'detailBottomTotal' => (object) [
+          'type' => 'list',
+          'dataAttributeList' => [
+            0 => 'name',
+            1 => 'view',
+            2 => 'customLabel'
+          ]
+        ],
+        'listForAccount' => (object) [
+          'type' => 'list'
+        ],
+        'detailCreateFromPurchaseOrder' => (object) [
+          'type' => 'detail',
+          'allFields' => true
+        ]
+      ],
+      'calculationHandler' => 'sales:quote-calculation-handler',
+      'iconClass' => 'fas fa-truck-loading'
+    ],
+    'ReceiptOrderItem' => (object) [
+      'controller' => 'controllers/record',
+      'acl' => 'sales:acl/quote-item',
+      'views' => (object) [
+        'list' => 'sales:views/quote-item/list'
+      ],
+      'recordViews' => (object) [
+        'list' => 'sales:views/quote-item/record/list'
+      ],
+      'mergeDisabled' => true,
+      'convertCurrencyDisabled' => true,
+      'menu' => (object) [
+        'list' => (object) [
+          'buttons' => [
+            0 => (object) [
+              'labelTranslation' => 'Global.scopeNamesPlural.ReceiptOrder',
+              'link' => '#ReceiptOrder',
+              'acl' => 'read',
+              'aclScope' => 'ReceiptOrder'
+            ]
+          ]
+        ]
+      ],
+      'additionalLayouts' => (object) [
+        'listItem' => (object) [
+          'type' => 'listSmall',
+          'dataAttributeList' => [
+            0 => 'name',
+            1 => 'align',
+            2 => 'widthComplex',
+            3 => 'width',
+            4 => 'widthPx',
+            5 => 'link',
+            6 => 'view',
+            7 => 'customLabel'
+          ]
+        ]
+      ]
+    ],
+    'ReturnOrder' => (object) [
+      'controller' => 'controllers/record',
+      'boolFilterList' => [
+        0 => 'onlyMy'
+      ],
+      'filterList' => [
+        0 => 'actual',
+        1 => (object) [
+          'name' => 'completed',
+          'style' => 'success'
+        ]
+      ],
+      'recordViews' => (object) [
+        'detail' => 'sales:views/quote/record/detail',
+        'edit' => 'sales:views/quote/record/edit',
+        'detailSmall' => 'sales:views/quote/record/detail-small',
+        'editSmall' => 'sales:views/quote/record/edit-small'
+      ],
+      'viewSetupHandlers' => (object) [
+        'record/detail' => [
+          0 => 'sales:handlers/quote/setup-record-detail'
+        ],
+        'record/edit' => [
+          0 => 'sales:handlers/quote/setup-record-detail'
+        ]
+      ],
+      'massActionDefs' => (object) [
+        'lock' => (object) [
+          'aclScope' => 'ReturnOrder',
+          'acl' => 'edit',
+          'handler' => 'sales:handlers/quote/lock-mass-action',
+          'actionFunction' => 'actionLock',
+          'initFunction' => 'initLock'
+        ],
+        'unlock' => (object) [
+          'aclScope' => 'ReturnOrder',
+          'acl' => 'edit',
+          'handler' => 'sales:handlers/quote/lock-mass-action',
+          'actionFunction' => 'actionUnlock',
+          'initFunction' => 'initUnlock'
+        ]
+      ],
+      'massActionList' => [
+        0 => 'lock',
+        1 => 'unlock'
+      ],
+      'checkAllResultMassActionList' => [
+        0 => 'lock',
+        1 => 'unlock'
+      ],
+      'detailActionList' => [
+        0 => (object) [
+          'name' => 'lock',
+          'acl' => 'edit',
+          'label' => 'Lock',
+          'handler' => 'sales:handlers/quote/lock-action',
+          'data' => (object) [
+            'handler' => 'sales:handlers/quote/lock-action'
+          ],
+          'checkVisibilityFunction' => 'canBeLocked',
+          'actionFunction' => 'actionLock'
+        ],
+        1 => (object) [
+          'name' => 'unlock',
+          'acl' => 'edit',
+          'label' => 'Unlock',
+          'handler' => 'sales:handlers/quote/lock-action',
+          'data' => (object) [
+            'handler' => 'sales:handlers/quote/lock-action'
+          ],
+          'checkVisibilityFunction' => 'canBeUnlocked',
+          'actionFunction' => 'actionUnlock'
+        ]
+      ],
+      'bottomPanels' => (object) [
+        'detail' => [
+          0 => (object) [
+            'name' => 'items',
+            'label' => 'Items',
+            'view' => 'sales:views/quote/record/panels/items',
+            'notRefreshable' => true,
+            'sticked' => true,
+            'isForm' => true
+          ]
+        ],
+        'edit' => [
+          0 => (object) [
+            'name' => 'items',
+            'label' => 'Items',
+            'view' => 'sales:views/quote/record/panels/items',
+            'notRefreshable' => true,
+            'sticked' => true,
+            'isForm' => true
+          ]
+        ]
+      ],
+      'menu' => (object) [
+        'detail' => (object) [
+          'buttons' => [
+            0 => (object) [
+              'name' => 'createReceipt',
+              'action' => 'createReceipt',
+              'label' => 'Create Receipt',
+              'acl' => 'create',
+              'aclScope' => 'ReceiptOrder',
+              'iconHtml' => '<span class="fas fa-dolly-flatbed"></span>',
+              'data' => (object) [
+                'handler' => 'sales:handlers/purchase-order/receipt-button'
+              ],
+              'initFunction' => 'init'
+            ]
+          ]
+        ],
+        'list' => (object) [
+          'dropdown' => [
+            0 => (object) [
+              'labelTranslation' => 'Global.scopeNamesPlural.Template',
+              'link' => '#Template',
+              'acl' => 'read',
+              'aclScope' => 'Template'
+            ],
+            1 => false,
+            2 => (object) [
+              'labelTranslation' => 'Global.scopeNamesPlural.ShippingProvider',
+              'link' => '#ShippingProvider',
+              'acl' => 'read',
+              'aclScope' => 'ShippingProvider'
+            ],
+            3 => (object) [
+              'labelTranslation' => 'Global.scopeNamesPlural.ReturnOrderItem',
+              'link' => '#ReturnOrderItem',
+              'acl' => 'read',
+              'aclScope' => 'ReturnOrderItem'
+            ]
+          ]
+        ]
+      ],
+      'dynamicLogic' => (object) [
+        'fields' => (object) [
+          'isLocked' => (object) [
+            'visible' => (object) [
+              'conditionGroup' => [
+                0 => (object) [
+                  'type' => 'isTrue',
+                  'attribute' => 'isNotActual'
+                ]
+              ]
+            ]
+          ],
+          'status' => (object) [
+            'readOnly' => (object) [
+              'conditionGroup' => [
+                0 => (object) [
+                  'type' => 'isTrue',
+                  'attribute' => 'isLocked'
+                ]
+              ]
+            ]
+          ],
+          'itemList' => (object) [
+            'readOnly' => (object) [
+              'conditionGroup' => [
+                0 => (object) [
+                  'type' => 'or',
+                  'value' => [
+                    0 => (object) [
+                      'type' => 'isTrue',
+                      'attribute' => 'isLocked'
+                    ],
+                    1 => (object) [
+                      'type' => 'and',
+                      'value' => [
+                        0 => (object) [
+                          'type' => 'in',
+                          'attribute' => 'status',
+                          'value' => [
+                            0 => 'Released',
+                            1 => 'Completed'
+                          ]
+                        ],
+                        1 => (object) [
+                          'type' => 'isNotEmpty',
+                          'attribute' => 'id'
+                        ]
+                      ]
+                    ]
+                  ]
+                ]
+              ]
+            ]
+          ],
+          'number' => (object) [
+            'visible' => (object) [
+              'conditionGroup' => [
+                0 => (object) [
+                  'type' => 'isNotEmpty',
+                  'attribute' => 'id'
+                ]
+              ]
+            ]
+          ]
+        ]
+      ],
+      'relationshipPanels' => (object) [
+        'inventoryTransactions' => (object) [
+          'createDisabled' => true,
+          'selectDisabled' => true,
+          'unlinkDisabled' => true,
+          'layout' => 'listForOrder'
+        ],
+        'receiptOrders' => (object) [
+          'createAction' => 'createRelatedReceiptOrder',
+          'view' => 'sales:views/return-order/record/panels/receipt-orders',
+          'layout' => 'listForAccount',
+          'selectDisabled' => true,
+          'unlinkDisabled' => true
+        ],
+        'tax' => (object) [
+          'selectMandatoryAttributeList' => [
+            0 => 'rate'
+          ]
+        ]
+      ],
+      'additionalLayouts' => (object) [
+        'detailBottomTotal' => (object) [
+          'type' => 'list',
+          'dataAttributeList' => [
+            0 => 'name',
+            1 => 'view',
+            2 => 'customLabel'
+          ]
+        ],
+        'listForAccount' => (object) [
+          'type' => 'list'
+        ]
+      ],
+      'calculationHandler' => 'sales:quote-calculation-handler',
+      'iconClass' => 'fas fa-arrow-alt-circle-left'
+    ],
+    'ReturnOrderItem' => (object) [
+      'controller' => 'controllers/record',
+      'acl' => 'sales:acl/quote-item',
+      'views' => (object) [
+        'list' => 'sales:views/quote-item/list'
+      ],
+      'recordViews' => (object) [
+        'list' => 'sales:views/quote-item/record/list'
+      ],
+      'mergeDisabled' => true,
+      'convertCurrencyDisabled' => true,
+      'menu' => (object) [
+        'list' => (object) [
+          'buttons' => [
+            0 => (object) [
+              'labelTranslation' => 'Global.scopeNamesPlural.ReturnOrder',
+              'link' => '#ReturnOrder',
+              'acl' => 'read',
+              'aclScope' => 'ReturnOrder'
+            ]
+          ]
+        ]
+      ],
+      'additionalLayouts' => (object) [
+        'listItem' => (object) [
+          'type' => 'listSmall',
+          'dataAttributeList' => [
+            0 => 'name',
+            1 => 'align',
+            2 => 'widthComplex',
+            3 => 'width',
+            4 => 'widthPx',
+            5 => 'link',
+            6 => 'view',
+            7 => 'customLabel'
+          ]
+        ]
+      ],
+      'relationshipPanels' => (object) [
+        'inventoryNumber' => (object) [
+          'selectHandler' => 'sales:handlers/return-order-item/select-inventory-number',
+          'createDisabled' => true,
+          'selectLayout' => 'listForProduct'
+        ]
+      ]
+    ],
+    'SalesOrder' => (object) [
+      'controller' => 'controllers/record',
+      'boolFilterList' => [
+        0 => 'onlyMy'
+      ],
+      'filterList' => [
+        0 => 'actual',
+        1 => (object) [
+          'name' => 'completed',
+          'style' => 'success'
+        ]
+      ],
+      'recordViews' => (object) [
+        'detail' => 'sales:views/quote/record/detail',
+        'edit' => 'sales:views/quote/record/edit',
+        'detailSmall' => 'sales:views/quote/record/detail-small',
+        'editSmall' => 'sales:views/quote/record/edit-small'
+      ],
+      'viewSetupHandlers' => (object) [
+        'record/detail' => [
+          0 => 'sales:handlers/quote/setup-record-detail'
+        ],
+        'record/edit' => [
+          0 => 'sales:handlers/quote/setup-record-detail'
+        ]
+      ],
+      'massActionDefs' => (object) [
+        'lock' => (object) [
+          'aclScope' => 'SalesOrder',
+          'acl' => 'edit',
+          'handler' => 'sales:handlers/quote/lock-mass-action',
+          'actionFunction' => 'actionLock',
+          'initFunction' => 'initLock'
+        ],
+        'unlock' => (object) [
+          'aclScope' => 'SalesOrder',
+          'acl' => 'edit',
+          'handler' => 'sales:handlers/quote/lock-mass-action',
+          'actionFunction' => 'actionUnlock',
+          'initFunction' => 'initUnlock'
+        ]
+      ],
+      'massActionList' => [
+        0 => 'lock',
+        1 => 'unlock'
+      ],
+      'checkAllResultMassActionList' => [
+        0 => 'lock',
+        1 => 'unlock'
+      ],
+      'detailActionList' => [
+        0 => (object) [
+          'name' => 'lock',
+          'acl' => 'edit',
+          'label' => 'Lock',
+          'handler' => 'sales:handlers/quote/lock-action',
+          'data' => (object) [
+            'handler' => 'sales:handlers/quote/lock-action'
+          ],
+          'checkVisibilityFunction' => 'canBeLocked',
+          'actionFunction' => 'actionLock'
+        ],
+        1 => (object) [
+          'name' => 'unlock',
+          'acl' => 'edit',
+          'label' => 'Unlock',
+          'handler' => 'sales:handlers/quote/lock-action',
+          'data' => (object) [
+            'handler' => 'sales:handlers/quote/lock-action'
+          ],
+          'checkVisibilityFunction' => 'canBeUnlocked',
+          'actionFunction' => 'actionUnlock'
+        ]
+      ],
+      'bottomPanels' => (object) [
+        'detail' => [
+          0 => (object) [
+            'name' => 'items',
+            'label' => 'Items',
+            'view' => 'sales:views/quote/record/panels/items',
+            'notRefreshable' => true,
+            'sticked' => true,
+            'isForm' => true
+          ]
+        ],
+        'edit' => [
+          0 => (object) [
+            'name' => 'items',
+            'label' => 'Items',
+            'view' => 'sales:views/quote/record/panels/items',
+            'notRefreshable' => true,
+            'sticked' => true,
+            'isForm' => true
+          ]
+        ]
+      ],
+      'menu' => (object) [
+        'detail' => (object) [
+          'buttons' => [
+            0 => (object) [
+              'name' => 'createDelivery',
+              'action' => 'createDelivery',
+              'label' => 'Create Delivery',
+              'acl' => 'create',
+              'aclScope' => 'DeliveryOrder',
+              'iconHtml' => '<span class="fas fa-shipping-fast"></span>',
+              'data' => (object) [
+                'handler' => 'sales:handlers/sales-order/delivery-button'
+              ],
+              'initFunction' => 'init'
+            ]
+          ]
+        ],
+        'list' => (object) [
+          'dropdown' => [
+            0 => (object) [
+              'labelTranslation' => 'Global.scopeNamesPlural.Template',
+              'link' => '#Template',
+              'acl' => 'read',
+              'aclScope' => 'Template'
+            ],
+            1 => false,
+            2 => (object) [
+              'labelTranslation' => 'Global.scopeNamesPlural.Tax',
+              'link' => '#Tax',
+              'acl' => 'read',
+              'aclScope' => 'Tax'
+            ],
+            3 => (object) [
+              'labelTranslation' => 'Global.scopeNamesPlural.ShippingProvider',
+              'link' => '#ShippingProvider',
+              'acl' => 'read',
+              'aclScope' => 'ShippingProvider'
+            ],
+            4 => (object) [
+              'labelTranslation' => 'Global.scopeNamesPlural.DeliveryOrder',
+              'link' => '#DeliveryOrder',
+              'acl' => 'read',
+              'aclScope' => 'DeliveryOrder',
+              'configCheck' => 'deliveryOrdersEnabled'
+            ],
+            5 => (object) [
+              'labelTranslation' => 'Global.scopeNamesPlural.SalesOrderItem',
+              'link' => '#SalesOrderItem',
+              'acl' => 'read',
+              'aclScope' => 'SalesOrderItem'
+            ]
+          ]
+        ]
+      ],
+      'dynamicLogic' => (object) [
+        'fields' => (object) [
+          'isLocked' => (object) [
+            'visible' => (object) [
+              'conditionGroup' => [
+                0 => (object) [
+                  'type' => 'isTrue',
+                  'attribute' => 'isNotActual'
+                ]
+              ]
+            ]
+          ],
+          'isHardLocked' => (object) [
+            'visible' => (object) [
+              'conditionGroup' => [
+                0 => (object) [
+                  'type' => 'isTrue',
+                  'attribute' => 'isHardLocked'
+                ]
+              ]
+            ]
+          ],
+          'status' => (object) [
+            'readOnly' => (object) [
+              'conditionGroup' => [
+                0 => (object) [
+                  'type' => 'isTrue',
+                  'attribute' => 'isLocked'
+                ]
+              ]
+            ]
+          ],
+          'dateInvoiced' => (object) [
+            'visible' => (object) [
+              'conditionGroup' => [
+                0 => (object) [
+                  'type' => 'equals',
+                  'attribute' => 'status',
+                  'value' => 'Completed'
+                ]
+              ]
+            ]
+          ],
+          'account' => (object) [
+            'readOnly' => (object) [
+              'conditionGroup' => [
+                0 => (object) [
+                  'type' => 'or',
+                  'value' => [
+                    0 => (object) [
+                      'type' => 'isNotEmpty',
+                      'attribute' => 'opportunityId',
+                      'data' => (object) [
+                        'field' => 'opportunity'
+                      ]
+                    ],
+                    1 => (object) [
+                      'type' => 'isNotEmpty',
+                      'attribute' => 'quoteId',
+                      'data' => (object) [
+                        'field' => 'quote'
+                      ]
+                    ]
+                  ]
+                ]
+              ]
+            ]
+          ],
+          'opportunity' => (object) [
+            'readOnly' => (object) [
+              'conditionGroup' => [
+                0 => (object) [
+                  'type' => 'or',
+                  'value' => [
+                    0 => (object) [
+                      'type' => 'isNotEmpty',
+                      'attribute' => 'quoteId',
+                      'data' => (object) [
+                        'field' => 'quote'
+                      ]
+                    ]
+                  ]
+                ]
+              ]
+            ]
+          ],
+          'quote' => (object) [
+            'readOnly' => (object) [
+              'conditionGroup' => [
+                0 => (object) [
+                  'type' => 'isNotEmpty',
+                  'attribute' => 'id'
+                ]
+              ]
+            ]
+          ],
+          'itemList' => (object) [
+            'readOnly' => (object) [
+              'conditionGroup' => [
+                0 => (object) [
+                  'type' => 'or',
+                  'value' => [
+                    0 => (object) [
+                      'type' => 'isTrue',
+                      'attribute' => 'isLocked'
+                    ],
+                    1 => (object) [
+                      'type' => 'and',
+                      'value' => [
+                        0 => (object) [
+                          'type' => 'in',
+                          'attribute' => 'status',
+                          'value' => [
+                            0 => 'Completed'
+                          ]
+                        ],
+                        1 => (object) [
+                          'type' => 'isNotEmpty',
+                          'attribute' => 'id'
+                        ]
+                      ]
+                    ]
+                  ]
+                ]
+              ]
+            ]
+          ],
+          'number' => (object) [
+            'visible' => (object) [
+              'conditionGroup' => [
+                0 => (object) [
+                  'type' => 'isNotEmpty',
+                  'attribute' => 'id'
+                ]
+              ]
+            ]
+          ],
+          'inventoryStatus' => (object) [
+            'visible' => (object) [
+              'conditionGroup' => [
+                0 => (object) [
+                  'type' => 'isNotEmpty',
+                  'attribute' => 'inventoryStatus'
+                ]
+              ]
+            ]
+          ],
+          'isDeliveryCreated' => (object) [
+            'visible' => (object) [
+              'conditionGroup' => [
+                0 => (object) [
+                  'type' => 'isNotEmpty',
+                  'attribute' => 'id'
+                ]
+              ]
+            ]
+          ]
+        ]
+      ],
+      'additionalLayouts' => (object) [
+        'detailBottomTotal' => (object) [
+          'type' => 'list',
+          'dataAttributeList' => [
+            0 => 'name',
+            1 => 'view',
+            2 => 'customLabel'
+          ]
+        ],
+        'listForAccount' => (object) [
+          'type' => 'list'
+        ]
+      ],
+      'relationshipPanels' => (object) [
+        'invoices' => (object) [
+          'createAction' => 'createRelatedInvoice',
+          'view' => 'sales:views/sales-order/record/panels/invoices',
+          'layout' => 'listForAccount',
+          'selectDisabled' => true,
+          'unlinkDisabled' => true
+        ],
+        'deliveryOrders' => (object) [
+          'createAction' => 'createRelatedDeliveryOrder',
+          'view' => 'sales:views/sales-order/record/panels/delivery-orders',
+          'layout' => 'listForAccount',
+          'selectDisabled' => true,
+          'unlinkDisabled' => true
+        ],
+        'returnOrders' => (object) [
+          'createAction' => 'createRelatedReturnOrder',
+          'view' => 'sales:views/sales-order/record/panels/return-orders',
+          'layout' => 'listForAccount',
+          'selectDisabled' => true,
+          'unlinkDisabled' => true
+        ],
+        'inventoryTransactions' => (object) [
+          'createDisabled' => true,
+          'selectDisabled' => true,
+          'unlinkDisabled' => true,
+          'layout' => 'listForOrder'
+        ],
+        'tax' => (object) [
+          'selectMandatoryAttributeList' => [
+            0 => 'rate'
+          ]
+        ]
+      ],
+      'calculationHandler' => 'sales:quote-calculation-handler',
+      'iconClass' => 'fas fa-file-invoice'
+    ],
+    'SalesOrderItem' => (object) [
+      'controller' => 'controllers/record',
+      'acl' => 'sales:acl/quote-item',
+      'views' => (object) [
+        'list' => 'sales:views/quote-item/list'
+      ],
+      'recordViews' => (object) [
+        'list' => 'sales:views/quote-item/record/list'
+      ],
+      'mergeDisabled' => true,
+      'convertCurrencyDisabled' => true,
+      'menu' => (object) [
+        'list' => (object) [
+          'buttons' => [
+            0 => (object) [
+              'label' => 'Sales Orders',
+              'link' => '#SalesOrder',
+              'acl' => 'read',
+              'aclScope' => 'SalesOrder'
+            ]
+          ]
+        ]
+      ],
+      'additionalLayouts' => (object) [
+        'listItem' => (object) [
+          'type' => 'listSmall',
+          'dataAttributeList' => [
+            0 => 'name',
+            1 => 'align',
+            2 => 'widthComplex',
+            3 => 'width',
+            4 => 'widthPx',
+            5 => 'link',
+            6 => 'view',
+            7 => 'customLabel'
+          ]
+        ]
+      ]
+    ],
+    'ShippingProvider' => (object) [
+      'controller' => 'controllers/record',
+      'searchPanelDisabled' => false
+    ],
+    'Supplier' => (object) [
+      'controller' => 'controllers/record',
+      'menu' => (object) [
+        'list' => (object) [
+          'dropdown' => [
+            0 => (object) [
+              'labelTranslation' => 'Global.scopeNamesPlural.SupplierProductPrice',
+              'link' => '#SupplierProductPrice',
+              'acl' => 'read',
+              'aclScope' => 'SupplierProductPrice'
+            ]
+          ]
+        ]
+      ],
+      'relationshipPanels' => (object) [
+        'purchaseOrders' => (object) [
+          'layout' => 'listForAccount',
+          'unlinkDisabled' => true,
+          'selectDisabled' => true
+        ],
+        'prices' => (object) [
+          'layout' => 'listForSupplier',
+          'unlinkDisabled' => true,
+          'selectDisabled' => true,
+          'filterList' => [
+            0 => 'all',
+            1 => 'active'
+          ]
+        ]
+      ],
+      'filterList' => [
+        0 => 'active'
+      ],
+      'selectDefaultFilters' => (object) [
+        'filter' => 'active'
+      ]
+    ],
+    'SupplierProductPrice' => (object) [
+      'controller' => 'controllers/record',
+      'filterList' => [
+        0 => 'active'
+      ],
+      'textFilterDisabled' => true,
+      'mergeDisabled' => true,
+      'massActionList' => [
+        0 => 'updatePrice'
+      ],
+      'checkAllResultMassActionList' => [
+        0 => 'updatePrice'
+      ],
+      'massActionDefs' => (object) [
+        'updatePrice' => (object) [
+          'handler' => 'sales:handlers/product-price/mass-update-price',
+          'initFunction' => 'init',
+          'actionFunction' => 'process',
+          'acl' => 'edit',
+          'aclScope' => 'Supplier'
+        ]
+      ]
+    ],
+    'Tax' => (object) [
+      'controller' => 'controllers/record',
+      'searchPanelDisabled' => true
+    ],
+    'TransferOrder' => (object) [
+      'controller' => 'controllers/record',
+      'boolFilterList' => [
+        0 => 'onlyMy'
+      ],
+      'filterList' => [
+        0 => 'actual',
+        1 => (object) [
+          'name' => 'completed',
+          'style' => 'success'
+        ]
+      ],
+      'recordViews' => (object) [
+        'detail' => 'sales:views/quote/record/detail',
+        'edit' => 'sales:views/quote/record/edit',
+        'detailSmall' => 'sales:views/quote/record/detail-small',
+        'editSmall' => 'sales:views/quote/record/edit-small'
+      ],
+      'viewSetupHandlers' => (object) [
+        'list' => [
+          0 => 'sales:handlers/info'
+        ],
+        'record/detail' => [
+          0 => 'sales:handlers/quote/setup-record-detail'
+        ],
+        'record/edit' => [
+          0 => 'sales:handlers/quote/setup-record-detail'
+        ]
+      ],
+      'massActionDefs' => (object) [
+        'lock' => (object) [
+          'aclScope' => 'TransferOrder',
+          'acl' => 'edit',
+          'handler' => 'sales:handlers/quote/lock-mass-action',
+          'actionFunction' => 'actionLock',
+          'initFunction' => 'initLock'
+        ],
+        'unlock' => (object) [
+          'aclScope' => 'TransferOrder',
+          'acl' => 'edit',
+          'handler' => 'sales:handlers/quote/lock-mass-action',
+          'actionFunction' => 'actionUnlock',
+          'initFunction' => 'initUnlock'
+        ]
+      ],
+      'massActionList' => [
+        0 => 'lock',
+        1 => 'unlock'
+      ],
+      'checkAllResultMassActionList' => [
+        0 => 'lock',
+        1 => 'unlock'
+      ],
+      'detailActionList' => [
+        0 => (object) [
+          'name' => 'lock',
+          'acl' => 'edit',
+          'label' => 'Lock',
+          'handler' => 'sales:handlers/quote/lock-action',
+          'data' => (object) [
+            'handler' => 'sales:handlers/quote/lock-action'
+          ],
+          'checkVisibilityFunction' => 'canBeLocked',
+          'actionFunction' => 'actionLock'
+        ],
+        1 => (object) [
+          'name' => 'unlock',
+          'acl' => 'edit',
+          'label' => 'Unlock',
+          'handler' => 'sales:handlers/quote/lock-action',
+          'data' => (object) [
+            'handler' => 'sales:handlers/quote/lock-action'
+          ],
+          'checkVisibilityFunction' => 'canBeUnlocked',
+          'actionFunction' => 'actionUnlock'
+        ]
+      ],
+      'bottomPanels' => (object) [
+        'detail' => [
+          0 => (object) [
+            'name' => 'items',
+            'label' => 'Items',
+            'view' => 'sales:views/quote/record/panels/items',
+            'notRefreshable' => true,
+            'sticked' => true,
+            'isForm' => true
+          ]
+        ],
+        'edit' => [
+          0 => (object) [
+            'name' => 'items',
+            'label' => 'Items',
+            'view' => 'sales:views/quote/record/panels/items',
+            'notRefreshable' => true,
+            'sticked' => true,
+            'isForm' => true
+          ]
+        ]
+      ],
+      'menu' => (object) [
+        'list' => (object) [
+          'dropdown' => [
+            0 => (object) [
+              'labelTranslation' => 'Quote.labels.Templates',
+              'link' => '#Template',
+              'acl' => 'read',
+              'aclScope' => 'Template'
+            ],
+            1 => false,
+            2 => (object) [
+              'labelTranslation' => 'Global.scopeNamesPlural.ShippingProvider',
+              'link' => '#ShippingProvider',
+              'acl' => 'read',
+              'aclScope' => 'ShippingProvider'
+            ],
+            3 => (object) [
+              'labelTranslation' => 'Global.scopeNamesPlural.Warehouse',
+              'link' => '#Warehouse',
+              'acl' => 'read',
+              'aclScope' => 'Warehouse',
+              'configCheck' => 'warehousesEnabled'
+            ],
+            4 => (object) [
+              'labelTranslation' => 'Global.scopeNamesPlural.TransferOrderItem',
+              'link' => '#TransferOrderItem',
+              'acl' => 'read',
+              'aclScope' => 'TransferOrderItem'
+            ]
+          ]
+        ]
+      ],
+      'dynamicLogic' => (object) [
+        'fields' => (object) [
+          'isLocked' => (object) [
+            'visible' => (object) [
+              'conditionGroup' => [
+                0 => (object) [
+                  'type' => 'isTrue',
+                  'attribute' => 'isNotActual'
+                ]
+              ]
+            ]
+          ],
+          'isHardLocked' => (object) [
+            'visible' => (object) [
+              'conditionGroup' => [
+                0 => (object) [
+                  'type' => 'isTrue',
+                  'attribute' => 'isHardLocked'
+                ]
+              ]
+            ]
+          ],
+          'status' => (object) [
+            'readOnly' => (object) [
+              'conditionGroup' => [
+                0 => (object) [
+                  'type' => 'isTrue',
+                  'attribute' => 'isLocked'
+                ]
+              ]
+            ]
+          ],
+          'itemList' => (object) [
+            'readOnly' => (object) [
+              'conditionGroup' => [
+                0 => (object) [
+                  'type' => 'or',
+                  'value' => [
+                    0 => (object) [
+                      'type' => 'isTrue',
+                      'attribute' => 'isLocked'
+                    ],
+                    1 => (object) [
+                      'type' => 'and',
+                      'value' => [
+                        0 => (object) [
+                          'type' => 'in',
+                          'attribute' => 'status',
+                          'value' => [
+                            0 => 'Completed'
+                          ]
+                        ],
+                        1 => (object) [
+                          'type' => 'isNotEmpty',
+                          'attribute' => 'id'
+                        ],
+                        2 => (object) [
+                          'type' => 'isTrue',
+                          'attribute' => 'isDone'
+                        ]
+                      ]
+                    ]
+                  ]
+                ]
+              ]
+            ]
+          ],
+          'number' => (object) [
+            'visible' => (object) [
+              'conditionGroup' => [
+                0 => (object) [
+                  'type' => 'isNotEmpty',
+                  'attribute' => 'id'
+                ]
+              ]
+            ]
+          ],
+          'inventoryStatus' => (object) [
+            'visible' => (object) [
+              'conditionGroup' => [
+                0 => (object) [
+                  'type' => 'isNotEmpty',
+                  'attribute' => 'inventoryStatus'
+                ]
+              ]
+            ]
+          ]
+        ]
+      ],
+      'relationshipPanels' => (object) [
+        'inventoryTransactions' => (object) [
+          'createDisabled' => true,
+          'selectDisabled' => true,
+          'unlinkDisabled' => true,
+          'layout' => 'listForOrder'
+        ]
+      ],
+      'additionalLayouts' => (object) [
+        'detailBottomTotal' => (object) [
+          'type' => 'list',
+          'dataAttributeList' => [
+            0 => 'name',
+            1 => 'view',
+            2 => 'customLabel'
+          ]
+        ],
+        'listForAccount' => (object) [
+          'type' => 'list'
+        ]
+      ],
+      'calculationHandler' => 'sales:quote-calculation-handler',
+      'iconClass' => 'fas fa-dolly fa-flip-horizontal'
+    ],
+    'TransferOrderItem' => (object) [
+      'controller' => 'controllers/record',
+      'acl' => 'sales:acl/quote-item',
+      'views' => (object) [
+        'list' => 'sales:views/quote-item/list'
+      ],
+      'recordViews' => (object) [
+        'list' => 'sales:views/quote-item/record/list'
+      ],
+      'mergeDisabled' => true,
+      'convertCurrencyDisabled' => true,
+      'menu' => (object) [
+        'list' => (object) [
+          'buttons' => [
+            0 => (object) [
+              'labelTranslation' => 'Global.scopeNamesPlural.TransferOrder',
+              'link' => '#TransferOrder',
+              'acl' => 'read',
+              'aclScope' => 'TransferOrder'
+            ]
+          ]
+        ]
+      ],
+      'additionalLayouts' => (object) [
+        'listItem' => (object) [
+          'type' => 'listSmall',
+          'dataAttributeList' => [
+            0 => 'name',
+            1 => 'align',
+            2 => 'widthComplex',
+            3 => 'width',
+            4 => 'widthPx',
+            5 => 'link',
+            6 => 'view',
+            7 => 'customLabel'
+          ]
+        ]
+      ],
+      'relationshipPanels' => (object) [
+        'inventoryNumber' => (object) [
+          'selectHandler' => 'sales:handlers/delivery-order-item/select-inventory-number',
+          'createDisabled' => true,
+          'selectLayout' => 'listForProduct'
+        ]
+      ]
+    ],
+    'Warehouse' => (object) [
+      'controller' => 'controllers/record',
+      'searchPanelDisabled' => false,
+      'filterList' => [
+        0 => 'active'
+      ],
+      'selectDefaultFilters' => (object) [
+        'filter' => 'active'
+      ],
+      'viewSetupHandlers' => (object) [
+        'list' => [
+          0 => 'sales:handlers/info'
+        ],
+        'record/detail' => [
+          0 => 'sales:handlers/warehouse/setup-record-detail'
+        ]
+      ],
+      'mergeDisabled' => true,
+      'menu' => (object) [
+        'list' => (object) [
+          'dropdown' => [
+            0 => (object) [
+              'labelTranslation' => 'Global.scopeNamesPlural.TransferOrder',
+              'link' => '#TransferOrder',
+              'acl' => 'read',
+              'aclScope' => 'TransferOrder'
+            ]
+          ]
+        ]
+      ],
+      'bottomPanels' => (object) [
+        'detail' => [
+          0 => (object) [
+            'name' => 'products',
+            'view' => 'sales:views/warehouse/record/panels/products'
+          ],
+          1 => (object) [
+            'name' => 'inventoryNumbers',
+            'view' => 'sales:views/warehouse/record/panels/inventory-numbers'
+          ]
+        ]
+      ],
+      'relationshipPanels' => (object) [
+        'inventoryTransactions' => (object) [
+          'createDisabled' => true,
+          'selectDisabled' => true,
+          'unlinkDisabled' => true
+        ]
+      ],
+      'iconClass' => 'fas fa-warehouse'
     ]
   ],
   'dashlets' => (object) [
@@ -10659,6 +15167,158 @@ return (object) [
     'Task' => (object) [
       'fields' => (object) [
         'email' => (object) [
+          'readOnly' => true
+        ]
+      ]
+    ],
+    'DeliveryOrder' => (object) [
+      'links' => (object) [
+        'inventoryTransactions' => (object) [
+          'readOnly' => true
+        ],
+        'items' => (object) [
+          'readOnly' => true
+        ]
+      ]
+    ],
+    'InventoryAdjustment' => (object) [
+      'links' => (object) [
+        'inventoryTransactions' => (object) [
+          'readOnly' => true
+        ],
+        'items' => (object) [
+          'readOnly' => true
+        ]
+      ]
+    ],
+    'InventoryNumber' => (object) [
+      'links' => (object) [
+        'inventoryTransactions' => (object) [
+          'readOnly' => true
+        ]
+      ]
+    ],
+    'Invoice' => (object) [
+      'links' => (object) [
+        'items' => (object) [
+          'readOnly' => true
+        ]
+      ]
+    ],
+    'Product' => (object) [
+      'links' => (object) [
+        'prices' => (object) [
+          'readOnly' => true
+        ],
+        'supplierPrices' => (object) [
+          'readOnly' => true
+        ],
+        'inventoryTransactions' => (object) [
+          'readOnly' => true
+        ],
+        'attributes' => (object) [
+          'readOnly' => true
+        ],
+        'attributeOptions' => (object) [
+          'readOnly' => true
+        ],
+        'variantAttributeOptions' => (object) [
+          'readOnly' => true
+        ],
+        'variants' => (object) [
+          'readOnly' => true
+        ],
+        'inventoryAdjustmentItems' => (object) [
+          'readOnly' => true
+        ]
+      ]
+    ],
+    'ProductAttribute' => (object) [
+      'links' => (object) [
+        'products' => (object) [
+          'readOnly' => true
+        ]
+      ]
+    ],
+    'ProductAttributeOption' => (object) [
+      'links' => (object) [
+        'products' => (object) [
+          'readOnly' => true
+        ],
+        'productVariants' => (object) [
+          'readOnly' => true
+        ]
+      ]
+    ],
+    'PurchaseOrder' => (object) [
+      'links' => (object) [
+        'inventoryTransactions' => (object) [
+          'readOnly' => true
+        ],
+        'receiptOrders' => (object) [
+          'readOnly' => true
+        ],
+        'items' => (object) [
+          'readOnly' => true
+        ]
+      ]
+    ],
+    'Quote' => (object) [
+      'links' => (object) [
+        'items' => (object) [
+          'readOnly' => true
+        ]
+      ]
+    ],
+    'ReceiptOrder' => (object) [
+      'links' => (object) [
+        'inventoryTransactions' => (object) [
+          'readOnly' => true
+        ],
+        'items' => (object) [
+          'readOnly' => true
+        ],
+        'receivedItems' => (object) [
+          'readOnly' => true
+        ]
+      ]
+    ],
+    'ReturnOrder' => (object) [
+      'links' => (object) [
+        'receiptOrders' => (object) [
+          'readOnly' => true
+        ],
+        'items' => (object) [
+          'readOnly' => true
+        ]
+      ]
+    ],
+    'SalesOrder' => (object) [
+      'links' => (object) [
+        'inventoryTransactions' => (object) [
+          'readOnly' => true
+        ],
+        'deliveryOrders' => (object) [
+          'readOnly' => true
+        ],
+        'items' => (object) [
+          'readOnly' => true
+        ]
+      ]
+    ],
+    'TransferOrder' => (object) [
+      'links' => (object) [
+        'inventoryTransactions' => (object) [
+          'readOnly' => true
+        ],
+        'items' => (object) [
+          'readOnly' => true
+        ]
+      ]
+    ],
+    'Warehouse' => (object) [
+      'links' => (object) [
+        'inventoryTransactions' => (object) [
           'readOnly' => true
         ]
       ]
@@ -14562,6 +19222,11 @@ return (object) [
             0 => 'superParentId'
           ]
         ]
+      ],
+      'streamRelated' => (object) [
+        'Opportunity' => [
+          0 => 'quotes'
+        ]
       ]
     ],
     'Notification' => (object) [
@@ -15501,7 +20166,10 @@ return (object) [
         'SendEmailNotifications' => '*/2 * * * *',
         'ProcessWebhookQueue' => '*/2 * * * *',
         'ProcessMassEmail' => '10,30,50 * * * *',
-        'ControlKnowledgeBaseArticleStatus' => '10 1 * * *'
+        'ControlKnowledgeBaseArticleStatus' => '10 1 * * *',
+        'InventoryCompress' => '10 0 * * 6',
+        'NotActualOrderLocking' => '10 1 * * 6',
+        'InventoryDetach' => '10 2 * * 6'
       ],
       'jobs' => (object) [
         'SubmitPopupReminders' => (object) [
@@ -16861,6 +21529,25 @@ return (object) [
           'entity' => 'User',
           'tooltip' => true
         ],
+        'defaultPriceBook' => (object) [
+          'type' => 'link',
+          'entity' => 'PriceBook'
+        ],
+        'priceBooksEnabled' => (object) [
+          'type' => 'bool'
+        ],
+        'inventoryTransactionsEnabled' => (object) [
+          'type' => 'bool'
+        ],
+        'deliveryOrdersEnabled' => (object) [
+          'type' => 'bool'
+        ],
+        'receiptOrdersEnabled' => (object) [
+          'type' => 'bool'
+        ],
+        'warehousesEnabled' => (object) [
+          'type' => 'bool'
+        ],
         'addressPreviewStreet' => (object) [
           'notStorable' => true,
           'readOnly' => true,
@@ -17381,7 +22068,536 @@ return (object) [
         'sortBy' => 'name',
         'asc' => true
       ],
-      'optimisticConcurrencyControl' => true
+      'optimisticConcurrencyControl' => true,
+      'defaultTemplates' => (object) [
+        'Quote' => (object) [
+          'body' => '<table style="line-height: 1.36; width: 100%;">
+  <tbody>
+     <tr>
+       <td style="width: 50%; vertical-align: top;">
+         <p><span style="font-size: 1.4em;">Company Name</span></p>
+         <p><br></p>
+         <p>
+           {{accountName}}
+         </p>
+         <p>
+           {{{billingAddressStreet}}}
+           <br>
+           {{billingAddressCity}}{{#if billingAddressState}},{{/if}} {{billingAddressState}} {{billingAddressPostalCode}}<br>{{billingAddressCountry}}
+         </p>
+      </td>
+      <td style="width: 50%; vertical-align: top; text-align: right;">
+        <p><span style="font-size: 1.2em;">Quote</span></p>
+        <p>Date: {{dateQuoted}}</p>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<p><span style="font-size: 1.2em;">{{name}}</span></p>
+<p>Currency: {{amountCurrency}}</p>
+
+<table style="border: 0.5pt; border-spacing: 0; border-collapse: collapse; width: 100%;" cellpadding="2" border="0.5pt">
+<tbody>
+ <tr>
+  <th width="5%" align="left">#</th>
+  <th width="37%" align="left">Name</th>
+  <th width="8%" align="left">Qty</th>
+  <th width="16%" align="left">List Price</th>
+  <th width="16%" align="left">Unit Price</th>
+  <th width="16%" align="left">Amount</th>
+ </tr>
+ <!-- {{#each itemList}} --> <tr>
+  <td>{{order}}</td>
+  <td>{{name}}</td>
+  <td>{{quantity}}</td>
+  <td align="right">{{listPrice}}</td>
+  <td align="right">{{unitPrice}}</td>
+  <td align="right">{{amount}}</td>
+ </tr>
+<!-- {{#if description}} -->
+<tr><td colspan="6">{{{description}}}</td></tr>
+<!-- {{/if}} -->
+<!-- {{/each}} --> <tr>
+   <td colspan="6">&nbsp;</td>
+ </tr>
+ <tr>
+   <td colspan="5" align="right">Pre-Discounted Amount</td>
+   <td align="right">{{preDiscountedAmount}}</td>
+ </tr>
+ <tr>
+   <td colspan="5" align="right">Discount Amount</td>
+   <td align="right">{{discountAmount}}</td>
+ </tr>
+ <tr>
+   <td colspan="5" align="right">Amount</td>
+   <td align="right">{{amount}}</td>
+ </tr>
+ <tr>
+   <td colspan="5" align="right">Tax Amount</td>
+   <td align="right">{{taxAmount}}</td>
+ </tr>
+ <tr>
+   <td colspan="5" align="right">Shipping Cost</td>
+   <td align="right">{{shippingCost}}</td>
+ </tr>
+ <tr>
+   <td colspan="5" align="right">Grand Total Amount</td>
+   <td align="right"><b>{{grandTotalAmount}}</b></td>
+ </tr>
+</tbody>
+</table>
+<p><br></p>
+<p align="center">Thank you for your business.</p>',
+          'footer' => '<div style="width: 100%; text-align: center;"><span style="font-size: 0.8em">{pageNumber}</span></div>'
+        ],
+        'SalesOrder' => (object) [
+          'body' => '<table style="line-height: 1.36; width: 100%;">
+  <tbody>
+     <tr>
+       <td style="width: 50%; vertical-align: top;">
+         <p><span style="font-size: 1.4em;">Company Name</span></p>
+         <p><br></p>
+         <p>
+           {{accountName}}
+         </p>
+         <p>
+           {{{billingAddressStreet}}}
+           <br>
+           {{billingAddressCity}}{{#if billingAddressState}},{{/if}} {{billingAddressState}} {{billingAddressPostalCode}}<br>{{billingAddressCountry}}
+         </p>
+      </td>
+      <td style="width: 50%; vertical-align: top; text-align: right;">
+        <p><span style="font-size: 1.2em;">Sales Order</span></p>
+        <p>Date: {{dateOrdered}}</p>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<p><span style="font-size: 1.2em;">{{name}}</span></p>
+<p>Currency: {{amountCurrency}}</p>
+
+<table style="border: 0.5pt; border-spacing: 0; border-collapse: collapse; width: 100%;" cellpadding="2" border="0.5pt">
+<tbody>
+ <tr>
+  <th width="5%" align="left">#</th>
+  <th width="37%" align="left">Name</th>
+  <th width="8%" align="left">Qty</th>
+  <th width="16%" align="left">List Price</th>
+  <th width="16%" align="left">Unit Price</th>
+  <th width="16%" align="left">Amount</th>
+ </tr>
+ <!-- {{#each itemList}} --> <tr>
+  <td>{{order}}</td>
+  <td>{{name}}</td>
+  <td>{{quantity}}</td>
+  <td align="right">{{listPrice}}</td>
+  <td align="right">{{unitPrice}}</td>
+  <td align="right">{{amount}}</td>
+ </tr>
+<!-- {{#if description}} -->
+<tr><td colspan="6">{{{description}}}</td></tr>
+<!-- {{/if}} -->
+<!-- {{/each}} --> <tr>
+   <td colspan="6">&nbsp;</td>
+ </tr>
+ <tr>
+   <td colspan="5" align="right">Pre-Discounted Amount</td>
+   <td align="right">{{preDiscountedAmount}}</td>
+ </tr>
+ <tr>
+   <td colspan="5" align="right">Discount Amount</td>
+   <td align="right">{{discountAmount}}</td>
+ </tr>
+ <tr>
+   <td colspan="5" align="right">Amount</td>
+   <td align="right">{{amount}}</td>
+ </tr>
+ <tr>
+   <td colspan="5" align="right">Tax Amount</td>
+   <td align="right">{{taxAmount}}</td>
+ </tr>
+ <tr>
+   <td colspan="5" align="right">Shipping Cost</td>
+   <td align="right">{{shippingCost}}</td>
+ </tr>
+ <tr>
+   <td colspan="5" align="right">Grand Total Amount</td>
+   <td align="right"><b>{{grandTotalAmount}}</b></td>
+ </tr>
+</tbody>
+</table>
+<p><br></p>
+<p align="center">Thank you for your business.</p>',
+          'footer' => '<div style="width: 100%; text-align: center;"><span style="font-size: 0.8em">{pageNumber}</span></div>'
+        ],
+        'Invoice' => (object) [
+          'body' => '<table style="line-height: 1.36; width: 100%;">
+  <tbody>
+     <tr>
+       <td style="width: 50%; vertical-align: top;">
+         <p><span style="font-size: 1.4em;">Company Name</span></p>
+         <p><br></p>
+         <p>
+           {{accountName}}
+         </p>
+         <p>
+           {{{billingAddressStreet}}}
+           <br>
+           {{billingAddressCity}}{{#if billingAddressState}},{{/if}} {{billingAddressState}} {{billingAddressPostalCode}}<br>{{billingAddressCountry}}
+         </p>
+      </td>
+      <td style="width: 50%; vertical-align: top; text-align: right;">
+        <p><span style="font-size: 1.2em;">Invoice</span></p>
+        <p>Date: {{dateInvoiced}}</p>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<p><span style="font-size: 1.2em;">{{name}}</span></p>
+<p>Currency: {{amountCurrency}}</p>
+
+<table style="border: 0.5pt; border-spacing: 0; border-collapse: collapse; width: 100%;" cellpadding="2" border="0.5pt">
+<tbody>
+ <tr>
+  <th width="5%" align="left">#</th>
+  <th width="37%" align="left">Name</th>
+  <th width="8%" align="left">Qty</th>
+  <th width="16%" align="left">List Price</th>
+  <th width="16%" align="left">Unit Price</th>
+  <th width="16%" align="left">Amount</th>
+ </tr>
+ <!-- {{#each itemList}} --> <tr>
+  <td>{{order}}</td>
+  <td>{{name}}</td>
+  <td>{{quantity}}</td>
+  <td align="right">{{listPrice}}</td>
+  <td align="right">{{unitPrice}}</td>
+  <td align="right">{{amount}}</td>
+ </tr>
+<!-- {{#if description}} -->
+<tr><td colspan="6">{{{description}}}</td></tr>
+<!-- {{/if}} -->
+<!-- {{/each}} --> <tr>
+   <td colspan="6">&nbsp;</td>
+ </tr>
+ <tr>
+   <td colspan="5" align="right">Pre-Discounted Amount</td>
+   <td align="right">{{preDiscountedAmount}}</td>
+ </tr>
+ <tr>
+   <td colspan="5" align="right">Discount Amount</td>
+   <td align="right">{{discountAmount}}</td>
+ </tr>
+ <tr>
+   <td colspan="5" align="right">Amount</td>
+   <td align="right">{{amount}}</td>
+ </tr>
+ <tr>
+   <td colspan="5" align="right">Tax Amount</td>
+   <td align="right">{{taxAmount}}</td>
+ </tr>
+ <tr>
+   <td colspan="5" align="right">Shipping Cost</td>
+   <td align="right">{{shippingCost}}</td>
+ </tr>
+ <tr>
+   <td colspan="5" align="right">Grand Total Amount</td>
+   <td align="right"><b>{{grandTotalAmount}}</b></td>
+ </tr>
+</tbody>
+</table>
+<p><br></p>
+<p align="center">Thank you for your business.</p>',
+          'footer' => '<div style="width: 100%; text-align: center;"><span style="font-size: 0.8em">{pageNumber}</span></div>'
+        ],
+        'PurchaseOrder' => (object) [
+          'body' => '<table style="line-height: 1.36; width: 100%;">
+  <tbody>
+     <tr>
+       <td style="width: 50%; vertical-align: top;">
+         <p><span style="font-size: 1.4em;">Company Name</span></p>
+         <p><br></p>
+         <p>
+           {{supplierName}}
+         </p>
+         <p>
+           {{{supplierAddressStreet}}}
+           <br>
+           {{supplierAddressCity}}{{#if supplierAddressState}},{{/if}} {{supplierAddressState}} {{supplierAddressPostalCode}}<br>{{supplierAddressCountry}}
+         </p>
+       </td>
+       <td style="width: 50%; vertical-align: top; text-align: right;">
+         <p><span style="font-size: 1.2em;">Purchase Order</span></p>
+         <p>Date: {{dateOrdered}}</p>
+         <p>
+           Ship to
+         </p>
+         <p>
+           {{{shippingAddressStreet}}}
+           <br>
+           {{shippingAddressCity}}{{#if shippingAddressState}},{{/if}} {{shippingAddressState}} {{shippingAddressPostalCode}}<br>{{shippingAddressCountry}}
+         </p>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<p><span style="font-size: 1.2em;">{{name}}</span></p>
+<p>Currency: {{amountCurrency}}</p>
+
+<table style="border: 0.5pt; border-spacing: 0; border-collapse: collapse; width: 100%;" cellpadding="2" border="0.5pt">
+<tbody>
+ <tr>
+  <th width="5%" align="left">#</th>
+  <th width="37%" align="left">Name</th>
+  <th width="8%" align="left">Qty</th>
+   <th width="16%" align="left">Unit Price</th>
+  <th width="16%" align="left">Amount</th>
+ </tr>
+ <!-- {{#each itemList}} --> <tr>
+  <td>{{order}}</td>
+  <td>{{name}}</td>
+  <td>{{quantity}}</td>
+   <td align="right">{{unitPrice}}</td>
+  <td align="right">{{amount}}</td>
+ </tr>
+<!-- {{#if description}} -->
+<tr><td colspan="4">{{{description}}}</td></tr>
+<!-- {{/if}} -->
+<!-- {{/each}} --> <tr>
+   <td colspan="5">&nbsp;</td>
+ </tr>
+  <tr><td colspan="4" align="right">Amount</td>
+   <td align="right">{{amount}}</td>
+ </tr>
+ <tr>
+   <td colspan="4" align="right">Tax Amount</td>
+   <td align="right">{{taxAmount}}</td>
+ </tr>
+ <tr>
+   <td colspan="4" align="right">Shipping Cost</td>
+   <td align="right">{{shippingCost}}</td>
+ </tr>
+ <tr>
+   <td colspan="4" align="right">Grand Total Amount</td>
+   <td align="right"><b>{{grandTotalAmount}}</b></td>
+ </tr>
+</tbody>
+</table>
+<p><br></p>
+<p align="center">Thank you for your business.</p>',
+          'footer' => '<div style="width: 100%; text-align: center;"><span style="font-size: 0.8em">{pageNumber}</span></div>'
+        ],
+        'DeliveryOrder' => (object) [
+          'body' => '<table style="line-height: 1.36; width: 100%;">
+  <tbody>
+     <tr>
+       <td style="width: 50%; vertical-align: top;">
+         <p><span style="font-size: 1.4em;">Company Name</span></p>
+         <p><br></p>
+         <p>
+           {{accountName}}
+         </p>
+         <p>
+           {{{shippingAddressStreet}}}
+           <br>
+           {{shippingAddressCity}}{{#if shippingAddressState}},{{/if}} {{shippingAddressState}} {{shippingAddressPostalCode}}<br>{{shippingAddressCountry}}
+         </p>
+      </td>
+      <td style="width: 50%; vertical-align: top; text-align: right;">
+        <p><span style="font-size: 1.2em;">Delivery Order</span></p>
+        <p>Date: {{dateOrdered}}</p>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<p><span style="font-size: 1.2em;">{{name}}</span></p>
+
+<table style="border: 0.5pt; border-spacing: 0; border-collapse: collapse; width: 100%;" cellpadding="2" border="0.5pt">
+<tbody>
+ <tr>
+  <th width="5%" align="left">#</th>
+  <th width="37%" align="left">Name</th>
+  <th width="8%" align="left">Qty</th>
+    </tr>
+ <!-- {{#each itemList}} --> <tr>
+  <td>{{order}}</td>
+  <td>{{name}}</td>
+  <td>{{quantity}}</td>
+   </tr>
+<!-- {{#if description}} -->
+<tr><td colspan="2">{{{description}}}</td></tr>
+<!-- {{/if}} -->
+<!-- {{/each}} --> 
+</tbody>
+</table>
+<p><br></p>
+',
+          'footer' => '<div style="width: 100%; text-align: center;"><span style="font-size: 0.8em">{pageNumber}</span></div>'
+        ],
+        'ReceiptOrder' => (object) [
+          'body' => '<table style="line-height: 1.36; width: 100%;">
+  <tbody>
+     <tr>
+       <td style="width: 50%; vertical-align: top;">
+         <p><span style="font-size: 1.4em;">Company Name</span></p>
+         <p><br></p>
+         <p>
+           {{supplierName}}
+         </p>
+         <p>
+          {{shippingProviderName}}
+           </p>
+      </td>
+      <td style="width: 50%; vertical-align: top; text-align: right;">
+        <p><span style="font-size: 1.2em;">Receipt Order</span></p>
+        <p>Date: {{dateOrdered}}</p>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<p><span style="font-size: 1.2em;">{{name}}</span></p>
+
+<table style="border: 0.5pt; border-spacing: 0; border-collapse: collapse; width: 100%;" cellpadding="2" border="0.5pt">
+<tbody>
+ <tr>
+  <th width="5%" align="left">#</th>
+  <th width="37%" align="left">Name</th>
+  <th width="8%" align="left">Qty</th>
+    </tr>
+ <!-- {{#each itemList}} --> <tr>
+  <td>{{order}}</td>
+  <td>{{name}}</td>
+  <td>{{quantity}}</td>
+   </tr>
+<!-- {{#if description}} -->
+<tr><td colspan="2">{{{description}}}</td></tr>
+<!-- {{/if}} -->
+<!-- {{/each}} --> 
+</tbody>
+</table>
+<p><br></p>
+',
+          'footer' => '<div style="width: 100%; text-align: center;"><span style="font-size: 0.8em">{pageNumber}</span></div>'
+        ],
+        'TransferOrder' => (object) [
+          'body' => '<table style="line-height: 1.36; width: 100%;">
+  <tbody>
+     <tr>
+      <td style="width: 50%; vertical-align: top; text-align: right;">
+        <p><span style="font-size: 1.2em;">Transfer Order</span></p>
+        <p>Date: {{dateOrdered}}</p>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<table style="line-height: 1.36; width: 100%;">
+  <tbody>
+     <tr>
+       <td style="width: 50%; vertical-align: top;">
+         From
+       </td>
+       <td style="width: 50%; vertical-align: top;">
+         To
+       </td>
+     </tr>
+     <tr>
+       <td style="vertical-align: top;">
+         {{fromWarehouseName}}
+       </td>
+       <td style="width: 50%; vertical-align: top;">
+         {{toWarehouseName}}
+       </td>
+     </tr>
+     <tr>
+       <td style="width: 50%; vertical-align: top;">
+         <p>
+           {{{fromAddressStreet}}}
+           <br>
+           {{fromAddressCity}}{{#if fromAddressState}},{{/if}} {{fromAddressState}} {{fromAddressPostalCode}}<br>{{fromAddressCountry}}
+         </p>
+       </td>
+       <td style="width: 50%; vertical-align: top;">
+         <p>
+           {{{toAddressStreet}}}
+           <br>
+           {{toAddressCity}}{{#if toAddressState}},{{/if}} {{toAddressState}} {{toAddressPostalCode}}<br>{{toAddressCountry}}
+         </p>
+       </td>
+     </tr>
+  </tbody>
+</table>
+
+<p><span style="font-size: 1.2em;">{{name}}</span></p>
+
+<table style="border: 0.5pt; border-spacing: 0; border-collapse: collapse; width: 100%;" cellpadding="2" border="0.5pt">
+<tbody>
+ <tr>
+  <th width="5%" align="left">#</th>
+  <th width="37%" align="left">Name</th>
+  <th width="8%" align="left">Qty</th>
+    </tr>
+ <!-- {{#each itemList}} --> <tr>
+  <td>{{order}}</td>
+  <td>{{name}}</td>
+  <td>{{quantity}}</td>
+   </tr>
+<!-- {{#if description}} -->
+<tr><td colspan="2">{{{description}}}</td></tr>
+<!-- {{/if}} -->
+<!-- {{/each}} --> 
+</tbody>
+</table>
+<p><br></p>
+',
+          'footer' => '<div style="width: 100%; text-align: center;"><span style="font-size: 0.8em">{pageNumber}</span></div>'
+        ],
+        'ReturnOrder' => (object) [
+          'body' => '<table style="line-height: 1.36; width: 100%;">
+  <tbody>
+     <tr>
+       <td style="width: 50%; vertical-align: top;">
+         <p><span style="font-size: 1.4em;">Company Name</span></p>
+         <p><br></p>
+         <p>
+           {{accountName}}
+         </p>
+         <p>
+          {{shippingProviderName}}
+           </p>
+      </td>
+      <td style="width: 50%; vertical-align: top; text-align: right;">
+        <p><span style="font-size: 1.2em;">Return Order</span></p>
+        <p>Date: {{dateOrdered}}</p>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<p><span style="font-size: 1.2em;">{{name}}</span></p>
+
+<table style="border: 0.5pt; border-spacing: 0; border-collapse: collapse; width: 100%;" cellpadding="2" border="0.5pt">
+<tbody>
+ <tr>
+  <th width="5%" align="left">#</th>
+  <th width="37%" align="left">Name</th>
+  <th width="8%" align="left">Qty</th>
+    </tr>
+ <!-- {{#each itemList}} --> <tr>
+  <td>{{order}}</td>
+  <td>{{name}}</td>
+  <td>{{quantity}}</td>
+   </tr>
+<!-- {{#if description}} -->
+<tr><td colspan="2">{{{description}}}</td></tr>
+<!-- {{/if}} -->
+<!-- {{/each}} --> 
+</tbody>
+</table>
+<p><br></p>
+',
+          'footer' => '<div style="width: 100%; text-align: center;"><span style="font-size: 0.8em">{pageNumber}</span></div>'
+        ]
+      ]
     ],
     'TwoFactorCode' => (object) [
       'fields' => (object) [
@@ -18976,6 +24192,10 @@ return (object) [
           'readOnly' => true,
           'utility' => true
         ],
+        'priceBook' => (object) [
+          'type' => 'link',
+          'autocompleteOnEmpty' => true
+        ],
         'emailAddressIsOptedOut' => (object) [
           'type' => 'bool',
           'notStorable' => true,
@@ -19166,6 +24386,100 @@ return (object) [
           'type' => 'hasOne',
           'entity' => 'Lead',
           'foreign' => 'createdAccount'
+        ],
+        'supplier' => (object) [
+          'type' => 'hasOne',
+          'foreign' => 'account',
+          'entity' => 'Supplier'
+        ],
+        'quotes' => (object) [
+          'type' => 'hasMany',
+          'entity' => 'Quote',
+          'foreign' => 'account',
+          'audited' => true
+        ],
+        'quoteItems' => (object) [
+          'type' => 'hasMany',
+          'entity' => 'QuoteItem',
+          'foreign' => 'account',
+          'layoutRelationshipsDisabled' => true
+        ],
+        'salesOrders' => (object) [
+          'type' => 'hasMany',
+          'entity' => 'SalesOrder',
+          'foreign' => 'account',
+          'audited' => true
+        ],
+        'salesOrderItems' => (object) [
+          'type' => 'hasMany',
+          'entity' => 'SalesOrderItem',
+          'foreign' => 'account',
+          'layoutRelationshipsDisabled' => true
+        ],
+        'invoices' => (object) [
+          'type' => 'hasMany',
+          'entity' => 'Invoice',
+          'foreign' => 'account',
+          'audited' => true
+        ],
+        'invoiceItems' => (object) [
+          'type' => 'hasMany',
+          'entity' => 'InvoiceItem',
+          'foreign' => 'account',
+          'layoutRelationshipsDisabled' => true
+        ],
+        'purchaseOrders' => (object) [
+          'type' => 'hasMany',
+          'entity' => 'PurchaseOrder',
+          'foreign' => 'account',
+          'audited' => true
+        ],
+        'purchaseOrderItems' => (object) [
+          'type' => 'hasMany',
+          'entity' => 'PurchaseOrderItem',
+          'foreign' => 'account',
+          'layoutRelationshipsDisabled' => true
+        ],
+        'deliveryOrders' => (object) [
+          'type' => 'hasMany',
+          'entity' => 'DeliveryOrder',
+          'foreign' => 'account',
+          'audited' => true
+        ],
+        'deliveryOrderItems' => (object) [
+          'type' => 'hasMany',
+          'entity' => 'DeliveryOrderItem',
+          'foreign' => 'account',
+          'layoutRelationshipsDisabled' => true
+        ],
+        'receiptOrders' => (object) [
+          'type' => 'hasMany',
+          'entity' => 'ReceiptOrder',
+          'foreign' => 'account',
+          'audited' => true
+        ],
+        'returnOrders' => (object) [
+          'type' => 'hasMany',
+          'entity' => 'ReturnOrder',
+          'foreign' => 'account',
+          'audited' => true
+        ],
+        'receiptOrderItems' => (object) [
+          'type' => 'hasMany',
+          'entity' => 'ReceiptOrderItem',
+          'foreign' => 'account',
+          'layoutRelationshipsDisabled' => true
+        ],
+        'returnOrderItems' => (object) [
+          'type' => 'hasMany',
+          'entity' => 'ReturnOrderItem',
+          'foreign' => 'account',
+          'layoutRelationshipsDisabled' => true
+        ],
+        'priceBook' => (object) [
+          'type' => 'belongsTo',
+          'entity' => 'PriceBook',
+          'foreign' => 'accounts'
         ]
       ],
       'collection' => (object) [
@@ -21412,6 +26726,66 @@ return (object) [
           'entity' => 'Task',
           'foreign' => 'contact',
           'layoutRelationshipsDisabled' => true
+        ],
+        'quotesBilling' => (object) [
+          'type' => 'hasMany',
+          'entity' => 'Quote',
+          'foreign' => 'billingContact'
+        ],
+        'quotesShipping' => (object) [
+          'type' => 'hasMany',
+          'entity' => 'Quote',
+          'foreign' => 'shippingContact'
+        ],
+        'salesOrdersBilling' => (object) [
+          'type' => 'hasMany',
+          'entity' => 'SalesOrder',
+          'foreign' => 'billingContact'
+        ],
+        'salesOrdersShipping' => (object) [
+          'type' => 'hasMany',
+          'entity' => 'SalesOrder',
+          'foreign' => 'shippingContact'
+        ],
+        'invoicesBilling' => (object) [
+          'type' => 'hasMany',
+          'entity' => 'Invoice',
+          'foreign' => 'billingContact'
+        ],
+        'invoicesShipping' => (object) [
+          'type' => 'hasMany',
+          'entity' => 'Invoice',
+          'foreign' => 'shippingContact'
+        ],
+        'purchaseOrdersBilling' => (object) [
+          'type' => 'hasMany',
+          'entity' => 'PurchaseOrder',
+          'foreign' => 'billingContact'
+        ],
+        'purchaseOrdersShipping' => (object) [
+          'type' => 'hasMany',
+          'entity' => 'PurchaseOrder',
+          'foreign' => 'shippingContact'
+        ],
+        'deliveryOrdersShipping' => (object) [
+          'type' => 'hasMany',
+          'entity' => 'DeliveryOrder',
+          'foreign' => 'shippingContact'
+        ],
+        'receiptOrdersShipping' => (object) [
+          'type' => 'hasMany',
+          'entity' => 'ReceiptOrder',
+          'foreign' => 'shippingContact'
+        ],
+        'returnOrdersBilling' => (object) [
+          'type' => 'hasMany',
+          'entity' => 'ReturnOrder',
+          'foreign' => 'billingContact'
+        ],
+        'returnOrdersShipping' => (object) [
+          'type' => 'hasMany',
+          'entity' => 'ReturnOrder',
+          'foreign' => 'shippingContact'
         ]
       ],
       'collection' => (object) [
@@ -23593,6 +28967,24 @@ return (object) [
           'type' => 'linkMultiple',
           'view' => 'views/fields/teams'
         ],
+        'itemList' => (object) [
+          'type' => 'jsonArray',
+          'notStorable' => true,
+          'view' => 'sales:views/opportunity/fields/item-list',
+          'layoutAvailabilityList' => [
+            0 => 'detail'
+          ],
+          'dynamicLogicVisibleDisabled' => true,
+          'dynamicLogicInvalidDisabled' => true,
+          'templatePlaceholderDisabled' => true,
+          'reportDisabled' => true,
+          'workflowDisabled' => true,
+          'duplicatorClassName' => 'Espo\\Modules\\Sales\\Classes\\FieldDuplicators\\Quote\\ItemList'
+        ],
+        'priceBook' => (object) [
+          'type' => 'link',
+          'autocompleteOnEmpty' => true
+        ],
         'amountCurrency' => (object) [
           'type' => 'enum',
           'view' => 'views/fields/currency-list',
@@ -23697,6 +29089,34 @@ return (object) [
           'type' => 'hasOne',
           'entity' => 'Lead',
           'foreign' => 'createdOpportunity'
+        ],
+        'items' => (object) [
+          'type' => 'hasMany',
+          'entity' => 'OpportunityItem',
+          'foreign' => 'opportunity',
+          'layoutRelationshipsDisabled' => true
+        ],
+        'quotes' => (object) [
+          'type' => 'hasMany',
+          'entity' => 'Quote',
+          'foreign' => 'opportunity',
+          'audited' => true
+        ],
+        'salesOrders' => (object) [
+          'type' => 'hasMany',
+          'entity' => 'SalesOrder',
+          'foreign' => 'opportunity',
+          'audited' => true
+        ],
+        'invoices' => (object) [
+          'type' => 'hasMany',
+          'entity' => 'Invoice',
+          'foreign' => 'opportunity',
+          'audited' => true
+        ],
+        'priceBook' => (object) [
+          'type' => 'belongsTo',
+          'entity' => 'PriceBook'
         ]
       ],
       'collection' => (object) [
@@ -24516,6 +29936,8633 @@ return (object) [
         ]
       ],
       'repositoryClassName' => 'Espo\\Core\\Repositories\\Event'
+    ],
+    'DeliveryOrder' => (object) [
+      'fields' => (object) [
+        'name' => (object) [
+          'type' => 'varchar',
+          'duplicateIgnore' => true
+        ],
+        'number' => (object) [
+          'type' => 'varchar',
+          'maxLength' => 100,
+          'index' => true,
+          'readOnly' => true,
+          'fieldManagerAdditionalParamList' => [
+            0 => (object) [
+              'name' => 'useAutoincrement',
+              'type' => 'bool'
+            ]
+          ],
+          'useAutoincrement' => true
+        ],
+        'numberA' => (object) [
+          'type' => 'number',
+          'prefix' => 'DO-',
+          'padLength' => 5,
+          'utility' => true
+        ],
+        'status' => (object) [
+          'type' => 'enum',
+          'options' => [
+            0 => 'Draft',
+            1 => 'Ready',
+            2 => 'In Progress',
+            3 => 'Completed',
+            4 => 'Canceled',
+            5 => 'Failed'
+          ],
+          'style' => (object) [
+            'Ready' => 'primary',
+            'In Progress' => 'warning',
+            'Completed' => 'success',
+            'Canceled' => 'info',
+            'Failed' => 'danger'
+          ],
+          'default' => 'Draft',
+          'fieldManagerAdditionalParamList' => [
+            0 => (object) [
+              'name' => 'notActualOptions',
+              'view' => 'sales:views/admin/field-manager/fields/not-actual-options'
+            ]
+          ],
+          'notActualOptions' => [
+            0 => 'Completed',
+            1 => 'Canceled',
+            2 => 'Failed'
+          ],
+          'audited' => true
+        ],
+        'dateOrdered' => (object) [
+          'type' => 'date',
+          'default' => 'javascript: return this.dateTime.getToday();',
+          'audited' => true
+        ],
+        'shippingDate' => (object) [
+          'type' => 'date',
+          'audited' => true
+        ],
+        'deliveryDate' => (object) [
+          'type' => 'date',
+          'audited' => true
+        ],
+        'account' => (object) [
+          'type' => 'link',
+          'view' => 'sales:views/delivery-order/fields/account'
+        ],
+        'salesOrder' => (object) [
+          'type' => 'link',
+          'view' => 'sales:views/delivery-order/fields/sales-order'
+        ],
+        'description' => (object) [
+          'type' => 'text'
+        ],
+        'warehouse' => (object) [
+          'type' => 'link',
+          'validatorClassNameList' => [
+            0 => 'Espo\\Modules\\Sales\\Classes\\FieldValidators\\DeliveryOrder\\Warehouse\\Required'
+          ],
+          'autocompleteOnEmpty' => true
+        ],
+        'shippingAddress' => (object) [
+          'type' => 'address'
+        ],
+        'shippingContact' => (object) [
+          'type' => 'link',
+          'view' => 'sales:views/quote/fields/contact'
+        ],
+        'shippingProvider' => (object) [
+          'type' => 'link',
+          'autocompleteOnEmpty' => true
+        ],
+        'shippingCost' => (object) [
+          'type' => 'currency',
+          'layoutDetailDisabled' => true
+        ],
+        'amount' => (object) [
+          'type' => 'currency',
+          'readOnly' => true,
+          'utility' => true,
+          'customizationDisabled' => true
+        ],
+        'amountConverted' => (object) [
+          'readOnly' => true,
+          'customizationDisabled' => true,
+          'type' => 'currencyConverted',
+          'importDisabled' => true,
+          'customizationInlineEditDisabledDisabled' => true,
+          'disabled' => true
+        ],
+        'amountCurrency' => (object) [
+          'readOnly' => true,
+          'customizationDisabled' => true,
+          'type' => 'enum',
+          'view' => 'views/fields/currency-list',
+          'layoutDetailDisabled' => true,
+          'layoutListDisabled' => true,
+          'layoutMassUpdateDisabled' => true,
+          'layoutDefaultSidePanelDisabled' => true,
+          'customizationRequiredDisabled' => true,
+          'customizationOptionsDisabled' => true,
+          'customizationIsSortedDisabled' => true,
+          'customizationDisplayAsLabelDisabled' => true,
+          'customizationAuditedDisabled' => true,
+          'customizationReadOnlyDisabled' => true,
+          'customizationInlineEditDisabledDisabled' => true,
+          'customizationDefaultView' => 'views/admin/field-manager/fields/currency-default',
+          'customizationTooltipTextDisabled' => true,
+          'maxLength' => 3,
+          'utility' => true
+        ],
+        'weight' => (object) [
+          'type' => 'float',
+          'min' => 0,
+          'readOnly' => true
+        ],
+        'itemList' => (object) [
+          'type' => 'jsonArray',
+          'notStorable' => true,
+          'layoutAvailabilityList' => [],
+          'dynamicLogicVisibleDisabled' => true,
+          'dynamicLogicInvalidDisabled' => true,
+          'view' => 'sales:views/quote/fields/item-list',
+          'templatePlaceholderDisabled' => true,
+          'reportDisabled' => true,
+          'workflowDisabled' => true,
+          'duplicatorClassName' => 'Espo\\Modules\\Sales\\Classes\\FieldDuplicators\\Quote\\ItemList'
+        ],
+        'inventoryData' => (object) [
+          'type' => 'jsonObject',
+          'notStorable' => true,
+          'readOnly' => true,
+          'directAccessDisabled' => true,
+          'customizationDisabled' => true,
+          'utility' => true
+        ],
+        'inventoryStatus' => (object) [
+          'type' => 'enum',
+          'options' => [
+            0 => '',
+            1 => 'Available',
+            2 => 'On Hand',
+            3 => 'Not Available'
+          ],
+          'style' => (object) [
+            'Available' => 'success',
+            'On Hand' => 'warning',
+            'Not Available' => 'danger'
+          ],
+          'displayAsLabel' => true,
+          'notStorable' => true,
+          'readOnly' => true,
+          'layoutAvailabilityList' => [
+            0 => 'defaultSidePanel'
+          ],
+          'directAccessDisabled' => true,
+          'customizationDisabled' => true
+        ],
+        'isDone' => (object) [
+          'type' => 'bool',
+          'readOnly' => true,
+          'customizationReadOnlyDisabled' => true
+        ],
+        'isNotActual' => (object) [
+          'type' => 'bool',
+          'readOnly' => true,
+          'customizationReadOnlyDisabled' => true
+        ],
+        'isLocked' => (object) [
+          'type' => 'bool',
+          'readOnly' => true,
+          'customizationReadOnlyDisabled' => true
+        ],
+        'isHardLocked' => (object) [
+          'type' => 'bool',
+          'readOnly' => true,
+          'customizationReadOnlyDisabled' => true
+        ],
+        'products' => (object) [
+          'type' => 'linkMultiple',
+          'entity' => 'Product',
+          'notStorable' => true,
+          'customizationDisabled' => true,
+          'directAccessDisabled' => true,
+          'layoutAvailabilityList' => [
+            0 => 'filters'
+          ],
+          'view' => 'sales:views/quote/fields/products'
+        ],
+        'inventoryNumbers' => (object) [
+          'type' => 'linkMultiple',
+          'entity' => 'InventoryNumber',
+          'notStorable' => true,
+          'customizationDisabled' => true,
+          'directAccessDisabled' => true,
+          'layoutAvailabilityList' => [
+            0 => 'filters'
+          ],
+          'view' => 'sales:views/quote/fields/inventory-numbers'
+        ],
+        'createdAt' => (object) [
+          'type' => 'datetime',
+          'readOnly' => true
+        ],
+        'modifiedAt' => (object) [
+          'type' => 'datetime',
+          'readOnly' => true
+        ],
+        'createdBy' => (object) [
+          'type' => 'link',
+          'readOnly' => true
+        ],
+        'modifiedBy' => (object) [
+          'type' => 'link',
+          'readOnly' => true
+        ],
+        'assignedUser' => (object) [
+          'type' => 'link',
+          'view' => 'views/fields/assigned-user'
+        ],
+        'teams' => (object) [
+          'type' => 'linkMultiple'
+        ],
+        'shippingAddressStreet' => (object) [
+          'type' => 'text',
+          'maxLength' => 255,
+          'dbType' => 'varchar'
+        ],
+        'shippingAddressCity' => (object) [
+          'type' => 'varchar',
+          'maxLength' => 100,
+          'view' => 'views/fields/address-city',
+          'customizationOptionsDisabled' => true,
+          'customizationOptionsReferenceDisabled' => true,
+          'pattern' => '$noBadCharacters'
+        ],
+        'shippingAddressState' => (object) [
+          'type' => 'varchar',
+          'maxLength' => 100,
+          'view' => 'views/fields/address-state',
+          'customizationOptionsDisabled' => true,
+          'customizationOptionsReferenceDisabled' => true,
+          'pattern' => '$noBadCharacters'
+        ],
+        'shippingAddressCountry' => (object) [
+          'type' => 'varchar',
+          'maxLength' => 100,
+          'view' => 'views/fields/address-country',
+          'customizationOptionsDisabled' => true,
+          'customizationOptionsReferenceDisabled' => true,
+          'pattern' => '$noBadCharacters'
+        ],
+        'shippingAddressPostalCode' => (object) [
+          'type' => 'varchar',
+          'maxLength' => 40,
+          'pattern' => '$noBadCharacters'
+        ],
+        'shippingAddressMap' => (object) [
+          'type' => 'map',
+          'notStorable' => true,
+          'orderDisabled' => true,
+          'readOnly' => true,
+          'layoutListDisabled' => true,
+          'provider' => 'Google',
+          'height' => 300,
+          'exportDisabled' => true,
+          'importDisabled' => true
+        ],
+        'shippingCostCurrency' => (object) [
+          'layoutDetailDisabled' => true,
+          'type' => 'enum',
+          'view' => 'views/fields/currency-list',
+          'layoutListDisabled' => true,
+          'layoutMassUpdateDisabled' => true,
+          'layoutDefaultSidePanelDisabled' => true,
+          'customizationRequiredDisabled' => true,
+          'customizationOptionsDisabled' => true,
+          'customizationIsSortedDisabled' => true,
+          'customizationDisplayAsLabelDisabled' => true,
+          'customizationAuditedDisabled' => true,
+          'customizationReadOnlyDisabled' => true,
+          'customizationInlineEditDisabledDisabled' => true,
+          'customizationDefaultView' => 'views/admin/field-manager/fields/currency-default',
+          'customizationTooltipTextDisabled' => true,
+          'maxLength' => 3
+        ],
+        'shippingCostConverted' => (object) [
+          'layoutDetailDisabled' => true,
+          'type' => 'currencyConverted',
+          'readOnly' => true,
+          'importDisabled' => true,
+          'customizationInlineEditDisabledDisabled' => true
+        ]
+      ],
+      'links' => (object) [
+        'createdBy' => (object) [
+          'type' => 'belongsTo',
+          'entity' => 'User'
+        ],
+        'modifiedBy' => (object) [
+          'type' => 'belongsTo',
+          'entity' => 'User'
+        ],
+        'shippingProvider' => (object) [
+          'type' => 'belongsTo',
+          'entity' => 'ShippingProvider'
+        ],
+        'account' => (object) [
+          'type' => 'belongsTo',
+          'entity' => 'Account',
+          'foreign' => 'deliveryOrders'
+        ],
+        'salesOrder' => (object) [
+          'type' => 'belongsTo',
+          'entity' => 'SalesOrder',
+          'foreign' => 'deliveryOrders'
+        ],
+        'shippingContact' => (object) [
+          'type' => 'belongsTo',
+          'entity' => 'Contact',
+          'foreign' => 'deliveryOrdersShipping'
+        ],
+        'warehouse' => (object) [
+          'type' => 'belongsTo',
+          'entity' => 'Warehouse'
+        ],
+        'items' => (object) [
+          'type' => 'hasMany',
+          'entity' => 'DeliveryOrderItem',
+          'foreign' => 'deliveryOrder',
+          'layoutRelationshipsDisabled' => true
+        ],
+        'inventoryTransactions' => (object) [
+          'type' => 'hasChildren',
+          'entity' => 'InventoryTransaction',
+          'foreign' => 'parent'
+        ],
+        'assignedUser' => (object) [
+          'type' => 'belongsTo',
+          'entity' => 'User'
+        ],
+        'teams' => (object) [
+          'type' => 'hasMany',
+          'entity' => 'Team',
+          'relationName' => 'EntityTeam',
+          'layoutRelationshipsDisabled' => true
+        ]
+      ],
+      'collection' => (object) [
+        'orderBy' => 'createdAt',
+        'order' => 'desc',
+        'textFilterFields' => [
+          0 => 'name',
+          1 => 'number'
+        ],
+        'sortBy' => 'createdAt',
+        'asc' => false
+      ],
+      'indexes' => (object) [
+        'createdAt' => (object) [
+          'columns' => [
+            0 => 'createdAt'
+          ]
+        ]
+      ]
+    ],
+    'DeliveryOrderItem' => (object) [
+      'fields' => (object) [
+        'name' => (object) [
+          'type' => 'varchar',
+          'required' => true
+        ],
+        'deliveryOrder' => (object) [
+          'type' => 'link',
+          'readOnly' => true
+        ],
+        'account' => (object) [
+          'type' => 'link',
+          'readOnly' => true
+        ],
+        'deliveryOrderStatus' => (object) [
+          'type' => 'foreign',
+          'link' => 'deliveryOrder',
+          'field' => 'status',
+          'readOnly' => true,
+          'view' => 'views/fields/foreign-enum'
+        ],
+        'product' => (object) [
+          'type' => 'link',
+          'readOnly' => true,
+          'itemNotReadOnly' => true,
+          'fieldManagerAdditionalParamList' => [
+            0 => (object) [
+              'name' => 'copyFieldList',
+              'type' => 'multiEnum',
+              'view' => 'sales:views/admin/field-manager/quote-item/fields/product-copy-field-list',
+              'isSorted' => true
+            ]
+          ],
+          'customizationReadOnlyDisabled' => true
+        ],
+        'quantity' => (object) [
+          'type' => 'float',
+          'default' => 1.0,
+          'required' => true,
+          'readOnly' => true,
+          'itemNotReadOnly' => true,
+          'min' => 0.0,
+          'customizationReadOnlyDisabled' => true,
+          'validatorClassNameList' => [
+            0 => 'Espo\\Modules\\Sales\\Classes\\FieldValidators\\QuoteItem\\Quantity\\NotFractional'
+          ],
+          'view' => 'sales:views/quote-item/fields/quantity'
+        ],
+        'quantityInt' => (object) [
+          'type' => 'int',
+          'notStorable' => true,
+          'select' => (object) [
+            'select' => 'FLOOR:(quantity)'
+          ],
+          'readOnly' => true,
+          'customizationReadOnlyDisabled' => true
+        ],
+        'inventoryNumber' => (object) [
+          'type' => 'link',
+          'validatorClassNameList' => [
+            0 => 'Espo\\Modules\\Sales\\Classes\\FieldValidators\\DeliveryOrderItem\\InventoryNumber\\Valid'
+          ],
+          'view' => 'sales:views/delivery-order-item/fields/inventory-number',
+          'itemNotReadOnly' => true,
+          'readOnly' => true,
+          'customizationReadOnlyDisabled' => true
+        ],
+        'inventoryNumberType' => (object) [
+          'type' => 'foreign',
+          'link' => 'product',
+          'field' => 'inventoryNumberType',
+          'view' => 'views/fields/foreign-enum',
+          'readOnly' => true
+        ],
+        'isInventory' => (object) [
+          'type' => 'foreign',
+          'link' => 'product',
+          'field' => 'isInventory',
+          'view' => 'views/fields/foreign-bool',
+          'readOnly' => true
+        ],
+        'allowFractionalQuantity' => (object) [
+          'type' => 'foreign',
+          'link' => 'product',
+          'field' => 'allowFractionalQuantity',
+          'view' => 'views/fields/foreign-bool',
+          'readOnly' => true
+        ],
+        'productType' => (object) [
+          'type' => 'foreign',
+          'link' => 'product',
+          'field' => 'type',
+          'view' => 'views/fields/foreign-enum',
+          'readOnly' => true
+        ],
+        'unitWeight' => (object) [
+          'type' => 'float',
+          'min' => 0
+        ],
+        'weight' => (object) [
+          'type' => 'float',
+          'min' => 0,
+          'readOnly' => true
+        ],
+        'order' => (object) [
+          'type' => 'int',
+          'default' => 1,
+          'readOnly' => true
+        ],
+        'description' => (object) [
+          'type' => 'text'
+        ],
+        'createdAt' => (object) [
+          'type' => 'datetime',
+          'readOnly' => true
+        ],
+        'modifiedAt' => (object) [
+          'type' => 'datetime',
+          'readOnly' => true
+        ],
+        'createdBy' => (object) [
+          'type' => 'link',
+          'readOnly' => true
+        ],
+        'modifiedBy' => (object) [
+          'type' => 'link',
+          'readOnly' => true
+        ]
+      ],
+      'links' => (object) [
+        'createdBy' => (object) [
+          'type' => 'belongsTo',
+          'entity' => 'User'
+        ],
+        'modifiedBy' => (object) [
+          'type' => 'belongsTo',
+          'entity' => 'User'
+        ],
+        'product' => (object) [
+          'type' => 'belongsTo',
+          'entity' => 'Product'
+        ],
+        'deliveryOrder' => (object) [
+          'type' => 'belongsTo',
+          'entity' => 'DeliveryOrder',
+          'foreign' => 'items'
+        ],
+        'account' => (object) [
+          'type' => 'belongsTo',
+          'entity' => 'Account',
+          'foreign' => 'deliveryOrderItems'
+        ],
+        'inventoryNumber' => (object) [
+          'type' => 'belongsTo',
+          'entity' => 'InventoryNumber'
+        ]
+      ],
+      'collection' => (object) [
+        'sortBy' => 'createdAt',
+        'asc' => false,
+        'orderBy' => 'createdAt',
+        'order' => 'desc'
+      ]
+    ],
+    'InventoryAdjustment' => (object) [
+      'fields' => (object) [
+        'name' => (object) [
+          'type' => 'varchar',
+          'duplicateIgnore' => true
+        ],
+        'number' => (object) [
+          'type' => 'varchar',
+          'maxLength' => 100,
+          'index' => true,
+          'readOnly' => true,
+          'fieldManagerAdditionalParamList' => [
+            0 => (object) [
+              'name' => 'useAutoincrement',
+              'type' => 'bool'
+            ]
+          ],
+          'useAutoincrement' => true
+        ],
+        'numberA' => (object) [
+          'type' => 'number',
+          'prefix' => 'ADJ-',
+          'padLength' => 5,
+          'utility' => true
+        ],
+        'status' => (object) [
+          'type' => 'enum',
+          'options' => [
+            0 => 'Draft',
+            1 => 'Started',
+            2 => 'Completed',
+            3 => 'Canceled'
+          ],
+          'style' => (object) [
+            'Started' => 'warning',
+            'Completed' => 'success',
+            'Canceled' => 'info'
+          ],
+          'default' => 'Draft',
+          'index' => true,
+          'customizationOptionsReferenceDisabled' => true,
+          'customizationOptionsDisabled' => true,
+          'fieldManagerAdditionalParamList' => [
+            0 => (object) [
+              'name' => 'notActualOptions',
+              'view' => 'sales:views/admin/field-manager/fields/not-actual-options'
+            ]
+          ],
+          'notActualOptions' => [
+            0 => 'Completed',
+            1 => 'Canceled'
+          ]
+        ],
+        'reason' => (object) [
+          'type' => 'enum',
+          'options' => [
+            0 => '',
+            1 => 'Stocktaking',
+            2 => 'Write-off',
+            3 => 'Waste',
+            4 => 'Shrinkage',
+            5 => 'Damage',
+            6 => 'Internal'
+          ]
+        ],
+        'description' => (object) [
+          'type' => 'text'
+        ],
+        'warehouse' => (object) [
+          'type' => 'link',
+          'customizationRequiredDisabled' => true,
+          'readOnlyAfterCreate' => true,
+          'customizationReadOnlyAfterCreateDisabled' => true,
+          'validatorClassNameList' => [
+            0 => 'Espo\\Modules\\Sales\\Classes\\FieldValidators\\DeliveryOrder\\Warehouse\\Required'
+          ],
+          'autocompleteOnEmpty' => true
+        ],
+        'date' => (object) [
+          'type' => 'date'
+        ],
+        'amount' => (object) [
+          'type' => 'currency',
+          'readOnly' => true,
+          'utility' => true,
+          'customizationDisabled' => true
+        ],
+        'amountConverted' => (object) [
+          'readOnly' => true,
+          'customizationDisabled' => true,
+          'type' => 'currencyConverted',
+          'importDisabled' => true,
+          'customizationInlineEditDisabledDisabled' => true,
+          'disabled' => true
+        ],
+        'amountCurrency' => (object) [
+          'readOnly' => true,
+          'customizationDisabled' => true,
+          'type' => 'enum',
+          'view' => 'views/fields/currency-list',
+          'layoutDetailDisabled' => true,
+          'layoutListDisabled' => true,
+          'layoutMassUpdateDisabled' => true,
+          'layoutDefaultSidePanelDisabled' => true,
+          'customizationRequiredDisabled' => true,
+          'customizationOptionsDisabled' => true,
+          'customizationIsSortedDisabled' => true,
+          'customizationDisplayAsLabelDisabled' => true,
+          'customizationAuditedDisabled' => true,
+          'customizationReadOnlyDisabled' => true,
+          'customizationInlineEditDisabledDisabled' => true,
+          'customizationDefaultView' => 'views/admin/field-manager/fields/currency-default',
+          'customizationTooltipTextDisabled' => true,
+          'maxLength' => 3,
+          'utility' => true
+        ],
+        'itemList' => (object) [
+          'type' => 'jsonArray',
+          'notStorable' => true,
+          'layoutAvailabilityList' => [],
+          'dynamicLogicVisibleDisabled' => true,
+          'dynamicLogicInvalidDisabled' => true,
+          'view' => 'sales:views/quote/fields/item-list',
+          'templatePlaceholderDisabled' => true,
+          'reportDisabled' => true,
+          'workflowDisabled' => true,
+          'duplicatorClassName' => 'Espo\\Modules\\Sales\\Classes\\FieldDuplicators\\Quote\\ItemList'
+        ],
+        'isDone' => (object) [
+          'type' => 'bool',
+          'readOnly' => true,
+          'customizationReadOnlyDisabled' => true
+        ],
+        'doneAt' => (object) [
+          'type' => 'datetime',
+          'readOnly' => true,
+          'customizationReadOnlyDisabled' => true
+        ],
+        'products' => (object) [
+          'type' => 'linkMultiple',
+          'entity' => 'Product',
+          'notStorable' => true,
+          'customizationDisabled' => true,
+          'directAccessDisabled' => true,
+          'layoutAvailabilityList' => [
+            0 => 'filters'
+          ],
+          'view' => 'sales:views/quote/fields/products'
+        ],
+        'inventoryNumbers' => (object) [
+          'type' => 'linkMultiple',
+          'entity' => 'InventoryNumber',
+          'notStorable' => true,
+          'customizationDisabled' => true,
+          'directAccessDisabled' => true,
+          'layoutAvailabilityList' => [
+            0 => 'filters'
+          ],
+          'view' => 'sales:views/quote/fields/inventory-numbers'
+        ],
+        'createdAt' => (object) [
+          'type' => 'datetime',
+          'readOnly' => true
+        ],
+        'modifiedAt' => (object) [
+          'type' => 'datetime',
+          'readOnly' => true
+        ],
+        'createdBy' => (object) [
+          'type' => 'link',
+          'readOnly' => true
+        ],
+        'modifiedBy' => (object) [
+          'type' => 'link',
+          'readOnly' => true
+        ],
+        'assignedUser' => (object) [
+          'type' => 'link',
+          'view' => 'views/fields/assigned-user'
+        ],
+        'teams' => (object) [
+          'type' => 'linkMultiple'
+        ]
+      ],
+      'links' => (object) [
+        'createdBy' => (object) [
+          'type' => 'belongsTo',
+          'entity' => 'User'
+        ],
+        'modifiedBy' => (object) [
+          'type' => 'belongsTo',
+          'entity' => 'User'
+        ],
+        'warehouse' => (object) [
+          'type' => 'belongsTo',
+          'entity' => 'Warehouse'
+        ],
+        'items' => (object) [
+          'type' => 'hasMany',
+          'entity' => 'InventoryAdjustmentItem',
+          'foreign' => 'inventoryAdjustment',
+          'layoutRelationshipsDisabled' => true
+        ],
+        'inventoryTransactions' => (object) [
+          'type' => 'hasChildren',
+          'entity' => 'InventoryTransaction',
+          'foreign' => 'parent'
+        ],
+        'assignedUser' => (object) [
+          'type' => 'belongsTo',
+          'entity' => 'User'
+        ],
+        'teams' => (object) [
+          'type' => 'hasMany',
+          'entity' => 'Team',
+          'relationName' => 'EntityTeam',
+          'layoutRelationshipsDisabled' => true
+        ]
+      ],
+      'collection' => (object) [
+        'orderBy' => 'createdAt',
+        'order' => 'desc',
+        'textFilterFields' => [
+          0 => 'name',
+          1 => 'number'
+        ],
+        'sortBy' => 'createdAt',
+        'asc' => false
+      ],
+      'indexes' => (object) [
+        'createdAt' => (object) [
+          'columns' => [
+            0 => 'createdAt'
+          ]
+        ]
+      ]
+    ],
+    'InventoryAdjustmentItem' => (object) [
+      'fields' => (object) [
+        'name' => (object) [
+          'type' => 'varchar',
+          'required' => true,
+          'readOnly' => true
+        ],
+        'inventoryAdjustment' => (object) [
+          'type' => 'link',
+          'readOnly' => true
+        ],
+        'inventoryAdjustmentStatus' => (object) [
+          'type' => 'foreign',
+          'link' => 'inventoryAdjustment',
+          'field' => 'status',
+          'readOnly' => true,
+          'view' => 'views/fields/foreign-enum'
+        ],
+        'warehouse' => (object) [
+          'type' => 'link',
+          'entity' => 'Warehouse',
+          'notStorable' => true,
+          'readOnly' => true,
+          'layoutAvailabilityList' => [
+            0 => 'detail',
+            1 => 'detailSmall',
+            2 => 'list',
+            3 => 'listForProduct'
+          ]
+        ],
+        'product' => (object) [
+          'type' => 'link',
+          'readOnly' => true,
+          'required' => true,
+          'itemNotReadOnly' => true,
+          'fieldManagerAdditionalParamList' => [
+            0 => (object) [
+              'name' => 'copyFieldList',
+              'type' => 'multiEnum',
+              'view' => 'sales:views/admin/field-manager/quote-item/fields/product-copy-field-list',
+              'isSorted' => true
+            ]
+          ],
+          'customizationReadOnlyDisabled' => true,
+          'customizationRequiredDisabled' => true
+        ],
+        'allowFractionalQuantity' => (object) [
+          'type' => 'foreign',
+          'link' => 'product',
+          'field' => 'allowFractionalQuantity',
+          'view' => 'views/fields/foreign-bool',
+          'readOnly' => true
+        ],
+        'productType' => (object) [
+          'type' => 'foreign',
+          'link' => 'product',
+          'field' => 'type',
+          'view' => 'views/fields/foreign-enum',
+          'readOnly' => true
+        ],
+        'quantityOnHand' => (object) [
+          'type' => 'float',
+          'default' => NULL,
+          'readOnly' => true,
+          'notStorable' => true,
+          'itemNotReadOnly' => false,
+          'customizationReadOnlyDisabled' => true,
+          'customizationDisabled' => true,
+          'layoutAvailabilityList' => []
+        ],
+        'newQuantityOnHand' => (object) [
+          'type' => 'float',
+          'default' => NULL,
+          'required' => false,
+          'readOnly' => true,
+          'itemNotReadOnly' => true,
+          'customizationReadOnlyDisabled' => true,
+          'min' => 0.0,
+          'validatorClassNameList' => [
+            0 => 'Espo\\Modules\\Sales\\Classes\\FieldValidators\\QuoteItem\\Quantity\\NotFractional'
+          ],
+          'view' => 'sales:views/inventory-adjustment-item/fields/quantity-on-hand'
+        ],
+        'quantity' => (object) [
+          'type' => 'float',
+          'default' => NULL,
+          'required' => false,
+          'readOnly' => true,
+          'itemNotReadOnly' => false,
+          'customizationReadOnlyDisabled' => true,
+          'validatorClassNameList' => [
+            0 => 'Espo\\Modules\\Sales\\Classes\\FieldValidators\\QuoteItem\\Quantity\\NotFractional'
+          ],
+          'view' => 'sales:views/inventory-adjustment-item/fields/quantity'
+        ],
+        'quantityInt' => (object) [
+          'type' => 'int',
+          'notStorable' => true,
+          'select' => (object) [
+            'select' => 'FLOOR:(quantity)'
+          ],
+          'readOnly' => true,
+          'customizationReadOnlyDisabled' => true
+        ],
+        'inventoryNumber' => (object) [
+          'type' => 'link',
+          'validatorClassNameList' => [
+            0 => 'Espo\\Modules\\Sales\\Classes\\FieldValidators\\DeliveryOrderItem\\InventoryNumber\\Valid'
+          ],
+          'view' => 'sales:views/delivery-order-item/fields/inventory-number',
+          'itemNotReadOnly' => true,
+          'readOnly' => true,
+          'customizationReadOnlyDisabled' => true
+        ],
+        'inventoryNumberType' => (object) [
+          'type' => 'foreign',
+          'link' => 'product',
+          'field' => 'inventoryNumberType',
+          'view' => 'views/fields/foreign-enum',
+          'readOnly' => true
+        ],
+        'isInventory' => (object) [
+          'type' => 'foreign',
+          'link' => 'product',
+          'field' => 'isInventory',
+          'view' => 'views/fields/foreign-bool',
+          'readOnly' => true
+        ],
+        'order' => (object) [
+          'type' => 'int',
+          'default' => 1,
+          'readOnly' => true
+        ],
+        'description' => (object) [
+          'type' => 'text'
+        ],
+        'createdAt' => (object) [
+          'type' => 'datetime',
+          'readOnly' => true
+        ],
+        'modifiedAt' => (object) [
+          'type' => 'datetime',
+          'readOnly' => true
+        ],
+        'createdBy' => (object) [
+          'type' => 'link',
+          'readOnly' => true
+        ],
+        'modifiedBy' => (object) [
+          'type' => 'link',
+          'readOnly' => true
+        ]
+      ],
+      'links' => (object) [
+        'createdBy' => (object) [
+          'type' => 'belongsTo',
+          'entity' => 'User'
+        ],
+        'modifiedBy' => (object) [
+          'type' => 'belongsTo',
+          'entity' => 'User'
+        ],
+        'product' => (object) [
+          'type' => 'belongsTo',
+          'entity' => 'Product',
+          'foreign' => 'inventoryAdjustmentItems'
+        ],
+        'inventoryAdjustment' => (object) [
+          'type' => 'belongsTo',
+          'entity' => 'InventoryAdjustment',
+          'foreign' => 'items'
+        ],
+        'inventoryNumber' => (object) [
+          'type' => 'belongsTo',
+          'entity' => 'InventoryNumber'
+        ]
+      ],
+      'collection' => (object) [
+        'orderBy' => 'createdAt',
+        'order' => 'desc',
+        'sortBy' => 'createdAt',
+        'asc' => false
+      ]
+    ],
+    'InventoryNumber' => (object) [
+      'fields' => (object) [
+        'name' => (object) [
+          'type' => 'varchar',
+          'required' => true
+        ],
+        'number' => (object) [
+          'type' => 'autoincrement',
+          'dbType' => 'bigint'
+        ],
+        'type' => (object) [
+          'type' => 'enum',
+          'options' => [
+            0 => 'Batch',
+            1 => 'Serial'
+          ],
+          'readOnlyAfterCreate' => true,
+          'default' => 'Batch',
+          'maxLength' => 6,
+          'customizationOptionsDisabled' => true,
+          'validatorClassNameList' => [
+            0 => 'Espo\\Modules\\Sales\\Classes\\FieldValidators\\InventoryNumber\\Type\\Valid'
+          ],
+          'translation' => 'Product.options.inventoryNumberType'
+        ],
+        'product' => (object) [
+          'type' => 'link',
+          'required' => true,
+          'readOnlyAfterCreate' => true,
+          'customizationDisabled' => true,
+          'customizationRequiredDisabled' => true,
+          'validatorClassNameList' => [
+            0 => 'Espo\\Modules\\Sales\\Classes\\FieldValidators\\InventoryNumber\\Product\\NotTemplate'
+          ],
+          'view' => 'sales:views/fields/product-variant'
+        ],
+        'quantityOnHand' => (object) [
+          'type' => 'float',
+          'notStorable' => true,
+          'readOnly' => true,
+          'importDisabled' => true,
+          'customizationDisabled' => true,
+          'directAccessDisabled' => true,
+          'directUpdateDisabled' => true,
+          'foreignAccessDisabled' => true
+        ],
+        'quantityReserved' => (object) [
+          'type' => 'float',
+          'notStorable' => true,
+          'readOnly' => true,
+          'importDisabled' => true,
+          'customizationDisabled' => true,
+          'directAccessDisabled' => true,
+          'directUpdateDisabled' => true,
+          'foreignAccessDisabled' => true
+        ],
+        'quantityInTransit' => (object) [
+          'type' => 'float',
+          'notStorable' => true,
+          'readOnly' => true,
+          'importDisabled' => true,
+          'layoutAvailabilityList' => [
+            0 => 'detail'
+          ],
+          'customizationDisabled' => true,
+          'directAccessDisabled' => true,
+          'directUpdateDisabled' => true,
+          'foreignAccessDisabled' => true
+        ],
+        'quantityWarehouseOnHand' => (object) [
+          'type' => 'float',
+          'notStorable' => true,
+          'readOnly' => true,
+          'exportDisabled' => true,
+          'importDisabled' => true,
+          'customizationDisabled' => true,
+          'directAccessDisabled' => true,
+          'directUpdateDisabled' => true,
+          'foreignAccessDisabled' => true,
+          'layoutAvailabilityList' => [
+            0 => 'listForWarehouse'
+          ]
+        ],
+        'quantityWarehouseReserved' => (object) [
+          'type' => 'float',
+          'notStorable' => true,
+          'readOnly' => true,
+          'exportDisabled' => true,
+          'importDisabled' => true,
+          'customizationDisabled' => true,
+          'directAccessDisabled' => true,
+          'directUpdateDisabled' => true,
+          'foreignAccessDisabled' => true,
+          'layoutAvailabilityList' => [
+            0 => 'listForWarehouse'
+          ]
+        ],
+        'warehousesOnHand' => (object) [
+          'type' => 'linkMultiple',
+          'entity' => 'Warehouse',
+          'notStorable' => true,
+          'exportDisabled' => true,
+          'importDisabled' => true,
+          'customizationDisabled' => true,
+          'directAccessDisabled' => true,
+          'layoutAvailabilityList' => [
+            0 => 'filters'
+          ],
+          'view' => 'sales:views/inventory-number/fields/warehouses-on-hand'
+        ],
+        'incomingDate' => (object) [
+          'type' => 'date',
+          'default' => 'javascript: return this.dateTime.getToday();',
+          'index' => true
+        ],
+        'productionDate' => (object) [
+          'type' => 'date'
+        ],
+        'expirationDate' => (object) [
+          'type' => 'date',
+          'index' => true
+        ],
+        'orderFifo' => (object) [
+          'type' => 'int',
+          'notStorable' => true,
+          'utility' => true
+        ],
+        'orderFefo' => (object) [
+          'type' => 'int',
+          'notStorable' => true,
+          'utility' => true
+        ],
+        'orderLifo' => (object) [
+          'type' => 'int',
+          'notStorable' => true,
+          'utility' => true
+        ],
+        'deleteId' => (object) [
+          'type' => 'varchar',
+          'maxLength' => 17,
+          'readOnly' => true,
+          'notNull' => true,
+          'default' => '0',
+          'utility' => true,
+          'customizationDisabled' => true,
+          'exportDisabled' => true,
+          'importDisabled' => true
+        ],
+        'createdAt' => (object) [
+          'type' => 'datetime',
+          'readOnly' => true,
+          'index' => true
+        ],
+        'modifiedAt' => (object) [
+          'type' => 'datetime',
+          'readOnly' => true
+        ],
+        'createdBy' => (object) [
+          'type' => 'link',
+          'readOnly' => true
+        ],
+        'modifiedBy' => (object) [
+          'type' => 'link',
+          'readOnly' => true
+        ]
+      ],
+      'links' => (object) [
+        'product' => (object) [
+          'type' => 'belongsTo',
+          'entity' => 'Product',
+          'foreign' => 'inventoryNumbers'
+        ],
+        'inventoryTransactions' => (object) [
+          'type' => 'hasMany',
+          'entity' => 'InventoryTransaction',
+          'foreign' => 'inventoryNumbers'
+        ],
+        'createdBy' => (object) [
+          'type' => 'belongsTo',
+          'entity' => 'User'
+        ],
+        'modifiedBy' => (object) [
+          'type' => 'belongsTo',
+          'entity' => 'User'
+        ]
+      ],
+      'collection' => (object) [
+        'orderBy' => 'number',
+        'order' => 'desc',
+        'textFilterFields' => [
+          0 => 'name'
+        ],
+        'sortBy' => 'number',
+        'asc' => false
+      ],
+      'indexes' => (object) [
+        'productIdName' => (object) [
+          'columns' => [
+            0 => 'productId',
+            1 => 'name',
+            2 => 'deleteId'
+          ],
+          'unique' => true
+        ]
+      ]
+    ],
+    'InventoryTransaction' => (object) [
+      'fields' => (object) [
+        'name' => (object) [
+          'type' => 'varchar',
+          'readOnly' => true,
+          'notStorable' => true
+        ],
+        'type' => (object) [
+          'type' => 'enum',
+          'options' => [
+            0 => 'Transfer',
+            1 => 'Reserve',
+            2 => 'Soft Reserve'
+          ],
+          'default' => 'Transfer',
+          'maxLength' => 12,
+          'index' => true
+        ],
+        'number' => (object) [
+          'type' => 'autoincrement',
+          'dbType' => 'bigint'
+        ],
+        'parent' => (object) [
+          'type' => 'linkParent',
+          'readOnly' => true
+        ],
+        'quantity' => (object) [
+          'type' => 'float',
+          'dbType' => 'decimal',
+          'precision' => 13,
+          'scale' => 4,
+          'required' => true,
+          'customizationRequiredDisabled' => true,
+          'validatorClassNameList' => [
+            0 => 'Espo\\Modules\\Sales\\Classes\\FieldValidators\\InventoryTransaction\\Quantity\\Valid',
+            1 => 'Espo\\Modules\\Sales\\Classes\\FieldValidators\\InventoryTransaction\\Quantity\\NotFractional'
+          ],
+          'view' => 'sales:views/fields/quantity-with-plus'
+        ],
+        'product' => (object) [
+          'type' => 'link',
+          'required' => true,
+          'customizationRequiredDisabled' => true,
+          'validatorClassNameList' => [
+            0 => 'Espo\\Modules\\Sales\\Classes\\FieldValidators\\InventoryTransaction\\Product\\IsInventory'
+          ],
+          'view' => 'sales:views/fields/product-variant'
+        ],
+        'warehouse' => (object) [
+          'type' => 'link',
+          'validatorClassNameList' => [
+            0 => 'Espo\\Modules\\Sales\\Classes\\FieldValidators\\InventoryTransaction\\Warehouse\\Required'
+          ],
+          'autocompleteOnEmpty' => true
+        ],
+        'inventoryNumber' => (object) [
+          'type' => 'link',
+          'validatorClassNameList' => [
+            0 => 'Espo\\Modules\\Sales\\Classes\\FieldValidators\\InventoryTransaction\\InventoryNumber\\Required',
+            1 => 'Espo\\Modules\\Sales\\Classes\\FieldValidators\\InventoryTransaction\\InventoryNumber\\ShouldBeEmpty'
+          ]
+        ],
+        'createdAt' => (object) [
+          'type' => 'datetime',
+          'readOnly' => true,
+          'hasSeconds' => true
+        ],
+        'modifiedAt' => (object) [
+          'type' => 'datetime',
+          'readOnly' => true
+        ],
+        'createdBy' => (object) [
+          'type' => 'link',
+          'readOnly' => true
+        ],
+        'modifiedBy' => (object) [
+          'type' => 'link',
+          'readOnly' => true
+        ]
+      ],
+      'links' => (object) [
+        'parent' => (object) [
+          'type' => 'belongsToParent',
+          'entityList' => [
+            0 => 'DeliveryOrder',
+            1 => 'ReceiptOrder',
+            2 => 'TransferOrder',
+            3 => 'SalesOrder',
+            4 => 'InventoryAdjustment'
+          ]
+        ],
+        'product' => (object) [
+          'type' => 'belongsTo',
+          'entity' => 'Product',
+          'foreign' => 'inventoryTransactions'
+        ],
+        'warehouse' => (object) [
+          'type' => 'belongsTo',
+          'entity' => 'Warehouse',
+          'foreign' => 'inventoryTransactions'
+        ],
+        'inventoryNumber' => (object) [
+          'type' => 'belongsTo',
+          'entity' => 'InventoryNumber',
+          'foreign' => 'inventoryTransactions'
+        ],
+        'createdBy' => (object) [
+          'type' => 'belongsTo',
+          'entity' => 'User'
+        ],
+        'modifiedBy' => (object) [
+          'type' => 'belongsTo',
+          'entity' => 'User'
+        ]
+      ],
+      'collection' => (object) [
+        'orderBy' => 'number',
+        'order' => 'desc',
+        'textFilterFields' => [
+          0 => 'number'
+        ],
+        'sortBy' => 'number',
+        'asc' => false
+      ],
+      'indexes' => (object) [
+        'productIdType' => (object) [
+          'columns' => [
+            0 => 'productId',
+            1 => 'type'
+          ]
+        ],
+        'productIdParentId' => (object) [
+          'columns' => [
+            0 => 'productId',
+            1 => 'parentId'
+          ]
+        ],
+        'productIdWarehouseId' => (object) [
+          'columns' => [
+            0 => 'productId',
+            1 => 'warehouseId'
+          ]
+        ],
+        'productIdInventoryNumberId' => (object) [
+          'columns' => [
+            0 => 'productId',
+            1 => 'inventoryNumberId'
+          ]
+        ],
+        'inventoryNumberIdType' => (object) [
+          'columns' => [
+            0 => 'inventoryNumberId',
+            1 => 'type'
+          ]
+        ]
+      ]
+    ],
+    'Invoice' => (object) [
+      'fields' => (object) [
+        'name' => (object) [
+          'type' => 'varchar',
+          'duplicateIgnore' => true
+        ],
+        'number' => (object) [
+          'type' => 'varchar',
+          'maxLength' => 100,
+          'index' => true,
+          'readOnly' => true,
+          'fieldManagerAdditionalParamList' => [
+            0 => (object) [
+              'name' => 'useAutoincrement',
+              'type' => 'bool'
+            ]
+          ],
+          'useAutoincrement' => true
+        ],
+        'numberA' => (object) [
+          'type' => 'number',
+          'prefix' => 'I-',
+          'padLength' => 5,
+          'utility' => true
+        ],
+        'status' => (object) [
+          'type' => 'enum',
+          'options' => [
+            0 => 'Draft',
+            1 => 'Sent',
+            2 => 'Paid',
+            3 => 'Canceled',
+            4 => 'Rejected'
+          ],
+          'style' => (object) [
+            'Sent' => 'primary',
+            'Paid' => 'success',
+            'Rejected' => 'danger',
+            'Canceled' => 'info'
+          ],
+          'default' => 'Draft',
+          'fieldManagerAdditionalParamList' => [
+            0 => (object) [
+              'name' => 'notActualOptions',
+              'view' => 'sales:views/admin/field-manager/fields/not-actual-options'
+            ]
+          ],
+          'notActualOptions' => [
+            0 => 'Paid',
+            1 => 'Rejected',
+            2 => 'Canceled'
+          ],
+          'audited' => true
+        ],
+        'dateInvoiced' => (object) [
+          'type' => 'date',
+          'default' => 'javascript: return this.dateTime.getToday();',
+          'audited' => true
+        ],
+        'account' => (object) [
+          'type' => 'link',
+          'view' => 'sales:views/quote/fields/account'
+        ],
+        'opportunity' => (object) [
+          'type' => 'link',
+          'view' => 'sales:views/invoice/fields/opportunity'
+        ],
+        'quote' => (object) [
+          'type' => 'link',
+          'view' => 'sales:views/invoice/fields/quote'
+        ],
+        'salesOrder' => (object) [
+          'type' => 'link',
+          'view' => 'sales:views/invoice/fields/sales-order'
+        ],
+        'description' => (object) [
+          'type' => 'text'
+        ],
+        'billingAddress' => (object) [
+          'type' => 'address'
+        ],
+        'shippingAddress' => (object) [
+          'type' => 'address',
+          'view' => 'crm:views/account/fields/shipping-address'
+        ],
+        'billingContact' => (object) [
+          'type' => 'link',
+          'view' => 'sales:views/quote/fields/contact'
+        ],
+        'shippingContact' => (object) [
+          'type' => 'link',
+          'view' => 'sales:views/quote/fields/contact'
+        ],
+        'tax' => (object) [
+          'type' => 'link',
+          'view' => 'sales:views/quote/fields/tax',
+          'autocompleteOnEmpty' => true
+        ],
+        'taxRate' => (object) [
+          'type' => 'float',
+          'min' => 0,
+          'max' => 100
+        ],
+        'shippingProvider' => (object) [
+          'type' => 'link',
+          'autocompleteOnEmpty' => true
+        ],
+        'shippingCost' => (object) [
+          'type' => 'currency',
+          'layoutDetailDisabled' => true
+        ],
+        'taxAmount' => (object) [
+          'type' => 'currency',
+          'layoutDetailDisabled' => true,
+          'readOnly' => true
+        ],
+        'discountAmount' => (object) [
+          'type' => 'currency',
+          'layoutDetailDisabled' => true,
+          'readOnly' => true
+        ],
+        'amount' => (object) [
+          'type' => 'currency'
+        ],
+        'preDiscountedAmount' => (object) [
+          'type' => 'currency',
+          'layoutDetailDisabled' => true,
+          'readOnly' => true
+        ],
+        'grandTotalAmount' => (object) [
+          'type' => 'currency',
+          'layoutDetailDisabled' => true,
+          'readOnly' => true
+        ],
+        'weight' => (object) [
+          'type' => 'float',
+          'min' => 0,
+          'readOnly' => true
+        ],
+        'itemList' => (object) [
+          'type' => 'jsonArray',
+          'notStorable' => true,
+          'layoutAvailabilityList' => [],
+          'dynamicLogicVisibleDisabled' => true,
+          'dynamicLogicInvalidDisabled' => true,
+          'view' => 'sales:views/quote/fields/item-list',
+          'templatePlaceholderDisabled' => true,
+          'reportDisabled' => true,
+          'workflowDisabled' => true,
+          'duplicatorClassName' => 'Espo\\Modules\\Sales\\Classes\\FieldDuplicators\\Quote\\ItemList'
+        ],
+        'priceBook' => (object) [
+          'type' => 'link',
+          'autocompleteOnEmpty' => true
+        ],
+        'isDone' => (object) [
+          'type' => 'bool',
+          'readOnly' => true,
+          'customizationReadOnlyDisabled' => true
+        ],
+        'isNotActual' => (object) [
+          'type' => 'bool',
+          'readOnly' => true,
+          'customizationReadOnlyDisabled' => true
+        ],
+        'isLocked' => (object) [
+          'type' => 'bool',
+          'readOnly' => true,
+          'customizationReadOnlyDisabled' => true
+        ],
+        'products' => (object) [
+          'type' => 'linkMultiple',
+          'entity' => 'Product',
+          'notStorable' => true,
+          'customizationDisabled' => true,
+          'directAccessDisabled' => true,
+          'layoutAvailabilityList' => [
+            0 => 'filters'
+          ],
+          'view' => 'sales:views/quote/fields/products'
+        ],
+        'createdAt' => (object) [
+          'type' => 'datetime',
+          'readOnly' => true
+        ],
+        'modifiedAt' => (object) [
+          'type' => 'datetime',
+          'readOnly' => true
+        ],
+        'createdBy' => (object) [
+          'type' => 'link',
+          'readOnly' => true
+        ],
+        'modifiedBy' => (object) [
+          'type' => 'link',
+          'readOnly' => true
+        ],
+        'assignedUser' => (object) [
+          'type' => 'link',
+          'view' => 'views/fields/assigned-user'
+        ],
+        'teams' => (object) [
+          'type' => 'linkMultiple'
+        ],
+        'billingAddressStreet' => (object) [
+          'type' => 'text',
+          'maxLength' => 255,
+          'dbType' => 'varchar'
+        ],
+        'billingAddressCity' => (object) [
+          'type' => 'varchar',
+          'maxLength' => 100,
+          'view' => 'views/fields/address-city',
+          'customizationOptionsDisabled' => true,
+          'customizationOptionsReferenceDisabled' => true,
+          'pattern' => '$noBadCharacters'
+        ],
+        'billingAddressState' => (object) [
+          'type' => 'varchar',
+          'maxLength' => 100,
+          'view' => 'views/fields/address-state',
+          'customizationOptionsDisabled' => true,
+          'customizationOptionsReferenceDisabled' => true,
+          'pattern' => '$noBadCharacters'
+        ],
+        'billingAddressCountry' => (object) [
+          'type' => 'varchar',
+          'maxLength' => 100,
+          'view' => 'views/fields/address-country',
+          'customizationOptionsDisabled' => true,
+          'customizationOptionsReferenceDisabled' => true,
+          'pattern' => '$noBadCharacters'
+        ],
+        'billingAddressPostalCode' => (object) [
+          'type' => 'varchar',
+          'maxLength' => 40,
+          'pattern' => '$noBadCharacters'
+        ],
+        'billingAddressMap' => (object) [
+          'type' => 'map',
+          'notStorable' => true,
+          'orderDisabled' => true,
+          'readOnly' => true,
+          'layoutListDisabled' => true,
+          'provider' => 'Google',
+          'height' => 300,
+          'exportDisabled' => true,
+          'importDisabled' => true
+        ],
+        'shippingAddressStreet' => (object) [
+          'type' => 'text',
+          'maxLength' => 255,
+          'dbType' => 'varchar'
+        ],
+        'shippingAddressCity' => (object) [
+          'type' => 'varchar',
+          'maxLength' => 100,
+          'view' => 'views/fields/address-city',
+          'customizationOptionsDisabled' => true,
+          'customizationOptionsReferenceDisabled' => true,
+          'pattern' => '$noBadCharacters'
+        ],
+        'shippingAddressState' => (object) [
+          'type' => 'varchar',
+          'maxLength' => 100,
+          'view' => 'views/fields/address-state',
+          'customizationOptionsDisabled' => true,
+          'customizationOptionsReferenceDisabled' => true,
+          'pattern' => '$noBadCharacters'
+        ],
+        'shippingAddressCountry' => (object) [
+          'type' => 'varchar',
+          'maxLength' => 100,
+          'view' => 'views/fields/address-country',
+          'customizationOptionsDisabled' => true,
+          'customizationOptionsReferenceDisabled' => true,
+          'pattern' => '$noBadCharacters'
+        ],
+        'shippingAddressPostalCode' => (object) [
+          'type' => 'varchar',
+          'maxLength' => 40,
+          'pattern' => '$noBadCharacters'
+        ],
+        'shippingAddressMap' => (object) [
+          'type' => 'map',
+          'notStorable' => true,
+          'orderDisabled' => true,
+          'readOnly' => true,
+          'layoutListDisabled' => true,
+          'provider' => 'Google',
+          'height' => 300,
+          'exportDisabled' => true,
+          'importDisabled' => true
+        ],
+        'shippingCostCurrency' => (object) [
+          'layoutDetailDisabled' => true,
+          'type' => 'enum',
+          'view' => 'views/fields/currency-list',
+          'layoutListDisabled' => true,
+          'layoutMassUpdateDisabled' => true,
+          'layoutDefaultSidePanelDisabled' => true,
+          'customizationRequiredDisabled' => true,
+          'customizationOptionsDisabled' => true,
+          'customizationIsSortedDisabled' => true,
+          'customizationDisplayAsLabelDisabled' => true,
+          'customizationAuditedDisabled' => true,
+          'customizationReadOnlyDisabled' => true,
+          'customizationInlineEditDisabledDisabled' => true,
+          'customizationDefaultView' => 'views/admin/field-manager/fields/currency-default',
+          'customizationTooltipTextDisabled' => true,
+          'maxLength' => 3
+        ],
+        'shippingCostConverted' => (object) [
+          'layoutDetailDisabled' => true,
+          'type' => 'currencyConverted',
+          'readOnly' => true,
+          'importDisabled' => true,
+          'customizationInlineEditDisabledDisabled' => true
+        ],
+        'taxAmountCurrency' => (object) [
+          'layoutDetailDisabled' => true,
+          'readOnly' => true,
+          'type' => 'enum',
+          'view' => 'views/fields/currency-list',
+          'layoutListDisabled' => true,
+          'layoutMassUpdateDisabled' => true,
+          'layoutDefaultSidePanelDisabled' => true,
+          'customizationRequiredDisabled' => true,
+          'customizationOptionsDisabled' => true,
+          'customizationIsSortedDisabled' => true,
+          'customizationDisplayAsLabelDisabled' => true,
+          'customizationAuditedDisabled' => true,
+          'customizationReadOnlyDisabled' => true,
+          'customizationInlineEditDisabledDisabled' => true,
+          'customizationDefaultView' => 'views/admin/field-manager/fields/currency-default',
+          'customizationTooltipTextDisabled' => true,
+          'maxLength' => 3
+        ],
+        'taxAmountConverted' => (object) [
+          'layoutDetailDisabled' => true,
+          'readOnly' => true,
+          'type' => 'currencyConverted',
+          'importDisabled' => true,
+          'customizationInlineEditDisabledDisabled' => true
+        ],
+        'discountAmountCurrency' => (object) [
+          'layoutDetailDisabled' => true,
+          'readOnly' => true,
+          'type' => 'enum',
+          'view' => 'views/fields/currency-list',
+          'layoutListDisabled' => true,
+          'layoutMassUpdateDisabled' => true,
+          'layoutDefaultSidePanelDisabled' => true,
+          'customizationRequiredDisabled' => true,
+          'customizationOptionsDisabled' => true,
+          'customizationIsSortedDisabled' => true,
+          'customizationDisplayAsLabelDisabled' => true,
+          'customizationAuditedDisabled' => true,
+          'customizationReadOnlyDisabled' => true,
+          'customizationInlineEditDisabledDisabled' => true,
+          'customizationDefaultView' => 'views/admin/field-manager/fields/currency-default',
+          'customizationTooltipTextDisabled' => true,
+          'maxLength' => 3
+        ],
+        'discountAmountConverted' => (object) [
+          'layoutDetailDisabled' => true,
+          'readOnly' => true,
+          'type' => 'currencyConverted',
+          'importDisabled' => true,
+          'customizationInlineEditDisabledDisabled' => true
+        ],
+        'amountCurrency' => (object) [
+          'type' => 'enum',
+          'view' => 'views/fields/currency-list',
+          'layoutDetailDisabled' => true,
+          'layoutListDisabled' => true,
+          'layoutMassUpdateDisabled' => true,
+          'layoutDefaultSidePanelDisabled' => true,
+          'customizationRequiredDisabled' => true,
+          'customizationOptionsDisabled' => true,
+          'customizationIsSortedDisabled' => true,
+          'customizationDisplayAsLabelDisabled' => true,
+          'customizationAuditedDisabled' => true,
+          'customizationReadOnlyDisabled' => true,
+          'customizationInlineEditDisabledDisabled' => true,
+          'customizationDefaultView' => 'views/admin/field-manager/fields/currency-default',
+          'customizationTooltipTextDisabled' => true,
+          'maxLength' => 3
+        ],
+        'amountConverted' => (object) [
+          'type' => 'currencyConverted',
+          'readOnly' => true,
+          'importDisabled' => true,
+          'customizationInlineEditDisabledDisabled' => true
+        ],
+        'preDiscountedAmountCurrency' => (object) [
+          'layoutDetailDisabled' => true,
+          'readOnly' => true,
+          'type' => 'enum',
+          'view' => 'views/fields/currency-list',
+          'layoutListDisabled' => true,
+          'layoutMassUpdateDisabled' => true,
+          'layoutDefaultSidePanelDisabled' => true,
+          'customizationRequiredDisabled' => true,
+          'customizationOptionsDisabled' => true,
+          'customizationIsSortedDisabled' => true,
+          'customizationDisplayAsLabelDisabled' => true,
+          'customizationAuditedDisabled' => true,
+          'customizationReadOnlyDisabled' => true,
+          'customizationInlineEditDisabledDisabled' => true,
+          'customizationDefaultView' => 'views/admin/field-manager/fields/currency-default',
+          'customizationTooltipTextDisabled' => true,
+          'maxLength' => 3
+        ],
+        'preDiscountedAmountConverted' => (object) [
+          'layoutDetailDisabled' => true,
+          'readOnly' => true,
+          'type' => 'currencyConverted',
+          'importDisabled' => true,
+          'customizationInlineEditDisabledDisabled' => true
+        ],
+        'grandTotalAmountCurrency' => (object) [
+          'layoutDetailDisabled' => true,
+          'readOnly' => true,
+          'type' => 'enum',
+          'view' => 'views/fields/currency-list',
+          'layoutListDisabled' => true,
+          'layoutMassUpdateDisabled' => true,
+          'layoutDefaultSidePanelDisabled' => true,
+          'customizationRequiredDisabled' => true,
+          'customizationOptionsDisabled' => true,
+          'customizationIsSortedDisabled' => true,
+          'customizationDisplayAsLabelDisabled' => true,
+          'customizationAuditedDisabled' => true,
+          'customizationReadOnlyDisabled' => true,
+          'customizationInlineEditDisabledDisabled' => true,
+          'customizationDefaultView' => 'views/admin/field-manager/fields/currency-default',
+          'customizationTooltipTextDisabled' => true,
+          'maxLength' => 3
+        ],
+        'grandTotalAmountConverted' => (object) [
+          'layoutDetailDisabled' => true,
+          'readOnly' => true,
+          'type' => 'currencyConverted',
+          'importDisabled' => true,
+          'customizationInlineEditDisabledDisabled' => true
+        ]
+      ],
+      'links' => (object) [
+        'createdBy' => (object) [
+          'type' => 'belongsTo',
+          'entity' => 'User'
+        ],
+        'modifiedBy' => (object) [
+          'type' => 'belongsTo',
+          'entity' => 'User'
+        ],
+        'tax' => (object) [
+          'type' => 'belongsTo',
+          'entity' => 'Tax'
+        ],
+        'shippingProvider' => (object) [
+          'type' => 'belongsTo',
+          'entity' => 'ShippingProvider'
+        ],
+        'account' => (object) [
+          'type' => 'belongsTo',
+          'entity' => 'Account',
+          'foreign' => 'invoices'
+        ],
+        'opportunity' => (object) [
+          'type' => 'belongsTo',
+          'entity' => 'Opportunity',
+          'foreign' => 'invoices'
+        ],
+        'quote' => (object) [
+          'type' => 'belongsTo',
+          'entity' => 'Quote',
+          'foreign' => 'invoices'
+        ],
+        'salesOrder' => (object) [
+          'type' => 'belongsTo',
+          'entity' => 'SalesOrder',
+          'foreign' => 'invoices'
+        ],
+        'billingContact' => (object) [
+          'type' => 'belongsTo',
+          'entity' => 'Contact',
+          'foreign' => 'invoicesBilling'
+        ],
+        'shippingContact' => (object) [
+          'type' => 'belongsTo',
+          'entity' => 'Contact',
+          'foreign' => 'invoicesShipping'
+        ],
+        'items' => (object) [
+          'type' => 'hasMany',
+          'entity' => 'InvoiceItem',
+          'foreign' => 'invoice',
+          'layoutRelationshipsDisabled' => true
+        ],
+        'priceBook' => (object) [
+          'type' => 'belongsTo',
+          'entity' => 'PriceBook'
+        ],
+        'assignedUser' => (object) [
+          'type' => 'belongsTo',
+          'entity' => 'User'
+        ],
+        'teams' => (object) [
+          'type' => 'hasMany',
+          'entity' => 'Team',
+          'relationName' => 'EntityTeam',
+          'layoutRelationshipsDisabled' => true
+        ]
+      ],
+      'collection' => (object) [
+        'orderBy' => 'createdAt',
+        'order' => 'desc',
+        'textFilterFields' => [
+          0 => 'name',
+          1 => 'number'
+        ],
+        'sortBy' => 'createdAt',
+        'asc' => false
+      ],
+      'indexes' => (object) [
+        'createdAt' => (object) [
+          'columns' => [
+            0 => 'createdAt'
+          ]
+        ]
+      ]
+    ],
+    'InvoiceItem' => (object) [
+      'fields' => (object) [
+        'name' => (object) [
+          'type' => 'varchar',
+          'required' => true
+        ],
+        'invoice' => (object) [
+          'type' => 'link',
+          'readOnly' => true
+        ],
+        'account' => (object) [
+          'type' => 'link',
+          'readOnly' => true
+        ],
+        'invoiceStatus' => (object) [
+          'type' => 'foreign',
+          'link' => 'invoice',
+          'field' => 'status',
+          'readOnly' => true,
+          'view' => 'views/fields/foreign-enum'
+        ],
+        'product' => (object) [
+          'type' => 'link',
+          'readOnly' => true,
+          'itemNotReadOnly' => true,
+          'fieldManagerAdditionalParamList' => [
+            0 => (object) [
+              'name' => 'copyFieldList',
+              'type' => 'multiEnum',
+              'view' => 'sales:views/admin/field-manager/quote-item/fields/product-copy-field-list',
+              'isSorted' => true
+            ]
+          ]
+        ],
+        'allowFractionalQuantity' => (object) [
+          'type' => 'foreign',
+          'link' => 'product',
+          'field' => 'allowFractionalQuantity',
+          'view' => 'views/fields/foreign-bool',
+          'readOnly' => true
+        ],
+        'productType' => (object) [
+          'type' => 'foreign',
+          'link' => 'product',
+          'field' => 'type',
+          'view' => 'views/fields/foreign-enum',
+          'readOnly' => true
+        ],
+        'quantity' => (object) [
+          'type' => 'float',
+          'default' => 1.0,
+          'required' => true,
+          'readOnly' => true,
+          'itemNotReadOnly' => true,
+          'validatorClassNameList' => [
+            0 => 'Espo\\Modules\\Sales\\Classes\\FieldValidators\\QuoteItem\\Quantity\\NotFractional'
+          ],
+          'view' => 'sales:views/quote-item/fields/quantity'
+        ],
+        'quantityInt' => (object) [
+          'type' => 'int',
+          'notStorable' => true,
+          'select' => (object) [
+            'select' => 'FLOOR:(quantity)'
+          ],
+          'readOnly' => true
+        ],
+        'listPrice' => (object) [
+          'type' => 'currency',
+          'readOnly' => true,
+          'itemNotReadOnly' => true
+        ],
+        'unitPrice' => (object) [
+          'type' => 'currency',
+          'required' => true,
+          'readOnly' => true,
+          'itemNotReadOnly' => true
+        ],
+        'discount' => (object) [
+          'type' => 'float',
+          'readOnly' => true,
+          'view' => 'sales:views/quote-item/fields/discount-rate',
+          'itemNotReadOnly' => true
+        ],
+        'amount' => (object) [
+          'type' => 'currency',
+          'readOnly' => true
+        ],
+        'unitWeight' => (object) [
+          'type' => 'float',
+          'min' => 0
+        ],
+        'weight' => (object) [
+          'type' => 'float',
+          'min' => 0,
+          'readOnly' => true
+        ],
+        'taxRate' => (object) [
+          'type' => 'float',
+          'min' => 0,
+          'max' => 100,
+          'default' => 0,
+          'readOnly' => true,
+          'view' => 'sales:views/quote-item/fields/tax-rate',
+          'itemNotReadOnly' => true,
+          'customizationReadOnlyDisabled' => true,
+          'customizationDefaultDisabled' => true,
+          'customizationMinDisabled' => true,
+          'customizationMaxDisabled' => true
+        ],
+        'order' => (object) [
+          'type' => 'int',
+          'default' => 1,
+          'readOnly' => true
+        ],
+        'description' => (object) [
+          'type' => 'text'
+        ],
+        'createdAt' => (object) [
+          'type' => 'datetime',
+          'readOnly' => true
+        ],
+        'modifiedAt' => (object) [
+          'type' => 'datetime',
+          'readOnly' => true
+        ],
+        'createdBy' => (object) [
+          'type' => 'link',
+          'readOnly' => true
+        ],
+        'modifiedBy' => (object) [
+          'type' => 'link',
+          'readOnly' => true
+        ],
+        'listPriceCurrency' => (object) [
+          'readOnly' => true,
+          'type' => 'enum',
+          'view' => 'views/fields/currency-list',
+          'layoutDetailDisabled' => true,
+          'layoutListDisabled' => true,
+          'layoutMassUpdateDisabled' => true,
+          'layoutDefaultSidePanelDisabled' => true,
+          'customizationRequiredDisabled' => true,
+          'customizationOptionsDisabled' => true,
+          'customizationIsSortedDisabled' => true,
+          'customizationDisplayAsLabelDisabled' => true,
+          'customizationAuditedDisabled' => true,
+          'customizationReadOnlyDisabled' => true,
+          'customizationInlineEditDisabledDisabled' => true,
+          'customizationDefaultView' => 'views/admin/field-manager/fields/currency-default',
+          'customizationTooltipTextDisabled' => true,
+          'maxLength' => 3
+        ],
+        'listPriceConverted' => (object) [
+          'readOnly' => true,
+          'type' => 'currencyConverted',
+          'importDisabled' => true,
+          'customizationInlineEditDisabledDisabled' => true
+        ],
+        'unitPriceCurrency' => (object) [
+          'readOnly' => true,
+          'type' => 'enum',
+          'view' => 'views/fields/currency-list',
+          'layoutDetailDisabled' => true,
+          'layoutListDisabled' => true,
+          'layoutMassUpdateDisabled' => true,
+          'layoutDefaultSidePanelDisabled' => true,
+          'customizationRequiredDisabled' => true,
+          'customizationOptionsDisabled' => true,
+          'customizationIsSortedDisabled' => true,
+          'customizationDisplayAsLabelDisabled' => true,
+          'customizationAuditedDisabled' => true,
+          'customizationReadOnlyDisabled' => true,
+          'customizationInlineEditDisabledDisabled' => true,
+          'customizationDefaultView' => 'views/admin/field-manager/fields/currency-default',
+          'customizationTooltipTextDisabled' => true,
+          'maxLength' => 3
+        ],
+        'unitPriceConverted' => (object) [
+          'readOnly' => true,
+          'type' => 'currencyConverted',
+          'importDisabled' => true,
+          'customizationInlineEditDisabledDisabled' => true
+        ],
+        'amountCurrency' => (object) [
+          'readOnly' => true,
+          'type' => 'enum',
+          'view' => 'views/fields/currency-list',
+          'layoutDetailDisabled' => true,
+          'layoutListDisabled' => true,
+          'layoutMassUpdateDisabled' => true,
+          'layoutDefaultSidePanelDisabled' => true,
+          'customizationRequiredDisabled' => true,
+          'customizationOptionsDisabled' => true,
+          'customizationIsSortedDisabled' => true,
+          'customizationDisplayAsLabelDisabled' => true,
+          'customizationAuditedDisabled' => true,
+          'customizationReadOnlyDisabled' => true,
+          'customizationInlineEditDisabledDisabled' => true,
+          'customizationDefaultView' => 'views/admin/field-manager/fields/currency-default',
+          'customizationTooltipTextDisabled' => true,
+          'maxLength' => 3
+        ],
+        'amountConverted' => (object) [
+          'readOnly' => true,
+          'type' => 'currencyConverted',
+          'importDisabled' => true,
+          'customizationInlineEditDisabledDisabled' => true
+        ]
+      ],
+      'links' => (object) [
+        'createdBy' => (object) [
+          'type' => 'belongsTo',
+          'entity' => 'User'
+        ],
+        'modifiedBy' => (object) [
+          'type' => 'belongsTo',
+          'entity' => 'User'
+        ],
+        'product' => (object) [
+          'type' => 'belongsTo',
+          'entity' => 'Product'
+        ],
+        'invoice' => (object) [
+          'type' => 'belongsTo',
+          'entity' => 'Invoice',
+          'foreign' => 'items'
+        ],
+        'account' => (object) [
+          'type' => 'belongsTo',
+          'entity' => 'Account',
+          'foreign' => 'invoiceItems'
+        ]
+      ],
+      'collection' => (object) [
+        'orderBy' => 'createdAt',
+        'order' => 'desc',
+        'sortBy' => 'createdAt',
+        'asc' => false
+      ]
+    ],
+    'OpportunityItem' => (object) [
+      'fields' => (object) [
+        'name' => (object) [
+          'type' => 'varchar',
+          'required' => true
+        ],
+        'opportunity' => (object) [
+          'type' => 'link',
+          'readOnly' => true
+        ],
+        'product' => (object) [
+          'type' => 'link',
+          'readOnly' => true,
+          'itemNotReadOnly' => true,
+          'fieldManagerAdditionalParamList' => [
+            0 => (object) [
+              'name' => 'copyFieldList',
+              'type' => 'multiEnum',
+              'view' => 'sales:views/admin/field-manager/quote-item/fields/product-copy-field-list',
+              'isSorted' => true
+            ]
+          ]
+        ],
+        'allowFractionalQuantity' => (object) [
+          'type' => 'foreign',
+          'link' => 'product',
+          'field' => 'allowFractionalQuantity',
+          'view' => 'views/fields/foreign-bool',
+          'readOnly' => true
+        ],
+        'productType' => (object) [
+          'type' => 'foreign',
+          'link' => 'product',
+          'field' => 'type',
+          'view' => 'views/fields/foreign-enum',
+          'readOnly' => true
+        ],
+        'quantity' => (object) [
+          'type' => 'float',
+          'default' => 1.0,
+          'required' => true,
+          'readOnly' => true,
+          'itemNotReadOnly' => true,
+          'validatorClassNameList' => [
+            0 => 'Espo\\Modules\\Sales\\Classes\\FieldValidators\\QuoteItem\\Quantity\\NotFractional'
+          ],
+          'view' => 'sales:views/quote-item/fields/quantity'
+        ],
+        'quantityInt' => (object) [
+          'type' => 'int',
+          'notStorable' => true,
+          'select' => (object) [
+            'select' => 'FLOOR:(quantity)'
+          ],
+          'readOnly' => true
+        ],
+        'listPrice' => (object) [
+          'type' => 'currency',
+          'readOnly' => true,
+          'itemNotReadOnly' => true
+        ],
+        'unitPrice' => (object) [
+          'type' => 'currency',
+          'required' => true,
+          'readOnly' => true,
+          'itemNotReadOnly' => true
+        ],
+        'discount' => (object) [
+          'type' => 'float',
+          'readOnly' => true,
+          'view' => 'sales:views/quote-item/fields/discount-rate',
+          'itemNotReadOnly' => true
+        ],
+        'amount' => (object) [
+          'type' => 'currency',
+          'readOnly' => true
+        ],
+        'order' => (object) [
+          'type' => 'int',
+          'default' => 1,
+          'readOnly' => true
+        ],
+        'opportunityStage' => (object) [
+          'type' => 'foreign',
+          'link' => 'opportunity',
+          'field' => 'stage',
+          'readOnly' => true,
+          'view' => 'views/fields/foreign-enum'
+        ],
+        'description' => (object) [
+          'type' => 'text'
+        ],
+        'createdAt' => (object) [
+          'type' => 'datetime',
+          'readOnly' => true
+        ],
+        'modifiedAt' => (object) [
+          'type' => 'datetime',
+          'readOnly' => true
+        ],
+        'createdBy' => (object) [
+          'type' => 'link',
+          'readOnly' => true
+        ],
+        'modifiedBy' => (object) [
+          'type' => 'link',
+          'readOnly' => true
+        ],
+        'listPriceCurrency' => (object) [
+          'readOnly' => true,
+          'type' => 'enum',
+          'view' => 'views/fields/currency-list',
+          'layoutDetailDisabled' => true,
+          'layoutListDisabled' => true,
+          'layoutMassUpdateDisabled' => true,
+          'layoutDefaultSidePanelDisabled' => true,
+          'customizationRequiredDisabled' => true,
+          'customizationOptionsDisabled' => true,
+          'customizationIsSortedDisabled' => true,
+          'customizationDisplayAsLabelDisabled' => true,
+          'customizationAuditedDisabled' => true,
+          'customizationReadOnlyDisabled' => true,
+          'customizationInlineEditDisabledDisabled' => true,
+          'customizationDefaultView' => 'views/admin/field-manager/fields/currency-default',
+          'customizationTooltipTextDisabled' => true,
+          'maxLength' => 3
+        ],
+        'listPriceConverted' => (object) [
+          'readOnly' => true,
+          'type' => 'currencyConverted',
+          'importDisabled' => true,
+          'customizationInlineEditDisabledDisabled' => true
+        ],
+        'unitPriceCurrency' => (object) [
+          'readOnly' => true,
+          'type' => 'enum',
+          'view' => 'views/fields/currency-list',
+          'layoutDetailDisabled' => true,
+          'layoutListDisabled' => true,
+          'layoutMassUpdateDisabled' => true,
+          'layoutDefaultSidePanelDisabled' => true,
+          'customizationRequiredDisabled' => true,
+          'customizationOptionsDisabled' => true,
+          'customizationIsSortedDisabled' => true,
+          'customizationDisplayAsLabelDisabled' => true,
+          'customizationAuditedDisabled' => true,
+          'customizationReadOnlyDisabled' => true,
+          'customizationInlineEditDisabledDisabled' => true,
+          'customizationDefaultView' => 'views/admin/field-manager/fields/currency-default',
+          'customizationTooltipTextDisabled' => true,
+          'maxLength' => 3
+        ],
+        'unitPriceConverted' => (object) [
+          'readOnly' => true,
+          'type' => 'currencyConverted',
+          'importDisabled' => true,
+          'customizationInlineEditDisabledDisabled' => true
+        ],
+        'amountCurrency' => (object) [
+          'readOnly' => true,
+          'type' => 'enum',
+          'view' => 'views/fields/currency-list',
+          'layoutDetailDisabled' => true,
+          'layoutListDisabled' => true,
+          'layoutMassUpdateDisabled' => true,
+          'layoutDefaultSidePanelDisabled' => true,
+          'customizationRequiredDisabled' => true,
+          'customizationOptionsDisabled' => true,
+          'customizationIsSortedDisabled' => true,
+          'customizationDisplayAsLabelDisabled' => true,
+          'customizationAuditedDisabled' => true,
+          'customizationReadOnlyDisabled' => true,
+          'customizationInlineEditDisabledDisabled' => true,
+          'customizationDefaultView' => 'views/admin/field-manager/fields/currency-default',
+          'customizationTooltipTextDisabled' => true,
+          'maxLength' => 3
+        ],
+        'amountConverted' => (object) [
+          'readOnly' => true,
+          'type' => 'currencyConverted',
+          'importDisabled' => true,
+          'customizationInlineEditDisabledDisabled' => true
+        ]
+      ],
+      'links' => (object) [
+        'createdBy' => (object) [
+          'type' => 'belongsTo',
+          'entity' => 'User'
+        ],
+        'modifiedBy' => (object) [
+          'type' => 'belongsTo',
+          'entity' => 'User'
+        ],
+        'product' => (object) [
+          'type' => 'belongsTo',
+          'entity' => 'Product'
+        ],
+        'opportunity' => (object) [
+          'type' => 'belongsTo',
+          'entity' => 'Opportunity',
+          'foreign' => 'items'
+        ]
+      ],
+      'collection' => (object) [
+        'orderBy' => 'createdAt',
+        'order' => 'desc',
+        'sortBy' => 'createdAt',
+        'asc' => false
+      ]
+    ],
+    'PriceBook' => (object) [
+      'fields' => (object) [
+        'name' => (object) [
+          'type' => 'varchar',
+          'required' => true
+        ],
+        'description' => (object) [
+          'type' => 'text'
+        ],
+        'status' => (object) [
+          'type' => 'enum',
+          'options' => [
+            0 => 'Active',
+            1 => 'Inactive'
+          ],
+          'default' => 'Active',
+          'style' => (object) [
+            'Inactive' => 'info'
+          ],
+          'maxLength' => 8,
+          'audited' => true
+        ],
+        'parentPriceBook' => (object) [
+          'type' => 'link'
+        ],
+        'createdAt' => (object) [
+          'type' => 'datetime',
+          'readOnly' => true
+        ],
+        'modifiedAt' => (object) [
+          'type' => 'datetime',
+          'readOnly' => true
+        ],
+        'createdBy' => (object) [
+          'type' => 'link',
+          'readOnly' => true
+        ],
+        'modifiedBy' => (object) [
+          'type' => 'link',
+          'readOnly' => true
+        ],
+        'assignedUser' => (object) [
+          'type' => 'link',
+          'view' => 'views/fields/assigned-user'
+        ],
+        'teams' => (object) [
+          'type' => 'linkMultiple'
+        ]
+      ],
+      'links' => (object) [
+        'accounts' => (object) [
+          'type' => 'hasMany',
+          'foreign' => 'priceBook',
+          'entity' => 'Account'
+        ],
+        'prices' => (object) [
+          'type' => 'hasMany',
+          'foreign' => 'priceBook',
+          'entity' => 'ProductPrice'
+        ],
+        'rules' => (object) [
+          'type' => 'hasMany',
+          'foreign' => 'priceBook',
+          'entity' => 'PriceRule'
+        ],
+        'parentPriceBook' => (object) [
+          'type' => 'belongsTo',
+          'foreign' => 'childPriceBooks',
+          'entity' => 'PriceBook'
+        ],
+        'childPriceBooks' => (object) [
+          'type' => 'hasMany',
+          'foreign' => 'parentPriceBook',
+          'entity' => 'PriceBook'
+        ],
+        'createdBy' => (object) [
+          'type' => 'belongsTo',
+          'entity' => 'User'
+        ],
+        'modifiedBy' => (object) [
+          'type' => 'belongsTo',
+          'entity' => 'User'
+        ],
+        'assignedUser' => (object) [
+          'type' => 'belongsTo',
+          'entity' => 'User'
+        ],
+        'teams' => (object) [
+          'type' => 'hasMany',
+          'entity' => 'Team',
+          'relationName' => 'entityTeam',
+          'layoutRelationshipsDisabled' => true
+        ]
+      ],
+      'collection' => (object) [
+        'orderBy' => 'name',
+        'order' => 'asc',
+        'sortBy' => 'name',
+        'asc' => true
+      ]
+    ],
+    'PriceRule' => (object) [
+      'fields' => (object) [
+        'name' => (object) [
+          'type' => 'varchar',
+          'readOnly' => true,
+          'notStorable' => true
+        ],
+        'description' => (object) [
+          'type' => 'text'
+        ],
+        'priceBook' => (object) [
+          'type' => 'link',
+          'required' => true,
+          'view' => 'sales:views/product-price/fields/link-with-status',
+          'autocompleteOnEmpty' => true
+        ],
+        'target' => (object) [
+          'type' => 'enum',
+          'options' => [
+            0 => 'Product Category',
+            1 => 'All',
+            2 => 'Conditional'
+          ],
+          'maxLength' => 16,
+          'view' => 'sales:views/price-rule/fields/target'
+        ],
+        'status' => (object) [
+          'type' => 'enum',
+          'options' => [
+            0 => 'Active',
+            1 => 'Inactive'
+          ],
+          'maxLength' => 8,
+          'default' => 'Active',
+          'style' => (object) [
+            'Inactive' => 'info'
+          ]
+        ],
+        'productCategory' => (object) [
+          'type' => 'link',
+          'view' => 'views/fields/link-category-tree',
+          'validatorClassNameList' => [
+            0 => 'Espo\\Modules\\Sales\\Classes\\FieldValidators\\PriceRule\\ProductCategory\\Required'
+          ]
+        ],
+        'conditionSelect' => (object) [
+          'type' => 'enum',
+          'notStorable' => true,
+          'view' => 'sales:views/price-rule/fields/condition-select',
+          'directAccessDisabled' => true,
+          'directUpdateDisabled' => true
+        ],
+        'condition' => (object) [
+          'type' => 'link',
+          'validatorClassNameList' => [
+            0 => 'Espo\\Modules\\Sales\\Classes\\FieldValidators\\PriceRule\\Condition\\Required',
+            1 => 'Espo\\Modules\\Sales\\Classes\\FieldValidators\\PriceRule\\Condition\\Exists'
+          ]
+        ],
+        'minQuantity' => (object) [
+          'type' => 'float',
+          'minValue' => 0.0,
+          'tooltip' => true
+        ],
+        'basedOn' => (object) [
+          'type' => 'enum',
+          'options' => [
+            0 => 'Unit',
+            1 => 'Price Book',
+            2 => 'Supplier',
+            3 => 'Cost'
+          ],
+          'default' => 'Unit',
+          'maxLength' => 10,
+          'tooltip' => true
+        ],
+        'supplier' => (object) [
+          'type' => 'link',
+          'validatorClassNameList' => [
+            0 => 'Espo\\Modules\\Sales\\Classes\\FieldValidators\\PriceRule\\Supplier\\Required'
+          ]
+        ],
+        'price' => (object) [
+          'type' => 'base',
+          'notStorable' => true,
+          'notSortable' => true,
+          'directAccessDisabled' => true,
+          'view' => 'sales:views/price-rule/fields/price'
+        ],
+        'percentage' => (object) [
+          'type' => 'base',
+          'notStorable' => true,
+          'tooltip' => true,
+          'directAccessDisabled' => true,
+          'view' => 'sales:views/price-rule/fields/percentage'
+        ],
+        'discount' => (object) [
+          'type' => 'float',
+          'max' => 100.0,
+          'tooltip' => true,
+          'view' => 'sales:views/price-rule/fields/discount'
+        ],
+        'roundingMethod' => (object) [
+          'type' => 'enum',
+          'options' => [
+            0 => 'Half Up',
+            1 => 'Up',
+            2 => 'Down'
+          ],
+          'default' => 'Half Up',
+          'maxLength' => 7
+        ],
+        'roundingFactor' => (object) [
+          'type' => 'float',
+          'min' => 0.001,
+          'required' => true,
+          'tooltip' => true,
+          'default' => 0.01
+        ],
+        'surcharge' => (object) [
+          'type' => 'float',
+          'tooltip' => true
+        ],
+        'currency' => (object) [
+          'type' => 'enum',
+          'maxLength' => 3,
+          'validatorClassNameList' => [
+            0 => 'Espo\\Modules\\Sales\\Classes\\FieldValidators\\PriceRule\\Currency\\Valid'
+          ],
+          'view' => 'sales:views/price-rule/fields/currency',
+          'tooltip' => true
+        ],
+        'dateStart' => (object) [
+          'type' => 'date'
+        ],
+        'dateEnd' => (object) [
+          'type' => 'date'
+        ],
+        'createdAt' => (object) [
+          'type' => 'datetime',
+          'readOnly' => true
+        ],
+        'modifiedAt' => (object) [
+          'type' => 'datetime',
+          'readOnly' => true
+        ],
+        'createdBy' => (object) [
+          'type' => 'link',
+          'readOnly' => true
+        ],
+        'modifiedBy' => (object) [
+          'type' => 'link',
+          'readOnly' => true
+        ]
+      ],
+      'links' => (object) [
+        'productCategory' => (object) [
+          'type' => 'belongsTo',
+          'entity' => 'ProductCategory'
+        ],
+        'condition' => (object) [
+          'type' => 'belongsTo',
+          'entity' => 'PriceRuleCondition'
+        ],
+        'priceBook' => (object) [
+          'type' => 'belongsTo',
+          'foreign' => 'priceRules',
+          'entity' => 'PriceBook'
+        ],
+        'supplier' => (object) [
+          'type' => 'belongsTo',
+          'entity' => 'Supplier'
+        ],
+        'createdBy' => (object) [
+          'type' => 'belongsTo',
+          'entity' => 'User'
+        ],
+        'modifiedBy' => (object) [
+          'type' => 'belongsTo',
+          'entity' => 'User'
+        ]
+      ],
+      'collection' => (object) [
+        'orderBy' => 'createdAt',
+        'order' => 'desc',
+        'textFilterFields' => [],
+        'sortBy' => 'createdAt',
+        'asc' => false
+      ]
+    ],
+    'PriceRuleCondition' => (object) [
+      'fields' => (object) [
+        'name' => (object) [
+          'type' => 'varchar',
+          'required' => true
+        ],
+        'description' => (object) [
+          'type' => 'text'
+        ],
+        'condition' => (object) [
+          'type' => 'text',
+          'required' => true,
+          'view' => 'sales:views/price-rule-condition/fields/condition',
+          'tooltip' => true,
+          'audited' => true
+        ],
+        'createdAt' => (object) [
+          'type' => 'datetime',
+          'readOnly' => true
+        ],
+        'modifiedAt' => (object) [
+          'type' => 'datetime',
+          'readOnly' => true
+        ],
+        'createdBy' => (object) [
+          'type' => 'link',
+          'readOnly' => true
+        ],
+        'modifiedBy' => (object) [
+          'type' => 'link',
+          'readOnly' => true
+        ]
+      ],
+      'links' => (object) [
+        'createdBy' => (object) [
+          'type' => 'belongsTo',
+          'entity' => 'User'
+        ],
+        'modifiedBy' => (object) [
+          'type' => 'belongsTo',
+          'entity' => 'User'
+        ]
+      ],
+      'collection' => (object) [
+        'orderBy' => 'createdAt',
+        'order' => 'desc',
+        'textFilterFields' => [],
+        'sortBy' => 'createdAt',
+        'asc' => false
+      ]
+    ],
+    'Product' => (object) [
+      'fields' => (object) [
+        'name' => (object) [
+          'type' => 'varchar',
+          'required' => true,
+          'maxLength' => 255,
+          'audited' => true
+        ],
+        'status' => (object) [
+          'type' => 'enum',
+          'options' => [
+            0 => 'Available',
+            1 => 'Unavailable'
+          ],
+          'default' => 'Available',
+          'style' => (object) [
+            'Unavailable' => 'info'
+          ],
+          'maxLength' => 32,
+          'audited' => true
+        ],
+        'type' => (object) [
+          'type' => 'enum',
+          'options' => [
+            0 => 'Regular',
+            1 => 'Template',
+            2 => 'Variant'
+          ],
+          'default' => 'Regular',
+          'maxLength' => 8,
+          'readOnlyAfterCreate' => true,
+          'customizationDisabled' => true,
+          'validatorClassNameList' => [
+            0 => 'Espo\\Modules\\Sales\\Classes\\FieldValidators\\Product\\Type\\Valid'
+          ]
+        ],
+        'brand' => (object) [
+          'type' => 'link',
+          'audited' => true
+        ],
+        'partNumber' => (object) [
+          'type' => 'varchar',
+          'maxLength' => 50,
+          'audited' => true
+        ],
+        'url' => (object) [
+          'type' => 'url'
+        ],
+        'category' => (object) [
+          'type' => 'link',
+          'view' => 'views/fields/link-category-tree'
+        ],
+        'description' => (object) [
+          'type' => 'text'
+        ],
+        'pricingType' => (object) [
+          'type' => 'enum',
+          'options' => [
+            0 => 'Same as List',
+            1 => 'Fixed',
+            2 => 'Discount from List',
+            3 => 'Markup over Cost',
+            4 => 'Profit Margin'
+          ],
+          'default' => 'Same as List'
+        ],
+        'pricingFactor' => (object) [
+          'type' => 'float',
+          'default' => 0
+        ],
+        'costPrice' => (object) [
+          'type' => 'currency',
+          'audited' => true
+        ],
+        'listPrice' => (object) [
+          'type' => 'currency',
+          'audited' => true
+        ],
+        'unitPrice' => (object) [
+          'type' => 'currency',
+          'defaultAttributes' => (object) [
+            'unitPrice' => NULL,
+            'unitPriceCurrency' => NULL
+          ],
+          'audited' => true
+        ],
+        'suppliers' => (object) [
+          'type' => 'linkMultiple',
+          'notStorable' => true,
+          'noLoad' => true,
+          'importDisabled' => true,
+          'exportDisabled' => true,
+          'directAccessDisabled' => true,
+          'layoutAvailabilityList' => [
+            0 => 'filters'
+          ],
+          'customizationDisabled' => true,
+          'view' => 'sales:views/product/fields/suppliers',
+          'entity' => 'Supplier'
+        ],
+        'unitPriceSelect' => (object) [
+          'type' => 'currency',
+          'notStorable' => true,
+          'layoutAvailabilityList' => [
+            0 => 'listForAdd'
+          ],
+          'exportDisabled' => true,
+          'directAccessDisabled' => true,
+          'customizationDisabled' => true
+        ],
+        'unitPriceSelectConverted' => (object) [
+          'notStorable' => true,
+          'exportDisabled' => true,
+          'directAccessDisabled' => true,
+          'customizationDisabled' => true,
+          'type' => 'currencyConverted',
+          'readOnly' => true,
+          'importDisabled' => true,
+          'customizationInlineEditDisabledDisabled' => true,
+          'disabled' => true
+        ],
+        'allowFractionalQuantity' => (object) [
+          'type' => 'bool',
+          'default' => false,
+          'validatorClassNameList' => [
+            0 => 'Espo\\Modules\\Sales\\Classes\\FieldValidators\\Product\\AllowFractionalQuantity\\Valid'
+          ]
+        ],
+        'quantity' => (object) [
+          'type' => 'float',
+          'notStorable' => true,
+          'readOnly' => true,
+          'importDisabled' => true,
+          'customizationDisabled' => true,
+          'directAccessDisabled' => true,
+          'directUpdateDisabled' => true,
+          'foreignAccessDisabled' => true
+        ],
+        'quantityReserved' => (object) [
+          'type' => 'float',
+          'notStorable' => true,
+          'readOnly' => true,
+          'importDisabled' => true,
+          'customizationDisabled' => true,
+          'directAccessDisabled' => true,
+          'directUpdateDisabled' => true,
+          'foreignAccessDisabled' => true
+        ],
+        'quantitySoftReserved' => (object) [
+          'type' => 'float',
+          'notStorable' => true,
+          'readOnly' => true,
+          'importDisabled' => true,
+          'customizationDisabled' => true,
+          'directAccessDisabled' => true,
+          'directUpdateDisabled' => true,
+          'foreignAccessDisabled' => true
+        ],
+        'quantityOnHand' => (object) [
+          'type' => 'float',
+          'notStorable' => true,
+          'readOnly' => true,
+          'importDisabled' => true,
+          'customizationDisabled' => true,
+          'directAccessDisabled' => true,
+          'directUpdateDisabled' => true,
+          'foreignAccessDisabled' => true
+        ],
+        'quantityInTransit' => (object) [
+          'type' => 'float',
+          'notStorable' => true,
+          'readOnly' => true,
+          'importDisabled' => true,
+          'layoutAvailabilityList' => [
+            0 => 'detail'
+          ],
+          'customizationDisabled' => true,
+          'directAccessDisabled' => true,
+          'directUpdateDisabled' => true,
+          'foreignAccessDisabled' => true
+        ],
+        'quantityOnOrder' => (object) [
+          'type' => 'float',
+          'notStorable' => true,
+          'readOnly' => true,
+          'importDisabled' => true,
+          'layoutAvailabilityList' => [
+            0 => 'detail'
+          ],
+          'customizationDisabled' => true,
+          'directAccessDisabled' => true,
+          'directUpdateDisabled' => true,
+          'foreignAccessDisabled' => true
+        ],
+        'quantityWarehouseOnHand' => (object) [
+          'type' => 'float',
+          'notStorable' => true,
+          'readOnly' => true,
+          'importDisabled' => true,
+          'exportDisabled' => true,
+          'customizationDisabled' => true,
+          'directAccessDisabled' => true,
+          'directUpdateDisabled' => true,
+          'foreignAccessDisabled' => true,
+          'layoutAvailabilityList' => [
+            0 => 'listForWarehouse'
+          ]
+        ],
+        'quantityWarehouseReserved' => (object) [
+          'type' => 'float',
+          'notStorable' => true,
+          'readOnly' => true,
+          'importDisabled' => true,
+          'exportDisabled' => true,
+          'customizationDisabled' => true,
+          'directAccessDisabled' => true,
+          'directUpdateDisabled' => true,
+          'foreignAccessDisabled' => true,
+          'layoutAvailabilityList' => [
+            0 => 'listForWarehouse'
+          ]
+        ],
+        'warehousesOnHand' => (object) [
+          'type' => 'linkMultiple',
+          'entity' => 'Warehouse',
+          'exportDisabled' => true,
+          'importDisabled' => true,
+          'notStorable' => true,
+          'customizationDisabled' => true,
+          'directAccessDisabled' => true,
+          'layoutAvailabilityList' => [
+            0 => 'filters'
+          ],
+          'view' => 'sales:views/product/fields/warehouses-on-hand'
+        ],
+        'createdAt' => (object) [
+          'type' => 'datetime',
+          'readOnly' => true
+        ],
+        'modifiedAt' => (object) [
+          'type' => 'datetime',
+          'readOnly' => true
+        ],
+        'createdBy' => (object) [
+          'type' => 'link',
+          'readOnly' => true
+        ],
+        'modifiedBy' => (object) [
+          'type' => 'link',
+          'readOnly' => true
+        ],
+        'teams' => (object) [
+          'type' => 'linkMultiple'
+        ],
+        'weight' => (object) [
+          'type' => 'float',
+          'min' => 0,
+          'audited' => true
+        ],
+        'isTaxFree' => (object) [
+          'type' => 'bool',
+          'audited' => true
+        ],
+        'isInventory' => (object) [
+          'type' => 'bool',
+          'default' => true,
+          'audited' => true
+        ],
+        'inventoryNumberType' => (object) [
+          'type' => 'enum',
+          'options' => [
+            0 => '',
+            1 => 'Batch',
+            2 => 'Serial'
+          ],
+          'customizationOptionsDisabled' => true,
+          'maxLength' => 6,
+          'audited' => true
+        ],
+        'expirationDays' => (object) [
+          'type' => 'int',
+          'min' => 0,
+          'audited' => true
+        ],
+        'removalStrategy' => (object) [
+          'type' => 'enum',
+          'maxLength' => 4,
+          'options' => [
+            0 => 'FIFO',
+            1 => 'FEFO',
+            2 => 'LIFO'
+          ],
+          'default' => 'FIFO',
+          'customizationOptionsDisabled' => true,
+          'audited' => true
+        ],
+        'template' => (object) [
+          'type' => 'link',
+          'readOnly' => true,
+          'customizationDisabled' => true
+        ],
+        'attributes' => (object) [
+          'type' => 'jsonArray',
+          'notStorable' => true,
+          'customizationDisabled' => true,
+          'layoutAvailabilityList' => [
+            0 => 'detail'
+          ],
+          'validatorClassNameList' => [
+            0 => 'Espo\\Modules\\Sales\\Classes\\FieldValidators\\Product\\Attributes\\Required',
+            1 => 'Espo\\Modules\\Sales\\Classes\\FieldValidators\\Product\\Attributes\\Valid',
+            2 => 'Espo\\Modules\\Sales\\Classes\\FieldValidators\\Product\\Attributes\\MaxNumber'
+          ],
+          'view' => 'sales:views/product/fields/attributes'
+        ],
+        'variantAttributeOptions' => (object) [
+          'type' => 'linkMultiple',
+          'customizationDisabled' => true,
+          'readOnly' => true,
+          'layoutAvailabilityList' => [
+            0 => 'detail',
+            1 => 'listVariant'
+          ],
+          'orderBy' => 'attributeOrder',
+          'view' => 'sales:views/product/fields/variant-attribute-options',
+          'columns' => (object) [
+            'color' => 'color'
+          ]
+        ],
+        'variantOrder' => (object) [
+          'type' => 'int',
+          'readOnly' => true,
+          'customizationDisabled' => true,
+          'layoutAvailabilityList' => []
+        ],
+        'costPriceCurrency' => (object) [
+          'type' => 'enum',
+          'view' => 'views/fields/currency-list',
+          'layoutDetailDisabled' => true,
+          'layoutListDisabled' => true,
+          'layoutMassUpdateDisabled' => true,
+          'layoutDefaultSidePanelDisabled' => true,
+          'customizationRequiredDisabled' => true,
+          'customizationOptionsDisabled' => true,
+          'customizationIsSortedDisabled' => true,
+          'customizationDisplayAsLabelDisabled' => true,
+          'customizationAuditedDisabled' => true,
+          'customizationReadOnlyDisabled' => true,
+          'customizationInlineEditDisabledDisabled' => true,
+          'customizationDefaultView' => 'views/admin/field-manager/fields/currency-default',
+          'customizationTooltipTextDisabled' => true,
+          'maxLength' => 3
+        ],
+        'costPriceConverted' => (object) [
+          'type' => 'currencyConverted',
+          'readOnly' => true,
+          'importDisabled' => true,
+          'customizationInlineEditDisabledDisabled' => true
+        ],
+        'listPriceCurrency' => (object) [
+          'type' => 'enum',
+          'view' => 'views/fields/currency-list',
+          'layoutDetailDisabled' => true,
+          'layoutListDisabled' => true,
+          'layoutMassUpdateDisabled' => true,
+          'layoutDefaultSidePanelDisabled' => true,
+          'customizationRequiredDisabled' => true,
+          'customizationOptionsDisabled' => true,
+          'customizationIsSortedDisabled' => true,
+          'customizationDisplayAsLabelDisabled' => true,
+          'customizationAuditedDisabled' => true,
+          'customizationReadOnlyDisabled' => true,
+          'customizationInlineEditDisabledDisabled' => true,
+          'customizationDefaultView' => 'views/admin/field-manager/fields/currency-default',
+          'customizationTooltipTextDisabled' => true,
+          'maxLength' => 3
+        ],
+        'listPriceConverted' => (object) [
+          'type' => 'currencyConverted',
+          'readOnly' => true,
+          'importDisabled' => true,
+          'customizationInlineEditDisabledDisabled' => true
+        ],
+        'unitPriceCurrency' => (object) [
+          'type' => 'enum',
+          'view' => 'views/fields/currency-list',
+          'layoutDetailDisabled' => true,
+          'layoutListDisabled' => true,
+          'layoutMassUpdateDisabled' => true,
+          'layoutDefaultSidePanelDisabled' => true,
+          'customizationRequiredDisabled' => true,
+          'customizationOptionsDisabled' => true,
+          'customizationIsSortedDisabled' => true,
+          'customizationDisplayAsLabelDisabled' => true,
+          'customizationAuditedDisabled' => true,
+          'customizationReadOnlyDisabled' => true,
+          'customizationInlineEditDisabledDisabled' => true,
+          'customizationDefaultView' => 'views/admin/field-manager/fields/currency-default',
+          'customizationTooltipTextDisabled' => true,
+          'maxLength' => 3
+        ],
+        'unitPriceConverted' => (object) [
+          'type' => 'currencyConverted',
+          'readOnly' => true,
+          'importDisabled' => true,
+          'customizationInlineEditDisabledDisabled' => true
+        ],
+        'unitPriceSelectCurrency' => (object) [
+          'notStorable' => true,
+          'exportDisabled' => true,
+          'directAccessDisabled' => true,
+          'customizationDisabled' => true,
+          'type' => 'enum',
+          'view' => 'views/fields/currency-list',
+          'layoutDetailDisabled' => true,
+          'layoutListDisabled' => true,
+          'layoutMassUpdateDisabled' => true,
+          'layoutDefaultSidePanelDisabled' => true,
+          'customizationRequiredDisabled' => true,
+          'customizationOptionsDisabled' => true,
+          'customizationIsSortedDisabled' => true,
+          'customizationDisplayAsLabelDisabled' => true,
+          'customizationAuditedDisabled' => true,
+          'customizationReadOnlyDisabled' => true,
+          'customizationInlineEditDisabledDisabled' => true,
+          'customizationDefaultView' => 'views/admin/field-manager/fields/currency-default',
+          'customizationTooltipTextDisabled' => true,
+          'maxLength' => 3
+        ]
+      ],
+      'links' => (object) [
+        'prices' => (object) [
+          'type' => 'hasMany',
+          'entity' => 'ProductPrice',
+          'foreign' => 'product'
+        ],
+        'supplierPrices' => (object) [
+          'type' => 'hasMany',
+          'entity' => 'SupplierProductPrice',
+          'foreign' => 'product'
+        ],
+        'createdBy' => (object) [
+          'type' => 'belongsTo',
+          'entity' => 'User'
+        ],
+        'modifiedBy' => (object) [
+          'type' => 'belongsTo',
+          'entity' => 'User'
+        ],
+        'brand' => (object) [
+          'type' => 'belongsTo',
+          'entity' => 'ProductBrand'
+        ],
+        'category' => (object) [
+          'type' => 'belongsTo',
+          'foreign' => 'products',
+          'entity' => 'ProductCategory'
+        ],
+        'inventoryTransactions' => (object) [
+          'type' => 'hasMany',
+          'foreign' => 'product',
+          'entity' => 'InventoryTransaction'
+        ],
+        'inventoryNumbers' => (object) [
+          'type' => 'hasMany',
+          'foreign' => 'product',
+          'entity' => 'InventoryNumber'
+        ],
+        'attributes' => (object) [
+          'type' => 'hasMany',
+          'entity' => 'ProductAttribute',
+          'foreign' => 'products',
+          'layoutRelationshipsDisabled' => true
+        ],
+        'attributeOptions' => (object) [
+          'type' => 'hasMany',
+          'entity' => 'ProductAttributeOption',
+          'foreign' => 'products',
+          'layoutRelationshipsDisabled' => true
+        ],
+        'variantAttributeOptions' => (object) [
+          'type' => 'hasMany',
+          'entity' => 'ProductAttributeOption',
+          'foreign' => 'productVariants',
+          'relationName' => 'productVariantProductAttributeOption',
+          'layoutRelationshipsDisabled' => true
+        ],
+        'template' => (object) [
+          'type' => 'belongsTo',
+          'entity' => 'Product',
+          'foreign' => 'variants'
+        ],
+        'variants' => (object) [
+          'type' => 'hasMany',
+          'entity' => 'Product',
+          'foreign' => 'template'
+        ],
+        'inventoryAdjustmentItems' => (object) [
+          'type' => 'hasMany',
+          'entity' => 'InventoryAdjustmentItem',
+          'foreign' => 'product'
+        ],
+        'teams' => (object) [
+          'type' => 'hasMany',
+          'entity' => 'Team',
+          'relationName' => 'EntityTeam',
+          'layoutRelationshipsDisabled' => true
+        ]
+      ],
+      'collection' => (object) [
+        'orderBy' => 'name',
+        'order' => 'asc',
+        'sortBy' => 'name',
+        'asc' => true
+      ],
+      'indexes' => (object) [
+        'typeName' => (object) [
+          'columns' => [
+            0 => 'type',
+            1 => 'name'
+          ]
+        ],
+        'typeStatus' => (object) [
+          'columns' => [
+            0 => 'type',
+            1 => 'status'
+          ]
+        ],
+        'typeCategoryId' => (object) [
+          'columns' => [
+            0 => 'type',
+            1 => 'categoryId'
+          ]
+        ]
+      ]
+    ],
+    'ProductAttribute' => (object) [
+      'fields' => (object) [
+        'name' => (object) [
+          'type' => 'varchar',
+          'required' => true,
+          'maxLength' => 64
+        ],
+        'order' => (object) [
+          'type' => 'int',
+          'readOnly' => true
+        ],
+        'description' => (object) [
+          'type' => 'text'
+        ]
+      ],
+      'links' => (object) [
+        'options' => (object) [
+          'type' => 'hasMany',
+          'foreign' => 'attribute',
+          'entity' => 'ProductAttributeOption'
+        ],
+        'products' => (object) [
+          'type' => 'hasMany',
+          'foreign' => 'attributes',
+          'entity' => 'Product'
+        ]
+      ],
+      'collection' => (object) [
+        'orderBy' => 'order',
+        'order' => 'asc',
+        'sortBy' => 'order',
+        'asc' => true
+      ]
+    ],
+    'ProductAttributeOption' => (object) [
+      'fields' => (object) [
+        'name' => (object) [
+          'type' => 'varchar',
+          'required' => true,
+          'maxLength' => 64
+        ],
+        'order' => (object) [
+          'type' => 'int',
+          'readOnly' => true
+        ],
+        'color' => (object) [
+          'type' => 'varchar',
+          'maxLength' => 7,
+          'view' => 'views/fields/colorpicker'
+        ],
+        'attribute' => (object) [
+          'type' => 'link',
+          'readOnlyAfterCreate' => true
+        ],
+        'attributeOrder' => (object) [
+          'type' => 'foreign',
+          'link' => 'attribute',
+          'field' => 'order'
+        ]
+      ],
+      'links' => (object) [
+        'attribute' => (object) [
+          'type' => 'belongsTo',
+          'foreign' => 'options',
+          'entity' => 'ProductAttribute'
+        ],
+        'products' => (object) [
+          'type' => 'hasMany',
+          'foreign' => 'attributeOptions',
+          'entity' => 'Product'
+        ],
+        'productVariants' => (object) [
+          'type' => 'hasMany',
+          'foreign' => 'variantAttributeOptions',
+          'entity' => 'Product',
+          'relationName' => 'ProductVariantProductAttributeOption'
+        ]
+      ],
+      'collection' => (object) [
+        'orderBy' => 'name',
+        'order' => 'asc',
+        'sortBy' => 'name',
+        'asc' => true
+      ],
+      'indexes' => (object) [
+        'attributeIdOrder' => (object) [
+          'columns' => [
+            0 => 'attributeId',
+            1 => 'order'
+          ]
+        ]
+      ]
+    ],
+    'ProductBrand' => (object) [
+      'fields' => (object) [
+        'name' => (object) [
+          'type' => 'varchar',
+          'required' => true,
+          'trim' => true
+        ],
+        'website' => (object) [
+          'type' => 'url'
+        ],
+        'description' => (object) [
+          'type' => 'text'
+        ],
+        'createdAt' => (object) [
+          'type' => 'datetime',
+          'readOnly' => true
+        ],
+        'modifiedAt' => (object) [
+          'type' => 'datetime',
+          'readOnly' => true
+        ],
+        'createdBy' => (object) [
+          'type' => 'link',
+          'readOnly' => true
+        ],
+        'modifiedBy' => (object) [
+          'type' => 'link',
+          'readOnly' => true
+        ],
+        'teams' => (object) [
+          'type' => 'linkMultiple'
+        ]
+      ],
+      'links' => (object) [
+        'createdBy' => (object) [
+          'type' => 'belongsTo',
+          'entity' => 'User'
+        ],
+        'modifiedBy' => (object) [
+          'type' => 'belongsTo',
+          'entity' => 'User'
+        ],
+        'teams' => (object) [
+          'type' => 'hasMany',
+          'entity' => 'Team',
+          'relationName' => 'entityTeam',
+          'layoutRelationshipsDisabled' => true
+        ],
+        'products' => (object) [
+          'type' => 'hasMany',
+          'foreign' => 'brand',
+          'entity' => 'Product'
+        ]
+      ],
+      'collection' => (object) [
+        'orderBy' => 'name',
+        'sortBy' => 'name'
+      ]
+    ],
+    'ProductCategory' => (object) [
+      'fields' => (object) [
+        'name' => (object) [
+          'type' => 'varchar',
+          'required' => true,
+          'trim' => true
+        ],
+        'order' => (object) [
+          'type' => 'int',
+          'minValue' => 1,
+          'required' => true
+        ],
+        'description' => (object) [
+          'type' => 'text'
+        ],
+        'createdAt' => (object) [
+          'type' => 'datetime',
+          'readOnly' => true
+        ],
+        'modifiedAt' => (object) [
+          'type' => 'datetime',
+          'readOnly' => true
+        ],
+        'createdBy' => (object) [
+          'type' => 'link',
+          'readOnly' => true
+        ],
+        'modifiedBy' => (object) [
+          'type' => 'link',
+          'readOnly' => true
+        ],
+        'teams' => (object) [
+          'type' => 'linkMultiple'
+        ],
+        'parent' => (object) [
+          'type' => 'link'
+        ],
+        'childList' => (object) [
+          'type' => 'jsonArray',
+          'notStorable' => true,
+          'layoutDetailDisabled' => true,
+          'layoutListDisabled' => true
+        ]
+      ],
+      'links' => (object) [
+        'createdBy' => (object) [
+          'type' => 'belongsTo',
+          'entity' => 'User'
+        ],
+        'modifiedBy' => (object) [
+          'type' => 'belongsTo',
+          'entity' => 'User'
+        ],
+        'teams' => (object) [
+          'type' => 'hasMany',
+          'entity' => 'Team',
+          'relationName' => 'entityTeam',
+          'layoutRelationshipsDisabled' => true
+        ],
+        'parent' => (object) [
+          'type' => 'belongsTo',
+          'foreign' => 'children',
+          'entity' => 'ProductCategory'
+        ],
+        'children' => (object) [
+          'type' => 'hasMany',
+          'foreign' => 'parent',
+          'entity' => 'ProductCategory'
+        ],
+        'products' => (object) [
+          'type' => 'hasMany',
+          'foreign' => 'category',
+          'entity' => 'Product'
+        ]
+      ],
+      'collection' => (object) [
+        'orderBy' => 'parent',
+        'sortBy' => 'parent'
+      ],
+      'additionalTables' => (object) [
+        'ProductCategoryPath' => (object) [
+          'fields' => (object) [
+            'id' => (object) [
+              'type' => 'id',
+              'dbType' => 'int',
+              'len' => '11',
+              'autoincrement' => true,
+              'unique' => true
+            ],
+            'ascendorId' => (object) [
+              'type' => 'varchar',
+              'len' => '100',
+              'index' => true
+            ],
+            'descendorId' => (object) [
+              'type' => 'varchar',
+              'len' => '24',
+              'index' => true
+            ]
+          ]
+        ]
+      ]
+    ],
+    'ProductPrice' => (object) [
+      'fields' => (object) [
+        'name' => (object) [
+          'type' => 'varchar',
+          'readOnly' => true,
+          'notStorable' => true
+        ],
+        'description' => (object) [
+          'type' => 'text'
+        ],
+        'priceBook' => (object) [
+          'type' => 'link',
+          'required' => true,
+          'view' => 'sales:views/product-price/fields/link-with-status',
+          'autocompleteOnEmpty' => true
+        ],
+        'status' => (object) [
+          'type' => 'enum',
+          'options' => [
+            0 => 'Active',
+            1 => 'Inactive'
+          ],
+          'default' => 'Active',
+          'style' => (object) [
+            'Inactive' => 'info'
+          ],
+          'maxLength' => 8
+        ],
+        'product' => (object) [
+          'type' => 'link',
+          'required' => true,
+          'view' => 'sales:views/product-price/fields/product'
+        ],
+        'partNumber' => (object) [
+          'type' => 'foreign',
+          'link' => 'product',
+          'field' => 'partNumber',
+          'relateOnImport' => true
+        ],
+        'minQuantity' => (object) [
+          'type' => 'float',
+          'minValue' => 0.0,
+          'tooltip' => true
+        ],
+        'price' => (object) [
+          'type' => 'currency',
+          'required' => true,
+          'audited' => true
+        ],
+        'dateStart' => (object) [
+          'type' => 'date'
+        ],
+        'dateEnd' => (object) [
+          'type' => 'date'
+        ],
+        'createdAt' => (object) [
+          'type' => 'datetime',
+          'readOnly' => true
+        ],
+        'modifiedAt' => (object) [
+          'type' => 'datetime',
+          'readOnly' => true
+        ],
+        'createdBy' => (object) [
+          'type' => 'link',
+          'readOnly' => true
+        ],
+        'modifiedBy' => (object) [
+          'type' => 'link',
+          'readOnly' => true
+        ],
+        'priceCurrency' => (object) [
+          'type' => 'enum',
+          'view' => 'views/fields/currency-list',
+          'layoutDetailDisabled' => true,
+          'layoutListDisabled' => true,
+          'layoutMassUpdateDisabled' => true,
+          'layoutDefaultSidePanelDisabled' => true,
+          'customizationRequiredDisabled' => true,
+          'customizationOptionsDisabled' => true,
+          'customizationIsSortedDisabled' => true,
+          'customizationDisplayAsLabelDisabled' => true,
+          'customizationAuditedDisabled' => true,
+          'customizationReadOnlyDisabled' => true,
+          'customizationInlineEditDisabledDisabled' => true,
+          'customizationDefaultView' => 'views/admin/field-manager/fields/currency-default',
+          'customizationTooltipTextDisabled' => true,
+          'maxLength' => 3
+        ],
+        'priceConverted' => (object) [
+          'type' => 'currencyConverted',
+          'readOnly' => true,
+          'importDisabled' => true,
+          'customizationInlineEditDisabledDisabled' => true
+        ]
+      ],
+      'links' => (object) [
+        'product' => (object) [
+          'type' => 'belongsTo',
+          'foreign' => 'prices',
+          'entity' => 'Product'
+        ],
+        'priceBook' => (object) [
+          'type' => 'belongsTo',
+          'foreign' => 'prices',
+          'entity' => 'PriceBook'
+        ],
+        'createdBy' => (object) [
+          'type' => 'belongsTo',
+          'entity' => 'User'
+        ],
+        'modifiedBy' => (object) [
+          'type' => 'belongsTo',
+          'entity' => 'User'
+        ]
+      ],
+      'collection' => (object) [
+        'orderBy' => 'createdAt',
+        'order' => 'desc',
+        'textFilterFields' => [],
+        'sortBy' => 'createdAt',
+        'asc' => false
+      ],
+      'indexes' => (object) [
+        'priceBookGroup' => (object) [
+          'columns' => [
+            0 => 'priceBookId',
+            1 => 'productId',
+            2 => 'status'
+          ]
+        ]
+      ]
+    ],
+    'PurchaseOrder' => (object) [
+      'fields' => (object) [
+        'name' => (object) [
+          'type' => 'varchar',
+          'duplicateIgnore' => true
+        ],
+        'number' => (object) [
+          'type' => 'varchar',
+          'maxLength' => 100,
+          'index' => true,
+          'readOnly' => true,
+          'fieldManagerAdditionalParamList' => [
+            0 => (object) [
+              'name' => 'useAutoincrement',
+              'type' => 'bool'
+            ]
+          ],
+          'useAutoincrement' => true
+        ],
+        'numberA' => (object) [
+          'type' => 'number',
+          'prefix' => 'PO-',
+          'padLength' => 5,
+          'utility' => true
+        ],
+        'status' => (object) [
+          'type' => 'enum',
+          'options' => [
+            0 => 'Draft',
+            1 => 'Released',
+            2 => 'Completed',
+            3 => 'Canceled'
+          ],
+          'style' => (object) [
+            'Released' => 'primary',
+            'Completed' => 'success',
+            'Canceled' => 'info'
+          ],
+          'default' => 'Draft',
+          'fieldManagerAdditionalParamList' => [
+            0 => (object) [
+              'name' => 'notActualOptions',
+              'view' => 'sales:views/admin/field-manager/fields/not-actual-options'
+            ]
+          ],
+          'notActualOptions' => [
+            0 => 'Completed',
+            1 => 'Canceled'
+          ],
+          'audited' => true
+        ],
+        'dateOrdered' => (object) [
+          'type' => 'date',
+          'default' => 'javascript: return this.dateTime.getToday();',
+          'audited' => true
+        ],
+        'deliveryDate' => (object) [
+          'type' => 'date',
+          'audited' => true
+        ],
+        'account' => (object) [
+          'type' => 'link',
+          'readOnly' => true
+        ],
+        'supplier' => (object) [
+          'type' => 'link',
+          'view' => 'sales:views/purchase-order/fields/supplier',
+          'autocompleteOnEmpty' => true
+        ],
+        'description' => (object) [
+          'type' => 'text'
+        ],
+        'warehouse' => (object) [
+          'type' => 'link',
+          'view' => 'sales:views/purchase-order/fields/warehouse',
+          'autocompleteOnEmpty' => true
+        ],
+        'supplierAddress' => (object) [
+          'type' => 'address'
+        ],
+        'billingAddress' => (object) [
+          'type' => 'address'
+        ],
+        'shippingAddress' => (object) [
+          'type' => 'address'
+        ],
+        'billingContact' => (object) [
+          'type' => 'link',
+          'view' => 'sales:views/quote/fields/contact'
+        ],
+        'shippingContact' => (object) [
+          'type' => 'link',
+          'view' => 'sales:views/quote/fields/contact'
+        ],
+        'tax' => (object) [
+          'type' => 'link',
+          'view' => 'sales:views/quote/fields/tax',
+          'autocompleteOnEmpty' => true
+        ],
+        'taxRate' => (object) [
+          'type' => 'float',
+          'min' => 0,
+          'max' => 100
+        ],
+        'shippingProvider' => (object) [
+          'type' => 'link',
+          'autocompleteOnEmpty' => true
+        ],
+        'shippingCost' => (object) [
+          'type' => 'currency',
+          'layoutDetailDisabled' => true
+        ],
+        'taxAmount' => (object) [
+          'type' => 'currency',
+          'layoutDetailDisabled' => true,
+          'readOnly' => true
+        ],
+        'discountAmount' => (object) [
+          'type' => 'currency',
+          'layoutDetailDisabled' => true,
+          'readOnly' => true
+        ],
+        'amount' => (object) [
+          'type' => 'currency'
+        ],
+        'preDiscountedAmount' => (object) [
+          'type' => 'currency',
+          'layoutDetailDisabled' => true,
+          'readOnly' => true
+        ],
+        'grandTotalAmount' => (object) [
+          'type' => 'currency',
+          'layoutDetailDisabled' => true,
+          'readOnly' => true
+        ],
+        'weight' => (object) [
+          'type' => 'float',
+          'min' => 0,
+          'readOnly' => true
+        ],
+        'itemList' => (object) [
+          'type' => 'jsonArray',
+          'notStorable' => true,
+          'layoutAvailabilityList' => [],
+          'dynamicLogicVisibleDisabled' => true,
+          'dynamicLogicInvalidDisabled' => true,
+          'view' => 'sales:views/quote/fields/item-list',
+          'templatePlaceholderDisabled' => true,
+          'reportDisabled' => true,
+          'workflowDisabled' => true,
+          'duplicatorClassName' => 'Espo\\Modules\\Sales\\Classes\\FieldDuplicators\\Quote\\ItemList'
+        ],
+        'isReceiptFullyCreated' => (object) [
+          'type' => 'bool',
+          'readOnly' => true,
+          'layoutAvailabilityList' => [
+            0 => 'defaultSidePanel'
+          ],
+          'customizationReadOnlyDisabled' => true,
+          'default' => false
+        ],
+        'hasInventoryItems' => (object) [
+          'type' => 'bool',
+          'readOnly' => true,
+          'customizationReadOnlyDisabled' => true
+        ],
+        'isDone' => (object) [
+          'type' => 'bool',
+          'readOnly' => true,
+          'customizationReadOnlyDisabled' => true
+        ],
+        'isLocked' => (object) [
+          'type' => 'bool',
+          'readOnly' => true,
+          'customizationReadOnlyDisabled' => true
+        ],
+        'isNotActual' => (object) [
+          'type' => 'bool',
+          'readOnly' => true,
+          'customizationReadOnlyDisabled' => true
+        ],
+        'products' => (object) [
+          'type' => 'linkMultiple',
+          'entity' => 'Product',
+          'notStorable' => true,
+          'customizationDisabled' => true,
+          'directAccessDisabled' => true,
+          'layoutAvailabilityList' => [
+            0 => 'filters'
+          ],
+          'view' => 'sales:views/quote/fields/products'
+        ],
+        'createdAt' => (object) [
+          'type' => 'datetime',
+          'readOnly' => true
+        ],
+        'modifiedAt' => (object) [
+          'type' => 'datetime',
+          'readOnly' => true
+        ],
+        'createdBy' => (object) [
+          'type' => 'link',
+          'readOnly' => true
+        ],
+        'modifiedBy' => (object) [
+          'type' => 'link',
+          'readOnly' => true
+        ],
+        'assignedUser' => (object) [
+          'type' => 'link',
+          'view' => 'views/fields/assigned-user'
+        ],
+        'teams' => (object) [
+          'type' => 'linkMultiple'
+        ],
+        'supplierAddressStreet' => (object) [
+          'type' => 'text',
+          'maxLength' => 255,
+          'dbType' => 'varchar'
+        ],
+        'supplierAddressCity' => (object) [
+          'type' => 'varchar',
+          'maxLength' => 100,
+          'view' => 'views/fields/address-city',
+          'customizationOptionsDisabled' => true,
+          'customizationOptionsReferenceDisabled' => true,
+          'pattern' => '$noBadCharacters'
+        ],
+        'supplierAddressState' => (object) [
+          'type' => 'varchar',
+          'maxLength' => 100,
+          'view' => 'views/fields/address-state',
+          'customizationOptionsDisabled' => true,
+          'customizationOptionsReferenceDisabled' => true,
+          'pattern' => '$noBadCharacters'
+        ],
+        'supplierAddressCountry' => (object) [
+          'type' => 'varchar',
+          'maxLength' => 100,
+          'view' => 'views/fields/address-country',
+          'customizationOptionsDisabled' => true,
+          'customizationOptionsReferenceDisabled' => true,
+          'pattern' => '$noBadCharacters'
+        ],
+        'supplierAddressPostalCode' => (object) [
+          'type' => 'varchar',
+          'maxLength' => 40,
+          'pattern' => '$noBadCharacters'
+        ],
+        'supplierAddressMap' => (object) [
+          'type' => 'map',
+          'notStorable' => true,
+          'orderDisabled' => true,
+          'readOnly' => true,
+          'layoutListDisabled' => true,
+          'provider' => 'Google',
+          'height' => 300,
+          'exportDisabled' => true,
+          'importDisabled' => true
+        ],
+        'billingAddressStreet' => (object) [
+          'type' => 'text',
+          'maxLength' => 255,
+          'dbType' => 'varchar'
+        ],
+        'billingAddressCity' => (object) [
+          'type' => 'varchar',
+          'maxLength' => 100,
+          'view' => 'views/fields/address-city',
+          'customizationOptionsDisabled' => true,
+          'customizationOptionsReferenceDisabled' => true,
+          'pattern' => '$noBadCharacters'
+        ],
+        'billingAddressState' => (object) [
+          'type' => 'varchar',
+          'maxLength' => 100,
+          'view' => 'views/fields/address-state',
+          'customizationOptionsDisabled' => true,
+          'customizationOptionsReferenceDisabled' => true,
+          'pattern' => '$noBadCharacters'
+        ],
+        'billingAddressCountry' => (object) [
+          'type' => 'varchar',
+          'maxLength' => 100,
+          'view' => 'views/fields/address-country',
+          'customizationOptionsDisabled' => true,
+          'customizationOptionsReferenceDisabled' => true,
+          'pattern' => '$noBadCharacters'
+        ],
+        'billingAddressPostalCode' => (object) [
+          'type' => 'varchar',
+          'maxLength' => 40,
+          'pattern' => '$noBadCharacters'
+        ],
+        'billingAddressMap' => (object) [
+          'type' => 'map',
+          'notStorable' => true,
+          'orderDisabled' => true,
+          'readOnly' => true,
+          'layoutListDisabled' => true,
+          'provider' => 'Google',
+          'height' => 300,
+          'exportDisabled' => true,
+          'importDisabled' => true
+        ],
+        'shippingAddressStreet' => (object) [
+          'type' => 'text',
+          'maxLength' => 255,
+          'dbType' => 'varchar'
+        ],
+        'shippingAddressCity' => (object) [
+          'type' => 'varchar',
+          'maxLength' => 100,
+          'view' => 'views/fields/address-city',
+          'customizationOptionsDisabled' => true,
+          'customizationOptionsReferenceDisabled' => true,
+          'pattern' => '$noBadCharacters'
+        ],
+        'shippingAddressState' => (object) [
+          'type' => 'varchar',
+          'maxLength' => 100,
+          'view' => 'views/fields/address-state',
+          'customizationOptionsDisabled' => true,
+          'customizationOptionsReferenceDisabled' => true,
+          'pattern' => '$noBadCharacters'
+        ],
+        'shippingAddressCountry' => (object) [
+          'type' => 'varchar',
+          'maxLength' => 100,
+          'view' => 'views/fields/address-country',
+          'customizationOptionsDisabled' => true,
+          'customizationOptionsReferenceDisabled' => true,
+          'pattern' => '$noBadCharacters'
+        ],
+        'shippingAddressPostalCode' => (object) [
+          'type' => 'varchar',
+          'maxLength' => 40,
+          'pattern' => '$noBadCharacters'
+        ],
+        'shippingAddressMap' => (object) [
+          'type' => 'map',
+          'notStorable' => true,
+          'orderDisabled' => true,
+          'readOnly' => true,
+          'layoutListDisabled' => true,
+          'provider' => 'Google',
+          'height' => 300,
+          'exportDisabled' => true,
+          'importDisabled' => true
+        ],
+        'shippingCostCurrency' => (object) [
+          'layoutDetailDisabled' => true,
+          'type' => 'enum',
+          'view' => 'views/fields/currency-list',
+          'layoutListDisabled' => true,
+          'layoutMassUpdateDisabled' => true,
+          'layoutDefaultSidePanelDisabled' => true,
+          'customizationRequiredDisabled' => true,
+          'customizationOptionsDisabled' => true,
+          'customizationIsSortedDisabled' => true,
+          'customizationDisplayAsLabelDisabled' => true,
+          'customizationAuditedDisabled' => true,
+          'customizationReadOnlyDisabled' => true,
+          'customizationInlineEditDisabledDisabled' => true,
+          'customizationDefaultView' => 'views/admin/field-manager/fields/currency-default',
+          'customizationTooltipTextDisabled' => true,
+          'maxLength' => 3
+        ],
+        'shippingCostConverted' => (object) [
+          'layoutDetailDisabled' => true,
+          'type' => 'currencyConverted',
+          'readOnly' => true,
+          'importDisabled' => true,
+          'customizationInlineEditDisabledDisabled' => true
+        ],
+        'taxAmountCurrency' => (object) [
+          'layoutDetailDisabled' => true,
+          'readOnly' => true,
+          'type' => 'enum',
+          'view' => 'views/fields/currency-list',
+          'layoutListDisabled' => true,
+          'layoutMassUpdateDisabled' => true,
+          'layoutDefaultSidePanelDisabled' => true,
+          'customizationRequiredDisabled' => true,
+          'customizationOptionsDisabled' => true,
+          'customizationIsSortedDisabled' => true,
+          'customizationDisplayAsLabelDisabled' => true,
+          'customizationAuditedDisabled' => true,
+          'customizationReadOnlyDisabled' => true,
+          'customizationInlineEditDisabledDisabled' => true,
+          'customizationDefaultView' => 'views/admin/field-manager/fields/currency-default',
+          'customizationTooltipTextDisabled' => true,
+          'maxLength' => 3
+        ],
+        'taxAmountConverted' => (object) [
+          'layoutDetailDisabled' => true,
+          'readOnly' => true,
+          'type' => 'currencyConverted',
+          'importDisabled' => true,
+          'customizationInlineEditDisabledDisabled' => true
+        ],
+        'discountAmountCurrency' => (object) [
+          'layoutDetailDisabled' => true,
+          'readOnly' => true,
+          'type' => 'enum',
+          'view' => 'views/fields/currency-list',
+          'layoutListDisabled' => true,
+          'layoutMassUpdateDisabled' => true,
+          'layoutDefaultSidePanelDisabled' => true,
+          'customizationRequiredDisabled' => true,
+          'customizationOptionsDisabled' => true,
+          'customizationIsSortedDisabled' => true,
+          'customizationDisplayAsLabelDisabled' => true,
+          'customizationAuditedDisabled' => true,
+          'customizationReadOnlyDisabled' => true,
+          'customizationInlineEditDisabledDisabled' => true,
+          'customizationDefaultView' => 'views/admin/field-manager/fields/currency-default',
+          'customizationTooltipTextDisabled' => true,
+          'maxLength' => 3
+        ],
+        'discountAmountConverted' => (object) [
+          'layoutDetailDisabled' => true,
+          'readOnly' => true,
+          'type' => 'currencyConverted',
+          'importDisabled' => true,
+          'customizationInlineEditDisabledDisabled' => true
+        ],
+        'amountCurrency' => (object) [
+          'type' => 'enum',
+          'view' => 'views/fields/currency-list',
+          'layoutDetailDisabled' => true,
+          'layoutListDisabled' => true,
+          'layoutMassUpdateDisabled' => true,
+          'layoutDefaultSidePanelDisabled' => true,
+          'customizationRequiredDisabled' => true,
+          'customizationOptionsDisabled' => true,
+          'customizationIsSortedDisabled' => true,
+          'customizationDisplayAsLabelDisabled' => true,
+          'customizationAuditedDisabled' => true,
+          'customizationReadOnlyDisabled' => true,
+          'customizationInlineEditDisabledDisabled' => true,
+          'customizationDefaultView' => 'views/admin/field-manager/fields/currency-default',
+          'customizationTooltipTextDisabled' => true,
+          'maxLength' => 3
+        ],
+        'amountConverted' => (object) [
+          'type' => 'currencyConverted',
+          'readOnly' => true,
+          'importDisabled' => true,
+          'customizationInlineEditDisabledDisabled' => true
+        ],
+        'preDiscountedAmountCurrency' => (object) [
+          'layoutDetailDisabled' => true,
+          'readOnly' => true,
+          'type' => 'enum',
+          'view' => 'views/fields/currency-list',
+          'layoutListDisabled' => true,
+          'layoutMassUpdateDisabled' => true,
+          'layoutDefaultSidePanelDisabled' => true,
+          'customizationRequiredDisabled' => true,
+          'customizationOptionsDisabled' => true,
+          'customizationIsSortedDisabled' => true,
+          'customizationDisplayAsLabelDisabled' => true,
+          'customizationAuditedDisabled' => true,
+          'customizationReadOnlyDisabled' => true,
+          'customizationInlineEditDisabledDisabled' => true,
+          'customizationDefaultView' => 'views/admin/field-manager/fields/currency-default',
+          'customizationTooltipTextDisabled' => true,
+          'maxLength' => 3
+        ],
+        'preDiscountedAmountConverted' => (object) [
+          'layoutDetailDisabled' => true,
+          'readOnly' => true,
+          'type' => 'currencyConverted',
+          'importDisabled' => true,
+          'customizationInlineEditDisabledDisabled' => true
+        ],
+        'grandTotalAmountCurrency' => (object) [
+          'layoutDetailDisabled' => true,
+          'readOnly' => true,
+          'type' => 'enum',
+          'view' => 'views/fields/currency-list',
+          'layoutListDisabled' => true,
+          'layoutMassUpdateDisabled' => true,
+          'layoutDefaultSidePanelDisabled' => true,
+          'customizationRequiredDisabled' => true,
+          'customizationOptionsDisabled' => true,
+          'customizationIsSortedDisabled' => true,
+          'customizationDisplayAsLabelDisabled' => true,
+          'customizationAuditedDisabled' => true,
+          'customizationReadOnlyDisabled' => true,
+          'customizationInlineEditDisabledDisabled' => true,
+          'customizationDefaultView' => 'views/admin/field-manager/fields/currency-default',
+          'customizationTooltipTextDisabled' => true,
+          'maxLength' => 3
+        ],
+        'grandTotalAmountConverted' => (object) [
+          'layoutDetailDisabled' => true,
+          'readOnly' => true,
+          'type' => 'currencyConverted',
+          'importDisabled' => true,
+          'customizationInlineEditDisabledDisabled' => true
+        ]
+      ],
+      'links' => (object) [
+        'createdBy' => (object) [
+          'type' => 'belongsTo',
+          'entity' => 'User'
+        ],
+        'modifiedBy' => (object) [
+          'type' => 'belongsTo',
+          'entity' => 'User'
+        ],
+        'receiptOrders' => (object) [
+          'type' => 'hasMany',
+          'entity' => 'ReceiptOrder',
+          'foreign' => 'purchaseOrder'
+        ],
+        'tax' => (object) [
+          'type' => 'belongsTo',
+          'entity' => 'Tax'
+        ],
+        'shippingProvider' => (object) [
+          'type' => 'belongsTo',
+          'entity' => 'ShippingProvider'
+        ],
+        'supplier' => (object) [
+          'type' => 'belongsTo',
+          'entity' => 'Supplier',
+          'foreign' => 'purchaseOrders'
+        ],
+        'account' => (object) [
+          'type' => 'belongsTo',
+          'entity' => 'Account',
+          'foreign' => 'purchaseOrders'
+        ],
+        'billingContact' => (object) [
+          'type' => 'belongsTo',
+          'entity' => 'Contact',
+          'foreign' => 'purchaseOrdersBilling'
+        ],
+        'shippingContact' => (object) [
+          'type' => 'belongsTo',
+          'entity' => 'Contact',
+          'foreign' => 'purchaseOrdersShipping'
+        ],
+        'warehouse' => (object) [
+          'type' => 'belongsTo',
+          'entity' => 'Warehouse'
+        ],
+        'items' => (object) [
+          'type' => 'hasMany',
+          'entity' => 'PurchaseOrderItem',
+          'foreign' => 'purchaseOrder',
+          'layoutRelationshipsDisabled' => true
+        ],
+        'inventoryTransactions' => (object) [
+          'type' => 'hasChildren',
+          'entity' => 'InventoryTransaction',
+          'foreign' => 'parent'
+        ],
+        'assignedUser' => (object) [
+          'type' => 'belongsTo',
+          'entity' => 'User'
+        ],
+        'teams' => (object) [
+          'type' => 'hasMany',
+          'entity' => 'Team',
+          'relationName' => 'EntityTeam',
+          'layoutRelationshipsDisabled' => true
+        ]
+      ],
+      'collection' => (object) [
+        'orderBy' => 'createdAt',
+        'order' => 'desc',
+        'textFilterFields' => [
+          0 => 'name',
+          1 => 'number'
+        ],
+        'sortBy' => 'createdAt',
+        'asc' => false
+      ],
+      'indexes' => (object) [
+        'createdAt' => (object) [
+          'columns' => [
+            0 => 'createdAt'
+          ]
+        ]
+      ]
+    ],
+    'PurchaseOrderItem' => (object) [
+      'fields' => (object) [
+        'name' => (object) [
+          'type' => 'varchar',
+          'required' => true
+        ],
+        'purchaseOrder' => (object) [
+          'type' => 'link',
+          'readOnly' => true
+        ],
+        'account' => (object) [
+          'type' => 'link',
+          'readOnly' => true
+        ],
+        'purchaseOrderStatus' => (object) [
+          'type' => 'foreign',
+          'link' => 'purchaseOrder',
+          'field' => 'status',
+          'readOnly' => true,
+          'view' => 'views/fields/foreign-enum'
+        ],
+        'product' => (object) [
+          'type' => 'link',
+          'readOnly' => true,
+          'itemNotReadOnly' => true,
+          'fieldManagerAdditionalParamList' => [
+            0 => (object) [
+              'name' => 'copyFieldList',
+              'type' => 'multiEnum',
+              'view' => 'sales:views/admin/field-manager/quote-item/fields/product-copy-field-list',
+              'isSorted' => true
+            ]
+          ]
+        ],
+        'allowFractionalQuantity' => (object) [
+          'type' => 'foreign',
+          'link' => 'product',
+          'field' => 'allowFractionalQuantity',
+          'view' => 'views/fields/foreign-bool',
+          'readOnly' => true
+        ],
+        'productType' => (object) [
+          'type' => 'foreign',
+          'link' => 'product',
+          'field' => 'type',
+          'view' => 'views/fields/foreign-enum',
+          'readOnly' => true
+        ],
+        'quantity' => (object) [
+          'type' => 'float',
+          'default' => 1.0,
+          'required' => true,
+          'readOnly' => true,
+          'itemNotReadOnly' => true,
+          'validatorClassNameList' => [
+            0 => 'Espo\\Modules\\Sales\\Classes\\FieldValidators\\QuoteItem\\Quantity\\NotFractional'
+          ],
+          'view' => 'sales:views/quote-item/fields/quantity'
+        ],
+        'quantityInt' => (object) [
+          'type' => 'int',
+          'notStorable' => true,
+          'select' => (object) [
+            'select' => 'FLOOR:(quantity)'
+          ],
+          'readOnly' => true
+        ],
+        'listPrice' => (object) [
+          'type' => 'currency',
+          'readOnly' => true,
+          'itemNotReadOnly' => true
+        ],
+        'unitPrice' => (object) [
+          'type' => 'currency',
+          'required' => true,
+          'readOnly' => true,
+          'itemNotReadOnly' => true
+        ],
+        'discount' => (object) [
+          'type' => 'float',
+          'readOnly' => true,
+          'view' => 'sales:views/quote-item/fields/discount-rate',
+          'itemNotReadOnly' => true
+        ],
+        'amount' => (object) [
+          'type' => 'currency',
+          'required' => true,
+          'readOnly' => true
+        ],
+        'inventoryNumberType' => (object) [
+          'type' => 'foreign',
+          'link' => 'product',
+          'field' => 'inventoryNumberType',
+          'view' => 'views/fields/foreign-enum',
+          'readOnly' => true
+        ],
+        'unitWeight' => (object) [
+          'type' => 'float',
+          'min' => 0
+        ],
+        'weight' => (object) [
+          'type' => 'float',
+          'min' => 0,
+          'readOnly' => true
+        ],
+        'taxRate' => (object) [
+          'type' => 'float',
+          'min' => 0,
+          'max' => 100,
+          'default' => 0,
+          'readOnly' => true,
+          'view' => 'sales:views/quote-item/fields/tax-rate',
+          'itemNotReadOnly' => true,
+          'customizationReadOnlyDisabled' => true,
+          'customizationDefaultDisabled' => true,
+          'customizationMinDisabled' => true,
+          'customizationMaxDisabled' => true
+        ],
+        'order' => (object) [
+          'type' => 'int',
+          'default' => 1,
+          'readOnly' => true
+        ],
+        'description' => (object) [
+          'type' => 'text'
+        ],
+        'createdAt' => (object) [
+          'type' => 'datetime',
+          'readOnly' => true
+        ],
+        'modifiedAt' => (object) [
+          'type' => 'datetime',
+          'readOnly' => true
+        ],
+        'createdBy' => (object) [
+          'type' => 'link',
+          'readOnly' => true
+        ],
+        'modifiedBy' => (object) [
+          'type' => 'link',
+          'readOnly' => true
+        ],
+        'listPriceCurrency' => (object) [
+          'readOnly' => true,
+          'type' => 'enum',
+          'view' => 'views/fields/currency-list',
+          'layoutDetailDisabled' => true,
+          'layoutListDisabled' => true,
+          'layoutMassUpdateDisabled' => true,
+          'layoutDefaultSidePanelDisabled' => true,
+          'customizationRequiredDisabled' => true,
+          'customizationOptionsDisabled' => true,
+          'customizationIsSortedDisabled' => true,
+          'customizationDisplayAsLabelDisabled' => true,
+          'customizationAuditedDisabled' => true,
+          'customizationReadOnlyDisabled' => true,
+          'customizationInlineEditDisabledDisabled' => true,
+          'customizationDefaultView' => 'views/admin/field-manager/fields/currency-default',
+          'customizationTooltipTextDisabled' => true,
+          'maxLength' => 3
+        ],
+        'listPriceConverted' => (object) [
+          'readOnly' => true,
+          'type' => 'currencyConverted',
+          'importDisabled' => true,
+          'customizationInlineEditDisabledDisabled' => true
+        ],
+        'unitPriceCurrency' => (object) [
+          'readOnly' => true,
+          'type' => 'enum',
+          'view' => 'views/fields/currency-list',
+          'layoutDetailDisabled' => true,
+          'layoutListDisabled' => true,
+          'layoutMassUpdateDisabled' => true,
+          'layoutDefaultSidePanelDisabled' => true,
+          'customizationRequiredDisabled' => true,
+          'customizationOptionsDisabled' => true,
+          'customizationIsSortedDisabled' => true,
+          'customizationDisplayAsLabelDisabled' => true,
+          'customizationAuditedDisabled' => true,
+          'customizationReadOnlyDisabled' => true,
+          'customizationInlineEditDisabledDisabled' => true,
+          'customizationDefaultView' => 'views/admin/field-manager/fields/currency-default',
+          'customizationTooltipTextDisabled' => true,
+          'maxLength' => 3
+        ],
+        'unitPriceConverted' => (object) [
+          'readOnly' => true,
+          'type' => 'currencyConverted',
+          'importDisabled' => true,
+          'customizationInlineEditDisabledDisabled' => true
+        ],
+        'amountCurrency' => (object) [
+          'readOnly' => true,
+          'type' => 'enum',
+          'view' => 'views/fields/currency-list',
+          'layoutDetailDisabled' => true,
+          'layoutListDisabled' => true,
+          'layoutMassUpdateDisabled' => true,
+          'layoutDefaultSidePanelDisabled' => true,
+          'customizationRequiredDisabled' => true,
+          'customizationOptionsDisabled' => true,
+          'customizationIsSortedDisabled' => true,
+          'customizationDisplayAsLabelDisabled' => true,
+          'customizationAuditedDisabled' => true,
+          'customizationReadOnlyDisabled' => true,
+          'customizationInlineEditDisabledDisabled' => true,
+          'customizationDefaultView' => 'views/admin/field-manager/fields/currency-default',
+          'customizationTooltipTextDisabled' => true,
+          'maxLength' => 3
+        ],
+        'amountConverted' => (object) [
+          'readOnly' => true,
+          'type' => 'currencyConverted',
+          'importDisabled' => true,
+          'customizationInlineEditDisabledDisabled' => true
+        ]
+      ],
+      'links' => (object) [
+        'createdBy' => (object) [
+          'type' => 'belongsTo',
+          'entity' => 'User'
+        ],
+        'modifiedBy' => (object) [
+          'type' => 'belongsTo',
+          'entity' => 'User'
+        ],
+        'product' => (object) [
+          'type' => 'belongsTo',
+          'entity' => 'Product'
+        ],
+        'purchaseOrder' => (object) [
+          'type' => 'belongsTo',
+          'entity' => 'PurchaseOrder',
+          'foreign' => 'items'
+        ],
+        'account' => (object) [
+          'type' => 'belongsTo',
+          'entity' => 'Account',
+          'foreign' => 'purchaseOrderItems'
+        ]
+      ],
+      'collection' => (object) [
+        'orderBy' => 'createdAt',
+        'order' => 'desc',
+        'sortBy' => 'createdAt',
+        'asc' => false
+      ]
+    ],
+    'Quote' => (object) [
+      'fields' => (object) [
+        'name' => (object) [
+          'type' => 'varchar',
+          'duplicateIgnore' => true
+        ],
+        'number' => (object) [
+          'type' => 'varchar',
+          'maxLength' => 100,
+          'index' => true,
+          'readOnly' => true,
+          'fieldManagerAdditionalParamList' => [
+            0 => (object) [
+              'name' => 'useAutoincrement',
+              'type' => 'bool'
+            ]
+          ],
+          'useAutoincrement' => true
+        ],
+        'numberA' => (object) [
+          'type' => 'number',
+          'prefix' => 'Q-',
+          'padLength' => 5,
+          'utility' => true
+        ],
+        'invoiceNumber' => (object) [
+          'type' => 'varchar',
+          'maxLength' => 100
+        ],
+        'status' => (object) [
+          'type' => 'enum',
+          'options' => [
+            0 => 'Draft',
+            1 => 'Presented',
+            2 => 'Approved',
+            3 => 'Canceled'
+          ],
+          'view' => 'views/fields/enum-styled',
+          'style' => (object) [
+            'Presented' => 'primary',
+            'Approved' => 'success',
+            'Canceled' => 'info'
+          ],
+          'default' => 'Draft',
+          'fieldManagerAdditionalParamList' => [
+            0 => (object) [
+              'name' => 'notActualOptions',
+              'view' => 'sales:views/admin/field-manager/fields/not-actual-options'
+            ]
+          ],
+          'notActualOptions' => [
+            0 => 'Approved',
+            1 => 'Canceled'
+          ],
+          'audited' => true
+        ],
+        'dateQuoted' => (object) [
+          'type' => 'date',
+          'default' => 'javascript: return this.dateTime.getToday();',
+          'audited' => true
+        ],
+        'dateOrdered' => (object) [
+          'type' => 'date',
+          'audited' => true
+        ],
+        'dateInvoiced' => (object) [
+          'type' => 'date',
+          'audited' => true
+        ],
+        'account' => (object) [
+          'type' => 'link',
+          'view' => 'sales:views/quote/fields/account'
+        ],
+        'opportunity' => (object) [
+          'type' => 'link',
+          'view' => 'sales:views/quote/fields/opportunity'
+        ],
+        'description' => (object) [
+          'type' => 'text'
+        ],
+        'billingAddress' => (object) [
+          'type' => 'address'
+        ],
+        'shippingAddress' => (object) [
+          'type' => 'address',
+          'view' => 'crm:views/account/fields/shipping-address'
+        ],
+        'billingContact' => (object) [
+          'type' => 'link',
+          'view' => 'sales:views/quote/fields/contact'
+        ],
+        'shippingContact' => (object) [
+          'type' => 'link',
+          'view' => 'sales:views/quote/fields/contact'
+        ],
+        'tax' => (object) [
+          'type' => 'link',
+          'view' => 'sales:views/quote/fields/tax',
+          'autocompleteOnEmpty' => true
+        ],
+        'taxRate' => (object) [
+          'type' => 'float',
+          'min' => 0,
+          'max' => 100
+        ],
+        'shippingProvider' => (object) [
+          'type' => 'link',
+          'autocompleteOnEmpty' => true
+        ],
+        'shippingCost' => (object) [
+          'type' => 'currency',
+          'layoutDetailDisabled' => true
+        ],
+        'taxAmount' => (object) [
+          'type' => 'currency',
+          'layoutDetailDisabled' => true,
+          'readOnly' => true
+        ],
+        'discountAmount' => (object) [
+          'type' => 'currency',
+          'layoutDetailDisabled' => true,
+          'readOnly' => true
+        ],
+        'amount' => (object) [
+          'type' => 'currency'
+        ],
+        'preDiscountedAmount' => (object) [
+          'type' => 'currency',
+          'layoutDetailDisabled' => true,
+          'readOnly' => true
+        ],
+        'grandTotalAmount' => (object) [
+          'type' => 'currency',
+          'layoutDetailDisabled' => true,
+          'readOnly' => true
+        ],
+        'weight' => (object) [
+          'type' => 'float',
+          'min' => 0,
+          'readOnly' => true
+        ],
+        'itemList' => (object) [
+          'type' => 'jsonArray',
+          'notStorable' => true,
+          'layoutAvailabilityList' => [],
+          'dynamicLogicVisibleDisabled' => true,
+          'dynamicLogicInvalidDisabled' => true,
+          'view' => 'sales:views/quote/fields/item-list',
+          'templatePlaceholderDisabled' => true,
+          'reportDisabled' => true,
+          'workflowDisabled' => true,
+          'duplicatorClassName' => 'Espo\\Modules\\Sales\\Classes\\FieldDuplicators\\Quote\\ItemList'
+        ],
+        'priceBook' => (object) [
+          'type' => 'link',
+          'autocompleteOnEmpty' => true
+        ],
+        'isDone' => (object) [
+          'type' => 'bool',
+          'readOnly' => true,
+          'customizationReadOnlyDisabled' => true
+        ],
+        'isNotActual' => (object) [
+          'type' => 'bool',
+          'readOnly' => true,
+          'customizationReadOnlyDisabled' => true
+        ],
+        'isLocked' => (object) [
+          'type' => 'bool',
+          'readOnly' => true,
+          'customizationReadOnlyDisabled' => true
+        ],
+        'inventoryData' => (object) [
+          'type' => 'jsonObject',
+          'notStorable' => true,
+          'readOnly' => true,
+          'directAccessDisabled' => true,
+          'customizationDisabled' => true,
+          'utility' => true
+        ],
+        'inventoryStatus' => (object) [
+          'type' => 'enum',
+          'options' => [
+            0 => '',
+            1 => 'Available',
+            2 => 'Not Available'
+          ],
+          'style' => (object) [
+            'Available' => 'success',
+            'Not Available' => 'danger'
+          ],
+          'displayAsLabel' => true,
+          'notStorable' => true,
+          'readOnly' => true,
+          'layoutAvailabilityList' => [
+            0 => 'defaultSidePanel'
+          ],
+          'directAccessDisabled' => true,
+          'customizationDisabled' => true
+        ],
+        'products' => (object) [
+          'type' => 'linkMultiple',
+          'entity' => 'Product',
+          'notStorable' => true,
+          'customizationDisabled' => true,
+          'directAccessDisabled' => true,
+          'layoutAvailabilityList' => [
+            0 => 'filters'
+          ],
+          'view' => 'sales:views/quote/fields/products'
+        ],
+        'createdAt' => (object) [
+          'type' => 'datetime',
+          'readOnly' => true
+        ],
+        'modifiedAt' => (object) [
+          'type' => 'datetime',
+          'readOnly' => true
+        ],
+        'createdBy' => (object) [
+          'type' => 'link',
+          'readOnly' => true
+        ],
+        'modifiedBy' => (object) [
+          'type' => 'link',
+          'readOnly' => true
+        ],
+        'assignedUser' => (object) [
+          'type' => 'link',
+          'view' => 'views/fields/assigned-user'
+        ],
+        'teams' => (object) [
+          'type' => 'linkMultiple'
+        ],
+        'billingAddressStreet' => (object) [
+          'type' => 'text',
+          'maxLength' => 255,
+          'dbType' => 'varchar'
+        ],
+        'billingAddressCity' => (object) [
+          'type' => 'varchar',
+          'maxLength' => 100,
+          'view' => 'views/fields/address-city',
+          'customizationOptionsDisabled' => true,
+          'customizationOptionsReferenceDisabled' => true,
+          'pattern' => '$noBadCharacters'
+        ],
+        'billingAddressState' => (object) [
+          'type' => 'varchar',
+          'maxLength' => 100,
+          'view' => 'views/fields/address-state',
+          'customizationOptionsDisabled' => true,
+          'customizationOptionsReferenceDisabled' => true,
+          'pattern' => '$noBadCharacters'
+        ],
+        'billingAddressCountry' => (object) [
+          'type' => 'varchar',
+          'maxLength' => 100,
+          'view' => 'views/fields/address-country',
+          'customizationOptionsDisabled' => true,
+          'customizationOptionsReferenceDisabled' => true,
+          'pattern' => '$noBadCharacters'
+        ],
+        'billingAddressPostalCode' => (object) [
+          'type' => 'varchar',
+          'maxLength' => 40,
+          'pattern' => '$noBadCharacters'
+        ],
+        'billingAddressMap' => (object) [
+          'type' => 'map',
+          'notStorable' => true,
+          'orderDisabled' => true,
+          'readOnly' => true,
+          'layoutListDisabled' => true,
+          'provider' => 'Google',
+          'height' => 300,
+          'exportDisabled' => true,
+          'importDisabled' => true
+        ],
+        'shippingAddressStreet' => (object) [
+          'type' => 'text',
+          'maxLength' => 255,
+          'dbType' => 'varchar'
+        ],
+        'shippingAddressCity' => (object) [
+          'type' => 'varchar',
+          'maxLength' => 100,
+          'view' => 'views/fields/address-city',
+          'customizationOptionsDisabled' => true,
+          'customizationOptionsReferenceDisabled' => true,
+          'pattern' => '$noBadCharacters'
+        ],
+        'shippingAddressState' => (object) [
+          'type' => 'varchar',
+          'maxLength' => 100,
+          'view' => 'views/fields/address-state',
+          'customizationOptionsDisabled' => true,
+          'customizationOptionsReferenceDisabled' => true,
+          'pattern' => '$noBadCharacters'
+        ],
+        'shippingAddressCountry' => (object) [
+          'type' => 'varchar',
+          'maxLength' => 100,
+          'view' => 'views/fields/address-country',
+          'customizationOptionsDisabled' => true,
+          'customizationOptionsReferenceDisabled' => true,
+          'pattern' => '$noBadCharacters'
+        ],
+        'shippingAddressPostalCode' => (object) [
+          'type' => 'varchar',
+          'maxLength' => 40,
+          'pattern' => '$noBadCharacters'
+        ],
+        'shippingAddressMap' => (object) [
+          'type' => 'map',
+          'notStorable' => true,
+          'orderDisabled' => true,
+          'readOnly' => true,
+          'layoutListDisabled' => true,
+          'provider' => 'Google',
+          'height' => 300,
+          'exportDisabled' => true,
+          'importDisabled' => true
+        ],
+        'shippingCostCurrency' => (object) [
+          'layoutDetailDisabled' => true,
+          'type' => 'enum',
+          'view' => 'views/fields/currency-list',
+          'layoutListDisabled' => true,
+          'layoutMassUpdateDisabled' => true,
+          'layoutDefaultSidePanelDisabled' => true,
+          'customizationRequiredDisabled' => true,
+          'customizationOptionsDisabled' => true,
+          'customizationIsSortedDisabled' => true,
+          'customizationDisplayAsLabelDisabled' => true,
+          'customizationAuditedDisabled' => true,
+          'customizationReadOnlyDisabled' => true,
+          'customizationInlineEditDisabledDisabled' => true,
+          'customizationDefaultView' => 'views/admin/field-manager/fields/currency-default',
+          'customizationTooltipTextDisabled' => true,
+          'maxLength' => 3
+        ],
+        'shippingCostConverted' => (object) [
+          'layoutDetailDisabled' => true,
+          'type' => 'currencyConverted',
+          'readOnly' => true,
+          'importDisabled' => true,
+          'customizationInlineEditDisabledDisabled' => true
+        ],
+        'taxAmountCurrency' => (object) [
+          'layoutDetailDisabled' => true,
+          'readOnly' => true,
+          'type' => 'enum',
+          'view' => 'views/fields/currency-list',
+          'layoutListDisabled' => true,
+          'layoutMassUpdateDisabled' => true,
+          'layoutDefaultSidePanelDisabled' => true,
+          'customizationRequiredDisabled' => true,
+          'customizationOptionsDisabled' => true,
+          'customizationIsSortedDisabled' => true,
+          'customizationDisplayAsLabelDisabled' => true,
+          'customizationAuditedDisabled' => true,
+          'customizationReadOnlyDisabled' => true,
+          'customizationInlineEditDisabledDisabled' => true,
+          'customizationDefaultView' => 'views/admin/field-manager/fields/currency-default',
+          'customizationTooltipTextDisabled' => true,
+          'maxLength' => 3
+        ],
+        'taxAmountConverted' => (object) [
+          'layoutDetailDisabled' => true,
+          'readOnly' => true,
+          'type' => 'currencyConverted',
+          'importDisabled' => true,
+          'customizationInlineEditDisabledDisabled' => true
+        ],
+        'discountAmountCurrency' => (object) [
+          'layoutDetailDisabled' => true,
+          'readOnly' => true,
+          'type' => 'enum',
+          'view' => 'views/fields/currency-list',
+          'layoutListDisabled' => true,
+          'layoutMassUpdateDisabled' => true,
+          'layoutDefaultSidePanelDisabled' => true,
+          'customizationRequiredDisabled' => true,
+          'customizationOptionsDisabled' => true,
+          'customizationIsSortedDisabled' => true,
+          'customizationDisplayAsLabelDisabled' => true,
+          'customizationAuditedDisabled' => true,
+          'customizationReadOnlyDisabled' => true,
+          'customizationInlineEditDisabledDisabled' => true,
+          'customizationDefaultView' => 'views/admin/field-manager/fields/currency-default',
+          'customizationTooltipTextDisabled' => true,
+          'maxLength' => 3
+        ],
+        'discountAmountConverted' => (object) [
+          'layoutDetailDisabled' => true,
+          'readOnly' => true,
+          'type' => 'currencyConverted',
+          'importDisabled' => true,
+          'customizationInlineEditDisabledDisabled' => true
+        ],
+        'amountCurrency' => (object) [
+          'type' => 'enum',
+          'view' => 'views/fields/currency-list',
+          'layoutDetailDisabled' => true,
+          'layoutListDisabled' => true,
+          'layoutMassUpdateDisabled' => true,
+          'layoutDefaultSidePanelDisabled' => true,
+          'customizationRequiredDisabled' => true,
+          'customizationOptionsDisabled' => true,
+          'customizationIsSortedDisabled' => true,
+          'customizationDisplayAsLabelDisabled' => true,
+          'customizationAuditedDisabled' => true,
+          'customizationReadOnlyDisabled' => true,
+          'customizationInlineEditDisabledDisabled' => true,
+          'customizationDefaultView' => 'views/admin/field-manager/fields/currency-default',
+          'customizationTooltipTextDisabled' => true,
+          'maxLength' => 3
+        ],
+        'amountConverted' => (object) [
+          'type' => 'currencyConverted',
+          'readOnly' => true,
+          'importDisabled' => true,
+          'customizationInlineEditDisabledDisabled' => true
+        ],
+        'preDiscountedAmountCurrency' => (object) [
+          'layoutDetailDisabled' => true,
+          'readOnly' => true,
+          'type' => 'enum',
+          'view' => 'views/fields/currency-list',
+          'layoutListDisabled' => true,
+          'layoutMassUpdateDisabled' => true,
+          'layoutDefaultSidePanelDisabled' => true,
+          'customizationRequiredDisabled' => true,
+          'customizationOptionsDisabled' => true,
+          'customizationIsSortedDisabled' => true,
+          'customizationDisplayAsLabelDisabled' => true,
+          'customizationAuditedDisabled' => true,
+          'customizationReadOnlyDisabled' => true,
+          'customizationInlineEditDisabledDisabled' => true,
+          'customizationDefaultView' => 'views/admin/field-manager/fields/currency-default',
+          'customizationTooltipTextDisabled' => true,
+          'maxLength' => 3
+        ],
+        'preDiscountedAmountConverted' => (object) [
+          'layoutDetailDisabled' => true,
+          'readOnly' => true,
+          'type' => 'currencyConverted',
+          'importDisabled' => true,
+          'customizationInlineEditDisabledDisabled' => true
+        ],
+        'grandTotalAmountCurrency' => (object) [
+          'layoutDetailDisabled' => true,
+          'readOnly' => true,
+          'type' => 'enum',
+          'view' => 'views/fields/currency-list',
+          'layoutListDisabled' => true,
+          'layoutMassUpdateDisabled' => true,
+          'layoutDefaultSidePanelDisabled' => true,
+          'customizationRequiredDisabled' => true,
+          'customizationOptionsDisabled' => true,
+          'customizationIsSortedDisabled' => true,
+          'customizationDisplayAsLabelDisabled' => true,
+          'customizationAuditedDisabled' => true,
+          'customizationReadOnlyDisabled' => true,
+          'customizationInlineEditDisabledDisabled' => true,
+          'customizationDefaultView' => 'views/admin/field-manager/fields/currency-default',
+          'customizationTooltipTextDisabled' => true,
+          'maxLength' => 3
+        ],
+        'grandTotalAmountConverted' => (object) [
+          'layoutDetailDisabled' => true,
+          'readOnly' => true,
+          'type' => 'currencyConverted',
+          'importDisabled' => true,
+          'customizationInlineEditDisabledDisabled' => true
+        ]
+      ],
+      'links' => (object) [
+        'createdBy' => (object) [
+          'type' => 'belongsTo',
+          'entity' => 'User'
+        ],
+        'modifiedBy' => (object) [
+          'type' => 'belongsTo',
+          'entity' => 'User'
+        ],
+        'tax' => (object) [
+          'type' => 'belongsTo',
+          'entity' => 'Tax'
+        ],
+        'shippingProvider' => (object) [
+          'type' => 'belongsTo',
+          'entity' => 'ShippingProvider'
+        ],
+        'account' => (object) [
+          'type' => 'belongsTo',
+          'entity' => 'Account',
+          'foreign' => 'quotes'
+        ],
+        'opportunity' => (object) [
+          'type' => 'belongsTo',
+          'entity' => 'Opportunity',
+          'foreign' => 'quotes'
+        ],
+        'salesOrders' => (object) [
+          'type' => 'hasMany',
+          'entity' => 'SalesOrder',
+          'foreign' => 'quote',
+          'audited' => true
+        ],
+        'invoices' => (object) [
+          'type' => 'hasMany',
+          'entity' => 'Invoice',
+          'foreign' => 'quote',
+          'audited' => true
+        ],
+        'billingContact' => (object) [
+          'type' => 'belongsTo',
+          'entity' => 'Contact',
+          'foreign' => 'quotesBilling'
+        ],
+        'shippingContact' => (object) [
+          'type' => 'belongsTo',
+          'entity' => 'Contact',
+          'foreign' => 'quotesShipping'
+        ],
+        'items' => (object) [
+          'type' => 'hasMany',
+          'entity' => 'QuoteItem',
+          'foreign' => 'quote',
+          'layoutRelationshipsDisabled' => true
+        ],
+        'priceBook' => (object) [
+          'type' => 'belongsTo',
+          'entity' => 'PriceBook'
+        ],
+        'assignedUser' => (object) [
+          'type' => 'belongsTo',
+          'entity' => 'User'
+        ],
+        'teams' => (object) [
+          'type' => 'hasMany',
+          'entity' => 'Team',
+          'relationName' => 'EntityTeam',
+          'layoutRelationshipsDisabled' => true
+        ]
+      ],
+      'collection' => (object) [
+        'orderBy' => 'createdAt',
+        'order' => 'desc',
+        'textFilterFields' => [
+          0 => 'name',
+          1 => 'number'
+        ],
+        'sortBy' => 'createdAt',
+        'asc' => false
+      ],
+      'indexes' => (object) [
+        'createdAt' => (object) [
+          'columns' => [
+            0 => 'createdAt'
+          ]
+        ]
+      ]
+    ],
+    'QuoteItem' => (object) [
+      'fields' => (object) [
+        'name' => (object) [
+          'type' => 'varchar',
+          'required' => true
+        ],
+        'quote' => (object) [
+          'type' => 'link',
+          'readOnly' => true
+        ],
+        'account' => (object) [
+          'type' => 'link',
+          'readOnly' => true
+        ],
+        'quoteStatus' => (object) [
+          'type' => 'foreign',
+          'link' => 'quote',
+          'field' => 'status',
+          'readOnly' => true,
+          'view' => 'views/fields/foreign-enum'
+        ],
+        'product' => (object) [
+          'type' => 'link',
+          'readOnly' => true,
+          'itemNotReadOnly' => true,
+          'customizationDefaultDisabled' => true,
+          'customizationReadOnlyDisabled' => true,
+          'customizationRequiredDisabled' => true,
+          'fieldManagerAdditionalParamList' => [
+            0 => (object) [
+              'name' => 'copyFieldList',
+              'type' => 'multiEnum',
+              'view' => 'sales:views/admin/field-manager/quote-item/fields/product-copy-field-list',
+              'isSorted' => true
+            ]
+          ]
+        ],
+        'allowFractionalQuantity' => (object) [
+          'type' => 'foreign',
+          'link' => 'product',
+          'field' => 'allowFractionalQuantity',
+          'view' => 'views/fields/foreign-bool',
+          'readOnly' => true
+        ],
+        'productType' => (object) [
+          'type' => 'foreign',
+          'link' => 'product',
+          'field' => 'type',
+          'view' => 'views/fields/foreign-enum',
+          'readOnly' => true
+        ],
+        'quantity' => (object) [
+          'type' => 'float',
+          'default' => 1.0,
+          'required' => true,
+          'readOnly' => true,
+          'itemNotReadOnly' => true,
+          'validatorClassNameList' => [
+            0 => 'Espo\\Modules\\Sales\\Classes\\FieldValidators\\QuoteItem\\Quantity\\NotFractional'
+          ],
+          'view' => 'sales:views/quote-item/fields/quantity'
+        ],
+        'quantityInt' => (object) [
+          'type' => 'int',
+          'notStorable' => true,
+          'select' => (object) [
+            'select' => 'FLOOR:(quantity)'
+          ],
+          'readOnly' => true
+        ],
+        'listPrice' => (object) [
+          'type' => 'currency',
+          'readOnly' => true,
+          'itemNotReadOnly' => true
+        ],
+        'unitPrice' => (object) [
+          'type' => 'currency',
+          'required' => true,
+          'readOnly' => true,
+          'itemNotReadOnly' => true
+        ],
+        'discount' => (object) [
+          'type' => 'float',
+          'readOnly' => true,
+          'view' => 'sales:views/quote-item/fields/discount-rate',
+          'itemNotReadOnly' => true
+        ],
+        'amount' => (object) [
+          'type' => 'currency',
+          'readOnly' => true
+        ],
+        'unitWeight' => (object) [
+          'type' => 'float',
+          'min' => 0
+        ],
+        'weight' => (object) [
+          'type' => 'float',
+          'min' => 0,
+          'readOnly' => true
+        ],
+        'taxRate' => (object) [
+          'type' => 'float',
+          'min' => 0,
+          'max' => 100,
+          'default' => 0,
+          'readOnly' => true,
+          'view' => 'sales:views/quote-item/fields/tax-rate',
+          'itemNotReadOnly' => true,
+          'customizationReadOnlyDisabled' => true,
+          'customizationDefaultDisabled' => true,
+          'customizationMinDisabled' => true,
+          'customizationMaxDisabled' => true
+        ],
+        'order' => (object) [
+          'type' => 'int',
+          'default' => 1,
+          'readOnly' => true
+        ],
+        'description' => (object) [
+          'type' => 'text'
+        ],
+        'createdAt' => (object) [
+          'type' => 'datetime',
+          'readOnly' => true
+        ],
+        'modifiedAt' => (object) [
+          'type' => 'datetime',
+          'readOnly' => true
+        ],
+        'createdBy' => (object) [
+          'type' => 'link',
+          'readOnly' => true
+        ],
+        'modifiedBy' => (object) [
+          'type' => 'link',
+          'readOnly' => true
+        ],
+        'listPriceCurrency' => (object) [
+          'readOnly' => true,
+          'type' => 'enum',
+          'view' => 'views/fields/currency-list',
+          'layoutDetailDisabled' => true,
+          'layoutListDisabled' => true,
+          'layoutMassUpdateDisabled' => true,
+          'layoutDefaultSidePanelDisabled' => true,
+          'customizationRequiredDisabled' => true,
+          'customizationOptionsDisabled' => true,
+          'customizationIsSortedDisabled' => true,
+          'customizationDisplayAsLabelDisabled' => true,
+          'customizationAuditedDisabled' => true,
+          'customizationReadOnlyDisabled' => true,
+          'customizationInlineEditDisabledDisabled' => true,
+          'customizationDefaultView' => 'views/admin/field-manager/fields/currency-default',
+          'customizationTooltipTextDisabled' => true,
+          'maxLength' => 3
+        ],
+        'listPriceConverted' => (object) [
+          'readOnly' => true,
+          'type' => 'currencyConverted',
+          'importDisabled' => true,
+          'customizationInlineEditDisabledDisabled' => true
+        ],
+        'unitPriceCurrency' => (object) [
+          'readOnly' => true,
+          'type' => 'enum',
+          'view' => 'views/fields/currency-list',
+          'layoutDetailDisabled' => true,
+          'layoutListDisabled' => true,
+          'layoutMassUpdateDisabled' => true,
+          'layoutDefaultSidePanelDisabled' => true,
+          'customizationRequiredDisabled' => true,
+          'customizationOptionsDisabled' => true,
+          'customizationIsSortedDisabled' => true,
+          'customizationDisplayAsLabelDisabled' => true,
+          'customizationAuditedDisabled' => true,
+          'customizationReadOnlyDisabled' => true,
+          'customizationInlineEditDisabledDisabled' => true,
+          'customizationDefaultView' => 'views/admin/field-manager/fields/currency-default',
+          'customizationTooltipTextDisabled' => true,
+          'maxLength' => 3
+        ],
+        'unitPriceConverted' => (object) [
+          'readOnly' => true,
+          'type' => 'currencyConverted',
+          'importDisabled' => true,
+          'customizationInlineEditDisabledDisabled' => true
+        ],
+        'amountCurrency' => (object) [
+          'readOnly' => true,
+          'type' => 'enum',
+          'view' => 'views/fields/currency-list',
+          'layoutDetailDisabled' => true,
+          'layoutListDisabled' => true,
+          'layoutMassUpdateDisabled' => true,
+          'layoutDefaultSidePanelDisabled' => true,
+          'customizationRequiredDisabled' => true,
+          'customizationOptionsDisabled' => true,
+          'customizationIsSortedDisabled' => true,
+          'customizationDisplayAsLabelDisabled' => true,
+          'customizationAuditedDisabled' => true,
+          'customizationReadOnlyDisabled' => true,
+          'customizationInlineEditDisabledDisabled' => true,
+          'customizationDefaultView' => 'views/admin/field-manager/fields/currency-default',
+          'customizationTooltipTextDisabled' => true,
+          'maxLength' => 3
+        ],
+        'amountConverted' => (object) [
+          'readOnly' => true,
+          'type' => 'currencyConverted',
+          'importDisabled' => true,
+          'customizationInlineEditDisabledDisabled' => true
+        ]
+      ],
+      'links' => (object) [
+        'createdBy' => (object) [
+          'type' => 'belongsTo',
+          'entity' => 'User'
+        ],
+        'modifiedBy' => (object) [
+          'type' => 'belongsTo',
+          'entity' => 'User'
+        ],
+        'product' => (object) [
+          'type' => 'belongsTo',
+          'entity' => 'Product'
+        ],
+        'quote' => (object) [
+          'type' => 'belongsTo',
+          'entity' => 'Quote',
+          'foreign' => 'items'
+        ],
+        'account' => (object) [
+          'type' => 'belongsTo',
+          'entity' => 'Account',
+          'foreign' => 'quoteItems'
+        ]
+      ],
+      'collection' => (object) [
+        'sortBy' => 'createdAt',
+        'asc' => false,
+        'orderBy' => 'createdAt',
+        'order' => 'desc'
+      ]
+    ],
+    'ReceiptOrder' => (object) [
+      'fields' => (object) [
+        'name' => (object) [
+          'type' => 'varchar',
+          'duplicateIgnore' => true
+        ],
+        'number' => (object) [
+          'type' => 'varchar',
+          'maxLength' => 100,
+          'index' => true,
+          'readOnly' => true,
+          'fieldManagerAdditionalParamList' => [
+            0 => (object) [
+              'name' => 'useAutoincrement',
+              'type' => 'bool'
+            ]
+          ],
+          'useAutoincrement' => true
+        ],
+        'numberA' => (object) [
+          'type' => 'number',
+          'prefix' => 'RO-',
+          'padLength' => 5,
+          'utility' => true
+        ],
+        'status' => (object) [
+          'type' => 'enum',
+          'options' => [
+            0 => 'Draft',
+            1 => 'Ready',
+            2 => 'Completed',
+            3 => 'Canceled'
+          ],
+          'style' => (object) [
+            'Ready' => 'primary',
+            'Completed' => 'success',
+            'Canceled' => 'info'
+          ],
+          'default' => 'Draft',
+          'fieldManagerAdditionalParamList' => [
+            0 => (object) [
+              'name' => 'notActualOptions',
+              'view' => 'sales:views/admin/field-manager/fields/not-actual-options'
+            ]
+          ],
+          'notActualOptions' => [
+            0 => 'Completed',
+            1 => 'Canceled'
+          ],
+          'index' => true,
+          'audited' => true
+        ],
+        'dateOrdered' => (object) [
+          'type' => 'date',
+          'default' => 'javascript: return this.dateTime.getToday();',
+          'audited' => true
+        ],
+        'dateReceived' => (object) [
+          'type' => 'date',
+          'audited' => true
+        ],
+        'account' => (object) [
+          'type' => 'link',
+          'readOnly' => true
+        ],
+        'supplier' => (object) [
+          'type' => 'link',
+          'autocompleteOnEmpty' => true
+        ],
+        'purchaseOrder' => (object) [
+          'type' => 'link',
+          'view' => 'sales:views/receipt-order/fields/purchase-order'
+        ],
+        'returnOrder' => (object) [
+          'type' => 'link',
+          'view' => 'sales:views/receipt-order/fields/return-order'
+        ],
+        'warehouse' => (object) [
+          'type' => 'link',
+          'validatorClassNameList' => [
+            0 => 'Espo\\Modules\\Sales\\Classes\\FieldValidators\\DeliveryOrder\\Warehouse\\Required'
+          ],
+          'autocompleteOnEmpty' => true
+        ],
+        'description' => (object) [
+          'type' => 'text'
+        ],
+        'shippingContact' => (object) [
+          'type' => 'link',
+          'view' => 'sales:views/quote/fields/contact'
+        ],
+        'shippingProvider' => (object) [
+          'type' => 'link',
+          'autocompleteOnEmpty' => true
+        ],
+        'shippingCost' => (object) [
+          'type' => 'currency',
+          'layoutDetailDisabled' => true
+        ],
+        'amount' => (object) [
+          'type' => 'currency',
+          'notStorable' => true,
+          'readOnly' => true,
+          'utility' => true,
+          'directAccessDisabled' => true,
+          'customizationDisabled' => true
+        ],
+        'amountConverted' => (object) [
+          'notStorable' => true,
+          'readOnly' => true,
+          'directAccessDisabled' => true,
+          'customizationDisabled' => true,
+          'type' => 'currencyConverted',
+          'importDisabled' => true,
+          'customizationInlineEditDisabledDisabled' => true,
+          'disabled' => true
+        ],
+        'amountCurrency' => (object) [
+          'notStorable' => true,
+          'readOnly' => true,
+          'directAccessDisabled' => true,
+          'customizationDisabled' => true,
+          'type' => 'enum',
+          'view' => 'views/fields/currency-list',
+          'layoutDetailDisabled' => true,
+          'layoutListDisabled' => true,
+          'layoutMassUpdateDisabled' => true,
+          'layoutDefaultSidePanelDisabled' => true,
+          'customizationRequiredDisabled' => true,
+          'customizationOptionsDisabled' => true,
+          'customizationIsSortedDisabled' => true,
+          'customizationDisplayAsLabelDisabled' => true,
+          'customizationAuditedDisabled' => true,
+          'customizationReadOnlyDisabled' => true,
+          'customizationInlineEditDisabledDisabled' => true,
+          'customizationDefaultView' => 'views/admin/field-manager/fields/currency-default',
+          'customizationTooltipTextDisabled' => true,
+          'maxLength' => 3,
+          'utility' => true
+        ],
+        'weight' => (object) [
+          'type' => 'float',
+          'min' => 0,
+          'readOnly' => true
+        ],
+        'itemList' => (object) [
+          'type' => 'jsonArray',
+          'notStorable' => true,
+          'layoutAvailabilityList' => [],
+          'dynamicLogicVisibleDisabled' => true,
+          'dynamicLogicInvalidDisabled' => true,
+          'view' => 'sales:views/quote/fields/item-list',
+          'templatePlaceholderDisabled' => true,
+          'reportDisabled' => true,
+          'workflowDisabled' => true,
+          'inlineEditDisabled' => true,
+          'duplicatorClassName' => 'Espo\\Modules\\Sales\\Classes\\FieldDuplicators\\Quote\\ItemList'
+        ],
+        'receivedItemList' => (object) [
+          'type' => 'jsonArray',
+          'notStorable' => true,
+          'layoutAvailabilityList' => [],
+          'dynamicLogicVisibleDisabled' => true,
+          'dynamicLogicInvalidDisabled' => true,
+          'templatePlaceholderDisabled' => true,
+          'reportDisabled' => true,
+          'workflowDisabled' => true,
+          'inlineEditDisabled' => true,
+          'duplicatorClassName' => 'Espo\\Modules\\Sales\\Classes\\FieldDuplicators\\ReceiptOrder\\ReceivedItemList'
+        ],
+        'isDone' => (object) [
+          'type' => 'bool',
+          'readOnly' => true,
+          'customizationReadOnlyDisabled' => true
+        ],
+        'isNotActual' => (object) [
+          'type' => 'bool',
+          'readOnly' => true,
+          'customizationReadOnlyDisabled' => true
+        ],
+        'isLocked' => (object) [
+          'type' => 'bool',
+          'readOnly' => true,
+          'customizationReadOnlyDisabled' => true
+        ],
+        'isHardLocked' => (object) [
+          'type' => 'bool',
+          'readOnly' => true,
+          'customizationReadOnlyDisabled' => true
+        ],
+        'products' => (object) [
+          'type' => 'linkMultiple',
+          'entity' => 'Product',
+          'notStorable' => true,
+          'customizationDisabled' => true,
+          'directAccessDisabled' => true,
+          'layoutAvailabilityList' => [
+            0 => 'filters'
+          ],
+          'view' => 'sales:views/quote/fields/products'
+        ],
+        'inventoryNumbers' => (object) [
+          'type' => 'linkMultiple',
+          'entity' => 'InventoryNumber',
+          'notStorable' => true,
+          'customizationDisabled' => true,
+          'directAccessDisabled' => true,
+          'layoutAvailabilityList' => [
+            0 => 'filters'
+          ],
+          'view' => 'sales:views/quote/fields/inventory-numbers'
+        ],
+        'createdAt' => (object) [
+          'type' => 'datetime',
+          'readOnly' => true
+        ],
+        'modifiedAt' => (object) [
+          'type' => 'datetime',
+          'readOnly' => true
+        ],
+        'createdBy' => (object) [
+          'type' => 'link',
+          'readOnly' => true
+        ],
+        'modifiedBy' => (object) [
+          'type' => 'link',
+          'readOnly' => true
+        ],
+        'assignedUser' => (object) [
+          'type' => 'link',
+          'view' => 'views/fields/assigned-user'
+        ],
+        'teams' => (object) [
+          'type' => 'linkMultiple'
+        ],
+        'shippingCostCurrency' => (object) [
+          'layoutDetailDisabled' => true,
+          'type' => 'enum',
+          'view' => 'views/fields/currency-list',
+          'layoutListDisabled' => true,
+          'layoutMassUpdateDisabled' => true,
+          'layoutDefaultSidePanelDisabled' => true,
+          'customizationRequiredDisabled' => true,
+          'customizationOptionsDisabled' => true,
+          'customizationIsSortedDisabled' => true,
+          'customizationDisplayAsLabelDisabled' => true,
+          'customizationAuditedDisabled' => true,
+          'customizationReadOnlyDisabled' => true,
+          'customizationInlineEditDisabledDisabled' => true,
+          'customizationDefaultView' => 'views/admin/field-manager/fields/currency-default',
+          'customizationTooltipTextDisabled' => true,
+          'maxLength' => 3
+        ],
+        'shippingCostConverted' => (object) [
+          'layoutDetailDisabled' => true,
+          'type' => 'currencyConverted',
+          'readOnly' => true,
+          'importDisabled' => true,
+          'customizationInlineEditDisabledDisabled' => true
+        ]
+      ],
+      'links' => (object) [
+        'createdBy' => (object) [
+          'type' => 'belongsTo',
+          'entity' => 'User'
+        ],
+        'modifiedBy' => (object) [
+          'type' => 'belongsTo',
+          'entity' => 'User'
+        ],
+        'shippingProvider' => (object) [
+          'type' => 'belongsTo',
+          'entity' => 'ShippingProvider'
+        ],
+        'account' => (object) [
+          'type' => 'belongsTo',
+          'entity' => 'Account',
+          'foreign' => 'receiptOrders'
+        ],
+        'supplier' => (object) [
+          'type' => 'belongsTo',
+          'entity' => 'Supplier'
+        ],
+        'purchaseOrder' => (object) [
+          'type' => 'belongsTo',
+          'entity' => 'PurchaseOrder',
+          'foreign' => 'receiptOrders'
+        ],
+        'returnOrder' => (object) [
+          'type' => 'belongsTo',
+          'entity' => 'ReturnOrder',
+          'foreign' => 'receiptOrders'
+        ],
+        'shippingContact' => (object) [
+          'type' => 'belongsTo',
+          'entity' => 'Contact',
+          'foreign' => 'receiptOrdersShipping'
+        ],
+        'warehouse' => (object) [
+          'type' => 'belongsTo',
+          'entity' => 'Warehouse'
+        ],
+        'items' => (object) [
+          'type' => 'hasMany',
+          'entity' => 'ReceiptOrderItem',
+          'foreign' => 'receiptOrder',
+          'layoutRelationshipsDisabled' => true
+        ],
+        'receivedItems' => (object) [
+          'type' => 'hasMany',
+          'entity' => 'ReceiptOrderReceivedItem',
+          'foreign' => 'receiptOrder',
+          'layoutRelationshipsDisabled' => true
+        ],
+        'inventoryTransactions' => (object) [
+          'type' => 'hasChildren',
+          'entity' => 'InventoryTransaction',
+          'foreign' => 'parent'
+        ],
+        'assignedUser' => (object) [
+          'type' => 'belongsTo',
+          'entity' => 'User'
+        ],
+        'teams' => (object) [
+          'type' => 'hasMany',
+          'entity' => 'Team',
+          'relationName' => 'EntityTeam',
+          'layoutRelationshipsDisabled' => true
+        ]
+      ],
+      'collection' => (object) [
+        'orderBy' => 'createdAt',
+        'order' => 'desc',
+        'textFilterFields' => [
+          0 => 'name',
+          1 => 'number'
+        ],
+        'sortBy' => 'createdAt',
+        'asc' => false
+      ],
+      'indexes' => (object) [
+        'createdAt' => (object) [
+          'columns' => [
+            0 => 'createdAt'
+          ]
+        ]
+      ]
+    ],
+    'ReceiptOrderItem' => (object) [
+      'fields' => (object) [
+        'name' => (object) [
+          'type' => 'varchar',
+          'required' => true
+        ],
+        'receiptOrder' => (object) [
+          'type' => 'link',
+          'readOnly' => true
+        ],
+        'account' => (object) [
+          'type' => 'link',
+          'readOnly' => true
+        ],
+        'receiptOrderStatus' => (object) [
+          'type' => 'foreign',
+          'link' => 'receiptOrder',
+          'field' => 'status',
+          'readOnly' => true,
+          'view' => 'views/fields/foreign-enum'
+        ],
+        'product' => (object) [
+          'type' => 'link',
+          'readOnly' => true,
+          'itemNotReadOnly' => true,
+          'fieldManagerAdditionalParamList' => [
+            0 => (object) [
+              'name' => 'copyFieldList',
+              'type' => 'multiEnum',
+              'view' => 'sales:views/admin/field-manager/quote-item/fields/product-copy-field-list',
+              'isSorted' => true
+            ]
+          ]
+        ],
+        'allowFractionalQuantity' => (object) [
+          'type' => 'foreign',
+          'link' => 'product',
+          'field' => 'allowFractionalQuantity',
+          'view' => 'views/fields/foreign-bool',
+          'readOnly' => true
+        ],
+        'productType' => (object) [
+          'type' => 'foreign',
+          'link' => 'product',
+          'field' => 'type',
+          'view' => 'views/fields/foreign-enum',
+          'readOnly' => true
+        ],
+        'quantity' => (object) [
+          'type' => 'float',
+          'default' => 1.0,
+          'required' => true,
+          'readOnly' => true,
+          'itemNotReadOnly' => true,
+          'min' => 0.0,
+          'validatorClassNameList' => [
+            0 => 'Espo\\Modules\\Sales\\Classes\\FieldValidators\\QuoteItem\\Quantity\\NotFractional'
+          ],
+          'view' => 'sales:views/quote-item/fields/quantity'
+        ],
+        'quantityInt' => (object) [
+          'type' => 'int',
+          'notStorable' => true,
+          'select' => (object) [
+            'select' => 'FLOOR:(quantity)'
+          ],
+          'readOnly' => true
+        ],
+        'quantityReceived' => (object) [
+          'type' => 'float',
+          'readOnly' => true,
+          'default' => NULL,
+          'itemNotReadOnly' => true,
+          'min' => 0.0,
+          'view' => 'sales:views/receipt-order-item/fields/quantity-received',
+          'validatorClassNameList' => [
+            0 => 'Espo\\Modules\\Sales\\Classes\\FieldValidators\\QuoteItem\\Quantity\\NotFractional'
+          ]
+        ],
+        'quantityReceivedInt' => (object) [
+          'type' => 'int',
+          'notStorable' => true,
+          'select' => (object) [
+            'select' => 'IF:(IS_NOT_NULL:(quantityReceived), FLOOR:(quantityReceived), null)'
+          ],
+          'readOnly' => true
+        ],
+        'inventoryNumberType' => (object) [
+          'type' => 'foreign',
+          'link' => 'product',
+          'field' => 'inventoryNumberType',
+          'view' => 'views/fields/foreign-enum',
+          'readOnly' => true
+        ],
+        'isInventory' => (object) [
+          'type' => 'foreign',
+          'link' => 'product',
+          'field' => 'isInventory',
+          'view' => 'views/fields/foreign-bool',
+          'readOnly' => true
+        ],
+        'unitWeight' => (object) [
+          'type' => 'float',
+          'min' => 0
+        ],
+        'weight' => (object) [
+          'type' => 'float',
+          'min' => 0,
+          'readOnly' => true
+        ],
+        'order' => (object) [
+          'type' => 'int',
+          'default' => 1,
+          'readOnly' => true
+        ],
+        'description' => (object) [
+          'type' => 'text'
+        ],
+        'createdAt' => (object) [
+          'type' => 'datetime',
+          'readOnly' => true
+        ],
+        'modifiedAt' => (object) [
+          'type' => 'datetime',
+          'readOnly' => true
+        ],
+        'createdBy' => (object) [
+          'type' => 'link',
+          'readOnly' => true
+        ],
+        'modifiedBy' => (object) [
+          'type' => 'link',
+          'readOnly' => true
+        ]
+      ],
+      'links' => (object) [
+        'createdBy' => (object) [
+          'type' => 'belongsTo',
+          'entity' => 'User'
+        ],
+        'modifiedBy' => (object) [
+          'type' => 'belongsTo',
+          'entity' => 'User'
+        ],
+        'product' => (object) [
+          'type' => 'belongsTo',
+          'entity' => 'Product'
+        ],
+        'receiptOrder' => (object) [
+          'type' => 'belongsTo',
+          'entity' => 'ReceiptOrder',
+          'foreign' => 'items'
+        ],
+        'account' => (object) [
+          'type' => 'belongsTo',
+          'entity' => 'Account',
+          'foreign' => 'receiptOrderItems'
+        ]
+      ],
+      'collection' => (object) [
+        'sortBy' => 'createdAt',
+        'asc' => false,
+        'orderBy' => 'createdAt',
+        'order' => 'desc'
+      ]
+    ],
+    'ReceiptOrderReceivedItem' => (object) [
+      'fields' => (object) [
+        'receiptOrder' => (object) [
+          'type' => 'link',
+          'readOnly' => true,
+          'required' => true
+        ],
+        'product' => (object) [
+          'type' => 'link',
+          'readOnly' => true,
+          'required' => true
+        ],
+        'inventoryNumber' => (object) [
+          'type' => 'link',
+          'readOnly' => true,
+          'required' => true
+        ],
+        'quantity' => (object) [
+          'type' => 'float',
+          'default' => 0.0,
+          'required' => true,
+          'readOnly' => true,
+          'min' => 0.0
+        ],
+        'inventoryNumberType' => (object) [
+          'type' => 'foreign',
+          'link' => 'product',
+          'field' => 'inventoryNumberType',
+          'view' => 'views/fields/foreign-enum',
+          'readOnly' => true
+        ],
+        'order' => (object) [
+          'type' => 'int',
+          'default' => 1,
+          'readOnly' => true
+        ],
+        'createdAt' => (object) [
+          'type' => 'datetime',
+          'readOnly' => true
+        ],
+        'modifiedAt' => (object) [
+          'type' => 'datetime',
+          'readOnly' => true
+        ],
+        'createdBy' => (object) [
+          'type' => 'link',
+          'readOnly' => true
+        ],
+        'modifiedBy' => (object) [
+          'type' => 'link',
+          'readOnly' => true
+        ]
+      ],
+      'links' => (object) [
+        'createdBy' => (object) [
+          'type' => 'belongsTo',
+          'entity' => 'User'
+        ],
+        'modifiedBy' => (object) [
+          'type' => 'belongsTo',
+          'entity' => 'User'
+        ],
+        'product' => (object) [
+          'type' => 'belongsTo',
+          'entity' => 'Product'
+        ],
+        'receiptOrder' => (object) [
+          'type' => 'belongsTo',
+          'entity' => 'ReceiptOrder',
+          'foreign' => 'receivedItems'
+        ],
+        'inventoryNumber' => (object) [
+          'type' => 'belongsTo',
+          'entity' => 'InventoryNumber'
+        ]
+      ],
+      'collection' => (object) [
+        'sortBy' => 'createdAt',
+        'asc' => false,
+        'orderBy' => 'createdAt',
+        'order' => 'desc'
+      ]
+    ],
+    'ReturnOrder' => (object) [
+      'fields' => (object) [
+        'name' => (object) [
+          'type' => 'varchar',
+          'duplicateIgnore' => true
+        ],
+        'number' => (object) [
+          'type' => 'varchar',
+          'maxLength' => 100,
+          'index' => true,
+          'readOnly' => true,
+          'fieldManagerAdditionalParamList' => [
+            0 => (object) [
+              'name' => 'useAutoincrement',
+              'type' => 'bool'
+            ]
+          ],
+          'useAutoincrement' => true
+        ],
+        'numberA' => (object) [
+          'type' => 'number',
+          'prefix' => 'SRO-',
+          'padLength' => 5,
+          'utility' => true
+        ],
+        'status' => (object) [
+          'type' => 'enum',
+          'options' => [
+            0 => 'Draft',
+            1 => 'Released',
+            2 => 'Completed',
+            3 => 'Canceled'
+          ],
+          'style' => (object) [
+            'Released' => 'primary',
+            'Completed' => 'success',
+            'Canceled' => 'info'
+          ],
+          'default' => 'Draft',
+          'fieldManagerAdditionalParamList' => [
+            0 => (object) [
+              'name' => 'notActualOptions',
+              'view' => 'sales:views/admin/field-manager/fields/not-actual-options'
+            ]
+          ],
+          'notActualOptions' => [
+            0 => 'Completed',
+            1 => 'Canceled'
+          ],
+          'audited' => true
+        ],
+        'dateOrdered' => (object) [
+          'type' => 'date',
+          'default' => 'javascript: return this.dateTime.getToday();',
+          'audited' => true
+        ],
+        'deliveryDate' => (object) [
+          'type' => 'date',
+          'audited' => true
+        ],
+        'account' => (object) [
+          'type' => 'link'
+        ],
+        'salesOrder' => (object) [
+          'type' => 'link',
+          'view' => 'sales:views/return-order/fields/sales-order'
+        ],
+        'description' => (object) [
+          'type' => 'text'
+        ],
+        'warehouse' => (object) [
+          'type' => 'link',
+          'view' => 'sales:views/purchase-order/fields/warehouse',
+          'autocompleteOnEmpty' => true
+        ],
+        'billingAddress' => (object) [
+          'type' => 'address'
+        ],
+        'shippingAddress' => (object) [
+          'type' => 'address'
+        ],
+        'fromAddress' => (object) [
+          'type' => 'address'
+        ],
+        'billingContact' => (object) [
+          'type' => 'link',
+          'view' => 'sales:views/quote/fields/contact'
+        ],
+        'shippingContact' => (object) [
+          'type' => 'link',
+          'view' => 'sales:views/quote/fields/contact'
+        ],
+        'tax' => (object) [
+          'type' => 'link',
+          'view' => 'sales:views/quote/fields/tax',
+          'autocompleteOnEmpty' => true
+        ],
+        'taxRate' => (object) [
+          'type' => 'float',
+          'min' => 0,
+          'max' => 100
+        ],
+        'shippingProvider' => (object) [
+          'type' => 'link',
+          'autocompleteOnEmpty' => true
+        ],
+        'shippingCost' => (object) [
+          'type' => 'currency',
+          'layoutDetailDisabled' => true
+        ],
+        'taxAmount' => (object) [
+          'type' => 'currency',
+          'layoutDetailDisabled' => true,
+          'readOnly' => true
+        ],
+        'discountAmount' => (object) [
+          'type' => 'currency',
+          'layoutDetailDisabled' => true,
+          'readOnly' => true
+        ],
+        'amount' => (object) [
+          'type' => 'currency'
+        ],
+        'preDiscountedAmount' => (object) [
+          'type' => 'currency',
+          'layoutDetailDisabled' => true,
+          'readOnly' => true
+        ],
+        'grandTotalAmount' => (object) [
+          'type' => 'currency',
+          'layoutDetailDisabled' => true,
+          'readOnly' => true
+        ],
+        'weight' => (object) [
+          'type' => 'float',
+          'min' => 0,
+          'readOnly' => true
+        ],
+        'itemList' => (object) [
+          'type' => 'jsonArray',
+          'notStorable' => true,
+          'layoutAvailabilityList' => [],
+          'dynamicLogicVisibleDisabled' => true,
+          'dynamicLogicInvalidDisabled' => true,
+          'view' => 'sales:views/quote/fields/item-list',
+          'templatePlaceholderDisabled' => true,
+          'reportDisabled' => true,
+          'workflowDisabled' => true,
+          'duplicatorClassName' => 'Espo\\Modules\\Sales\\Classes\\FieldDuplicators\\Quote\\ItemList'
+        ],
+        'isReceiptFullyCreated' => (object) [
+          'type' => 'bool',
+          'readOnly' => true,
+          'layoutAvailabilityList' => [
+            0 => 'defaultSidePanel'
+          ],
+          'customizationReadOnlyDisabled' => true,
+          'default' => false
+        ],
+        'hasInventoryItems' => (object) [
+          'type' => 'bool',
+          'readOnly' => true,
+          'customizationReadOnlyDisabled' => true
+        ],
+        'isDone' => (object) [
+          'type' => 'bool',
+          'readOnly' => true,
+          'customizationReadOnlyDisabled' => true
+        ],
+        'isNotActual' => (object) [
+          'type' => 'bool',
+          'readOnly' => true,
+          'customizationReadOnlyDisabled' => true
+        ],
+        'isLocked' => (object) [
+          'type' => 'bool',
+          'readOnly' => true,
+          'customizationReadOnlyDisabled' => true
+        ],
+        'products' => (object) [
+          'type' => 'linkMultiple',
+          'entity' => 'Product',
+          'notStorable' => true,
+          'customizationDisabled' => true,
+          'directAccessDisabled' => true,
+          'layoutAvailabilityList' => [
+            0 => 'filters'
+          ],
+          'view' => 'sales:views/quote/fields/products'
+        ],
+        'createdAt' => (object) [
+          'type' => 'datetime',
+          'readOnly' => true
+        ],
+        'modifiedAt' => (object) [
+          'type' => 'datetime',
+          'readOnly' => true
+        ],
+        'createdBy' => (object) [
+          'type' => 'link',
+          'readOnly' => true
+        ],
+        'modifiedBy' => (object) [
+          'type' => 'link',
+          'readOnly' => true
+        ],
+        'assignedUser' => (object) [
+          'type' => 'link',
+          'view' => 'views/fields/assigned-user'
+        ],
+        'teams' => (object) [
+          'type' => 'linkMultiple'
+        ],
+        'billingAddressStreet' => (object) [
+          'type' => 'text',
+          'maxLength' => 255,
+          'dbType' => 'varchar'
+        ],
+        'billingAddressCity' => (object) [
+          'type' => 'varchar',
+          'maxLength' => 100,
+          'view' => 'views/fields/address-city',
+          'customizationOptionsDisabled' => true,
+          'customizationOptionsReferenceDisabled' => true,
+          'pattern' => '$noBadCharacters'
+        ],
+        'billingAddressState' => (object) [
+          'type' => 'varchar',
+          'maxLength' => 100,
+          'view' => 'views/fields/address-state',
+          'customizationOptionsDisabled' => true,
+          'customizationOptionsReferenceDisabled' => true,
+          'pattern' => '$noBadCharacters'
+        ],
+        'billingAddressCountry' => (object) [
+          'type' => 'varchar',
+          'maxLength' => 100,
+          'view' => 'views/fields/address-country',
+          'customizationOptionsDisabled' => true,
+          'customizationOptionsReferenceDisabled' => true,
+          'pattern' => '$noBadCharacters'
+        ],
+        'billingAddressPostalCode' => (object) [
+          'type' => 'varchar',
+          'maxLength' => 40,
+          'pattern' => '$noBadCharacters'
+        ],
+        'billingAddressMap' => (object) [
+          'type' => 'map',
+          'notStorable' => true,
+          'orderDisabled' => true,
+          'readOnly' => true,
+          'layoutListDisabled' => true,
+          'provider' => 'Google',
+          'height' => 300,
+          'exportDisabled' => true,
+          'importDisabled' => true
+        ],
+        'shippingAddressStreet' => (object) [
+          'type' => 'text',
+          'maxLength' => 255,
+          'dbType' => 'varchar'
+        ],
+        'shippingAddressCity' => (object) [
+          'type' => 'varchar',
+          'maxLength' => 100,
+          'view' => 'views/fields/address-city',
+          'customizationOptionsDisabled' => true,
+          'customizationOptionsReferenceDisabled' => true,
+          'pattern' => '$noBadCharacters'
+        ],
+        'shippingAddressState' => (object) [
+          'type' => 'varchar',
+          'maxLength' => 100,
+          'view' => 'views/fields/address-state',
+          'customizationOptionsDisabled' => true,
+          'customizationOptionsReferenceDisabled' => true,
+          'pattern' => '$noBadCharacters'
+        ],
+        'shippingAddressCountry' => (object) [
+          'type' => 'varchar',
+          'maxLength' => 100,
+          'view' => 'views/fields/address-country',
+          'customizationOptionsDisabled' => true,
+          'customizationOptionsReferenceDisabled' => true,
+          'pattern' => '$noBadCharacters'
+        ],
+        'shippingAddressPostalCode' => (object) [
+          'type' => 'varchar',
+          'maxLength' => 40,
+          'pattern' => '$noBadCharacters'
+        ],
+        'shippingAddressMap' => (object) [
+          'type' => 'map',
+          'notStorable' => true,
+          'orderDisabled' => true,
+          'readOnly' => true,
+          'layoutListDisabled' => true,
+          'provider' => 'Google',
+          'height' => 300,
+          'exportDisabled' => true,
+          'importDisabled' => true
+        ],
+        'fromAddressStreet' => (object) [
+          'type' => 'text',
+          'maxLength' => 255,
+          'dbType' => 'varchar'
+        ],
+        'fromAddressCity' => (object) [
+          'type' => 'varchar',
+          'maxLength' => 100,
+          'view' => 'views/fields/address-city',
+          'customizationOptionsDisabled' => true,
+          'customizationOptionsReferenceDisabled' => true,
+          'pattern' => '$noBadCharacters'
+        ],
+        'fromAddressState' => (object) [
+          'type' => 'varchar',
+          'maxLength' => 100,
+          'view' => 'views/fields/address-state',
+          'customizationOptionsDisabled' => true,
+          'customizationOptionsReferenceDisabled' => true,
+          'pattern' => '$noBadCharacters'
+        ],
+        'fromAddressCountry' => (object) [
+          'type' => 'varchar',
+          'maxLength' => 100,
+          'view' => 'views/fields/address-country',
+          'customizationOptionsDisabled' => true,
+          'customizationOptionsReferenceDisabled' => true,
+          'pattern' => '$noBadCharacters'
+        ],
+        'fromAddressPostalCode' => (object) [
+          'type' => 'varchar',
+          'maxLength' => 40,
+          'pattern' => '$noBadCharacters'
+        ],
+        'fromAddressMap' => (object) [
+          'type' => 'map',
+          'notStorable' => true,
+          'orderDisabled' => true,
+          'readOnly' => true,
+          'layoutListDisabled' => true,
+          'provider' => 'Google',
+          'height' => 300,
+          'exportDisabled' => true,
+          'importDisabled' => true
+        ],
+        'shippingCostCurrency' => (object) [
+          'layoutDetailDisabled' => true,
+          'type' => 'enum',
+          'view' => 'views/fields/currency-list',
+          'layoutListDisabled' => true,
+          'layoutMassUpdateDisabled' => true,
+          'layoutDefaultSidePanelDisabled' => true,
+          'customizationRequiredDisabled' => true,
+          'customizationOptionsDisabled' => true,
+          'customizationIsSortedDisabled' => true,
+          'customizationDisplayAsLabelDisabled' => true,
+          'customizationAuditedDisabled' => true,
+          'customizationReadOnlyDisabled' => true,
+          'customizationInlineEditDisabledDisabled' => true,
+          'customizationDefaultView' => 'views/admin/field-manager/fields/currency-default',
+          'customizationTooltipTextDisabled' => true,
+          'maxLength' => 3
+        ],
+        'shippingCostConverted' => (object) [
+          'layoutDetailDisabled' => true,
+          'type' => 'currencyConverted',
+          'readOnly' => true,
+          'importDisabled' => true,
+          'customizationInlineEditDisabledDisabled' => true
+        ],
+        'taxAmountCurrency' => (object) [
+          'layoutDetailDisabled' => true,
+          'readOnly' => true,
+          'type' => 'enum',
+          'view' => 'views/fields/currency-list',
+          'layoutListDisabled' => true,
+          'layoutMassUpdateDisabled' => true,
+          'layoutDefaultSidePanelDisabled' => true,
+          'customizationRequiredDisabled' => true,
+          'customizationOptionsDisabled' => true,
+          'customizationIsSortedDisabled' => true,
+          'customizationDisplayAsLabelDisabled' => true,
+          'customizationAuditedDisabled' => true,
+          'customizationReadOnlyDisabled' => true,
+          'customizationInlineEditDisabledDisabled' => true,
+          'customizationDefaultView' => 'views/admin/field-manager/fields/currency-default',
+          'customizationTooltipTextDisabled' => true,
+          'maxLength' => 3
+        ],
+        'taxAmountConverted' => (object) [
+          'layoutDetailDisabled' => true,
+          'readOnly' => true,
+          'type' => 'currencyConverted',
+          'importDisabled' => true,
+          'customizationInlineEditDisabledDisabled' => true
+        ],
+        'discountAmountCurrency' => (object) [
+          'layoutDetailDisabled' => true,
+          'readOnly' => true,
+          'type' => 'enum',
+          'view' => 'views/fields/currency-list',
+          'layoutListDisabled' => true,
+          'layoutMassUpdateDisabled' => true,
+          'layoutDefaultSidePanelDisabled' => true,
+          'customizationRequiredDisabled' => true,
+          'customizationOptionsDisabled' => true,
+          'customizationIsSortedDisabled' => true,
+          'customizationDisplayAsLabelDisabled' => true,
+          'customizationAuditedDisabled' => true,
+          'customizationReadOnlyDisabled' => true,
+          'customizationInlineEditDisabledDisabled' => true,
+          'customizationDefaultView' => 'views/admin/field-manager/fields/currency-default',
+          'customizationTooltipTextDisabled' => true,
+          'maxLength' => 3
+        ],
+        'discountAmountConverted' => (object) [
+          'layoutDetailDisabled' => true,
+          'readOnly' => true,
+          'type' => 'currencyConverted',
+          'importDisabled' => true,
+          'customizationInlineEditDisabledDisabled' => true
+        ],
+        'amountCurrency' => (object) [
+          'type' => 'enum',
+          'view' => 'views/fields/currency-list',
+          'layoutDetailDisabled' => true,
+          'layoutListDisabled' => true,
+          'layoutMassUpdateDisabled' => true,
+          'layoutDefaultSidePanelDisabled' => true,
+          'customizationRequiredDisabled' => true,
+          'customizationOptionsDisabled' => true,
+          'customizationIsSortedDisabled' => true,
+          'customizationDisplayAsLabelDisabled' => true,
+          'customizationAuditedDisabled' => true,
+          'customizationReadOnlyDisabled' => true,
+          'customizationInlineEditDisabledDisabled' => true,
+          'customizationDefaultView' => 'views/admin/field-manager/fields/currency-default',
+          'customizationTooltipTextDisabled' => true,
+          'maxLength' => 3
+        ],
+        'amountConverted' => (object) [
+          'type' => 'currencyConverted',
+          'readOnly' => true,
+          'importDisabled' => true,
+          'customizationInlineEditDisabledDisabled' => true
+        ],
+        'preDiscountedAmountCurrency' => (object) [
+          'layoutDetailDisabled' => true,
+          'readOnly' => true,
+          'type' => 'enum',
+          'view' => 'views/fields/currency-list',
+          'layoutListDisabled' => true,
+          'layoutMassUpdateDisabled' => true,
+          'layoutDefaultSidePanelDisabled' => true,
+          'customizationRequiredDisabled' => true,
+          'customizationOptionsDisabled' => true,
+          'customizationIsSortedDisabled' => true,
+          'customizationDisplayAsLabelDisabled' => true,
+          'customizationAuditedDisabled' => true,
+          'customizationReadOnlyDisabled' => true,
+          'customizationInlineEditDisabledDisabled' => true,
+          'customizationDefaultView' => 'views/admin/field-manager/fields/currency-default',
+          'customizationTooltipTextDisabled' => true,
+          'maxLength' => 3
+        ],
+        'preDiscountedAmountConverted' => (object) [
+          'layoutDetailDisabled' => true,
+          'readOnly' => true,
+          'type' => 'currencyConverted',
+          'importDisabled' => true,
+          'customizationInlineEditDisabledDisabled' => true
+        ],
+        'grandTotalAmountCurrency' => (object) [
+          'layoutDetailDisabled' => true,
+          'readOnly' => true,
+          'type' => 'enum',
+          'view' => 'views/fields/currency-list',
+          'layoutListDisabled' => true,
+          'layoutMassUpdateDisabled' => true,
+          'layoutDefaultSidePanelDisabled' => true,
+          'customizationRequiredDisabled' => true,
+          'customizationOptionsDisabled' => true,
+          'customizationIsSortedDisabled' => true,
+          'customizationDisplayAsLabelDisabled' => true,
+          'customizationAuditedDisabled' => true,
+          'customizationReadOnlyDisabled' => true,
+          'customizationInlineEditDisabledDisabled' => true,
+          'customizationDefaultView' => 'views/admin/field-manager/fields/currency-default',
+          'customizationTooltipTextDisabled' => true,
+          'maxLength' => 3
+        ],
+        'grandTotalAmountConverted' => (object) [
+          'layoutDetailDisabled' => true,
+          'readOnly' => true,
+          'type' => 'currencyConverted',
+          'importDisabled' => true,
+          'customizationInlineEditDisabledDisabled' => true
+        ]
+      ],
+      'links' => (object) [
+        'createdBy' => (object) [
+          'type' => 'belongsTo',
+          'entity' => 'User'
+        ],
+        'modifiedBy' => (object) [
+          'type' => 'belongsTo',
+          'entity' => 'User'
+        ],
+        'receiptOrders' => (object) [
+          'type' => 'hasMany',
+          'entity' => 'ReceiptOrder',
+          'foreign' => 'returnOrder'
+        ],
+        'tax' => (object) [
+          'type' => 'belongsTo',
+          'entity' => 'Tax'
+        ],
+        'shippingProvider' => (object) [
+          'type' => 'belongsTo',
+          'entity' => 'ShippingProvider'
+        ],
+        'salesOrder' => (object) [
+          'type' => 'belongsTo',
+          'entity' => 'SalesOrder',
+          'foreign' => 'returnOrders'
+        ],
+        'account' => (object) [
+          'type' => 'belongsTo',
+          'entity' => 'Account',
+          'foreign' => 'purchaseOrders'
+        ],
+        'billingContact' => (object) [
+          'type' => 'belongsTo',
+          'entity' => 'Contact',
+          'foreign' => 'purchaseOrdersBilling'
+        ],
+        'shippingContact' => (object) [
+          'type' => 'belongsTo',
+          'entity' => 'Contact',
+          'foreign' => 'purchaseOrdersShipping'
+        ],
+        'warehouse' => (object) [
+          'type' => 'belongsTo',
+          'entity' => 'Warehouse'
+        ],
+        'items' => (object) [
+          'type' => 'hasMany',
+          'entity' => 'ReturnOrderItem',
+          'foreign' => 'returnOrder',
+          'layoutRelationshipsDisabled' => true
+        ],
+        'assignedUser' => (object) [
+          'type' => 'belongsTo',
+          'entity' => 'User'
+        ],
+        'teams' => (object) [
+          'type' => 'hasMany',
+          'entity' => 'Team',
+          'relationName' => 'EntityTeam',
+          'layoutRelationshipsDisabled' => true
+        ]
+      ],
+      'collection' => (object) [
+        'orderBy' => 'createdAt',
+        'order' => 'desc',
+        'textFilterFields' => [
+          0 => 'name',
+          1 => 'number'
+        ],
+        'sortBy' => 'createdAt',
+        'asc' => false
+      ],
+      'indexes' => (object) [
+        'createdAt' => (object) [
+          'columns' => [
+            0 => 'createdAt'
+          ]
+        ]
+      ]
+    ],
+    'ReturnOrderItem' => (object) [
+      'fields' => (object) [
+        'name' => (object) [
+          'type' => 'varchar',
+          'required' => true
+        ],
+        'returnOrder' => (object) [
+          'type' => 'link',
+          'readOnly' => true
+        ],
+        'account' => (object) [
+          'type' => 'link',
+          'readOnly' => true
+        ],
+        'returnOrderStatus' => (object) [
+          'type' => 'foreign',
+          'link' => 'returnOrder',
+          'field' => 'status',
+          'readOnly' => true,
+          'view' => 'views/fields/foreign-enum'
+        ],
+        'product' => (object) [
+          'type' => 'link',
+          'readOnly' => true,
+          'itemNotReadOnly' => true,
+          'fieldManagerAdditionalParamList' => [
+            0 => (object) [
+              'name' => 'copyFieldList',
+              'type' => 'multiEnum',
+              'view' => 'sales:views/admin/field-manager/quote-item/fields/product-copy-field-list',
+              'isSorted' => true
+            ]
+          ],
+          'customizationReadOnlyDisabled' => true
+        ],
+        'quantity' => (object) [
+          'type' => 'float',
+          'default' => 1.0,
+          'required' => true,
+          'readOnly' => true,
+          'itemNotReadOnly' => true,
+          'min' => 0.0,
+          'customizationReadOnlyDisabled' => true,
+          'validatorClassNameList' => [
+            0 => 'Espo\\Modules\\Sales\\Classes\\FieldValidators\\QuoteItem\\Quantity\\NotFractional'
+          ],
+          'view' => 'sales:views/quote-item/fields/quantity'
+        ],
+        'quantityInt' => (object) [
+          'type' => 'int',
+          'notStorable' => true,
+          'select' => (object) [
+            'select' => 'FLOOR:(quantity)'
+          ],
+          'readOnly' => true,
+          'customizationReadOnlyDisabled' => true
+        ],
+        'inventoryNumber' => (object) [
+          'type' => 'link',
+          'validatorClassNameList' => [
+            0 => 'Espo\\Modules\\Sales\\Classes\\FieldValidators\\DeliveryOrderItem\\InventoryNumber\\Valid'
+          ],
+          'view' => 'sales:views/return-order-item/fields/inventory-number',
+          'itemNotReadOnly' => true,
+          'readOnly' => true,
+          'customizationReadOnlyDisabled' => true
+        ],
+        'inventoryNumberType' => (object) [
+          'type' => 'foreign',
+          'link' => 'product',
+          'field' => 'inventoryNumberType',
+          'view' => 'views/fields/foreign-enum',
+          'readOnly' => true
+        ],
+        'isInventory' => (object) [
+          'type' => 'foreign',
+          'link' => 'product',
+          'field' => 'isInventory',
+          'view' => 'views/fields/foreign-bool',
+          'readOnly' => true
+        ],
+        'allowFractionalQuantity' => (object) [
+          'type' => 'foreign',
+          'link' => 'product',
+          'field' => 'allowFractionalQuantity',
+          'view' => 'views/fields/foreign-bool',
+          'readOnly' => true
+        ],
+        'productType' => (object) [
+          'type' => 'foreign',
+          'link' => 'product',
+          'field' => 'type',
+          'view' => 'views/fields/foreign-enum',
+          'readOnly' => true
+        ],
+        'taxRate' => (object) [
+          'type' => 'float',
+          'min' => 0,
+          'max' => 100,
+          'default' => 0,
+          'readOnly' => true,
+          'view' => 'sales:views/quote-item/fields/tax-rate',
+          'itemNotReadOnly' => true,
+          'customizationReadOnlyDisabled' => true,
+          'customizationDefaultDisabled' => true,
+          'customizationMinDisabled' => true,
+          'customizationMaxDisabled' => true
+        ],
+        'listPrice' => (object) [
+          'type' => 'currency',
+          'readOnly' => true,
+          'itemNotReadOnly' => true
+        ],
+        'unitPrice' => (object) [
+          'type' => 'currency',
+          'required' => true,
+          'readOnly' => true,
+          'itemNotReadOnly' => true
+        ],
+        'discount' => (object) [
+          'type' => 'float',
+          'readOnly' => true,
+          'view' => 'sales:views/quote-item/fields/discount-rate',
+          'itemNotReadOnly' => true
+        ],
+        'amount' => (object) [
+          'type' => 'currency',
+          'readOnly' => true
+        ],
+        'unitWeight' => (object) [
+          'type' => 'float',
+          'min' => 0
+        ],
+        'weight' => (object) [
+          'type' => 'float',
+          'min' => 0,
+          'readOnly' => true
+        ],
+        'order' => (object) [
+          'type' => 'int',
+          'default' => 1,
+          'readOnly' => true
+        ],
+        'description' => (object) [
+          'type' => 'text'
+        ],
+        'createdAt' => (object) [
+          'type' => 'datetime',
+          'readOnly' => true
+        ],
+        'modifiedAt' => (object) [
+          'type' => 'datetime',
+          'readOnly' => true
+        ],
+        'createdBy' => (object) [
+          'type' => 'link',
+          'readOnly' => true
+        ],
+        'modifiedBy' => (object) [
+          'type' => 'link',
+          'readOnly' => true
+        ],
+        'listPriceCurrency' => (object) [
+          'readOnly' => true,
+          'type' => 'enum',
+          'view' => 'views/fields/currency-list',
+          'layoutDetailDisabled' => true,
+          'layoutListDisabled' => true,
+          'layoutMassUpdateDisabled' => true,
+          'layoutDefaultSidePanelDisabled' => true,
+          'customizationRequiredDisabled' => true,
+          'customizationOptionsDisabled' => true,
+          'customizationIsSortedDisabled' => true,
+          'customizationDisplayAsLabelDisabled' => true,
+          'customizationAuditedDisabled' => true,
+          'customizationReadOnlyDisabled' => true,
+          'customizationInlineEditDisabledDisabled' => true,
+          'customizationDefaultView' => 'views/admin/field-manager/fields/currency-default',
+          'customizationTooltipTextDisabled' => true,
+          'maxLength' => 3
+        ],
+        'listPriceConverted' => (object) [
+          'readOnly' => true,
+          'type' => 'currencyConverted',
+          'importDisabled' => true,
+          'customizationInlineEditDisabledDisabled' => true
+        ],
+        'unitPriceCurrency' => (object) [
+          'readOnly' => true,
+          'type' => 'enum',
+          'view' => 'views/fields/currency-list',
+          'layoutDetailDisabled' => true,
+          'layoutListDisabled' => true,
+          'layoutMassUpdateDisabled' => true,
+          'layoutDefaultSidePanelDisabled' => true,
+          'customizationRequiredDisabled' => true,
+          'customizationOptionsDisabled' => true,
+          'customizationIsSortedDisabled' => true,
+          'customizationDisplayAsLabelDisabled' => true,
+          'customizationAuditedDisabled' => true,
+          'customizationReadOnlyDisabled' => true,
+          'customizationInlineEditDisabledDisabled' => true,
+          'customizationDefaultView' => 'views/admin/field-manager/fields/currency-default',
+          'customizationTooltipTextDisabled' => true,
+          'maxLength' => 3
+        ],
+        'unitPriceConverted' => (object) [
+          'readOnly' => true,
+          'type' => 'currencyConverted',
+          'importDisabled' => true,
+          'customizationInlineEditDisabledDisabled' => true
+        ],
+        'amountCurrency' => (object) [
+          'readOnly' => true,
+          'type' => 'enum',
+          'view' => 'views/fields/currency-list',
+          'layoutDetailDisabled' => true,
+          'layoutListDisabled' => true,
+          'layoutMassUpdateDisabled' => true,
+          'layoutDefaultSidePanelDisabled' => true,
+          'customizationRequiredDisabled' => true,
+          'customizationOptionsDisabled' => true,
+          'customizationIsSortedDisabled' => true,
+          'customizationDisplayAsLabelDisabled' => true,
+          'customizationAuditedDisabled' => true,
+          'customizationReadOnlyDisabled' => true,
+          'customizationInlineEditDisabledDisabled' => true,
+          'customizationDefaultView' => 'views/admin/field-manager/fields/currency-default',
+          'customizationTooltipTextDisabled' => true,
+          'maxLength' => 3
+        ],
+        'amountConverted' => (object) [
+          'readOnly' => true,
+          'type' => 'currencyConverted',
+          'importDisabled' => true,
+          'customizationInlineEditDisabledDisabled' => true
+        ]
+      ],
+      'links' => (object) [
+        'createdBy' => (object) [
+          'type' => 'belongsTo',
+          'entity' => 'User'
+        ],
+        'modifiedBy' => (object) [
+          'type' => 'belongsTo',
+          'entity' => 'User'
+        ],
+        'product' => (object) [
+          'type' => 'belongsTo',
+          'entity' => 'Product'
+        ],
+        'returnOrder' => (object) [
+          'type' => 'belongsTo',
+          'entity' => 'ReturnOrder',
+          'foreign' => 'items'
+        ],
+        'account' => (object) [
+          'type' => 'belongsTo',
+          'entity' => 'Account',
+          'foreign' => 'returnOrderItems'
+        ],
+        'inventoryNumber' => (object) [
+          'type' => 'belongsTo',
+          'entity' => 'InventoryNumber'
+        ]
+      ],
+      'collection' => (object) [
+        'sortBy' => 'createdAt',
+        'asc' => false,
+        'orderBy' => 'createdAt',
+        'order' => 'desc'
+      ]
+    ],
+    'SalesOrder' => (object) [
+      'fields' => (object) [
+        'name' => (object) [
+          'type' => 'varchar',
+          'duplicateIgnore' => true
+        ],
+        'number' => (object) [
+          'type' => 'varchar',
+          'maxLength' => 100,
+          'index' => true,
+          'readOnly' => true,
+          'fieldManagerAdditionalParamList' => [
+            0 => (object) [
+              'name' => 'useAutoincrement',
+              'type' => 'bool'
+            ]
+          ],
+          'useAutoincrement' => true
+        ],
+        'numberA' => (object) [
+          'type' => 'number',
+          'prefix' => 'SO-',
+          'padLength' => 5,
+          'utility' => true
+        ],
+        'status' => (object) [
+          'type' => 'enum',
+          'options' => [
+            0 => 'Draft',
+            1 => 'Ready',
+            2 => 'Completed',
+            3 => 'Canceled'
+          ],
+          'style' => (object) [
+            'Ready' => 'primary',
+            'Completed' => 'success',
+            'Canceled' => 'info'
+          ],
+          'default' => 'Draft',
+          'fieldManagerAdditionalParamList' => [
+            0 => (object) [
+              'name' => 'notActualOptions',
+              'view' => 'sales:views/admin/field-manager/fields/not-actual-options'
+            ]
+          ],
+          'notActualOptions' => [
+            0 => 'Completed',
+            1 => 'Canceled'
+          ],
+          'audited' => true
+        ],
+        'dateOrdered' => (object) [
+          'type' => 'date',
+          'default' => 'javascript: return this.dateTime.getToday();',
+          'audited' => true
+        ],
+        'dateInvoiced' => (object) [
+          'type' => 'date',
+          'default' => 'javascript: return this.dateTime.getToday();',
+          'audited' => true
+        ],
+        'account' => (object) [
+          'type' => 'link',
+          'view' => 'sales:views/quote/fields/account'
+        ],
+        'opportunity' => (object) [
+          'type' => 'link',
+          'view' => 'sales:views/sales-order/fields/opportunity'
+        ],
+        'quote' => (object) [
+          'type' => 'link',
+          'view' => 'sales:views/sales-order/fields/quote'
+        ],
+        'description' => (object) [
+          'type' => 'text'
+        ],
+        'billingAddress' => (object) [
+          'type' => 'address'
+        ],
+        'shippingAddress' => (object) [
+          'type' => 'address',
+          'view' => 'crm:views/account/fields/shipping-address'
+        ],
+        'billingContact' => (object) [
+          'type' => 'link',
+          'view' => 'sales:views/quote/fields/contact'
+        ],
+        'shippingContact' => (object) [
+          'type' => 'link',
+          'view' => 'sales:views/quote/fields/contact'
+        ],
+        'tax' => (object) [
+          'type' => 'link',
+          'view' => 'sales:views/quote/fields/tax',
+          'autocompleteOnEmpty' => true
+        ],
+        'taxRate' => (object) [
+          'type' => 'float',
+          'min' => 0,
+          'max' => 100
+        ],
+        'shippingProvider' => (object) [
+          'type' => 'link',
+          'autocompleteOnEmpty' => true
+        ],
+        'shippingCost' => (object) [
+          'type' => 'currency',
+          'layoutDetailDisabled' => true
+        ],
+        'taxAmount' => (object) [
+          'type' => 'currency',
+          'layoutDetailDisabled' => true,
+          'readOnly' => true
+        ],
+        'discountAmount' => (object) [
+          'type' => 'currency',
+          'layoutDetailDisabled' => true,
+          'readOnly' => true
+        ],
+        'amount' => (object) [
+          'type' => 'currency'
+        ],
+        'preDiscountedAmount' => (object) [
+          'type' => 'currency',
+          'layoutDetailDisabled' => true,
+          'readOnly' => true
+        ],
+        'grandTotalAmount' => (object) [
+          'type' => 'currency',
+          'layoutDetailDisabled' => true,
+          'readOnly' => true
+        ],
+        'weight' => (object) [
+          'type' => 'float',
+          'min' => 0,
+          'readOnly' => true
+        ],
+        'itemList' => (object) [
+          'type' => 'jsonArray',
+          'notStorable' => true,
+          'layoutAvailabilityList' => [],
+          'dynamicLogicVisibleDisabled' => true,
+          'dynamicLogicInvalidDisabled' => true,
+          'view' => 'sales:views/quote/fields/item-list',
+          'templatePlaceholderDisabled' => true,
+          'reportDisabled' => true,
+          'workflowDisabled' => true,
+          'duplicatorClassName' => 'Espo\\Modules\\Sales\\Classes\\FieldDuplicators\\Quote\\ItemList'
+        ],
+        'priceBook' => (object) [
+          'type' => 'link',
+          'autocompleteOnEmpty' => true
+        ],
+        'isDone' => (object) [
+          'type' => 'bool',
+          'readOnly' => true,
+          'customizationReadOnlyDisabled' => true
+        ],
+        'isNotActual' => (object) [
+          'type' => 'bool',
+          'readOnly' => true,
+          'customizationReadOnlyDisabled' => true
+        ],
+        'isLocked' => (object) [
+          'type' => 'bool',
+          'readOnly' => true,
+          'customizationReadOnlyDisabled' => true
+        ],
+        'isHardLocked' => (object) [
+          'type' => 'bool',
+          'readOnly' => true,
+          'customizationReadOnlyDisabled' => true
+        ],
+        'inventoryData' => (object) [
+          'type' => 'jsonObject',
+          'notStorable' => true,
+          'readOnly' => true,
+          'directAccessDisabled' => true,
+          'customizationDisabled' => true,
+          'utility' => true
+        ],
+        'inventoryStatus' => (object) [
+          'type' => 'enum',
+          'options' => [
+            0 => '',
+            1 => 'Available',
+            2 => 'On Hand',
+            3 => 'Not Available'
+          ],
+          'style' => (object) [
+            'Available' => 'success',
+            'On Hand' => 'warning',
+            'Not Available' => 'danger'
+          ],
+          'displayAsLabel' => true,
+          'notStorable' => true,
+          'readOnly' => true,
+          'layoutAvailabilityList' => [
+            0 => 'defaultSidePanel'
+          ],
+          'directAccessDisabled' => true,
+          'customizationDisabled' => true
+        ],
+        'isDeliveryCreated' => (object) [
+          'type' => 'bool',
+          'readOnly' => true,
+          'layoutAvailabilityList' => [
+            0 => 'defaultSidePanel'
+          ],
+          'view' => 'sales:views/sales-order/fields/is-delivery-created',
+          'customizationReadOnlyDisabled' => true
+        ],
+        'hasInventoryItems' => (object) [
+          'type' => 'bool',
+          'readOnly' => true,
+          'customizationReadOnlyDisabled' => true
+        ],
+        'products' => (object) [
+          'type' => 'linkMultiple',
+          'entity' => 'Product',
+          'notStorable' => true,
+          'customizationDisabled' => true,
+          'directAccessDisabled' => true,
+          'layoutAvailabilityList' => [
+            0 => 'filters'
+          ],
+          'view' => 'sales:views/quote/fields/products'
+        ],
+        'createdAt' => (object) [
+          'type' => 'datetime',
+          'readOnly' => true
+        ],
+        'modifiedAt' => (object) [
+          'type' => 'datetime',
+          'readOnly' => true
+        ],
+        'createdBy' => (object) [
+          'type' => 'link',
+          'readOnly' => true
+        ],
+        'modifiedBy' => (object) [
+          'type' => 'link',
+          'readOnly' => true
+        ],
+        'assignedUser' => (object) [
+          'type' => 'link',
+          'view' => 'views/fields/assigned-user'
+        ],
+        'teams' => (object) [
+          'type' => 'linkMultiple'
+        ],
+        'billingAddressStreet' => (object) [
+          'type' => 'text',
+          'maxLength' => 255,
+          'dbType' => 'varchar'
+        ],
+        'billingAddressCity' => (object) [
+          'type' => 'varchar',
+          'maxLength' => 100,
+          'view' => 'views/fields/address-city',
+          'customizationOptionsDisabled' => true,
+          'customizationOptionsReferenceDisabled' => true,
+          'pattern' => '$noBadCharacters'
+        ],
+        'billingAddressState' => (object) [
+          'type' => 'varchar',
+          'maxLength' => 100,
+          'view' => 'views/fields/address-state',
+          'customizationOptionsDisabled' => true,
+          'customizationOptionsReferenceDisabled' => true,
+          'pattern' => '$noBadCharacters'
+        ],
+        'billingAddressCountry' => (object) [
+          'type' => 'varchar',
+          'maxLength' => 100,
+          'view' => 'views/fields/address-country',
+          'customizationOptionsDisabled' => true,
+          'customizationOptionsReferenceDisabled' => true,
+          'pattern' => '$noBadCharacters'
+        ],
+        'billingAddressPostalCode' => (object) [
+          'type' => 'varchar',
+          'maxLength' => 40,
+          'pattern' => '$noBadCharacters'
+        ],
+        'billingAddressMap' => (object) [
+          'type' => 'map',
+          'notStorable' => true,
+          'orderDisabled' => true,
+          'readOnly' => true,
+          'layoutListDisabled' => true,
+          'provider' => 'Google',
+          'height' => 300,
+          'exportDisabled' => true,
+          'importDisabled' => true
+        ],
+        'shippingAddressStreet' => (object) [
+          'type' => 'text',
+          'maxLength' => 255,
+          'dbType' => 'varchar'
+        ],
+        'shippingAddressCity' => (object) [
+          'type' => 'varchar',
+          'maxLength' => 100,
+          'view' => 'views/fields/address-city',
+          'customizationOptionsDisabled' => true,
+          'customizationOptionsReferenceDisabled' => true,
+          'pattern' => '$noBadCharacters'
+        ],
+        'shippingAddressState' => (object) [
+          'type' => 'varchar',
+          'maxLength' => 100,
+          'view' => 'views/fields/address-state',
+          'customizationOptionsDisabled' => true,
+          'customizationOptionsReferenceDisabled' => true,
+          'pattern' => '$noBadCharacters'
+        ],
+        'shippingAddressCountry' => (object) [
+          'type' => 'varchar',
+          'maxLength' => 100,
+          'view' => 'views/fields/address-country',
+          'customizationOptionsDisabled' => true,
+          'customizationOptionsReferenceDisabled' => true,
+          'pattern' => '$noBadCharacters'
+        ],
+        'shippingAddressPostalCode' => (object) [
+          'type' => 'varchar',
+          'maxLength' => 40,
+          'pattern' => '$noBadCharacters'
+        ],
+        'shippingAddressMap' => (object) [
+          'type' => 'map',
+          'notStorable' => true,
+          'orderDisabled' => true,
+          'readOnly' => true,
+          'layoutListDisabled' => true,
+          'provider' => 'Google',
+          'height' => 300,
+          'exportDisabled' => true,
+          'importDisabled' => true
+        ],
+        'shippingCostCurrency' => (object) [
+          'layoutDetailDisabled' => true,
+          'type' => 'enum',
+          'view' => 'views/fields/currency-list',
+          'layoutListDisabled' => true,
+          'layoutMassUpdateDisabled' => true,
+          'layoutDefaultSidePanelDisabled' => true,
+          'customizationRequiredDisabled' => true,
+          'customizationOptionsDisabled' => true,
+          'customizationIsSortedDisabled' => true,
+          'customizationDisplayAsLabelDisabled' => true,
+          'customizationAuditedDisabled' => true,
+          'customizationReadOnlyDisabled' => true,
+          'customizationInlineEditDisabledDisabled' => true,
+          'customizationDefaultView' => 'views/admin/field-manager/fields/currency-default',
+          'customizationTooltipTextDisabled' => true,
+          'maxLength' => 3
+        ],
+        'shippingCostConverted' => (object) [
+          'layoutDetailDisabled' => true,
+          'type' => 'currencyConverted',
+          'readOnly' => true,
+          'importDisabled' => true,
+          'customizationInlineEditDisabledDisabled' => true
+        ],
+        'taxAmountCurrency' => (object) [
+          'layoutDetailDisabled' => true,
+          'readOnly' => true,
+          'type' => 'enum',
+          'view' => 'views/fields/currency-list',
+          'layoutListDisabled' => true,
+          'layoutMassUpdateDisabled' => true,
+          'layoutDefaultSidePanelDisabled' => true,
+          'customizationRequiredDisabled' => true,
+          'customizationOptionsDisabled' => true,
+          'customizationIsSortedDisabled' => true,
+          'customizationDisplayAsLabelDisabled' => true,
+          'customizationAuditedDisabled' => true,
+          'customizationReadOnlyDisabled' => true,
+          'customizationInlineEditDisabledDisabled' => true,
+          'customizationDefaultView' => 'views/admin/field-manager/fields/currency-default',
+          'customizationTooltipTextDisabled' => true,
+          'maxLength' => 3
+        ],
+        'taxAmountConverted' => (object) [
+          'layoutDetailDisabled' => true,
+          'readOnly' => true,
+          'type' => 'currencyConverted',
+          'importDisabled' => true,
+          'customizationInlineEditDisabledDisabled' => true
+        ],
+        'discountAmountCurrency' => (object) [
+          'layoutDetailDisabled' => true,
+          'readOnly' => true,
+          'type' => 'enum',
+          'view' => 'views/fields/currency-list',
+          'layoutListDisabled' => true,
+          'layoutMassUpdateDisabled' => true,
+          'layoutDefaultSidePanelDisabled' => true,
+          'customizationRequiredDisabled' => true,
+          'customizationOptionsDisabled' => true,
+          'customizationIsSortedDisabled' => true,
+          'customizationDisplayAsLabelDisabled' => true,
+          'customizationAuditedDisabled' => true,
+          'customizationReadOnlyDisabled' => true,
+          'customizationInlineEditDisabledDisabled' => true,
+          'customizationDefaultView' => 'views/admin/field-manager/fields/currency-default',
+          'customizationTooltipTextDisabled' => true,
+          'maxLength' => 3
+        ],
+        'discountAmountConverted' => (object) [
+          'layoutDetailDisabled' => true,
+          'readOnly' => true,
+          'type' => 'currencyConverted',
+          'importDisabled' => true,
+          'customizationInlineEditDisabledDisabled' => true
+        ],
+        'amountCurrency' => (object) [
+          'type' => 'enum',
+          'view' => 'views/fields/currency-list',
+          'layoutDetailDisabled' => true,
+          'layoutListDisabled' => true,
+          'layoutMassUpdateDisabled' => true,
+          'layoutDefaultSidePanelDisabled' => true,
+          'customizationRequiredDisabled' => true,
+          'customizationOptionsDisabled' => true,
+          'customizationIsSortedDisabled' => true,
+          'customizationDisplayAsLabelDisabled' => true,
+          'customizationAuditedDisabled' => true,
+          'customizationReadOnlyDisabled' => true,
+          'customizationInlineEditDisabledDisabled' => true,
+          'customizationDefaultView' => 'views/admin/field-manager/fields/currency-default',
+          'customizationTooltipTextDisabled' => true,
+          'maxLength' => 3
+        ],
+        'amountConverted' => (object) [
+          'type' => 'currencyConverted',
+          'readOnly' => true,
+          'importDisabled' => true,
+          'customizationInlineEditDisabledDisabled' => true
+        ],
+        'preDiscountedAmountCurrency' => (object) [
+          'layoutDetailDisabled' => true,
+          'readOnly' => true,
+          'type' => 'enum',
+          'view' => 'views/fields/currency-list',
+          'layoutListDisabled' => true,
+          'layoutMassUpdateDisabled' => true,
+          'layoutDefaultSidePanelDisabled' => true,
+          'customizationRequiredDisabled' => true,
+          'customizationOptionsDisabled' => true,
+          'customizationIsSortedDisabled' => true,
+          'customizationDisplayAsLabelDisabled' => true,
+          'customizationAuditedDisabled' => true,
+          'customizationReadOnlyDisabled' => true,
+          'customizationInlineEditDisabledDisabled' => true,
+          'customizationDefaultView' => 'views/admin/field-manager/fields/currency-default',
+          'customizationTooltipTextDisabled' => true,
+          'maxLength' => 3
+        ],
+        'preDiscountedAmountConverted' => (object) [
+          'layoutDetailDisabled' => true,
+          'readOnly' => true,
+          'type' => 'currencyConverted',
+          'importDisabled' => true,
+          'customizationInlineEditDisabledDisabled' => true
+        ],
+        'grandTotalAmountCurrency' => (object) [
+          'layoutDetailDisabled' => true,
+          'readOnly' => true,
+          'type' => 'enum',
+          'view' => 'views/fields/currency-list',
+          'layoutListDisabled' => true,
+          'layoutMassUpdateDisabled' => true,
+          'layoutDefaultSidePanelDisabled' => true,
+          'customizationRequiredDisabled' => true,
+          'customizationOptionsDisabled' => true,
+          'customizationIsSortedDisabled' => true,
+          'customizationDisplayAsLabelDisabled' => true,
+          'customizationAuditedDisabled' => true,
+          'customizationReadOnlyDisabled' => true,
+          'customizationInlineEditDisabledDisabled' => true,
+          'customizationDefaultView' => 'views/admin/field-manager/fields/currency-default',
+          'customizationTooltipTextDisabled' => true,
+          'maxLength' => 3
+        ],
+        'grandTotalAmountConverted' => (object) [
+          'layoutDetailDisabled' => true,
+          'readOnly' => true,
+          'type' => 'currencyConverted',
+          'importDisabled' => true,
+          'customizationInlineEditDisabledDisabled' => true
+        ]
+      ],
+      'links' => (object) [
+        'createdBy' => (object) [
+          'type' => 'belongsTo',
+          'entity' => 'User'
+        ],
+        'modifiedBy' => (object) [
+          'type' => 'belongsTo',
+          'entity' => 'User'
+        ],
+        'tax' => (object) [
+          'type' => 'belongsTo',
+          'entity' => 'Tax'
+        ],
+        'shippingProvider' => (object) [
+          'type' => 'belongsTo',
+          'entity' => 'ShippingProvider'
+        ],
+        'account' => (object) [
+          'type' => 'belongsTo',
+          'entity' => 'Account',
+          'foreign' => 'salesOrders'
+        ],
+        'opportunity' => (object) [
+          'type' => 'belongsTo',
+          'entity' => 'Opportunity',
+          'foreign' => 'salesOrders'
+        ],
+        'quote' => (object) [
+          'type' => 'belongsTo',
+          'entity' => 'Quote',
+          'foreign' => 'salesOrders'
+        ],
+        'invoices' => (object) [
+          'type' => 'hasMany',
+          'entity' => 'Invoice',
+          'foreign' => 'salesOrder',
+          'audited' => true
+        ],
+        'deliveryOrders' => (object) [
+          'type' => 'hasMany',
+          'entity' => 'DeliveryOrder',
+          'foreign' => 'salesOrder',
+          'audited' => true
+        ],
+        'returnOrders' => (object) [
+          'type' => 'hasMany',
+          'entity' => 'ReturnOrder',
+          'foreign' => 'salesOrder',
+          'audited' => true
+        ],
+        'billingContact' => (object) [
+          'type' => 'belongsTo',
+          'entity' => 'Contact',
+          'foreign' => 'salesOrdersBilling'
+        ],
+        'shippingContact' => (object) [
+          'type' => 'belongsTo',
+          'entity' => 'Contact',
+          'foreign' => 'salesOrdersShipping'
+        ],
+        'items' => (object) [
+          'type' => 'hasMany',
+          'entity' => 'SalesOrderItem',
+          'foreign' => 'salesOrder',
+          'layoutRelationshipsDisabled' => true
+        ],
+        'inventoryTransactions' => (object) [
+          'type' => 'hasChildren',
+          'entity' => 'InventoryTransaction',
+          'foreign' => 'parent'
+        ],
+        'priceBook' => (object) [
+          'type' => 'belongsTo',
+          'entity' => 'PriceBook'
+        ],
+        'assignedUser' => (object) [
+          'type' => 'belongsTo',
+          'entity' => 'User'
+        ],
+        'teams' => (object) [
+          'type' => 'hasMany',
+          'entity' => 'Team',
+          'relationName' => 'EntityTeam',
+          'layoutRelationshipsDisabled' => true
+        ]
+      ],
+      'collection' => (object) [
+        'orderBy' => 'createdAt',
+        'order' => 'desc',
+        'textFilterFields' => [
+          0 => 'name',
+          1 => 'number'
+        ],
+        'sortBy' => 'createdAt',
+        'asc' => false
+      ],
+      'indexes' => (object) [
+        'createdAt' => (object) [
+          'columns' => [
+            0 => 'createdAt'
+          ]
+        ]
+      ]
+    ],
+    'SalesOrderItem' => (object) [
+      'fields' => (object) [
+        'name' => (object) [
+          'type' => 'varchar',
+          'required' => true
+        ],
+        'salesOrder' => (object) [
+          'type' => 'link',
+          'readOnly' => true
+        ],
+        'account' => (object) [
+          'type' => 'link',
+          'readOnly' => true
+        ],
+        'salesOrderStatus' => (object) [
+          'type' => 'foreign',
+          'link' => 'salesOrder',
+          'field' => 'status',
+          'readOnly' => true,
+          'view' => 'views/fields/foreign-enum'
+        ],
+        'product' => (object) [
+          'type' => 'link',
+          'readOnly' => true,
+          'itemNotReadOnly' => true,
+          'fieldManagerAdditionalParamList' => [
+            0 => (object) [
+              'name' => 'copyFieldList',
+              'type' => 'multiEnum',
+              'view' => 'sales:views/admin/field-manager/quote-item/fields/product-copy-field-list',
+              'isSorted' => true
+            ]
+          ]
+        ],
+        'allowFractionalQuantity' => (object) [
+          'type' => 'foreign',
+          'link' => 'product',
+          'field' => 'allowFractionalQuantity',
+          'view' => 'views/fields/foreign-bool',
+          'readOnly' => true
+        ],
+        'productType' => (object) [
+          'type' => 'foreign',
+          'link' => 'product',
+          'field' => 'type',
+          'view' => 'views/fields/foreign-enum',
+          'readOnly' => true
+        ],
+        'quantity' => (object) [
+          'type' => 'float',
+          'default' => 1.0,
+          'required' => true,
+          'readOnly' => true,
+          'itemNotReadOnly' => true,
+          'validatorClassNameList' => [
+            0 => 'Espo\\Modules\\Sales\\Classes\\FieldValidators\\QuoteItem\\Quantity\\NotFractional'
+          ],
+          'view' => 'sales:views/quote-item/fields/quantity'
+        ],
+        'quantityInt' => (object) [
+          'type' => 'int',
+          'notStorable' => true,
+          'select' => (object) [
+            'select' => 'FLOOR:(quantity)'
+          ],
+          'readOnly' => true
+        ],
+        'listPrice' => (object) [
+          'type' => 'currency',
+          'readOnly' => true,
+          'itemNotReadOnly' => true
+        ],
+        'unitPrice' => (object) [
+          'type' => 'currency',
+          'required' => true,
+          'readOnly' => true,
+          'itemNotReadOnly' => true
+        ],
+        'discount' => (object) [
+          'type' => 'float',
+          'readOnly' => true,
+          'view' => 'sales:views/quote-item/fields/discount-rate',
+          'itemNotReadOnly' => true
+        ],
+        'amount' => (object) [
+          'type' => 'currency',
+          'readOnly' => true
+        ],
+        'inventoryNumberType' => (object) [
+          'type' => 'foreign',
+          'link' => 'product',
+          'field' => 'inventoryNumberType',
+          'view' => 'views/fields/foreign-enum',
+          'readOnly' => true
+        ],
+        'isInventory' => (object) [
+          'type' => 'foreign',
+          'link' => 'product',
+          'field' => 'isInventory',
+          'view' => 'views/fields/foreign-bool',
+          'readOnly' => true
+        ],
+        'unitWeight' => (object) [
+          'type' => 'float',
+          'min' => 0
+        ],
+        'weight' => (object) [
+          'type' => 'float',
+          'min' => 0,
+          'readOnly' => true
+        ],
+        'taxRate' => (object) [
+          'type' => 'float',
+          'min' => 0,
+          'max' => 100,
+          'default' => 0,
+          'readOnly' => true,
+          'view' => 'sales:views/quote-item/fields/tax-rate',
+          'itemNotReadOnly' => true,
+          'customizationReadOnlyDisabled' => true,
+          'customizationDefaultDisabled' => true,
+          'customizationMinDisabled' => true,
+          'customizationMaxDisabled' => true
+        ],
+        'order' => (object) [
+          'type' => 'int',
+          'default' => 1,
+          'readOnly' => true
+        ],
+        'description' => (object) [
+          'type' => 'text'
+        ],
+        'createdAt' => (object) [
+          'type' => 'datetime',
+          'readOnly' => true
+        ],
+        'modifiedAt' => (object) [
+          'type' => 'datetime',
+          'readOnly' => true
+        ],
+        'createdBy' => (object) [
+          'type' => 'link',
+          'readOnly' => true
+        ],
+        'modifiedBy' => (object) [
+          'type' => 'link',
+          'readOnly' => true
+        ],
+        'listPriceCurrency' => (object) [
+          'readOnly' => true,
+          'type' => 'enum',
+          'view' => 'views/fields/currency-list',
+          'layoutDetailDisabled' => true,
+          'layoutListDisabled' => true,
+          'layoutMassUpdateDisabled' => true,
+          'layoutDefaultSidePanelDisabled' => true,
+          'customizationRequiredDisabled' => true,
+          'customizationOptionsDisabled' => true,
+          'customizationIsSortedDisabled' => true,
+          'customizationDisplayAsLabelDisabled' => true,
+          'customizationAuditedDisabled' => true,
+          'customizationReadOnlyDisabled' => true,
+          'customizationInlineEditDisabledDisabled' => true,
+          'customizationDefaultView' => 'views/admin/field-manager/fields/currency-default',
+          'customizationTooltipTextDisabled' => true,
+          'maxLength' => 3
+        ],
+        'listPriceConverted' => (object) [
+          'readOnly' => true,
+          'type' => 'currencyConverted',
+          'importDisabled' => true,
+          'customizationInlineEditDisabledDisabled' => true
+        ],
+        'unitPriceCurrency' => (object) [
+          'readOnly' => true,
+          'type' => 'enum',
+          'view' => 'views/fields/currency-list',
+          'layoutDetailDisabled' => true,
+          'layoutListDisabled' => true,
+          'layoutMassUpdateDisabled' => true,
+          'layoutDefaultSidePanelDisabled' => true,
+          'customizationRequiredDisabled' => true,
+          'customizationOptionsDisabled' => true,
+          'customizationIsSortedDisabled' => true,
+          'customizationDisplayAsLabelDisabled' => true,
+          'customizationAuditedDisabled' => true,
+          'customizationReadOnlyDisabled' => true,
+          'customizationInlineEditDisabledDisabled' => true,
+          'customizationDefaultView' => 'views/admin/field-manager/fields/currency-default',
+          'customizationTooltipTextDisabled' => true,
+          'maxLength' => 3
+        ],
+        'unitPriceConverted' => (object) [
+          'readOnly' => true,
+          'type' => 'currencyConverted',
+          'importDisabled' => true,
+          'customizationInlineEditDisabledDisabled' => true
+        ],
+        'amountCurrency' => (object) [
+          'readOnly' => true,
+          'type' => 'enum',
+          'view' => 'views/fields/currency-list',
+          'layoutDetailDisabled' => true,
+          'layoutListDisabled' => true,
+          'layoutMassUpdateDisabled' => true,
+          'layoutDefaultSidePanelDisabled' => true,
+          'customizationRequiredDisabled' => true,
+          'customizationOptionsDisabled' => true,
+          'customizationIsSortedDisabled' => true,
+          'customizationDisplayAsLabelDisabled' => true,
+          'customizationAuditedDisabled' => true,
+          'customizationReadOnlyDisabled' => true,
+          'customizationInlineEditDisabledDisabled' => true,
+          'customizationDefaultView' => 'views/admin/field-manager/fields/currency-default',
+          'customizationTooltipTextDisabled' => true,
+          'maxLength' => 3
+        ],
+        'amountConverted' => (object) [
+          'readOnly' => true,
+          'type' => 'currencyConverted',
+          'importDisabled' => true,
+          'customizationInlineEditDisabledDisabled' => true
+        ]
+      ],
+      'links' => (object) [
+        'createdBy' => (object) [
+          'type' => 'belongsTo',
+          'entity' => 'User'
+        ],
+        'modifiedBy' => (object) [
+          'type' => 'belongsTo',
+          'entity' => 'User'
+        ],
+        'product' => (object) [
+          'type' => 'belongsTo',
+          'entity' => 'Product'
+        ],
+        'salesOrder' => (object) [
+          'type' => 'belongsTo',
+          'entity' => 'SalesOrder',
+          'foreign' => 'items'
+        ],
+        'account' => (object) [
+          'type' => 'belongsTo',
+          'entity' => 'Account',
+          'foreign' => 'salesOrderItems'
+        ]
+      ],
+      'collection' => (object) [
+        'sortBy' => 'createdAt',
+        'asc' => false,
+        'orderBy' => 'createdAt',
+        'order' => 'desc'
+      ]
+    ],
+    'ShippingProvider' => (object) [
+      'fields' => (object) [
+        'name' => (object) [
+          'type' => 'varchar',
+          'required' => true
+        ],
+        'website' => (object) [
+          'type' => 'url'
+        ],
+        'description' => (object) [
+          'type' => 'text'
+        ],
+        'createdAt' => (object) [
+          'type' => 'datetime',
+          'readOnly' => true
+        ],
+        'modifiedAt' => (object) [
+          'type' => 'datetime',
+          'readOnly' => true
+        ],
+        'createdBy' => (object) [
+          'type' => 'link',
+          'readOnly' => true
+        ],
+        'modifiedBy' => (object) [
+          'type' => 'link',
+          'readOnly' => true
+        ]
+      ],
+      'links' => (object) [
+        'createdBy' => (object) [
+          'type' => 'belongsTo',
+          'entity' => 'User'
+        ],
+        'modifiedBy' => (object) [
+          'type' => 'belongsTo',
+          'entity' => 'User'
+        ]
+      ],
+      'collection' => (object) [
+        'sortBy' => 'name',
+        'asc' => true,
+        'orderBy' => 'name',
+        'order' => 'asc'
+      ]
+    ],
+    'Supplier' => (object) [
+      'fields' => (object) [
+        'name' => (object) [
+          'type' => 'varchar',
+          'required' => true
+        ],
+        'description' => (object) [
+          'type' => 'text'
+        ],
+        'account' => (object) [
+          'type' => 'link'
+        ],
+        'status' => (object) [
+          'type' => 'enum',
+          'options' => [
+            0 => 'Active',
+            1 => 'Inactive'
+          ],
+          'default' => 'Active',
+          'style' => (object) [
+            'Inactive' => 'info'
+          ],
+          'audited' => true
+        ],
+        'billingAddressStreet' => (object) [
+          'type' => 'foreign',
+          'link' => 'account',
+          'field' => 'billingAddressStreet',
+          'readOnly' => true,
+          'view' => 'views/fields/foreign-text'
+        ],
+        'billingAddressCity' => (object) [
+          'type' => 'foreign',
+          'link' => 'account',
+          'field' => 'billingAddressCity',
+          'readOnly' => true,
+          'view' => 'views/fields/foreign-varchar'
+        ],
+        'billingAddressState' => (object) [
+          'type' => 'foreign',
+          'link' => 'account',
+          'field' => 'billingAddressState',
+          'readOnly' => true,
+          'view' => 'views/fields/foreign-varchar'
+        ],
+        'billingAddressPostalCode' => (object) [
+          'type' => 'foreign',
+          'link' => 'account',
+          'field' => 'billingAddressPostalCode',
+          'readOnly' => true,
+          'view' => 'views/fields/foreign-varchar'
+        ],
+        'billingAddressCountry' => (object) [
+          'type' => 'foreign',
+          'link' => 'account',
+          'field' => 'billingAddressCountry',
+          'readOnly' => true,
+          'view' => 'views/fields/foreign-varchar'
+        ],
+        'createdAt' => (object) [
+          'type' => 'datetime',
+          'readOnly' => true
+        ],
+        'modifiedAt' => (object) [
+          'type' => 'datetime',
+          'readOnly' => true
+        ],
+        'createdBy' => (object) [
+          'type' => 'link',
+          'readOnly' => true
+        ],
+        'modifiedBy' => (object) [
+          'type' => 'link',
+          'readOnly' => true
+        ],
+        'assignedUser' => (object) [
+          'type' => 'link',
+          'view' => 'views/fields/assigned-user'
+        ],
+        'teams' => (object) [
+          'type' => 'linkMultiple'
+        ]
+      ],
+      'links' => (object) [
+        'account' => (object) [
+          'type' => 'belongsTo',
+          'foreign' => 'supplier',
+          'entity' => 'Account'
+        ],
+        'purchaseOrders' => (object) [
+          'type' => 'hasMany',
+          'foreign' => 'supplier',
+          'entity' => 'PurchaseOrder'
+        ],
+        'receiptOrders' => (object) [
+          'type' => 'hasMany',
+          'foreign' => 'supplier',
+          'entity' => 'ReceiptOrder'
+        ],
+        'prices' => (object) [
+          'type' => 'hasMany',
+          'foreign' => 'supplier',
+          'entity' => 'SupplierProductPrice'
+        ],
+        'createdBy' => (object) [
+          'type' => 'belongsTo',
+          'entity' => 'User'
+        ],
+        'modifiedBy' => (object) [
+          'type' => 'belongsTo',
+          'entity' => 'User'
+        ],
+        'assignedUser' => (object) [
+          'type' => 'belongsTo',
+          'entity' => 'User'
+        ],
+        'teams' => (object) [
+          'type' => 'hasMany',
+          'entity' => 'Team',
+          'relationName' => 'entityTeam',
+          'layoutRelationshipsDisabled' => true
+        ]
+      ],
+      'collection' => (object) [
+        'orderBy' => 'name',
+        'order' => 'asc',
+        'sortBy' => 'name',
+        'asc' => true
+      ]
+    ],
+    'SupplierProductPrice' => (object) [
+      'fields' => (object) [
+        'name' => (object) [
+          'type' => 'varchar',
+          'readOnly' => true,
+          'notStorable' => true
+        ],
+        'description' => (object) [
+          'type' => 'text'
+        ],
+        'supplier' => (object) [
+          'type' => 'link',
+          'required' => true,
+          'view' => 'sales:views/product-price/fields/link-with-status'
+        ],
+        'status' => (object) [
+          'type' => 'enum',
+          'options' => [
+            0 => 'Active',
+            1 => 'Inactive'
+          ],
+          'default' => 'Active',
+          'style' => (object) [
+            'Inactive' => 'info'
+          ]
+        ],
+        'product' => (object) [
+          'type' => 'link',
+          'required' => true,
+          'view' => 'sales:views/product-price/fields/product'
+        ],
+        'partNumber' => (object) [
+          'type' => 'foreign',
+          'link' => 'product',
+          'field' => 'partNumber',
+          'relateOnImport' => true
+        ],
+        'minQuantity' => (object) [
+          'type' => 'float',
+          'minValue' => 0.0
+        ],
+        'price' => (object) [
+          'type' => 'currency',
+          'required' => true,
+          'audited' => true
+        ],
+        'dateStart' => (object) [
+          'type' => 'date'
+        ],
+        'dateEnd' => (object) [
+          'type' => 'date'
+        ],
+        'createdAt' => (object) [
+          'type' => 'datetime',
+          'readOnly' => true
+        ],
+        'modifiedAt' => (object) [
+          'type' => 'datetime',
+          'readOnly' => true
+        ],
+        'createdBy' => (object) [
+          'type' => 'link',
+          'readOnly' => true
+        ],
+        'modifiedBy' => (object) [
+          'type' => 'link',
+          'readOnly' => true
+        ],
+        'priceCurrency' => (object) [
+          'type' => 'enum',
+          'view' => 'views/fields/currency-list',
+          'layoutDetailDisabled' => true,
+          'layoutListDisabled' => true,
+          'layoutMassUpdateDisabled' => true,
+          'layoutDefaultSidePanelDisabled' => true,
+          'customizationRequiredDisabled' => true,
+          'customizationOptionsDisabled' => true,
+          'customizationIsSortedDisabled' => true,
+          'customizationDisplayAsLabelDisabled' => true,
+          'customizationAuditedDisabled' => true,
+          'customizationReadOnlyDisabled' => true,
+          'customizationInlineEditDisabledDisabled' => true,
+          'customizationDefaultView' => 'views/admin/field-manager/fields/currency-default',
+          'customizationTooltipTextDisabled' => true,
+          'maxLength' => 3
+        ],
+        'priceConverted' => (object) [
+          'type' => 'currencyConverted',
+          'readOnly' => true,
+          'importDisabled' => true,
+          'customizationInlineEditDisabledDisabled' => true
+        ]
+      ],
+      'links' => (object) [
+        'product' => (object) [
+          'type' => 'belongsTo',
+          'foreign' => 'supplierPrices',
+          'entity' => 'Product'
+        ],
+        'supplier' => (object) [
+          'type' => 'belongsTo',
+          'foreign' => 'prices',
+          'entity' => 'Supplier'
+        ],
+        'createdBy' => (object) [
+          'type' => 'belongsTo',
+          'entity' => 'User'
+        ],
+        'modifiedBy' => (object) [
+          'type' => 'belongsTo',
+          'entity' => 'User'
+        ],
+        'teams' => (object) [
+          'type' => 'hasMany',
+          'entity' => 'Team',
+          'relationName' => 'entityTeam',
+          'layoutRelationshipsDisabled' => true
+        ]
+      ],
+      'collection' => (object) [
+        'orderBy' => 'createdAt',
+        'order' => 'desc',
+        'textFilterFields' => [],
+        'sortBy' => 'createdAt',
+        'asc' => false
+      ],
+      'indexes' => (object) [
+        'supplierGroup' => (object) [
+          'columns' => [
+            0 => 'supplierId',
+            1 => 'productId',
+            2 => 'status'
+          ]
+        ]
+      ]
+    ],
+    'Tax' => (object) [
+      'fields' => (object) [
+        'name' => (object) [
+          'type' => 'varchar',
+          'required' => true
+        ],
+        'rate' => (object) [
+          'type' => 'float',
+          'min' => 0,
+          'max' => 100,
+          'required' => true
+        ],
+        'description' => (object) [
+          'type' => 'text'
+        ],
+        'createdAt' => (object) [
+          'type' => 'datetime',
+          'readOnly' => true
+        ],
+        'modifiedAt' => (object) [
+          'type' => 'datetime',
+          'readOnly' => true
+        ],
+        'createdBy' => (object) [
+          'type' => 'link',
+          'readOnly' => true
+        ],
+        'modifiedBy' => (object) [
+          'type' => 'link',
+          'readOnly' => true
+        ]
+      ],
+      'links' => (object) [
+        'createdBy' => (object) [
+          'type' => 'belongsTo',
+          'entity' => 'User'
+        ],
+        'modifiedBy' => (object) [
+          'type' => 'belongsTo',
+          'entity' => 'User'
+        ]
+      ],
+      'collection' => (object) [
+        'sortBy' => 'name',
+        'asc' => true,
+        'orderBy' => 'name',
+        'order' => 'asc'
+      ]
+    ],
+    'TransferOrder' => (object) [
+      'fields' => (object) [
+        'name' => (object) [
+          'type' => 'varchar',
+          'duplicateIgnore' => true
+        ],
+        'number' => (object) [
+          'type' => 'varchar',
+          'maxLength' => 100,
+          'index' => true,
+          'readOnly' => true,
+          'fieldManagerAdditionalParamList' => [
+            0 => (object) [
+              'name' => 'useAutoincrement',
+              'type' => 'bool'
+            ]
+          ],
+          'useAutoincrement' => true
+        ],
+        'numberA' => (object) [
+          'type' => 'number',
+          'prefix' => 'TO-',
+          'padLength' => 5,
+          'utility' => true
+        ],
+        'status' => (object) [
+          'type' => 'enum',
+          'options' => [
+            0 => 'Draft',
+            1 => 'Ready',
+            2 => 'In Progress',
+            3 => 'Completed',
+            4 => 'Canceled',
+            5 => 'Failed'
+          ],
+          'style' => (object) [
+            'Ready' => 'primary',
+            'In Progress' => 'warning',
+            'Completed' => 'success',
+            'Canceled' => 'info',
+            'Failed' => 'danger'
+          ],
+          'default' => 'Draft',
+          'fieldManagerAdditionalParamList' => [
+            0 => (object) [
+              'name' => 'notActualOptions',
+              'view' => 'sales:views/admin/field-manager/fields/not-actual-options'
+            ]
+          ],
+          'notActualOptions' => [
+            0 => 'Completed',
+            1 => 'Canceled',
+            2 => 'Failed'
+          ],
+          'index' => true
+        ],
+        'dateOrdered' => (object) [
+          'type' => 'date',
+          'default' => 'javascript: return this.dateTime.getToday();'
+        ],
+        'shippingDate' => (object) [
+          'type' => 'date'
+        ],
+        'deliveryDate' => (object) [
+          'type' => 'date'
+        ],
+        'description' => (object) [
+          'type' => 'text'
+        ],
+        'fromWarehouse' => (object) [
+          'type' => 'link',
+          'required' => true,
+          'customizationRequiredDisabled' => true,
+          'view' => 'sales:views/transfer-order/fields/from-warehouse',
+          'autocompleteOnEmpty' => true
+        ],
+        'toWarehouse' => (object) [
+          'type' => 'link',
+          'required' => true,
+          'customizationRequiredDisabled' => true,
+          'view' => 'sales:views/transfer-order/fields/to-warehouse',
+          'validatorClassNameList' => [
+            0 => 'Espo\\Modules\\Sales\\Classes\\FieldValidators\\TransferOrder\\ToWarehouse\\NotSame'
+          ],
+          'autocompleteOnEmpty' => true
+        ],
+        'fromAddress' => (object) [
+          'type' => 'address'
+        ],
+        'toAddress' => (object) [
+          'type' => 'address'
+        ],
+        'shippingProvider' => (object) [
+          'type' => 'link',
+          'autocompleteOnEmpty' => true
+        ],
+        'shippingCost' => (object) [
+          'type' => 'currency',
+          'layoutDetailDisabled' => true
+        ],
+        'amount' => (object) [
+          'type' => 'currency',
+          'customizationDisabled' => true
+        ],
+        'amountConverted' => (object) [
+          'customizationDisabled' => true,
+          'type' => 'currencyConverted',
+          'readOnly' => true,
+          'importDisabled' => true,
+          'customizationInlineEditDisabledDisabled' => true,
+          'disabled' => true
+        ],
+        'amountCurrency' => (object) [
+          'customizationDisabled' => true,
+          'type' => 'enum',
+          'view' => 'views/fields/currency-list',
+          'layoutDetailDisabled' => true,
+          'layoutListDisabled' => true,
+          'layoutMassUpdateDisabled' => true,
+          'layoutDefaultSidePanelDisabled' => true,
+          'customizationRequiredDisabled' => true,
+          'customizationOptionsDisabled' => true,
+          'customizationIsSortedDisabled' => true,
+          'customizationDisplayAsLabelDisabled' => true,
+          'customizationAuditedDisabled' => true,
+          'customizationReadOnlyDisabled' => true,
+          'customizationInlineEditDisabledDisabled' => true,
+          'customizationDefaultView' => 'views/admin/field-manager/fields/currency-default',
+          'customizationTooltipTextDisabled' => true,
+          'maxLength' => 3,
+          'utility' => true
+        ],
+        'weight' => (object) [
+          'type' => 'float',
+          'min' => 0,
+          'readOnly' => true
+        ],
+        'itemList' => (object) [
+          'type' => 'jsonArray',
+          'notStorable' => true,
+          'layoutAvailabilityList' => [],
+          'dynamicLogicVisibleDisabled' => true,
+          'dynamicLogicInvalidDisabled' => true,
+          'view' => 'sales:views/quote/fields/item-list',
+          'templatePlaceholderDisabled' => true,
+          'reportDisabled' => true,
+          'workflowDisabled' => true,
+          'duplicatorClassName' => 'Espo\\Modules\\Sales\\Classes\\FieldDuplicators\\Quote\\ItemList'
+        ],
+        'inventoryData' => (object) [
+          'type' => 'jsonObject',
+          'notStorable' => true,
+          'readOnly' => true,
+          'directAccessDisabled' => true,
+          'customizationDisabled' => true,
+          'utility' => true
+        ],
+        'inventoryStatus' => (object) [
+          'type' => 'enum',
+          'options' => [
+            0 => '',
+            1 => 'Available',
+            2 => 'On Hand',
+            3 => 'Not Available'
+          ],
+          'style' => (object) [
+            'Available' => 'success',
+            'On Hand' => 'warning',
+            'Not Available' => 'danger'
+          ],
+          'displayAsLabel' => true,
+          'notStorable' => true,
+          'readOnly' => true,
+          'layoutAvailabilityList' => [
+            0 => 'defaultSidePanel'
+          ],
+          'directAccessDisabled' => true,
+          'customizationDisabled' => true
+        ],
+        'isDone' => (object) [
+          'type' => 'bool',
+          'readOnly' => true,
+          'customizationReadOnlyDisabled' => true
+        ],
+        'isNotActual' => (object) [
+          'type' => 'bool',
+          'readOnly' => true,
+          'customizationReadOnlyDisabled' => true
+        ],
+        'isLocked' => (object) [
+          'type' => 'bool',
+          'readOnly' => true,
+          'customizationReadOnlyDisabled' => true
+        ],
+        'isHardLocked' => (object) [
+          'type' => 'bool',
+          'readOnly' => true,
+          'customizationReadOnlyDisabled' => true
+        ],
+        'products' => (object) [
+          'type' => 'linkMultiple',
+          'entity' => 'Product',
+          'notStorable' => true,
+          'customizationDisabled' => true,
+          'directAccessDisabled' => true,
+          'layoutAvailabilityList' => [
+            0 => 'filters'
+          ],
+          'view' => 'sales:views/quote/fields/products'
+        ],
+        'inventoryNumbers' => (object) [
+          'type' => 'linkMultiple',
+          'entity' => 'InventoryNumber',
+          'notStorable' => true,
+          'customizationDisabled' => true,
+          'directAccessDisabled' => true,
+          'layoutAvailabilityList' => [
+            0 => 'filters'
+          ],
+          'view' => 'sales:views/quote/fields/inventory-numbers'
+        ],
+        'createdAt' => (object) [
+          'type' => 'datetime',
+          'readOnly' => true
+        ],
+        'modifiedAt' => (object) [
+          'type' => 'datetime',
+          'readOnly' => true
+        ],
+        'createdBy' => (object) [
+          'type' => 'link',
+          'readOnly' => true
+        ],
+        'modifiedBy' => (object) [
+          'type' => 'link',
+          'readOnly' => true
+        ],
+        'assignedUser' => (object) [
+          'type' => 'link',
+          'view' => 'views/fields/assigned-user'
+        ],
+        'teams' => (object) [
+          'type' => 'linkMultiple'
+        ],
+        'fromAddressStreet' => (object) [
+          'type' => 'text',
+          'maxLength' => 255,
+          'dbType' => 'varchar'
+        ],
+        'fromAddressCity' => (object) [
+          'type' => 'varchar',
+          'maxLength' => 100,
+          'view' => 'views/fields/address-city',
+          'customizationOptionsDisabled' => true,
+          'customizationOptionsReferenceDisabled' => true,
+          'pattern' => '$noBadCharacters'
+        ],
+        'fromAddressState' => (object) [
+          'type' => 'varchar',
+          'maxLength' => 100,
+          'view' => 'views/fields/address-state',
+          'customizationOptionsDisabled' => true,
+          'customizationOptionsReferenceDisabled' => true,
+          'pattern' => '$noBadCharacters'
+        ],
+        'fromAddressCountry' => (object) [
+          'type' => 'varchar',
+          'maxLength' => 100,
+          'view' => 'views/fields/address-country',
+          'customizationOptionsDisabled' => true,
+          'customizationOptionsReferenceDisabled' => true,
+          'pattern' => '$noBadCharacters'
+        ],
+        'fromAddressPostalCode' => (object) [
+          'type' => 'varchar',
+          'maxLength' => 40,
+          'pattern' => '$noBadCharacters'
+        ],
+        'fromAddressMap' => (object) [
+          'type' => 'map',
+          'notStorable' => true,
+          'orderDisabled' => true,
+          'readOnly' => true,
+          'layoutListDisabled' => true,
+          'provider' => 'Google',
+          'height' => 300,
+          'exportDisabled' => true,
+          'importDisabled' => true
+        ],
+        'toAddressStreet' => (object) [
+          'type' => 'text',
+          'maxLength' => 255,
+          'dbType' => 'varchar'
+        ],
+        'toAddressCity' => (object) [
+          'type' => 'varchar',
+          'maxLength' => 100,
+          'view' => 'views/fields/address-city',
+          'customizationOptionsDisabled' => true,
+          'customizationOptionsReferenceDisabled' => true,
+          'pattern' => '$noBadCharacters'
+        ],
+        'toAddressState' => (object) [
+          'type' => 'varchar',
+          'maxLength' => 100,
+          'view' => 'views/fields/address-state',
+          'customizationOptionsDisabled' => true,
+          'customizationOptionsReferenceDisabled' => true,
+          'pattern' => '$noBadCharacters'
+        ],
+        'toAddressCountry' => (object) [
+          'type' => 'varchar',
+          'maxLength' => 100,
+          'view' => 'views/fields/address-country',
+          'customizationOptionsDisabled' => true,
+          'customizationOptionsReferenceDisabled' => true,
+          'pattern' => '$noBadCharacters'
+        ],
+        'toAddressPostalCode' => (object) [
+          'type' => 'varchar',
+          'maxLength' => 40,
+          'pattern' => '$noBadCharacters'
+        ],
+        'toAddressMap' => (object) [
+          'type' => 'map',
+          'notStorable' => true,
+          'orderDisabled' => true,
+          'readOnly' => true,
+          'layoutListDisabled' => true,
+          'provider' => 'Google',
+          'height' => 300,
+          'exportDisabled' => true,
+          'importDisabled' => true
+        ],
+        'shippingCostCurrency' => (object) [
+          'layoutDetailDisabled' => true,
+          'type' => 'enum',
+          'view' => 'views/fields/currency-list',
+          'layoutListDisabled' => true,
+          'layoutMassUpdateDisabled' => true,
+          'layoutDefaultSidePanelDisabled' => true,
+          'customizationRequiredDisabled' => true,
+          'customizationOptionsDisabled' => true,
+          'customizationIsSortedDisabled' => true,
+          'customizationDisplayAsLabelDisabled' => true,
+          'customizationAuditedDisabled' => true,
+          'customizationReadOnlyDisabled' => true,
+          'customizationInlineEditDisabledDisabled' => true,
+          'customizationDefaultView' => 'views/admin/field-manager/fields/currency-default',
+          'customizationTooltipTextDisabled' => true,
+          'maxLength' => 3
+        ],
+        'shippingCostConverted' => (object) [
+          'layoutDetailDisabled' => true,
+          'type' => 'currencyConverted',
+          'readOnly' => true,
+          'importDisabled' => true,
+          'customizationInlineEditDisabledDisabled' => true
+        ]
+      ],
+      'links' => (object) [
+        'createdBy' => (object) [
+          'type' => 'belongsTo',
+          'entity' => 'User'
+        ],
+        'modifiedBy' => (object) [
+          'type' => 'belongsTo',
+          'entity' => 'User'
+        ],
+        'shippingProvider' => (object) [
+          'type' => 'belongsTo',
+          'entity' => 'ShippingProvider'
+        ],
+        'fromWarehouse' => (object) [
+          'type' => 'belongsTo',
+          'entity' => 'Warehouse'
+        ],
+        'toWarehouse' => (object) [
+          'type' => 'belongsTo',
+          'entity' => 'Warehouse'
+        ],
+        'items' => (object) [
+          'type' => 'hasMany',
+          'entity' => 'TransferOrderItem',
+          'foreign' => 'transferOrder',
+          'layoutRelationshipsDisabled' => true
+        ],
+        'inventoryTransactions' => (object) [
+          'type' => 'hasChildren',
+          'entity' => 'InventoryTransaction',
+          'foreign' => 'parent'
+        ],
+        'assignedUser' => (object) [
+          'type' => 'belongsTo',
+          'entity' => 'User'
+        ],
+        'teams' => (object) [
+          'type' => 'hasMany',
+          'entity' => 'Team',
+          'relationName' => 'EntityTeam',
+          'layoutRelationshipsDisabled' => true
+        ]
+      ],
+      'collection' => (object) [
+        'orderBy' => 'createdAt',
+        'order' => 'desc',
+        'textFilterFields' => [
+          0 => 'name',
+          1 => 'number'
+        ],
+        'sortBy' => 'createdAt',
+        'asc' => false
+      ],
+      'indexes' => (object) [
+        'createdAt' => (object) [
+          'columns' => [
+            0 => 'createdAt'
+          ]
+        ]
+      ]
+    ],
+    'TransferOrderItem' => (object) [
+      'fields' => (object) [
+        'name' => (object) [
+          'type' => 'varchar',
+          'required' => true
+        ],
+        'transferOrder' => (object) [
+          'type' => 'link',
+          'readOnly' => true
+        ],
+        'transferOrderStatus' => (object) [
+          'type' => 'foreign',
+          'link' => 'transferOrder',
+          'field' => 'status',
+          'readOnly' => true,
+          'view' => 'views/fields/foreign-enum'
+        ],
+        'product' => (object) [
+          'type' => 'link',
+          'readOnly' => true,
+          'itemNotReadOnly' => true,
+          'fieldManagerAdditionalParamList' => [
+            0 => (object) [
+              'name' => 'copyFieldList',
+              'type' => 'multiEnum',
+              'view' => 'sales:views/admin/field-manager/quote-item/fields/product-copy-field-list',
+              'isSorted' => true
+            ]
+          ],
+          'customizationReadOnlyDisabled' => true
+        ],
+        'allowFractionalQuantity' => (object) [
+          'type' => 'foreign',
+          'link' => 'product',
+          'field' => 'allowFractionalQuantity',
+          'view' => 'views/fields/foreign-bool',
+          'readOnly' => true
+        ],
+        'productType' => (object) [
+          'type' => 'foreign',
+          'link' => 'product',
+          'field' => 'type',
+          'view' => 'views/fields/foreign-enum',
+          'readOnly' => true
+        ],
+        'quantity' => (object) [
+          'type' => 'float',
+          'default' => 1.0,
+          'required' => true,
+          'readOnly' => true,
+          'itemNotReadOnly' => true,
+          'min' => 0.0,
+          'customizationReadOnlyDisabled' => true,
+          'validatorClassNameList' => [
+            0 => 'Espo\\Modules\\Sales\\Classes\\FieldValidators\\QuoteItem\\Quantity\\NotFractional'
+          ],
+          'view' => 'sales:views/quote-item/fields/quantity'
+        ],
+        'quantityInt' => (object) [
+          'type' => 'int',
+          'notStorable' => true,
+          'select' => (object) [
+            'select' => 'FLOOR:(quantity)'
+          ],
+          'readOnly' => true,
+          'customizationReadOnlyDisabled' => true
+        ],
+        'inventoryNumber' => (object) [
+          'type' => 'link',
+          'validatorClassNameList' => [
+            0 => 'Espo\\Modules\\Sales\\Classes\\FieldValidators\\DeliveryOrderItem\\InventoryNumber\\Valid'
+          ],
+          'view' => 'sales:views/delivery-order-item/fields/inventory-number',
+          'itemNotReadOnly' => true,
+          'readOnly' => true,
+          'customizationReadOnlyDisabled' => true
+        ],
+        'inventoryNumberType' => (object) [
+          'type' => 'foreign',
+          'link' => 'product',
+          'field' => 'inventoryNumberType',
+          'view' => 'views/fields/foreign-enum',
+          'readOnly' => true
+        ],
+        'isInventory' => (object) [
+          'type' => 'foreign',
+          'link' => 'product',
+          'field' => 'isInventory',
+          'view' => 'views/fields/foreign-bool',
+          'readOnly' => true
+        ],
+        'quantityReceived' => (object) [
+          'type' => 'float',
+          'default' => 1.0,
+          'readOnly' => true,
+          'itemNotReadOnly' => true,
+          'min' => 0.0,
+          'view' => 'sales:views/receipt-order-item/fields/quantity-received',
+          'validatorClassNameList' => [
+            0 => 'Espo\\Modules\\Sales\\Classes\\FieldValidators\\QuoteItem\\Quantity\\NotFractional'
+          ]
+        ],
+        'quantityReceivedInt' => (object) [
+          'type' => 'int',
+          'notStorable' => true,
+          'select' => (object) [
+            'select' => 'IF:(IS_NOT_NULL:(quantityReceived), FLOOR:(quantityReceived), null)'
+          ],
+          'readOnly' => true
+        ],
+        'unitWeight' => (object) [
+          'type' => 'float',
+          'min' => 0
+        ],
+        'weight' => (object) [
+          'type' => 'float',
+          'min' => 0,
+          'readOnly' => true
+        ],
+        'order' => (object) [
+          'type' => 'int',
+          'default' => 1,
+          'readOnly' => true
+        ],
+        'description' => (object) [
+          'type' => 'text'
+        ],
+        'createdAt' => (object) [
+          'type' => 'datetime',
+          'readOnly' => true
+        ],
+        'modifiedAt' => (object) [
+          'type' => 'datetime',
+          'readOnly' => true
+        ],
+        'createdBy' => (object) [
+          'type' => 'link',
+          'readOnly' => true
+        ],
+        'modifiedBy' => (object) [
+          'type' => 'link',
+          'readOnly' => true
+        ]
+      ],
+      'links' => (object) [
+        'createdBy' => (object) [
+          'type' => 'belongsTo',
+          'entity' => 'User'
+        ],
+        'modifiedBy' => (object) [
+          'type' => 'belongsTo',
+          'entity' => 'User'
+        ],
+        'product' => (object) [
+          'type' => 'belongsTo',
+          'entity' => 'Product'
+        ],
+        'transferOrder' => (object) [
+          'type' => 'belongsTo',
+          'entity' => 'TransferOrder',
+          'foreign' => 'items'
+        ],
+        'inventoryNumber' => (object) [
+          'type' => 'belongsTo',
+          'entity' => 'InventoryNumber'
+        ]
+      ],
+      'collection' => (object) [
+        'sortBy' => 'createdAt',
+        'asc' => false,
+        'orderBy' => 'createdAt',
+        'order' => 'desc'
+      ]
+    ],
+    'Warehouse' => (object) [
+      'fields' => (object) [
+        'name' => (object) [
+          'type' => 'varchar',
+          'required' => true,
+          'index' => true
+        ],
+        'status' => (object) [
+          'type' => 'enum',
+          'options' => [
+            0 => 'Active',
+            1 => 'Inactive'
+          ],
+          'default' => 'Active',
+          'style' => (object) [
+            'Inactive' => 'info'
+          ],
+          'audited' => true
+        ],
+        'address' => (object) [
+          'type' => 'address'
+        ],
+        'isAvailableForStock' => (object) [
+          'type' => 'bool',
+          'default' => true,
+          'index' => true,
+          'audited' => true
+        ],
+        'teams' => (object) [
+          'type' => 'linkMultiple'
+        ],
+        'description' => (object) [
+          'type' => 'text'
+        ],
+        'createdAt' => (object) [
+          'type' => 'datetime',
+          'readOnly' => true
+        ],
+        'modifiedAt' => (object) [
+          'type' => 'datetime',
+          'readOnly' => true
+        ],
+        'createdBy' => (object) [
+          'type' => 'link',
+          'readOnly' => true
+        ],
+        'modifiedBy' => (object) [
+          'type' => 'link',
+          'readOnly' => true
+        ],
+        'addressStreet' => (object) [
+          'type' => 'text',
+          'maxLength' => 255,
+          'dbType' => 'varchar'
+        ],
+        'addressCity' => (object) [
+          'type' => 'varchar',
+          'maxLength' => 100,
+          'view' => 'views/fields/address-city',
+          'customizationOptionsDisabled' => true,
+          'customizationOptionsReferenceDisabled' => true,
+          'pattern' => '$noBadCharacters'
+        ],
+        'addressState' => (object) [
+          'type' => 'varchar',
+          'maxLength' => 100,
+          'view' => 'views/fields/address-state',
+          'customizationOptionsDisabled' => true,
+          'customizationOptionsReferenceDisabled' => true,
+          'pattern' => '$noBadCharacters'
+        ],
+        'addressCountry' => (object) [
+          'type' => 'varchar',
+          'maxLength' => 100,
+          'view' => 'views/fields/address-country',
+          'customizationOptionsDisabled' => true,
+          'customizationOptionsReferenceDisabled' => true,
+          'pattern' => '$noBadCharacters'
+        ],
+        'addressPostalCode' => (object) [
+          'type' => 'varchar',
+          'maxLength' => 40,
+          'pattern' => '$noBadCharacters'
+        ],
+        'addressMap' => (object) [
+          'type' => 'map',
+          'notStorable' => true,
+          'orderDisabled' => true,
+          'readOnly' => true,
+          'layoutListDisabled' => true,
+          'provider' => 'Google',
+          'height' => 300,
+          'exportDisabled' => true,
+          'importDisabled' => true
+        ]
+      ],
+      'links' => (object) [
+        'inventoryTransactions' => (object) [
+          'type' => 'hasMany',
+          'foreign' => 'warehouse',
+          'entity' => 'InventoryTransaction'
+        ],
+        'teams' => (object) [
+          'type' => 'hasMany',
+          'entity' => 'Team',
+          'relationName' => 'EntityTeam',
+          'layoutRelationshipsDisabled' => true
+        ],
+        'createdBy' => (object) [
+          'type' => 'belongsTo',
+          'entity' => 'User'
+        ],
+        'modifiedBy' => (object) [
+          'type' => 'belongsTo',
+          'entity' => 'User'
+        ]
+      ],
+      'collection' => (object) [
+        'sortBy' => 'name',
+        'asc' => true,
+        'orderBy' => 'name',
+        'order' => 'asc'
+      ]
     ]
   ],
   'fields' => (object) [
@@ -27965,17 +42012,24 @@ return (object) [
         1 => 'accountName'
       ],
       'beforeUpdateHookClassNameList' => [
-        0 => 'Espo\\Modules\\Crm\\Classes\\RecordHooks\\Opportunity\\BeforeUpdate'
+        0 => 'Espo\\Modules\\Crm\\Classes\\RecordHooks\\Opportunity\\BeforeUpdate',
+        1 => 'Espo\\Modules\\Sales\\Classes\\Record\\Hooks\\Quote\\BeforeUpdateValidation'
       ],
-      'readLoaderClassNameList' => [],
-      'listLoaderClassNameList' => [],
+      'readLoaderClassNameList' => [
+        0 => 'Espo\\Modules\\Sales\\Classes\\FieldLoaders\\Opportunity\\ItemListLoader'
+      ],
+      'listLoaderClassNameList' => [
+        0 => 'Espo\\Modules\\Sales\\Classes\\FieldLoaders\\Opportunity\\ListItemListLoader'
+      ],
       'saverClassNameList' => [],
       'selectApplierClassNameList' => [],
       'createInputFilterClassNameList' => [],
       'updateInputFilterClassNameList' => [],
       'outputFilterClassNameList' => [],
       'beforeReadHookClassNameList' => [],
-      'beforeCreateHookClassNameList' => [],
+      'beforeCreateHookClassNameList' => [
+        0 => 'Espo\\Modules\\Sales\\Classes\\Record\\Hooks\\Quote\\BeforeCreateValidation'
+      ],
       'beforeDeleteHookClassNameList' => [],
       'afterCreateHookClassNameList' => [],
       'afterUpdateHookClassNameList' => [],
@@ -28052,6 +42106,977 @@ return (object) [
         0 => 'Espo\\Core\\FieldProcessing\\Reminder\\Saver'
       ],
       'listLoaderClassNameList' => [],
+      'selectApplierClassNameList' => [],
+      'createInputFilterClassNameList' => [],
+      'updateInputFilterClassNameList' => [],
+      'outputFilterClassNameList' => [],
+      'beforeReadHookClassNameList' => [],
+      'beforeCreateHookClassNameList' => [],
+      'beforeUpdateHookClassNameList' => [],
+      'beforeDeleteHookClassNameList' => [],
+      'afterCreateHookClassNameList' => [],
+      'afterUpdateHookClassNameList' => [],
+      'afterDeleteHookClassNameList' => [],
+      'beforeLinkHookClassNameList' => [],
+      'beforeUnlinkHookClassNameList' => [],
+      'afterLinkHookClassNameList' => [],
+      'afterUnlinkHookClassNameList' => []
+    ],
+    'DeliveryOrder' => (object) [
+      'readLoaderClassNameList' => [
+        0 => 'Espo\\Modules\\Sales\\Classes\\FieldLoaders\\Quote\\ItemListLoader',
+        1 => 'Espo\\Modules\\Sales\\Classes\\FieldLoaders\\Quote\\InventoryDataLoader',
+        2 => 'Espo\\Modules\\Sales\\Classes\\FieldLoaders\\Quote\\InventoryStatusLoader'
+      ],
+      'listLoaderClassNameList' => [
+        0 => 'Espo\\Modules\\Sales\\Classes\\FieldLoaders\\Quote\\ListItemListLoader'
+      ],
+      'beforeCreateHookClassNameList' => [
+        0 => 'Espo\\Modules\\Sales\\Classes\\Record\\Hooks\\Quote\\BeforeCreateValidation',
+        1 => 'Espo\\Modules\\Sales\\Classes\\Record\\Hooks\\DeliveryOrder\\BeforeCreateValidation'
+      ],
+      'beforeUpdateHookClassNameList' => [
+        0 => 'Espo\\Modules\\Sales\\Classes\\Record\\Hooks\\Quote\\BeforeUpdateValidation',
+        1 => 'Espo\\Modules\\Sales\\Classes\\Record\\Hooks\\DeliveryOrder\\BeforeUpdateValidation'
+      ],
+      'loadAdditionalFieldsAfterUpdate' => true,
+      'massActions' => (object) [
+        'lock' => (object) [
+          'implementationClassName' => 'Espo\\Modules\\Sales\\Classes\\MassActions\\Lock'
+        ],
+        'unlock' => (object) [
+          'implementationClassName' => 'Espo\\Modules\\Sales\\Classes\\MassActions\\Unlock'
+        ]
+      ],
+      'saverClassNameList' => [],
+      'selectApplierClassNameList' => [],
+      'createInputFilterClassNameList' => [],
+      'updateInputFilterClassNameList' => [],
+      'outputFilterClassNameList' => [],
+      'beforeReadHookClassNameList' => [],
+      'beforeDeleteHookClassNameList' => [],
+      'afterCreateHookClassNameList' => [],
+      'afterUpdateHookClassNameList' => [],
+      'afterDeleteHookClassNameList' => [],
+      'beforeLinkHookClassNameList' => [],
+      'beforeUnlinkHookClassNameList' => [],
+      'afterLinkHookClassNameList' => [],
+      'afterUnlinkHookClassNameList' => []
+    ],
+    'DeliveryOrderItem' => (object) [
+      'actions' => (object) [
+        'convertCurrency' => (object) [
+          'disabled' => true
+        ]
+      ],
+      'massActions' => (object) [
+        'convertCurrency' => (object) [
+          'disabled' => true
+        ],
+        'delete' => (object) [
+          'disabled' => true
+        ]
+      ],
+      'readLoaderClassNameList' => [],
+      'listLoaderClassNameList' => [],
+      'saverClassNameList' => [],
+      'selectApplierClassNameList' => [],
+      'createInputFilterClassNameList' => [],
+      'updateInputFilterClassNameList' => [],
+      'outputFilterClassNameList' => [],
+      'beforeReadHookClassNameList' => [],
+      'beforeCreateHookClassNameList' => [],
+      'beforeUpdateHookClassNameList' => [],
+      'beforeDeleteHookClassNameList' => [],
+      'afterCreateHookClassNameList' => [],
+      'afterUpdateHookClassNameList' => [],
+      'afterDeleteHookClassNameList' => [],
+      'beforeLinkHookClassNameList' => [],
+      'beforeUnlinkHookClassNameList' => [],
+      'afterLinkHookClassNameList' => [],
+      'afterUnlinkHookClassNameList' => []
+    ],
+    'InventoryAdjustment' => (object) [
+      'readLoaderClassNameList' => [
+        0 => 'Espo\\Modules\\Sales\\Classes\\FieldLoaders\\Quote\\ItemListLoader'
+      ],
+      'listLoaderClassNameList' => [
+        0 => 'Espo\\Modules\\Sales\\Classes\\FieldLoaders\\Quote\\ListItemListLoader'
+      ],
+      'beforeCreateHookClassNameList' => [
+        0 => 'Espo\\Modules\\Sales\\Classes\\Record\\Hooks\\Quote\\BeforeCreateValidation',
+        1 => 'Espo\\Modules\\Sales\\Classes\\Record\\Hooks\\InventoryAdjustment\\BeforeCreate'
+      ],
+      'beforeUpdateHookClassNameList' => [
+        0 => 'Espo\\Modules\\Sales\\Classes\\Record\\Hooks\\Quote\\BeforeUpdateValidation',
+        1 => 'Espo\\Modules\\Sales\\Classes\\Record\\Hooks\\InventoryAdjustment\\BeforeUpdate'
+      ],
+      'loadAdditionalFieldsAfterUpdate' => true,
+      'saverClassNameList' => [],
+      'selectApplierClassNameList' => [],
+      'createInputFilterClassNameList' => [],
+      'updateInputFilterClassNameList' => [],
+      'outputFilterClassNameList' => [],
+      'beforeReadHookClassNameList' => [],
+      'beforeDeleteHookClassNameList' => [],
+      'afterCreateHookClassNameList' => [],
+      'afterUpdateHookClassNameList' => [],
+      'afterDeleteHookClassNameList' => [],
+      'beforeLinkHookClassNameList' => [],
+      'beforeUnlinkHookClassNameList' => [],
+      'afterLinkHookClassNameList' => [],
+      'afterUnlinkHookClassNameList' => []
+    ],
+    'InventoryAdjustmentItem' => (object) [
+      'actions' => (object) [
+        'convertCurrency' => (object) [
+          'disabled' => true
+        ]
+      ],
+      'massActions' => (object) [
+        'convertCurrency' => (object) [
+          'disabled' => true
+        ],
+        'delete' => (object) [
+          'disabled' => true
+        ]
+      ],
+      'selectApplierClassNameList' => [
+        0 => 'Espo\\Modules\\Sales\\Classes\\Select\\InventoryAdjustmentItem\\AdditionalAppliers\\Warehouse'
+      ],
+      'readLoaderClassNameList' => [],
+      'listLoaderClassNameList' => [],
+      'saverClassNameList' => [],
+      'createInputFilterClassNameList' => [],
+      'updateInputFilterClassNameList' => [],
+      'outputFilterClassNameList' => [],
+      'beforeReadHookClassNameList' => [],
+      'beforeCreateHookClassNameList' => [],
+      'beforeUpdateHookClassNameList' => [],
+      'beforeDeleteHookClassNameList' => [],
+      'afterCreateHookClassNameList' => [],
+      'afterUpdateHookClassNameList' => [],
+      'afterDeleteHookClassNameList' => [],
+      'beforeLinkHookClassNameList' => [],
+      'beforeUnlinkHookClassNameList' => [],
+      'afterLinkHookClassNameList' => [],
+      'afterUnlinkHookClassNameList' => []
+    ],
+    'InventoryNumber' => (object) [
+      'readLoaderClassNameList' => [
+        0 => 'Espo\\Modules\\Sales\\Classes\\FieldLoaders\\InventoryNumber\\QuantityInTransit'
+      ],
+      'selectApplierClassNameList' => [
+        0 => 'Espo\\Modules\\Sales\\Classes\\Select\\InventoryNumber\\AdditionalAppliers\\Quantity'
+      ],
+      'duplicateWhereBuilderClassName' => 'Espo\\Classes\\DuplicateWhereBuilders\\Name',
+      'beforeCreateHookClassNameList' => [
+        0 => 'Espo\\Modules\\Sales\\Classes\\Record\\Hooks\\InventoryNumber\\BeforeCreateValidation'
+      ],
+      'beforeUpdateHookClassNameList' => [
+        0 => 'Espo\\Modules\\Sales\\Classes\\Record\\Hooks\\InventoryNumber\\BeforeUpdateValidation'
+      ],
+      'listLoaderClassNameList' => [],
+      'saverClassNameList' => [],
+      'createInputFilterClassNameList' => [],
+      'updateInputFilterClassNameList' => [],
+      'outputFilterClassNameList' => [],
+      'beforeReadHookClassNameList' => [],
+      'beforeDeleteHookClassNameList' => [],
+      'afterCreateHookClassNameList' => [],
+      'afterUpdateHookClassNameList' => [],
+      'afterDeleteHookClassNameList' => [],
+      'beforeLinkHookClassNameList' => [],
+      'beforeUnlinkHookClassNameList' => [],
+      'afterLinkHookClassNameList' => [],
+      'afterUnlinkHookClassNameList' => []
+    ],
+    'InventoryTransaction' => (object) [
+      'massActions' => (object) [
+        'update' => (object) [
+          'disabled' => true
+        ],
+        'convertCurrency' => (object) [
+          'disabled' => true
+        ]
+      ],
+      'actions' => (object) [
+        'convertCurrency' => (object) [
+          'disabled' => true
+        ]
+      ],
+      'readLoaderClassNameList' => [],
+      'listLoaderClassNameList' => [],
+      'saverClassNameList' => [],
+      'selectApplierClassNameList' => [],
+      'createInputFilterClassNameList' => [],
+      'updateInputFilterClassNameList' => [],
+      'outputFilterClassNameList' => [],
+      'beforeReadHookClassNameList' => [],
+      'beforeCreateHookClassNameList' => [],
+      'beforeUpdateHookClassNameList' => [],
+      'beforeDeleteHookClassNameList' => [],
+      'afterCreateHookClassNameList' => [],
+      'afterUpdateHookClassNameList' => [],
+      'afterDeleteHookClassNameList' => [],
+      'beforeLinkHookClassNameList' => [],
+      'beforeUnlinkHookClassNameList' => [],
+      'afterLinkHookClassNameList' => [],
+      'afterUnlinkHookClassNameList' => []
+    ],
+    'Invoice' => (object) [
+      'readLoaderClassNameList' => [
+        0 => 'Espo\\Modules\\Sales\\Classes\\FieldLoaders\\Quote\\ItemListLoader'
+      ],
+      'listLoaderClassNameList' => [
+        0 => 'Espo\\Modules\\Sales\\Classes\\FieldLoaders\\Quote\\ListItemListLoader'
+      ],
+      'beforeCreateHookClassNameList' => [
+        0 => 'Espo\\Modules\\Sales\\Classes\\Record\\Hooks\\Quote\\BeforeCreateValidation'
+      ],
+      'beforeUpdateHookClassNameList' => [
+        0 => 'Espo\\Modules\\Sales\\Classes\\Record\\Hooks\\Quote\\BeforeUpdateValidation'
+      ],
+      'massActions' => (object) [
+        'lock' => (object) [
+          'implementationClassName' => 'Espo\\Modules\\Sales\\Classes\\MassActions\\Lock'
+        ],
+        'unlock' => (object) [
+          'implementationClassName' => 'Espo\\Modules\\Sales\\Classes\\MassActions\\Unlock'
+        ]
+      ],
+      'saverClassNameList' => [],
+      'selectApplierClassNameList' => [],
+      'createInputFilterClassNameList' => [],
+      'updateInputFilterClassNameList' => [],
+      'outputFilterClassNameList' => [],
+      'beforeReadHookClassNameList' => [],
+      'beforeDeleteHookClassNameList' => [],
+      'afterCreateHookClassNameList' => [],
+      'afterUpdateHookClassNameList' => [],
+      'afterDeleteHookClassNameList' => [],
+      'beforeLinkHookClassNameList' => [],
+      'beforeUnlinkHookClassNameList' => [],
+      'afterLinkHookClassNameList' => [],
+      'afterUnlinkHookClassNameList' => []
+    ],
+    'InvoiceItem' => (object) [
+      'actions' => (object) [
+        'convertCurrency' => (object) [
+          'disabled' => true
+        ]
+      ],
+      'massActions' => (object) [
+        'convertCurrency' => (object) [
+          'disabled' => true
+        ],
+        'delete' => (object) [
+          'disabled' => true
+        ]
+      ],
+      'readLoaderClassNameList' => [],
+      'listLoaderClassNameList' => [],
+      'saverClassNameList' => [],
+      'selectApplierClassNameList' => [],
+      'createInputFilterClassNameList' => [],
+      'updateInputFilterClassNameList' => [],
+      'outputFilterClassNameList' => [],
+      'beforeReadHookClassNameList' => [],
+      'beforeCreateHookClassNameList' => [],
+      'beforeUpdateHookClassNameList' => [],
+      'beforeDeleteHookClassNameList' => [],
+      'afterCreateHookClassNameList' => [],
+      'afterUpdateHookClassNameList' => [],
+      'afterDeleteHookClassNameList' => [],
+      'beforeLinkHookClassNameList' => [],
+      'beforeUnlinkHookClassNameList' => [],
+      'afterLinkHookClassNameList' => [],
+      'afterUnlinkHookClassNameList' => []
+    ],
+    'PriceBook' => (object) [
+      'actions' => (object) [
+        'merge' => (object) [
+          'disabled' => true
+        ]
+      ],
+      'readLoaderClassNameList' => [],
+      'listLoaderClassNameList' => [],
+      'saverClassNameList' => [],
+      'selectApplierClassNameList' => [],
+      'createInputFilterClassNameList' => [],
+      'updateInputFilterClassNameList' => [],
+      'outputFilterClassNameList' => [],
+      'beforeReadHookClassNameList' => [],
+      'beforeCreateHookClassNameList' => [],
+      'beforeUpdateHookClassNameList' => [],
+      'beforeDeleteHookClassNameList' => [],
+      'afterCreateHookClassNameList' => [],
+      'afterUpdateHookClassNameList' => [],
+      'afterDeleteHookClassNameList' => [],
+      'beforeLinkHookClassNameList' => [],
+      'beforeUnlinkHookClassNameList' => [],
+      'afterLinkHookClassNameList' => [],
+      'afterUnlinkHookClassNameList' => []
+    ],
+    'PriceRule' => (object) [
+      'beforeCreateHookClassNameList' => [
+        0 => 'Espo\\Modules\\Sales\\Classes\\Record\\Hooks\\PriceRule\\BeforeCreate'
+      ],
+      'beforeUpdateHookClassNameList' => [
+        0 => 'Espo\\Modules\\Sales\\Classes\\Record\\Hooks\\PriceRule\\BeforeUpdate'
+      ],
+      'actions' => (object) [
+        'merge' => (object) [
+          'disabled' => true
+        ]
+      ],
+      'relationships' => (object) [
+        'condition' => (object) [
+          'linkForeignAccessCheckDisabled' => true
+        ]
+      ],
+      'readLoaderClassNameList' => [],
+      'listLoaderClassNameList' => [],
+      'saverClassNameList' => [],
+      'selectApplierClassNameList' => [],
+      'createInputFilterClassNameList' => [],
+      'updateInputFilterClassNameList' => [],
+      'outputFilterClassNameList' => [],
+      'beforeReadHookClassNameList' => [],
+      'beforeDeleteHookClassNameList' => [],
+      'afterCreateHookClassNameList' => [],
+      'afterUpdateHookClassNameList' => [],
+      'afterDeleteHookClassNameList' => [],
+      'beforeLinkHookClassNameList' => [],
+      'beforeUnlinkHookClassNameList' => [],
+      'afterLinkHookClassNameList' => [],
+      'afterUnlinkHookClassNameList' => []
+    ],
+    'PriceRuleCondition' => (object) [
+      'duplicateWhereBuilderClassName' => 'Espo\\Classes\\DuplicateWhereBuilders\\General',
+      'readLoaderClassNameList' => [],
+      'listLoaderClassNameList' => [],
+      'saverClassNameList' => [],
+      'selectApplierClassNameList' => [],
+      'createInputFilterClassNameList' => [],
+      'updateInputFilterClassNameList' => [],
+      'outputFilterClassNameList' => [],
+      'beforeReadHookClassNameList' => [],
+      'beforeCreateHookClassNameList' => [],
+      'beforeUpdateHookClassNameList' => [],
+      'beforeDeleteHookClassNameList' => [],
+      'afterCreateHookClassNameList' => [],
+      'afterUpdateHookClassNameList' => [],
+      'afterDeleteHookClassNameList' => [],
+      'beforeLinkHookClassNameList' => [],
+      'beforeUnlinkHookClassNameList' => [],
+      'afterLinkHookClassNameList' => [],
+      'afterUnlinkHookClassNameList' => []
+    ],
+    'Product' => (object) [
+      'listLoaderClassNameList' => [
+        0 => 'Espo\\Modules\\Sales\\Classes\\FieldLoaders\\Product\\UnitPriceSelect',
+        1 => 'Espo\\Modules\\Sales\\Classes\\FieldLoaders\\Product\\QuantityInTransit',
+        2 => 'Espo\\Modules\\Sales\\Classes\\FieldLoaders\\Product\\QuantityOnOrder'
+      ],
+      'readLoaderClassNameList' => [
+        0 => 'Espo\\Modules\\Sales\\Classes\\FieldLoaders\\Product\\QuantityInTransit',
+        1 => 'Espo\\Modules\\Sales\\Classes\\FieldLoaders\\Product\\QuantityOnOrder',
+        2 => 'Espo\\Modules\\Sales\\Classes\\FieldLoaders\\Product\\AttributesLoader'
+      ],
+      'selectApplierClassNameList' => [
+        0 => 'Espo\\Modules\\Sales\\Classes\\Select\\Product\\AdditionalAppliers\\Quantity',
+        1 => 'Espo\\Modules\\Sales\\Classes\\Select\\Product\\AdditionalAppliers\\NotVariant'
+      ],
+      'saverClassNameList' => [
+        0 => 'Espo\\Modules\\Sales\\Classes\\FieldSavers\\Product\\AttributesSaver'
+      ],
+      'beforeCreateHookClassNameList' => [
+        0 => 'Espo\\Modules\\Sales\\Classes\\Record\\Hooks\\Product\\BeforeCreate'
+      ],
+      'beforeUpdateHookClassNameList' => [
+        0 => 'Espo\\Modules\\Sales\\Classes\\Record\\Hooks\\Product\\BeforeUpdate'
+      ],
+      'duplicateWhereBuilderClassName' => 'Espo\\Modules\\Sales\\Classes\\Record\\Product\\DuplicateWhereBuilder',
+      'massActions' => (object) [
+        'updatePrice' => (object) [
+          'allowed' => true,
+          'implementationClassName' => 'Espo\\Modules\\Sales\\Tools\\Price\\MassUpdate\\UpdateProduct'
+        ]
+      ],
+      'createInputFilterClassNameList' => [],
+      'updateInputFilterClassNameList' => [],
+      'outputFilterClassNameList' => [],
+      'beforeReadHookClassNameList' => [],
+      'beforeDeleteHookClassNameList' => [],
+      'afterCreateHookClassNameList' => [],
+      'afterUpdateHookClassNameList' => [],
+      'afterDeleteHookClassNameList' => [],
+      'beforeLinkHookClassNameList' => [],
+      'beforeUnlinkHookClassNameList' => [],
+      'afterLinkHookClassNameList' => [],
+      'afterUnlinkHookClassNameList' => []
+    ],
+    'ProductCategory' => (object) [
+      'massActions' => (object) [
+        'delete' => (object) [
+          'allowed' => true
+        ],
+        'update' => (object) [
+          'allowed' => true
+        ]
+      ],
+      'readLoaderClassNameList' => [],
+      'listLoaderClassNameList' => [],
+      'saverClassNameList' => [],
+      'selectApplierClassNameList' => [],
+      'createInputFilterClassNameList' => [],
+      'updateInputFilterClassNameList' => [],
+      'outputFilterClassNameList' => [],
+      'beforeReadHookClassNameList' => [],
+      'beforeCreateHookClassNameList' => [],
+      'beforeUpdateHookClassNameList' => [],
+      'beforeDeleteHookClassNameList' => [],
+      'afterCreateHookClassNameList' => [],
+      'afterUpdateHookClassNameList' => [],
+      'afterDeleteHookClassNameList' => [],
+      'beforeLinkHookClassNameList' => [],
+      'beforeUnlinkHookClassNameList' => [],
+      'afterLinkHookClassNameList' => [],
+      'afterUnlinkHookClassNameList' => []
+    ],
+    'ProductPrice' => (object) [
+      'actions' => (object) [
+        'merge' => (object) [
+          'disabled' => true
+        ]
+      ],
+      'massActions' => (object) [
+        'updatePrice' => (object) [
+          'allowed' => true,
+          'implementationClassName' => 'Espo\\Modules\\Sales\\Tools\\Price\\MassUpdate\\UpdateProductPrice'
+        ]
+      ],
+      'readLoaderClassNameList' => [],
+      'listLoaderClassNameList' => [],
+      'saverClassNameList' => [],
+      'selectApplierClassNameList' => [],
+      'createInputFilterClassNameList' => [],
+      'updateInputFilterClassNameList' => [],
+      'outputFilterClassNameList' => [],
+      'beforeReadHookClassNameList' => [],
+      'beforeCreateHookClassNameList' => [],
+      'beforeUpdateHookClassNameList' => [],
+      'beforeDeleteHookClassNameList' => [],
+      'afterCreateHookClassNameList' => [],
+      'afterUpdateHookClassNameList' => [],
+      'afterDeleteHookClassNameList' => [],
+      'beforeLinkHookClassNameList' => [],
+      'beforeUnlinkHookClassNameList' => [],
+      'afterLinkHookClassNameList' => [],
+      'afterUnlinkHookClassNameList' => []
+    ],
+    'PurchaseOrder' => (object) [
+      'readLoaderClassNameList' => [
+        0 => 'Espo\\Modules\\Sales\\Classes\\FieldLoaders\\Quote\\ItemListLoader'
+      ],
+      'listLoaderClassNameList' => [
+        0 => 'Espo\\Modules\\Sales\\Classes\\FieldLoaders\\Quote\\ListItemListLoader'
+      ],
+      'beforeCreateHookClassNameList' => [
+        0 => 'Espo\\Modules\\Sales\\Classes\\Record\\Hooks\\Quote\\BeforeCreateValidation'
+      ],
+      'beforeUpdateHookClassNameList' => [
+        0 => 'Espo\\Modules\\Sales\\Classes\\Record\\Hooks\\Quote\\BeforeUpdateValidation'
+      ],
+      'massActions' => (object) [
+        'lock' => (object) [
+          'implementationClassName' => 'Espo\\Modules\\Sales\\Classes\\MassActions\\Lock'
+        ],
+        'unlock' => (object) [
+          'implementationClassName' => 'Espo\\Modules\\Sales\\Classes\\MassActions\\Unlock'
+        ]
+      ],
+      'saverClassNameList' => [],
+      'selectApplierClassNameList' => [],
+      'createInputFilterClassNameList' => [],
+      'updateInputFilterClassNameList' => [],
+      'outputFilterClassNameList' => [],
+      'beforeReadHookClassNameList' => [],
+      'beforeDeleteHookClassNameList' => [],
+      'afterCreateHookClassNameList' => [],
+      'afterUpdateHookClassNameList' => [],
+      'afterDeleteHookClassNameList' => [],
+      'beforeLinkHookClassNameList' => [],
+      'beforeUnlinkHookClassNameList' => [],
+      'afterLinkHookClassNameList' => [],
+      'afterUnlinkHookClassNameList' => []
+    ],
+    'PurchaseOrderItem' => (object) [
+      'actions' => (object) [
+        'convertCurrency' => (object) [
+          'disabled' => true
+        ]
+      ],
+      'massActions' => (object) [
+        'convertCurrency' => (object) [
+          'disabled' => true
+        ],
+        'delete' => (object) [
+          'disabled' => true
+        ]
+      ],
+      'readLoaderClassNameList' => [],
+      'listLoaderClassNameList' => [],
+      'saverClassNameList' => [],
+      'selectApplierClassNameList' => [],
+      'createInputFilterClassNameList' => [],
+      'updateInputFilterClassNameList' => [],
+      'outputFilterClassNameList' => [],
+      'beforeReadHookClassNameList' => [],
+      'beforeCreateHookClassNameList' => [],
+      'beforeUpdateHookClassNameList' => [],
+      'beforeDeleteHookClassNameList' => [],
+      'afterCreateHookClassNameList' => [],
+      'afterUpdateHookClassNameList' => [],
+      'afterDeleteHookClassNameList' => [],
+      'beforeLinkHookClassNameList' => [],
+      'beforeUnlinkHookClassNameList' => [],
+      'afterLinkHookClassNameList' => [],
+      'afterUnlinkHookClassNameList' => []
+    ],
+    'Quote' => (object) [
+      'readLoaderClassNameList' => [
+        0 => 'Espo\\Modules\\Sales\\Classes\\FieldLoaders\\Quote\\ItemListLoader',
+        1 => 'Espo\\Modules\\Sales\\Classes\\FieldLoaders\\Quote\\InventoryDataLoader',
+        2 => 'Espo\\Modules\\Sales\\Classes\\FieldLoaders\\Quote\\InventoryStatusLoader'
+      ],
+      'listLoaderClassNameList' => [
+        0 => 'Espo\\Modules\\Sales\\Classes\\FieldLoaders\\Quote\\ListItemListLoader'
+      ],
+      'beforeCreateHookClassNameList' => [
+        0 => 'Espo\\Modules\\Sales\\Classes\\Record\\Hooks\\Quote\\BeforeCreateValidation'
+      ],
+      'beforeUpdateHookClassNameList' => [
+        0 => 'Espo\\Modules\\Sales\\Classes\\Record\\Hooks\\Quote\\BeforeUpdateValidation'
+      ],
+      'loadAdditionalFieldsAfterUpdate' => true,
+      'massActions' => (object) [
+        'lock' => (object) [
+          'implementationClassName' => 'Espo\\Modules\\Sales\\Classes\\MassActions\\Lock'
+        ],
+        'unlock' => (object) [
+          'implementationClassName' => 'Espo\\Modules\\Sales\\Classes\\MassActions\\Unlock'
+        ]
+      ],
+      'saverClassNameList' => [],
+      'selectApplierClassNameList' => [],
+      'createInputFilterClassNameList' => [],
+      'updateInputFilterClassNameList' => [],
+      'outputFilterClassNameList' => [],
+      'beforeReadHookClassNameList' => [],
+      'beforeDeleteHookClassNameList' => [],
+      'afterCreateHookClassNameList' => [],
+      'afterUpdateHookClassNameList' => [],
+      'afterDeleteHookClassNameList' => [],
+      'beforeLinkHookClassNameList' => [],
+      'beforeUnlinkHookClassNameList' => [],
+      'afterLinkHookClassNameList' => [],
+      'afterUnlinkHookClassNameList' => []
+    ],
+    'QuoteItem' => (object) [
+      'actions' => (object) [
+        'convertCurrency' => (object) [
+          'disabled' => true
+        ]
+      ],
+      'massActions' => (object) [
+        'convertCurrency' => (object) [
+          'disabled' => true
+        ],
+        'delete' => (object) [
+          'disabled' => true
+        ]
+      ],
+      'readLoaderClassNameList' => [],
+      'listLoaderClassNameList' => [],
+      'saverClassNameList' => [],
+      'selectApplierClassNameList' => [],
+      'createInputFilterClassNameList' => [],
+      'updateInputFilterClassNameList' => [],
+      'outputFilterClassNameList' => [],
+      'beforeReadHookClassNameList' => [],
+      'beforeCreateHookClassNameList' => [],
+      'beforeUpdateHookClassNameList' => [],
+      'beforeDeleteHookClassNameList' => [],
+      'afterCreateHookClassNameList' => [],
+      'afterUpdateHookClassNameList' => [],
+      'afterDeleteHookClassNameList' => [],
+      'beforeLinkHookClassNameList' => [],
+      'beforeUnlinkHookClassNameList' => [],
+      'afterLinkHookClassNameList' => [],
+      'afterUnlinkHookClassNameList' => []
+    ],
+    'ReceiptOrder' => (object) [
+      'readLoaderClassNameList' => [
+        0 => 'Espo\\Modules\\Sales\\Classes\\FieldLoaders\\Quote\\ItemListLoader',
+        1 => 'Espo\\Modules\\Sales\\Classes\\FieldLoaders\\ReceiptOrder\\ReceivedItemListLoader'
+      ],
+      'listLoaderClassNameList' => [
+        0 => 'Espo\\Modules\\Sales\\Classes\\FieldLoaders\\Quote\\ListItemListLoader',
+        1 => 'Espo\\Modules\\Sales\\Classes\\FieldLoaders\\ReceiptOrder\\ListReceivedItemListLoader'
+      ],
+      'beforeCreateHookClassNameList' => [
+        0 => 'Espo\\Modules\\Sales\\Classes\\Record\\Hooks\\Quote\\BeforeCreateValidation',
+        1 => 'Espo\\Modules\\Sales\\Classes\\Record\\Hooks\\ReceiptOrder\\BeforeCreateValidation'
+      ],
+      'beforeUpdateHookClassNameList' => [
+        0 => 'Espo\\Modules\\Sales\\Classes\\Record\\Hooks\\Quote\\BeforeUpdateValidation',
+        1 => 'Espo\\Modules\\Sales\\Classes\\Record\\Hooks\\ReceiptOrder\\BeforeUpdateValidation'
+      ],
+      'loadAdditionalFieldsAfterUpdate' => true,
+      'massActions' => (object) [
+        'lock' => (object) [
+          'implementationClassName' => 'Espo\\Modules\\Sales\\Classes\\MassActions\\Lock'
+        ],
+        'unlock' => (object) [
+          'implementationClassName' => 'Espo\\Modules\\Sales\\Classes\\MassActions\\Unlock'
+        ]
+      ],
+      'saverClassNameList' => [],
+      'selectApplierClassNameList' => [],
+      'createInputFilterClassNameList' => [],
+      'updateInputFilterClassNameList' => [],
+      'outputFilterClassNameList' => [],
+      'beforeReadHookClassNameList' => [],
+      'beforeDeleteHookClassNameList' => [],
+      'afterCreateHookClassNameList' => [],
+      'afterUpdateHookClassNameList' => [],
+      'afterDeleteHookClassNameList' => [],
+      'beforeLinkHookClassNameList' => [],
+      'beforeUnlinkHookClassNameList' => [],
+      'afterLinkHookClassNameList' => [],
+      'afterUnlinkHookClassNameList' => []
+    ],
+    'ReceiptOrderItem' => (object) [
+      'actions' => (object) [
+        'convertCurrency' => (object) [
+          'disabled' => true
+        ]
+      ],
+      'massActions' => (object) [
+        'convertCurrency' => (object) [
+          'disabled' => true
+        ],
+        'delete' => (object) [
+          'disabled' => true
+        ]
+      ],
+      'readLoaderClassNameList' => [],
+      'listLoaderClassNameList' => [],
+      'saverClassNameList' => [],
+      'selectApplierClassNameList' => [],
+      'createInputFilterClassNameList' => [],
+      'updateInputFilterClassNameList' => [],
+      'outputFilterClassNameList' => [],
+      'beforeReadHookClassNameList' => [],
+      'beforeCreateHookClassNameList' => [],
+      'beforeUpdateHookClassNameList' => [],
+      'beforeDeleteHookClassNameList' => [],
+      'afterCreateHookClassNameList' => [],
+      'afterUpdateHookClassNameList' => [],
+      'afterDeleteHookClassNameList' => [],
+      'beforeLinkHookClassNameList' => [],
+      'beforeUnlinkHookClassNameList' => [],
+      'afterLinkHookClassNameList' => [],
+      'afterUnlinkHookClassNameList' => []
+    ],
+    'ReturnOrder' => (object) [
+      'readLoaderClassNameList' => [
+        0 => 'Espo\\Modules\\Sales\\Classes\\FieldLoaders\\Quote\\ItemListLoader'
+      ],
+      'listLoaderClassNameList' => [
+        0 => 'Espo\\Modules\\Sales\\Classes\\FieldLoaders\\Quote\\ListItemListLoader'
+      ],
+      'beforeCreateHookClassNameList' => [
+        0 => 'Espo\\Modules\\Sales\\Classes\\Record\\Hooks\\Quote\\BeforeCreateValidation'
+      ],
+      'beforeUpdateHookClassNameList' => [
+        0 => 'Espo\\Modules\\Sales\\Classes\\Record\\Hooks\\Quote\\BeforeUpdateValidation'
+      ],
+      'massActions' => (object) [
+        'lock' => (object) [
+          'implementationClassName' => 'Espo\\Modules\\Sales\\Classes\\MassActions\\Lock'
+        ],
+        'unlock' => (object) [
+          'implementationClassName' => 'Espo\\Modules\\Sales\\Classes\\MassActions\\Unlock'
+        ]
+      ],
+      'saverClassNameList' => [],
+      'selectApplierClassNameList' => [],
+      'createInputFilterClassNameList' => [],
+      'updateInputFilterClassNameList' => [],
+      'outputFilterClassNameList' => [],
+      'beforeReadHookClassNameList' => [],
+      'beforeDeleteHookClassNameList' => [],
+      'afterCreateHookClassNameList' => [],
+      'afterUpdateHookClassNameList' => [],
+      'afterDeleteHookClassNameList' => [],
+      'beforeLinkHookClassNameList' => [],
+      'beforeUnlinkHookClassNameList' => [],
+      'afterLinkHookClassNameList' => [],
+      'afterUnlinkHookClassNameList' => []
+    ],
+    'ReturnOrderItem' => (object) [
+      'actions' => (object) [
+        'convertCurrency' => (object) [
+          'disabled' => true
+        ]
+      ],
+      'massActions' => (object) [
+        'convertCurrency' => (object) [
+          'disabled' => true
+        ],
+        'delete' => (object) [
+          'disabled' => true
+        ]
+      ],
+      'readLoaderClassNameList' => [],
+      'listLoaderClassNameList' => [],
+      'saverClassNameList' => [],
+      'selectApplierClassNameList' => [],
+      'createInputFilterClassNameList' => [],
+      'updateInputFilterClassNameList' => [],
+      'outputFilterClassNameList' => [],
+      'beforeReadHookClassNameList' => [],
+      'beforeCreateHookClassNameList' => [],
+      'beforeUpdateHookClassNameList' => [],
+      'beforeDeleteHookClassNameList' => [],
+      'afterCreateHookClassNameList' => [],
+      'afterUpdateHookClassNameList' => [],
+      'afterDeleteHookClassNameList' => [],
+      'beforeLinkHookClassNameList' => [],
+      'beforeUnlinkHookClassNameList' => [],
+      'afterLinkHookClassNameList' => [],
+      'afterUnlinkHookClassNameList' => []
+    ],
+    'SalesOrder' => (object) [
+      'readLoaderClassNameList' => [
+        0 => 'Espo\\Modules\\Sales\\Classes\\FieldLoaders\\Quote\\ItemListLoader',
+        1 => 'Espo\\Modules\\Sales\\Classes\\FieldLoaders\\Quote\\InventoryDataLoader',
+        2 => 'Espo\\Modules\\Sales\\Classes\\FieldLoaders\\Quote\\InventoryStatusLoader'
+      ],
+      'listLoaderClassNameList' => [
+        0 => 'Espo\\Modules\\Sales\\Classes\\FieldLoaders\\Quote\\ListItemListLoader'
+      ],
+      'beforeCreateHookClassNameList' => [
+        0 => 'Espo\\Modules\\Sales\\Classes\\Record\\Hooks\\Quote\\BeforeCreateValidation'
+      ],
+      'beforeUpdateHookClassNameList' => [
+        0 => 'Espo\\Modules\\Sales\\Classes\\Record\\Hooks\\Quote\\BeforeUpdateValidation'
+      ],
+      'loadAdditionalFieldsAfterUpdate' => true,
+      'massActions' => (object) [
+        'lock' => (object) [
+          'implementationClassName' => 'Espo\\Modules\\Sales\\Classes\\MassActions\\Lock'
+        ],
+        'unlock' => (object) [
+          'implementationClassName' => 'Espo\\Modules\\Sales\\Classes\\MassActions\\Unlock'
+        ]
+      ],
+      'saverClassNameList' => [],
+      'selectApplierClassNameList' => [],
+      'createInputFilterClassNameList' => [],
+      'updateInputFilterClassNameList' => [],
+      'outputFilterClassNameList' => [],
+      'beforeReadHookClassNameList' => [],
+      'beforeDeleteHookClassNameList' => [],
+      'afterCreateHookClassNameList' => [],
+      'afterUpdateHookClassNameList' => [],
+      'afterDeleteHookClassNameList' => [],
+      'beforeLinkHookClassNameList' => [],
+      'beforeUnlinkHookClassNameList' => [],
+      'afterLinkHookClassNameList' => [],
+      'afterUnlinkHookClassNameList' => []
+    ],
+    'SalesOrderItem' => (object) [
+      'actions' => (object) [
+        'convertCurrency' => (object) [
+          'disabled' => true
+        ]
+      ],
+      'massActions' => (object) [
+        'convertCurrency' => (object) [
+          'disabled' => true
+        ],
+        'delete' => (object) [
+          'disabled' => true
+        ]
+      ],
+      'readLoaderClassNameList' => [],
+      'listLoaderClassNameList' => [],
+      'saverClassNameList' => [],
+      'selectApplierClassNameList' => [],
+      'createInputFilterClassNameList' => [],
+      'updateInputFilterClassNameList' => [],
+      'outputFilterClassNameList' => [],
+      'beforeReadHookClassNameList' => [],
+      'beforeCreateHookClassNameList' => [],
+      'beforeUpdateHookClassNameList' => [],
+      'beforeDeleteHookClassNameList' => [],
+      'afterCreateHookClassNameList' => [],
+      'afterUpdateHookClassNameList' => [],
+      'afterDeleteHookClassNameList' => [],
+      'beforeLinkHookClassNameList' => [],
+      'beforeUnlinkHookClassNameList' => [],
+      'afterLinkHookClassNameList' => [],
+      'afterUnlinkHookClassNameList' => []
+    ],
+    'SupplierProductPrice' => (object) [
+      'actions' => (object) [
+        'merge' => (object) [
+          'disabled' => true
+        ]
+      ],
+      'massActions' => (object) [
+        'updatePrice' => (object) [
+          'allowed' => true,
+          'implementationClassName' => 'Espo\\Modules\\Sales\\Tools\\Price\\MassUpdate\\UpdateProductPrice'
+        ]
+      ],
+      'readLoaderClassNameList' => [],
+      'listLoaderClassNameList' => [],
+      'saverClassNameList' => [],
+      'selectApplierClassNameList' => [],
+      'createInputFilterClassNameList' => [],
+      'updateInputFilterClassNameList' => [],
+      'outputFilterClassNameList' => [],
+      'beforeReadHookClassNameList' => [],
+      'beforeCreateHookClassNameList' => [],
+      'beforeUpdateHookClassNameList' => [],
+      'beforeDeleteHookClassNameList' => [],
+      'afterCreateHookClassNameList' => [],
+      'afterUpdateHookClassNameList' => [],
+      'afterDeleteHookClassNameList' => [],
+      'beforeLinkHookClassNameList' => [],
+      'beforeUnlinkHookClassNameList' => [],
+      'afterLinkHookClassNameList' => [],
+      'afterUnlinkHookClassNameList' => []
+    ],
+    'Tax' => (object) [
+      'massActions' => (object) [
+        'delete' => (object) [
+          'allowed' => true
+        ],
+        'update' => (object) [
+          'allowed' => true
+        ]
+      ],
+      'readLoaderClassNameList' => [],
+      'listLoaderClassNameList' => [],
+      'saverClassNameList' => [],
+      'selectApplierClassNameList' => [],
+      'createInputFilterClassNameList' => [],
+      'updateInputFilterClassNameList' => [],
+      'outputFilterClassNameList' => [],
+      'beforeReadHookClassNameList' => [],
+      'beforeCreateHookClassNameList' => [],
+      'beforeUpdateHookClassNameList' => [],
+      'beforeDeleteHookClassNameList' => [],
+      'afterCreateHookClassNameList' => [],
+      'afterUpdateHookClassNameList' => [],
+      'afterDeleteHookClassNameList' => [],
+      'beforeLinkHookClassNameList' => [],
+      'beforeUnlinkHookClassNameList' => [],
+      'afterLinkHookClassNameList' => [],
+      'afterUnlinkHookClassNameList' => []
+    ],
+    'TransferOrder' => (object) [
+      'readLoaderClassNameList' => [
+        0 => 'Espo\\Modules\\Sales\\Classes\\FieldLoaders\\Quote\\ItemListLoader',
+        1 => 'Espo\\Modules\\Sales\\Classes\\FieldLoaders\\Quote\\InventoryDataLoader',
+        2 => 'Espo\\Modules\\Sales\\Classes\\FieldLoaders\\Quote\\InventoryStatusLoader'
+      ],
+      'listLoaderClassNameList' => [
+        0 => 'Espo\\Modules\\Sales\\Classes\\FieldLoaders\\Quote\\ListItemListLoader'
+      ],
+      'beforeCreateHookClassNameList' => [
+        0 => 'Espo\\Modules\\Sales\\Classes\\Record\\Hooks\\Quote\\BeforeCreateValidation',
+        1 => 'Espo\\Modules\\Sales\\Classes\\Record\\Hooks\\TransferOrder\\BeforeCreateValidation'
+      ],
+      'beforeUpdateHookClassNameList' => [
+        0 => 'Espo\\Modules\\Sales\\Classes\\Record\\Hooks\\Quote\\BeforeUpdateValidation',
+        1 => 'Espo\\Modules\\Sales\\Classes\\Record\\Hooks\\TransferOrder\\BeforeUpdateValidation'
+      ],
+      'loadAdditionalFieldsAfterUpdate' => true,
+      'massActions' => (object) [
+        'lock' => (object) [
+          'implementationClassName' => 'Espo\\Modules\\Sales\\Classes\\MassActions\\Lock'
+        ],
+        'unlock' => (object) [
+          'implementationClassName' => 'Espo\\Modules\\Sales\\Classes\\MassActions\\Unlock'
+        ]
+      ],
+      'saverClassNameList' => [],
+      'selectApplierClassNameList' => [],
+      'createInputFilterClassNameList' => [],
+      'updateInputFilterClassNameList' => [],
+      'outputFilterClassNameList' => [],
+      'beforeReadHookClassNameList' => [],
+      'beforeDeleteHookClassNameList' => [],
+      'afterCreateHookClassNameList' => [],
+      'afterUpdateHookClassNameList' => [],
+      'afterDeleteHookClassNameList' => [],
+      'beforeLinkHookClassNameList' => [],
+      'beforeUnlinkHookClassNameList' => [],
+      'afterLinkHookClassNameList' => [],
+      'afterUnlinkHookClassNameList' => []
+    ],
+    'TransferOrderItem' => (object) [
+      'actions' => (object) [
+        'convertCurrency' => (object) [
+          'disabled' => true
+        ]
+      ],
+      'massActions' => (object) [
+        'convertCurrency' => (object) [
+          'disabled' => true
+        ],
+        'delete' => (object) [
+          'disabled' => true
+        ]
+      ],
+      'readLoaderClassNameList' => [],
+      'listLoaderClassNameList' => [],
+      'saverClassNameList' => [],
+      'selectApplierClassNameList' => [],
+      'createInputFilterClassNameList' => [],
+      'updateInputFilterClassNameList' => [],
+      'outputFilterClassNameList' => [],
+      'beforeReadHookClassNameList' => [],
+      'beforeCreateHookClassNameList' => [],
+      'beforeUpdateHookClassNameList' => [],
+      'beforeDeleteHookClassNameList' => [],
+      'afterCreateHookClassNameList' => [],
+      'afterUpdateHookClassNameList' => [],
+      'afterDeleteHookClassNameList' => [],
+      'beforeLinkHookClassNameList' => [],
+      'beforeUnlinkHookClassNameList' => [],
+      'afterLinkHookClassNameList' => [],
+      'afterUnlinkHookClassNameList' => []
+    ],
+    'Warehouse' => (object) [
+      'massActions' => (object) [
+        'delete' => (object) [
+          'allowed' => true
+        ],
+        'update' => (object) [
+          'allowed' => true
+        ]
+      ],
+      'readLoaderClassNameList' => [],
+      'listLoaderClassNameList' => [],
+      'saverClassNameList' => [],
       'selectApplierClassNameList' => [],
       'createInputFilterClassNameList' => [],
       'updateInputFilterClassNameList' => [],
@@ -28906,6 +43931,699 @@ return (object) [
         1 => 'Deferred'
       ],
       'statusFieldLocked' => true
+    ],
+    'DeliveryOrder' => (object) [
+      'entity' => true,
+      'layouts' => true,
+      'tab' => true,
+      'acl' => true,
+      'aclPortal' => true,
+      'aclPortalLevelList' => [
+        0 => 'all',
+        1 => 'account',
+        2 => 'no'
+      ],
+      'module' => 'Sales',
+      'customizable' => true,
+      'importable' => true,
+      'notifications' => true,
+      'object' => true,
+      'currencyConversionAccessRequiredFieldList' => [
+        0 => 'shippingCost'
+      ],
+      'lockableFieldList' => [
+        0 => 'status',
+        1 => 'itemList',
+        2 => 'shippingCost'
+      ],
+      'softReserveStatusList' => [
+        0 => 'Draft'
+      ],
+      'reserveStatusList' => [
+        0 => 'Ready'
+      ],
+      'canceledStatusList' => [
+        0 => 'Canceled'
+      ],
+      'doneStatusList' => [
+        0 => 'Completed'
+      ],
+      'failedStatusList' => [
+        0 => 'Failed'
+      ]
+    ],
+    'DeliveryOrderItem' => (object) [
+      'entity' => true,
+      'layouts' => true,
+      'tab' => false,
+      'acl' => false,
+      'module' => 'Sales',
+      'customizable' => true,
+      'importable' => false,
+      'notifications' => false,
+      'object' => true,
+      'currencyConversionAccessRequiredFieldList' => []
+    ],
+    'InventoryAdjustment' => (object) [
+      'entity' => true,
+      'tab' => true,
+      'acl' => true,
+      'aclPortal' => false,
+      'aclLevelList' => [
+        0 => 'all',
+        1 => 'team',
+        2 => 'own',
+        3 => 'no'
+      ],
+      'module' => 'Sales',
+      'customizable' => true,
+      'layouts' => true,
+      'importable' => true,
+      'notifications' => false,
+      'object' => true
+    ],
+    'InventoryAdjustmentItem' => (object) [
+      'entity' => true,
+      'layouts' => true,
+      'tab' => false,
+      'acl' => false,
+      'module' => 'Sales',
+      'customizable' => true,
+      'importable' => false,
+      'notifications' => false,
+      'object' => true,
+      'currencyConversionAccessRequiredFieldList' => []
+    ],
+    'InventoryNumber' => (object) [
+      'entity' => true,
+      'tab' => true,
+      'acl' => true,
+      'aclPortal' => false,
+      'aclLevelList' => [
+        0 => 'all',
+        1 => 'no'
+      ],
+      'module' => 'Sales',
+      'customizable' => true,
+      'layouts' => true,
+      'importable' => true,
+      'notifications' => false,
+      'object' => true
+    ],
+    'InventoryTransaction' => (object) [
+      'entity' => true,
+      'object' => true,
+      'tab' => true,
+      'acl' => true,
+      'aclPortal' => false,
+      'aclActionList' => [
+        0 => 'create',
+        1 => 'read'
+      ],
+      'aclLevelList' => [
+        0 => 'all',
+        1 => 'no'
+      ],
+      'module' => 'Sales',
+      'exportFormatList' => [
+        0 => 'csv'
+      ],
+      'importable' => true,
+      'notifications' => false,
+      'customizable' => true,
+      'layouts' => true,
+      'entityManager' => (object) [
+        'layouts' => true,
+        'edit' => false,
+        'formula' => false,
+        'fields' => false,
+        'relationships' => false
+      ]
+    ],
+    'Invoice' => (object) [
+      'entity' => true,
+      'layouts' => true,
+      'tab' => true,
+      'acl' => true,
+      'aclPortal' => true,
+      'aclPortalLevelList' => [
+        0 => 'all',
+        1 => 'account',
+        2 => 'no'
+      ],
+      'module' => 'Sales',
+      'customizable' => true,
+      'importable' => true,
+      'notifications' => true,
+      'object' => true,
+      'currencyConversionAccessRequiredFieldList' => [
+        0 => 'amount'
+      ],
+      'lockableFieldList' => [
+        0 => 'status',
+        1 => 'itemList',
+        2 => 'shippingCost'
+      ],
+      'doneStatusList' => [
+        0 => 'Paid'
+      ],
+      'canceledStatusList' => [
+        0 => 'Canceled',
+        1 => 'Rejected'
+      ]
+    ],
+    'InvoiceItem' => (object) [
+      'entity' => true,
+      'layouts' => true,
+      'tab' => false,
+      'acl' => false,
+      'module' => 'Sales',
+      'customizable' => true,
+      'importable' => false,
+      'notifications' => false,
+      'object' => true,
+      'currencyConversionAccessRequiredFieldList' => [
+        0 => 'amount'
+      ]
+    ],
+    'OpportunityItem' => (object) [
+      'entity' => true,
+      'layouts' => true,
+      'tab' => false,
+      'acl' => false,
+      'module' => 'Sales',
+      'customizable' => true,
+      'importable' => false,
+      'notifications' => false,
+      'object' => true,
+      'currencyConversionAccessRequiredFieldList' => [
+        0 => 'amount'
+      ]
+    ],
+    'PriceBook' => (object) [
+      'entity' => true,
+      'layouts' => true,
+      'tab' => true,
+      'acl' => true,
+      'aclPortal' => true,
+      'aclPortalLevelList' => [
+        0 => 'account',
+        1 => 'no'
+      ],
+      'aclPortalActionList' => [
+        0 => 'read'
+      ],
+      'module' => 'Sales',
+      'customizable' => true,
+      'importable' => true,
+      'notifications' => false,
+      'object' => true
+    ],
+    'PriceRule' => (object) [
+      'entity' => true,
+      'layouts' => false,
+      'tab' => false,
+      'acl' => false,
+      'aclPortal' => false,
+      'module' => 'Sales',
+      'customizable' => false,
+      'importable' => true,
+      'notifications' => false,
+      'object' => true
+    ],
+    'PriceRuleCondition' => (object) [
+      'entity' => true,
+      'layouts' => false,
+      'tab' => false,
+      'acl' => false,
+      'aclPortal' => false,
+      'module' => 'Sales',
+      'customizable' => false,
+      'importable' => true,
+      'notifications' => false,
+      'object' => false,
+      'duplicateCheckFieldList' => [
+        0 => 'name'
+      ]
+    ],
+    'Product' => (object) [
+      'entity' => true,
+      'layouts' => true,
+      'tab' => true,
+      'acl' => true,
+      'aclLevelList' => [
+        0 => 'all',
+        1 => 'team',
+        2 => 'no'
+      ],
+      'aclPortal' => true,
+      'aclPortalLevelList' => [
+        0 => 'all',
+        1 => 'no'
+      ],
+      'module' => 'Sales',
+      'customizable' => true,
+      'importable' => true,
+      'notifications' => false,
+      'object' => true,
+      'variantCoreSyncFieldList' => [
+        0 => 'brand',
+        1 => 'category',
+        2 => 'isInventory',
+        3 => 'inventoryNumberType',
+        4 => 'allowFractionalQuantity',
+        5 => 'expirationDays',
+        6 => 'removalStrategy'
+      ],
+      'variantSyncFieldList' => [
+        0 => 'isTaxFree',
+        1 => 'status'
+      ],
+      'duplicateCheckFieldList' => [
+        0 => 'name',
+        1 => 'partNumber'
+      ]
+    ],
+    'ProductAttribute' => (object) [
+      'entity' => true,
+      'object' => false,
+      'tab' => true,
+      'acl' => true,
+      'aclLevelList' => [
+        0 => 'all',
+        1 => 'no'
+      ],
+      'module' => 'Sales',
+      'customizable' => false,
+      'layouts' => false,
+      'importable' => true,
+      'notifications' => false
+    ],
+    'ProductAttributeOption' => (object) [
+      'entity' => true,
+      'object' => false,
+      'tab' => true,
+      'acl' => false,
+      'module' => 'Sales',
+      'customizable' => false,
+      'layouts' => false,
+      'importable' => true,
+      'notifications' => false
+    ],
+    'ProductBrand' => (object) [
+      'entity' => true,
+      'layouts' => true,
+      'tab' => true,
+      'acl' => true,
+      'aclLevelList' => [
+        0 => 'all',
+        1 => 'team',
+        2 => 'no'
+      ],
+      'module' => 'Sales',
+      'customizable' => true,
+      'importable' => true,
+      'notifications' => false,
+      'object' => true
+    ],
+    'ProductCategory' => (object) [
+      'entity' => true,
+      'layouts' => true,
+      'tab' => false,
+      'acl' => true,
+      'aclPortal' => true,
+      'aclLevelList' => [
+        0 => 'all',
+        1 => 'team',
+        2 => 'no'
+      ],
+      'aclPortalLevelList' => [
+        0 => 'all',
+        1 => 'no'
+      ],
+      'aclPortalActionList' => [
+        0 => 'read'
+      ],
+      'module' => 'Sales',
+      'customizable' => true,
+      'importable' => false,
+      'type' => 'CategoryTree',
+      'notifications' => false
+    ],
+    'ProductPrice' => (object) [
+      'entity' => true,
+      'layouts' => false,
+      'tab' => true,
+      'acl' => false,
+      'aclPortal' => false,
+      'module' => 'Sales',
+      'customizable' => false,
+      'importable' => true,
+      'notifications' => false,
+      'object' => true
+    ],
+    'PurchaseOrder' => (object) [
+      'entity' => true,
+      'layouts' => true,
+      'tab' => true,
+      'acl' => true,
+      'aclPortal' => true,
+      'aclPortalLevelList' => [
+        0 => 'all',
+        1 => 'account',
+        2 => 'no'
+      ],
+      'module' => 'Sales',
+      'customizable' => true,
+      'importable' => true,
+      'notifications' => true,
+      'object' => true,
+      'currencyConversionAccessRequiredFieldList' => [
+        0 => 'amount'
+      ],
+      'lockableFieldList' => [
+        0 => 'status',
+        1 => 'itemList',
+        2 => 'shippingCost'
+      ],
+      'doneStatusList' => [
+        0 => 'Completed'
+      ],
+      'canceledStatusList' => [
+        0 => 'Canceled'
+      ]
+    ],
+    'PurchaseOrderItem' => (object) [
+      'entity' => true,
+      'layouts' => true,
+      'tab' => false,
+      'acl' => false,
+      'module' => 'Sales',
+      'customizable' => true,
+      'importable' => false,
+      'notifications' => false,
+      'object' => true,
+      'currencyConversionAccessRequiredFieldList' => [
+        0 => 'amount'
+      ]
+    ],
+    'Quote' => (object) [
+      'entity' => true,
+      'layouts' => true,
+      'tab' => true,
+      'acl' => true,
+      'aclPortal' => true,
+      'aclPortalLevelList' => [
+        0 => 'all',
+        1 => 'account',
+        2 => 'no'
+      ],
+      'module' => 'Sales',
+      'customizable' => true,
+      'importable' => true,
+      'notifications' => true,
+      'object' => true,
+      'currencyConversionAccessRequiredFieldList' => [
+        0 => 'amount'
+      ],
+      'lockableFieldList' => [
+        0 => 'status',
+        1 => 'itemList',
+        2 => 'shippingCost'
+      ],
+      'doneStatusList' => [
+        0 => 'Approved'
+      ],
+      'canceledStatusList' => [
+        0 => 'Canceled'
+      ]
+    ],
+    'QuoteItem' => (object) [
+      'entity' => true,
+      'layouts' => true,
+      'tab' => false,
+      'acl' => false,
+      'module' => 'Sales',
+      'customizable' => true,
+      'importable' => false,
+      'notifications' => false,
+      'object' => true,
+      'currencyConversionAccessRequiredFieldList' => [
+        0 => 'amount'
+      ]
+    ],
+    'ReceiptOrder' => (object) [
+      'entity' => true,
+      'layouts' => true,
+      'tab' => true,
+      'acl' => true,
+      'aclPortal' => true,
+      'aclPortalLevelList' => [
+        0 => 'all',
+        1 => 'account',
+        2 => 'no'
+      ],
+      'module' => 'Sales',
+      'customizable' => true,
+      'importable' => true,
+      'notifications' => true,
+      'object' => true,
+      'currencyConversionAccessRequiredFieldList' => [
+        0 => 'shippingCost'
+      ],
+      'lockableFieldList' => [
+        0 => 'status',
+        1 => 'itemList',
+        2 => 'receivedItemList'
+      ],
+      'doneStatusList' => [
+        0 => 'Completed'
+      ],
+      'canceledStatusList' => [
+        0 => 'Canceled'
+      ]
+    ],
+    'ReceiptOrderItem' => (object) [
+      'entity' => true,
+      'layouts' => true,
+      'tab' => false,
+      'acl' => false,
+      'module' => 'Sales',
+      'customizable' => true,
+      'importable' => false,
+      'notifications' => false,
+      'object' => true,
+      'currencyConversionAccessRequiredFieldList' => []
+    ],
+    'ReturnOrder' => (object) [
+      'entity' => true,
+      'layouts' => true,
+      'tab' => true,
+      'acl' => true,
+      'aclPortal' => true,
+      'aclPortalLevelList' => [
+        0 => 'all',
+        1 => 'account',
+        2 => 'no'
+      ],
+      'module' => 'Sales',
+      'customizable' => true,
+      'importable' => true,
+      'notifications' => true,
+      'object' => true,
+      'currencyConversionAccessRequiredFieldList' => [
+        0 => 'amount'
+      ],
+      'lockableFieldList' => [
+        0 => 'status',
+        1 => 'itemList',
+        2 => 'shippingCost'
+      ],
+      'doneStatusList' => [
+        0 => 'Completed'
+      ],
+      'canceledStatusList' => [
+        0 => 'Canceled'
+      ]
+    ],
+    'ReturnOrderItem' => (object) [
+      'entity' => true,
+      'layouts' => true,
+      'tab' => false,
+      'acl' => false,
+      'module' => 'Sales',
+      'customizable' => true,
+      'importable' => false,
+      'notifications' => false,
+      'object' => true,
+      'currencyConversionAccessRequiredFieldList' => [
+        0 => 'amount'
+      ]
+    ],
+    'SalesOrder' => (object) [
+      'entity' => true,
+      'layouts' => true,
+      'tab' => true,
+      'acl' => true,
+      'aclPortal' => true,
+      'aclPortalLevelList' => [
+        0 => 'all',
+        1 => 'account',
+        2 => 'no'
+      ],
+      'module' => 'Sales',
+      'customizable' => true,
+      'importable' => true,
+      'notifications' => true,
+      'object' => true,
+      'currencyConversionAccessRequiredFieldList' => [
+        0 => 'amount'
+      ],
+      'lockableFieldList' => [
+        0 => 'status',
+        1 => 'itemList',
+        2 => 'shippingCost'
+      ],
+      'softReserveStatusList' => [
+        0 => 'Ready'
+      ],
+      'doneStatusList' => [
+        0 => 'Completed'
+      ],
+      'canceledStatusList' => [
+        0 => 'Canceled'
+      ],
+      'deliveryRequiredStatusList' => [
+        0 => 'Ready',
+        1 => 'Completed'
+      ]
+    ],
+    'SalesOrderItem' => (object) [
+      'entity' => true,
+      'layouts' => true,
+      'tab' => false,
+      'acl' => false,
+      'module' => 'Sales',
+      'customizable' => true,
+      'importable' => false,
+      'notifications' => false,
+      'object' => true,
+      'currencyConversionAccessRequiredFieldList' => [
+        0 => 'amount'
+      ]
+    ],
+    'ShippingProvider' => (object) [
+      'entity' => true,
+      'layouts' => true,
+      'tab' => true,
+      'acl' => true,
+      'aclLevelList' => [
+        0 => 'all',
+        1 => 'no'
+      ],
+      'module' => 'Sales',
+      'customizable' => true,
+      'importable' => false,
+      'notifications' => false
+    ],
+    'Supplier' => (object) [
+      'entity' => true,
+      'layouts' => true,
+      'tab' => true,
+      'acl' => true,
+      'aclPortal' => false,
+      'module' => 'Sales',
+      'customizable' => true,
+      'importable' => true,
+      'notifications' => false,
+      'object' => true
+    ],
+    'SupplierProductPrice' => (object) [
+      'entity' => true,
+      'layouts' => false,
+      'tab' => true,
+      'acl' => false,
+      'aclPortal' => false,
+      'module' => 'Sales',
+      'customizable' => false,
+      'importable' => true,
+      'notifications' => false,
+      'object' => true
+    ],
+    'Tax' => (object) [
+      'entity' => true,
+      'layouts' => true,
+      'tab' => true,
+      'acl' => true,
+      'aclLevelList' => [
+        0 => 'all',
+        1 => 'no'
+      ],
+      'module' => 'Sales',
+      'customizable' => true,
+      'importable' => true,
+      'notifications' => false
+    ],
+    'TransferOrder' => (object) [
+      'entity' => true,
+      'layouts' => true,
+      'tab' => true,
+      'acl' => true,
+      'module' => 'Sales',
+      'customizable' => true,
+      'importable' => true,
+      'notifications' => true,
+      'object' => true,
+      'currencyConversionAccessRequiredFieldList' => [
+        0 => 'shippingCost'
+      ],
+      'lockableFieldList' => [
+        0 => 'status',
+        1 => 'itemList',
+        2 => 'shippingCost'
+      ],
+      'softReserveStatusList' => [
+        0 => 'Draft'
+      ],
+      'reserveStatusList' => [
+        0 => 'Ready'
+      ],
+      'canceledStatusList' => [
+        0 => 'Canceled'
+      ],
+      'doneStatusList' => [
+        0 => 'Completed'
+      ],
+      'failedStatusList' => [
+        0 => 'Failed'
+      ]
+    ],
+    'TransferOrderItem' => (object) [
+      'entity' => true,
+      'layouts' => true,
+      'tab' => false,
+      'acl' => false,
+      'module' => 'Sales',
+      'customizable' => true,
+      'importable' => false,
+      'notifications' => false,
+      'object' => true,
+      'currencyConversionAccessRequiredFieldList' => []
+    ],
+    'Warehouse' => (object) [
+      'entity' => true,
+      'layouts' => true,
+      'tab' => true,
+      'acl' => true,
+      'aclLevelList' => [
+        0 => 'all',
+        1 => 'team',
+        2 => 'no'
+      ],
+      'module' => 'Sales',
+      'customizable' => true,
+      'importable' => true,
+      'notifications' => false
     ]
   ],
   'selectDefs' => (object) [
@@ -29298,6 +45016,384 @@ return (object) [
         'actual' => 'Espo\\Modules\\Crm\\Classes\\Select\\Task\\BoolFilters\\Actual',
         'completed' => 'Espo\\Modules\\Crm\\Classes\\Select\\Task\\BoolFilters\\Completed'
       ]
+    ],
+    'DeliveryOrder' => (object) [
+      'primaryFilterClassNameMap' => (object) [
+        'actual' => 'Espo\\Modules\\Sales\\Classes\\Select\\Quote\\PrimaryFilters\\Actual',
+        'completed' => 'Espo\\Modules\\Sales\\Classes\\Select\\DeliveryOrder\\PrimaryFilters\\Completed'
+      ],
+      'whereItemConverterClassNameMap' => (object) [
+        'productsIds_arrayAnyOf' => 'Espo\\Modules\\Sales\\Classes\\Select\\Quote\\WhereItemConverters\\Products',
+        'productsIds_arrayAllOf' => 'Espo\\Modules\\Sales\\Classes\\Select\\Quote\\WhereItemConverters\\Products',
+        'inventoryNumbersIds_arrayAnyOf' => 'Espo\\Modules\\Sales\\Classes\\Select\\Quote\\WhereItemConverters\\InventoryNumbers',
+        'inventoryNumbersIds_arrayAllOf' => 'Espo\\Modules\\Sales\\Classes\\Select\\Quote\\WhereItemConverters\\InventoryNumbers'
+      ]
+    ],
+    'DeliveryOrderItem' => (object) [
+      'accessControlFilterClassNameMap' => (object) [
+        'onlyOwn' => 'Espo\\Modules\\Sales\\Classes\\Select\\QuoteItem\\AccessControlFilters\\OnlyOwn',
+        'onlyTeam' => 'Espo\\Modules\\Sales\\Classes\\Select\\QuoteItem\\AccessControlFilters\\OnlyTeam',
+        'portalOnlyAccount' => 'Espo\\Core\\Select\\AccessControl\\Filters\\No',
+        'portalOnlyContact' => 'Espo\\Core\\Select\\AccessControl\\Filters\\No',
+        'portalOnlyOwn' => 'Espo\\Core\\Select\\AccessControl\\Filters\\No'
+      ]
+    ],
+    'InventoryAdjustment' => (object) [
+      'primaryFilterClassNameMap' => (object) [
+        'actual' => 'Espo\\Modules\\Sales\\Classes\\Select\\Quote\\PrimaryFilters\\Actual',
+        'completed' => 'Espo\\Modules\\Sales\\Classes\\Select\\InventoryAdjustment\\PrimaryFilters\\Completed'
+      ],
+      'whereItemConverterClassNameMap' => (object) [
+        'productsIds_arrayAnyOf' => 'Espo\\Modules\\Sales\\Classes\\Select\\Quote\\WhereItemConverters\\Products',
+        'productsIds_arrayAllOf' => 'Espo\\Modules\\Sales\\Classes\\Select\\Quote\\WhereItemConverters\\Products',
+        'inventoryNumbersIds_arrayAnyOf' => 'Espo\\Modules\\Sales\\Classes\\Select\\Quote\\WhereItemConverters\\InventoryNumbers',
+        'inventoryNumbersIds_arrayAllOf' => 'Espo\\Modules\\Sales\\Classes\\Select\\Quote\\WhereItemConverters\\InventoryNumbers'
+      ]
+    ],
+    'InventoryAdjustmentItem' => (object) [
+      'primaryFilterClassNameMap' => (object) [
+        'completed' => 'Espo\\Modules\\Sales\\Classes\\Select\\InventoryAdjustmentItem\\PrimaryFilters\\Completed'
+      ],
+      'accessControlFilterClassNameMap' => (object) [
+        'onlyOwn' => 'Espo\\Modules\\Sales\\Classes\\Select\\QuoteItem\\AccessControlFilters\\OnlyOwn',
+        'onlyTeam' => 'Espo\\Modules\\Sales\\Classes\\Select\\QuoteItem\\AccessControlFilters\\OnlyTeam',
+        'portalOnlyAccount' => 'Espo\\Core\\Select\\AccessControl\\Filters\\No',
+        'portalOnlyContact' => 'Espo\\Core\\Select\\AccessControl\\Filters\\No',
+        'portalOnlyOwn' => 'Espo\\Core\\Select\\AccessControl\\Filters\\No'
+      ]
+    ],
+    'InventoryNumber' => (object) [
+      'primaryFilterClassNameMap' => (object) [
+        'onHand' => 'Espo\\Modules\\Sales\\Classes\\Select\\InventoryNumber\\PrimaryFilters\\OnHand',
+        'notOnHand' => 'Espo\\Modules\\Sales\\Classes\\Select\\InventoryNumber\\PrimaryFilters\\NotOnHand'
+      ],
+      'accessControlFilterClassNameMap' => (object) [
+        'all' => 'Espo\\Modules\\Sales\\Classes\\Select\\InventoryNumber\\AccessControlFilters\\All'
+      ],
+      'whereItemConverterClassNameMap' => (object) [
+        'warehousesOnHandIds_arrayAnyOf' => 'Espo\\Modules\\Sales\\Classes\\Select\\InventoryNumber\\WhereItemConverters\\WarehousesOnHand',
+        'quantityReserved_greaterThan' => 'Espo\\Modules\\Sales\\Classes\\Select\\InventoryNumber\\WhereItemConverters\\Quantity',
+        'quantityReserved_greaterThanOrEquals' => 'Espo\\Modules\\Sales\\Classes\\Select\\InventoryNumber\\WhereItemConverters\\Quantity',
+        'quantityReserved_lessThan' => 'Espo\\Modules\\Sales\\Classes\\Select\\InventoryNumber\\WhereItemConverters\\Quantity',
+        'quantityReserved_lessThanOrEquals' => 'Espo\\Modules\\Sales\\Classes\\Select\\InventoryNumber\\WhereItemConverters\\Quantity',
+        'quantityReserved_equals' => 'Espo\\Modules\\Sales\\Classes\\Select\\InventoryNumber\\WhereItemConverters\\Quantity',
+        'quantityReserved_notEquals' => 'Espo\\Modules\\Sales\\Classes\\Select\\InventoryNumber\\WhereItemConverters\\Quantity',
+        'quantityReserved_isNull' => 'Espo\\Modules\\Sales\\Classes\\Select\\InventoryNumber\\WhereItemConverters\\Quantity',
+        'quantityReserved_isNotNull' => 'Espo\\Modules\\Sales\\Classes\\Select\\InventoryNumber\\WhereItemConverters\\Quantity',
+        'quantityReserved_between' => 'Espo\\Modules\\Sales\\Classes\\Select\\InventoryNumber\\WhereItemConverters\\Quantity',
+        'quantityOnHand_greaterThan' => 'Espo\\Modules\\Sales\\Classes\\Select\\InventoryNumber\\WhereItemConverters\\Quantity',
+        'quantityOnHand_greaterThanOrEquals' => 'Espo\\Modules\\Sales\\Classes\\Select\\InventoryNumber\\WhereItemConverters\\Quantity',
+        'quantityOnHand_lessThan' => 'Espo\\Modules\\Sales\\Classes\\Select\\InventoryNumber\\WhereItemConverters\\Quantity',
+        'quantityOnHand_lessThanOrEquals' => 'Espo\\Modules\\Sales\\Classes\\Select\\InventoryNumber\\WhereItemConverters\\Quantity',
+        'quantityOnHand_equals' => 'Espo\\Modules\\Sales\\Classes\\Select\\InventoryNumber\\WhereItemConverters\\Quantity',
+        'quantityOnHand_notEquals' => 'Espo\\Modules\\Sales\\Classes\\Select\\InventoryNumber\\WhereItemConverters\\Quantity',
+        'quantityOnHand_isNull' => 'Espo\\Modules\\Sales\\Classes\\Select\\InventoryNumber\\WhereItemConverters\\Quantity',
+        'quantityOnHand_isNotNull' => 'Espo\\Modules\\Sales\\Classes\\Select\\InventoryNumber\\WhereItemConverters\\Quantity',
+        'quantityOnHand_between' => 'Espo\\Modules\\Sales\\Classes\\Select\\InventoryNumber\\WhereItemConverters\\Quantity'
+      ],
+      'ordererClassNameMap' => (object) [
+        'quantityReserved' => 'Espo\\Modules\\Sales\\Classes\\Select\\InventoryNumber\\Order\\Quantity',
+        'quantityOnHand' => 'Espo\\Modules\\Sales\\Classes\\Select\\InventoryNumber\\Order\\Quantity',
+        'orderFifo' => 'Espo\\Modules\\Sales\\Classes\\Select\\InventoryNumber\\Order\\OrderFifo',
+        'orderFefo' => 'Espo\\Modules\\Sales\\Classes\\Select\\InventoryNumber\\Order\\OrderFefo',
+        'orderLifo' => 'Espo\\Modules\\Sales\\Classes\\Select\\InventoryNumber\\Order\\OrderLifo'
+      ]
+    ],
+    'Invoice' => (object) [
+      'primaryFilterClassNameMap' => (object) [
+        'actual' => 'Espo\\Modules\\Sales\\Classes\\Select\\Quote\\PrimaryFilters\\Actual',
+        'paid' => 'Espo\\Modules\\Sales\\Classes\\Select\\Invoice\\PrimaryFilters\\Paid'
+      ],
+      'whereItemConverterClassNameMap' => (object) [
+        'productsIds_arrayAnyOf' => 'Espo\\Modules\\Sales\\Classes\\Select\\Quote\\WhereItemConverters\\Products',
+        'productsIds_arrayAllOf' => 'Espo\\Modules\\Sales\\Classes\\Select\\Quote\\WhereItemConverters\\Products'
+      ]
+    ],
+    'InvoiceItem' => (object) [
+      'accessControlFilterClassNameMap' => (object) [
+        'onlyOwn' => 'Espo\\Modules\\Sales\\Classes\\Select\\QuoteItem\\AccessControlFilters\\OnlyOwn',
+        'onlyTeam' => 'Espo\\Modules\\Sales\\Classes\\Select\\QuoteItem\\AccessControlFilters\\OnlyTeam',
+        'portalOnlyAccount' => 'Espo\\Core\\Select\\AccessControl\\Filters\\No',
+        'portalOnlyContact' => 'Espo\\Core\\Select\\AccessControl\\Filters\\No',
+        'portalOnlyOwn' => 'Espo\\Core\\Select\\AccessControl\\Filters\\No'
+      ]
+    ],
+    'OpportunityItem' => (object) [
+      'accessControlFilterClassNameMap' => (object) [
+        'onlyOwn' => 'Espo\\Modules\\Sales\\Classes\\Select\\QuoteItem\\AccessControlFilters\\OnlyOwn',
+        'onlyTeam' => 'Espo\\Modules\\Sales\\Classes\\Select\\QuoteItem\\AccessControlFilters\\OnlyTeam',
+        'portalOnlyAccount' => 'Espo\\Core\\Select\\AccessControl\\Filters\\No',
+        'portalOnlyContact' => 'Espo\\Core\\Select\\AccessControl\\Filters\\No',
+        'portalOnlyOwn' => 'Espo\\Core\\Select\\AccessControl\\Filters\\No'
+      ]
+    ],
+    'PriceBook' => (object) [
+      'primaryFilterClassNameMap' => (object) [
+        'active' => 'Espo\\Modules\\Sales\\Classes\\Select\\PriceBook\\PrimaryFilters\\Active'
+      ]
+    ],
+    'PriceRule' => (object) [
+      'selectAttributesDependencyMap' => (object) [
+        'priceBookId' => [
+          0 => 'status'
+        ],
+        'target' => [
+          0 => 'productCategoryId',
+          1 => 'productCategoryName',
+          2 => 'conditionId',
+          3 => 'conditionName'
+        ],
+        'price' => [
+          0 => 'discount',
+          1 => 'surcharge',
+          2 => 'roundingFactor',
+          3 => 'roundingMethod',
+          4 => 'basedOn'
+        ]
+      ],
+      'primaryFilterClassNameMap' => (object) [
+        'active' => 'Espo\\Modules\\Sales\\Classes\\Select\\PriceRule\\PrimaryFilters\\Active'
+      ],
+      'accessControlFilterClassNameMap' => (object) [
+        'onlyOwn' => 'Espo\\Modules\\Sales\\Classes\\Select\\PriceRule\\AccessControlFilters\\OnlyOwn',
+        'onlyTeam' => 'Espo\\Modules\\Sales\\Classes\\Select\\PriceRule\\AccessControlFilters\\OnlyTeam',
+        'portalOnlyAccount' => 'Espo\\Modules\\Sales\\Classes\\Select\\PriceRule\\AccessControlFilters\\PortalOnlyAccount'
+      ]
+    ],
+    'Product' => (object) [
+      'selectAttributesDependencyMap' => (object) [
+        'id' => [
+          0 => 'isInventory',
+          1 => 'type'
+        ]
+      ],
+      'primaryFilterClassNameMap' => (object) [
+        'available' => 'Espo\\Modules\\Sales\\Classes\\Select\\Product\\PrimaryFilters\\Available',
+        'inventory' => 'Espo\\Modules\\Sales\\Classes\\Select\\Product\\PrimaryFilters\\Inventory',
+        'allVariants' => 'Espo\\Modules\\Sales\\Classes\\Select\\Product\\PrimaryFilters\\AllVariants',
+        'availableVariants' => 'Espo\\Modules\\Sales\\Classes\\Select\\Product\\PrimaryFilters\\AvailableVariants'
+      ],
+      'whereItemConverterClassNameMap' => (object) [
+        'warehousesOnHandIds_arrayAnyOf' => 'Espo\\Modules\\Sales\\Classes\\Select\\Product\\WhereItemConverters\\WarehousesOnHand',
+        'warehousesOnHandIds_arrayAllOf' => 'Espo\\Modules\\Sales\\Classes\\Select\\Product\\WhereItemConverters\\WarehousesOnHand',
+        'warehousesOnHandIds_arrayNoneOf' => 'Espo\\Modules\\Sales\\Classes\\Select\\Product\\WhereItemConverters\\WarehousesOnHand',
+        'id_supplierLinkedWith' => 'Espo\\Modules\\Sales\\Classes\\Select\\Product\\WhereItemConverters\\SuppliersLinkedWith',
+        'id_supplierIsNotLinked' => 'Espo\\Modules\\Sales\\Classes\\Select\\Product\\WhereItemConverters\\SuppliersIsNotLinked',
+        'id_supplierIsLinked' => 'Espo\\Modules\\Sales\\Classes\\Select\\Product\\WhereItemConverters\\SuppliersIsLinked',
+        'quantity_greaterThan' => 'Espo\\Modules\\Sales\\Classes\\Select\\Product\\WhereItemConverters\\Quantity',
+        'quantity_greaterThanOrEquals' => 'Espo\\Modules\\Sales\\Classes\\Select\\Product\\WhereItemConverters\\Quantity',
+        'quantity_lessThan' => 'Espo\\Modules\\Sales\\Classes\\Select\\Product\\WhereItemConverters\\Quantity',
+        'quantity_lessThanOrEquals' => 'Espo\\Modules\\Sales\\Classes\\Select\\Product\\WhereItemConverters\\Quantity',
+        'quantity_equals' => 'Espo\\Modules\\Sales\\Classes\\Select\\Product\\WhereItemConverters\\Quantity',
+        'quantity_notEquals' => 'Espo\\Modules\\Sales\\Classes\\Select\\Product\\WhereItemConverters\\Quantity',
+        'quantity_isNull' => 'Espo\\Modules\\Sales\\Classes\\Select\\Product\\WhereItemConverters\\Quantity',
+        'quantity_isNotNull' => 'Espo\\Modules\\Sales\\Classes\\Select\\Product\\WhereItemConverters\\Quantity',
+        'quantity_between' => 'Espo\\Modules\\Sales\\Classes\\Select\\Product\\WhereItemConverters\\Quantity',
+        'quantityReserved_greaterThan' => 'Espo\\Modules\\Sales\\Classes\\Select\\Product\\WhereItemConverters\\Quantity',
+        'quantityReserved_greaterThanOrEquals' => 'Espo\\Modules\\Sales\\Classes\\Select\\Product\\WhereItemConverters\\Quantity',
+        'quantityReserved_lessThan' => 'Espo\\Modules\\Sales\\Classes\\Select\\Product\\WhereItemConverters\\Quantity',
+        'quantityReserved_lessThanOrEquals' => 'Espo\\Modules\\Sales\\Classes\\Select\\Product\\WhereItemConverters\\Quantity',
+        'quantityReserved_equals' => 'Espo\\Modules\\Sales\\Classes\\Select\\Product\\WhereItemConverters\\Quantity',
+        'quantityReserved_notEquals' => 'Espo\\Modules\\Sales\\Classes\\Select\\Product\\WhereItemConverters\\Quantity',
+        'quantityReserved_isNull' => 'Espo\\Modules\\Sales\\Classes\\Select\\Product\\WhereItemConverters\\Quantity',
+        'quantityReserved_isNotNull' => 'Espo\\Modules\\Sales\\Classes\\Select\\Product\\WhereItemConverters\\Quantity',
+        'quantityReserved_between' => 'Espo\\Modules\\Sales\\Classes\\Select\\Product\\WhereItemConverters\\Quantity',
+        'quantitySoftReserved_greaterThan' => 'Espo\\Modules\\Sales\\Classes\\Select\\Product\\WhereItemConverters\\Quantity',
+        'quantitySoftReserved_greaterThanOrEquals' => 'Espo\\Modules\\Sales\\Classes\\Select\\Product\\WhereItemConverters\\Quantity',
+        'quantitySoftReserved_lessThan' => 'Espo\\Modules\\Sales\\Classes\\Select\\Product\\WhereItemConverters\\Quantity',
+        'quantitySoftReserved_lessThanOrEquals' => 'Espo\\Modules\\Sales\\Classes\\Select\\Product\\WhereItemConverters\\Quantity',
+        'quantitySoftReserved_equals' => 'Espo\\Modules\\Sales\\Classes\\Select\\Product\\WhereItemConverters\\Quantity',
+        'quantitySoftReserved_notEquals' => 'Espo\\Modules\\Sales\\Classes\\Select\\Product\\WhereItemConverters\\Quantity',
+        'quantitySoftReserved_isNull' => 'Espo\\Modules\\Sales\\Classes\\Select\\Product\\WhereItemConverters\\Quantity',
+        'quantitySoftReserved_isNotNull' => 'Espo\\Modules\\Sales\\Classes\\Select\\Product\\WhereItemConverters\\Quantity',
+        'quantitySoftReserved_between' => 'Espo\\Modules\\Sales\\Classes\\Select\\Product\\WhereItemConverters\\Quantity',
+        'quantityOnHand_greaterThan' => 'Espo\\Modules\\Sales\\Classes\\Select\\Product\\WhereItemConverters\\Quantity',
+        'quantityOnHand_greaterThanOrEquals' => 'Espo\\Modules\\Sales\\Classes\\Select\\Product\\WhereItemConverters\\Quantity',
+        'quantityOnHand_lessThan' => 'Espo\\Modules\\Sales\\Classes\\Select\\Product\\WhereItemConverters\\Quantity',
+        'quantityOnHand_lessThanOrEquals' => 'Espo\\Modules\\Sales\\Classes\\Select\\Product\\WhereItemConverters\\Quantity',
+        'quantityOnHand_equals' => 'Espo\\Modules\\Sales\\Classes\\Select\\Product\\WhereItemConverters\\Quantity',
+        'quantityOnHand_notEquals' => 'Espo\\Modules\\Sales\\Classes\\Select\\Product\\WhereItemConverters\\Quantity',
+        'quantityOnHand_isNull' => 'Espo\\Modules\\Sales\\Classes\\Select\\Product\\WhereItemConverters\\Quantity',
+        'quantityOnHand_isNotNull' => 'Espo\\Modules\\Sales\\Classes\\Select\\Product\\WhereItemConverters\\Quantity',
+        'quantityOnHand_between' => 'Espo\\Modules\\Sales\\Classes\\Select\\Product\\WhereItemConverters\\Quantity'
+      ],
+      'ordererClassNameMap' => (object) [
+        'quantity' => 'Espo\\Modules\\Sales\\Classes\\Select\\Product\\Order\\Quantity',
+        'quantityReserved' => 'Espo\\Modules\\Sales\\Classes\\Select\\Product\\Order\\Quantity',
+        'quantitySoftReserved' => 'Espo\\Modules\\Sales\\Classes\\Select\\Product\\Order\\Quantity',
+        'quantityOnHand' => 'Espo\\Modules\\Sales\\Classes\\Select\\Product\\Order\\Quantity'
+      ]
+    ],
+    'ProductPrice' => (object) [
+      'selectAttributesDependencyMap' => (object) [
+        'productId' => [
+          0 => 'status'
+        ],
+        'priceBookId' => [
+          0 => 'status'
+        ],
+        'name' => [
+          0 => 'productId',
+          1 => 'productName'
+        ]
+      ],
+      'primaryFilterClassNameMap' => (object) [
+        'active' => 'Espo\\Modules\\Sales\\Classes\\Select\\ProductPrice\\PrimaryFilters\\Active'
+      ],
+      'accessControlFilterClassNameMap' => (object) [
+        'onlyOwn' => 'Espo\\Modules\\Sales\\Classes\\Select\\ProductPrice\\AccessControlFilters\\OnlyOwn',
+        'onlyTeam' => 'Espo\\Modules\\Sales\\Classes\\Select\\ProductPrice\\AccessControlFilters\\OnlyTeam',
+        'portalOnlyAccount' => 'Espo\\Modules\\Sales\\Classes\\Select\\ProductPrice\\AccessControlFilters\\PortalOnlyAccount'
+      ]
+    ],
+    'PurchaseOrder' => (object) [
+      'primaryFilterClassNameMap' => (object) [
+        'actual' => 'Espo\\Modules\\Sales\\Classes\\Select\\Quote\\PrimaryFilters\\Actual',
+        'completed' => 'Espo\\Modules\\Sales\\Classes\\Select\\PurchaseOrder\\PrimaryFilters\\Completed'
+      ],
+      'whereItemConverterClassNameMap' => (object) [
+        'productsIds_arrayAnyOf' => 'Espo\\Modules\\Sales\\Classes\\Select\\Quote\\WhereItemConverters\\Products',
+        'productsIds_arrayAllOf' => 'Espo\\Modules\\Sales\\Classes\\Select\\Quote\\WhereItemConverters\\Products'
+      ]
+    ],
+    'PurchaseOrderItem' => (object) [
+      'accessControlFilterClassNameMap' => (object) [
+        'onlyOwn' => 'Espo\\Modules\\Sales\\Classes\\Select\\QuoteItem\\AccessControlFilters\\OnlyOwn',
+        'onlyTeam' => 'Espo\\Modules\\Sales\\Classes\\Select\\QuoteItem\\AccessControlFilters\\OnlyTeam',
+        'portalOnlyAccount' => 'Espo\\Core\\Select\\AccessControl\\Filters\\No',
+        'portalOnlyContact' => 'Espo\\Core\\Select\\AccessControl\\Filters\\No',
+        'portalOnlyOwn' => 'Espo\\Core\\Select\\AccessControl\\Filters\\No'
+      ]
+    ],
+    'Quote' => (object) [
+      'primaryFilterClassNameMap' => (object) [
+        'actual' => 'Espo\\Modules\\Sales\\Classes\\Select\\Quote\\PrimaryFilters\\Actual',
+        'approved' => 'Espo\\Modules\\Sales\\Classes\\Select\\Quote\\PrimaryFilters\\Approved'
+      ],
+      'whereItemConverterClassNameMap' => (object) [
+        'productsIds_arrayAnyOf' => 'Espo\\Modules\\Sales\\Classes\\Select\\Quote\\WhereItemConverters\\Products',
+        'productsIds_arrayAllOf' => 'Espo\\Modules\\Sales\\Classes\\Select\\Quote\\WhereItemConverters\\Products'
+      ]
+    ],
+    'QuoteItem' => (object) [
+      'accessControlFilterClassNameMap' => (object) [
+        'onlyOwn' => 'Espo\\Modules\\Sales\\Classes\\Select\\QuoteItem\\AccessControlFilters\\OnlyOwn',
+        'onlyTeam' => 'Espo\\Modules\\Sales\\Classes\\Select\\QuoteItem\\AccessControlFilters\\OnlyTeam',
+        'portalOnlyAccount' => 'Espo\\Core\\Select\\AccessControl\\Filters\\No',
+        'portalOnlyContact' => 'Espo\\Core\\Select\\AccessControl\\Filters\\No',
+        'portalOnlyOwn' => 'Espo\\Core\\Select\\AccessControl\\Filters\\No'
+      ]
+    ],
+    'ReceiptOrder' => (object) [
+      'primaryFilterClassNameMap' => (object) [
+        'actual' => 'Espo\\Modules\\Sales\\Classes\\Select\\Quote\\PrimaryFilters\\Actual',
+        'completed' => 'Espo\\Modules\\Sales\\Classes\\Select\\ReceiptOrder\\PrimaryFilters\\Completed'
+      ],
+      'whereItemConverterClassNameMap' => (object) [
+        'productsIds_arrayAnyOf' => 'Espo\\Modules\\Sales\\Classes\\Select\\Quote\\WhereItemConverters\\Products',
+        'productsIds_arrayAllOf' => 'Espo\\Modules\\Sales\\Classes\\Select\\Quote\\WhereItemConverters\\Products',
+        'inventoryNumbersIds_arrayAnyOf' => 'Espo\\Modules\\Sales\\Classes\\Select\\Quote\\WhereItemConverters\\InventoryNumbers',
+        'inventoryNumbersIds_arrayAllOf' => 'Espo\\Modules\\Sales\\Classes\\Select\\Quote\\WhereItemConverters\\InventoryNumbers'
+      ]
+    ],
+    'ReceiptOrderItem' => (object) [
+      'accessControlFilterClassNameMap' => (object) [
+        'onlyOwn' => 'Espo\\Modules\\Sales\\Classes\\Select\\QuoteItem\\AccessControlFilters\\OnlyOwn',
+        'onlyTeam' => 'Espo\\Modules\\Sales\\Classes\\Select\\QuoteItem\\AccessControlFilters\\OnlyTeam',
+        'portalOnlyAccount' => 'Espo\\Core\\Select\\AccessControl\\Filters\\No',
+        'portalOnlyContact' => 'Espo\\Core\\Select\\AccessControl\\Filters\\No',
+        'portalOnlyOwn' => 'Espo\\Core\\Select\\AccessControl\\Filters\\No'
+      ]
+    ],
+    'ReturnOrder' => (object) [
+      'primaryFilterClassNameMap' => (object) [
+        'actual' => 'Espo\\Modules\\Sales\\Classes\\Select\\Quote\\PrimaryFilters\\Actual',
+        'completed' => 'Espo\\Modules\\Sales\\Classes\\Select\\ReturnOrder\\PrimaryFilters\\Completed'
+      ],
+      'whereItemConverterClassNameMap' => (object) [
+        'productsIds_arrayAnyOf' => 'Espo\\Modules\\Sales\\Classes\\Select\\Quote\\WhereItemConverters\\Products',
+        'productsIds_arrayAllOf' => 'Espo\\Modules\\Sales\\Classes\\Select\\Quote\\WhereItemConverters\\Products'
+      ]
+    ],
+    'ReturnOrderItem' => (object) [
+      'accessControlFilterClassNameMap' => (object) [
+        'onlyOwn' => 'Espo\\Modules\\Sales\\Classes\\Select\\QuoteItem\\AccessControlFilters\\OnlyOwn',
+        'onlyTeam' => 'Espo\\Modules\\Sales\\Classes\\Select\\QuoteItem\\AccessControlFilters\\OnlyTeam',
+        'portalOnlyAccount' => 'Espo\\Core\\Select\\AccessControl\\Filters\\No',
+        'portalOnlyContact' => 'Espo\\Core\\Select\\AccessControl\\Filters\\No',
+        'portalOnlyOwn' => 'Espo\\Core\\Select\\AccessControl\\Filters\\No'
+      ]
+    ],
+    'SalesOrder' => (object) [
+      'primaryFilterClassNameMap' => (object) [
+        'actual' => 'Espo\\Modules\\Sales\\Classes\\Select\\Quote\\PrimaryFilters\\Actual',
+        'completed' => 'Espo\\Modules\\Sales\\Classes\\Select\\SalesOrder\\PrimaryFilters\\Completed'
+      ],
+      'whereItemConverterClassNameMap' => (object) [
+        'productsIds_arrayAnyOf' => 'Espo\\Modules\\Sales\\Classes\\Select\\Quote\\WhereItemConverters\\Products',
+        'productsIds_arrayAllOf' => 'Espo\\Modules\\Sales\\Classes\\Select\\Quote\\WhereItemConverters\\Products'
+      ]
+    ],
+    'SalesOrderItem' => (object) [
+      'accessControlFilterClassNameMap' => (object) [
+        'onlyOwn' => 'Espo\\Modules\\Sales\\Classes\\Select\\QuoteItem\\AccessControlFilters\\OnlyOwn',
+        'onlyTeam' => 'Espo\\Modules\\Sales\\Classes\\Select\\QuoteItem\\AccessControlFilters\\OnlyTeam',
+        'portalOnlyAccount' => 'Espo\\Core\\Select\\AccessControl\\Filters\\No',
+        'portalOnlyContact' => 'Espo\\Core\\Select\\AccessControl\\Filters\\No',
+        'portalOnlyOwn' => 'Espo\\Core\\Select\\AccessControl\\Filters\\No'
+      ]
+    ],
+    'Supplier' => (object) [
+      'primaryFilterClassNameMap' => (object) [
+        'active' => 'Espo\\Modules\\Sales\\Classes\\Select\\Supplier\\PrimaryFilters\\Active'
+      ]
+    ],
+    'SupplierProductPrice' => (object) [
+      'selectAttributesDependencyMap' => (object) [
+        'productId' => [
+          0 => 'status'
+        ],
+        'supplierId' => [
+          0 => 'status'
+        ],
+        'name' => [
+          0 => 'productId',
+          1 => 'productName'
+        ]
+      ],
+      'primaryFilterClassNameMap' => (object) [
+        'active' => 'Espo\\Modules\\Sales\\Classes\\Select\\ProductPrice\\PrimaryFilters\\Active'
+      ],
+      'accessControlFilterClassNameMap' => (object) [
+        'onlyOwn' => 'Espo\\Modules\\Sales\\Classes\\Select\\SupplierProductPrice\\AccessControlFilters\\OnlyOwn',
+        'onlyTeam' => 'Espo\\Modules\\Sales\\Classes\\Select\\SupplierProductPrice\\AccessControlFilters\\OnlyTeam'
+      ]
+    ],
+    'TransferOrder' => (object) [
+      'primaryFilterClassNameMap' => (object) [
+        'actual' => 'Espo\\Modules\\Sales\\Classes\\Select\\Quote\\PrimaryFilters\\Actual',
+        'completed' => 'Espo\\Modules\\Sales\\Classes\\Select\\TransferOrder\\PrimaryFilters\\Completed'
+      ],
+      'whereItemConverterClassNameMap' => (object) [
+        'productsIds_arrayAnyOf' => 'Espo\\Modules\\Sales\\Classes\\Select\\Quote\\WhereItemConverters\\Products',
+        'productsIds_arrayAllOf' => 'Espo\\Modules\\Sales\\Classes\\Select\\Quote\\WhereItemConverters\\Products',
+        'inventoryNumbersIds_arrayAnyOf' => 'Espo\\Modules\\Sales\\Classes\\Select\\Quote\\WhereItemConverters\\InventoryNumbers',
+        'inventoryNumbersIds_arrayAllOf' => 'Espo\\Modules\\Sales\\Classes\\Select\\Quote\\WhereItemConverters\\InventoryNumbers'
+      ]
+    ],
+    'TransferOrderItem' => (object) [
+      'accessControlFilterClassNameMap' => (object) [
+        'onlyOwn' => 'Espo\\Modules\\Sales\\Classes\\Select\\QuoteItem\\AccessControlFilters\\OnlyOwn',
+        'onlyTeam' => 'Espo\\Modules\\Sales\\Classes\\Select\\QuoteItem\\AccessControlFilters\\OnlyTeam',
+        'portalOnlyAccount' => 'Espo\\Core\\Select\\AccessControl\\Filters\\No',
+        'portalOnlyContact' => 'Espo\\Core\\Select\\AccessControl\\Filters\\No',
+        'portalOnlyOwn' => 'Espo\\Core\\Select\\AccessControl\\Filters\\No'
+      ]
+    ],
+    'Warehouse' => (object) [
+      'primaryFilterClassNameMap' => (object) [
+        'active' => 'Espo\\Modules\\Sales\\Classes\\Select\\Warehouse\\PrimaryFilters\\Active'
+      ]
     ]
   ],
   'themes' => (object) [
@@ -29565,6 +45661,51 @@ return (object) [
     'Account' => (object) [
       'dataLoaderClassNameList' => [
         0 => 'Espo\\Modules\\Crm\\Classes\\Pdf\\Account\\ExampleDataLoader'
+      ]
+    ],
+    'DeliveryOrder' => (object) [
+      'dataLoaderClassNameList' => [
+        0 => 'Espo\\Modules\\Sales\\Classes\\Pdf\\Quote\\ItemListDataLoader'
+      ]
+    ],
+    'InventoryAdjustment' => (object) [
+      'dataLoaderClassNameList' => [
+        0 => 'Espo\\Modules\\Sales\\Classes\\Pdf\\Quote\\ItemListDataLoader'
+      ]
+    ],
+    'Invoice' => (object) [
+      'dataLoaderClassNameList' => [
+        0 => 'Espo\\Modules\\Sales\\Classes\\Pdf\\Quote\\ItemListDataLoader'
+      ]
+    ],
+    'PurchaseOrder' => (object) [
+      'dataLoaderClassNameList' => [
+        0 => 'Espo\\Modules\\Sales\\Classes\\Pdf\\Quote\\ItemListDataLoader'
+      ]
+    ],
+    'Quote' => (object) [
+      'dataLoaderClassNameList' => [
+        0 => 'Espo\\Modules\\Sales\\Classes\\Pdf\\Quote\\ItemListDataLoader'
+      ]
+    ],
+    'ReceiptOrder' => (object) [
+      'dataLoaderClassNameList' => [
+        0 => 'Espo\\Modules\\Sales\\Classes\\Pdf\\Quote\\ItemListDataLoader'
+      ]
+    ],
+    'ReturnOrder' => (object) [
+      'dataLoaderClassNameList' => [
+        0 => 'Espo\\Modules\\Sales\\Classes\\Pdf\\Quote\\ItemListDataLoader'
+      ]
+    ],
+    'SalesOrder' => (object) [
+      'dataLoaderClassNameList' => [
+        0 => 'Espo\\Modules\\Sales\\Classes\\Pdf\\Quote\\ItemListDataLoader'
+      ]
+    ],
+    'TransferOrder' => (object) [
+      'dataLoaderClassNameList' => [
+        0 => 'Espo\\Modules\\Sales\\Classes\\Pdf\\Quote\\ItemListDataLoader'
       ]
     ]
   ],

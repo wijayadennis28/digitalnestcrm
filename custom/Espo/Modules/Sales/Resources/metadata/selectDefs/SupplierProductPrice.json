@@ -1,0 +1,21 @@
+{
+    "selectAttributesDependencyMap": {
+        "productId": [
+            "status"
+        ],
+        "supplierId": [
+            "status"
+        ],
+        "name": [
+            "productId",
+            "productName"
+        ]
+    },
+    "primaryFilterClassNameMap": {
+        "active": "Espo\\Modules\\Sales\\Classes\\Select\\ProductPrice\\PrimaryFilters\\Active"
+    },
+    "accessControlFilterClassNameMap": {
+        "onlyOwn": "Espo\\Modules\\Sales\\Classes\\Select\\SupplierProductPrice\\AccessControlFilters\\OnlyOwn",
+        "onlyTeam": "Espo\\Modules\\Sales\\Classes\\Select\\SupplierProductPrice\\AccessControlFilters\\OnlyTeam"
+    }
+}

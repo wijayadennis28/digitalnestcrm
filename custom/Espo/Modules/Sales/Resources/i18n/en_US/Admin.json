@@ -1,0 +1,31 @@
+{
+    "labels": {
+        "Price Rule Conditions": "Price Rule Conditions"
+    },
+    "layouts": {
+        "listItem": "List (Item)",
+        "detailBottomTotal": "Bottom Total",
+        "listForAdd": "List (Select for Item)",
+        "listForAddInventory": "List (Select Inventory)",
+        "detailCreateFromSalesOrder": "Create from Sales Order",
+        "detailCreateFromPurchaseOrder": "Create from Purchase Order",
+        "listForProduct": "List for Product",
+        "listForTemplateProduct": "List for Template Product",
+        "listForWarehouse": "List for Warehouse",
+        "listVariant": "List Variants"
+    },
+    "fields": {
+        "useAutoincrement": "Auto-Increment",
+        "copyFieldList": "Fields to Copy"
+    },
+    "templates": {
+        "salesEmailPdf": "Email PDF (Sales)"
+    },
+    "keywords": {
+        "salesPack": "price,price book,price books"
+    },
+    "descriptions": {
+        "salesPackSettings": "Parameters for sales & purchase functionality.",
+        "priceRuleConditions": "Formula conditions for price rules."
+    }
+}

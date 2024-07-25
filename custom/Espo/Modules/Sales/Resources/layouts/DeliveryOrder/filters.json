@@ -1,0 +1,19 @@
+[
+    "status",
+    "account",
+    "salesOrder",
+    "assignedUser",
+    "teams",
+    "warehouse",
+    "dateOrdered",
+    "shippingDate",
+    "deliveryDate",
+    "shippingAddress",
+    "createdAt",
+    "createdBy",
+    "number",
+    "products",
+    "inventoryNumbers",
+    "isLocked",
+    "isHardLocked"
+]

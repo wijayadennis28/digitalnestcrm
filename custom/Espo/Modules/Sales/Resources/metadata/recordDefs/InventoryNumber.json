@@ -1,0 +1,15 @@
+{
+    "readLoaderClassNameList": [
+        "Espo\\Modules\\Sales\\Classes\\FieldLoaders\\InventoryNumber\\QuantityInTransit"
+    ],
+    "selectApplierClassNameList": [
+        "Espo\\Modules\\Sales\\Classes\\Select\\InventoryNumber\\AdditionalAppliers\\Quantity"
+    ],
+    "duplicateWhereBuilderClassName": "Espo\\Classes\\DuplicateWhereBuilders\\Name",
+    "beforeCreateHookClassNameList": [
+        "Espo\\Modules\\Sales\\Classes\\Record\\Hooks\\InventoryNumber\\BeforeCreateValidation"
+    ],
+    "beforeUpdateHookClassNameList": [
+        "Espo\\Modules\\Sales\\Classes\\Record\\Hooks\\InventoryNumber\\BeforeUpdateValidation"
+    ]
+}

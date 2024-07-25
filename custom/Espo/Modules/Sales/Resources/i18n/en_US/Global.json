@@ -1,0 +1,109 @@
+{
+    "scopeNames": {
+        "Product": "Product",
+        "ProductCategory": "Product Category",
+        "ProductBrand": "Product Brand",
+        "ProductAttribute": "Product Attribute",
+        "ProductAttributeOption": "Product Attribute Option",
+        "Quote": "Quote",
+        "QuoteItem": "Quote Item",
+        "SalesOrder": "Sales Order",
+        "SalesOrderItem": "Sales Order Item",
+        "Invoice": "Invoice",
+        "InvoiceItem": "Invoice Item",
+        "DeliveryOrder": "Delivery Order",
+        "DeliveryOrderItem": "Delivery Order Item",
+        "ReceiptOrder": "Receipt Order",
+        "ReceiptOrderItem": "Receipt Order Item",
+        "TransferOrder": "Transfer Order",
+        "TransferOrderItem": "Transfer Order Item",
+        "Tax": "Tax",
+        "ShippingProvider": "Shipping Provider",
+        "OpportunityItem": "Opportunity Item",
+        "PurchaseOrder": "Purchase Order",
+        "PurchaseOrderItem": "Purchase Order Item",
+        "ReturnOrder": "Return Order",
+        "ReturnOrderItem": "Return Order Item",
+        "Supplier": "Supplier",
+        "ProductPrice": "Product Price",
+        "SupplierProductPrice": "Supplier Product Price",
+        "PriceBook": "Price Book",
+        "PriceRule": "Price Rule",
+        "PriceRuleCondition": "Price Rule Condition",
+        "Warehouse": "Warehouse",
+        "InventoryTransaction": "Inventory Transaction",
+        "InventoryNumber": "Inventory Number",
+        "InventoryAdjustment": "Inventory Adjustment",
+        "InventoryAdjustmentItem": "Inventory Adjustment Item"
+    },
+    "scopeNamesPlural": {
+        "Product": "Products",
+        "ProductCategory": "Product Categories",
+        "ProductBrand": "Product Brands",
+        "ProductAttribute": "Product Attributes",
+        "ProductAttributeOption": "Product Attribute Options",
+        "OpportunityItem": "Opportunity Items",
+        "Quote": "Quotes",
+        "QuoteItem": "Quote Items",
+        "SalesOrder": "Sales Orders",
+        "SalesOrderItem": "Sales Order Items",
+        "Invoice": "Invoices",
+        "InvoiceItem": "Invoice Items",
+        "PurchaseOrder": "Purchase Orders",
+        "PurchaseOrderItem": "Purchase Order Items",
+        "ReturnOrder": "Return Orders",
+        "ReturnOrderItem": "Return Order Items",
+        "DeliveryOrder": "Delivery Orders",
+        "DeliveryOrderItem": "Delivery Order Items",
+        "ReceiptOrder": "Receipt Orders",
+        "ReceiptOrderItem": "Receipt Order Items",
+        "TransferOrder": "Transfer Orders",
+        "TransferOrderItem": "Transfer Order Items",
+        "Tax": "Taxes",
+        "ShippingProvider": "Shipping Providers",
+        "Supplier": "Suppliers",
+        "ProductPrice": "Product Prices",
+        "SupplierProductPrice": "Supplier Product Prices",
+        "PriceBook": "Price Books",
+        "PriceRule": "Price Rules",
+        "PriceRuleCondition": "Price Rule Conditions",
+        "Warehouse": "Warehouses",
+        "InventoryTransaction": "Inventory Transactions",
+        "InventoryNumber": "Inventory Numbers",
+        "InventoryAdjustment": "Inventory Adjustments",
+        "InventoryAdjustmentItem": "Inventory Adjustment Items"
+    },
+    "fields": {
+        "products": "Products",
+        "inventoryNumbers": "Inventory Numbers",
+        "allowFractionalQuantity": "Allow Fractional Quantity",
+        "productType": "Product Type",
+        "isDone": "Is Done",
+        "isNotActual": "Is Not Actual",
+        "isLocked": "Locked",
+        "isHardLocked": "Hard-Locked"
+    },
+    "labels": {
+        "Lock": "Lock",
+        "Unlock": "Unlock"
+    },
+    "massActions": {
+        "lock": "Lock",
+        "unlock": "Unlock"
+    },
+    "options": {
+        "inventoryStatus": {
+            "Available": "Available",
+            "On Hand": "On Hand",
+            "Not Available": "Not Available"
+        }
+    },
+    "navbarTabs": {
+        "SalesPack": "Sales & Purchase"
+    },
+    "featureEnableInfo": {
+        "PriceBooks": "The *Price Books* feature is not enabled. You can enable it at Administration > Sales Pack > [Settings](#Admin/salesPackSettings).",
+        "Warehouses": "The *Warehouses* feature is not enabled. You can enable it at Administration > Sales Pack > [Settings](#Admin/salesPackSettings).",
+        "InventoryTransactions": "The *Inventory Transactions* feature is not enabled. You can enable it at Administration > Sales Pack > [Settings](#Admin/salesPackSettings)."
+    }
+}

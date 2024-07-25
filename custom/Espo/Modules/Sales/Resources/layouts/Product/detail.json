@@ -1,0 +1,53 @@
+[
+    {
+        "tabBreak": true,
+        "tabLabel": "Overview",
+        "rows": [
+            [{"name": "name"}, {"name":"status"}],
+            [{"name": "category"}, {"name": "type"}],
+            [{"name": "brand"}, false],
+            [{"name": "template"}, {"name": "variantAttributeOptions"}]
+        ]
+    },
+    {
+        "label": "Quantity",
+        "name": "quantity",
+        "rows": [
+            [{"name": "quantity"}, {"name": "quantityReserved"}],
+            [{"name": "quantityOnHand"}, {"name": "quantitySoftReserved"}],
+            [{"name": "quantityInTransit"}, {"name": "quantityOnOrder"}]
+        ]
+    },
+    {
+        "tabBreak": true,
+        "tabLabel": "Price",
+        "rows": [
+            [{"name": "costPrice"}, {"name": "pricingType"}],
+            [{"name": "listPrice"}, {"name": "pricingFactor"}],
+            [{"name": "unitPrice"}, {"name": "isTaxFree"}]
+        ]
+    },
+    {
+        "tabBreak": true,
+        "tabLabel": "Details",
+        "rows": [
+            [{"name": "isInventory"}, {"name": "inventoryNumberType"}],
+            [{"name":  "removalStrategy"}, {"name": "expirationDays"}]
+        ]
+    },
+    {
+        "rows": [
+            [{"name": "partNumber"}, {"name": "weight"}],
+            [{"name": "url"}, {"name": "allowFractionalQuantity"}],
+            [{"name": "description"}]
+        ]
+    },
+    {
+        "tabBreak": true,
+        "tabLabel": "$template",
+        "name": "template",
+        "rows": [
+            [{"name": "attributes"}]
+        ]
+    }
+]

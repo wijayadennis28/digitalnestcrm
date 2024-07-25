@@ -1,0 +1,64 @@
+{
+  "labels": {
+    "Create Quote": "Creare un preventivo",
+    "Taxes": "Tasse",
+    "Shipping Providers": "Fornitori di spedizioni",
+    "Add Item": "Aggiungi Articolo",
+    "Templates": "Modelli",
+    "Items": "Elementi",
+    "Email PDF": "E-mail PDF",
+    "Quote Items": "Preventivi articoli"
+  },
+  "fields": {
+    "status": "Stato",
+    "number": "Numero preventivo",
+    "invoiceNumber": "Fattura numero",
+    "opportunity": "Opportunità",
+    "billingAddress": "Indirizzo di fatturazione",
+    "shippingAddress": "Indirizzo di spedizione",
+    "billingContact": "Contatto di fatturazione",
+    "shippingContact": "Recapito spedizioni",
+    "tax": "Imposta",
+    "taxRate": "Aliquota Fiscale",
+    "shippingCost": "Costi di Spese Consegna",
+    "shippingProvider": "Corriere della spedizione",
+    "taxAmount": "Importo della Tassa",
+    "discountAmount": "Importo Sconto",
+    "amount": "Importo",
+    "preDiscountedAmount": "Importo pre-sconto",
+    "grandTotalAmount": "Importo totale",
+    "itemList": "Lista articolo",
+    "dateQuoted": "Data Preventivo",
+    "dateInvoiced": "Data fattura",
+    "weight": "Peso",
+    "amountConverted": "Importo (convertito)",
+    "taxAmountConverted": "Importo imposta (convertito)",
+    "shippingCostConverted": "Costo di spedizione (convertito)",
+    "preDiscountedAmountConverted": "Importo pre-sconto (convertito)",
+    "discountAmountConverted": "Importo sconto (convertito)",
+    "grandTotalAmountConverted": "Importo totale complessivo (convertito)",
+    "currency": "Valuta"
+  },
+  "links": {
+    "items": "Articoli",
+    "billingContact": "Contatto di fatturazione",
+    "shippingContact": "Recapito spedizioni",
+    "opportunity": "Opportunità",
+    "account": "Conto",
+    "tax": "Imposta"
+  },
+  "options": {
+    "status": {
+      "Draft": "Bozza",
+      "In Review": "In revisione",
+      "Presented": "Presentato",
+      "Approved": "Approvato",
+      "Rejected": "Rifiutato",
+      "Canceled": "Annullato"
+    }
+  },
+  "presetFilters": {
+    "actual": "Attuale",
+    "approved": "Approvato"
+  }
+}

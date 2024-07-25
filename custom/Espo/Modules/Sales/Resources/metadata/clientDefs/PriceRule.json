@@ -1,0 +1,85 @@
+{
+    "controller": "controllers/record",
+    "acl": "sales:acl/price-rule",
+    "filterList": [
+        "active"
+    ],
+    "textFilterDisabled": true,
+    "dynamicLogic": {
+        "fields": {
+            "supplier": {
+                "required": {
+                    "conditionGroup": [
+                        {
+                            "type": "in",
+                            "attribute": "basedOn",
+                            "value": [
+                                "Supplier"
+                            ]
+                        }
+                    ]
+                },
+                "visible": {
+                    "conditionGroup": [
+                        {
+                            "type": "in",
+                            "attribute": "basedOn",
+                            "value": [
+                                "Supplier"
+                            ]
+                        }
+                    ]
+                }
+            },
+            "productCategory": {
+                "required": {
+                    "conditionGroup": [
+                        {
+                            "type": "in",
+                            "attribute": "target",
+                            "value": [
+                                "Product Category"
+                            ]
+                        }
+                    ]
+                },
+                "visible": {
+                    "conditionGroup": [
+                        {
+                            "type": "in",
+                            "attribute": "target",
+                            "value": [
+                                "Product Category"
+                            ]
+                        }
+                    ]
+                }
+            },
+            "conditionSelect": {
+                "required": {
+                    "conditionGroup": [
+                        {
+                            "type": "in",
+                            "attribute": "target",
+                            "value": [
+                                "Conditional"
+                            ]
+                        }
+                    ]
+                },
+                "visible": {
+                    "conditionGroup": [
+                        {
+                            "type": "in",
+                            "attribute": "target",
+                            "value": [
+                                "Conditional"
+                            ]
+                        }
+                    ]
+                }
+            }
+        }
+    },
+    "mergeDisabled": true
+}

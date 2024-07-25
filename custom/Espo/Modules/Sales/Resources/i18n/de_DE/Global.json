@@ -1,0 +1,109 @@
+{
+  "scopeNames": {
+    "Product": "Produkt",
+    "ProductCategory": "Produktkategorie",
+    "ProductBrand": "Produkt Marke",
+    "ProductAttribute": "Produkt  Attribut",
+    "ProductAttributeOption": "Produkt Attributoption",
+    "Quote": "Angebot",
+    "QuoteItem": "Angebotspositionen",
+    "SalesOrder": "Kundenauftrag",
+    "SalesOrderItem": "Kundenauftragspositionen",
+    "Invoice": "Rechnung",
+    "InvoiceItem": "Rechnungspositionen",
+    "DeliveryOrder": "Lieferauftrag",
+    "DeliveryOrderItem": "Lieferauftragsposition",
+    "ReceiptOrder": "Empfangsauftrag",
+    "ReceiptOrderItem": "Empfangsauftragsposition",
+    "TransferOrder": "Umlagerungsauftrag",
+    "TransferOrderItem": "Umlagerungsauftragsposition",
+    "Tax": "Steuer",
+    "ShippingProvider": "Versender",
+    "OpportunityItem": "Verkaufschancenposition",
+    "PurchaseOrder": "Bestellung",
+    "PurchaseOrderItem": "Bestellposition",
+    "ReturnOrder": "Rücksendung",
+    "ReturnOrderItem": "Rücksendungsposition",
+    "Supplier": "Lieferant",
+    "ProductPrice": "Produktpreis",
+    "SupplierProductPrice": "Produktpreis des Lieferanten",
+    "PriceBook": "Preisbuch",
+    "PriceRule": "Preisregel",
+    "PriceRuleCondition": "Preisregelbedingung",
+    "Warehouse": "Lager",
+    "InventoryTransaction": "Inventartransaktion",
+    "InventoryNumber": "Inventarnummer",
+    "InventoryAdjustment": "Inventaranpassung",
+    "InventoryAdjustmentItem": "Inventaranpassungsartikel"
+  },
+  "scopeNamesPlural": {
+    "Product": "Produkte",
+    "ProductCategory": "Produktkategorien",
+    "ProductBrand": "Produkt Marken",
+    "ProductAttribute": "Produkt  Attribute",
+    "ProductAttributeOption": "Produkt Attributoptionen",
+    "OpportunityItem": "Verkaufschancenpositionen",
+    "Quote": "Angebote",
+    "QuoteItem": "Angebotspositionen",
+    "SalesOrder": "Kundenaufträge",
+    "SalesOrderItem": "Kundenauftragspositionen",
+    "Invoice": "Rechnungen",
+    "InvoiceItem": "Rechnungspositionen",
+    "PurchaseOrder": "Bestellungen",
+    "PurchaseOrderItem": "Bestellpositionen",
+    "ReturnOrder": "Rücksendungen",
+    "ReturnOrderItem": "Rücksendungspositionen",
+    "DeliveryOrder": "Lieferaufträge",
+    "DeliveryOrderItem": "Lieferauftragspositionen",
+    "ReceiptOrder": "Empfangsaufträge",
+    "ReceiptOrderItem": "Empfangsauftragspositionen",
+    "TransferOrder": "Umlagerungsaufträge",
+    "TransferOrderItem": "Umlagerungsauftragspositionen",
+    "Tax": "Steuern",
+    "ShippingProvider": "Versender",
+    "Supplier": "Lieferanten",
+    "ProductPrice": "Produktpreise",
+    "SupplierProductPrice": "Produktpreise der Lieferanten",
+    "PriceBook": "Preisbücher",
+    "PriceRule": "Preisregeln",
+    "PriceRuleCondition": "Preisregelbedingungen",
+    "Warehouse": "Lager",
+    "InventoryTransaction": "Inventartransaktionen",
+    "InventoryNumber": "Inventarnummern",
+    "InventoryAdjustment": "Inventaranpassungen",
+    "InventoryAdjustmentItem": "Inventarsanpassungsartikel"
+  },
+  "fields": {
+    "products": "Produkte",
+    "inventoryNumbers": "Inventarnummern",
+    "allowFractionalQuantity": "Gebrochene Stückzahlen zulassen",
+    "productType": "Produkttyp",
+    "isDone": "Erledigt",
+    "isNotActual": "Ist Nicht Aktuell",
+    "isLocked": "Gesperrt",
+    "isHardLocked": "Fest gesperrt"
+  },
+  "labels": {
+    "Lock": "Sperren",
+    "Unlock": "Entsperren"
+  },
+  "massActions": {
+    "lock": "Sperren",
+    "unlock": "Entsperren"
+  },
+  "options": {
+    "inventoryStatus": {
+      "Available": "Verfügbar",
+      "On Hand": "Zum Lagerbestand",
+      "Not Available": "Nicht verfügbar"
+    }
+  },
+  "navbarTabs": {
+    "SalesPack": "Verkauf und Einkauf"
+  },
+  "featureEnableInfo": {
+    "PriceBooks": "Die Funktion *Preisbücher* ist nicht aktiviert. Sie können es unter Administration > Sales Pack > [Settings](#Admin/salesPackSettings) aktivieren.",
+    "Warehouses": "Die Funktion *Lager* ist nicht aktiviert. Sie können es unter Administration > Sales Pack > [Einstellungen] (#Admin/salesPackSettings) aktivieren.",
+    "InventoryTransactions": "Die Funktion *Inventartransaktionen* ist nicht aktiviert. Sie können es unter Administration > Sales Pack > [Einstellungen] (#Admin/salesPackSettings) aktivieren."
+  }
+}

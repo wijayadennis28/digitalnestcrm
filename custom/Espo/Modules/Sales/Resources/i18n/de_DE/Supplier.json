@@ -1,0 +1,22 @@
+{
+  "labels": {
+    "Create Supplier": "Lieferant erstellen"
+  },
+  "fields": {
+    "account": "Firma"
+  },
+  "links": {
+    "account": "Firma",
+    "prices": "Preise",
+    "purchaseOrders": "Bestellungen"
+  },
+  "presetFilters": {
+    "active": "Aktiv"
+  },
+  "options": {
+    "status": {
+      "Active": "Aktiv",
+      "Inactive": "Inaktiv"
+    }
+  }
+}

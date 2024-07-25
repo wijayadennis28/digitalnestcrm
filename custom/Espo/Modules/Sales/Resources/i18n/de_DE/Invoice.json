@@ -1,0 +1,77 @@
+{
+  "labels": {
+    "Create Invoice": "Rechnung erstellen",
+    "Taxes": "Steuern",
+    "Shipping Providers": "Versender",
+    "Add Item": "Artikel hinzufügen",
+    "Templates": "Vorlagen",
+    "Items": "Artikel",
+    "Email PDF": "E-Mail PDF",
+    "Invoice Items": "Rechnungspositionen"
+  },
+  "fields": {
+    "number": "Nummer",
+    "numberA": "Nummer (auto-inkrement)",
+    "account": "Firma",
+    "opportunity": "Verkaufschance",
+    "quote": "Angebot",
+    "salesOrder": "Kundenauftrag",
+    "billingAddress": "Rechnungsadresse",
+    "shippingAddress": "Lieferadresse",
+    "billingContact": "Kontakt f. Rechnungsadresse",
+    "shippingContact": "Kontakt f. Lieferadresse",
+    "tax": "Steuer",
+    "taxRate": "Steuersatz",
+    "shippingCost": "Lieferkosten",
+    "shippingProvider": "Versender",
+    "taxAmount": "Steuerbetrag",
+    "discountAmount": "Rabattbetrag",
+    "amount": "Betrag",
+    "preDiscountedAmount": "Betrag vor Rabatt",
+    "grandTotalAmount": "Gesamtbetrag",
+    "itemList": "Artikelliste",
+    "dateInvoiced": "Rechnungsdatum",
+    "weight": "Gewicht",
+    "amountConverted": "Betrag (konvertiert)",
+    "taxAmountConverted": "Steuerbetrag (konvertiert)",
+    "shippingCostConverted": "Lieferkosten (konvertiert)",
+    "preDiscountedAmountConverted": "Betrag vor Rabatt (konvertiert)",
+    "discountAmountConverted": "Rabattbetrag (konvertiert)",
+    "grandTotalAmountConverted": "Gesamtbetrag (konvertiert)",
+    "shippingCostCurrency": "Lieferkosten Währung",
+    "taxAmountCurrency": "Steuerbetrag Währung",
+    "discountAmountCurrency": "Rabattbetrag Währung",
+    "amountCurrency": "Betragswährung",
+    "preDiscountedAmountCurrency": "Betrag vor Rabatt Währung",
+    "grandTotalAmountCurrency": "Gesamtbetrag Währung",
+    "currency": "Währung",
+    "priceBook": "Preisbuch"
+  },
+  "links": {
+    "items": "Artikel",
+    "billingContact": "Kontakt f. Rechnungsadresse",
+    "shippingContact": "Kontakt f. Lieferadresse",
+    "shippingProvider": "Versender",
+    "opportunity": "Verkaufschance",
+    "account": "Firma",
+    "tax": "Steuer",
+    "quote": "Angebot",
+    "salesOrder": "Kundenauftrag",
+    "priceBook": "Preisbuch"
+  },
+  "options": {
+    "status": {
+      "Draft": "Entwurf",
+      "Sent": "Gesendet",
+      "In Review": "In Prüfung",
+      "Confirmed": "Bestätigt",
+      "Paid": "Bezahlt",
+      "Rejected": "Abgelehnt",
+      "Canceled": "Storniert"
+    }
+  },
+  "presetFilters": {
+    "actual": "Aktuell",
+    "paid": "Bezahlt"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "fields": {
+    "priceBooksEnabled": "Preisbücher",
+    "defaultPriceBook": "Standardpreisbuch",
+    "inventoryTransactionsEnabled": "Inventartransaktionen",
+    "warehousesEnabled": "Lager",
+    "deliveryOrdersEnabled": "Lieferaufträge",
+    "receiptOrdersEnabled": "Empfangsaufträge"
+  }
+}

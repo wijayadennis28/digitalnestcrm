@@ -1,0 +1,84 @@
+{
+    "labels": {
+        "Create PurchaseOrder": "Create Purchase Order",
+        "Add Item": "Add Item",
+        "Items": "Items",
+        "Email PDF": "Email PDF",
+        "Purchase Order Items": "Purchase Order Items",
+        "Create Receipt": "Create Receipt"
+    },
+    "fields": {
+        "status": "Status",
+        "number": "Number",
+        "numberA": "Number (auto-incremented)",
+        "account": "Account",
+        "billingAddress": "Billing Address",
+        "shippingAddress": "Shipping Address",
+        "billingContact": "Billing Contact",
+        "shippingContact": "Shipping Contact",
+        "supplierAddress": "Supplier Address",
+        "supplierAddressStreet": "Street (Supplier)",
+        "supplierAddressCity": "City (Supplier)",
+        "supplierAddressState": "State (Supplier)",
+        "supplierAddressCountry": "Country (Supplier)",
+        "supplierAddressPostalCode": "Postal Code (Supplier)",
+        "tax": "Tax",
+        "taxRate": "Tax Rate",
+        "shippingCost": "Shipping Cost",
+        "shippingProvider": "Shipping Provider",
+        "taxAmount": "Tax Amount",
+        "discountAmount": "Discount Amount",
+        "amount": "Amount",
+        "preDiscountedAmount": "Pre-Discount Amount",
+        "grandTotalAmount": "Grand Total Amount",
+        "itemList": "Item List",
+        "dateOrdered": "Date Ordered",
+        "deliveryDate": "Delivery Date",
+        "weight": "Weight",
+        "amountConverted": "Amount (converted)",
+        "taxAmountConverted": "Tax Amount (converted)",
+        "shippingCostConverted": "Shipping Cost (converted)",
+        "preDiscountedAmountConverted": "Pre-Discount Amount (converted)",
+        "discountAmountConverted": "Discount Amount (converted)",
+        "grandTotalAmountConverted": "Grand Total Amount (converted)",
+        "shippingCostCurrency": "Shipping Cost Currency",
+        "taxAmountCurrency": "Tax Amount Currency",
+        "discountAmountCurrency": "Discount Amount Currency",
+        "amountCurrency": "Amount Currency",
+        "preDiscountedAmountCurrency": "Pre-Discount Amount Currency",
+        "grandTotalAmountCurrency": "Grand Total Amount Currency",
+        "currency": "Currency",
+        "supplier": "Supplier",
+        "warehouse": "Ship to Warehouse",
+        "isReceiptFullyCreated": "Receipt Fully Created",
+        "hasInventoryItems": "Has Inventory Items",
+        "isDone": "Is Done"
+    },
+    "links": {
+        "items": "Items",
+        "billingContact": "Billing Contact",
+        "shippingContact": "Shipping Contact",
+        "shippingProvider": "Shipping Provider",
+        "account": "Account",
+        "tax": "Tax",
+        "supplier": "Supplier",
+        "inventoryTransactions": "Inventory Transactions",
+        "receiptOrders": "Receipt Orders",
+        "warehouse": "Warehouse"
+    },
+    "options": {
+        "status": {
+            "Draft": "Draft",
+            "Released": "Released",
+            "Completed": "Completed",
+            "Canceled": "Canceled"
+        }
+    },
+    "presetFilters": {
+        "actual": "Actual",
+        "completed": "Completed"
+    },
+    "messages": {
+        "cannotCreateReceiptInEditMode": "Cannot create receipt orders while in edit mode."
+    }
+}

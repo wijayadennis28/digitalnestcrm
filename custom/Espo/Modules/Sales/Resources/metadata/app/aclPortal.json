@@ -1,0 +1,16 @@
+{
+    "mandatory": {
+        "scopeLevel": {
+            "QuoteItem": "Quote",
+            "SalesOrderItem": "SalesOrder",
+            "InvoiceItem": "Invoice",
+            "PurchaseOrderItem": "PurchaseOrder",
+            "DeliveryOrderItem": "DeliveryOrder",
+            "ReceiptOrderItem": "ReceiptOrder",
+            "TransferOrderItem": "TransferOrder",
+            "ReturnOrderItem": "ReturnOrder",
+            "OpportunityItem": "Opportunity",
+            "ProductPrice": "PriceBook"
+        }
+    }
+}

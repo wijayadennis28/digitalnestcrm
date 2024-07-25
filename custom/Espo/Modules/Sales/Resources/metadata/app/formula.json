@@ -1,0 +1,6 @@
+{
+    "functionClassNameMap": {
+        "ext\\priceRule\\productAttribute": "Espo\\Modules\\Sales\\Classes\\FormulaFunctions\\PriceRule\\ProductAttribute",
+        "ext\\priceRule\\accountAttribute": "Espo\\Modules\\Sales\\Classes\\FormulaFunctions\\PriceRule\\AccountAttribute"
+    }
+}

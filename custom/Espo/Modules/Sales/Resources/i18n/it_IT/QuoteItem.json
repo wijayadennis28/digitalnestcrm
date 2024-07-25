@@ -1,0 +1,31 @@
+{
+  "fields": {
+    "name": "Nome",
+    "qty": "Quantità",
+    "quantity": "Quantità",
+    "listPrice": "Listino prezzi",
+    "unitPrice": "Prezzo Unitario",
+    "amount": "Importo",
+    "taxRate": "Aliquota Fiscale",
+    "product": "Prodotto",
+    "order": "Numero di riga",
+    "quote": "Preventivo",
+    "weight": "Peso",
+    "unitWeight": "Peso unitario",
+    "description": "Descrizione",
+    "discount": "Sconto (%)",
+    "amountConverted": "Importo (convertito)",
+    "unitPriceConverted": "Prezzo unitario (convertito)",
+    "listPriceConverted": "Prezzo di listino (convertito)",
+    "account": "Conto",
+    "quoteStatus": "Stato preventivo"
+  },
+  "links": {
+    "quote": "Preventivo",
+    "product": "Prodotto",
+    "account": "Conto"
+  },
+  "labels": {
+    "Quotes": "Preventivi"
+  }
+}

@@ -1,0 +1,206 @@
+{
+    "fields": {
+        "name": {
+            "type": "varchar",
+            "duplicateIgnore": true
+        },
+        "number": {
+            "type": "varchar",
+            "maxLength": 100,
+            "index": true,
+            "readOnly": true,
+            "fieldManagerAdditionalParamList": [
+                {
+                    "name": "useAutoincrement",
+                    "type": "bool"
+                }
+            ],
+            "useAutoincrement": true
+        },
+        "numberA": {
+            "type": "number",
+            "prefix": "ADJ-",
+            "padLength": 5,
+            "utility": true
+        },
+        "status": {
+            "type": "enum",
+            "options": [
+                "Draft",
+                "Started",
+                "Completed",
+                "Canceled"
+            ],
+            "style": {
+                "Started": "warning",
+                "Completed": "success",
+                "Canceled": "info"
+            },
+            "default": "Draft",
+            "index": true,
+            "customizationOptionsReferenceDisabled": true,
+            "customizationOptionsDisabled": true,
+            "fieldManagerAdditionalParamList": [
+                {
+                    "name": "notActualOptions",
+                    "view": "sales:views/admin/field-manager/fields/not-actual-options"
+                }
+            ],
+            "notActualOptions": ["Completed", "Canceled"]
+        },
+        "reason": {
+            "type": "enum",
+            "options": [
+                "",
+                "Stocktaking",
+                "Write-off",
+                "Waste",
+                "Shrinkage",
+                "Damage",
+                "Internal"
+            ]
+        },
+        "description": {
+            "type": "text"
+        },
+        "warehouse": {
+            "type": "link",
+            "customizationRequiredDisabled": true,
+            "readOnlyAfterCreate": true,
+            "customizationReadOnlyAfterCreateDisabled": true,
+            "validatorClassNameList": [
+                "Espo\\Modules\\Sales\\Classes\\FieldValidators\\DeliveryOrder\\Warehouse\\Required"
+            ],
+            "autocompleteOnEmpty": true
+        },
+        "date": {
+            "type": "date"
+        },
+        "amount": {
+            "type": "currency",
+            "readOnly": true,
+            "utility": true,
+            "customizationDisabled": true
+        },
+        "amountConverted": {
+            "disabled": true
+        },
+        "amountCurrency": {
+            "utility": true
+        },
+        "itemList": {
+            "type": "jsonArray",
+            "notStorable": true,
+            "layoutAvailabilityList": [],
+            "dynamicLogicVisibleDisabled": true,
+            "dynamicLogicInvalidDisabled": true,
+            "view": "sales:views/quote/fields/item-list",
+            "templatePlaceholderDisabled": true,
+            "reportDisabled": true,
+            "workflowDisabled": true,
+            "duplicatorClassName": "Espo\\Modules\\Sales\\Classes\\FieldDuplicators\\Quote\\ItemList"
+        },
+        "isDone": {
+            "type": "bool",
+            "readOnly": true,
+            "customizationReadOnlyDisabled": true
+        },
+        "doneAt": {
+            "type": "datetime",
+            "readOnly": true,
+            "customizationReadOnlyDisabled": true
+        },
+        "products": {
+            "type": "linkMultiple",
+            "entity": "Product",
+            "notStorable": true,
+            "customizationDisabled": true,
+            "directAccessDisabled": true,
+            "layoutAvailabilityList": [
+                "filters"
+            ],
+            "view": "sales:views/quote/fields/products"
+        },
+        "inventoryNumbers": {
+            "type": "linkMultiple",
+            "entity": "InventoryNumber",
+            "notStorable": true,
+            "customizationDisabled": true,
+            "directAccessDisabled": true,
+            "layoutAvailabilityList": [
+                "filters"
+            ],
+            "view": "sales:views/quote/fields/inventory-numbers"
+        },
+        "createdAt": {
+            "type": "datetime",
+            "readOnly": true
+        },
+        "modifiedAt": {
+            "type": "datetime",
+            "readOnly": true
+        },
+        "createdBy": {
+            "type": "link",
+            "readOnly": true
+        },
+        "modifiedBy": {
+            "type": "link",
+            "readOnly": true
+        },
+        "assignedUser": {
+            "type": "link",
+            "view": "views/fields/assigned-user"
+        },
+        "teams": {
+            "type": "linkMultiple"
+        }
+    },
+    "links": {
+        "createdBy": {
+            "type": "belongsTo",
+            "entity": "User"
+        },
+        "modifiedBy": {
+            "type": "belongsTo",
+            "entity": "User"
+        },
+        "warehouse": {
+            "type": "belongsTo",
+            "entity": "Warehouse"
+        },
+        "items": {
+            "type": "hasMany",
+            "entity": "InventoryAdjustmentItem",
+            "foreign": "inventoryAdjustment",
+            "layoutRelationshipsDisabled": true
+        },
+        "inventoryTransactions": {
+            "type": "hasChildren",
+            "entity": "InventoryTransaction",
+            "foreign": "parent"
+        },
+        "assignedUser": {
+            "type": "belongsTo",
+            "entity": "User"
+        },
+        "teams": {
+            "type": "hasMany",
+            "entity": "Team",
+            "relationName": "EntityTeam",
+            "layoutRelationshipsDisabled": true
+        }
+    },
+    "collection": {
+        "orderBy": "createdAt",
+        "order": "desc",
+        "textFilterFields": ["name", "number"]
+    },
+    "indexes": {
+        "createdAt": {
+            "columns": [
+                "createdAt"
+            ]
+        }
+    }
+}

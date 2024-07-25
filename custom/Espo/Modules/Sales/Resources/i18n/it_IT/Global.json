@@ -1,0 +1,24 @@
+{
+  "scopeNames": {
+    "Product": "Prodotto",
+    "ProductCategory": "Categoria Prodotto",
+    "ProductBrand": "Marca del prodotto",
+    "ReportCategory": "Categoria report",
+    "Quote": "Preventivo",
+    "QuoteItem": "Preventivi articoli",
+    "Tax": "Imposta",
+    "ShippingProvider": "Corriere della spedizione",
+    "OpportunityItem": "Elemento di opportunità"
+  },
+  "scopeNamesPlural": {
+    "Product": "Prodotti",
+    "ProductCategory": "Categorie Prodotti",
+    "ReportCategory": "Categorie di report",
+    "Quote": "Preventivi",
+    "QuoteItem": "Preventivi articoli",
+    "Tax": "Tasse",
+    "ShippingProvider": "Fornitori di spedizioni",
+    "OpportunityItem": "Elementi di opportunità",
+    "ProductBrand": "Marchi prodotto"
+  }
+}

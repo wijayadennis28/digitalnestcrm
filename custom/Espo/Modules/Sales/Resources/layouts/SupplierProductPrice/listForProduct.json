@@ -1,0 +1,23 @@
+[
+    {
+        "name": "supplier"
+    },
+    {
+        "name": "dateStart",
+        "width": 16
+    },
+    {
+        "name": "dateEnd",
+        "width": 16
+    },
+    {
+        "name": "minQuantity",
+        "width": 16,
+        "label": "minQty"
+    },
+    {
+        "name": "price",
+        "width": 16,
+        "align": "right"
+    }
+]

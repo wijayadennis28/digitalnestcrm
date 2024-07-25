@@ -1,0 +1,172 @@
+{
+    "fields": {
+        "name": {
+            "type": "varchar",
+            "required": true
+        },
+        "transferOrder": {
+            "type": "link",
+            "readOnly": true
+        },
+        "transferOrderStatus": {
+            "type": "foreign",
+            "link": "transferOrder",
+            "field": "status",
+            "readOnly": true,
+            "view": "views/fields/foreign-enum"
+        },
+        "product": {
+            "type": "link",
+            "readOnly": true,
+            "itemNotReadOnly": true,
+            "fieldManagerAdditionalParamList": [
+                {
+                    "name": "copyFieldList",
+                    "type": "multiEnum",
+                    "view": "sales:views/admin/field-manager/quote-item/fields/product-copy-field-list",
+                    "isSorted": true
+                }
+            ],
+            "customizationReadOnlyDisabled": true
+        },
+        "allowFractionalQuantity": {
+            "type": "foreign",
+            "link": "product",
+            "field": "allowFractionalQuantity",
+            "view": "views/fields/foreign-bool",
+            "readOnly": true
+        },
+        "productType": {
+            "type": "foreign",
+            "link": "product",
+            "field": "type",
+            "view": "views/fields/foreign-enum",
+            "readOnly": true
+        },
+        "quantity": {
+            "type": "float",
+            "default": 1.0,
+            "required": true,
+            "readOnly": true,
+            "itemNotReadOnly": true,
+            "min": 0.0,
+            "customizationReadOnlyDisabled": true,
+            "validatorClassNameList": [
+                "Espo\\Modules\\Sales\\Classes\\FieldValidators\\QuoteItem\\Quantity\\NotFractional"
+            ],
+            "view": "sales:views/quote-item/fields/quantity"
+        },
+        "quantityInt": {
+            "type": "int",
+            "notStorable": true,
+            "select": {
+                "select": "FLOOR:(quantity)"
+            },
+            "readOnly": true,
+            "customizationReadOnlyDisabled": true
+        },
+        "inventoryNumber": {
+            "type": "link",
+            "validatorClassNameList": [
+                "Espo\\Modules\\Sales\\Classes\\FieldValidators\\DeliveryOrderItem\\InventoryNumber\\Valid"
+            ],
+            "view": "sales:views/delivery-order-item/fields/inventory-number",
+            "itemNotReadOnly": true,
+            "readOnly": true,
+            "customizationReadOnlyDisabled": true
+        },
+        "inventoryNumberType": {
+            "type": "foreign",
+            "link": "product",
+            "field": "inventoryNumberType",
+            "view": "views/fields/foreign-enum",
+            "readOnly": true
+        },
+        "isInventory": {
+            "type": "foreign",
+            "link": "product",
+            "field": "isInventory",
+            "view": "views/fields/foreign-bool",
+            "readOnly": true
+        },
+        "quantityReceived": {
+            "type": "float",
+            "default": 1.0,
+            "readOnly": true,
+            "itemNotReadOnly": true,
+            "min": 0.0,
+            "view": "sales:views/receipt-order-item/fields/quantity-received",
+            "validatorClassNameList": [
+                "Espo\\Modules\\Sales\\Classes\\FieldValidators\\QuoteItem\\Quantity\\NotFractional"
+            ]
+        },
+        "quantityReceivedInt": {
+            "type": "int",
+            "notStorable": true,
+            "select": {
+                "select": "IF:(IS_NOT_NULL:(quantityReceived), FLOOR:(quantityReceived), null)"
+            },
+            "readOnly": true
+        },
+        "unitWeight": {
+            "type": "float",
+            "min": 0
+        },
+        "weight": {
+            "type": "float",
+            "min": 0,
+            "readOnly": true
+        },
+        "order": {
+            "type": "int",
+            "default": 1,
+            "readOnly": true
+        },
+        "description": {
+            "type": "text"
+        },
+        "createdAt": {
+            "type": "datetime",
+            "readOnly": true
+        },
+        "modifiedAt": {
+            "type": "datetime",
+            "readOnly": true
+        },
+        "createdBy": {
+            "type": "link",
+            "readOnly": true
+        },
+        "modifiedBy": {
+            "type": "link",
+            "readOnly": true
+        }
+    },
+    "links": {
+        "createdBy": {
+            "type": "belongsTo",
+            "entity": "User"
+        },
+        "modifiedBy": {
+            "type": "belongsTo",
+            "entity": "User"
+        },
+        "product": {
+            "type": "belongsTo",
+            "entity": "Product"
+        },
+        "transferOrder": {
+            "type": "belongsTo",
+            "entity": "TransferOrder",
+            "foreign": "items"
+        },
+        "inventoryNumber": {
+            "type": "belongsTo",
+            "entity": "InventoryNumber"
+        }
+    },
+    "collection": {
+        "sortBy": "createdAt",
+        "asc": false
+    }
+}

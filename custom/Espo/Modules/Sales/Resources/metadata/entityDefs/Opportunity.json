@@ -1,0 +1,52 @@
+{
+    "fields": {
+        "itemList": {
+            "type": "jsonArray",
+            "notStorable": true,
+            "view": "sales:views/opportunity/fields/item-list",
+            "layoutAvailabilityList": [
+                "detail"
+            ],
+            "dynamicLogicVisibleDisabled": true,
+            "dynamicLogicInvalidDisabled": true,
+            "templatePlaceholderDisabled": true,
+            "reportDisabled": true,
+            "workflowDisabled": true,
+            "duplicatorClassName": "Espo\\Modules\\Sales\\Classes\\FieldDuplicators\\Quote\\ItemList"
+        },
+        "priceBook": {
+            "type": "link",
+            "autocompleteOnEmpty": true
+        }
+    },
+    "links": {
+        "items": {
+            "type": "hasMany",
+            "entity": "OpportunityItem",
+            "foreign": "opportunity",
+            "layoutRelationshipsDisabled": true
+        },
+        "quotes": {
+            "type": "hasMany",
+            "entity": "Quote",
+            "foreign": "opportunity",
+            "audited": true
+        },
+        "salesOrders": {
+            "type": "hasMany",
+            "entity": "SalesOrder",
+            "foreign": "opportunity",
+            "audited": true
+        },
+        "invoices": {
+            "type": "hasMany",
+            "entity": "Invoice",
+            "foreign": "opportunity",
+            "audited": true
+        },
+        "priceBook": {
+            "type": "belongsTo",
+            "entity": "PriceBook"
+        }
+    }
+}

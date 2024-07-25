@@ -1,0 +1,32 @@
+{
+    "entity": true,
+    "layouts": true,
+    "tab": true,
+    "acl": true,
+    "module": "Sales",
+    "customizable": true,
+    "importable": true,
+    "notifications": true,
+    "object": true,
+    "currencyConversionAccessRequiredFieldList": ["shippingCost"],
+    "lockableFieldList": [
+        "status",
+        "itemList",
+        "shippingCost"
+    ],
+    "softReserveStatusList": [
+        "Draft"
+    ],
+    "reserveStatusList": [
+        "Ready"
+    ],
+    "canceledStatusList": [
+        "Canceled"
+    ],
+    "doneStatusList": [
+        "Completed"
+    ],
+    "failedStatusList": [
+        "Failed"
+    ]
+}

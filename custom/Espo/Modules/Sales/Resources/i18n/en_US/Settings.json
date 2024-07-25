@@ -1,0 +1,10 @@
+{
+    "fields": {
+        "priceBooksEnabled": "Price Books",
+        "defaultPriceBook": "Default Price Book",
+        "inventoryTransactionsEnabled": "Inventory Transactions",
+        "warehousesEnabled": "Warehouses",
+        "deliveryOrdersEnabled": "Delivery Orders",
+        "receiptOrdersEnabled": "Receipt Orders"
+    }
+}

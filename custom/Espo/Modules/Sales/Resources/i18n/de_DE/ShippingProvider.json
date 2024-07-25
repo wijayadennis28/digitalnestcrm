@@ -1,0 +1,8 @@
+{
+  "labels": {
+    "Create ShippingProvider": "Neuer Versender"
+  },
+  "fields": {
+    "website": "Webseite"
+  }
+}

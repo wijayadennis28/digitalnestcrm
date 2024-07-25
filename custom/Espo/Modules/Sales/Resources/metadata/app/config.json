@@ -1,0 +1,20 @@
+{
+    "params": {
+        "defaultPriceBook": {},
+        "priceBooksEnabled": {},
+        "inventoryTransactionsEnabled": {},
+        "warehousesEnabled": {},
+        "deliveryOrdersEnabled": {},
+        "receiptOrdersEnabled": {},
+        "inventoryCompressJobPeriod": {
+            "level": "admin"
+        },
+        "inventoryDetachJobPeriod": {
+            "level": "admin"
+        },
+        "notActualOrderLockingJobPeriod": {
+            "level": "admin"
+        },
+        "productVariantMaxCount": {}
+    }
+}

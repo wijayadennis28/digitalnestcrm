@@ -1,0 +1,24 @@
+{
+    "readLoaderClassNameList": [
+        "__APPEND__",
+        "Espo\\Modules\\Sales\\Classes\\FieldLoaders\\Quote\\ItemListLoader"
+    ],
+    "listLoaderClassNameList": [
+        "__APPEND__",
+        "Espo\\Modules\\Sales\\Classes\\FieldLoaders\\Quote\\ListItemListLoader"
+    ],
+    "beforeCreateHookClassNameList": [
+        "Espo\\Modules\\Sales\\Classes\\Record\\Hooks\\Quote\\BeforeCreateValidation"
+    ],
+    "beforeUpdateHookClassNameList": [
+        "Espo\\Modules\\Sales\\Classes\\Record\\Hooks\\Quote\\BeforeUpdateValidation"
+    ],
+    "massActions": {
+        "lock": {
+            "implementationClassName": "Espo\\Modules\\Sales\\Classes\\MassActions\\Lock"
+        },
+        "unlock": {
+            "implementationClassName": "Espo\\Modules\\Sales\\Classes\\MassActions\\Unlock"
+        }
+    }
+}

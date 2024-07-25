@@ -1,0 +1,20 @@
+[
+    {
+        "label": "Overview",
+        "rows": [
+            [{"name": "number"}, {"name": "supplier"}],
+            [{"name": "status"}, {"name": "amount"}],
+            [{"name": "dateOrdered"}, {"name": "deliveryDate"}]
+        ]
+    },
+    {
+        "label": "Details",
+        "rows": [
+            [false, {"name": "warehouse"}],
+            [{"name": "supplierAddress"}, {"name": "shippingAddress"}],
+            [{"name": "billingContact"}, {"name": "shippingContact"}],
+            [{"name": "tax"}, {"name": "shippingProvider"}],
+            [{"name": "description"}]
+        ]
+    }
+]

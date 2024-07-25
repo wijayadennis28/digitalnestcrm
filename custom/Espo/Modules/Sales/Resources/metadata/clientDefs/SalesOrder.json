@@ -1,0 +1,349 @@
+{
+    "controller": "controllers/record",
+    "boolFilterList": ["onlyMy"],
+    "filterList": [
+        "actual",
+        {
+            "name": "completed",
+            "style": "success"
+        }
+    ],
+    "recordViews": {
+        "detail": "sales:views/quote/record/detail",
+        "edit": "sales:views/quote/record/edit",
+        "detailSmall": "sales:views/quote/record/detail-small",
+        "editSmall": "sales:views/quote/record/edit-small"
+    },
+    "viewSetupHandlers": {
+        "record/detail": ["sales:handlers/quote/setup-record-detail"],
+        "record/edit": ["sales:handlers/quote/setup-record-detail"]
+    },
+    "massActionDefs": {
+        "lock": {
+            "aclScope": "SalesOrder",
+            "acl": "edit",
+            "handler": "sales:handlers/quote/lock-mass-action",
+            "actionFunction": "actionLock",
+            "initFunction": "initLock"
+        },
+        "unlock": {
+            "aclScope": "SalesOrder",
+            "acl": "edit",
+            "handler": "sales:handlers/quote/lock-mass-action",
+            "actionFunction": "actionUnlock",
+            "initFunction": "initUnlock"
+        }
+    },
+    "massActionList": [
+        "lock",
+        "unlock"
+    ],
+    "checkAllResultMassActionList": [
+        "lock",
+        "unlock"
+    ],
+    "detailActionList": [
+        {
+            "name": "lock",
+            "acl": "edit",
+            "label": "Lock",
+            "handler": "sales:handlers/quote/lock-action",
+            "data": {
+                "handler": "sales:handlers/quote/lock-action"
+            },
+            "checkVisibilityFunction": "canBeLocked",
+            "actionFunction": "actionLock"
+        },
+        {
+            "name": "unlock",
+            "acl": "edit",
+            "label": "Unlock",
+            "handler": "sales:handlers/quote/lock-action",
+            "data": {
+                "handler": "sales:handlers/quote/lock-action"
+            },
+            "checkVisibilityFunction": "canBeUnlocked",
+            "actionFunction": "actionUnlock"
+        }
+    ],
+    "bottomPanels": {
+        "detail": [
+            "__APPEND__",
+            {
+                "name": "items",
+                "label": "Items",
+                "view": "sales:views/quote/record/panels/items",
+                "notRefreshable": true,
+                "sticked": true,
+                "isForm": true
+            }
+        ],
+        "edit": [
+            "__APPEND__",
+            {
+                "name": "items",
+                "label": "Items",
+                "view": "sales:views/quote/record/panels/items",
+                "notRefreshable": true,
+                "sticked": true,
+                "isForm": true
+            }
+        ]
+    },
+    "menu": {
+        "detail": {
+            "buttons": [
+                {
+                    "name": "createDelivery",
+                    "action": "createDelivery",
+                    "label": "Create Delivery",
+                    "acl": "create",
+                    "aclScope": "DeliveryOrder",
+                    "iconHtml": "<span class=\"fas fa-shipping-fast\"></span>",
+                    "data": {
+                        "handler": "sales:handlers/sales-order/delivery-button"
+                    },
+                    "initFunction": "init"
+                }
+            ]
+        },
+        "list": {
+            "dropdown": [
+                {
+                    "labelTranslation": "Global.scopeNamesPlural.Template",
+                    "link": "#Template",
+                    "acl": "read",
+                    "aclScope": "Template"
+                },
+                false,
+                {
+                    "labelTranslation": "Global.scopeNamesPlural.Tax",
+                    "link": "#Tax",
+                    "acl": "read",
+                    "aclScope": "Tax"
+                },
+                {
+                    "labelTranslation": "Global.scopeNamesPlural.ShippingProvider",
+                    "link": "#ShippingProvider",
+                    "acl": "read",
+                    "aclScope": "ShippingProvider"
+                },
+                {
+                    "labelTranslation": "Global.scopeNamesPlural.DeliveryOrder",
+                    "link": "#DeliveryOrder",
+                    "acl": "read",
+                    "aclScope": "DeliveryOrder",
+                    "configCheck": "deliveryOrdersEnabled"
+                },
+                {
+                    "labelTranslation": "Global.scopeNamesPlural.SalesOrderItem",
+                    "link": "#SalesOrderItem",
+                    "acl": "read",
+                    "aclScope": "SalesOrderItem"
+                }
+            ]
+        }
+    },
+    "dynamicLogic": {
+        "fields": {
+            "isLocked": {
+                "visible": {
+                    "conditionGroup": [
+                        {
+                            "type": "isTrue",
+                            "attribute": "isNotActual"
+                        }
+                    ]
+                }
+            },
+            "isHardLocked": {
+                "visible": {
+                    "conditionGroup": [
+                        {
+                            "type": "isTrue",
+                            "attribute": "isHardLocked"
+                        }
+                    ]
+                }
+            },
+            "status": {
+                "readOnly": {
+                    "conditionGroup": [
+                        {
+                            "type": "isTrue",
+                            "attribute": "isLocked"
+                        }
+                    ]
+                }
+            },
+            "dateInvoiced": {
+                "visible": {
+                    "conditionGroup": [
+                        {
+                            "type": "equals",
+                            "attribute": "status",
+                            "value": "Completed"
+                        }
+                    ]
+                }
+            },
+            "account": {
+                "readOnly": {
+                    "conditionGroup": [
+                        {
+                            "type": "or",
+                            "value": [
+                                {
+                                    "type": "isNotEmpty",
+                                    "attribute": "opportunityId",
+                                    "data": {
+                                        "field": "opportunity"
+                                    }
+                                },
+                                {
+                                    "type": "isNotEmpty",
+                                    "attribute": "quoteId",
+                                    "data": {
+                                        "field": "quote"
+                                    }
+                                }
+                            ]
+                        }
+                    ]
+                }
+            },
+            "opportunity": {
+                "readOnly": {
+                    "conditionGroup": [
+                        {
+                            "type": "or",
+                            "value": [
+                                {
+                                    "type": "isNotEmpty",
+                                    "attribute": "quoteId",
+                                    "data": {
+                                        "field": "quote"
+                                    }
+                                }
+                            ]
+                        }
+                    ]
+                }
+            },
+            "quote": {
+                "readOnly": {
+                    "conditionGroup": [
+                        {
+                            "type": "isNotEmpty",
+                            "attribute": "id"
+                        }
+                    ]
+                }
+            },
+            "itemList": {
+                "readOnly": {
+                    "conditionGroup": [
+                        {
+                            "type": "or",
+                            "value": [
+                                {
+                                    "type": "isTrue",
+                                    "attribute": "isLocked"
+                                },
+                                {
+                                    "type": "and",
+                                    "value": [
+                                        {
+                                            "type": "in",
+                                            "attribute": "status",
+                                            "value": [
+                                                "Completed"
+                                            ]
+                                        },
+                                        {
+                                            "type": "isNotEmpty",
+                                            "attribute": "id"
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                }
+            },
+            "number": {
+                "visible": {
+                    "conditionGroup": [
+                        {
+                            "type": "isNotEmpty",
+                            "attribute": "id"
+                        }
+                    ]
+                }
+            },
+            "inventoryStatus": {
+                "visible": {
+                    "conditionGroup": [
+                        {
+                            "type": "isNotEmpty",
+                            "attribute": "inventoryStatus"
+                        }
+                    ]
+                }
+            },
+            "isDeliveryCreated": {
+                "visible": {
+                    "conditionGroup": [
+                        {
+                            "type": "isNotEmpty",
+                            "attribute": "id"
+                        }
+                    ]
+                }
+            }
+        }
+    },
+    "additionalLayouts": {
+        "detailBottomTotal": {
+            "type": "list",
+            "dataAttributeList": ["name", "view", "customLabel"]
+        },
+        "listForAccount": {
+            "type": "list"
+        }
+    },
+    "relationshipPanels": {
+        "invoices": {
+            "createAction": "createRelatedInvoice",
+            "view": "sales:views/sales-order/record/panels/invoices",
+            "layout": "listForAccount",
+            "selectDisabled": true,
+            "unlinkDisabled": true
+        },
+        "deliveryOrders": {
+            "createAction": "createRelatedDeliveryOrder",
+            "view": "sales:views/sales-order/record/panels/delivery-orders",
+            "layout": "listForAccount",
+            "selectDisabled": true,
+            "unlinkDisabled": true
+        },
+        "returnOrders": {
+            "createAction": "createRelatedReturnOrder",
+            "view": "sales:views/sales-order/record/panels/return-orders",
+            "layout": "listForAccount",
+            "selectDisabled": true,
+            "unlinkDisabled": true
+        },
+        "inventoryTransactions": {
+            "createDisabled": true,
+            "selectDisabled": true,
+            "unlinkDisabled": true,
+            "layout": "listForOrder"
+        },
+        "tax": {
+            "selectMandatoryAttributeList": ["rate"]
+        }
+    },
+    "calculationHandler": "sales:quote-calculation-handler",
+    "iconClass": "fas fa-file-invoice"
+}

@@ -1,0 +1,31 @@
+{
+  "labels": {
+    "Price Rule Conditions": "Preisregelbedingungen"
+  },
+  "layouts": {
+    "listItem": "Liste (Artikel)",
+    "detailBottomTotal": "Bottom Summe",
+    "listForAdd": "Liste (Für Artikel auswählen)",
+    "listForAddInventory": "Liste (Inventar auswählen)",
+    "detailCreateFromSalesOrder": "Aus Kundenauftrag erstellen",
+    "detailCreateFromPurchaseOrder": "Aus Bestellung erstellen",
+    "listForProduct": "Liste für Produkt",
+    "listForTemplateProduct": "Liste für Vorlagenprodukt",
+    "listForWarehouse": "Liste für Lager",
+    "listVariant": "Varianten der Liste"
+  },
+  "fields": {
+    "useAutoincrement": "Auto-Inkrement",
+    "copyFieldList": "Zu kopierende Felder"
+  },
+  "templates": {
+    "salesEmailPdf": "E-Mail-PDF (Verkauf)"
+  },
+  "keywords": {
+    "salesPack": "Preis, Preisbuch, Preisbücher"
+  },
+  "descriptions": {
+    "salesPackSettings": "Parameter für Verkaufs- und Einkaufsfunktionen.",
+    "priceRuleConditions": "Formelbedingungen für Preisregeln."
+  }
+}

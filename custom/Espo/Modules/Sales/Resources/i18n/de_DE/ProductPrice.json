@@ -1,0 +1,35 @@
+{
+  "labels": {
+    "Create ProductPrice": "Preis erstellen"
+  },
+  "fields": {
+    "priceBook": "Preisbuch",
+    "product": "Produkt",
+    "minQuantity": "Mindestmenge",
+    "price": "Preis",
+    "priceCurrency": "Preiswährung",
+    "dateStart": "Startdatum",
+    "dateEnd": "Enddatum",
+    "minQty": "Min. Mng",
+    "partNumber": "Teilenummer"
+  },
+  "links": {
+    "priceBook": "Preisbuch",
+    "product": "Produkt"
+  },
+  "options": {
+    "status": {
+      "Active": "Aktiv",
+      "Inactive": "Inaktiv"
+    }
+  },
+  "presetFilters": {
+    "active": "Aktiv"
+  },
+  "tooltips": {
+    "minQuantity": "Der Preis wird nur verwendet, wenn die Menge der verkauften Artikel den angegebenen Wert überschreitet."
+  },
+  "massActions": {
+    "updatePrice": "Preis aktualisieren"
+  }
+}

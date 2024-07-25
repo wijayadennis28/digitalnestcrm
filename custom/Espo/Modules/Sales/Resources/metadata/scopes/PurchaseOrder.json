@@ -1,0 +1,25 @@
+{
+    "entity": true,
+    "layouts": true,
+    "tab": true,
+    "acl": true,
+    "aclPortal": true,
+    "aclPortalLevelList":  ["all", "account", "no"],
+    "module": "Sales",
+    "customizable": true,
+    "importable": true,
+    "notifications": true,
+    "object": true,
+    "currencyConversionAccessRequiredFieldList": ["amount"],
+    "lockableFieldList": [
+        "status",
+        "itemList",
+        "shippingCost"
+    ],
+    "doneStatusList": [
+        "Completed"
+    ],
+    "canceledStatusList": [
+        "Canceled"
+    ]
+}

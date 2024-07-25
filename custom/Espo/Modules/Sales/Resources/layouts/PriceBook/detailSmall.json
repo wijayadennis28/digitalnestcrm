@@ -1,0 +1,27 @@
+[
+    {
+        "rows": [
+            [
+                {
+                    "name": "name"
+                }
+            ],
+            [
+                {
+                    "name": "status"
+                }
+            ],
+            [
+                {
+                    "name": "parentPriceBook"
+                }
+            ],
+            [
+
+                {
+                    "name": "description"
+                }
+            ]
+        ]
+    }
+]

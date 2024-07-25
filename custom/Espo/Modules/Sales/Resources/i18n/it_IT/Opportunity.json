@@ -1,0 +1,14 @@
+{
+  "labels": {
+    "Items": "Articoli",
+    "Select Product": "Seleziona Prodotto",
+    "Add Item": "Aggiungi Articolo"
+  },
+  "links": {
+    "quotes": "Preventivi",
+    "items": "Articoli"
+  },
+  "fields": {
+    "itemList": "Lista articolo"
+  }
+}

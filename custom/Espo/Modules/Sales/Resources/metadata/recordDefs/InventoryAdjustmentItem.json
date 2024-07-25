@@ -1,0 +1,18 @@
+{
+    "actions": {
+        "convertCurrency": {
+            "disabled": true
+        }
+    },
+    "massActions": {
+        "convertCurrency": {
+            "disabled": true
+        },
+        "delete": {
+            "disabled": true
+        }
+    },
+    "selectApplierClassNameList": [
+        "Espo\\Modules\\Sales\\Classes\\Select\\InventoryAdjustmentItem\\AdditionalAppliers\\Warehouse"
+    ]
+}

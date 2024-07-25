@@ -1,0 +1,43 @@
+{
+    "relationshipPanels": {
+        "quotes": {
+            "createAction": "createRelatedQuote",
+            "view": "sales:views/account/record/panels/quotes",
+            "layout": "listForAccount",
+            "selectDisabled": true,
+            "unlinkDisabled": true
+        },
+        "salesOrders": {
+            "createAction": "createRelatedQuote",
+            "view": "sales:views/account/record/panels/quotes",
+            "layout": "listForAccount",
+            "selectDisabled": true,
+            "unlinkDisabled": true
+        },
+        "invoices": {
+            "createAction": "createRelatedQuote",
+            "view": "sales:views/account/record/panels/quotes",
+            "layout": "listForAccount",
+            "selectDisabled": true,
+            "unlinkDisabled": true
+        },
+        "deliveryOrders": {
+            "createAction": "createRelatedQuote",
+            "view": "sales:views/account/record/panels/quotes",
+            "layout": "listForAccount",
+            "selectDisabled": true,
+            "unlinkDisabled": true
+        },
+        "purchaseOrders": {
+            "createAction": "createRelatedPurchaseOrder",
+            "view": "sales:views/account/record/panels/purchase-orders",
+            "layout": "listForAccount",
+            "selectDisabled": true,
+            "unlinkDisabled": true,
+            "createDisabled": true
+        },
+        "opportunities": {
+            "createHandler": "sales:handlers/account/create-opportunity"
+        }
+    }
+}

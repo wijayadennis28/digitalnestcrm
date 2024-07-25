@@ -1,0 +1,25 @@
+[
+    {
+        "name": "target",
+        "notSortable": true
+    },
+    {
+        "name": "dateStart",
+        "width": 16
+    },
+    {
+        "name": "dateEnd",
+        "width": 16
+    },
+    {
+        "name": "minQuantity",
+        "width": 16,
+        "label": "minQty"
+    },
+    {
+        "name": "price",
+        "width": 17,
+        "align": "right",
+        "notSortable": true
+    }
+]

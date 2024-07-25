@@ -1,0 +1,34 @@
+{
+    "controller":"controllers/record",
+    "acl": "sales:acl/opportunity-item",
+    "createDisabled": true,
+    "mergeDisabled": true,
+    "convertCurrencyDisabled": true,
+    "menu":{
+        "list":{
+            "buttons":[
+                {
+                    "label":"Opportunities",
+                    "link":"#Opportunity",
+                    "acl":"read",
+                    "aclScope":"Opportunity"
+                }
+            ]
+        }
+    },
+    "additionalLayouts": {
+        "listItem": {
+            "type": "listSmall",
+            "dataAttributeList": [
+                "name",
+                "align",
+                "widthComplex",
+                "width",
+                "widthPx",
+                "link",
+                "view",
+                "customLabel"
+            ]
+        }
+    }
+}

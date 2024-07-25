@@ -1,0 +1,37 @@
+{
+    "controller": "controllers/record",
+    "menu": {
+        "list": {
+            "dropdown": [
+                {
+                    "labelTranslation": "Global.scopeNamesPlural.SupplierProductPrice",
+                    "link": "#SupplierProductPrice",
+                    "acl": "read",
+                    "aclScope": "SupplierProductPrice"
+                }
+            ]
+        }
+    },
+    "relationshipPanels": {
+        "purchaseOrders": {
+            "layout": "listForAccount",
+            "unlinkDisabled": true,
+            "selectDisabled": true
+        },
+        "prices": {
+            "layout": "listForSupplier",
+            "unlinkDisabled": true,
+            "selectDisabled": true,
+            "filterList": [
+                "all",
+                "active"
+            ]
+        }
+    },
+    "filterList": [
+        "active"
+    ],
+    "selectDefaultFilters": {
+        "filter": "active"
+    }
+}

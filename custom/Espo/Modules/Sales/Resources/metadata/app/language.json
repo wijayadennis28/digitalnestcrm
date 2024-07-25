@@ -1,0 +1,109 @@
+{
+    "aclDependencies": {
+        "Opportunity": {
+            "anyScopeList": [
+                "__APPEND__",
+                "Quote",
+                "SalesOrder",
+                "Invoice",
+                "PurchaseOrder",
+                "DeliveryOrder",
+                "ReceiptOrder",
+                "TransferOrder",
+                "ReturnOrder"
+            ]
+        },
+        "Quote": {
+            "anyScopeList": [
+                "SalesOrder",
+                "Invoice",
+                "Opportunity",
+                "PurchaseOrder",
+                "DeliveryOrder",
+                "ReceiptOrder",
+                "TransferOrder",
+                "ReturnOrder",
+                "InventoryAdjustment",
+                "Product"
+            ]
+        },
+        "QuoteItem": {
+            "anyScopeList": [
+                "Product",
+                "SalesOrder",
+                "Invoice",
+                "Opportunity",
+                "PurchaseOrder",
+                "DeliveryOrder",
+                "ReceiptOrder",
+                "TransferOrder",
+                "ReturnOrder",
+                "InventoryAdjustment"
+            ]
+        },
+        "SalesOrder": {
+            "anyScopeList": ["Quote", "Invoice"]
+        },
+        "Invoice": {
+            "anyScopeList": ["Quote", "SalesOrder"]
+        },
+        "PurchaseOrder": {
+            "anyScopeList": ["Quote", "Invoice", "SalesOrder", "ReturnOrder"]
+        },
+        "ReturnOrder": {
+            "anyScopeList": ["Quote", "SalesOrder"]
+        },
+        "DeliveryOrder": {
+            "anyScopeList": ["Quote", "SalesOrder", "TransferOrder"]
+        },
+        "DeliveryOrderItem": {
+            "anyScopeList": ["ReceiptOrder"]
+        },
+        "ReceiptOrder": {
+            "anyScopeList": ["Quote", "PurchaseOrder"]
+        },
+        "Account": {
+            "anyScopeList": [
+                "__APPEND__",
+                "Quote",
+                "SalesOrder",
+                "Invoice"
+            ]
+        },
+        "Warehouse": {
+            "anyScopeList": [
+                "SalesOrder",
+                "DeliveryOrder",
+                "ReceiptOrder",
+                "PurchaseOrder",
+                "TransferOrder",
+                "InventoryAdjustment",
+                "InventoryTransaction"
+            ]
+        },
+        "Product": {
+            "anyScopeList": [
+                "Quote",
+                "Invoice",
+                "PurchaseOrder",
+                "SalesOrder",
+                "DeliveryOrder",
+                "ReceiptOrder",
+                "TransferOrder",
+                "InventoryTransaction",
+                "InventoryAdjustment",
+                "ReturnOrder",
+                "Warehouse",
+                "PriceBook",
+                "Supplier"
+            ]
+        },
+        "PriceRule": {
+            "anyScopeList": [
+                "Product",
+                "ProductPrice",
+                "SupplierProductPrice"
+            ]
+        }
+    }
+}

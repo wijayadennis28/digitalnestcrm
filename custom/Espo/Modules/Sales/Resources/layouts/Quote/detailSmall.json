@@ -1,0 +1,12 @@
+[
+    {
+        "rows": [
+            [{"name": "number"}],
+            [{"name": "status"}],
+            [{"name": "opportunity"}],
+            [{"name": "account"}],
+            [{"name": "dateQuoted"}],
+            [{"name": "amount"}]
+        ]
+    }
+]

@@ -309,6 +309,11 @@ return [
   'authIpAddressWhitelist' => [],
   'authIpAddressCheckExcludedUsersIds' => [],
   'authIpAddressCheckExcludedUsersNames' => (object) [],
-  'cacheTimestamp' => 1720494189,
-  'microtime' => 1720494189.281985
+  'cacheTimestamp' => 1721916116,
+  'microtime' => 1721916116.943683,
+  'fullTextSearchMinLength' => 4,
+  'appTimestamp' => 1721916116,
+  'maintenanceMode' => NULL,
+  'cronDisabled' => NULL,
+  'adminPanelIframeUrl' => 'https://s.espocrm.com/?sales-pack=bcd3361258b6d66fc350488ed9575786'
 ];

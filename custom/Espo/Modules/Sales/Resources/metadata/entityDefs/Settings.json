@@ -1,0 +1,23 @@
+{
+    "fields": {
+        "defaultPriceBook": {
+            "type": "link",
+            "entity": "PriceBook"
+        },
+        "priceBooksEnabled": {
+            "type": "bool"
+        },
+        "inventoryTransactionsEnabled": {
+            "type": "bool"
+        },
+        "deliveryOrdersEnabled": {
+            "type": "bool"
+        },
+        "receiptOrdersEnabled": {
+            "type": "bool"
+        },
+        "warehousesEnabled": {
+            "type": "bool"
+        }
+    }
+}

@@ -1,0 +1,23 @@
+{
+  "labels": {
+    "Create Warehouse": "Lager erstellen"
+  },
+  "fields": {
+    "isAvailableForStock": "Verfügbar auf Lager",
+    "isStock": "Bestand"
+  },
+  "links": {
+    "inventoryTransactions": "Inventartransaktionen",
+    "products": "Produkte",
+    "inventoryNumbers": "Inventarnummern"
+  },
+  "options": {
+    "status": {
+      "Active": "Aktiv",
+      "Inactive": "Inaktiv"
+    }
+  },
+  "presetFilters": {
+    "active": "Aktiv"
+  }
+}

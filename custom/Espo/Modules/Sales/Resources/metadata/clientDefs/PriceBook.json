@@ -1,0 +1,46 @@
+{
+    "controller": "controllers/record",
+    "viewSetupHandlers": {
+        "list": ["sales:handlers/info"]
+    },
+    "menu": {
+        "list": {
+            "dropdown": [
+                {
+                    "labelTranslation": "Global.scopeNamesPlural.ProductPrice",
+                    "link": "#ProductPrice",
+                    "acl": "read",
+                    "aclScope": "ProductPrice",
+                    "configCheck": "priceBooksEnabled"
+                }
+            ]
+        }
+    },
+    "relationshipPanels": {
+        "prices": {
+            "layout": "listForPriceBook",
+            "unlinkDisabled": true,
+            "selectDisabled": true,
+            "filterList": [
+                "all",
+                "active"
+            ]
+        },
+        "rules": {
+            "layout": "listForPriceBook",
+            "unlinkDisabled": true,
+            "selectDisabled": true,
+            "filterList": [
+                "all",
+                "active"
+            ]
+        }
+    },
+    "filterList": [
+        "active"
+    ],
+    "selectDefaultFilters": {
+        "filter": "active"
+    },
+    "mergeDisabled": true
+}

@@ -1,0 +1,18 @@
+[
+    "status",
+    "account",
+    "opportunity",
+    "quote",
+    "salesOrder",
+    "assignedUser",
+    "teams",
+    "createdAt",
+    "createdBy",
+    "dateInvoiced",
+    "number",
+    "amountConverted",
+    "grandTotalAmountConverted",
+    "priceBook",
+    "products",
+    "isLocked"
+]

@@ -1,0 +1,20 @@
+{
+    "salesPack": {
+        "label": "Sales Pack",
+        "itemList": [
+            {
+                "url": "#Admin/salesPackSettings",
+                "label": "Settings",
+                "iconClass": "fas fa-cog",
+                "description": "salesPackSettings",
+                "recordView": "sales:views/settings/record/settings"
+            },
+            {
+                "url": "#PriceRuleCondition",
+                "label": "Price Rule Conditions",
+                "iconClass": "fas fa-code",
+                "description": "priceRuleConditions"
+            }
+        ]
+    }
+}

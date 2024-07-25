@@ -1,0 +1,116 @@
+{
+    "controller": "controllers/record",
+    "boolFilterList": ["onlyMy"],
+    "duplicateDisabled": true,
+    "filterList": [
+        "actual",
+        {
+            "name": "completed",
+            "style": "success"
+        }
+    ],
+    "recordViews": {
+        "detail": "sales:views/quote/record/detail",
+        "edit": "sales:views/quote/record/edit",
+        "detailSmall": "sales:views/quote/record/detail-small",
+        "editSmall": "sales:views/quote/record/edit-small"
+    },
+    "viewSetupHandlers": {
+        "list": ["sales:handlers/info"],
+        "record/detail": ["sales:handlers/quote/setup-record-detail"],
+        "record/edit": ["sales:handlers/quote/setup-record-detail"]
+    },
+    "bottomPanels": {
+        "detail": [
+            "__APPEND__",
+            {
+                "name": "items",
+                "label": "Items",
+                "view": "sales:views/quote/record/panels/items",
+                "notRefreshable": true,
+                "sticked": true,
+                "isForm": true
+            }
+        ],
+        "edit": [
+            "__APPEND__",
+            {
+                "name": "items",
+                "label": "Items",
+                "view": "sales:views/quote/record/panels/items",
+                "notRefreshable": true,
+                "sticked": true,
+                "isForm": true
+            }
+        ]
+    },
+    "menu": {
+        "list": {
+            "dropdown": [
+                {
+                    "labelTranslation": "Global.scopeNamesPlural.Warehouse",
+                    "link": "#Warehouse",
+                    "acl": "read",
+                    "aclScope": "Warehouse",
+                    "configCheck": "warehousesEnabled"
+                },
+                {
+                    "labelTranslation": "Global.scopeNamesPlural.InventoryAdjustmentItem",
+                    "link": "#InventoryAdjustmentItem",
+                    "acl": "read",
+                    "aclScope": "InventoryAdjustmentItem"
+                }
+            ]
+        }
+    },
+    "dynamicLogic": {
+        "fields": {
+            "status": {
+                "readOnly": {
+                    "conditionGroup": [
+                        {
+                            "type": "isTrue",
+                            "attribute": "isDone"
+                        }
+                    ]
+                }
+            },
+            "itemList": {
+                "readOnly": {
+                    "conditionGroup": [
+                        {
+                            "type": "or",
+                            "value": [
+                                {
+                                    "type": "isTrue",
+                                    "attribute": "isDone"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            },
+            "number": {
+                "visible": {
+                    "conditionGroup": [
+                        {
+                            "type": "isNotEmpty",
+                            "attribute": "id"
+                        }
+                    ]
+                }
+            }
+        }
+    },
+    "relationshipPanels": {
+        "inventoryTransactions": {
+            "createDisabled": true,
+            "selectDisabled": true,
+            "unlinkDisabled": true,
+            "layout": "listForOrder"
+        }
+    },
+    "additionalLayouts": {},
+    "calculationHandler": "sales:quote-calculation-handler",
+    "iconClass": "fas fa-plus-circle"
+}

@@ -1,0 +1,17 @@
+[
+    "brand",
+    "type",
+    "partNumber",
+    "pricingType",
+    "teams",
+    "unitPrice",
+    "suppliers",
+    "quantity",
+    "quantityOnHand",
+    "warehousesOnHand",
+    "isInventory",
+    "inventoryNumberType",
+    "removalStrategy",
+    "expirationDays",
+    "createdAt"
+]

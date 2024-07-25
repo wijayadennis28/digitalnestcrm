@@ -1,0 +1,56 @@
+[
+    {
+        "rows": [
+            [
+                {
+                    "name": "name",
+                    "fullWidth": true
+                }
+            ],
+            [
+                {
+                    "name": "quantity"
+                },
+                {
+                    "name": "returnOrder"
+                }
+            ],
+            [
+                {
+                    "name": "product"
+                },
+                {
+                    "name": "account"
+                }
+            ],
+            [
+                {
+                    "name": "inventoryNumber"
+                },
+                false
+            ],
+            [
+                {
+                    "name": "unitPrice"
+                },
+                {
+                    "name": "amount"
+                }
+            ],
+            [
+                {
+                    "name": "unitWeight"
+                },
+                {
+                    "name": "weight"
+                }
+            ],
+            [
+                {
+                    "name": "description",
+                    "fullWidth": true
+                }
+            ]
+        ]
+    }
+]

@@ -1,0 +1,381 @@
+{
+    "controller": "controllers/record",
+    "boolFilterList": ["onlyMy"],
+    "filterList": [
+        "actual",
+        {
+            "name": "completed",
+            "style": "success"
+        }
+    ],
+    "recordViews": {
+        "detail": "sales:views/quote/record/detail",
+        "edit": "sales:views/quote/record/edit",
+        "detailSmall": "sales:views/quote/record/detail-small",
+        "editSmall": "sales:views/quote/record/edit-small"
+    },
+    "viewSetupHandlers": {
+        "record/detail": ["sales:handlers/quote/setup-record-detail"],
+        "record/edit": ["sales:handlers/quote/setup-record-detail"]
+    },
+    "massActionDefs": {
+        "lock": {
+            "aclScope": "ReceiptOrder",
+            "acl": "edit",
+            "handler": "sales:handlers/quote/lock-mass-action",
+            "actionFunction": "actionLock",
+            "initFunction": "initLock"
+        },
+        "unlock": {
+            "aclScope": "ReceiptOrder",
+            "acl": "edit",
+            "handler": "sales:handlers/quote/lock-mass-action",
+            "actionFunction": "actionUnlock",
+            "initFunction": "initUnlock"
+        }
+    },
+    "massActionList": [
+        "lock",
+        "unlock"
+    ],
+    "checkAllResultMassActionList": [
+        "lock",
+        "unlock"
+    ],
+    "detailActionList": [
+        {
+            "name": "lock",
+            "acl": "edit",
+            "label": "Lock",
+            "handler": "sales:handlers/quote/lock-action",
+            "data": {
+                "handler": "sales:handlers/quote/lock-action"
+            },
+            "checkVisibilityFunction": "canBeLocked",
+            "actionFunction": "actionLock"
+        },
+        {
+            "name": "unlock",
+            "acl": "edit",
+            "label": "Unlock",
+            "handler": "sales:handlers/quote/lock-action",
+            "data": {
+                "handler": "sales:handlers/quote/lock-action"
+            },
+            "checkVisibilityFunction": "canBeUnlocked",
+            "actionFunction": "actionUnlock"
+        },
+        {
+            "handler": "sales:handlers/receipt-order/import-serial-numbers-button",
+            "name": "importSerialNumbers",
+            "label": "Import Serial Numbers",
+            "acl": "edit",
+            "checkVisibilityFunction": "isVisible"
+        }
+    ],
+    "bottomPanels": {
+        "detail": [
+            "__APPEND__",
+            {
+                "name": "items",
+                "label": "Items",
+                "view": "sales:views/quote/record/panels/items",
+                "notRefreshable": true,
+                "sticked": true,
+                "isForm": true
+            },
+            {
+                "name": "receivedItems",
+                "label": "Received Inventory",
+                "view": "sales:views/receipt-order/record/panels/received-items",
+                "notRefreshable": true,
+                "sticked": true,
+                "isForm": true
+            }
+        ],
+        "edit": [
+            "__APPEND__",
+            {
+                "name": "items",
+                "label": "Items",
+                "view": "sales:views/quote/record/panels/items",
+                "notRefreshable": true,
+                "sticked": true,
+                "isForm": true
+            },
+            {
+                "name": "receivedItems",
+                "label": "Received Inventory",
+                "view": "sales:views/receipt-order/record/panels/received-items",
+                "notRefreshable": true,
+                "sticked": true,
+                "isForm": true
+            }
+        ]
+    },
+    "menu": {
+        "list": {
+            "dropdown": [
+                {
+                    "labelTranslation": "Quote.labels.Templates",
+                    "link": "#Template",
+                    "acl": "read",
+                    "aclScope": "Template"
+                },
+                false,
+                {
+                    "labelTranslation": "Global.scopeNamesPlural.ShippingProvider",
+                    "link": "#ShippingProvider",
+                    "acl": "read",
+                    "aclScope": "ShippingProvider"
+                },
+                {
+                    "labelTranslation": "Global.scopeNamesPlural.Warehouse",
+                    "link": "#Warehouse",
+                    "acl": "read",
+                    "aclScope": "Warehouse",
+                    "configCheck": "warehousesEnabled"
+                },
+                {
+                    "labelTranslation": "Global.scopeNamesPlural.ReceiptOrderItem",
+                    "link": "#ReceiptOrderItem",
+                    "acl": "read",
+                    "aclScope": "ReceiptOrderItem"
+                }
+            ]
+        }
+    },
+    "dynamicLogic": {
+        "fields": {
+            "isLocked": {
+                "visible": {
+                    "conditionGroup": [
+                        {
+                            "type": "isTrue",
+                            "attribute": "isNotActual"
+                        }
+                    ]
+                }
+            },
+            "isHardLocked": {
+                "visible": {
+                    "conditionGroup": [
+                        {
+                            "type": "isTrue",
+                            "attribute": "isHardLocked"
+                        }
+                    ]
+                }
+            },
+            "account": {
+                "readOnly": {
+                    "conditionGroup": [
+                        {
+                            "type": "or",
+                            "value": [
+                                {
+                                    "type": "isNotEmpty",
+                                    "attribute": "purchaseOrderId",
+                                    "data": {
+                                        "field": "purchaseOrder"
+                                    }
+                                }
+                            ]
+                        }
+                    ]
+                }
+            },
+            "returnOrder": {
+                "readOnly": {
+                    "conditionGroup": [
+                        {
+                            "type": "or",
+                            "value": [
+                                {
+                                    "type": "isNotEmpty",
+                                    "attribute": "id"
+                                },
+                                {
+                                    "type": "isNotEmpty",
+                                    "attribute": "purchaseOrderId",
+                                    "data": {
+                                        "field": "purchaseOrder"
+                                    }
+                                },
+                                {
+                                    "type": "isNotEmpty",
+                                    "attribute": "supplierId",
+                                    "data": {
+                                        "field": "supplier"
+                                    }
+                                }
+                            ]
+                        }
+                    ]
+                },
+                "visible": {
+                    "conditionGroup": [
+                        {
+                            "type": "and",
+                            "value": [
+                                {
+                                    "type": "isEmpty",
+                                    "attribute": "purchaseOrderId",
+                                    "data": {
+                                        "field": "purchaseOrder"
+                                    }
+                                },
+                                {
+                                    "type": "isEmpty",
+                                    "attribute": "supplierId",
+                                    "data": {
+                                        "field": "supplier"
+                                    }
+                                }
+                            ]
+                        }
+                    ]
+                }
+            },
+            "supplier": {
+                "readOnly": {
+                    "conditionGroup": [
+                        {
+                            "type": "or",
+                            "value": [
+                                {
+                                    "type": "isNotEmpty",
+                                    "attribute": "purchaseOrderId",
+                                    "data": {
+                                        "field": "purchaseOrder"
+                                    }
+                                }
+                            ]
+                        }
+                    ]
+                },
+                "visible": {
+                    "conditionGroup": [
+                        {
+                            "type": "isEmpty",
+                            "attribute": "returnOrderId",
+                            "data": {
+                                "field": "returnOrder"
+                            }
+                        }
+                    ]
+                }
+            },
+            "purchaseOrder": {
+                "readOnly": {
+                    "conditionGroup": [
+                        {
+                            "type": "isNotEmpty",
+                            "attribute": "id"
+                        }
+                    ]
+                },
+                "visible": {
+                    "conditionGroup": [
+                        {
+                            "type": "isEmpty",
+                            "attribute": "returnOrderId",
+                            "data": {
+                                "field": "returnOrder"
+                            }
+                        }
+                    ]
+                }
+            },
+            "itemList": {
+                "readOnly": {
+                    "conditionGroup": [
+                        {
+                            "type": "or",
+                            "value": [
+                                {
+                                    "type": "isTrue",
+                                    "attribute": "isLocked"
+                                },
+                                {
+                                    "type": "and",
+                                    "value": [
+                                        {
+                                            "type": "in",
+                                            "attribute": "status",
+                                            "value": [
+                                                "Completed"
+                                            ]
+                                        },
+                                        {
+                                            "type": "isNotEmpty",
+                                            "attribute": "id"
+                                        },
+                                        {
+                                            "type": "isTrue",
+                                            "attribute": "isDone"
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                }
+            },
+            "receivedItemList": {
+                "readOnly": {
+                    "conditionGroup": [
+                        {
+                            "type": "in",
+                            "attribute": "status",
+                            "value": [
+                                "Completed"
+                            ]
+                        },
+                        {
+                            "type": "isNotEmpty",
+                            "attribute": "id"
+                        },
+                        {
+                            "type": "isTrue",
+                            "attribute": "isDone"
+                        }
+                    ]
+                }
+            },
+            "number": {
+                "visible": {
+                    "conditionGroup": [
+                        {
+                            "type": "isNotEmpty",
+                            "attribute": "id"
+                        }
+                    ]
+                }
+            }
+        }
+    },
+    "relationshipPanels": {
+        "inventoryTransactions": {
+            "createDisabled": true,
+            "selectDisabled": true,
+            "unlinkDisabled": true,
+            "layout": "listForOrder"
+        }
+    },
+    "additionalLayouts": {
+        "detailBottomTotal": {
+            "type": "list",
+            "dataAttributeList": ["name", "view", "customLabel"]
+        },
+        "listForAccount": {
+            "type": "list"
+        },
+        "detailCreateFromPurchaseOrder": {
+            "type": "detail",
+            "allFields": true
+        }
+    },
+    "calculationHandler": "sales:quote-calculation-handler",
+    "iconClass": "fas fa-truck-loading"
+}

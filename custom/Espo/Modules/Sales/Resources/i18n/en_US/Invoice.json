@@ -1,0 +1,78 @@
+{
+    "labels": {
+        "Create Invoice": "Create Invoice",
+        "Taxes": "Taxes",
+        "Shipping Providers": "Shipping Providers",
+        "Add Item": "Add Item",
+        "Templates": "Templates",
+        "Items": "Items",
+        "Email PDF": "Email PDF",
+        "Invoice Items": "Invoice Items"
+    },
+    "fields": {
+        "status": "Status",
+        "number": "Number",
+        "numberA": "Number (auto-incremented)",
+        "account": "Account",
+        "opportunity": "Opportunity",
+        "quote": "Quote",
+        "salesOrder": "Sales Order",
+        "billingAddress": "Billing Address",
+        "shippingAddress": "Shipping Address",
+        "billingContact": "Billing Contact",
+        "shippingContact": "Shipping Contact",
+        "tax": "Tax",
+        "taxRate": "Tax Rate",
+        "shippingCost": "Shipping Cost",
+        "shippingProvider": "Shipping Provider",
+        "taxAmount": "Tax Amount",
+        "discountAmount": "Discount Amount",
+        "amount": "Amount",
+        "preDiscountedAmount": "Pre-Discount Amount",
+        "grandTotalAmount": "Grand Total Amount",
+        "itemList": "Item List",
+        "dateInvoiced": "Date Invoiced",
+        "weight": "Weight",
+        "amountConverted": "Amount (converted)",
+        "taxAmountConverted": "Tax Amount (converted)",
+        "shippingCostConverted": "Shipping Cost (converted)",
+        "preDiscountedAmountConverted": "Pre-Discount Amount (converted)",
+        "discountAmountConverted": "Discount Amount (converted)",
+        "grandTotalAmountConverted": "Grand Total Amount (converted)",
+        "shippingCostCurrency": "Shipping Cost Currency",
+        "taxAmountCurrency": "Tax Amount Currency",
+        "discountAmountCurrency": "Discount Amount Currency",
+        "amountCurrency": "Amount Currency",
+        "preDiscountedAmountCurrency": "Pre-Discount Amount Currency",
+        "grandTotalAmountCurrency": "Grand Total Amount Currency",
+        "currency": "Currency",
+        "priceBook": "Price Book"
+    },
+    "links": {
+        "items": "Items",
+        "billingContact": "Billing Contact",
+        "shippingContact": "Shipping Contact",
+        "shippingProvider": "Shipping Provider",
+        "opportunity": "Opportunity",
+        "account": "Account",
+        "tax": "Tax",
+        "quote": "Quote",
+        "salesOrder": "Sales Order",
+        "priceBook": "Price Book"
+    },
+    "options": {
+        "status": {
+            "Draft": "Draft",
+            "Sent": "Sent",
+            "In Review": "In Review",
+            "Confirmed": "Confirmed",
+            "Paid": "Paid",
+            "Rejected": "Rejected",
+            "Canceled": "Canceled"
+        }
+    },
+    "presetFilters": {
+        "actual": "Actual",
+        "paid": "Paid"
+    }
+}

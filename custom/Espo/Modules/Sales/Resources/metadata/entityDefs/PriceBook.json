@@ -1,0 +1,99 @@
+{
+    "fields": {
+        "name": {
+            "type": "varchar",
+            "required": true
+        },
+        "description": {
+            "type": "text"
+        },
+        "status": {
+            "type": "enum",
+            "options": [
+                "Active",
+                "Inactive"
+            ],
+            "default": "Active",
+            "style": {
+                "Inactive": "info"
+            },
+            "maxLength": 8,
+            "audited": true
+        },
+        "parentPriceBook": {
+            "type": "link"
+        },
+        "createdAt": {
+            "type": "datetime",
+            "readOnly": true
+        },
+        "modifiedAt": {
+            "type": "datetime",
+            "readOnly": true
+        },
+        "createdBy": {
+            "type": "link",
+            "readOnly": true
+        },
+        "modifiedBy": {
+            "type": "link",
+            "readOnly": true
+        },
+        "assignedUser": {
+            "type": "link",
+            "view": "views/fields/assigned-user"
+        },
+        "teams": {
+            "type": "linkMultiple"
+        }
+    },
+    "links": {
+        "accounts": {
+            "type": "hasMany",
+            "foreign": "priceBook",
+            "entity": "Account"
+        },
+        "prices": {
+            "type": "hasMany",
+            "foreign": "priceBook",
+            "entity": "ProductPrice"
+        },
+        "rules": {
+            "type": "hasMany",
+            "foreign": "priceBook",
+            "entity": "PriceRule"
+        },
+        "parentPriceBook": {
+            "type": "belongsTo",
+            "foreign": "childPriceBooks",
+            "entity": "PriceBook"
+        },
+        "childPriceBooks": {
+            "type": "hasMany",
+            "foreign": "parentPriceBook",
+            "entity": "PriceBook"
+        },
+        "createdBy": {
+            "type": "belongsTo",
+            "entity": "User"
+        },
+        "modifiedBy": {
+            "type": "belongsTo",
+            "entity": "User"
+        },
+        "assignedUser": {
+            "type": "belongsTo",
+            "entity": "User"
+        },
+        "teams": {
+            "type": "hasMany",
+            "entity": "Team",
+            "relationName": "entityTeam",
+            "layoutRelationshipsDisabled": true
+        }
+    },
+    "collection": {
+        "orderBy": "name",
+        "order": "asc"
+    }
+}

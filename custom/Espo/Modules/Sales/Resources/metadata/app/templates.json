@@ -1,0 +1,15 @@
+{
+    "salesEmailPdf": {
+        "scopeList": [
+            "Quote",
+            "SalesOrder",
+            "Invoice",
+            "PurchaseOrder",
+            "DeliveryOrder",
+            "ReceiptOrder",
+            "TransferOrder",
+            "ReturnOrder"
+        ],
+        "module": "Sales"
+    }
+}

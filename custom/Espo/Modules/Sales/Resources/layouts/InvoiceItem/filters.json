@@ -1,0 +1,12 @@
+[
+    "account",
+    "invoice",
+    "product",
+    "invoiceStatus",
+    "quantity",
+    "listPriceConverted",
+    "unitPriceConverted",
+    "amountConverted",
+    "createdBy",
+    "createdAt"
+]

@@ -1,0 +1,23 @@
+{
+  "fields": {
+    "priceBook": "Preisbuch"
+  },
+  "links": {
+    "priceBook": "Preisbuch",
+    "supplier": "Lieferant",
+    "quotes": "Angebote",
+    "quoteItems": "Angebotspositionen",
+    "salesOrders": "Kundenaufträge",
+    "salesOrderItems": "Kundenauftragspositionen",
+    "invoices": "Rechnungen",
+    "invoiceItems": "Rechnungspositionen",
+    "purchaseOrders": "Bestellungen",
+    "purchaseOrderItems": "Bestellpositionen",
+    "deliveryOrders": "Lieferaufträge",
+    "deliveryOrderItems": "Lieferauftragspositionen",
+    "receiptOrders": "Empfangsaufträge",
+    "receiptOrderItems": "Empfangsauftragspositionen",
+    "returnOrders": "Rücksendungen",
+    "returnOrderItems": "Rücksendungspositionen"
+  }
+}

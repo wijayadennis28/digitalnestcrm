@@ -1,0 +1,133 @@
+{
+    "fields": {
+        "name": {
+            "type": "varchar",
+            "required": true
+        },
+        "opportunity": {
+            "type": "link",
+            "readOnly": true
+        },
+        "product": {
+            "type": "link",
+            "readOnly": true,
+            "itemNotReadOnly": true,
+            "fieldManagerAdditionalParamList": [
+                {
+                    "name": "copyFieldList",
+                    "type": "multiEnum",
+                    "view": "sales:views/admin/field-manager/quote-item/fields/product-copy-field-list",
+                    "isSorted": true
+                }
+            ]
+        },
+        "allowFractionalQuantity": {
+            "type": "foreign",
+            "link": "product",
+            "field": "allowFractionalQuantity",
+            "view": "views/fields/foreign-bool",
+            "readOnly": true
+        },
+        "productType": {
+            "type": "foreign",
+            "link": "product",
+            "field": "type",
+            "view": "views/fields/foreign-enum",
+            "readOnly": true
+        },
+        "quantity": {
+            "type": "float",
+            "default": 1.0,
+            "required": true,
+            "readOnly": true,
+            "itemNotReadOnly": true,
+            "validatorClassNameList": [
+                "Espo\\Modules\\Sales\\Classes\\FieldValidators\\QuoteItem\\Quantity\\NotFractional"
+            ],
+            "view": "sales:views/quote-item/fields/quantity"
+        },
+        "quantityInt": {
+            "type": "int",
+            "notStorable": true,
+            "select": {
+                "select": "FLOOR:(quantity)"
+            },
+            "readOnly": true
+        },
+        "listPrice": {
+            "type": "currency",
+            "readOnly": true,
+            "itemNotReadOnly": true
+        },
+        "unitPrice": {
+            "type": "currency",
+            "required": true,
+            "readOnly": true,
+            "itemNotReadOnly": true
+        },
+        "discount": {
+            "type": "float",
+            "readOnly": true,
+            "view": "sales:views/quote-item/fields/discount-rate",
+            "itemNotReadOnly": true
+        },
+        "amount": {
+            "type": "currency",
+            "readOnly": true
+        },
+        "order": {
+            "type": "int",
+            "default": 1,
+            "readOnly": true
+        },
+        "opportunityStage": {
+            "type": "foreign",
+            "link": "opportunity",
+            "field": "stage",
+            "readOnly": true,
+            "view": "views/fields/foreign-enum"
+        },
+        "description": {
+            "type": "text"
+        },
+        "createdAt": {
+            "type": "datetime",
+            "readOnly": true
+        },
+        "modifiedAt": {
+            "type": "datetime",
+            "readOnly": true
+        },
+        "createdBy": {
+            "type": "link",
+            "readOnly": true
+        },
+        "modifiedBy": {
+            "type": "link",
+            "readOnly": true
+        }
+    },
+    "links": {
+        "createdBy": {
+            "type": "belongsTo",
+            "entity": "User"
+        },
+        "modifiedBy": {
+            "type": "belongsTo",
+            "entity": "User"
+        },
+        "product": {
+            "type": "belongsTo",
+            "entity": "Product"
+        },
+        "opportunity": {
+            "type": "belongsTo",
+            "entity": "Opportunity",
+            "foreign": "items"
+        }
+    },
+    "collection": {
+        "orderBy": "createdAt",
+        "order": "desc"
+    }
+}

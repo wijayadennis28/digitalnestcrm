@@ -1,0 +1,258 @@
+{
+    "controller":"controllers/record",
+    "boolFilterList": ["onlyMy"],
+    "filterList":[
+        "actual",
+        {
+            "name":"approved",
+            "style":"success"
+        }
+    ],
+    "recordViews":{
+        "detail":"sales:views/quote/record/detail",
+        "edit":"sales:views/quote/record/edit",
+        "detailSmall":"sales:views/quote/record/detail-small",
+        "editSmall":"sales:views/quote/record/edit-small"
+    },
+    "viewSetupHandlers": {
+        "record/detail": ["sales:handlers/quote/setup-record-detail"],
+        "record/edit": ["sales:handlers/quote/setup-record-detail"]
+    },
+    "massActionDefs": {
+        "lock": {
+            "aclScope": "Quote",
+            "acl": "edit",
+            "handler": "sales:handlers/quote/lock-mass-action",
+            "actionFunction": "actionLock",
+            "initFunction": "initLock"
+        },
+        "unlock": {
+            "aclScope": "Quote",
+            "acl": "edit",
+            "handler": "sales:handlers/quote/lock-mass-action",
+            "actionFunction": "actionUnlock",
+            "initFunction": "initUnlock"
+        }
+    },
+    "massActionList": [
+        "lock",
+        "unlock"
+    ],
+    "checkAllResultMassActionList": [
+        "lock",
+        "unlock"
+    ],
+    "detailActionList": [
+        {
+            "name": "lock",
+            "acl": "edit",
+            "label": "Lock",
+            "handler": "sales:handlers/quote/lock-action",
+            "data": {
+                "handler": "sales:handlers/quote/lock-action"
+            },
+            "checkVisibilityFunction": "canBeLocked",
+            "actionFunction": "actionLock"
+        },
+        {
+            "name": "unlock",
+            "acl": "edit",
+            "label": "Unlock",
+            "handler": "sales:handlers/quote/lock-action",
+            "data": {
+                "handler": "sales:handlers/quote/lock-action"
+            },
+            "checkVisibilityFunction": "canBeUnlocked",
+            "actionFunction": "actionUnlock"
+        }
+    ],
+    "bottomPanels":{
+        "detail": [
+            "__APPEND__",
+            {
+                "name": "items",
+                "label": "Items",
+                "view": "sales:views/quote/record/panels/items",
+                "notRefreshable": true,
+                "sticked": true,
+                "isForm": true
+            }
+        ],
+        "edit": [
+            "__APPEND__",
+            {
+                "name": "items",
+                "label": "Items",
+                "view": "sales:views/quote/record/panels/items",
+                "notRefreshable": true,
+                "sticked": true,
+                "isForm": true
+            }
+        ]
+    },
+    "menu": {
+        "list": {
+            "dropdown": [
+                {
+                    "labelTranslation": "Global.scopeNamesPlural.Template",
+                    "link": "#Template",
+                    "acl": "read",
+                    "aclScope": "Template"
+                },
+                false,
+                {
+                    "labelTranslation": "Global.scopeNamesPlural.Tax",
+                    "link": "#Tax",
+                    "acl": "read",
+                    "aclScope": "Tax"
+                },
+                {
+                    "labelTranslation": "Global.scopeNamesPlural.ShippingProvider",
+                    "link": "#ShippingProvider",
+                    "acl": "read",
+                    "aclScope": "ShippingProvider"
+                },
+                {
+                    "labelTranslation": "Global.scopeNamesPlural.QuoteItem",
+                    "link": "#QuoteItem",
+                    "acl": "read",
+                    "aclScope": "QuoteItem"
+                }
+            ]
+        }
+    },
+    "dynamicLogic": {
+        "fields": {
+            "isLocked": {
+                "visible": {
+                    "conditionGroup": [
+                        {
+                            "type": "isTrue",
+                            "attribute": "isNotActual"
+                        }
+                    ]
+                }
+            },
+            "status": {
+                "readOnly": {
+                    "conditionGroup": [
+                        {
+                            "type": "isTrue",
+                            "attribute": "isLocked"
+                        }
+                    ]
+                }
+            },
+            "dateInvoiced": {
+                "visible": {
+                    "conditionGroup": [
+                        {
+                            "type": "equals",
+                            "attribute": "status",
+                            "value": "Approved"
+                        }
+                    ]
+                }
+            },
+            "account": {
+                "readOnly": {
+                    "conditionGroup": [
+                        {
+                            "type": "or",
+                            "value": [
+                                {
+                                    "type": "isNotEmpty",
+                                    "attribute": "opportunityId",
+                                    "data": {
+                                        "field": "opportunity"
+                                    }
+                                }
+                            ]
+                        }
+                    ]
+                }
+            },
+            "itemList": {
+                "readOnly": {
+                    "conditionGroup": [
+                        {
+                            "type": "or",
+                            "value": [
+                                {
+                                    "type": "isTrue",
+                                    "attribute": "isLocked"
+                                },
+                                {
+                                    "type": "and",
+                                    "value": [
+                                        {
+                                            "type": "in",
+                                            "attribute": "status",
+                                            "value": [
+                                                "Approved"
+                                            ]
+                                        },
+                                        {
+                                            "type": "isNotEmpty",
+                                            "attribute": "id"
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                }
+            },
+            "number": {
+                "visible": {
+                    "conditionGroup": [
+                        {
+                            "type": "isNotEmpty",
+                            "attribute": "id"
+                        }
+                    ]
+                }
+            },
+            "inventoryStatus": {
+                "visible": {
+                    "conditionGroup": [
+                        {
+                            "type": "isNotEmpty",
+                            "attribute": "inventoryStatus"
+                        }
+                    ]
+                }
+            }
+        }
+    },
+    "additionalLayouts":{
+        "detailBottomTotal": {
+            "type": "list",
+            "dataAttributeList": ["name", "view", "customLabel"]
+        },
+        "listForAccount": {
+            "type": "list"
+        }
+    },
+    "relationshipPanels": {
+        "salesOrders": {
+            "createAction": "createRelatedSalesOrder",
+            "view": "sales:views/quote/record/panels/sales-orders",
+            "layout": "listForAccount",
+            "selectDisabled": true,
+            "unlinkDisabled": true
+        },
+        "invoices": {
+            "createAction": "createRelatedInvoice",
+            "view": "sales:views/quote/record/panels/invoices",
+            "layout": "listForAccount",
+            "selectDisabled": true,
+            "unlinkDisabled": true
+        },
+        "tax": {
+            "selectMandatoryAttributeList": ["rate"]
+        }
+    },
+    "calculationHandler": "sales:quote-calculation-handler",
+    "iconClass":"fas fa-file-invoice-dollar"
+}

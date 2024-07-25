@@ -1,0 +1,24 @@
+{
+    "labels": {
+        "Create Warehouse": "Create Warehouse"
+    },
+    "fields": {
+        "status": "Status",
+        "isAvailableForStock": "Available for Stock",
+        "isStock": "Stock"
+    },
+    "links": {
+        "inventoryTransactions": "Inventory Transactions",
+        "products": "Products",
+        "inventoryNumbers": "Inventory Numbers"
+    },
+    "options": {
+        "status": {
+            "Active": "Active",
+            "Inactive": "Inactive"
+        }
+    },
+    "presetFilters": {
+        "active": "Active"
+    }
+}

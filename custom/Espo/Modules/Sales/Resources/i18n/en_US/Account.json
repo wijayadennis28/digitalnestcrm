@@ -1,0 +1,23 @@
+{
+    "fields": {
+        "priceBook": "Price Book"
+    },
+    "links": {
+        "priceBook": "Price Book",
+        "supplier": "Supplier",
+        "quotes": "Quotes",
+        "quoteItems": "Quote Items",
+        "salesOrders": "Sales Orders",
+        "salesOrderItems": "Sales Order Items",
+        "invoices": "Invoices",
+        "invoiceItems": "Invoice Items",
+        "purchaseOrders": "Purchase Orders",
+        "purchaseOrderItems": "Purchase Order Items",
+        "deliveryOrders": "Delivery Orders",
+        "deliveryOrderItems": "Delivery Order Items",
+        "receiptOrders": "Receipt Orders",
+        "receiptOrderItems": "Receipt Order Items",
+        "returnOrders": "Return Orders",
+        "returnOrderItems": "Return Order Items"
+    }
+}

@@ -1,0 +1,37 @@
+{
+  "labels": {
+    "Create InventoryNumber": "Nummer erstellen",
+    "Quantity": "Menge",
+    "Warehouses": "Lager",
+    "Inventory History": "Inventarverlauf",
+    "View History": "Verlauf anzeigen",
+    "Received": "Empfangen",
+    "Shipped": "Versandt"
+  },
+  "fields": {
+    "type": "Typ",
+    "product": "Produkt",
+    "quantityOnHand": "Zum Lagerbestand",
+    "quantityReserved": "Reserviert",
+    "quantityInTransit": "im Transit",
+    "incomingDate": "Ankunftsdatum",
+    "productionDate": "Produktionsdatum",
+    "expirationDate": "Verfallsdatum",
+    "warehousesOnHand": "Lager (vorhanden)",
+    "deleteId": "Löschen ID",
+    "number": "Interne Nummer",
+    "orderFifo": "FIFO bestellen",
+    "orderFefo": "FEFO bestellen",
+    "orderLifo": "LIFO bestellen"
+  },
+  "links": {
+    "product": "Produkt"
+  },
+  "presetFilters": {
+    "onHand": "Zum Lagerbestand",
+    "notOnHand": "Nicht zum Lagerbestand"
+  },
+  "messages": {
+    "alreadyExists": "Die gleiche Inventarnummer existiert bereits."
+  }
+}

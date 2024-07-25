@@ -1,0 +1,8 @@
+{
+    "labels": {
+        "Create Tax": "Create Tax"
+    },
+    "fields": {
+        "rate": "Rate"
+    }
+}

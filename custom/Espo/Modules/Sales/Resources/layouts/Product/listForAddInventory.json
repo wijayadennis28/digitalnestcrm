@@ -1,0 +1,22 @@
+[
+    {
+        "name": "name",
+        "link": true
+    },
+    {
+        "name": "brand",
+        "width": 27
+    },
+    {
+        "name": "quantity",
+        "label": "qty",
+        "width": 13
+    },
+    {
+        "name": "unitPriceSelect",
+        "align": "right",
+        "label": "unitPrice",
+        "width": 22,
+        "notSortable": true
+    }
+]

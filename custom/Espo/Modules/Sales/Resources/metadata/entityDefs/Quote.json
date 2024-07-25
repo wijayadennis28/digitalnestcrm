@@ -1,0 +1,313 @@
+{
+    "fields": {
+        "name": {
+            "type": "varchar",
+            "duplicateIgnore": true
+        },
+        "number": {
+            "type": "varchar",
+            "maxLength": 100,
+            "index": true,
+            "readOnly": true,
+            "fieldManagerAdditionalParamList": [
+                {
+                    "name": "useAutoincrement",
+                    "type": "bool"
+                }
+            ],
+            "useAutoincrement": true
+        },
+        "numberA": {
+            "type": "number",
+            "prefix": "Q-",
+            "padLength": 5,
+            "utility": true
+        },
+        "invoiceNumber": {
+            "type": "varchar",
+            "maxLength": 100
+        },
+        "status": {
+            "type": "enum",
+            "options": [
+                "Draft",
+                "Presented",
+                "Approved",
+                "Canceled"
+            ],
+            "view": "views/fields/enum-styled",
+            "style": {
+                "Presented": "primary",
+                "Approved": "success",
+                "Canceled": "info"
+            },
+            "default": "Draft",
+            "fieldManagerAdditionalParamList": [
+                {
+                    "name": "notActualOptions",
+                    "view": "sales:views/admin/field-manager/fields/not-actual-options"
+                }
+            ],
+            "notActualOptions": ["Approved", "Canceled"],
+            "audited": true
+        },
+        "dateQuoted": {
+            "type": "date",
+            "default": "javascript: return this.dateTime.getToday();",
+            "audited": true
+        },
+        "dateOrdered": {
+            "type": "date",
+            "audited": true
+        },
+        "dateInvoiced": {
+            "type": "date",
+            "audited": true
+        },
+        "account": {
+            "type": "link",
+            "view": "sales:views/quote/fields/account"
+        },
+        "opportunity": {
+            "type": "link",
+            "view": "sales:views/quote/fields/opportunity"
+        },
+        "description": {
+            "type": "text"
+        },
+        "billingAddress": {
+            "type": "address"
+        },
+        "shippingAddress": {
+            "type": "address",
+            "view": "crm:views/account/fields/shipping-address"
+        },
+        "billingContact": {
+            "type": "link",
+            "view": "sales:views/quote/fields/contact"
+        },
+        "shippingContact": {
+            "type": "link",
+            "view": "sales:views/quote/fields/contact"
+        },
+        "tax": {
+            "type": "link",
+            "view": "sales:views/quote/fields/tax",
+            "autocompleteOnEmpty": true
+        },
+        "taxRate": {
+            "type": "float",
+            "min": 0,
+            "max": 100
+        },
+        "shippingProvider": {
+            "type": "link",
+            "autocompleteOnEmpty": true
+        },
+        "shippingCost": {
+            "type": "currency",
+            "layoutDetailDisabled": true
+        },
+        "taxAmount": {
+            "type": "currency",
+            "layoutDetailDisabled": true,
+            "readOnly": true
+        },
+        "discountAmount": {
+            "type": "currency",
+            "layoutDetailDisabled": true,
+            "readOnly": true
+        },
+        "amount": {
+            "type": "currency"
+        },
+        "preDiscountedAmount": {
+            "type": "currency",
+            "layoutDetailDisabled": true,
+            "readOnly": true
+        },
+        "grandTotalAmount": {
+            "type": "currency",
+            "layoutDetailDisabled": true,
+            "readOnly": true
+        },
+        "weight": {
+            "type": "float",
+            "min": 0,
+            "readOnly": true
+        },
+        "itemList": {
+            "type": "jsonArray",
+            "notStorable": true,
+            "layoutAvailabilityList": [],
+            "dynamicLogicVisibleDisabled": true,
+            "dynamicLogicInvalidDisabled": true,
+            "view": "sales:views/quote/fields/item-list",
+            "templatePlaceholderDisabled": true,
+            "reportDisabled": true,
+            "workflowDisabled": true,
+            "duplicatorClassName": "Espo\\Modules\\Sales\\Classes\\FieldDuplicators\\Quote\\ItemList"
+        },
+        "priceBook": {
+            "type": "link",
+            "autocompleteOnEmpty": true
+        },
+        "isDone": {
+            "type": "bool",
+            "readOnly": true,
+            "customizationReadOnlyDisabled": true
+        },
+        "isNotActual": {
+            "type": "bool",
+            "readOnly": true,
+            "customizationReadOnlyDisabled": true
+        },
+        "isLocked": {
+            "type": "bool",
+            "readOnly": true,
+            "customizationReadOnlyDisabled": true
+        },
+        "inventoryData": {
+            "type": "jsonObject",
+            "notStorable": true,
+            "readOnly": true,
+            "directAccessDisabled": true,
+            "customizationDisabled": true,
+            "utility": true
+        },
+        "inventoryStatus": {
+            "type": "enum",
+            "options": [
+                "",
+                "Available",
+                "Not Available"
+            ],
+            "style": {
+                "Available": "success",
+                "Not Available": "danger"
+            },
+            "displayAsLabel": true,
+            "notStorable": true,
+            "readOnly": true,
+            "layoutAvailabilityList": ["defaultSidePanel"],
+            "directAccessDisabled": true,
+            "customizationDisabled": true
+        },
+        "products": {
+            "type": "linkMultiple",
+            "entity": "Product",
+            "notStorable": true,
+            "customizationDisabled": true,
+            "directAccessDisabled": true,
+            "layoutAvailabilityList": [
+                "filters"
+            ],
+            "view": "sales:views/quote/fields/products"
+        },
+        "createdAt": {
+            "type": "datetime",
+            "readOnly": true
+        },
+        "modifiedAt": {
+            "type": "datetime",
+            "readOnly": true
+        },
+        "createdBy": {
+            "type": "link",
+            "readOnly": true
+        },
+        "modifiedBy": {
+            "type": "link",
+            "readOnly": true
+        },
+        "assignedUser": {
+            "type": "link",
+            "view": "views/fields/assigned-user"
+        },
+        "teams": {
+            "type": "linkMultiple"
+        }
+    },
+    "links": {
+        "createdBy": {
+            "type": "belongsTo",
+            "entity": "User"
+        },
+        "modifiedBy": {
+            "type": "belongsTo",
+            "entity": "User"
+        },
+        "tax": {
+            "type": "belongsTo",
+            "entity": "Tax"
+        },
+        "shippingProvider": {
+            "type": "belongsTo",
+            "entity": "ShippingProvider"
+        },
+        "account": {
+            "type": "belongsTo",
+            "entity": "Account",
+            "foreign": "quotes"
+        },
+        "opportunity": {
+            "type": "belongsTo",
+            "entity": "Opportunity",
+            "foreign": "quotes"
+        },
+        "salesOrders": {
+            "type": "hasMany",
+            "entity": "SalesOrder",
+            "foreign": "quote",
+            "audited": true
+        },
+        "invoices": {
+            "type": "hasMany",
+            "entity": "Invoice",
+            "foreign": "quote",
+            "audited": true
+        },
+        "billingContact": {
+            "type": "belongsTo",
+            "entity": "Contact",
+            "foreign": "quotesBilling"
+        },
+        "shippingContact": {
+            "type": "belongsTo",
+            "entity": "Contact",
+            "foreign": "quotesShipping"
+        },
+        "items": {
+            "type": "hasMany",
+            "entity": "QuoteItem",
+            "foreign": "quote",
+            "layoutRelationshipsDisabled": true
+        },
+        "priceBook": {
+            "type": "belongsTo",
+            "entity": "PriceBook"
+        },
+        "assignedUser": {
+            "type": "belongsTo",
+            "entity": "User"
+        },
+        "teams": {
+            "type": "hasMany",
+            "entity": "Team",
+            "relationName": "EntityTeam",
+            "layoutRelationshipsDisabled": true
+        }
+    },
+    "collection": {
+        "orderBy": "createdAt",
+        "order": "desc",
+        "textFilterFields": ["name", "number"]
+    },
+    "indexes": {
+        "createdAt": {
+            "columns": [
+                "createdAt"
+            ]
+        }
+    }
+}

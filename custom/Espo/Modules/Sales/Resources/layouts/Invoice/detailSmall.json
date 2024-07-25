@@ -1,0 +1,14 @@
+[
+    {
+        "rows": [
+            [{"name": "number"}],
+            [{"name": "status"}],
+            [{"name": "salesOrder"}],
+            [{"name": "account"}],
+            [{"name": "quote"}],
+            [{"name": "opportunity"}],
+            [{"name": "dateInvoiced"}],
+            [{"name": "amount"}]
+        ]
+    }
+]
