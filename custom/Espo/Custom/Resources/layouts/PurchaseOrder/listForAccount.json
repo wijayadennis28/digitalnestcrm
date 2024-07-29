@@ -4,19 +4,18 @@
         "link": true
     },
     {
-        "name": "supplier",
-        "width": 25
+        "name": "supplier"
     },
     {
         "name": "deliveryDate"
     },
     {
         "name": "amount",
-        "width": 12,
+        "width": 19,
         "align": "right"
     },
     {
         "name": "status",
-        "width": 15
+        "width": 19
     }
 ]
