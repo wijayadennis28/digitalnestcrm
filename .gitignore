@@ -3,5 +3,6 @@ data/cache/
 data/logs/
 data/tmp/
 data/install/config.php
+data/cache/
 install/config.php
 .htaccess
