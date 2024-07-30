@@ -1,0 +1,37 @@
+{
+    "fields": {
+        "total": "Total",
+        "producedAt": "Produced At",
+        "shift": "Shift",
+        "batchCode": "Batch code",
+        "sku": "SKU",
+        "batch": "Batch",
+        "formula": "Formula",
+        "machine": "Machine",
+        "productionStatus": "Production Status",
+        "reasonOfFailure": "Reason of Failure",
+        "actionTaken": "Preventive and Corrective Action Taken",
+        "newProductName": "New Product Name",
+        "product": "Product"
+    },
+    "labels": {
+        "Create CProductionLog": "Create Production Log"
+    },
+    "tooltips": {
+        "total": "Amount of product produced"
+    },
+    "options": {
+        "shift": {
+            "Day": "Day",
+            "Night": "Night"
+        },
+        "productionStatus": {
+            "Success": "Success",
+            "Failed": "Failed",
+            "Successful": "Successful"
+        }
+    },
+    "links": {
+        "product": "Product"
+    }
+}

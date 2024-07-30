@@ -1,0 +1,3 @@
+{
+    "beforeSaveCustomScript": "batchCode=string\\concatenate(sku, batch, producedAt, shift, formula)"
+}

@@ -1,0 +1,199 @@
+{
+    "fields": {
+        "name": {
+            "type": "varchar",
+            "required": false,
+            "pattern": "$noBadCharacters",
+            "options": []
+        },
+        "description": {
+            "type": "text"
+        },
+        "createdAt": {
+            "notNull": false,
+            "type": "datetime",
+            "readOnly": true,
+            "default": null,
+            "minuteStep": 30,
+            "required": false
+        },
+        "modifiedAt": {
+            "type": "datetime",
+            "readOnly": true
+        },
+        "createdBy": {
+            "type": "link",
+            "readOnly": true,
+            "view": "views/fields/user"
+        },
+        "modifiedBy": {
+            "type": "link",
+            "readOnly": true,
+            "view": "views/fields/user"
+        },
+        "assignedUser": {
+            "type": "link",
+            "required": false,
+            "view": "views/fields/assigned-user"
+        },
+        "teams": {
+            "type": "linkMultiple",
+            "view": "views/fields/teams"
+        },
+        "total": {
+            "type": "int",
+            "required": true,
+            "min": 0,
+            "tooltip": true,
+            "isCustom": true
+        },
+        "producedAt": {
+            "notNull": false,
+            "type": "date",
+            "required": true,
+            "isCustom": true
+        },
+        "shift": {
+            "type": "enum",
+            "required": true,
+            "options": [
+                "Day",
+                "Night"
+            ],
+            "style": {
+                "Day": null,
+                "Night": null
+            },
+            "default": "Day",
+            "maxLength": 100,
+            "isCustom": true
+        },
+        "batchCode": {
+            "type": "varchar",
+            "maxLength": 100,
+            "options": [],
+            "readOnly": true,
+            "isCustom": true
+        },
+        "sku": {
+            "type": "varchar",
+            "required": true,
+            "maxLength": 100,
+            "options": [],
+            "isCustom": true
+        },
+        "batch": {
+            "type": "varchar",
+            "required": true,
+            "maxLength": 100,
+            "options": [],
+            "isCustom": true
+        },
+        "formula": {
+            "type": "varchar",
+            "required": true,
+            "maxLength": 100,
+            "options": [],
+            "isCustom": true
+        },
+        "machine": {
+            "type": "varchar",
+            "required": true,
+            "maxLength": 100,
+            "options": [],
+            "isCustom": true
+        },
+        "productionStatus": {
+            "type": "enum",
+            "options": [
+                "Failed",
+                "Successful"
+            ],
+            "style": {
+                "Failed": "danger",
+                "Successful": "success"
+            },
+            "default": "Failed",
+            "maxLength": 100,
+            "isCustom": true
+        },
+        "reasonOfFailure": {
+            "type": "text",
+            "rowsMin": 2,
+            "cutHeight": 200,
+            "isCustom": true
+        },
+        "actionTaken": {
+            "type": "text",
+            "rowsMin": 2,
+            "cutHeight": 200,
+            "isCustom": true
+        },
+        "newProductName": {
+            "type": "varchar",
+            "maxLength": 100,
+            "options": [],
+            "isCustom": true
+        },
+        "product": {
+            "type": "link"
+        }
+    },
+    "links": {
+        "createdBy": {
+            "type": "belongsTo",
+            "entity": "User"
+        },
+        "modifiedBy": {
+            "type": "belongsTo",
+            "entity": "User"
+        },
+        "assignedUser": {
+            "type": "belongsTo",
+            "entity": "User"
+        },
+        "teams": {
+            "type": "hasMany",
+            "entity": "Team",
+            "relationName": "entityTeam",
+            "layoutRelationshipsDisabled": true
+        },
+        "product": {
+            "type": "belongsTo",
+            "foreign": "cCProductionLogs",
+            "entity": "Product",
+            "audited": false,
+            "isCustom": true
+        }
+    },
+    "collection": {
+        "orderBy": "createdAt",
+        "order": "desc"
+    },
+    "indexes": {
+        "name": {
+            "columns": [
+                "name",
+                "deleted"
+            ]
+        },
+        "assignedUser": {
+            "columns": [
+                "assignedUserId",
+                "deleted"
+            ]
+        },
+        "createdAt": {
+            "columns": [
+                "createdAt"
+            ]
+        },
+        "createdAtId": {
+            "unique": true,
+            "columns": [
+                "createdAt",
+                "id"
+            ]
+        }
+    }
+}

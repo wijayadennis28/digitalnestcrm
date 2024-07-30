@@ -1,0 +1,65 @@
+[
+    {
+        "rows": [
+            [
+                {
+                    "name": "producedAt"
+                },
+                {
+                    "name": "shift"
+                }
+            ],
+            [
+                {
+                    "name": "productionStatus"
+                }
+            ],
+            [
+                {
+                    "name": "product"
+                },
+                {
+                    "name": "newProductName"
+                }
+            ],
+            [
+                {
+                    "name": "sku"
+                },
+                {
+                    "name": "batch"
+                }
+            ],
+            [
+                {
+                    "name": "formula"
+                },
+                {
+                    "name": "machine"
+                }
+            ],
+            [
+                {
+                    "name": "total"
+                }
+            ],
+            [
+                {
+                    "name": "batchCode"
+                }
+            ],
+            [
+                {
+                    "name": "reasonOfFailure"
+                }
+            ],
+            [
+                {
+                    "name": "actionTaken"
+                }
+            ]
+        ],
+        "style": "default",
+        "label": ""
+    }
+]
