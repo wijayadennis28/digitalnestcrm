@@ -1,0 +1,22 @@
+[
+    {
+        "name": "name",
+        "link": true
+    },
+    {
+        "name": "supplier",
+        "width": 30
+    },
+    {
+        "name": "deliveryDate"
+    },
+    {
+        "name": "amount",
+        "width": 16,
+        "align": "right"
+    },
+    {
+        "name": "status",
+        "width": 20
+    }
+]

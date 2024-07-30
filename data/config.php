@@ -102,7 +102,62 @@ return [
         0 => 'PurchaseOrder',
         1 => 'Product'
       ]
-    ]
+    ],
+    2 => 'Contact',
+    3 => 'Lead',
+    4 => 'Opportunity',
+    5 => (object) [
+      'type' => 'divider',
+      'text' => '$Activities',
+      'id' => '219419'
+    ],
+    6 => 'Email',
+    7 => 'Meeting',
+    8 => 'Call',
+    9 => 'Task',
+    10 => 'Calendar',
+    11 => (object) [
+      'type' => 'divider',
+      'id' => '655187',
+      'text' => '$Support'
+    ],
+    12 => 'Case',
+    13 => 'KnowledgeBaseArticle',
+    14 => (object) [
+      'type' => 'divider',
+      'text' => NULL,
+      'id' => '137994'
+    ],
+    15 => '_delimiter_',
+    16 => (object) [
+      'type' => 'divider',
+      'text' => '$Marketing',
+      'id' => '463280'
+    ],
+    17 => 'Campaign',
+    18 => 'TargetList',
+    19 => (object) [
+      'type' => 'divider',
+      'text' => '$Business',
+      'id' => '518202'
+    ],
+    20 => 'Document',
+    21 => (object) [
+      'type' => 'divider',
+      'text' => '$Organization',
+      'id' => '566592'
+    ],
+    22 => 'User',
+    23 => 'Team',
+    24 => 'WorkingTimeCalendar',
+    25 => (object) [
+      'type' => 'divider',
+      'text' => NULL,
+      'id' => '898671'
+    ],
+    26 => 'EmailTemplate',
+    27 => 'Template',
+    28 => 'Import'
   ],
   'quickCreateList' => [
     0 => 'Account',
@@ -306,9 +361,9 @@ return [
   'authIpAddressWhitelist' => [],
   'authIpAddressCheckExcludedUsersIds' => [],
   'authIpAddressCheckExcludedUsersNames' => (object) [],
-  'cacheTimestamp' => 1721916204,
-  'microtime' => 1721916204.775793,
-  'siteUrl' => 'http://localhost/crm',
+  'cacheTimestamp' => 1722267121,
+  'microtime' => 1722267121.33787,
+  'siteUrl' => 'http://localhost/digitalnestcrm',
   'fullTextSearchMinLength' => 4,
   'appTimestamp' => 1719837180,
   'maintenanceMode' => false,

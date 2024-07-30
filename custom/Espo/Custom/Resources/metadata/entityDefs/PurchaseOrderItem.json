@@ -1,0 +1,12 @@
+{
+    "fields": {
+        "product": {
+            "autocompleteOnEmpty": true,
+            "createButton": true,
+            "required": true,
+            "copyFieldList": [
+                "inventoryNumberType"
+            ]
+        }
+    }
+}

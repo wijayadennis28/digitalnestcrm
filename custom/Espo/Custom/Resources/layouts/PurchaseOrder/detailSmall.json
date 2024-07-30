@@ -1,0 +1,50 @@
+[
+    {
+        "rows": [
+            [
+                {
+                    "name": "dateOrdered"
+                }
+            ],
+            [
+                {
+                    "name": "cDueDateForPaymentToSupplier"
+                }
+            ],
+            [
+                {
+                    "name": "deliveryDate"
+                }
+            ],
+            [
+                {
+                    "name": "supplierAddress"
+                }
+            ],
+            [
+                {
+                    "name": "billingContact"
+                },
+                {
+                    "name": "billingAddress"
+                }
+            ],
+            [
+                {
+                    "name": "shippingContact"
+                },
+                {
+                    "name": "shippingAddress"
+                }
+            ],
+            [
+                {
+                    "name": "warehouse"
+                }
+            ]
+        ],
+        "style": "default",
+        "noteStyle": "info",
+        "label": ""
+    }
+]

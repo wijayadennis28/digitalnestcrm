@@ -1,0 +1,6 @@
+{
+    "fields": {
+        "cDueDateForPaymentToSupplier": "Jatuh Tempo Pembayaran ke Supplier",
+        "name": "Order Id"
+    }
+}

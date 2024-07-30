@@ -1,0 +1,39 @@
+{
+    "collection": {
+        "orderBy": "createdAt",
+        "order": "desc",
+        "textFilterFields": [
+            "name",
+            "number",
+            "id"
+        ],
+        "fullTextSearch": false,
+        "countDisabled": false
+    },
+    "optimisticConcurrencyControl": false,
+    "fields": {
+        "cDueDateForPaymentToSupplier": {
+            "notNull": false,
+            "type": "date",
+            "default": "javascript: return this.dateTime.getToday();",
+            "isCustom": true
+        },
+        "deliveryDate": {
+            "default": "javascript: return this.dateTime.getToday();"
+        },
+        "supplier": {
+            "createButton": true
+        },
+        "billingContact": {
+            "createButton": true,
+            "autocompleteOnEmpty": true
+        },
+        "shippingContact": {
+            "createButton": true,
+            "autocompleteOnEmpty": true
+        },
+        "name": {
+            "options": []
+        }
+    }
+}

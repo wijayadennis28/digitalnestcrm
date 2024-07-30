@@ -1,0 +1,13 @@
+{
+    "stream": false,
+    "disabled": false,
+    "statusField": null,
+    "kanbanStatusIgnoreList": null,
+    "stars": false,
+    "doneStatusList": [
+        "Completed"
+    ],
+    "canceledStatusList": [
+        "Canceled"
+    ]
+}
