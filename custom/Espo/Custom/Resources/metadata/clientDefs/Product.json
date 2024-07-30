@@ -1,0 +1,16 @@
+{
+    "relationshipPanels": {
+        "cProductionLog": {
+            "layout": null,
+            "selectPrimaryFilterName": null
+        },
+        "cProductionLogs": {
+            "layout": null,
+            "selectPrimaryFilterName": null
+        },
+        "cCProductionLogs": {
+            "layout": null,
+            "selectPrimaryFilterName": null
+        }
+    }
+}

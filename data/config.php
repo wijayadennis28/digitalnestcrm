@@ -103,61 +103,71 @@ return [
         1 => 'Product'
       ]
     ],
-    2 => 'Contact',
-    3 => 'Lead',
-    4 => 'Opportunity',
-    5 => (object) [
+    2 => (object) [
+      'type' => 'group',
+      'text' => 'Manufacture',
+      'iconClass' => 'fas fa-city',
+      'color' => NULL,
+      'id' => '972472',
+      'itemList' => [
+        0 => 'CProductionLog'
+      ]
+    ],
+    3 => 'Contact',
+    4 => 'Lead',
+    5 => 'Opportunity',
+    6 => (object) [
       'type' => 'divider',
       'text' => '$Activities',
       'id' => '219419'
     ],
-    6 => 'Email',
-    7 => 'Meeting',
-    8 => 'Call',
-    9 => 'Task',
-    10 => 'Calendar',
-    11 => (object) [
+    7 => 'Email',
+    8 => 'Meeting',
+    9 => 'Call',
+    10 => 'Task',
+    11 => 'Calendar',
+    12 => (object) [
       'type' => 'divider',
       'id' => '655187',
       'text' => '$Support'
     ],
-    12 => 'Case',
-    13 => 'KnowledgeBaseArticle',
-    14 => (object) [
+    13 => 'Case',
+    14 => 'KnowledgeBaseArticle',
+    15 => (object) [
       'type' => 'divider',
       'text' => NULL,
       'id' => '137994'
     ],
-    15 => '_delimiter_',
-    16 => (object) [
+    16 => '_delimiter_',
+    17 => (object) [
       'type' => 'divider',
       'text' => '$Marketing',
       'id' => '463280'
     ],
-    17 => 'Campaign',
-    18 => 'TargetList',
-    19 => (object) [
+    18 => 'Campaign',
+    19 => 'TargetList',
+    20 => (object) [
       'type' => 'divider',
       'text' => '$Business',
       'id' => '518202'
     ],
-    20 => 'Document',
-    21 => (object) [
+    21 => 'Document',
+    22 => (object) [
       'type' => 'divider',
       'text' => '$Organization',
       'id' => '566592'
     ],
-    22 => 'User',
-    23 => 'Team',
-    24 => 'WorkingTimeCalendar',
-    25 => (object) [
+    23 => 'User',
+    24 => 'Team',
+    25 => 'WorkingTimeCalendar',
+    26 => (object) [
       'type' => 'divider',
       'text' => NULL,
       'id' => '898671'
     ],
-    26 => 'EmailTemplate',
-    27 => 'Template',
-    28 => 'Import'
+    27 => 'EmailTemplate',
+    28 => 'Template',
+    29 => 'Import'
   ],
   'quickCreateList' => [
     0 => 'Account',
@@ -361,8 +371,8 @@ return [
   'authIpAddressWhitelist' => [],
   'authIpAddressCheckExcludedUsersIds' => [],
   'authIpAddressCheckExcludedUsersNames' => (object) [],
-  'cacheTimestamp' => 1722267121,
-  'microtime' => 1722267121.33787,
+  'cacheTimestamp' => 1722357565,
+  'microtime' => 1722357565.990987,
   'siteUrl' => 'http://localhost/digitalnestcrm',
   'fullTextSearchMinLength' => 4,
   'appTimestamp' => 1719837180,

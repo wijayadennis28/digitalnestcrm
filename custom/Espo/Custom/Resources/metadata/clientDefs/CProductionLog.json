@@ -1,0 +1,50 @@
+{
+    "controller": "controllers/record",
+    "boolFilterList": [
+        "onlyMy"
+    ],
+    "iconClass": "fas fa-book",
+    "dynamicLogic": {
+        "fields": {
+            "reasonOfFailure": {
+                "visible": {
+                    "conditionGroup": [
+                        {
+                            "type": "equals",
+                            "attribute": "productionStatus",
+                            "value": "Failed"
+                        }
+                    ]
+                }
+            },
+            "actionTaken": {
+                "visible": {
+                    "conditionGroup": [
+                        {
+                            "type": "equals",
+                            "attribute": "productionStatus",
+                            "value": "Failed"
+                        }
+                    ]
+                }
+            },
+            "newProductName": {
+                "visible": {
+                    "conditionGroup": [
+                        {
+                            "type": "equals",
+                            "attribute": "productionStatus",
+                            "value": "Failed"
+                        }
+                    ]
+                }
+            }
+        }
+    },
+    "relationshipPanels": {
+        "product": {
+            "layout": null,
+            "selectPrimaryFilterName": "available"
+        }
+    }
+}

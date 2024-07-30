@@ -1,0 +1,24 @@
+{
+    "fields": {
+        "cCProductionLogs": {
+            "type": "linkMultiple",
+            "layoutDetailDisabled": true,
+            "layoutMassUpdateDisabled": true,
+            "layoutListDisabled": true,
+            "noLoad": true,
+            "importDisabled": true,
+            "exportDisabled": true,
+            "customizationDisabled": true,
+            "isCustom": true
+        }
+    },
+    "links": {
+        "cCProductionLogs": {
+            "type": "hasMany",
+            "foreign": "product",
+            "entity": "CProductionLog",
+            "audited": false,
+            "isCustom": true
+        }
+    }
+}

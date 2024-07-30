@@ -1,0 +1,17 @@
+[
+    {
+        "name": "assignedUser"
+    },
+    {
+        "name": "producedAt"
+    },
+    {
+        "name": "shift"
+    },
+    {
+        "name": "product"
+    },
+    {
+        "name": "total"
+    }
+]
