@@ -113,61 +113,28 @@ return [
         0 => 'CProductionLog'
       ]
     ],
-    3 => 'Contact',
-    4 => 'Lead',
-    5 => 'Opportunity',
-    6 => (object) [
-      'type' => 'divider',
-      'text' => '$Activities',
-      'id' => '219419'
+    3 => (object) [
+      'type' => 'group',
+      'text' => 'Sales',
+      'iconClass' => 'fas fa-chart-line',
+      'color' => NULL,
+      'id' => '152710',
+      'itemList' => [
+        0 => 'SalesOrder'
+      ]
     ],
-    7 => 'Email',
-    8 => 'Meeting',
-    9 => 'Call',
-    10 => 'Task',
-    11 => 'Calendar',
-    12 => (object) [
-      'type' => 'divider',
-      'id' => '655187',
-      'text' => '$Support'
-    ],
-    13 => 'Case',
-    14 => 'KnowledgeBaseArticle',
-    15 => (object) [
-      'type' => 'divider',
-      'text' => NULL,
-      'id' => '137994'
-    ],
-    16 => '_delimiter_',
-    17 => (object) [
-      'type' => 'divider',
-      'text' => '$Marketing',
-      'id' => '463280'
-    ],
-    18 => 'Campaign',
-    19 => 'TargetList',
-    20 => (object) [
-      'type' => 'divider',
-      'text' => '$Business',
-      'id' => '518202'
-    ],
-    21 => 'Document',
-    22 => (object) [
-      'type' => 'divider',
-      'text' => '$Organization',
-      'id' => '566592'
-    ],
-    23 => 'User',
-    24 => 'Team',
-    25 => 'WorkingTimeCalendar',
-    26 => (object) [
-      'type' => 'divider',
-      'text' => NULL,
-      'id' => '898671'
-    ],
-    27 => 'EmailTemplate',
-    28 => 'Template',
-    29 => 'Import'
+    4 => (object) [
+      'type' => 'group',
+      'text' => 'Organization',
+      'iconClass' => 'fas fa-sitemap',
+      'color' => NULL,
+      'id' => '396806',
+      'itemList' => [
+        0 => 'User',
+        1 => 'Team',
+        2 => 'WorkingTimeCalendar'
+      ]
+    ]
   ],
   'quickCreateList' => [
     0 => 'Account',
@@ -371,8 +338,8 @@ return [
   'authIpAddressWhitelist' => [],
   'authIpAddressCheckExcludedUsersIds' => [],
   'authIpAddressCheckExcludedUsersNames' => (object) [],
-  'cacheTimestamp' => 1722357565,
-  'microtime' => 1722357565.990987,
+  'cacheTimestamp' => 1722363833,
+  'microtime' => 1722363833.63674,
   'siteUrl' => 'http://localhost/digitalnestcrm',
   'fullTextSearchMinLength' => 4,
   'appTimestamp' => 1719837180,
