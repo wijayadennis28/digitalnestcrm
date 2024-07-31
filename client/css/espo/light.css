@@ -10698,6 +10698,10 @@ fieldset[disabled] .datepicker table tr td span.active:hover:hover {
     content: "\f641"
 }
 
+.fa-sitemap:before {
+    content: "\f0e8"
+}
+
 .fa-address-book:before {
     content: "\f2b9"
 }
@@ -27196,10 +27200,19 @@ body>footer>p a:visited {
         margin: 0 0 0 -15px
     }
 
+    .dialog-centered,
+    .dialog-confirm {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100vh; 
+    }
+    
     .dialog-centered>.modal-dialog,
     .dialog-confirm>.modal-dialog {
-        margin: 0 auto
+        margin: 0;
     }
+    
 }
 
 @media (max-width:768px) {
