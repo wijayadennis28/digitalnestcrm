@@ -1,16 +1,26 @@
 {
-    "relationshipPanels": {
-        "cProductionLog": {
-            "layout": null,
-            "selectPrimaryFilterName": null
-        },
-        "cProductionLogs": {
-            "layout": null,
-            "selectPrimaryFilterName": null
-        },
-        "cCProductionLogs": {
-            "layout": null,
-            "selectPrimaryFilterName": null
-        }
+  "relationshipPanels": {
+    "cProductionLog": {
+      "layout": null,
+      "selectPrimaryFilterName": null
+    },
+    "cProductionLogs": {
+      "layout": null,
+      "selectPrimaryFilterName": null
+    },
+    "cCProductionLogs": {
+      "layout": null,
+      "selectPrimaryFilterName": null
     }
+  },
+  "dynamicLogic": {
+    "fields": {
+      "expirationDays": {
+        "visible": null
+      }
+    }
+  },
+  "kanbanViewMode": false,
+  "color": null,
+  "iconClass": "fas fa-cube"
 }

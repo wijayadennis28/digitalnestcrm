@@ -1,8 +1,26 @@
 {
-    "fields": {
-        "cCProductionLogs": "Production Logs"
-    },
-    "links": {
-        "cCProductionLogs": "Production Logs"
+  "fields": {
+    "cCProductionLogs": "Production Logs",
+    "weight": "Weight (Kg)",
+    "cPanjang": "Panjang (Meter)",
+    "cLebar": "Lebar (Meter)",
+    "cTinggi": "Tinggi (Meter)"
+  },
+  "links": {
+    "cCProductionLogs": "Production Logs"
+  },
+  "tooltips": {
+    "weight": "Dalam Kilogram",
+    "cPanjang": "Dalam Meter",
+    "cLebar": "Dalam meter",
+    "cTinggi": "Dalam meter"
+  },
+  "options": {
+    "status": {
+      "Aktif": "Aktif",
+      "Non-Aktif": "Non-Aktif",
+      "Menunggu Persetujuan": "Menunggu Persetujuan",
+      "Draft": "Draft"
     }
+  }
 }
