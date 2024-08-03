@@ -31,6 +31,45 @@
                         }
                     ]
                 }
+            },
+            "cBeratUnit": {
+                "required": {
+                    "conditionGroup": [
+                        {
+                            "type": "and",
+                            "value": [
+                                {
+                                    "type": "isNotEmpty",
+                                    "attribute": "cBerat"
+                                },
+                                {
+                                    "type": "equals",
+                                    "attribute": "cBeratUnit",
+                                    "value": null
+                                }
+                            ]
+                        }
+                    ]
+                },
+                "visible": null,
+                "invalid": {
+                    "conditionGroup": [
+                        {
+                            "type": "and",
+                            "value": [
+                                {
+                                    "type": "isNotEmpty",
+                                    "attribute": "cBerat"
+                                },
+                                {
+                                    "type": "equals",
+                                    "attribute": "cBeratUnit",
+                                    "value": null
+                                }
+                            ]
+                        }
+                    ]
+                }
             }
         }
     },

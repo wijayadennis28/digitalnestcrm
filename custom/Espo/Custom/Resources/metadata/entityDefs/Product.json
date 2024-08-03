@@ -26,26 +26,26 @@
             }
         },
         "weight": {
-            "tooltip": true
+            "tooltip": false
         },
         "cPanjang": {
             "notNull": false,
             "type": "float",
             "min": 0,
-            "tooltip": true,
+            "tooltip": false,
             "isCustom": true
         },
         "cLebar": {
             "notNull": false,
             "type": "float",
             "min": 0,
-            "tooltip": true,
+            "tooltip": false,
             "isCustom": true
         },
         "cTinggi": {
             "notNull": false,
             "type": "float",
-            "tooltip": true,
+            "tooltip": false,
             "isCustom": true,
             "min": 0
         },
@@ -76,6 +76,31 @@
         "inventoryNumberType": {
             "default": "Batch",
             "readOnly": true
+        },
+        "cBerat": {
+            "notNull": false,
+            "type": "float",
+            "isCustom": true
+        },
+        "cBeratUnit": {
+            "type": "enum",
+            "options": [
+                "",
+                "Kg",
+                "Gram",
+                "Ton"
+            ],
+            "style": {
+                "": null,
+                "Kg": null,
+                "Gram": null,
+                "Ton": null
+            },
+            "default": null,
+            "maxLength": 100,
+            "isCustom": true,
+            "required": false,
+            "labelType": "state"
         }
     },
     "links": {
