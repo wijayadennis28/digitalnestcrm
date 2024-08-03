@@ -1,89 +1,104 @@
 {
-  "fields": {
-    "cCProductionLogs": {
-      "type": "linkMultiple",
-      "layoutDetailDisabled": true,
-      "layoutMassUpdateDisabled": true,
-      "layoutListDisabled": true,
-      "noLoad": true,
-      "importDisabled": true,
-      "exportDisabled": true,
-      "customizationDisabled": true,
-      "isCustom": true
+    "fields": {
+        "cCProductionLogs": {
+            "type": "linkMultiple",
+            "layoutDetailDisabled": true,
+            "layoutMassUpdateDisabled": true,
+            "layoutListDisabled": true,
+            "noLoad": true,
+            "importDisabled": true,
+            "exportDisabled": true,
+            "customizationDisabled": true,
+            "isCustom": true
+        },
+        "category": {
+            "autocompleteOnEmpty": true,
+            "createButton": true
+        },
+        "pricingType": {
+            "default": "Fixed",
+            "style": {
+                "Same as List": null,
+                "Fixed": null,
+                "Discount from List": null,
+                "Markup over Cost": null,
+                "Profit Margin": null
+            }
+        },
+        "weight": {
+            "tooltip": true
+        },
+        "cPanjang": {
+            "notNull": false,
+            "type": "float",
+            "min": 0,
+            "tooltip": true,
+            "isCustom": true
+        },
+        "cLebar": {
+            "notNull": false,
+            "type": "float",
+            "min": 0,
+            "tooltip": true,
+            "isCustom": true
+        },
+        "cTinggi": {
+            "notNull": false,
+            "type": "float",
+            "tooltip": true,
+            "isCustom": true,
+            "min": 0
+        },
+        "expirationDays": {
+            "audited": false
+        },
+        "status": {
+            "options": [
+                "Aktif",
+                "Non-Aktif",
+                "Menunggu Persetujuan",
+                "Draft"
+            ],
+            "default": "Menunggu Persetujuan",
+            "style": {
+                "Aktif": "success",
+                "Non-Aktif": "ordercancelled",
+                "Menunggu Persetujuan": "processed",
+                "Draft": "info"
+            },
+            "audited": false
+        },
+        "partNumber": {
+            "pattern": "$noAsciiSpecialCharacters",
+            "options": [],
+            "maxLength": 5
+        },
+        "inventoryNumberType": {
+            "default": "Batch",
+            "readOnly": true
+        }
     },
-    "category": {
-      "autocompleteOnEmpty": true,
-      "createButton": true
+    "links": {
+        "cCProductionLogs": {
+            "type": "hasMany",
+            "foreign": "product",
+            "entity": "CProductionLog",
+            "audited": false,
+            "isCustom": true
+        },
+        "inventoryNumbers": {
+            "audited": false
+        }
     },
-    "pricingType": {
-      "default": "Fixed",
-      "style": {
-        "Same as List": null,
-        "Fixed": null,
-        "Discount from List": null,
-        "Markup over Cost": null,
-        "Profit Margin": null
-      }
+    "collection": {
+        "orderBy": "name",
+        "order": "asc",
+        "textFilterFields": [
+            "name",
+            "partNumber"
+        ],
+        "fullTextSearch": false,
+        "countDisabled": false
     },
-    "weight": {
-      "tooltip": true
-    },
-    "cPanjang": {
-      "notNull": false,
-      "type": "float",
-      "min": 0,
-      "tooltip": true,
-      "isCustom": true
-    },
-    "cLebar": {
-      "notNull": false,
-      "type": "float",
-      "min": 0,
-      "tooltip": true,
-      "isCustom": true
-    },
-    "cTinggi": {
-      "notNull": false,
-      "type": "float",
-      "tooltip": true,
-      "isCustom": true,
-      "min": 0
-    },
-    "expirationDays": {
-      "audited": false
-    },
-    "status": {
-      "options": ["Aktif", "Non-Aktif", "Menunggu Persetujuan", "Draft"],
-      "default": "Menunggu Persetujuan",
-      "style": {
-        "Aktif": "success",
-        "Non-Aktif": "ordercancelled",
-        "Menunggu Persetujuan": "processed",
-        "Draft": "info"
-      },
-      "audited": false
-    },
-    "partNumber": {
-      "pattern": "$noAsciiSpecialCharacters",
-      "options": [],
-      "maxLength": 5
-    }
-  },
-  "links": {
-    "cCProductionLogs": {
-      "type": "hasMany",
-      "foreign": "product",
-      "entity": "CProductionLog",
-      "audited": false,
-      "isCustom": true
-    }
-  },
-  "collection": {
-    "orderBy": "name",
-    "order": "asc",
-    "textFilterFields": ["name", "partNumber"],
-    "fullTextSearch": false,
-    "countDisabled": false
-  },
-  "optimisticConcurrencyControl": false
+    "optimisticConcurrencyControl": false
 }

@@ -1,0 +1,17 @@
+[
+    {
+        "name": "name",
+        "link": true
+    },
+    {
+        "name": "unitPrice",
+        "width": 25,
+        "align": "right"
+    },
+    {
+        "name": "quantity"
+    },
+    {
+        "name": "status"
+    }
+]

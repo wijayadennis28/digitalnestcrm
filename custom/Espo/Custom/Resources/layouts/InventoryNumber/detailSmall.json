@@ -1,0 +1,57 @@
+[
+    {
+        "rows": [
+            [
+                {
+                    "name": "name"
+                },
+                {
+                    "name": "product"
+                }
+            ]
+        ],
+        "style": "default",
+        "label": ""
+    },
+    {
+        "rows": [
+            [
+                {
+                    "name": "quantityOnHand"
+                },
+                {
+                    "name": "quantityReserved"
+                }
+            ],
+            [
+                {
+                    "name": "quantityInTransit"
+                },
+                false
+            ]
+        ],
+        "style": "default",
+        "name": "quantity",
+        "label": "Quantity"
+    },
+    {
+        "rows": [
+            [
+                {
+                    "name": "incomingDate"
+                },
+                {
+                    "name": "expirationDate"
+                }
+            ],
+            [
+                {
+                    "name": "productionDate"
+                },
+                false
+            ]
+        ],
+        "style": "default",
+        "label": "Details"
+    }
+]

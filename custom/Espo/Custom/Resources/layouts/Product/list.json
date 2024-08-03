@@ -1,0 +1,21 @@
+[
+    {
+        "name": "name",
+        "link": true,
+        "align": "left"
+    },
+    {
+        "name": "quantity",
+        "width": 10,
+        "align": "left"
+    },
+    {
+        "name": "unitPrice",
+        "width": 15,
+        "align": "left"
+    },
+    {
+        "name": "status",
+        "align": "left"
+    }
+]
