@@ -1830,9 +1830,8 @@ pre code {
   .col-sm-5 {
     width: 41.66666667%;
   }
-  .col-sm-4,
-  .cBerat-col {
-    width: 33.33333333% !important;
+  .col-sm-4{
+    width: 33.33333333%;
   }
   .col-sm-3 {
     width: 25%;
@@ -1959,6 +1958,9 @@ pre code {
   }
   .col-sm-offset-0 {
     margin-left: 0;
+  }
+  .cBerat-col {
+    width: 33.33333333% !important;
   }
   .cBeratUnit-col {
     width: 16.66666667% !important;
@@ -6866,9 +6868,8 @@ blockquote.pull-left {
   .col-sm-5 {
     width: 41.66666667%;
   }
-  .col-sm-4,
-  .cBerat-col {
-    width: 33.33333333% !important;
+  .col-sm-4 {
+    width: 33.33333333%;
   }
   .col-sm-3 {
     width: 25%;
@@ -7034,6 +7035,9 @@ blockquote.pull-left {
   .col-sm-offset-0 {
     margin-right: 0;
     margin-left: 0;
+  }
+  .cBerat-col {
+    width: 33.33333333% !important;
   }
   .cBeratUnit-col {
     width: 16.66666667% !important;
