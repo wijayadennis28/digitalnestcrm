@@ -13,7 +13,8 @@
         },
         "category": {
             "autocompleteOnEmpty": true,
-            "createButton": true
+            "createButton": true,
+            "required": true
         },
         "pricingType": {
             "default": "Fixed",
@@ -101,6 +102,9 @@
             "isCustom": true,
             "required": false,
             "labelType": "state"
+        },
+        "unitPrice": {
+            "required": true
         }
     },
     "links": {

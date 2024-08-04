@@ -70,6 +70,17 @@
                         }
                     ]
                 }
+            },
+            "unitPrice": {
+                "readOnly": {
+                    "conditionGroup": [
+                        {
+                            "type": "notEquals",
+                            "attribute": "pricingType",
+                            "value": "Fixed"
+                        }
+                    ]
+                }
             }
         }
     },
