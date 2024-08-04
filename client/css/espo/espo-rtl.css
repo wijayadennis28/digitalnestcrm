@@ -1837,9 +1837,8 @@ pre code {
   .col-sm-3 {
     width: 25%;
   }
-  .col-sm-2,
-  .cBeratUnit-col {
-    width: 16.66666667% !important;
+  .col-sm-2 {
+    width: 16.66666667%;
   }
   .col-sm-1 {
     width: 8.33333333%;
@@ -1960,6 +1959,9 @@ pre code {
   }
   .col-sm-offset-0 {
     margin-left: 0;
+  }
+  .cBeratUnit-col {
+    width: 16.66666667% !important;
   }
 }
 @media (min-width: 992px) {
@@ -6871,8 +6873,7 @@ blockquote.pull-left {
   .col-sm-3 {
     width: 25%;
   }
-  .col-sm-2,
-  .cBeratUnit-col {
+  .col-sm-2 {
     width: 16.66666667% !important;
   }
   .col-sm-1 {
@@ -7033,6 +7034,9 @@ blockquote.pull-left {
   .col-sm-offset-0 {
     margin-right: 0;
     margin-left: 0;
+  }
+  .cBeratUnit-col {
+    width: 16.66666667% !important;
   }
 }
 @media (min-width: 992px) {

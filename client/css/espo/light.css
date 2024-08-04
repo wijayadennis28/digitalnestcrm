@@ -2308,8 +2308,7 @@ pre code {
     width: 25%;
   }
 
-  .col-sm-2,
-  .cBeratUnit-col {
+  .col-sm-2 {
     width: 16.66666667% !important;
   }
 
@@ -2471,6 +2470,9 @@ pre code {
 
   .col-sm-offset-0 {
     margin-left: 0;
+  }
+  .cBeratUnit-col {
+    width: 16.66666667% !important;
   }
 }
 
