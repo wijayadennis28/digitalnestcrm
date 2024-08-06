@@ -11,28 +11,22 @@
             ],
             [
                 {
+                    "name": "product"
+                }
+            ],
+            [
+                {
                     "name": "productionStatus"
                 }
             ],
             [
-                {
-                    "name": "product"
-                },
-                {
-                    "name": "newProductName"
-                }
-            ],
-            [
-                {
-                    "name": "sku"
-                },
                 {
                     "name": "batch"
                 }
             ],
             [
                 {
-                    "name": "formula"
+                    "name": "cFormula"
                 },
                 {
                     "name": "machine"
@@ -46,6 +40,14 @@
             [
                 {
                     "name": "batchCode"
+                }
+            ],
+            [
+                {
+                    "name": "recycledProduct"
+                },
+                {
+                    "name": "totalRecycledProduct"
                 }
             ],
             [

@@ -1,0 +1,16 @@
+[
+    {
+        "rows": [
+            [
+                {
+                    "name": "product"
+                },
+                {
+                    "name": "amount"
+                }
+            ]
+        ],
+        "style": "default",
+        "label": "Overview"
+    }
+]

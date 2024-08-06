@@ -4,15 +4,16 @@
         "producedAt": "Produced At",
         "shift": "Shift",
         "batchCode": "Batch code",
-        "sku": "SKU",
         "batch": "Batch",
-        "formula": "Formula",
         "machine": "Machine",
         "productionStatus": "Production Status",
         "reasonOfFailure": "Reason of Failure",
         "actionTaken": "Preventive and Corrective Action Taken",
-        "newProductName": "New Product Name",
-        "product": "Product"
+        "product": "Product",
+        "recycledProduct": "Recycled Product",
+        "totalRecycledProduct": "Total Recycled Product",
+        "cFormula": "Formula",
+        "cIngredientsAmounts": "Ingredients Amounts"
     },
     "labels": {
         "Create CProductionLog": "Create Production Log"
@@ -32,6 +33,9 @@
         }
     },
     "links": {
-        "product": "Product"
+        "product": "Product",
+        "recycledProduct": "Recycled Product",
+        "cFormula": "Formula",
+        "cIngredientsAmounts": "Ingredients Amounts"
     }
 }

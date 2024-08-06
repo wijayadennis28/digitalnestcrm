@@ -1,8 +1,14 @@
 {
     "fields": {
-        "cCProductionLogs": "Production Logs"
+        "cCProductionLogs": "Production Logs",
+        "cRecycledProductionLogs": "Recycled Production Logs",
+        "cCFormulas": "Formulas",
+        "cCIngredientsAmounts": "Ingredients Amounts"
     },
     "links": {
-        "cCProductionLogs": "Production Logs"
+        "cCProductionLogs": "Production Logs",
+        "cRecycledProductionLogs": "Recycled Production Logs",
+        "cCFormulas": "Formulas",
+        "cCIngredientsAmounts": "Ingredients Amounts"
     }
 }

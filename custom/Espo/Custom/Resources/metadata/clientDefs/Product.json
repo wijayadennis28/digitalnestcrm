@@ -11,6 +11,22 @@
         "cCProductionLogs": {
             "layout": null,
             "selectPrimaryFilterName": null
+        },
+        "recycledProductionLogs": {
+            "layout": null,
+            "selectPrimaryFilterName": null
+        },
+        "cFormulas": {
+            "layout": null,
+            "selectPrimaryFilterName": null
+        },
+        "formulaAsIngredients": {
+            "layout": null,
+            "selectPrimaryFilterName": null
+        },
+        "cIngredientsAmounts": {
+            "layout": null,
+            "selectPrimaryFilterName": null
         }
     }
 }
