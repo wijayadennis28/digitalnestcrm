@@ -6,7 +6,8 @@
         "cLebar": "Lebar (Meter)",
         "cTinggi": "Tinggi (Meter)",
         "cBerat": "Berat",
-        "cBeratUnit": "satuan"
+        "cBeratUnit": "satuan",
+        "cSku": "SKU"
     },
     "links": {
         "cCProductionLogs": "Production Logs"

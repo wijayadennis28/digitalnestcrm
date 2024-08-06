@@ -5,6 +5,9 @@
         "align": "left"
     },
     {
+        "name": "cSku"
+    },
+    {
         "name": "quantity",
         "width": 10,
         "align": "left"

@@ -105,6 +105,13 @@
         },
         "unitPrice": {
             "required": true
+        },
+        "cSku": {
+            "type": "varchar",
+            "maxLength": 7,
+            "pattern": "$latinLettersDigits",
+            "options": [],
+            "isCustom": true
         }
     },
     "links": {

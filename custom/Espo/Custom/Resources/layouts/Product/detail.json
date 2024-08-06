@@ -1,104 +1,106 @@
 [
-  {
-    "rows": [
-      [
-        {
-          "name": "name"
-        },
-        {
-          "name": "status"
-        }
-      ],
-      [
-        {
-          "name": "category"
-        }
-      ],
-      [
-        {
-          "name": "unitPrice"
-        },
-        {
-          "name": "expirationDays"
-        }
-      ],
-      [
-        {
-          "name": "description"
-        }
-      ]
-    ],
-    "style": "default",
-    "noteStyle": "info",
-    "label": ""
-  },
-  {
-    "rows": [
-      [
-        {
-          "name": "quantity"
-        },
-        {
-          "name": "quantityReserved"
-        }
-      ],
-      [
-        {
-          "name": "quantityOnHand"
-        },
-        {
-          "name": "quantitySoftReserved"
-        }
-      ],
-      [
-        {
-          "name": "quantityInTransit"
-        },
-        {
-          "name": "quantityOnOrder"
-        }
-      ]
-    ],
-    "dynamicLogicVisible": null,
-    "style": "default",
-    "tabBreak": false,
-    "hidden": false,
-    "noteText": null,
-    "noteStyle": "info",
-    "customLabel": "Quantity"
-  },
-  {
-    "rows": [
-      [
-        {
-          "name": "cPanjang"
-        },
-        {
-          "name": "cLebar"
-        },
-        {
-          "name": "cTinggi"
-        }
-      ],
-      [
-        {
-          "name": "cBerat",
-          "width": 6
-        },
-        {
-          "name": "cBeratUnit"
-        },
-        false,
-        false
-      ]
-    ],
-    "dynamicLogicVisible": null,
-    "style": "default",
-    "tabBreak": true,
-    "tabLabel": "Ukuran",
-    "hidden": false,
-    "noteText": null,
-    "noteStyle": "info",
-    "label": ""
-  }
+    {
+        "rows": [
+            [
+                {
+                    "name": "name"
+                },
+                {
+                    "name": "status"
+                }
+            ],
+            [
+                {
+                    "name": "cSku"
+                },
+                {
+                    "name": "category"
+                }
+            ],
+            [
+                {
+                    "name": "unitPrice"
+                },
+                {
+                    "name": "expirationDays"
+                }
+            ],
+            [
+                {
+                    "name": "description"
+                }
+            ]
+        ],
+        "style": "default",
+        "noteStyle": "info",
+        "label": ""
+    },
+    {
+        "rows": [
+            [
+                {
+                    "name": "quantity"
+                },
+                {
+                    "name": "quantityReserved"
+                }
+            ],
+            [
+                {
+                    "name": "quantityOnHand"
+                },
+                {
+                    "name": "quantitySoftReserved"
+                }
+            ],
+            [
+                {
+                    "name": "quantityInTransit"
+                },
+                {
+                    "name": "quantityOnOrder"
+                }
+            ]
+        ],
+        "dynamicLogicVisible": null,
+        "style": "default",
+        "tabBreak": false,
+        "hidden": false,
+        "noteText": null,
+        "noteStyle": "info",
+        "customLabel": "Quantity"
+    },
+    {
+        "rows": [
+            [
+                {
+                    "name": "cPanjang"
+                },
+                {
+                    "name": "cLebar"
+                },
+                {
+                    "name": "cTinggi"
+                }
+            ],
+            [
+                {
+                    "name": "cBerat"
+                },
+                {
+                    "name": "cBeratUnit"
+                },
+                false,
+                false
+            ]
+        ],
+        "dynamicLogicVisible": null,
+        "style": "default",
+        "tabBreak": true,
+        "tabLabel": "Ukuran",
+        "hidden": false,
+        "noteText": null,
+        "noteStyle": "info",
+        "label": ""
+    }
 ]

@@ -11,6 +11,9 @@
             ],
             [
                 {
+                    "name": "cSku"
+                },
+                {
                     "name": "category"
                 }
             ],
@@ -70,6 +73,6 @@
         "hidden": false,
         "noteText": null,
         "noteStyle": "info",
-        "customLabel": ""
+        "label": ""
     }
 ]
