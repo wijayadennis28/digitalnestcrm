@@ -2,5 +2,6 @@
     "shift",
     "assignedUser",
     "producedAt",
+    "productionStatus",
     "product"
 ]

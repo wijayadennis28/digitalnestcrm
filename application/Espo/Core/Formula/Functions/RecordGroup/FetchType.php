@@ -1,4 +1,5 @@
 <?php
+
 /************************************************************************
  * This file is part of EspoCRM.
  *
@@ -40,7 +41,9 @@ use stdClass;
 
 class FetchType implements Func
 {
-    public function __construct(private EntityManager $entityManager) {}
+    public function __construct(private EntityManager $entityManager)
+    {
+    }
 
     public function process(EvaluatedArgumentList $arguments): ?stdClass
     {
@@ -83,6 +86,7 @@ class FetchType implements Func
 
         foreach ($fieldDefsList as $fieldDefs) {
             $field = $fieldDefs->getName();
+            echo $field;
 
             if ($fieldDefs->getType() === 'linkMultiple') {
                 $entity->loadLinkMultipleField($field);

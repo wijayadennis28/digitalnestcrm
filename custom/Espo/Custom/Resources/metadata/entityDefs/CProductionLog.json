@@ -33,7 +33,7 @@
         },
         "assignedUser": {
             "type": "link",
-            "required": false,
+            "required": true,
             "view": "views/fields/assigned-user"
         },
         "teams": {
@@ -42,10 +42,11 @@
         },
         "total": {
             "type": "int",
-            "required": true,
-            "min": 0,
+            "required": false,
+            "min": null,
             "tooltip": true,
-            "isCustom": true
+            "isCustom": true,
+            "readOnly": true
         },
         "producedAt": {
             "notNull": false,
@@ -75,21 +76,7 @@
             "readOnly": true,
             "isCustom": true
         },
-        "sku": {
-            "type": "varchar",
-            "required": true,
-            "maxLength": 100,
-            "options": [],
-            "isCustom": true
-        },
         "batch": {
-            "type": "varchar",
-            "required": true,
-            "maxLength": 100,
-            "options": [],
-            "isCustom": true
-        },
-        "formula": {
             "type": "varchar",
             "required": true,
             "maxLength": 100,
@@ -129,14 +116,30 @@
             "cutHeight": 200,
             "isCustom": true
         },
-        "newProductName": {
-            "type": "varchar",
-            "maxLength": 100,
-            "options": [],
-            "isCustom": true
-        },
         "product": {
             "type": "link"
+        },
+        "recycledProduct": {
+            "type": "link"
+        },
+        "totalRecycledProduct": {
+            "type": "int",
+            "default": 0,
+            "isCustom": true
+        },
+        "cFormula": {
+            "type": "link"
+        },
+        "cIngredientsAmounts": {
+            "type": "linkMultiple",
+            "layoutDetailDisabled": true,
+            "layoutMassUpdateDisabled": true,
+            "layoutListDisabled": true,
+            "noLoad": true,
+            "importDisabled": true,
+            "exportDisabled": true,
+            "customizationDisabled": true,
+            "isCustom": true
         }
     },
     "links": {
@@ -162,6 +165,28 @@
             "type": "belongsTo",
             "foreign": "cCProductionLogs",
             "entity": "Product",
+            "audited": false,
+            "isCustom": true
+        },
+        "recycledProduct": {
+            "type": "belongsTo",
+            "foreign": "cRecycledProductionLogs",
+            "entity": "Product",
+            "audited": false,
+            "isCustom": true
+        },
+        "cFormula": {
+            "type": "belongsTo",
+            "foreign": "cProductionLogs",
+            "entity": "CFormula",
+            "audited": false,
+            "isCustom": true
+        },
+        "cIngredientsAmounts": {
+            "type": "hasMany",
+            "relationName": "cProductionLogCIngredientsAmount",
+            "foreign": "cProductionLogs",
+            "entity": "CIngredientsAmount",
             "audited": false,
             "isCustom": true
         }

@@ -1,0 +1,21 @@
+{
+    "controller": "controllers/record",
+    "boolFilterList": [
+        "onlyMy"
+    ],
+    "iconClass": "fas fa-book-open",
+    "relationshipPanels": {
+        "product": {
+            "layout": null,
+            "selectPrimaryFilterName": null
+        },
+        "cIngredientsAmounts": {
+            "layout": null,
+            "selectPrimaryFilterName": null
+        },
+        "cProductionLogs": {
+            "layout": null,
+            "selectPrimaryFilterName": null
+        }
+    }
+}
