@@ -1,0 +1,17 @@
+{
+    "fields": {
+        "quantity": "Quantity",
+        "cProductFormula": "Product Formula",
+        "product": "Product"
+    },
+    "links": {
+        "cProductFormula": "Product Formula",
+        "product": "Product"
+    },
+    "labels": {
+        "Create CProductFormulaList": "Create Product Formula List"
+    },
+    "layouts": {
+        "productFormula": "List (product formula)"
+    }
+}

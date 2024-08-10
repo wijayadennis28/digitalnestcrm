@@ -112,6 +112,21 @@
             "pattern": "$latinLettersDigits",
             "options": [],
             "isCustom": true
+        },
+        "cCProductFormulas": {
+            "type": "linkMultiple",
+            "layoutDetailDisabled": false,
+            "layoutMassUpdateDisabled": false,
+            "layoutListDisabled": false,
+            "noLoad": false,
+            "importDisabled": false,
+            "exportDisabled": false,
+            "customizationDisabled": true,
+            "isCustom": true
+        },
+        "cCProductFormulaList": {
+            "type": "linkOne",
+            "isCustom": true
         }
     },
     "links": {
@@ -124,6 +139,19 @@
         },
         "inventoryNumbers": {
             "audited": false
+        },
+        "cCProductFormulas": {
+            "type": "hasMany",
+            "foreign": "product",
+            "entity": "CProductFormula",
+            "audited": false,
+            "isCustom": true
+        },
+        "cCProductFormulaList": {
+            "type": "hasOne",
+            "foreign": "product",
+            "entity": "CProductFormulaList",
+            "isCustom": true
         }
     },
     "collection": {

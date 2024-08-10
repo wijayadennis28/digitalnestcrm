@@ -15,6 +15,22 @@
         "inventoryNumbers": {
             "layout": "listForProduct",
             "selectPrimaryFilterName": null
+        },
+        "cProductFormulas": {
+            "layout": null,
+            "selectPrimaryFilterName": null
+        },
+        "cProductFormulaList": {
+            "layout": null,
+            "selectPrimaryFilterName": null
+        },
+        "cProductFormulaLists": {
+            "layout": null,
+            "selectPrimaryFilterName": null
+        },
+        "cProductFormulaList3": {
+            "layout": null,
+            "selectPrimaryFilterName": null
         }
     },
     "dynamicLogic": {

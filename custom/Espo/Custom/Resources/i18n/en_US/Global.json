@@ -1,8 +1,12 @@
 {
     "scopeNames": {
-        "CProductionLog": "Production Log"
+        "CProductionLog": "Production Log",
+        "CProductFormula": "Product Formula",
+        "CProductFormulaList": "Product Formula List"
     },
     "scopeNamesPlural": {
-        "CProductionLog": "Production Logs"
+        "CProductionLog": "Production Logs",
+        "CProductFormula": "Product Formulas",
+        "CProductFormulaList": "Product Formula Lists"
     }
 }

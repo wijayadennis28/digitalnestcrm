@@ -7,10 +7,14 @@
         "cTinggi": "Tinggi (Meter)",
         "cBerat": "Berat",
         "cBeratUnit": "satuan",
-        "cSku": "SKU"
+        "cSku": "SKU",
+        "cCProductFormulas": "Product Formulas",
+        "cCProductFormulaList": "Product Formula List"
     },
     "links": {
-        "cCProductionLogs": "Production Logs"
+        "cCProductionLogs": "Production Logs",
+        "cCProductFormulas": "Product Formulas",
+        "cCProductFormulaList": "Product Formula List"
     },
     "tooltips": {
         "weight": "Dalam Kilogram",
