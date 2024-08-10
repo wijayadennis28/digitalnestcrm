@@ -40,6 +40,17 @@
             [
                 {
                     "name": "quantity"
+                },
+                {
+                    "name": "quantityOnHand"
+                }
+            ],
+            [
+                {
+                    "name": "quantityReserved"
+                },
+                {
+                    "name": "quantitySoftReserved"
                 }
             ]
         ],
@@ -62,7 +73,10 @@
             ],
             [
                 {
-                    "name": "weight"
+                    "name": "cBerat"
+                },
+                {
+                    "name": "cBeratUnit"
                 }
             ]
         ],

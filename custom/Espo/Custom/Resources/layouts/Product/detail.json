@@ -42,23 +42,15 @@
                     "name": "quantity"
                 },
                 {
-                    "name": "quantityReserved"
+                    "name": "quantityOnHand"
                 }
             ],
             [
                 {
-                    "name": "quantityOnHand"
+                    "name": "quantityReserved"
                 },
                 {
                     "name": "quantitySoftReserved"
-                }
-            ],
-            [
-                {
-                    "name": "quantityInTransit"
-                },
-                {
-                    "name": "quantityOnOrder"
                 }
             ]
         ],
