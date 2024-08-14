@@ -1,0 +1,7 @@
+{
+    "fields": {
+        "discount": {
+            "readOnly": false
+        }
+    }
+}

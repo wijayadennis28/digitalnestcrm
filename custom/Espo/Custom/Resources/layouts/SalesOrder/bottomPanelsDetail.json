@@ -1,0 +1,21 @@
+{
+    "_delimiter_": {
+        "disabled": true
+    },
+    "stream": {
+        "disabled": true
+    },
+    "items": {
+        "sticked": true,
+        "index": 0
+    },
+    "deliveryOrders": {
+        "index": 1
+    },
+    "invoices": {
+        "index": 2
+    },
+    "returnOrders": {
+        "index": 3
+    }
+}

@@ -1,8 +1,16 @@
 {
     "scopeNames": {
-        "CProductionLog": "Production Log"
+        "CProductionLog": "Production Log",
+        "Stream": "Activity Log"
     },
     "scopeNamesPlural": {
-        "CProductionLog": "Production Logs"
+        "CProductionLog": "Production Logs",
+        "Stream": "Activity Log"
+    },
+    "dashlets": {
+        "Stream": "Log"
+    },
+    "labels": {
+        "Stream": "Activity Log"
     }
 }
