@@ -55,9 +55,7 @@
                 {
                     "name": "shippingContact"
                 },
-                {
-                    "name": "shippingProvider"
-                }
+                false
             ],
             [
                 {
