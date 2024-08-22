@@ -1,0 +1,13 @@
+{
+    "sidePanels": {
+        "detail": [
+            "__APPEND__",
+            {
+                "name": "stream",
+                "label": "History Log",
+                "view": "views/stream/panel",
+                "aclScope": "History Log"
+            }
+        ]
+    }
+}

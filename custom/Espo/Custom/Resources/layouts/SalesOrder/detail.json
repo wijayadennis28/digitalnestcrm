@@ -1,0 +1,55 @@
+[
+    {
+        "rows": [
+            [
+                {
+                    "name": "number"
+                }
+            ],
+            [
+                {
+                    "name": "account"
+                },
+                {
+                    "name": "status"
+                }
+            ],
+            [
+                {
+                    "name": "dateOrdered"
+                },
+                {
+                    "name": "cPaymentDueDate"
+                }
+            ]
+        ],
+        "style": "default",
+        "label": "Overview"
+    },
+    {
+        "rows": [
+            [
+                {
+                    "name": "shippingAddress"
+                }
+            ],
+            [
+                {
+                    "name": "shippingContact"
+                }
+            ],
+            [
+                {
+                    "name": "cDeliveryNote"
+                }
+            ],
+            [
+                {
+                    "name": "description"
+                }
+            ]
+        ],
+        "style": "default",
+        "label": "Details"
+    }
+]

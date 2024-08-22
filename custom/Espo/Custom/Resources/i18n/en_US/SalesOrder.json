@@ -1,0 +1,29 @@
+{
+    "fields": {
+        "name": "Order ID",
+        "account": "Customer",
+        "cPaymentDueDate": "Payment Due Date",
+        "cDeliveryNote": "Delivery note"
+    },
+    "options": {
+        "status": {
+            "Draft": "Draft",
+            "Ready": "Ready",
+            "Completed": "Completed",
+            "Canceled": "Canceled",
+            "Order Created": "Order Created",
+            "Order Cancelled": "Order Cancelled",
+            "Processed": "Processed",
+            "Reschedule": "Reschedule",
+            "Blocked": "Blocked",
+            "Postponed": "Postponed",
+            "In Delivery": "In Delivery",
+            "Waiting for Payment": "Waiting for Payment",
+            "Payment Received": "Payment Received",
+            "Complete": "Complete",
+            "Active": "Active",
+            "Approved": "Approved",
+            "Rejected": "Rejected"
+        }
+    }
+}

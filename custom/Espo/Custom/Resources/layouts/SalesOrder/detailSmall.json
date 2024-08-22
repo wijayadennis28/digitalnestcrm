@@ -1,0 +1,33 @@
+[
+    {
+        "rows": [
+            [
+                {
+                    "name": "number"
+                }
+            ],
+            [
+                {
+                    "name": "status"
+                }
+            ],
+            [
+                {
+                    "name": "account"
+                }
+            ],
+            [
+                {
+                    "name": "dateOrdered"
+                }
+            ],
+            [
+                {
+                    "name": "amount"
+                }
+            ]
+        ],
+        "style": "default",
+        "label": ""
+    }
+]
