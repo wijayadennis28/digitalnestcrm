@@ -4,7 +4,7 @@
 {{#unless fallback}}
 <div class="row">
     {{#if hasTree}}
-    <div class="{{#if hasTree}} col-md-3 col-sm-4{{else}} col-md-12{{/if}} list-categories-column">
+    <div class="{{#if hasTree}} col-md-3 col-sm-4, .cBerat-col{{else}} col-md-12{{/if}} list-categories-column">
         <div class="categories-container">{{{categories}}}</div>
     </div>
     {{/if}}

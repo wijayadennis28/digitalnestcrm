@@ -1,0 +1,22 @@
+{
+    "controller": "controllers/record",
+    "boolFilterList": [
+        "onlyMy"
+    ],
+    "relationshipPanels": {
+        "cProductFormula": {
+            "layout": null,
+            "selectPrimaryFilterName": null
+        },
+        "product": {
+            "layout": null,
+            "selectPrimaryFilterName": null
+        }
+    },
+    "additionalLayouts": {
+        "productFormula": {
+            "type": "list",
+            "isCustom": true
+        }
+    }
+}

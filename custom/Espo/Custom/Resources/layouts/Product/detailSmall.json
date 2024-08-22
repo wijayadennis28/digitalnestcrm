@@ -1,0 +1,92 @@
+[
+    {
+        "rows": [
+            [
+                {
+                    "name": "name"
+                },
+                {
+                    "name": "status"
+                }
+            ],
+            [
+                {
+                    "name": "cSku"
+                },
+                {
+                    "name": "category"
+                }
+            ],
+            [
+                {
+                    "name": "unitPrice"
+                },
+                {
+                    "name": "expirationDays"
+                }
+            ],
+            [
+                {
+                    "name": "description"
+                }
+            ]
+        ],
+        "style": "default",
+        "noteStyle": "info",
+        "label": ""
+    },
+    {
+        "rows": [
+            [
+                {
+                    "name": "quantity"
+                },
+                {
+                    "name": "quantityOnHand"
+                }
+            ],
+            [
+                {
+                    "name": "quantityReserved"
+                },
+                {
+                    "name": "quantitySoftReserved"
+                }
+            ]
+        ],
+        "style": "default",
+        "noteStyle": "info",
+        "label": ""
+    },
+    {
+        "rows": [
+            [
+                {
+                    "name": "cPanjang"
+                },
+                {
+                    "name": "cLebar"
+                },
+                {
+                    "name": "cTinggi"
+                }
+            ],
+            [
+                {
+                    "name": "cBerat"
+                },
+                {
+                    "name": "cBeratUnit"
+                }
+            ]
+        ],
+        "dynamicLogicVisible": null,
+        "style": "default",
+        "tabBreak": true,
+        "tabLabel": "Ukuran",
+        "hidden": false,
+        "noteText": null,
+        "noteStyle": "info",
+        "label": ""
+    }
+]

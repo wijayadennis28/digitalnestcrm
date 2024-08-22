@@ -27,7 +27,7 @@ define('sales:handlers/receipt-order-received-item/select-inventory-number', [],
             }
 
             return Promise.resolve({
-                primary: 'notOnHand',
+                // primary: 'onHand',
                 advanced: {
                     product: {
                         type: 'equals',

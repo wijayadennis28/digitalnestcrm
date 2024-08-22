@@ -1,0 +1,27 @@
+{
+    "_delimiter_": {
+        "disabled": true
+    },
+    "_tabBreak_0": {
+        "index": 0,
+        "tabBreak": true,
+        "tabLabel": "$inventory"
+    },
+    "warehousesQuantity": {
+        "index": 1
+    },
+    "inventoryNumbers": {
+        "index": 2
+    },
+    "_tabBreak_3": {
+        "index": 3,
+        "tabBreak": true,
+        "tabLabel": "$orders"
+    },
+    "orderItems": {
+        "index": 4
+    },
+    "inventoryAdjustmentItems": {
+        "index": 5
+    }
+}
