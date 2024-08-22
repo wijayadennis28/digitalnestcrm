@@ -11,6 +11,13 @@
         "Stream": "Log"
     },
     "labels": {
-        "Stream": "Activity Log"
+        "Stream": "Activity Log",
+        "CProductFormula": "Product Formula",
+        "CProductFormulaList": "Product Formula List"
+    },
+    "scopeNamesPlural": {
+        "CProductionLog": "Production Logs",
+        "CProductFormula": "Product Formulas",
+        "CProductFormulaList": "Product Formula Lists"
     }
 }

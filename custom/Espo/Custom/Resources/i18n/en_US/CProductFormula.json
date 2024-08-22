@@ -1,0 +1,13 @@
+{
+    "fields": {
+        "product": "Product",
+        "cProductFormulaLists": "Product Formula Lists"
+    },
+    "links": {
+        "product": "Product",
+        "cProductFormulaLists": "Product Formula Lists"
+    },
+    "labels": {
+        "Create CProductFormula": "Create Product Formula"
+    }
+}

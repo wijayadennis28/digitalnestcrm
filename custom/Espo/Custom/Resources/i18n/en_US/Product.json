@@ -1,8 +1,40 @@
 {
     "fields": {
-        "cCProductionLogs": "Production Logs"
+        "cCProductionLogs": "Production Logs",
+        "weight": "Weight",
+        "cPanjang": "Panjang (Meter)",
+        "cLebar": "Lebar (Meter)",
+        "cTinggi": "Tinggi (Meter)",
+        "cBerat": "Berat",
+        "cBeratUnit": "satuan",
+        "cSku": "SKU",
+        "cCProductFormulas": "Product Formulas",
+        "cCProductFormulaList": "Product Formula List"
     },
     "links": {
-        "cCProductionLogs": "Production Logs"
+        "cCProductionLogs": "Production Logs",
+        "cCProductFormulas": "Product Formulas",
+        "cCProductFormulaList": "Product Formula List"
+    },
+    "tooltips": {
+        "weight": "Dalam Kilogram",
+        "cPanjang": "Dalam Meter",
+        "cLebar": "Dalam meter",
+        "cTinggi": "Dalam meter"
+    },
+    "options": {
+        "status": {
+            "Aktif": "Aktif",
+            "Non-Aktif": "Non-Aktif",
+            "Menunggu Persetujuan": "Menunggu Persetujuan",
+            "Draft": "Draft"
+        },
+        "cBeratUnit": {
+            "Kg": "Kg",
+            "gram": "gram",
+            "Ton": "Ton",
+            "Gram": "Gram",
+            "": ""
+        }
     }
 }

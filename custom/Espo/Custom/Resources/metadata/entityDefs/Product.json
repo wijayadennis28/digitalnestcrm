@@ -10,6 +10,123 @@
             "exportDisabled": true,
             "customizationDisabled": true,
             "isCustom": true
+        },
+        "category": {
+            "autocompleteOnEmpty": true,
+            "createButton": true,
+            "required": true
+        },
+        "pricingType": {
+            "default": "Fixed",
+            "style": {
+                "Same as List": null,
+                "Fixed": null,
+                "Discount from List": null,
+                "Markup over Cost": null,
+                "Profit Margin": null
+            }
+        },
+        "weight": {
+            "tooltip": false
+        },
+        "cPanjang": {
+            "notNull": false,
+            "type": "float",
+            "min": 0,
+            "tooltip": false,
+            "isCustom": true
+        },
+        "cLebar": {
+            "notNull": false,
+            "type": "float",
+            "min": 0,
+            "tooltip": false,
+            "isCustom": true
+        },
+        "cTinggi": {
+            "notNull": false,
+            "type": "float",
+            "tooltip": false,
+            "isCustom": true,
+            "min": 0
+        },
+        "expirationDays": {
+            "audited": false
+        },
+        "status": {
+            "options": [
+                "Aktif",
+                "Non-Aktif",
+                "Menunggu Persetujuan",
+                "Draft"
+            ],
+            "default": "Menunggu Persetujuan",
+            "style": {
+                "Aktif": "success",
+                "Non-Aktif": "ordercancelled",
+                "Menunggu Persetujuan": "processed",
+                "Draft": "info"
+            },
+            "audited": false
+        },
+        "partNumber": {
+            "pattern": "$noAsciiSpecialCharacters",
+            "options": [],
+            "maxLength": 5
+        },
+        "inventoryNumberType": {
+            "default": "Batch",
+            "readOnly": true
+        },
+        "cBerat": {
+            "notNull": false,
+            "type": "float",
+            "isCustom": true
+        },
+        "cBeratUnit": {
+            "type": "enum",
+            "options": [
+                "",
+                "Kg",
+                "Gram",
+                "Ton"
+            ],
+            "style": {
+                "": null,
+                "Kg": null,
+                "Gram": null,
+                "Ton": null
+            },
+            "default": null,
+            "maxLength": 100,
+            "isCustom": true,
+            "required": false,
+            "labelType": "state"
+        },
+        "unitPrice": {
+            "required": true
+        },
+        "cSku": {
+            "type": "varchar",
+            "maxLength": 7,
+            "pattern": "$latinLettersDigits",
+            "options": [],
+            "isCustom": true
+        },
+        "cCProductFormulas": {
+            "type": "linkMultiple",
+            "layoutDetailDisabled": false,
+            "layoutMassUpdateDisabled": false,
+            "layoutListDisabled": false,
+            "noLoad": false,
+            "importDisabled": false,
+            "exportDisabled": false,
+            "customizationDisabled": true,
+            "isCustom": true
+        },
+        "cCProductFormulaList": {
+            "type": "linkOne",
+            "isCustom": true
         }
     },
     "links": {
@@ -19,6 +136,33 @@
             "entity": "CProductionLog",
             "audited": false,
             "isCustom": true
+        },
+        "inventoryNumbers": {
+            "audited": false
+        },
+        "cCProductFormulas": {
+            "type": "hasMany",
+            "foreign": "product",
+            "entity": "CProductFormula",
+            "audited": false,
+            "isCustom": true
+        },
+        "cCProductFormulaList": {
+            "type": "hasOne",
+            "foreign": "product",
+            "entity": "CProductFormulaList",
+            "isCustom": true
         }
-    }
+    },
+    "collection": {
+        "orderBy": "name",
+        "order": "asc",
+        "textFilterFields": [
+            "name",
+            "partNumber"
+        ],
+        "fullTextSearch": false,
+        "countDisabled": false
+    },
+    "optimisticConcurrencyControl": false
 }

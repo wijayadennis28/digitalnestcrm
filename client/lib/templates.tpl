@@ -211,7 +211,7 @@ res/templates/list-with-categories.tpl
 {{#unless fallback}}
 <div class="row">
     {{#if hasTree}}
-    <div class="{{#if hasTree}} col-md-3 col-sm-4{{else}} col-md-12{{/if}} list-categories-column">
+    <div class="{{#if hasTree}} col-md-3 col-sm-4, .cBerat-col{{else}} col-md-12{{/if}} list-categories-column">
         <div class="categories-container">{{{categories}}}</div>
     </div>
     {{/if}}
@@ -8488,7 +8488,7 @@ modules/crm/res/templates/knowledge-base-article/list.tpl
 
 <div class="row">
     {{#unless categoriesDisabled}}
-    <div class="categories-container{{#unless categoriesDisabled}} col-md-3 col-sm-4{{else}} col-md-12{{/unless}}">{{{categories}}}</div>
+    <div class="categories-container{{#unless categoriesDisabled}} col-md-3 col-sm-4, .cBerat-col{{else}} col-md-12{{/unless}}">{{{categories}}}</div>
     {{/unless}}
     <div class="list-container{{#unless categoriesDisabled}} col-md-9 col-sm-8{{else}} col-md-12{{/unless}}">{{{list}}}</div>
 </div>
@@ -8500,7 +8500,7 @@ modules/crm/res/templates/knowledge-base-article/modals/select-records.tpl
 
 <div class="row">
     {{#unless categoriesDisabled}}
-    <div class="categories-container{{#unless categoriesDisabled}} col-md-3 col-sm-4{{else}} col-md-12{{/unless}}">{{{categories}}}</div>
+    <div class="categories-container{{#unless categoriesDisabled}} col-md-3 col-sm-4, .cBerat-col{{else}} col-md-12{{/unless}}">{{{categories}}}</div>
     {{/unless}}
     <div class="list-container{{#unless categoriesDisabled}} col-md-9 col-sm-8{{else}} col-md-12{{/unless}}">{{{list}}}</div>
 </div>
@@ -8557,7 +8557,7 @@ modules/crm/res/templates/document/list.tpl
 
 <div class="row">
     {{#unless categoriesDisabled}}
-    <div class="categories-container{{#unless categoriesDisabled}} col-md-3 col-sm-4{{else}} col-md-12{{/unless}}">{{{categories}}}</div>
+    <div class="categories-container{{#unless categoriesDisabled}} col-md-3 col-sm-4, .cBerat-col{{else}} col-md-12{{/unless}}">{{{categories}}}</div>
     {{/unless}}
     <div class="list-container{{#unless categoriesDisabled}} col-md-9 col-sm-8{{else}} col-md-12{{/unless}}">{{{list}}}</div>
 </div>
@@ -8568,7 +8568,7 @@ modules/crm/res/templates/document/modals/select-records.tpl
 
 <div class="row">
     {{#unless categoriesDisabled}}
-    <div class="categories-container{{#unless categoriesDisabled}} col-md-3 col-sm-4{{else}} col-md-12{{/unless}}">{{{categories}}}</div>
+    <div class="categories-container{{#unless categoriesDisabled}} col-md-3 col-sm-4, .cBerat-col{{else}} col-md-12{{/unless}}">{{{categories}}}</div>
     {{/unless}}
     <div class="list-container{{#unless categoriesDisabled}} col-md-9 col-sm-8{{else}} col-md-12{{/unless}}">{{{list}}}</div>
 </div>

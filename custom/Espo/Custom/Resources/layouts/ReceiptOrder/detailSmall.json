@@ -1,0 +1,53 @@
+[
+    {
+        "rows": [
+            [
+                {
+                    "name": "number"
+                }
+            ],
+            [
+                {
+                    "name": "purchaseOrder"
+                }
+            ],
+            [
+                {
+                    "name": "supplier"
+                }
+            ],
+            [
+                {
+                    "name": "returnOrder"
+                }
+            ],
+            [
+                {
+                    "name": "cFaktur"
+                }
+            ],
+            [
+                {
+                    "name": "warehouse"
+                }
+            ],
+            [
+                {
+                    "name": "cSuratJalan"
+                }
+            ],
+            [
+                {
+                    "name": "dateOrdered"
+                }
+            ],
+            [
+                {
+                    "name": "dateReceived"
+                }
+            ]
+        ],
+        "style": "default",
+        "label": ""
+    }
+]
