@@ -1,0 +1,47 @@
+{
+    "fields": {
+        "cFaktur": {
+            "type": "file",
+            "accept": [
+                ".pdf",
+                ".docx",
+                ".doc"
+            ],
+            "sourceList": [],
+            "isCustom": true
+        },
+        "cSuratJalan": {
+            "type": "file",
+            "sourceList": [],
+            "accept": [
+                ".pdf",
+                ".docx",
+                ".doc"
+            ],
+            "isCustom": true
+        },
+        "status": {
+            "style": {
+                "Draft": null,
+                "Ready": "primary",
+                "Completed": "success",
+                "Canceled": "info"
+            },
+            "default": "Completed"
+        }
+    },
+    "links": {
+        "cFaktur": {
+            "type": "belongsTo",
+            "entity": "Attachment",
+            "skipOrmDefs": true,
+            "utility": true
+        },
+        "cSuratJalan": {
+            "type": "belongsTo",
+            "entity": "Attachment",
+            "skipOrmDefs": true,
+            "utility": true
+        }
+    }
+}

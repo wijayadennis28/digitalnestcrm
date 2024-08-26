@@ -1,0 +1,9 @@
+{
+    "GroupTab": {
+      "name": "GroupTab",
+      "label": "GroupTab.Title",
+      "iconClass": "fa fa-group",
+      "view": "custom:views/group-tab"
+    }
+  }
+  

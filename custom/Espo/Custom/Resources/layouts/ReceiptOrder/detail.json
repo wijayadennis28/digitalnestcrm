@@ -1,0 +1,69 @@
+[
+    {
+        "rows": [
+            [
+                {
+                    "name": "number"
+                },
+                {
+                    "name": "purchaseOrder"
+                }
+            ],
+            [
+                false,
+                {
+                    "name": "supplier"
+                }
+            ],
+            [
+                false,
+                {
+                    "name": "returnOrder"
+                }
+            ],
+            [
+                {
+                    "name": "dateOrdered"
+                },
+                {
+                    "name": "dateReceived"
+                }
+            ],
+            [
+                {
+                    "name": "cFaktur"
+                }
+            ]
+        ],
+        "style": "default",
+        "label": "Overview"
+    },
+    {
+        "rows": [
+            [
+                {
+                    "name": "warehouse"
+                },
+                false
+            ],
+            [
+                {
+                    "name": "cSuratJalan"
+                }
+            ],
+            [
+                {
+                    "name": "shippingContact"
+                },
+                false
+            ],
+            [
+                {
+                    "name": "description"
+                }
+            ]
+        ],
+        "style": "default",
+        "label": "Details"
+    }
+]

@@ -1,0 +1,106 @@
+{
+    "fields": {
+        "name": {
+            "options": []
+        },
+        "numberA": {
+            "prefix": "OR0000-",
+            "padLength": 4,
+            "nextNumber": 1
+        },
+        "status": {
+            "options": [
+                "Draft",
+                "Ready",
+                "Canceled",
+                "Order Created",
+                "Order Cancelled",
+                "Processed",
+                "Blocked",
+                "Reschedule",
+                "Postponed",
+                "In Delivery",
+                "Waiting for Payment",
+                "Payment Received",
+                "Completed"
+            ],
+            "style": {
+                "Draft": null,
+                "Ready": "primary",
+                "Canceled": "info",
+                "Order Created": "ordercreated",
+                "Order Cancelled": "ordercancelled",
+                "Processed": "processed",
+                "Blocked": "blocked",
+                "Reschedule": "reschedule",
+                "Postponed": "postponed",
+                "In Delivery": "indelivery",
+                "Waiting for Payment": "waitingpayment",
+                "Payment Received": "paymentreceived",
+                "Completed": "success"
+            }
+        },
+        "cPaymentDueDate": {
+            "notNull": false,
+            "type": "date",
+            "isCustom": true,
+            "audited": true
+        },
+        "teams": {
+            "defaultAttributes": {
+                "teamsIds": [
+                    "66a130c9ce87ce09b"
+                ],
+                "teamsNames": {
+                    "66a130c9ce87ce09b": "Sales"
+                }
+            },
+            "readOnly": true
+        },
+        "cDeliveryNote": {
+            "type": "attachmentMultiple",
+            "previewSize": "medium",
+            "maxFileSize": 2,
+            "maxCount": 1,
+            "sourceList": [],
+            "accept": [],
+            "isCustom": true,
+            "audited": true
+        },
+        "account": {
+            "audited": true
+        },
+        "amount": {
+            "audited": true
+        },
+        "shippingAddressStreet": {
+            "audited": true
+        },
+        "shippingAddressState": {
+            "audited": true
+        },
+        "shippingAddressPostalCode": {
+            "audited": true,
+            "options": []
+        },
+        "shippingAddressCity": {
+            "audited": true
+        },
+        "shippingAddressCountry": {
+            "audited": true
+        },
+        "shippingContact": {
+            "audited": true
+        }
+    },
+    "links": {
+        "cDeliveryNote": {
+            "type": "hasChildren",
+            "entity": "Attachment",
+            "foreign": "parent",
+            "layoutRelationshipsDisabled": true,
+            "relationName": "attachments",
+            "utility": true
+        }
+    }
+}

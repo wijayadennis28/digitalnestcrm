@@ -5,10 +5,10 @@
     },
     {
         "name": "supplier",
-        "width": 25
+        "align": "left"
     },
     {
-        "name": "deliveryDate"
+        "name": "dateOrdered"
     },
     {
         "name": "amount",

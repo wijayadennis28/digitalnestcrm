@@ -12,6 +12,26 @@
             "layout": null,
             "selectPrimaryFilterName": null
         },
+        "inventoryNumbers": {
+            "layout": "listForProduct",
+            "selectPrimaryFilterName": null
+        },
+        "cProductFormulas": {
+            "layout": null,
+            "selectPrimaryFilterName": null
+        },
+        "cProductFormulaList": {
+            "layout": null,
+            "selectPrimaryFilterName": null
+        },
+        "cProductFormulaLists": {
+            "layout": null,
+            "selectPrimaryFilterName": null
+        },
+        "cProductFormulaList3": {
+            "layout": null,
+            "selectPrimaryFilterName": null
+        },
         "recycledProductionLogs": {
             "layout": null,
             "selectPrimaryFilterName": null
@@ -28,5 +48,75 @@
             "layout": null,
             "selectPrimaryFilterName": null
         }
-    }
+    },
+    "dynamicLogic": {
+        "fields": {
+            "expirationDays": {
+                "visible": null
+            },
+            "inventoryNumberType": {
+                "visible": {
+                    "conditionGroup": [
+                        {
+                            "type": "isTrue",
+                            "attribute": "isInventory"
+                        }
+                    ]
+                }
+            },
+            "cBeratUnit": {
+                "required": {
+                    "conditionGroup": [
+                        {
+                            "type": "and",
+                            "value": [
+                                {
+                                    "type": "isNotEmpty",
+                                    "attribute": "cBerat"
+                                },
+                                {
+                                    "type": "equals",
+                                    "attribute": "cBeratUnit",
+                                    "value": null
+                                }
+                            ]
+                        }
+                    ]
+                },
+                "visible": null,
+                "invalid": {
+                    "conditionGroup": [
+                        {
+                            "type": "and",
+                            "value": [
+                                {
+                                    "type": "isNotEmpty",
+                                    "attribute": "cBerat"
+                                },
+                                {
+                                    "type": "equals",
+                                    "attribute": "cBeratUnit",
+                                    "value": null
+                                }
+                            ]
+                        }
+                    ]
+                }
+            },
+            "unitPrice": {
+                "readOnly": {
+                    "conditionGroup": [
+                        {
+                            "type": "notEquals",
+                            "attribute": "pricingType",
+                            "value": "Fixed"
+                        }
+                    ]
+                }
+            }
+        }
+    },
+    "kanbanViewMode": false,
+    "color": null,
+    "iconClass": "fas fa-cube"
 }

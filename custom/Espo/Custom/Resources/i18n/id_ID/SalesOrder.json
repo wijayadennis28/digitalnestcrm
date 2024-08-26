@@ -1,0 +1,33 @@
+{
+    "options": {
+        "status": {
+            "Draft": "Draft",
+            "Ready": "Ready",
+            "Active": "Active",
+            "Approved": "Approved",
+            "Completed": "Completed",
+            "Rejected": "Rejected",
+            "Canceled": "Canceled",
+            "Order Created": "Order Dibuat",
+            "Order Cancelled": "Order Dibatalkan",
+            "Processed": "Diproses",
+            "Reschedule": "Pengiriman di Reschedule",
+            "Blocked": "Terhambat di Produksi",
+            "Postponed": "Ditunda",
+            "In Delivery": "Dalam Pengiriman",
+            "Waiting for Payment": "Menunggu Pembayaran",
+            "Payment Received": "Pembayaran Diterima",
+            "Complete": "Complete"
+        }
+    },
+    "fields": {
+        "dateOrdered": "Tanggal Pemesanan",
+        "cPaymentDueDate": "Jatuh Tempo Pembayaran",
+        "account": "Perusahaan",
+        "shippingAddress": "Alamat Pengiriman",
+        "shippingContact": "Kontak Pengiriman",
+        "shippingCost": "Harga Pengiriman",
+        "amount": "Harga Total",
+        "cDeliveryNote": "Surat Jalan"
+    }
+}

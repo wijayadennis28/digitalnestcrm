@@ -2,11 +2,23 @@
     "scopeNames": {
         "CProductionLog": "Production Log",
         "CFormula": "Formula",
-        "CIngredientsAmount": "Ingredients Amount"
+        "CIngredientsAmount": "Ingredients Amount",
+        "Stream": "Activity Log"
     },
     "scopeNamesPlural": {
         "CProductionLog": "Production Logs",
         "CFormula": "Formulas",
-        "CIngredientsAmount": "Ingredients Amounts"
-    }
+        "CIngredientsAmount": "Ingredients Amounts",
+        "CProductFormula": "Product Formulas",
+        "CProductFormulaList": "Product Formula Lists",
+        "Stream": "Activity Log"
+    },
+    "dashlets": {
+        "Stream": "Log"
+    },
+    "labels": {
+        "Stream": "Activity Log",
+        "CProductFormula": "Product Formula",
+        "CProductFormulaList": "Product Formula List"
+    },
 }
