@@ -134,9 +134,7 @@ return [
         1 => 'Team',
         2 => 'WorkingTimeCalendar'
       ]
-    ],
-    5 => 'CFormula',
-    6 => 'CIngredientsAmount'
+    ]
   ],
   'quickCreateList' => [
     0 => 'Account',
@@ -340,8 +338,8 @@ return [
   'authIpAddressWhitelist' => [],
   'authIpAddressCheckExcludedUsersIds' => [],
   'authIpAddressCheckExcludedUsersNames' => (object) [],
-  'cacheTimestamp' => 1723286483,
-  'microtime' => 1723286483.551438,
+  'cacheTimestamp' => 1724715973,
+  'microtime' => 1724715973.169576,
   'siteUrl' => 'http://localhost/digitalnestcrm',
   'fullTextSearchMinLength' => 4,
   'appTimestamp' => 1719837180,

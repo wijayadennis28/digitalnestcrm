@@ -8,11 +8,7 @@
             "layout": null,
             "selectPrimaryFilterName": null
         },
-        "cFormulas": {
-            "layout": null,
-            "selectPrimaryFilterName": null
-        },
-        "cProductionLogs": {
+        "cProductionLog": {
             "layout": null,
             "selectPrimaryFilterName": null
         }

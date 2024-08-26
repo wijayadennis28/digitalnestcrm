@@ -2,13 +2,11 @@
     "fields": {
         "product": "Product",
         "amount": "Amount",
-        "cFormulas": "Formulas",
-        "cProductionLogs": "Production Logs"
+        "cProductionLog": "Production Log"
     },
     "links": {
         "product": "Product",
-        "cFormulas": "Formulas",
-        "cProductionLogs": "Production Logs"
+        "cProductionLog": "Production Log"
     },
     "labels": {
         "Create CIngredientsAmount": "Create Ingredients Amount"

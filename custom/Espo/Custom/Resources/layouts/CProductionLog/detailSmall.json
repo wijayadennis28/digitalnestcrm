@@ -12,6 +12,9 @@
             [
                 {
                     "name": "product"
+                },
+                {
+                    "name": "batch"
                 }
             ],
             [
@@ -21,12 +24,12 @@
             ],
             [
                 {
-                    "name": "batch"
+                    "name": "warehouse"
                 }
             ],
             [
                 {
-                    "name": "cFormula"
+                    "name": "cProductFormula"
                 },
                 {
                     "name": "machine"

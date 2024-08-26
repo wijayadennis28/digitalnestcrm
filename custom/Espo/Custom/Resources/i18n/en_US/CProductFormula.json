@@ -1,11 +1,13 @@
 {
     "fields": {
         "product": "Product",
-        "cProductFormulaLists": "Product Formula Lists"
+        "cProductFormulaLists": "Product Formula Lists",
+        "cProductionLogs": "Production Logs"
     },
     "links": {
         "product": "Product",
-        "cProductFormulaLists": "Product Formula Lists"
+        "cProductFormulaLists": "Product Formula Lists",
+        "cProductionLogs": "Production Logs"
     },
     "labels": {
         "Create CProductFormula": "Create Product Formula"

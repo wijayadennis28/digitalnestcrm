@@ -61,11 +61,15 @@
             "layout": null,
             "selectPrimaryFilterName": null
         },
-        "cFormula": {
+        "cProductFormula": {
             "layout": null,
             "selectPrimaryFilterName": null
         },
         "cIngredientsAmounts": {
+            "layout": null,
+            "selectPrimaryFilterName": null
+        },
+        "warehouse": {
             "layout": null,
             "selectPrimaryFilterName": null
         }

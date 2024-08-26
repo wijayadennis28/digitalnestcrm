@@ -48,6 +48,17 @@
             "exportDisabled": true,
             "customizationDisabled": true,
             "isCustom": true
+        },
+        "cProductionLogs": {
+            "type": "linkMultiple",
+            "layoutDetailDisabled": true,
+            "layoutMassUpdateDisabled": true,
+            "layoutListDisabled": true,
+            "noLoad": true,
+            "importDisabled": true,
+            "exportDisabled": true,
+            "customizationDisabled": true,
+            "isCustom": true
         }
     },
     "links": {
@@ -80,6 +91,13 @@
             "type": "hasMany",
             "foreign": "cProductFormula",
             "entity": "CProductFormulaList",
+            "audited": false,
+            "isCustom": true
+        },
+        "cProductionLogs": {
+            "type": "hasMany",
+            "foreign": "cProductFormula",
+            "entity": "CProductionLog",
             "audited": false,
             "isCustom": true
         }

@@ -127,7 +127,7 @@
             "default": 0,
             "isCustom": true
         },
-        "cFormula": {
+        "cProductFormula": {
             "type": "link"
         },
         "cIngredientsAmounts": {
@@ -140,6 +140,9 @@
             "exportDisabled": true,
             "customizationDisabled": true,
             "isCustom": true
+        },
+        "warehouse": {
+            "type": "link"
         }
     },
     "links": {
@@ -175,18 +178,24 @@
             "audited": false,
             "isCustom": true
         },
-        "cFormula": {
+        "cProductFormula": {
             "type": "belongsTo",
             "foreign": "cProductionLogs",
-            "entity": "CFormula",
+            "entity": "CProductFormula",
             "audited": false,
             "isCustom": true
         },
         "cIngredientsAmounts": {
             "type": "hasMany",
-            "relationName": "cProductionLogCIngredientsAmount",
-            "foreign": "cProductionLogs",
+            "foreign": "cProductionLog",
             "entity": "CIngredientsAmount",
+            "audited": false,
+            "isCustom": true
+        },
+        "warehouse": {
+            "type": "belongsTo",
+            "foreign": "cCProductionLogs",
+            "entity": "Warehouse",
             "audited": false,
             "isCustom": true
         }

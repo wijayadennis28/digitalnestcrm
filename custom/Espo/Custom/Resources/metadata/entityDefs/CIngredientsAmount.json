@@ -45,27 +45,8 @@
             "default": 0,
             "isCustom": true
         },
-        "cFormulas": {
-            "type": "linkMultiple",
-            "layoutDetailDisabled": true,
-            "layoutMassUpdateDisabled": true,
-            "layoutListDisabled": true,
-            "noLoad": true,
-            "importDisabled": true,
-            "exportDisabled": true,
-            "customizationDisabled": true,
-            "isCustom": true
-        },
-        "cProductionLogs": {
-            "type": "linkMultiple",
-            "layoutDetailDisabled": true,
-            "layoutMassUpdateDisabled": true,
-            "layoutListDisabled": true,
-            "noLoad": true,
-            "importDisabled": true,
-            "exportDisabled": true,
-            "customizationDisabled": true,
-            "isCustom": true
+        "cProductionLog": {
+            "type": "link"
         }
     },
     "links": {
@@ -94,17 +75,8 @@
             "audited": false,
             "isCustom": true
         },
-        "cFormulas": {
-            "type": "hasMany",
-            "relationName": "cFormulaCIngredientsAmount",
-            "foreign": "cIngredientsAmounts",
-            "entity": "CFormula",
-            "audited": false,
-            "isCustom": true
-        },
-        "cProductionLogs": {
-            "type": "hasMany",
-            "relationName": "cProductionLogCIngredientsAmount",
+        "cProductionLog": {
+            "type": "belongsTo",
             "foreign": "cIngredientsAmounts",
             "entity": "CProductionLog",
             "audited": false,

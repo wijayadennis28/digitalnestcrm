@@ -1,14 +1,4 @@
 {
-    "fields": {
-        "product": "Product",
-        "cIngredientsAmounts": "Ingredients",
-        "cProductionLogs": "Production Logs"
-    },
-    "links": {
-        "product": "Product",
-        "cIngredientsAmounts": "Ingredients",
-        "cProductionLogs": "Production Logs"
-    },
     "labels": {
         "Create CFormula": "Create Formula"
     }

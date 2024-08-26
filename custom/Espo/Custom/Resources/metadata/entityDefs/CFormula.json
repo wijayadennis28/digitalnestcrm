@@ -34,32 +34,6 @@
         "teams": {
             "type": "linkMultiple",
             "view": "views/fields/teams"
-        },
-        "product": {
-            "type": "link",
-            "required": true
-        },
-        "cIngredientsAmounts": {
-            "type": "linkMultiple",
-            "layoutDetailDisabled": true,
-            "layoutMassUpdateDisabled": true,
-            "layoutListDisabled": true,
-            "noLoad": true,
-            "importDisabled": true,
-            "exportDisabled": true,
-            "customizationDisabled": true,
-            "isCustom": true
-        },
-        "cProductionLogs": {
-            "type": "linkMultiple",
-            "layoutDetailDisabled": true,
-            "layoutMassUpdateDisabled": true,
-            "layoutListDisabled": true,
-            "noLoad": true,
-            "importDisabled": true,
-            "exportDisabled": true,
-            "customizationDisabled": true,
-            "isCustom": true
         }
     },
     "links": {
@@ -80,28 +54,6 @@
             "entity": "Team",
             "relationName": "entityTeam",
             "layoutRelationshipsDisabled": true
-        },
-        "product": {
-            "type": "belongsTo",
-            "foreign": "cCFormulas",
-            "entity": "Product",
-            "audited": false,
-            "isCustom": true
-        },
-        "cIngredientsAmounts": {
-            "type": "hasMany",
-            "relationName": "cFormulaCIngredientsAmount",
-            "foreign": "cFormulas",
-            "entity": "CIngredientsAmount",
-            "audited": false,
-            "isCustom": true
-        },
-        "cProductionLogs": {
-            "type": "hasMany",
-            "foreign": "cFormula",
-            "entity": "CProductionLog",
-            "audited": false,
-            "isCustom": true
         }
     },
     "collection": {

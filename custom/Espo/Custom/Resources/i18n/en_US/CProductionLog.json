@@ -12,8 +12,9 @@
         "product": "Product",
         "recycledProduct": "Recycled Product",
         "totalRecycledProduct": "Total Recycled Product",
-        "cFormula": "Formula",
-        "cIngredientsAmounts": "Ingredients Amounts"
+        "cProductFormula": "Product Formula",
+        "cIngredientsAmounts": "Ingredients Amounts",
+        "warehouse": "Warehouse"
     },
     "labels": {
         "Create CProductionLog": "Create Production Log"
@@ -35,7 +36,8 @@
     "links": {
         "product": "Product",
         "recycledProduct": "Recycled Product",
-        "cFormula": "Formula",
-        "cIngredientsAmounts": "Ingredients Amounts"
+        "cProductFormula": "Product Formula",
+        "cIngredientsAmounts": "Ingredients Amounts",
+        "warehouse": "Warehouse"
     }
 }
