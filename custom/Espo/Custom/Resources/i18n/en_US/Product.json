@@ -9,12 +9,16 @@
         "cBeratUnit": "satuan",
         "cSku": "SKU",
         "cCProductFormulas": "Product Formulas",
-        "cCProductFormulaList": "Product Formula List"
+        "cCProductFormulaList": "Product Formula List",
+        "cRecycledProductionLogs": "Recycled Production Logs",
+        "cCIngredientsAmounts": "Ingredients Amounts"
     },
     "links": {
         "cCProductionLogs": "Production Logs",
         "cCProductFormulas": "Product Formulas",
-        "cCProductFormulaList": "Product Formula List"
+        "cCProductFormulaList": "Product Formula List",
+        "cRecycledProductionLogs": "Recycled Production Logs",
+        "cCIngredientsAmounts": "Ingredients Amounts"
     },
     "tooltips": {
         "weight": "Dalam Kilogram",

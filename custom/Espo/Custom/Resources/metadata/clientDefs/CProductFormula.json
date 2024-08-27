@@ -11,6 +11,10 @@
         "cProductFormulaLists": {
             "layout": "productFormula",
             "selectPrimaryFilterName": null
+        },
+        "cProductionLogs": {
+            "layout": null,
+            "selectPrimaryFilterName": null
         }
     }
 }
