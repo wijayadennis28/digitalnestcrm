@@ -72,6 +72,12 @@
         "warehouse": {
             "layout": null,
             "selectPrimaryFilterName": null
+        },
+        "inventoryNumber": {
+            "layout": null,
+            "selectPrimaryFilterName": null
         }
-    }
+    },
+    "kanbanViewMode": false,
+    "color": null
 }

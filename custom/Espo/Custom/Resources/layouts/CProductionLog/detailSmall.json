@@ -3,6 +3,11 @@
         "rows": [
             [
                 {
+                    "name": "productionLogNumber"
+                }
+            ],
+            [
+                {
                     "name": "producedAt"
                 },
                 {
@@ -15,6 +20,11 @@
                 },
                 {
                     "name": "batch"
+                }
+            ],
+            [
+                {
+                    "name": "inventoryNumber"
                 }
             ],
             [

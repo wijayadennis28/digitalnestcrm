@@ -3,6 +3,26 @@
         "name": {
             "pattern": "$latinLettersDigits",
             "options": []
+        },
+        "cCProductionLogs": {
+            "type": "linkMultiple",
+            "layoutDetailDisabled": true,
+            "layoutMassUpdateDisabled": true,
+            "layoutListDisabled": true,
+            "noLoad": true,
+            "importDisabled": true,
+            "exportDisabled": true,
+            "customizationDisabled": true,
+            "isCustom": true
+        }
+    },
+    "links": {
+        "cCProductionLogs": {
+            "type": "hasMany",
+            "foreign": "inventoryNumber",
+            "entity": "CProductionLog",
+            "audited": false,
+            "isCustom": true
         }
     }
 }

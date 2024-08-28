@@ -14,7 +14,9 @@
         "totalRecycledProduct": "Total Recycled Product",
         "cProductFormula": "Product Formula",
         "cIngredientsAmounts": "Ingredients Amounts",
-        "warehouse": "Warehouse"
+        "warehouse": "Warehouse",
+        "productionLogNumber": "Production Log ID",
+        "inventoryNumber": "Inventory Number"
     },
     "labels": {
         "Create CProductionLog": "Create Production Log"
@@ -25,7 +27,10 @@
     "options": {
         "shift": {
             "Day": "Day",
-            "Night": "Night"
+            "Night": "Night",
+            "1": "1",
+            "2": "2",
+            "3": "3"
         },
         "productionStatus": {
             "Success": "Success",
@@ -38,6 +43,7 @@
         "recycledProduct": "Recycled Product",
         "cProductFormula": "Product Formula",
         "cIngredientsAmounts": "Ingredients Amounts",
-        "warehouse": "Warehouse"
+        "warehouse": "Warehouse",
+        "inventoryNumber": "Inventory Number"
     }
 }
