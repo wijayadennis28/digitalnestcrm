@@ -1,0 +1,87 @@
+[
+    {
+        "rows": [
+            [
+                {
+                    "name": "number"
+                },
+                false
+            ],
+            [
+                {
+                    "name": "status"
+                },
+                {
+                    "name": "salesOrder"
+                }
+            ],
+            [
+                {
+                    "name": "account"
+                }
+            ],
+            [
+                {
+                    "name": "cDeliveryDate"
+                }
+            ]
+        ],
+        "style": "default",
+        "label": "Overview"
+    },
+    {
+        "rows": [
+            [
+                {
+                    "name": "cCourier"
+                }
+            ],
+            [
+                {
+                    "name": "cVehicleDetailsInternal"
+                }
+            ],
+            [
+                {
+                    "name": "cVehicleDetailsExternal"
+                },
+                {
+                    "name": "cRit"
+                }
+            ]
+        ],
+        "dynamicLogicVisible": null,
+        "style": "default",
+        "tabBreak": false,
+        "hidden": false,
+        "noteText": null,
+        "noteStyle": "info",
+        "customLabel": "Vehicle Details"
+    },
+    {
+        "rows": [
+            [
+                {
+                    "name": "warehouse"
+                }
+            ],
+            [
+                {
+                    "name": "shippingAddress"
+                }
+            ],
+            [
+                {
+                    "name": "description"
+                }
+            ]
+        ],
+        "dynamicLogicVisible": null,
+        "style": "default",
+        "dynamicLogicStyled": null,
+        "tabBreak": false,
+        "hidden": false,
+        "noteText": null,
+        "customLabel": "Sales Order Details"
+    }
+]

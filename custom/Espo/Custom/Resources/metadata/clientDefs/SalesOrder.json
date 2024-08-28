@@ -9,5 +9,11 @@
                 "aclScope": "History Log"
             }
         ]
+    },
+    "relationshipPanels": {
+        "cDeliveryLog": {
+            "layout": null,
+            "selectPrimaryFilterName": null
+        }
     }
 }

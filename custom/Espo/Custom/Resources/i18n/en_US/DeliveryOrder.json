@@ -1,0 +1,30 @@
+{
+    "options": {
+        "status": {
+            "Draft": "Draft",
+            "In Progress": "Waiting for Payment",
+            "Completed": "Completed",
+            "Processed": "Processed",
+            "In Delivery": "In Delivery"
+        },
+        "cCourier": {
+            "Internal": "Internal",
+            "External": "External"
+        },
+        "cVehicleDetailsExternal": {
+            "CDE": "CDE",
+            "CDD": "CDD"
+        }
+    },
+    "fields": {
+        "cDeliveryDate": "Delivery Date",
+        "cCourier": "Courier",
+        "cVehicleDetailsExternal": "Vehicle Details (External)",
+        "cVehicleDetailsInternal": "Vehicle Details (Internal)",
+        "cRit": "RIT",
+        "cUsers": "Users"
+    },
+    "links": {
+        "cUsers": "Users"
+    }
+}

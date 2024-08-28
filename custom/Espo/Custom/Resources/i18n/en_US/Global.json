@@ -5,7 +5,8 @@
     },
     "scopeNamesPlural": {
         "CProductionLog": "Production Logs",
-        "Stream": "Activity Log"
+        "CProductFormula": "Product Formulas",
+        "CProductFormulaList": "Product Formula Lists"
     },
     "dashlets": {
         "Stream": "Log"
@@ -14,10 +15,5 @@
         "Stream": "Activity Log",
         "CProductFormula": "Product Formula",
         "CProductFormulaList": "Product Formula List"
-    },
-    "scopeNamesPlural": {
-        "CProductionLog": "Production Logs",
-        "CProductFormula": "Product Formulas",
-        "CProductFormulaList": "Product Formula Lists"
     }
 }

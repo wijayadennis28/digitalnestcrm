@@ -120,7 +120,8 @@ return [
       'color' => NULL,
       'id' => '152710',
       'itemList' => [
-        0 => 'SalesOrder'
+        0 => 'SalesOrder',
+        1 => 'DeliveryOrder'
       ]
     ],
     4 => (object) [
@@ -338,8 +339,8 @@ return [
   'authIpAddressWhitelist' => [],
   'authIpAddressCheckExcludedUsersIds' => [],
   'authIpAddressCheckExcludedUsersNames' => (object) [],
-  'cacheTimestamp' => 1723286483,
-  'microtime' => 1723286483.551438,
+  'cacheTimestamp' => 1724846091,
+  'microtime' => 1724846091.859384,
   'siteUrl' => 'http://localhost/digitalnestcrm',
   'fullTextSearchMinLength' => 4,
   'appTimestamp' => 1719837180,
