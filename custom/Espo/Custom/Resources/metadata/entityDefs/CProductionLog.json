@@ -46,7 +46,8 @@
             "min": null,
             "tooltip": true,
             "isCustom": true,
-            "readOnly": true
+            "readOnly": true,
+            "default": 0
         },
         "producedAt": {
             "notNull": false,
@@ -58,14 +59,16 @@
             "type": "enum",
             "required": true,
             "options": [
-                "Day",
-                "Night"
+                "1",
+                "2",
+                "3"
             ],
             "style": {
-                "Day": null,
-                "Night": null
+                "1": null,
+                "2": null,
+                "3": null
             },
-            "default": "Day",
+            "default": "1",
             "maxLength": 100,
             "isCustom": true
         },
@@ -87,7 +90,10 @@
             "type": "varchar",
             "required": true,
             "maxLength": 100,
-            "options": [],
+            "options": [
+                "Machine A",
+                "Machine B"
+            ],
             "isCustom": true
         },
         "productionStatus": {
@@ -142,6 +148,19 @@
             "isCustom": true
         },
         "warehouse": {
+            "type": "link"
+        },
+        "productionLogNumber": {
+            "type": "number",
+            "len": 36,
+            "notNull": false,
+            "unique": false,
+            "nextNumber": 1,
+            "padLength": 4,
+            "prefix": "PL0000-",
+            "isCustom": true
+        },
+        "inventoryNumber": {
             "type": "link"
         }
     },
@@ -198,11 +217,23 @@
             "entity": "Warehouse",
             "audited": false,
             "isCustom": true
+        },
+        "inventoryNumber": {
+            "type": "belongsTo",
+            "foreign": "cCProductionLogs",
+            "entity": "InventoryNumber",
+            "audited": false,
+            "isCustom": true
         }
     },
     "collection": {
         "orderBy": "createdAt",
-        "order": "desc"
+        "order": "desc",
+        "textFilterFields": [
+            "name"
+        ],
+        "fullTextSearch": false,
+        "countDisabled": false
     },
     "indexes": {
         "name": {
@@ -229,5 +260,6 @@
                 "id"
             ]
         }
-    }
+    },
+    "optimisticConcurrencyControl": false
 }
