@@ -36,7 +36,8 @@
             "view": "views/fields/teams"
         },
         "product": {
-            "type": "link"
+            "type": "link",
+            "createButton": false
         },
         "cProductFormulaLists": {
             "type": "linkMultiple",

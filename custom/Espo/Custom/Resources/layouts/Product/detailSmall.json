@@ -86,5 +86,22 @@
         "noteText": null,
         "noteStyle": "info",
         "label": ""
+    },
+    {
+        "rows": [
+            [
+                {
+                    "name": "cCProductFormulas"
+                }
+            ]
+        ],
+        "dynamicLogicVisible": null,
+        "style": "default",
+        "tabBreak": true,
+        "tabLabel": "Formula",
+        "hidden": false,
+        "noteText": null,
+        "noteStyle": "info",
+        "customLabel": ""
     }
 ]
