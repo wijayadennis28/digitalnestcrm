@@ -1,7 +1,7 @@
 {
     "fields": {
         "cCProductionLogs": "Production Logs",
-        "weight": "Weight",
+        "weight": "Berat (Kg)",
         "cPanjang": "Panjang (Meter)",
         "cLebar": "Lebar (Meter)",
         "cTinggi": "Tinggi (Meter)",

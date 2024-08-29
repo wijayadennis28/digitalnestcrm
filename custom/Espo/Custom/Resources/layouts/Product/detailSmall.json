@@ -73,11 +73,9 @@
             ],
             [
                 {
-                    "name": "cBerat"
+                    "name": "weight"
                 },
-                {
-                    "name": "cBeratUnit"
-                }
+                false
             ]
         ],
         "dynamicLogicVisible": null,
