@@ -3,14 +3,16 @@
         "CProductionLog": "Production Log",
         "CFormula": "Formula",
         "CIngredientsAmount": "Ingredients Amount",
-        "Stream": "Activity Log"
+        "Stream": "Activity Log",
+        "CProductFormulaList": "Komposisi Produk",
+        "CProductFormula": "Product Formula"
     },
     "scopeNamesPlural": {
         "CProductionLog": "Production Logs",
         "CFormula": "Formulas",
         "CIngredientsAmount": "Ingredients Amounts",
         "CProductFormula": "Product Formulas",
-        "CProductFormulaList": "Product Formula Lists",
+        "CProductFormulaList": "Komposisi Produk List",
         "Stream": "Activity Log"
     },
     "dashlets": {
