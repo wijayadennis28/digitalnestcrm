@@ -1,0 +1,88 @@
+{
+    "fields": {
+        "status": {
+            "options": [
+                "Draft",
+                "In Progress",
+                "Completed",
+                "Processed",
+                "In Delivery"
+            ],
+            "style": {
+                "Draft": null,
+                "In Progress": "warning",
+                "Completed": "success",
+                "Processed": "processed",
+                "In Delivery": "indelivery"
+            },
+            "notActualOptions": []
+        },
+        "cDeliveryDate": {
+            "notNull": false,
+            "type": "datetime",
+            "minuteStep": 1,
+            "isCustom": true
+        },
+        "cCourier": {
+            "type": "enum",
+            "options": [
+                "Internal",
+                "External"
+            ],
+            "default": "Internal",
+            "style": {
+                "Internal": null,
+                "External": null
+            },
+            "maxLength": 100,
+            "isCustom": true
+        },
+        "cVehicleDetailsExternal": {
+            "type": "enum",
+            "options": [
+                "CDE",
+                "CDD"
+            ],
+            "default": "CDE",
+            "style": {
+                "CDE": null,
+                "CDD": null
+            },
+            "maxLength": 100,
+            "isCustom": true
+        },
+        "cVehicleDetailsInternal": {
+            "type": "text",
+            "maxLength": 255,
+            "rowsMin": 2,
+            "cutHeight": 200,
+            "isCustom": true
+        },
+        "cRit": {
+            "type": "int",
+            "min": 1,
+            "max": 10,
+            "isCustom": true
+        },
+        "cUsers": {
+            "type": "linkMultiple",
+            "layoutDetailDisabled": true,
+            "layoutMassUpdateDisabled": true,
+            "layoutListDisabled": true,
+            "noLoad": true,
+            "importDisabled": true,
+            "exportDisabled": true,
+            "customizationDisabled": true,
+            "isCustom": true
+        }
+    },
+    "links": {
+        "cUsers": {
+            "type": "hasMany",
+            "foreign": "cDeliveryOrder",
+            "entity": "User",
+            "audited": false,
+            "isCustom": true
+        }
+    }
+}

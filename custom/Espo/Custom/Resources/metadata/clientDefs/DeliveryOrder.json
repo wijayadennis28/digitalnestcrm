@@ -1,0 +1,55 @@
+{
+    "dynamicLogic": {
+        "fields": {
+            "status": {
+                "readOnly": {
+                    "conditionGroup": [
+                        {
+                            "type": "isTrue",
+                            "attribute": "isLocked"
+                        }
+                    ]
+                }
+            },
+            "cVehicleDetailsExternal": {
+                "visible": {
+                    "conditionGroup": [
+                        {
+                            "type": "equals",
+                            "attribute": "cCourier",
+                            "value": "External"
+                        }
+                    ]
+                }
+            },
+            "cVehicleDetailsInternal": {
+                "visible": {
+                    "conditionGroup": [
+                        {
+                            "type": "equals",
+                            "attribute": "cCourier",
+                            "value": "Internal"
+                        }
+                    ]
+                }
+            },
+            "cRit": {
+                "visible": {
+                    "conditionGroup": [
+                        {
+                            "type": "equals",
+                            "attribute": "cCourier",
+                            "value": "External"
+                        }
+                    ]
+                }
+            }
+        }
+    },
+    "relationshipPanels": {
+        "users": {
+            "layout": null,
+            "selectPrimaryFilterName": null
+        }
+    }
+}

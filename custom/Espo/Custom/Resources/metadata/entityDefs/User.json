@@ -1,0 +1,16 @@
+{
+    "fields": {
+        "cDeliveryOrder": {
+            "type": "link"
+        }
+    },
+    "links": {
+        "cDeliveryOrder": {
+            "type": "belongsTo",
+            "foreign": "cUsers",
+            "entity": "DeliveryOrder",
+            "audited": false,
+            "isCustom": true
+        }
+    }
+}

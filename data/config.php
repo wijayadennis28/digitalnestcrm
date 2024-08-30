@@ -120,7 +120,8 @@ return [
       'color' => NULL,
       'id' => '152710',
       'itemList' => [
-        0 => 'SalesOrder'
+        0 => 'SalesOrder',
+        1 => 'DeliveryOrder'
       ]
     ],
     4 => (object) [

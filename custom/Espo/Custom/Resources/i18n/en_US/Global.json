@@ -9,6 +9,8 @@
     },
     "scopeNamesPlural": {
         "CProductionLog": "Production Logs",
+        "CProductFormula": "Product Formulas",
+        "CProductFormulaList": "Product Formula Lists",
         "CFormula": "Formulas",
         "CIngredientsAmount": "Ingredients Amounts",
         "CProductFormula": "Product Formulas",
