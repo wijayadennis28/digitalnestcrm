@@ -3,6 +3,10 @@
         "product": {
             "layout": null,
             "selectPrimaryFilterName": null
+        },
+        "cProductionLogs": {
+            "layout": null,
+            "selectPrimaryFilterName": null
         }
     }
 }

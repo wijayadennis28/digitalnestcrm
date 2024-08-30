@@ -36,9 +36,21 @@
             "view": "views/fields/teams"
         },
         "product": {
-            "type": "link"
+            "type": "link",
+            "createButton": false
         },
         "cProductFormulaLists": {
+            "type": "linkMultiple",
+            "layoutDetailDisabled": true,
+            "layoutMassUpdateDisabled": true,
+            "layoutListDisabled": true,
+            "noLoad": true,
+            "importDisabled": true,
+            "exportDisabled": true,
+            "customizationDisabled": true,
+            "isCustom": true
+        },
+        "cProductionLogs": {
             "type": "linkMultiple",
             "layoutDetailDisabled": true,
             "layoutMassUpdateDisabled": true,
@@ -82,11 +94,23 @@
             "entity": "CProductFormulaList",
             "audited": false,
             "isCustom": true
+        },
+        "cProductionLogs": {
+            "type": "hasMany",
+            "foreign": "cProductFormula",
+            "entity": "CProductionLog",
+            "audited": false,
+            "isCustom": true
         }
     },
     "collection": {
         "orderBy": "createdAt",
-        "order": "desc"
+        "order": "desc",
+        "textFilterFields": [
+            "name"
+        ],
+        "fullTextSearch": false,
+        "countDisabled": false
     },
     "indexes": {
         "name": {
@@ -113,5 +137,6 @@
                 "id"
             ]
         }
-    }
+    },
+    "optimisticConcurrencyControl": false
 }

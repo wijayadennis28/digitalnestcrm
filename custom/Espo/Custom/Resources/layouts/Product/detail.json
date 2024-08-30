@@ -77,13 +77,8 @@
             ],
             [
                 {
-                    "name": "cBerat"
-                },
-                {
-                    "name": "cBeratUnit"
-                },
-                false,
-                false
+                    "name": "weight"
+                }
             ]
         ],
         "dynamicLogicVisible": null,
@@ -110,6 +105,6 @@
         "hidden": false,
         "noteText": null,
         "noteStyle": "info",
-        "customLabel": ""
+        "label": ""
     }
 ]

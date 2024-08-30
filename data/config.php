@@ -135,7 +135,8 @@ return [
         1 => 'Team',
         2 => 'WorkingTimeCalendar'
       ]
-    ]
+    ],
+    5 => 'Report'
   ],
   'quickCreateList' => [
     0 => 'Account',
@@ -162,7 +163,8 @@ return [
   ],
   'assignmentNotificationsEntityList' => [
     0 => 'Call',
-    1 => 'Email'
+    1 => 'Email',
+    2 => 'BpmnUserTask'
   ],
   'portalStreamEmailNotifications' => true,
   'streamEmailNotificationsEntityList' => [
@@ -339,14 +341,14 @@ return [
   'authIpAddressWhitelist' => [],
   'authIpAddressCheckExcludedUsersIds' => [],
   'authIpAddressCheckExcludedUsersNames' => (object) [],
-  'cacheTimestamp' => 1724846091,
-  'microtime' => 1724846091.859384,
+  'cacheTimestamp' => 1724991562,
+  'microtime' => 1724991562.773765,
   'siteUrl' => 'http://localhost/digitalnestcrm',
   'fullTextSearchMinLength' => 4,
-  'appTimestamp' => 1719837180,
+  'appTimestamp' => 1724991562,
   'maintenanceMode' => false,
   'cronDisabled' => false,
-  'adminPanelIframeUrl' => 'https://s.espocrm.com/?sales-pack=bcd3361258b6d66fc350488ed9575786',
+  'adminPanelIframeUrl' => 'https://s.espocrm.com/?sales-pack=bcd3361258b6d66fc350488ed9575786&advanced-pack=02847865974db42443189e5f30908f60',
   'userThemesDisabled' => false,
   'avatarsDisabled' => false,
   'scopeColorsDisabled' => false,

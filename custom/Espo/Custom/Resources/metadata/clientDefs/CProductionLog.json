@@ -28,7 +28,18 @@
                     ]
                 }
             },
-            "newProductName": {
+            "totalRecycledProduct": {
+                "visible": {
+                    "conditionGroup": [
+                        {
+                            "type": "equals",
+                            "attribute": "productionStatus",
+                            "value": "Failed"
+                        }
+                    ]
+                }
+            },
+            "recycledProduct": {
                 "visible": {
                     "conditionGroup": [
                         {
@@ -45,6 +56,28 @@
         "product": {
             "layout": null,
             "selectPrimaryFilterName": "available"
+        },
+        "recycledProduct": {
+            "layout": null,
+            "selectPrimaryFilterName": null
+        },
+        "cProductFormula": {
+            "layout": null,
+            "selectPrimaryFilterName": null
+        },
+        "cIngredientsAmounts": {
+            "layout": null,
+            "selectPrimaryFilterName": null
+        },
+        "warehouse": {
+            "layout": null,
+            "selectPrimaryFilterName": null
+        },
+        "inventoryNumber": {
+            "layout": null,
+            "selectPrimaryFilterName": null
         }
-    }
+    },
+    "kanbanViewMode": false,
+    "color": null
 }

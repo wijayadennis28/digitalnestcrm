@@ -127,6 +127,28 @@
         "cCProductFormulaList": {
             "type": "linkOne",
             "isCustom": true
+        },
+        "cRecycledProductionLogs": {
+            "type": "linkMultiple",
+            "layoutDetailDisabled": true,
+            "layoutMassUpdateDisabled": true,
+            "layoutListDisabled": true,
+            "noLoad": true,
+            "importDisabled": true,
+            "exportDisabled": true,
+            "customizationDisabled": true,
+            "isCustom": true
+        },
+        "cCIngredientsAmounts": {
+            "type": "linkMultiple",
+            "layoutDetailDisabled": true,
+            "layoutMassUpdateDisabled": true,
+            "layoutListDisabled": true,
+            "noLoad": true,
+            "importDisabled": true,
+            "exportDisabled": true,
+            "customizationDisabled": true,
+            "isCustom": true
         }
     },
     "links": {
@@ -134,6 +156,20 @@
             "type": "hasMany",
             "foreign": "product",
             "entity": "CProductionLog",
+            "audited": false,
+            "isCustom": true
+        },
+        "cRecycledProductionLogs": {
+            "type": "hasMany",
+            "foreign": "recycledProduct",
+            "entity": "CProductionLog",
+            "audited": false,
+            "isCustom": true
+        },
+        "cCIngredientsAmounts": {
+            "type": "hasMany",
+            "foreign": "product",
+            "entity": "CIngredientsAmount",
             "audited": false,
             "isCustom": true
         },

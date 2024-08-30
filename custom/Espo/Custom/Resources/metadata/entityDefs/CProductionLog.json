@@ -33,7 +33,7 @@
         },
         "assignedUser": {
             "type": "link",
-            "required": false,
+            "required": true,
             "view": "views/fields/assigned-user"
         },
         "teams": {
@@ -42,10 +42,12 @@
         },
         "total": {
             "type": "int",
-            "required": true,
-            "min": 0,
+            "required": false,
+            "min": null,
             "tooltip": true,
-            "isCustom": true
+            "isCustom": true,
+            "readOnly": true,
+            "default": 0
         },
         "producedAt": {
             "notNull": false,
@@ -57,14 +59,16 @@
             "type": "enum",
             "required": true,
             "options": [
-                "Day",
-                "Night"
+                "1",
+                "2",
+                "3"
             ],
             "style": {
-                "Day": null,
-                "Night": null
+                "1": null,
+                "2": null,
+                "3": null
             },
-            "default": "Day",
+            "default": "1",
             "maxLength": 100,
             "isCustom": true
         },
@@ -75,21 +79,7 @@
             "readOnly": true,
             "isCustom": true
         },
-        "sku": {
-            "type": "varchar",
-            "required": true,
-            "maxLength": 100,
-            "options": [],
-            "isCustom": true
-        },
         "batch": {
-            "type": "varchar",
-            "required": true,
-            "maxLength": 100,
-            "options": [],
-            "isCustom": true
-        },
-        "formula": {
             "type": "varchar",
             "required": true,
             "maxLength": 100,
@@ -100,7 +90,10 @@
             "type": "varchar",
             "required": true,
             "maxLength": 100,
-            "options": [],
+            "options": [
+                "Machine A",
+                "Machine B"
+            ],
             "isCustom": true
         },
         "productionStatus": {
@@ -129,13 +122,45 @@
             "cutHeight": 200,
             "isCustom": true
         },
-        "newProductName": {
-            "type": "varchar",
-            "maxLength": 100,
-            "options": [],
+        "product": {
+            "type": "link"
+        },
+        "recycledProduct": {
+            "type": "link"
+        },
+        "totalRecycledProduct": {
+            "type": "int",
+            "default": 0,
             "isCustom": true
         },
-        "product": {
+        "cProductFormula": {
+            "type": "link"
+        },
+        "cIngredientsAmounts": {
+            "type": "linkMultiple",
+            "layoutDetailDisabled": true,
+            "layoutMassUpdateDisabled": true,
+            "layoutListDisabled": true,
+            "noLoad": true,
+            "importDisabled": true,
+            "exportDisabled": true,
+            "customizationDisabled": true,
+            "isCustom": true
+        },
+        "warehouse": {
+            "type": "link"
+        },
+        "productionLogNumber": {
+            "type": "number",
+            "len": 36,
+            "notNull": false,
+            "unique": false,
+            "nextNumber": 1,
+            "padLength": 4,
+            "prefix": "PL0000-",
+            "isCustom": true
+        },
+        "inventoryNumber": {
             "type": "link"
         }
     },
@@ -164,11 +189,51 @@
             "entity": "Product",
             "audited": false,
             "isCustom": true
+        },
+        "recycledProduct": {
+            "type": "belongsTo",
+            "foreign": "cRecycledProductionLogs",
+            "entity": "Product",
+            "audited": false,
+            "isCustom": true
+        },
+        "cProductFormula": {
+            "type": "belongsTo",
+            "foreign": "cProductionLogs",
+            "entity": "CProductFormula",
+            "audited": false,
+            "isCustom": true
+        },
+        "cIngredientsAmounts": {
+            "type": "hasMany",
+            "foreign": "cProductionLog",
+            "entity": "CIngredientsAmount",
+            "audited": false,
+            "isCustom": true
+        },
+        "warehouse": {
+            "type": "belongsTo",
+            "foreign": "cCProductionLogs",
+            "entity": "Warehouse",
+            "audited": false,
+            "isCustom": true
+        },
+        "inventoryNumber": {
+            "type": "belongsTo",
+            "foreign": "cCProductionLogs",
+            "entity": "InventoryNumber",
+            "audited": false,
+            "isCustom": true
         }
     },
     "collection": {
         "orderBy": "createdAt",
-        "order": "desc"
+        "order": "desc",
+        "textFilterFields": [
+            "name"
+        ],
+        "fullTextSearch": false,
+        "countDisabled": false
     },
     "indexes": {
         "name": {
@@ -195,5 +260,6 @@
                 "id"
             ]
         }
-    }
+    },
+    "optimisticConcurrencyControl": false
 }

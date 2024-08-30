@@ -76,6 +76,9 @@
         "modifiedBy": {
             "type": "link",
             "readOnly": true
+        },
+        "productionLog": {
+            "type": "link"
         }
     },
     "links": {
@@ -111,6 +114,10 @@
         "modifiedBy": {
             "type": "belongsTo",
             "entity": "User"
+        },
+        "productionLog": {
+            "type": "belongsTo",
+            "entity": "CProductionLog"
         }
     },
     "collection": {

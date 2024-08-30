@@ -3,10 +3,28 @@
         "rows": [
             [
                 {
+                    "name": "productionLogNumber"
+                }
+            ],
+            [
+                {
                     "name": "producedAt"
                 },
                 {
                     "name": "shift"
+                }
+            ],
+            [
+                {
+                    "name": "product"
+                },
+                {
+                    "name": "batch"
+                }
+            ],
+            [
+                {
+                    "name": "inventoryNumber"
                 }
             ],
             [
@@ -16,23 +34,12 @@
             ],
             [
                 {
-                    "name": "product"
-                },
-                {
-                    "name": "newProductName"
+                    "name": "warehouse"
                 }
             ],
             [
                 {
-                    "name": "sku"
-                },
-                {
-                    "name": "batch"
-                }
-            ],
-            [
-                {
-                    "name": "formula"
+                    "name": "cProductFormula"
                 },
                 {
                     "name": "machine"
@@ -46,6 +53,14 @@
             [
                 {
                     "name": "batchCode"
+                }
+            ],
+            [
+                {
+                    "name": "recycledProduct"
+                },
+                {
+                    "name": "totalRecycledProduct"
                 }
             ],
             [

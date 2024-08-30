@@ -1,9 +1,12 @@
 [
     {
+        "name": "productionLogNumber"
+    },
+    {
         "name": "assignedUser"
     },
     {
-        "name": "producedAt"
+        "name": "productionStatus"
     },
     {
         "name": "shift"
@@ -13,5 +16,8 @@
     },
     {
         "name": "total"
+    },
+    {
+        "name": "producedAt"
     }
 ]
