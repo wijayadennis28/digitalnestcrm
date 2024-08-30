@@ -18,5 +18,8 @@
             "type": "list",
             "isCustom": true
         }
-    }
+    },
+    "kanbanViewMode": false,
+    "color": null,
+    "iconClass": null
 }

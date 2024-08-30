@@ -47,6 +47,10 @@
         "cIngredientsAmounts": {
             "layout": null,
             "selectPrimaryFilterName": null
+        },
+        "cCProductFormulaList": {
+            "layout": null,
+            "selectPrimaryFilterName": null
         }
     },
     "dynamicLogic": {
