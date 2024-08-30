@@ -1,0 +1,84 @@
+[
+    {
+        "label": "General",
+        "rows": [
+            [
+                {"name": "name"},
+                {"name": "isActive"}
+            ],
+            [
+                {"name": "entityType"},
+                {"name": "type"}
+            ],
+            [
+                false,
+                {"name": "signalName"}
+            ],
+            [
+                {"name": "targetReport"},
+                {"name": "scheduling"}
+            ],
+            [
+                false,
+                {"name": "schedulingApplyTimezone"}
+            ],
+            [
+                {"name":"portalOnly"},
+                {"name":"portal"}
+            ],
+            [
+                {"name": "category"},
+                false
+            ],
+            [
+                {
+                    "name": "description",
+                    "fullWidth": true
+                }
+            ]
+        ]
+    },
+    {
+        "name": "manual",
+        "label": "Manual Trigger",
+        "rows": [
+            [
+                {
+                    "name": "manualElementType",
+                    "label": "manualElementTypeInForm"
+                },
+                {
+                    "name": "manualLabel",
+                    "label": "manualLabelInForm"
+                }
+            ],
+            [
+                {
+                    "name": "manualAccessRequired",
+                    "label": "manualAccessRequiredInForm"
+                },
+                {
+                    "name": "manualTeams",
+                    "label": "manualTeamsInForm"
+                }
+            ],
+            [
+                {
+                    "name": "manualConfirmation",
+                    "label": "manualConfirmationInForm"
+                },
+                {
+                    "name": "manualConfirmationText",
+                    "label": "manualConfirmationTextInForm"
+                }
+            ],
+            [
+                {
+                    "name": "manualDynamicLogic",
+                    "label": "manualDynamicLogicInForm"
+                },
+                false
+            ]
+        ]
+    }
+]
