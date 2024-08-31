@@ -1,0 +1,11 @@
+{
+    "stream": true,
+    "disabled": false,
+    "statusField": null,
+    "kanbanStatusIgnoreList": null,
+    "stars": false,
+    "duplicateCheckFieldList": [
+        "name",
+        "emailAddress"
+    ]
+}

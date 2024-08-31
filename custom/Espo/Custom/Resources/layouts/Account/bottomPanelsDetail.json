@@ -1,0 +1,21 @@
+{
+    "_delimiter_": {
+        "disabled": true
+    },
+    "contacts": {
+        "index": 0
+    },
+    "salesOrders": {
+        "index": 1
+    },
+    "cases": {
+        "index": 2
+    },
+    "documents": {
+        "index": 3
+    },
+    "stream": {
+        "sticked": true,
+        "index": 4
+    }
+}

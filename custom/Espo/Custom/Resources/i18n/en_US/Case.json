@@ -1,0 +1,8 @@
+{
+    "fields": {
+        "type": "Incident Type",
+        "status": "Incident Status",
+        "description": "Insident Details",
+        "cActionTaken": "Action Taken"
+    }
+}

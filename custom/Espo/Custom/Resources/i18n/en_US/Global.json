@@ -5,17 +5,17 @@
         "CIngredientsAmount": "Ingredients Amount",
         "Stream": "Activity Log",
         "CProductFormulaList": "Komposisi Produk",
-        "CProductFormula": "Product Formula"
+        "CProductFormula": "Product Formula",
+        "Account": "Customer"
     },
     "scopeNamesPlural": {
         "CProductionLog": "Production Logs",
         "CProductFormula": "Product Formulas",
-        "CProductFormulaList": "Product Formula Lists",
+        "CProductFormulaList": "Komposisi Produk List",
         "CFormula": "Formulas",
         "CIngredientsAmount": "Ingredients Amounts",
-        "CProductFormula": "Product Formulas",
-        "CProductFormulaList": "Komposisi Produk List",
-        "Stream": "Activity Log"
+        "Stream": "Activity Log",
+        "Account": "Customers"
     },
     "dashlets": {
         "Stream": "Log"

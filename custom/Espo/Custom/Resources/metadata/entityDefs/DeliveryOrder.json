@@ -74,6 +74,12 @@
             "exportDisabled": true,
             "customizationDisabled": true,
             "isCustom": true
+        },
+        "cPlateNumber": {
+            "type": "varchar",
+            "maxLength": 11,
+            "options": [],
+            "isCustom": true
         }
     },
     "links": {

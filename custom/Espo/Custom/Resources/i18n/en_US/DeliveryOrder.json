@@ -22,7 +22,8 @@
         "cVehicleDetailsExternal": "Vehicle Details (External)",
         "cVehicleDetailsInternal": "Vehicle Details (Internal)",
         "cRit": "RIT",
-        "cUsers": "Users"
+        "cUsers": "Users",
+        "cPlateNumber": "Plate Number"
     },
     "links": {
         "cUsers": "Users"
