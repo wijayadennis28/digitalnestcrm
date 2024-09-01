@@ -14,7 +14,7 @@
         "category": {
             "autocompleteOnEmpty": true,
             "createButton": true,
-            "required": true
+            "required": false
         },
         "pricingType": {
             "default": "Fixed",
@@ -104,7 +104,7 @@
             "labelType": "state"
         },
         "unitPrice": {
-            "required": true
+            "required": false
         },
         "cSku": {
             "type": "varchar",
@@ -149,6 +149,50 @@
             "exportDisabled": true,
             "customizationDisabled": true,
             "isCustom": true
+        },
+        "cType": {
+            "type": "enum",
+            "required": true,
+            "options": [
+                "Ingredient",
+                "Product",
+                "Machine & Spare Part",
+                "Stationary"
+            ],
+            "style": {
+                "Ingredient": null,
+                "Product": null,
+                "Machine & Spare Part": null,
+                "Stationary": null
+            },
+            "default": "Product",
+            "isSorted": true,
+            "maxLength": 100,
+            "isCustom": true
+        },
+        "cCMaintenances": {
+            "type": "linkMultiple",
+            "layoutDetailDisabled": true,
+            "layoutMassUpdateDisabled": true,
+            "layoutListDisabled": true,
+            "noLoad": true,
+            "importDisabled": true,
+            "exportDisabled": true,
+            "customizationDisabled": true,
+            "isCustom": true
+        },
+        "cMaintenanceSchedule": {
+            "notNull": false,
+            "type": "date",
+            "default": "javascript: return this.dateTime.getToday();",
+            "isCustom": true
+        },
+        "cLastMaintenance": {
+            "notNull": false,
+            "type": "datetime",
+            "minuteStep": 30,
+            "isCustom": true,
+            "readOnly": true
         }
     },
     "links": {
@@ -187,6 +231,13 @@
             "type": "hasOne",
             "foreign": "product",
             "entity": "CProductFormulaList",
+            "isCustom": true
+        },
+        "cCMaintenances": {
+            "type": "hasMany",
+            "foreign": "product",
+            "entity": "CMaintenance",
+            "audited": false,
             "isCustom": true
         }
     },

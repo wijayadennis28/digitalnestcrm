@@ -4,17 +4,9 @@
         "link": true
     },
     {
-        "name": "cSku"
-    },
-    {
-        "name": "unitPrice",
-        "width": 25,
-        "align": "right"
+        "name": "cType"
     },
     {
         "name": "quantity"
-    },
-    {
-        "name": "status"
     }
 ]

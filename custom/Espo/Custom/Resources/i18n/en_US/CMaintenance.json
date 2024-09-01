@@ -1,0 +1,12 @@
+{
+    "fields": {
+        "product": "Product",
+        "time": "Time"
+    },
+    "links": {
+        "product": "Product"
+    },
+    "labels": {
+        "Create CMaintenance": "Create Maintenance"
+    }
+}

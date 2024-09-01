@@ -3,6 +3,11 @@
         "rows": [
             [
                 {
+                    "name": "cType"
+                }
+            ],
+            [
+                {
                     "name": "name"
                 },
                 {
@@ -81,14 +86,37 @@
                 }
             ]
         ],
-        "dynamicLogicVisible": null,
+        "dynamicLogicVisible": {
+            "conditionGroup": [
+                {
+                    "type": "or",
+                    "value": [
+                        {
+                            "type": "equals",
+                            "attribute": "cType",
+                            "value": "Product"
+                        },
+                        {
+                            "type": "equals",
+                            "attribute": "cType",
+                            "value": "Ingredient"
+                        },
+                        {
+                            "type": "equals",
+                            "attribute": "cType",
+                            "value": "Stationary"
+                        }
+                    ]
+                }
+            ]
+        },
         "style": "default",
         "tabBreak": true,
         "tabLabel": "Ukuran",
         "hidden": false,
         "noteText": null,
         "noteStyle": "info",
-        "label": ""
+        "customLabel": ""
     },
     {
         "rows": [
@@ -98,10 +126,46 @@
                 }
             ]
         ],
-        "dynamicLogicVisible": null,
+        "dynamicLogicVisible": {
+            "conditionGroup": [
+                {
+                    "type": "equals",
+                    "attribute": "cType",
+                    "value": "Product"
+                }
+            ]
+        },
         "style": "default",
         "tabBreak": true,
         "tabLabel": "Formula",
+        "hidden": false,
+        "noteText": null,
+        "noteStyle": "info",
+        "label": ""
+    },
+    {
+        "rows": [
+            [
+                {
+                    "name": "cMaintenanceSchedule"
+                },
+                {
+                    "name": "cLastMaintenance"
+                }
+            ]
+        ],
+        "dynamicLogicVisible": {
+            "conditionGroup": [
+                {
+                    "type": "equals",
+                    "attribute": "cType",
+                    "value": "Machine & Spare Part"
+                }
+            ]
+        },
+        "style": "default",
+        "tabBreak": true,
+        "tabLabel": "Maintenance",
         "hidden": false,
         "noteText": null,
         "noteStyle": "info",

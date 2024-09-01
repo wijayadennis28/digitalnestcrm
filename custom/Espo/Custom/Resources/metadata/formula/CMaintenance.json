@@ -1,0 +1,3 @@
+{
+    "beforeSaveCustomScript": "record\\update('Product', productId, 'cLastMaintenance', time)"
+}
