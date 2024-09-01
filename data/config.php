@@ -110,7 +110,8 @@ return [
       'color' => NULL,
       'id' => '972472',
       'itemList' => [
-        0 => 'CProductionLog'
+        0 => 'CProductionLog',
+        1 => 'Supplier'
       ]
     ],
     3 => (object) [
@@ -137,7 +138,8 @@ return [
         2 => 'WorkingTimeCalendar'
       ]
     ],
-    5 => 'Report'
+    5 => 'Report',
+    6 => 'CMaintenance'
   ],
   'quickCreateList' => [
     0 => 'Account',
@@ -342,8 +344,8 @@ return [
   'authIpAddressWhitelist' => [],
   'authIpAddressCheckExcludedUsersIds' => [],
   'authIpAddressCheckExcludedUsersNames' => (object) [],
-  'cacheTimestamp' => 1725105261,
-  'microtime' => 1725105261.866747,
+  'cacheTimestamp' => 1725210788,
+  'microtime' => 1725210788.18538,
   'siteUrl' => 'http://localhost/digitalnestcrm',
   'fullTextSearchMinLength' => 4,
   'appTimestamp' => 1724991562,

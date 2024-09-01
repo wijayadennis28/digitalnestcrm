@@ -51,12 +51,28 @@
         "cCProductFormulaList": {
             "layout": null,
             "selectPrimaryFilterName": null
+        },
+        "cMaintanances": {
+            "layout": null,
+            "selectPrimaryFilterName": null
+        },
+        "cMaintenances": {
+            "layout": null,
+            "selectPrimaryFilterName": null
         }
     },
     "dynamicLogic": {
         "fields": {
             "expirationDays": {
-                "visible": null
+                "visible": {
+                    "conditionGroup": [
+                        {
+                            "type": "equals",
+                            "attribute": "cType",
+                            "value": "Product"
+                        }
+                    ]
+                }
             },
             "inventoryNumberType": {
                 "visible": {
@@ -114,6 +130,156 @@
                             "type": "notEquals",
                             "attribute": "pricingType",
                             "value": "Fixed"
+                        }
+                    ]
+                },
+                "visible": {
+                    "conditionGroup": [
+                        {
+                            "type": "equals",
+                            "attribute": "cType",
+                            "value": "Product"
+                        }
+                    ]
+                },
+                "required": {
+                    "conditionGroup": [
+                        {
+                            "type": "equals",
+                            "attribute": "cType",
+                            "value": "Product"
+                        }
+                    ]
+                }
+            },
+            "cMaintenanceSchedule": {
+                "visible": {
+                    "conditionGroup": [
+                        {
+                            "type": "equals",
+                            "attribute": "cType",
+                            "value": "Machine & Spare Part"
+                        }
+                    ]
+                },
+                "required": {
+                    "conditionGroup": [
+                        {
+                            "type": "equals",
+                            "attribute": "cType",
+                            "value": "Machine & Spare Part"
+                        }
+                    ]
+                }
+            },
+            "cLastMaintenance": {
+                "visible": {
+                    "conditionGroup": [
+                        {
+                            "type": "equals",
+                            "attribute": "cType",
+                            "value": "Machine & Spare Part"
+                        }
+                    ]
+                }
+            },
+            "status": {
+                "visible": {
+                    "conditionGroup": [
+                        {
+                            "type": "equals",
+                            "attribute": "cType",
+                            "value": "Product"
+                        }
+                    ]
+                }
+            },
+            "cSku": {
+                "visible": {
+                    "conditionGroup": [
+                        {
+                            "type": "equals",
+                            "attribute": "cType",
+                            "value": "Product"
+                        }
+                    ]
+                }
+            },
+            "category": {
+                "visible": {
+                    "conditionGroup": [
+                        {
+                            "type": "equals",
+                            "attribute": "cType",
+                            "value": "Product"
+                        }
+                    ]
+                },
+                "required": {
+                    "conditionGroup": [
+                        {
+                            "type": "equals",
+                            "attribute": "cType",
+                            "value": "Product"
+                        }
+                    ]
+                }
+            },
+            "weight": {
+                "visible": {
+                    "conditionGroup": [
+                        {
+                            "type": "or",
+                            "value": [
+                                {
+                                    "type": "equals",
+                                    "attribute": "cType",
+                                    "value": "Ingredient"
+                                },
+                                {
+                                    "type": "equals",
+                                    "attribute": "cType",
+                                    "value": "Stationary"
+                                },
+                                {
+                                    "type": "equals",
+                                    "attribute": "cType",
+                                    "value": "Product"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            },
+            "cPanjang": {
+                "visible": {
+                    "conditionGroup": [
+                        {
+                            "type": "equals",
+                            "attribute": "cType",
+                            "value": "Product"
+                        }
+                    ]
+                }
+            },
+            "cLebar": {
+                "visible": {
+                    "conditionGroup": [
+                        {
+                            "type": "equals",
+                            "attribute": "cType",
+                            "value": "Product"
+                        }
+                    ]
+                }
+            },
+            "cTinggi": {
+                "visible": {
+                    "conditionGroup": [
+                        {
+                            "type": "equals",
+                            "attribute": "cType",
+                            "value": "Product"
                         }
                     ]
                 }

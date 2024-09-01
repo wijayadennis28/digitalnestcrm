@@ -1,0 +1,16 @@
+[
+    {
+        "rows": [
+            [
+                {
+                    "name": "product"
+                },
+                {
+                    "name": "time"
+                }
+            ]
+        ],
+        "style": "default",
+        "label": ""
+    }
+]

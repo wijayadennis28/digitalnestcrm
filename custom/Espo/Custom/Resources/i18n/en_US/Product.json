@@ -11,14 +11,19 @@
         "cCProductFormulas": "Product Formulas",
         "cCProductFormulaList": "Product Formula List",
         "cRecycledProductionLogs": "Recycled Production Logs",
-        "cCIngredientsAmounts": "Ingredients Amounts"
+        "cCIngredientsAmounts": "Ingredients Amounts",
+        "cType": "Inventory Type",
+        "cCMaintenances": "Maintenances",
+        "cMaintenanceSchedule": "Maintenance Schedule",
+        "cLastMaintenance": "Last Maintenance"
     },
     "links": {
         "cCProductionLogs": "Production Logs",
         "cCProductFormulas": "Product Formulas",
         "cCProductFormulaList": "Product Formula List",
         "cRecycledProductionLogs": "Recycled Production Logs",
-        "cCIngredientsAmounts": "Ingredients Amounts"
+        "cCIngredientsAmounts": "Ingredients Amounts",
+        "cCMaintenances": "Maintenances"
     },
     "tooltips": {
         "weight": "Dalam Kilogram",
@@ -39,6 +44,12 @@
             "Ton": "Ton",
             "Gram": "Gram",
             "": ""
+        },
+        "cType": {
+            "Ingredient": "Ingredient",
+            "Product": "Product",
+            "Machine & Spare Part": "Machine & Spare Part",
+            "Stationary": "Stationary"
         }
     }
 }
