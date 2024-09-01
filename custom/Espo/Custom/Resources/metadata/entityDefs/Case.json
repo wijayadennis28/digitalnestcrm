@@ -1,0 +1,31 @@
+{
+    "fields": {
+        "type": {
+            "style": {
+                "": null,
+                "Question": null,
+                "Incident": null,
+                "Problem": null
+            }
+        },
+        "status": {
+            "style": {
+                "New": null,
+                "Assigned": "primary",
+                "Pending": "warning",
+                "Closed": "success",
+                "Rejected": "info",
+                "Duplicate": "info"
+            }
+        },
+        "description": {
+            "maxLength": null
+        },
+        "cActionTaken": {
+            "type": "text",
+            "rowsMin": 2,
+            "cutHeight": 200,
+            "isCustom": true
+        }
+    }
+}
