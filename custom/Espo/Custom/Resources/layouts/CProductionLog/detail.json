@@ -12,6 +12,9 @@
                 },
                 {
                     "name": "shift"
+                },
+                {
+                    "name": "cWorkingShift"
                 }
             ],
             [

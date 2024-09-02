@@ -135,11 +135,12 @@ return [
       'itemList' => [
         0 => 'User',
         1 => 'Team',
-        2 => 'WorkingTimeCalendar'
+        2 => 'WorkingTimeCalendar',
+        3 => 'CWorkingShift'
       ]
     ],
     5 => 'Report',
-    6 => 'CMaintenance'
+    6 => 'CWorkingShift'
   ],
   'quickCreateList' => [
     0 => 'Account',
@@ -344,6 +345,8 @@ return [
   'authIpAddressWhitelist' => [],
   'authIpAddressCheckExcludedUsersIds' => [],
   'authIpAddressCheckExcludedUsersNames' => (object) [],
+  'cacheTimestamp' => 1725274605,
+  'microtime' => 1725274605.277373,
   'cacheTimestamp' => 1725210788,
   'microtime' => 1725210788.18538,
   'siteUrl' => 'http://localhost/digitalnestcrm',

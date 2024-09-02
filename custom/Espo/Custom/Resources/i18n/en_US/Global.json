@@ -7,7 +7,7 @@
         "CProductFormulaList": "Komposisi Produk",
         "CProductFormula": "Product Formula",
         "Account": "Customer",
-        "CMaintenance": "Maintenance"
+        "CWorkingShift": "Working Shift"
     },
     "scopeNamesPlural": {
         "CProductionLog": "Production Logs",
@@ -17,7 +17,7 @@
         "CIngredientsAmount": "Ingredients Amounts",
         "Stream": "Activity Log",
         "Account": "Customers",
-        "CMaintenance": "Maintenances"
+        "CWorkingShift": "Working Shifts"
     },
     "dashlets": {
         "Stream": "Log"
