@@ -47,14 +47,7 @@
             "audited": true
         },
         "teams": {
-            "defaultAttributes": {
-                "teamsIds": [
-                    "66a130c9ce87ce09b"
-                ],
-                "teamsNames": {
-                    "66a130c9ce87ce09b": "Sales"
-                }
-            },
+            "defaultAttributes": null,
             "readOnly": true
         },
         "cDeliveryNote": {
