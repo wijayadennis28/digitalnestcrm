@@ -23,5 +23,53 @@
     },
     "inventoryAdjustmentItems": {
         "index": 5
+    },
+    "_tabBreak_4": {
+        "index": 6,
+        "tabBreak": true,
+        "tabLabel": "Prices"
+    },
+    "supplierPrices": {
+        "dynamicLogicVisible": {
+            "conditionGroup": [
+                {
+                    "type": "or",
+                    "value": [
+                        {
+                            "type": "equals",
+                            "attribute": "cType",
+                            "value": "Ingredient"
+                        },
+                        {
+                            "type": "equals",
+                            "attribute": "cType",
+                            "value": "Stationary"
+                        }
+                    ]
+                }
+            ]
+        },
+        "style": "default",
+        "sticked": false,
+        "index": 7
+    },
+    "_tabBreak_5": {
+        "index": 8,
+        "tabBreak": true,
+        "tabLabel": "Maintenances"
+    },
+    "cCMaintenances": {
+        "dynamicLogicVisible": {
+            "conditionGroup": [
+                {
+                    "type": "equals",
+                    "attribute": "cType",
+                    "value": "Machine & Spare Part"
+                }
+            ]
+        },
+        "style": "default",
+        "sticked": false,
+        "index": 9
     }
 }

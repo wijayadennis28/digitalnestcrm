@@ -5,20 +5,11 @@
         "align": "left"
     },
     {
-        "name": "cSku"
+        "name": "cType"
     },
     {
         "name": "quantity",
         "width": 10,
-        "align": "left"
-    },
-    {
-        "name": "unitPrice",
-        "width": 15,
-        "align": "left"
-    },
-    {
-        "name": "status",
         "align": "left"
     }
 ]
