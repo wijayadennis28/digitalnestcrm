@@ -29,6 +29,11 @@
                 {
                     "name": "description"
                 }
+            ],
+            [
+                {
+                    "name": "priceBook"
+                }
             ]
         ],
         "style": "default",

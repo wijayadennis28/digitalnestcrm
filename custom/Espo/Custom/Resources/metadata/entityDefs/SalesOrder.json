@@ -47,14 +47,7 @@
             "audited": true
         },
         "teams": {
-            "defaultAttributes": {
-                "teamsIds": [
-                    "66a130c9ce87ce09b"
-                ],
-                "teamsNames": {
-                    "66a130c9ce87ce09b": "Sales"
-                }
-            },
+            "defaultAttributes": null,
             "readOnly": true
         },
         "cDeliveryNote": {
@@ -91,6 +84,17 @@
         },
         "shippingContact": {
             "audited": true
+        },
+        "cPriceBooks": {
+            "type": "linkMultiple",
+            "layoutDetailDisabled": true,
+            "layoutMassUpdateDisabled": true,
+            "layoutListDisabled": true,
+            "noLoad": true,
+            "importDisabled": true,
+            "exportDisabled": true,
+            "customizationDisabled": true,
+            "isCustom": true
         }
     },
     "links": {
@@ -101,6 +105,14 @@
             "layoutRelationshipsDisabled": true,
             "relationName": "attachments",
             "utility": true
+        },
+        "cPriceBooks": {
+            "type": "hasMany",
+            "relationName": "cSalesOrderPriceBook",
+            "foreign": "cSalesOrders",
+            "entity": "PriceBook",
+            "audited": false,
+            "isCustom": true
         }
     }
 }

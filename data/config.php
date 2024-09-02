@@ -94,27 +94,16 @@ return [
     ],
     1 => (object) [
       'type' => 'group',
-      'text' => 'Products',
-      'iconClass' => 'fas fa-box-open',
+      'text' => 'Customers',
+      'iconClass' => 'fas fa-building',
       'color' => NULL,
-      'id' => '189075',
+      'id' => '479348',
       'itemList' => [
-        0 => 'PurchaseOrder',
-        1 => 'Product'
+        0 => 'Account',
+        1 => 'PriceBook'
       ]
     ],
     2 => (object) [
-      'type' => 'group',
-      'text' => 'Manufacture',
-      'iconClass' => 'fas fa-city',
-      'color' => NULL,
-      'id' => '972472',
-      'itemList' => [
-        0 => 'CProductionLog',
-        1 => 'Supplier'
-      ]
-    ],
-    3 => (object) [
       'type' => 'group',
       'text' => 'Sales',
       'iconClass' => 'fas fa-chart-line',
@@ -126,7 +115,30 @@ return [
         2 => 'Account'
       ]
     ],
+    3 => (object) [
+      'type' => 'group',
+      'text' => 'Products',
+      'iconClass' => 'fas fa-box-open',
+      'color' => NULL,
+      'id' => '189075',
+      'itemList' => [
+        0 => 'PurchaseOrder',
+        1 => 'ProductPrice'
+      ]
+    ],
     4 => (object) [
+      'type' => 'group',
+      'text' => 'Manufacture',
+      'iconClass' => 'fas fa-city',
+      'color' => NULL,
+      'id' => '972472',
+      'itemList' => [
+        0 => 'CProductionLog',
+        1 => 'Supplier',
+        2 => 'Product'
+      ]
+    ],
+    5 => (object) [
       'type' => 'group',
       'text' => 'Organization',
       'iconClass' => 'fas fa-sitemap',
@@ -135,12 +147,10 @@ return [
       'itemList' => [
         0 => 'User',
         1 => 'Team',
-        2 => 'WorkingTimeCalendar',
-        3 => 'CWorkingShift'
+        2 => 'CWorkingShift'
       ]
     ],
-    5 => 'Report',
-    6 => 'CWorkingShift'
+    6 => 'Report'
   ],
   'quickCreateList' => [
     0 => 'Account',
@@ -345,10 +355,8 @@ return [
   'authIpAddressWhitelist' => [],
   'authIpAddressCheckExcludedUsersIds' => [],
   'authIpAddressCheckExcludedUsersNames' => (object) [],
-  'cacheTimestamp' => 1725274605,
-  'microtime' => 1725274605.277373,
-  'cacheTimestamp' => 1725210788,
-  'microtime' => 1725210788.18538,
+  'cacheTimestamp' => 1725303235,
+  'microtime' => 1725303235.816137,
   'siteUrl' => 'http://localhost/digitalnestcrm',
   'fullTextSearchMinLength' => 4,
   'appTimestamp' => 1724991562,

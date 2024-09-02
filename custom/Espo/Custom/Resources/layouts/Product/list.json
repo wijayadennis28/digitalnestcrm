@@ -1,15 +1,12 @@
 [
     {
         "name": "name",
-        "link": true,
-        "align": "left"
+        "link": true
     },
     {
         "name": "cType"
     },
     {
-        "name": "quantity",
-        "width": 10,
-        "align": "left"
+        "name": "quantity"
     }
 ]

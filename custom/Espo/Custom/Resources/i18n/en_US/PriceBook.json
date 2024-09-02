@@ -1,0 +1,8 @@
+{
+    "fields": {
+        "cSalesOrders": "Sales Orders"
+    },
+    "links": {
+        "cSalesOrders": "Sales Orders"
+    }
+}

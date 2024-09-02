@@ -59,6 +59,10 @@
         "cMaintenances": {
             "layout": null,
             "selectPrimaryFilterName": null
+        },
+        "cPriceList": {
+            "layout": null,
+            "selectPrimaryFilterName": null
         }
     },
     "dynamicLogic": {
