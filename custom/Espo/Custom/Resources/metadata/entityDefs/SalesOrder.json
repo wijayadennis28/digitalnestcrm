@@ -91,6 +91,17 @@
         },
         "shippingContact": {
             "audited": true
+        },
+        "cPriceBooks": {
+            "type": "linkMultiple",
+            "layoutDetailDisabled": true,
+            "layoutMassUpdateDisabled": true,
+            "layoutListDisabled": true,
+            "noLoad": true,
+            "importDisabled": true,
+            "exportDisabled": true,
+            "customizationDisabled": true,
+            "isCustom": true
         }
     },
     "links": {
@@ -101,6 +112,14 @@
             "layoutRelationshipsDisabled": true,
             "relationName": "attachments",
             "utility": true
+        },
+        "cPriceBooks": {
+            "type": "hasMany",
+            "relationName": "cSalesOrderPriceBook",
+            "foreign": "cSalesOrders",
+            "entity": "PriceBook",
+            "audited": false,
+            "isCustom": true
         }
     }
 }

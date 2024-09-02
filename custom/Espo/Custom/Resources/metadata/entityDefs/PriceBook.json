@@ -1,0 +1,35 @@
+{
+    "fields": {
+        "cSalesOrders": {
+            "type": "linkMultiple",
+            "layoutDetailDisabled": true,
+            "layoutMassUpdateDisabled": true,
+            "layoutListDisabled": true,
+            "noLoad": true,
+            "importDisabled": true,
+            "exportDisabled": true,
+            "customizationDisabled": true,
+            "isCustom": true
+        }
+    },
+    "links": {
+        "cSalesOrders": {
+            "type": "hasMany",
+            "relationName": "cSalesOrderPriceBook",
+            "foreign": "cPriceBooks",
+            "entity": "SalesOrder",
+            "audited": true,
+            "isCustom": true
+        }
+    },
+    "collection": {
+        "orderBy": "name",
+        "order": "asc",
+        "textFilterFields": [
+            "name"
+        ],
+        "fullTextSearch": false,
+        "countDisabled": false
+    },
+    "optimisticConcurrencyControl": false
+}

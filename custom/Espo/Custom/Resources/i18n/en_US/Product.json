@@ -51,5 +51,8 @@
             "Machine & Spare Part": "Machine & Spare Part",
             "Stationary": "Stationary"
         }
+    },
+    "labels": {
+        "Create Product": "Create Inventory"
     }
 }

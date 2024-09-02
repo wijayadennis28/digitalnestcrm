@@ -3,7 +3,8 @@
         "name": "Order ID",
         "account": "Customer",
         "cPaymentDueDate": "Payment Due Date",
-        "cDeliveryNote": "Delivery note"
+        "cDeliveryNote": "Delivery note",
+        "cPriceBooks": "Price Books"
     },
     "options": {
         "status": {
@@ -25,5 +26,8 @@
             "Approved": "Approved",
             "Rejected": "Rejected"
         }
+    },
+    "links": {
+        "cPriceBooks": "Price Books"
     }
 }
