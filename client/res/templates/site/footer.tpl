@@ -1,7 +1,7 @@
-<p class="credit small">&copy; 2024
+<p class="credit small">&copy; {$smarty.now|date_format:"%Y"}
 <a
-    href="https://www.espocrm.com"
-    title="Powered by EspoCRM"
+    href="https://digital-nest.tech/"
+    title="Powered by DigitalNest"
     rel="noopener" target="_blank"
     tabindex="-1"
->EspoCRM</a></p>
+>DigitalNest</a></p>

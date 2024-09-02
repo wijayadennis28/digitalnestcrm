@@ -76,6 +76,10 @@
         "inventoryNumber": {
             "layout": null,
             "selectPrimaryFilterName": null
+        },
+        "cWorkingShift": {
+            "layout": null,
+            "selectPrimaryFilterName": null
         }
     },
     "kanbanViewMode": false,

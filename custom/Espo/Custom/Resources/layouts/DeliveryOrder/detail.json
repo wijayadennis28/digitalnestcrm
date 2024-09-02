@@ -47,6 +47,9 @@
                 },
                 {
                     "name": "cRit"
+                },
+                {
+                    "name": "cPlateNumber"
                 }
             ]
         ],

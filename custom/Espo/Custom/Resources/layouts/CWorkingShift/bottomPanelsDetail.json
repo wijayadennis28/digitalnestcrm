@@ -1,0 +1,12 @@
+{
+    "cProductionLogs": {
+        "index": 0
+    },
+    "_delimiter_": {
+        "index": 1
+    },
+    "stream": {
+        "sticked": true,
+        "index": 2
+    }
+}

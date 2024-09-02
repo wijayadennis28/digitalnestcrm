@@ -1,0 +1,21 @@
+[
+    {
+        "name": "name"
+    },
+    {
+        "name": "shift"
+    },
+    {
+        "name": "users",
+        "notSortable": true
+    },
+    {
+        "name": "workingDate"
+    },
+    {
+        "name": "startTime"
+    },
+    {
+        "name": "endTime"
+    }
+]

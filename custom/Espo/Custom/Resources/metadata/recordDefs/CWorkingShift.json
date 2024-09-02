@@ -1,0 +1,4 @@
+{
+    "duplicateWhereBuilderClassName": "Espo\\Custom\\Classes\\DuplicateWhereBuilders\\CWorkingShift",
+    "updateDuplicateCheck": true
+}

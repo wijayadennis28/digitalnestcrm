@@ -1,0 +1,4 @@
+{
+    "beforeSaveCustomScript": "//Generate Shift ID\nname=string\\concatenate('S', shift, '-', string\\replace(workingDate, '-', ''))",
+    "beforeSaveApiScript": null
+}

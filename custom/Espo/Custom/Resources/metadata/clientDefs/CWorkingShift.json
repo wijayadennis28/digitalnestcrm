@@ -1,0 +1,19 @@
+{
+    "controller": "controllers/record",
+    "boolFilterList": [
+        "onlyMy"
+    ],
+    "iconClass": "fas fa-user-clock",
+    "relationshipPanels": {
+        "users": {
+            "layout": null,
+            "selectPrimaryFilterName": null
+        },
+        "cProductionLogs": {
+            "layout": null,
+            "selectPrimaryFilterName": null
+        }
+    },
+    "kanbanViewMode": false,
+    "color": null
+}

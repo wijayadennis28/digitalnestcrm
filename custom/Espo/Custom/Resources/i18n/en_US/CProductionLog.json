@@ -16,7 +16,9 @@
         "cIngredientsAmounts": "Ingredients Amounts",
         "warehouse": "Warehouse",
         "productionLogNumber": "Production Log ID",
-        "inventoryNumber": "Inventory Number"
+        "inventoryNumber": "Inventory Number",
+        "name": "name",
+        "cWorkingShift": "Working Shift"
     },
     "labels": {
         "Create CProductionLog": "Create Production Log"
@@ -44,6 +46,7 @@
         "cProductFormula": "Product Formula",
         "cIngredientsAmounts": "Ingredients Amounts",
         "warehouse": "Warehouse",
-        "inventoryNumber": "Inventory Number"
+        "inventoryNumber": "Inventory Number",
+        "cWorkingShift": "Working Shift"
     }
 }

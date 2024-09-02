@@ -1,6 +1,8 @@
 [
     {
-        "name": "productionLogNumber"
+        "name": "productionLogNumber",
+        "link": true,
+        "align": "left"
     },
     {
         "name": "assignedUser"

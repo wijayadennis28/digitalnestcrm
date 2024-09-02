@@ -4,7 +4,8 @@
             "type": "varchar",
             "required": false,
             "pattern": "$noBadCharacters",
-            "options": []
+            "options": [],
+            "readOnly": true
         },
         "description": {
             "type": "text"
@@ -162,6 +163,9 @@
         },
         "inventoryNumber": {
             "type": "link"
+        },
+        "cWorkingShift": {
+            "type": "link"
         }
     },
     "links": {
@@ -223,6 +227,13 @@
             "foreign": "cCProductionLogs",
             "entity": "InventoryNumber",
             "audited": false,
+            "isCustom": true
+        },
+        "cWorkingShift": {
+            "type": "belongsTo",
+            "foreign": "cProductionLogs",
+            "entity": "CWorkingShift",
+            "audited": true,
             "isCustom": true
         }
     },

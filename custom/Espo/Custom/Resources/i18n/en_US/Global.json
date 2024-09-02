@@ -6,7 +6,8 @@
         "Stream": "Activity Log",
         "CProductFormulaList": "Komposisi Produk",
         "CProductFormula": "Product Formula",
-        "Account": "Customer"
+        "Account": "Customer",
+        "CWorkingShift": "Working Shift"
     },
     "scopeNamesPlural": {
         "CProductionLog": "Production Logs",
@@ -15,7 +16,8 @@
         "CFormula": "Formulas",
         "CIngredientsAmount": "Ingredients Amounts",
         "Stream": "Activity Log",
-        "Account": "Customers"
+        "Account": "Customers",
+        "CWorkingShift": "Working Shifts"
     },
     "dashlets": {
         "Stream": "Log"

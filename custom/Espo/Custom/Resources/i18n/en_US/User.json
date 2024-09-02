@@ -1,8 +1,10 @@
 {
     "fields": {
-        "cDeliveryOrder": "Delivery Order"
+        "cDeliveryOrder": "Delivery Order",
+        "cCWorkingShift": "Working Shift"
     },
     "links": {
-        "cDeliveryOrder": "Delivery Order"
+        "cDeliveryOrder": "Delivery Order",
+        "cCWorkingShift": "Working Shift"
     }
 }
