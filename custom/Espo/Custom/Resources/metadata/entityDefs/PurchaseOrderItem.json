@@ -7,6 +7,10 @@
             "copyFieldList": [
                 "inventoryNumberType"
             ]
+        },
+        "name": {
+            "required": false,
+            "options": []
         }
     }
 }
