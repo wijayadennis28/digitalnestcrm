@@ -43,12 +43,6 @@
                 {
                     "name": "expirationDate"
                 }
-            ],
-            [
-                {
-                    "name": "productionDate"
-                },
-                false
             ]
         ],
         "style": "default",

@@ -19,9 +19,15 @@
         "tabLabel": "$orders"
     },
     "orderItems": {
+        "dynamicLogicVisible": null,
+        "style": "default",
+        "sticked": false,
         "index": 4
     },
     "inventoryAdjustmentItems": {
+        "dynamicLogicVisible": null,
+        "style": "default",
+        "sticked": false,
         "index": 5
     },
     "_tabBreak_4": {
@@ -37,12 +43,12 @@
                     "value": [
                         {
                             "type": "equals",
-                            "attribute": "cType",
+                            "attribute": "cCategoryName",
                             "value": "Ingredient"
                         },
                         {
                             "type": "equals",
-                            "attribute": "cType",
+                            "attribute": "cCategoryName",
                             "value": "Stationary"
                         }
                     ]
@@ -63,7 +69,7 @@
             "conditionGroup": [
                 {
                     "type": "equals",
-                    "attribute": "cType",
+                    "attribute": "cCategoryName",
                     "value": "Machine & Spare Part"
                 }
             ]

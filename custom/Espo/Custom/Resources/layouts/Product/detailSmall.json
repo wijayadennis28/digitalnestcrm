@@ -3,7 +3,7 @@
         "rows": [
             [
                 {
-                    "name": "cType"
+                    "name": "category"
                 }
             ],
             [
@@ -17,9 +17,6 @@
             [
                 {
                     "name": "cSku"
-                },
-                {
-                    "name": "category"
                 }
             ],
             [
@@ -59,9 +56,13 @@
                 }
             ]
         ],
+        "dynamicLogicVisible": null,
         "style": "default",
+        "tabBreak": false,
+        "hidden": false,
+        "noteText": null,
         "noteStyle": "info",
-        "label": ""
+        "customLabel": "Quantity"
     },
     {
         "rows": [
@@ -90,17 +91,17 @@
                     "value": [
                         {
                             "type": "equals",
-                            "attribute": "cType",
+                            "attribute": "cCategoryName",
                             "value": "Ingredient"
                         },
                         {
                             "type": "equals",
-                            "attribute": "cType",
+                            "attribute": "cCategoryName",
                             "value": "Product"
                         },
                         {
                             "type": "equals",
-                            "attribute": "cType",
+                            "attribute": "cCategoryName",
                             "value": "Stationary"
                         }
                     ]
@@ -108,12 +109,12 @@
             ]
         },
         "style": "default",
-        "tabBreak": true,
+        "tabBreak": false,
         "tabLabel": "Ukuran",
         "hidden": false,
         "noteText": null,
         "noteStyle": "info",
-        "customLabel": ""
+        "customLabel": "Size"
     },
     {
         "rows": [
@@ -127,18 +128,18 @@
             "conditionGroup": [
                 {
                     "type": "equals",
-                    "attribute": "cType",
+                    "attribute": "cCategoryName",
                     "value": "Product"
                 }
             ]
         },
         "style": "default",
-        "tabBreak": true,
+        "tabBreak": false,
         "tabLabel": "Formula",
         "hidden": false,
         "noteText": null,
         "noteStyle": "info",
-        "label": ""
+        "customLabel": "Formula"
     },
     {
         "rows": [
@@ -155,7 +156,7 @@
             "conditionGroup": [
                 {
                     "type": "equals",
-                    "attribute": "cType",
+                    "attribute": "cCategoryName",
                     "value": "Machine & Spare Part"
                 }
             ]
@@ -166,6 +167,6 @@
         "hidden": false,
         "noteText": null,
         "noteStyle": "info",
-        "label": ""
+        "customLabel": ""
     }
 ]
