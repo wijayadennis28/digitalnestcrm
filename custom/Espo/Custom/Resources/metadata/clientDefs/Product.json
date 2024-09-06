@@ -72,7 +72,7 @@
                     "conditionGroup": [
                         {
                             "type": "equals",
-                            "attribute": "cType",
+                            "attribute": "cCategoryName",
                             "value": "Product"
                         }
                     ]
@@ -141,7 +141,7 @@
                     "conditionGroup": [
                         {
                             "type": "equals",
-                            "attribute": "cType",
+                            "attribute": "cCategoryName",
                             "value": "Product"
                         }
                     ]
@@ -150,7 +150,7 @@
                     "conditionGroup": [
                         {
                             "type": "equals",
-                            "attribute": "cType",
+                            "attribute": "cCategoryName",
                             "value": "Product"
                         }
                     ]
@@ -161,7 +161,7 @@
                     "conditionGroup": [
                         {
                             "type": "equals",
-                            "attribute": "cType",
+                            "attribute": "cCategoryName",
                             "value": "Machine & Spare Part"
                         }
                     ]
@@ -170,7 +170,7 @@
                     "conditionGroup": [
                         {
                             "type": "equals",
-                            "attribute": "cType",
+                            "attribute": "cCategoryName",
                             "value": "Machine & Spare Part"
                         }
                     ]
@@ -181,7 +181,7 @@
                     "conditionGroup": [
                         {
                             "type": "equals",
-                            "attribute": "cType",
+                            "attribute": "cCategoryName",
                             "value": "Machine & Spare Part"
                         }
                     ]
@@ -192,7 +192,7 @@
                     "conditionGroup": [
                         {
                             "type": "equals",
-                            "attribute": "cType",
+                            "attribute": "cCategoryName",
                             "value": "Product"
                         }
                     ]
@@ -203,31 +203,15 @@
                     "conditionGroup": [
                         {
                             "type": "equals",
-                            "attribute": "cType",
+                            "attribute": "cCategoryName",
                             "value": "Product"
                         }
                     ]
                 }
             },
             "category": {
-                "visible": {
-                    "conditionGroup": [
-                        {
-                            "type": "equals",
-                            "attribute": "cType",
-                            "value": "Product"
-                        }
-                    ]
-                },
-                "required": {
-                    "conditionGroup": [
-                        {
-                            "type": "equals",
-                            "attribute": "cType",
-                            "value": "Product"
-                        }
-                    ]
-                }
+                "visible": null,
+                "required": null
             },
             "weight": {
                 "visible": {
@@ -237,20 +221,29 @@
                             "value": [
                                 {
                                     "type": "equals",
-                                    "attribute": "cType",
+                                    "attribute": "cCategoryName",
                                     "value": "Ingredient"
                                 },
                                 {
                                     "type": "equals",
-                                    "attribute": "cType",
+                                    "attribute": "cCategoryName",
                                     "value": "Stationary"
                                 },
                                 {
                                     "type": "equals",
-                                    "attribute": "cType",
+                                    "attribute": "cCategoryName",
                                     "value": "Product"
                                 }
                             ]
+                        }
+                    ]
+                },
+                "required": {
+                    "conditionGroup": [
+                        {
+                            "type": "equals",
+                            "attribute": "cCategoryName",
+                            "value": "Ingredient"
                         }
                     ]
                 }
@@ -260,7 +253,7 @@
                     "conditionGroup": [
                         {
                             "type": "equals",
-                            "attribute": "cType",
+                            "attribute": "cCategoryName",
                             "value": "Product"
                         }
                     ]
@@ -271,7 +264,7 @@
                     "conditionGroup": [
                         {
                             "type": "equals",
-                            "attribute": "cType",
+                            "attribute": "cCategoryName",
                             "value": "Product"
                         }
                     ]
@@ -282,7 +275,7 @@
                     "conditionGroup": [
                         {
                             "type": "equals",
-                            "attribute": "cType",
+                            "attribute": "cCategoryName",
                             "value": "Product"
                         }
                     ]
