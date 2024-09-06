@@ -2,7 +2,10 @@
     {
         "name": "product",
         "align": "left",
-        "width": 50
+        "width": 35
+    },
+    {
+        "name": "cInventoryType"
     },
     {
         "name": "quantity",

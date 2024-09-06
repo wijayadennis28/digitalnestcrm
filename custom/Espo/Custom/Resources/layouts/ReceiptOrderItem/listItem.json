@@ -1,6 +1,10 @@
 [
     {
-        "name": "product"
+        "name": "product",
+        "align": "left"
+    },
+    {
+        "name": "cInventoryType"
     },
     {
         "name": "quantity",

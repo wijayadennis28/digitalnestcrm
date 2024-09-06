@@ -11,6 +11,14 @@
         "name": {
             "required": false,
             "options": []
+        },
+        "cInventoryType": {
+            "readOnly": true,
+            "type": "foreign",
+            "link": "product",
+            "field": "cType",
+            "view": "views/fields/foreign-enum",
+            "isCustom": true
         }
     }
 }
