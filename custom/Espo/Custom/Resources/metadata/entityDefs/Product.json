@@ -14,7 +14,7 @@
         "category": {
             "autocompleteOnEmpty": true,
             "createButton": true,
-            "required": false
+            "required": true
         },
         "pricingType": {
             "default": "Fixed",
@@ -193,6 +193,14 @@
             "minuteStep": 30,
             "isCustom": true,
             "readOnly": true
+        },
+        "cCategoryName": {
+            "readOnly": true,
+            "type": "foreign",
+            "link": "category",
+            "field": "name",
+            "view": "views/fields/foreign-varchar",
+            "isCustom": true
         }
     },
     "links": {

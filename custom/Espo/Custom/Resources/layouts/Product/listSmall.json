@@ -4,7 +4,7 @@
         "link": true
     },
     {
-        "name": "cType"
+        "name": "cCategoryName"
     },
     {
         "name": "quantity"

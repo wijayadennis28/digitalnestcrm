@@ -15,7 +15,8 @@
         "cType": "Inventory Type",
         "cCMaintenances": "Maintenances",
         "cMaintenanceSchedule": "Maintenance Schedule",
-        "cLastMaintenance": "Last Maintenance"
+        "cLastMaintenance": "Last Maintenance",
+        "cCategoryName": "Category Name"
     },
     "links": {
         "cCProductionLogs": "Production Logs",
