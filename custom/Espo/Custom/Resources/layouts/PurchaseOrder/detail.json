@@ -18,6 +18,22 @@
             ],
             [
                 {
+                    "name": "warehouse"
+                }
+            ]
+        ],
+        "dynamicLogicVisible": null,
+        "style": "default",
+        "tabBreak": false,
+        "hidden": false,
+        "noteText": null,
+        "noteStyle": "info",
+        "customLabel": "Overview"
+    },
+    {
+        "rows": [
+            [
+                {
                     "name": "supplier"
                 }
             ],
@@ -26,25 +42,34 @@
                     "name": "billingContact"
                 },
                 {
-                    "name": "billingAddress"
-                }
-            ],
-            [
-                {
-                    "name": "shippingContact"
-                },
-                {
-                    "name": "shippingAddress"
-                }
-            ],
-            [
-                {
-                    "name": "warehouse"
+                    "name": "supplierAddress"
                 }
             ]
         ],
+        "dynamicLogicVisible": null,
         "style": "default",
+        "tabBreak": false,
+        "tabLabel": null,
+        "hidden": false,
+        "noteText": null,
         "noteStyle": "info",
-        "label": ""
+        "customLabel": "Supplier Information"
+    },
+    {
+        "rows": [
+            [
+                {
+                    "name": "shippingAddress"
+                }
+            ]
+        ],
+        "dynamicLogicVisible": null,
+        "style": "default",
+        "tabBreak": false,
+        "tabLabel": null,
+        "hidden": false,
+        "noteText": null,
+        "noteStyle": "info",
+        "customLabel": "Shipping Information"
     }
 ]

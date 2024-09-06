@@ -37,9 +37,19 @@
                 "visible": {
                     "conditionGroup": [
                         {
-                            "type": "equals",
-                            "attribute": "cCourier",
-                            "value": "External"
+                            "type": "or",
+                            "value": [
+                                {
+                                    "type": "equals",
+                                    "attribute": "cCourier",
+                                    "value": "External (CDE)"
+                                },
+                                {
+                                    "type": "equals",
+                                    "attribute": "cCourier",
+                                    "value": "External (CDD)"
+                                }
+                            ]
                         }
                     ]
                 }

@@ -1,6 +1,6 @@
 <?php
 return [
-  'useCache' => false,
+  'useCache' => true,
   'jobMaxPortion' => 15,
   'jobRunInParallel' => false,
   'jobPoolConcurrencyNumber' => 8,
@@ -147,10 +147,12 @@ return [
       'itemList' => [
         0 => 'User',
         1 => 'Team',
-        2 => 'CWorkingShift'
+        2 => 'CWorkingShift',
+        3 => 'Warehouse'
       ]
     ],
-    6 => 'Report'
+    6 => 'Report',
+    7 => 'Supplier'
   ],
   'quickCreateList' => [
     0 => 'Account',
@@ -355,8 +357,8 @@ return [
   'authIpAddressWhitelist' => [],
   'authIpAddressCheckExcludedUsersIds' => [],
   'authIpAddressCheckExcludedUsersNames' => (object) [],
-  'cacheTimestamp' => 1725303235,
-  'microtime' => 1725303235.816137,
+  'cacheTimestamp' => 1725611257,
+  'microtime' => 1725611257.771444,
   'siteUrl' => 'http://localhost/digitalnestcrm',
   'fullTextSearchMinLength' => 4,
   'appTimestamp' => 1724991562,
@@ -368,8 +370,8 @@ return [
   'scopeColorsDisabled' => false,
   'tabIconsDisabled' => false,
   'dashletsOptions' => (object) [],
-  'companyLogoId' => '66863b83955f7f698',
-  'companyLogoName' => 'Screenshot_2024-07-04_at_12.58.19-removebg-preview.png',
+  'companyLogoId' => NULL,
+  'companyLogoName' => NULL,
   'warehousesEnabled' => true,
   'inventoryTransactionsEnabled' => true,
   'priceBooksEnabled' => true,

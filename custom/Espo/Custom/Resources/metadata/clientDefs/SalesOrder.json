@@ -18,6 +18,14 @@
         "priceBooks": {
             "layout": null,
             "selectPrimaryFilterName": null
+        },
+        "items": {
+            "layout": null,
+            "selectPrimaryFilterName": "All"
+        },
+        "invoices": {
+            "layout": "listForAccount",
+            "selectPrimaryFilterName": null
         }
     }
 }

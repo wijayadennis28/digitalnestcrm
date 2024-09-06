@@ -3,6 +3,10 @@
         "cDeliveryLogs": {
             "layout": null,
             "selectPrimaryFilterName": null
+        },
+        "salesOrder": {
+            "layout": null,
+            "selectPrimaryFilterName": "completed"
         }
     }
 }

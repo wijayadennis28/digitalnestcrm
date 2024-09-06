@@ -3,6 +3,10 @@
         "cProductionLogs": {
             "layout": null,
             "selectPrimaryFilterName": null
+        },
+        "purchaseOrders": {
+            "layout": null,
+            "selectPrimaryFilterName": null
         }
     }
 }

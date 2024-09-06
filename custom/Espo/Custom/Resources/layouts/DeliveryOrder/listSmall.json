@@ -1,0 +1,20 @@
+[
+    {
+        "name": "name",
+        "link": true
+    },
+    {
+        "name": "status",
+        "width": 20
+    },
+    {
+        "name": "account",
+        "width": 30
+    },
+    {
+        "name": "salesOrder"
+    },
+    {
+        "name": "createdAt"
+    }
+]

@@ -9,23 +9,30 @@
         },
         "cCourier": {
             "Internal": "Internal",
-            "External": "External"
+            "External": "External",
+            "External (CDE)": "External (CDE)",
+            "External (CDD)": "External (CDD)"
         },
         "cVehicleDetailsExternal": {
             "CDE": "CDE",
-            "CDD": "CDD"
+            "CDD": "CDD",
+            "": ""
         }
     },
     "fields": {
-        "cDeliveryDate": "Delivery Date",
+        "cDeliveryDate": "Delivery Date (with Time)",
         "cCourier": "Courier",
         "cVehicleDetailsExternal": "Vehicle Details (External)",
         "cVehicleDetailsInternal": "Vehicle Details (Internal)",
         "cRit": "RIT",
         "cUsers": "Users",
-        "cPlateNumber": "Plate Number"
+        "cPlateNumber": "Plate Number",
+        "cVehicleDetails": "Vehicle Details"
     },
     "links": {
         "cUsers": "Users"
+    },
+    "tooltips": {
+        "cVehicleDetails": "Internal: Description, External: CDE, CDD"
     }
 }

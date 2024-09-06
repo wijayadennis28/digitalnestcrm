@@ -1,7 +1,9 @@
 {
     "fields": {
         "discount": {
-            "readOnly": false
+            "readOnly": false,
+            "decimalPlaces": null,
+            "min": 0
         }
     }
 }
