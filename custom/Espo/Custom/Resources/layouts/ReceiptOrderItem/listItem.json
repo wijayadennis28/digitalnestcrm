@@ -1,0 +1,17 @@
+[
+    {
+        "name": "product",
+        "align": "left"
+    },
+    {
+        "name": "cInventoryType"
+    },
+    {
+        "name": "quantity",
+        "width": 9
+    },
+    {
+        "name": "quantityReceived",
+        "width": 9
+    }
+]
