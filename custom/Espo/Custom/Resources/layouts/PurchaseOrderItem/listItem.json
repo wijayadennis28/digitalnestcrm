@@ -1,22 +1,24 @@
 [
-  {
-    "name": "name"
-  },
-  {
-    "name": "productType"
-  },
-  {
-    "name": "quantity",
-    "width": 9
-  },
-  {
-    "name": "unitPrice",
-    "align": "right",
-    "width": 15
-  },
-  {
-    "name": "amount",
-    "align": "right",
-    "width": 15
-  }
+    {
+        "name": "product",
+        "align": "left",
+        "width": 35
+    },
+    {
+        "name": "cInventoryType"
+    },
+    {
+        "name": "quantity",
+        "width": 9
+    },
+    {
+        "name": "unitPrice",
+        "align": "right",
+        "width": 15
+    },
+    {
+        "name": "amount",
+        "align": "right",
+        "width": 15
+    }
 ]
