@@ -51,6 +51,40 @@
         "rows": [
             [
                 {
+                    "name": "cMaintenanceSchedule"
+                },
+                {
+                    "name": "cLastMaintenance"
+                }
+            ]
+        ],
+        "dynamicLogicVisible": {
+            "conditionGroup": [
+                {
+                    "type": "equals",
+                    "attribute": "categoryId",
+                    "data": {
+                        "field": "category",
+                        "values": {
+                            "categoryName": "Machine & Spare Part"
+                        }
+                    },
+                    "value": "66d5f9f70a0af074c"
+                }
+            ]
+        },
+        "style": "default",
+        "tabBreak": false,
+        "tabLabel": null,
+        "hidden": false,
+        "noteText": null,
+        "noteStyle": "info",
+        "customLabel": "Maintenace"
+    },
+    {
+        "rows": [
+            [
+                {
                     "name": "cCProductFormulaList"
                 }
             ]
@@ -100,15 +134,42 @@
         "dynamicLogicVisible": {
             "conditionGroup": [
                 {
-                    "type": "equals",
-                    "attribute": "categoryId",
-                    "data": {
-                        "field": "category",
-                        "values": {
-                            "categoryName": "Product"
+                    "type": "or",
+                    "value": [
+                        {
+                            "type": "equals",
+                            "attribute": "categoryId",
+                            "data": {
+                                "field": "category",
+                                "values": {
+                                    "categoryName": "Product"
+                                }
+                            },
+                            "value": "66cd4776393a1674c"
+                        },
+                        {
+                            "type": "equals",
+                            "attribute": "categoryId",
+                            "data": {
+                                "field": "category",
+                                "values": {
+                                    "categoryName": "Ingredient"
+                                }
+                            },
+                            "value": "66d5f9e5323ca336e"
+                        },
+                        {
+                            "type": "equals",
+                            "attribute": "categoryId",
+                            "data": {
+                                "field": "category",
+                                "values": {
+                                    "categoryName": "Stationary"
+                                }
+                            },
+                            "value": "66d5fa0bf090d6e98"
                         }
-                    },
-                    "value": "66cd4776393a1674c"
+                    ]
                 }
             ]
         },
