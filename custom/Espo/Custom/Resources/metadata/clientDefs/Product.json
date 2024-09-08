@@ -88,35 +88,6 @@
                     ]
                 }
             },
-            "unitPrice": {
-                "readOnly": {
-                    "conditionGroup": [
-                        {
-                            "type": "notEquals",
-                            "attribute": "pricingType",
-                            "value": "Fixed"
-                        }
-                    ]
-                },
-                "visible": {
-                    "conditionGroup": [
-                        {
-                            "type": "equals",
-                            "attribute": "cCategoryName",
-                            "value": "Product"
-                        }
-                    ]
-                },
-                "required": {
-                    "conditionGroup": [
-                        {
-                            "type": "equals",
-                            "attribute": "cCategoryName",
-                            "value": "Product"
-                        }
-                    ]
-                }
-            },
             "cMaintenanceSchedule": {
                 "visible": {
                     "conditionGroup": [
@@ -222,6 +193,17 @@
                                 }
                             },
                             "value": "66cd4776393a1674c"
+                        }
+                    ]
+                }
+            },
+            "unitPrice": {
+                "readOnly": {
+                    "conditionGroup": [
+                        {
+                            "type": "notEquals",
+                            "attribute": "pricingType",
+                            "value": "Fixed"
                         }
                     ]
                 }

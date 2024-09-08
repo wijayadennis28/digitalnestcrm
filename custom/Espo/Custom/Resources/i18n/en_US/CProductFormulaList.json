@@ -2,7 +2,7 @@
     "fields": {
         "quantity": "Quantity",
         "cProductFormula": "Product Formula",
-        "product": "Bahan"
+        "product": "Inventory"
     },
     "links": {
         "cProductFormula": "Product Formula",
