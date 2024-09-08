@@ -1,0 +1,190 @@
+[
+    {
+        "rows": [
+            [
+                {
+                    "name": "category"
+                }
+            ],
+            [
+                {
+                    "name": "name"
+                },
+                {
+                    "name": "status"
+                }
+            ],
+            [
+                {
+                    "name": "cSku"
+                }
+            ],
+            [
+                {
+                    "name": "expirationDays"
+                }
+            ],
+            [
+                {
+                    "name": "description"
+                }
+            ],
+            [
+                {
+                    "name": "isInventory"
+                },
+                {
+                    "name": "inventoryNumberType"
+                }
+            ]
+        ],
+        "dynamicLogicVisible": null,
+        "style": "default",
+        "dynamicLogicStyled": null,
+        "tabBreak": false,
+        "tabLabel": "Overview",
+        "hidden": false,
+        "noteText": null,
+        "customLabel": "Inventory Information"
+    },
+    {
+        "rows": [
+            [
+                {
+                    "name": "cCProductFormulaList"
+                }
+            ]
+        ],
+        "dynamicLogicVisible": {
+            "conditionGroup": [
+                {
+                    "type": "equals",
+                    "attribute": "categoryId",
+                    "data": {
+                        "field": "category",
+                        "values": {
+                            "categoryName": "Product"
+                        }
+                    },
+                    "value": "66cd4776393a1674c"
+                }
+            ]
+        },
+        "style": "default",
+        "tabBreak": false,
+        "tabLabel": null,
+        "hidden": false,
+        "noteText": null,
+        "noteStyle": "info",
+        "customLabel": "Formula"
+    },
+    {
+        "rows": [
+            [
+                {
+                    "name": "cLength"
+                },
+                {
+                    "name": "cWidth"
+                },
+                {
+                    "name": "cHeight"
+                }
+            ],
+            [
+                {
+                    "name": "weight"
+                }
+            ]
+        ],
+        "dynamicLogicVisible": {
+            "conditionGroup": [
+                {
+                    "type": "equals",
+                    "attribute": "categoryId",
+                    "data": {
+                        "field": "category",
+                        "values": {
+                            "categoryName": "Product"
+                        }
+                    },
+                    "value": "66cd4776393a1674c"
+                }
+            ]
+        },
+        "style": "default",
+        "tabBreak": false,
+        "tabLabel": null,
+        "hidden": false,
+        "noteText": null,
+        "noteStyle": "info",
+        "customLabel": "Inventory Size"
+    },
+    {
+        "rows": [
+            [
+                {
+                    "name": "costPrice"
+                },
+                {
+                    "name": "pricingType"
+                }
+            ],
+            [
+                {
+                    "name": "listPrice"
+                },
+                {
+                    "name": "pricingFactor"
+                }
+            ],
+            [
+                {
+                    "name": "unitPrice"
+                },
+                {
+                    "name": "isTaxFree"
+                }
+            ]
+        ],
+        "dynamicLogicVisible": null,
+        "style": "default",
+        "dynamicLogicStyled": null,
+        "tabBreak": false,
+        "tabLabel": "Price",
+        "hidden": false,
+        "noteText": null,
+        "customLabel": "Price"
+    },
+    {
+        "rows": [
+            [
+                {
+                    "name": "quantity"
+                },
+                {
+                    "name": "quantityReserved"
+                }
+            ],
+            [
+                {
+                    "name": "quantityOnHand"
+                },
+                {
+                    "name": "quantitySoftReserved"
+                }
+            ],
+            [
+                {
+                    "name": "quantityInTransit"
+                },
+                {
+                    "name": "quantityOnOrder"
+                }
+            ]
+        ],
+        "style": "default",
+        "name": "quantity",
+        "label": "Quantity"
+    }
+]

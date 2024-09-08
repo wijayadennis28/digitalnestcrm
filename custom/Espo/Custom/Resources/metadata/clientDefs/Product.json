@@ -164,30 +164,7 @@
                 "required": null
             },
             "weight": {
-                "visible": {
-                    "conditionGroup": [
-                        {
-                            "type": "or",
-                            "value": [
-                                {
-                                    "type": "equals",
-                                    "attribute": "cCategoryName",
-                                    "value": "Ingredient"
-                                },
-                                {
-                                    "type": "equals",
-                                    "attribute": "cCategoryName",
-                                    "value": "Stationary"
-                                },
-                                {
-                                    "type": "equals",
-                                    "attribute": "cCategoryName",
-                                    "value": "Product"
-                                }
-                            ]
-                        }
-                    ]
-                },
+                "visible": null,
                 "required": {
                     "conditionGroup": [
                         {
