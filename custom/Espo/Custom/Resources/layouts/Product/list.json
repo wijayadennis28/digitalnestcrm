@@ -1,10 +1,16 @@
 [
     {
+        "name": "cSku"
+    },
+    {
         "name": "name",
         "link": true
     },
     {
         "name": "cCategoryName"
+    },
+    {
+        "name": "unitPrice"
     },
     {
         "name": "quantity"

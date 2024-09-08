@@ -1,12 +1,12 @@
 {
     "fields": {
         "product": "Product",
-        "cProductFormulaLists": "Komposisi Produk",
+        "cProductFormulaLists": "Product Formula List",
         "cProductionLogs": "Production Logs"
     },
     "links": {
         "product": "Product",
-        "cProductFormulaLists": "Komposisi Produk",
+        "cProductFormulaLists": "Product Formula List",
         "cProductionLogs": "Production Logs"
     },
     "labels": {

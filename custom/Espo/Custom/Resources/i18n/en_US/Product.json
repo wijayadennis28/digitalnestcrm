@@ -1,12 +1,7 @@
 {
     "fields": {
         "cCProductionLogs": "Production Logs",
-        "weight": "Berat (Kg)",
-        "cPanjang": "Panjang (Meter)",
-        "cLebar": "Lebar (Meter)",
-        "cTinggi": "Tinggi (Meter)",
-        "cBerat": "Berat",
-        "cBeratUnit": "satuan",
+        "weight": "Weight (Kg)",
         "cSku": "SKU",
         "cCProductFormulas": "Product Formulas",
         "cCProductFormulaList": "Product Formula List",
@@ -16,7 +11,11 @@
         "cCMaintenances": "Maintenances",
         "cMaintenanceSchedule": "Maintenance Schedule",
         "cLastMaintenance": "Last Maintenance",
-        "cCategoryName": "Category Name"
+        "cCategoryName": "Category Name",
+        "cMeasurementUnit": "MeasurementUnit",
+        "cWidth": "Width (Meter)",
+        "cLength": "Length (Meter)",
+        "cHeight": "Height (Meter)"
     },
     "links": {
         "cCProductionLogs": "Production Logs",
@@ -27,30 +26,29 @@
         "cCMaintenances": "Maintenances"
     },
     "tooltips": {
-        "weight": "Dalam Kilogram",
-        "cPanjang": "Dalam Meter",
-        "cLebar": "Dalam meter",
-        "cTinggi": "Dalam meter"
+        "weight": "Dalam Kilogram"
     },
     "options": {
-        "status": {
-            "Aktif": "Aktif",
-            "Non-Aktif": "Non-Aktif",
-            "Menunggu Persetujuan": "Menunggu Persetujuan",
-            "Draft": "Draft"
-        },
-        "cBeratUnit": {
-            "Kg": "Kg",
-            "gram": "gram",
-            "Ton": "Ton",
-            "Gram": "Gram",
-            "": ""
-        },
         "cType": {
             "Ingredient": "Ingredient",
             "Product": "Product",
             "Machine & Spare Part": "Machine & Spare Part",
             "Stationary": "Stationary"
+        },
+        "status": {
+            "Available": "Active",
+            "Unavailable": "Non-Active",
+            "Waiting Approval": "Waiting Approval",
+            "Draft": "Draft",
+            "": ""
+        },
+        "cMeasurementUnit": {
+            "KG": "Kg"
+        },
+        "pricingType": {
+            "Same as List": "Same as List",
+            "Fixed": "Fixed",
+            "Discount from List": "Discount from List"
         }
     },
     "labels": {
