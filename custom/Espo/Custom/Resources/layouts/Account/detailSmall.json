@@ -6,31 +6,32 @@
                     "name": "name"
                 },
                 {
+                    "name": "cAccountType"
+                }
+            ],
+            [
+                {
                     "name": "website"
                 }
             ],
             [
                 {
                     "name": "emailAddress"
-                },
+                }
+            ],
+            [
                 {
                     "name": "phoneNumber"
                 }
             ],
             [
                 {
-                    "name": "billingAddress"
+                    "name": "billingAddressCity"
                 },
                 {
-                    "name": "shippingAddress"
+                    "name": "billingAddressCountry"
                 }
-            ]
-        ],
-        "style": "default",
-        "label": "Overview"
-    },
-    {
-        "rows": [
+            ],
             [
                 {
                     "name": "type"
@@ -46,6 +47,6 @@
             ]
         ],
         "style": "default",
-        "label": "Details"
+        "label": ""
     }
 ]

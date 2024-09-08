@@ -1,5 +1,11 @@
 {
     "kanbanViewMode": false,
     "color": null,
-    "iconClass": "fas fa-cart-plus fa-flip-horizontal"
+    "iconClass": "fas fa-cart-plus fa-flip-horizontal",
+    "relationshipPanels": {
+        "warehouse1": {
+            "layout": null,
+            "selectPrimaryFilterName": null
+        }
+    }
 }

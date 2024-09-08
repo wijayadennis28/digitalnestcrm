@@ -95,6 +95,11 @@
             "exportDisabled": true,
             "customizationDisabled": true,
             "isCustom": true
+        },
+        "discountAmount": {
+            "readOnly": false,
+            "conversionDisabled": true,
+            "onlyDefaultCurrency": true
         }
     },
     "links": {
@@ -113,6 +118,12 @@
             "entity": "PriceBook",
             "audited": false,
             "isCustom": true
+        },
+        "items": {
+            "audited": false
+        },
+        "invoices": {
+            "audited": true
         }
     }
 }

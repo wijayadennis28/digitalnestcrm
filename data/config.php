@@ -1,6 +1,6 @@
 <?php
 return [
-  'useCache' => false,
+  'useCache' => true,
   'jobMaxPortion' => 15,
   'jobRunInParallel' => false,
   'jobPoolConcurrencyNumber' => 8,
@@ -45,112 +45,54 @@ return [
     3 => 'Opportunity'
   ],
   'tabList' => [
-    0 => (object) [
-      'type' => 'group',
-      'text' => '$SalesPack',
-      'iconClass' => 'fas fa-boxes',
-      'color' => NULL,
-      'id' => '480021',
-      'itemList' => [
-        0 => 'Product',
-        1 => (object) [
-          'type' => 'divider',
-          'text' => NULL,
-          'id' => '316127'
-        ],
-        2 => 'Quote',
-        3 => 'SalesOrder',
-        4 => 'Invoice',
-        5 => 'DeliveryOrder',
-        6 => 'ReturnOrder',
-        7 => (object) [
-          'type' => 'divider',
-          'text' => NULL,
-          'id' => '820005'
-        ],
-        8 => 'PurchaseOrder',
-        9 => 'ReceiptOrder',
-        10 => (object) [
-          'type' => 'divider',
-          'text' => NULL,
-          'id' => '692280'
-        ],
-        11 => 'TransferOrder',
-        12 => 'InventoryAdjustment',
-        13 => (object) [
-          'type' => 'divider',
-          'text' => NULL,
-          'id' => '216837'
-        ],
-        14 => 'Warehouse',
-        15 => 'InventoryNumber',
-        16 => (object) [
-          'type' => 'divider',
-          'text' => NULL,
-          'id' => '453263'
-        ],
-        17 => 'InventoryTransaction'
-      ]
-    ],
+    0 => 'Account',
     1 => (object) [
-      'type' => 'group',
-      'text' => 'Customers',
-      'iconClass' => 'fas fa-building',
-      'color' => NULL,
-      'id' => '479348',
-      'itemList' => [
-        0 => 'Account',
-        1 => 'PriceBook'
-      ]
-    ],
-    2 => (object) [
       'type' => 'group',
       'text' => 'Sales',
       'iconClass' => 'fas fa-chart-line',
       'color' => NULL,
-      'id' => '152710',
+      'id' => '23643',
       'itemList' => [
         0 => 'SalesOrder',
         1 => 'DeliveryOrder',
-        2 => 'Account'
+        2 => 'PriceBook',
+        3 => 'ProductPrice'
+      ]
+    ],
+    2 => (object) [
+      'type' => 'group',
+      'text' => 'Purchase',
+      'iconClass' => 'fas fa-shopping-cart',
+      'color' => NULL,
+      'id' => '44356',
+      'itemList' => [
+        0 => 'PurchaseOrder',
+        1 => 'Supplier'
       ]
     ],
     3 => (object) [
       'type' => 'group',
-      'text' => 'Products',
-      'iconClass' => 'fas fa-box-open',
+      'text' => 'Manufacture',
+      'iconClass' => 'fas fa-city',
       'color' => NULL,
-      'id' => '189075',
+      'id' => '477757',
       'itemList' => [
-        0 => 'PurchaseOrder',
-        1 => 'ProductPrice'
+        0 => 'CProductionLog',
+        1 => 'Product'
       ]
     ],
     4 => (object) [
       'type' => 'group',
-      'text' => 'Manufacture',
-      'iconClass' => 'fas fa-city',
-      'color' => NULL,
-      'id' => '972472',
-      'itemList' => [
-        0 => 'CProductionLog',
-        1 => 'Supplier',
-        2 => 'Product'
-      ]
-    ],
-    5 => (object) [
-      'type' => 'group',
       'text' => 'Organization',
       'iconClass' => 'fas fa-sitemap',
       'color' => NULL,
-      'id' => '396806',
+      'id' => '922142',
       'itemList' => [
         0 => 'User',
         1 => 'Team',
         2 => 'CWorkingShift'
       ]
-    ],
-    6 => 'Report'
+    ]
   ],
   'quickCreateList' => [
     0 => 'Account',
@@ -355,21 +297,21 @@ return [
   'authIpAddressWhitelist' => [],
   'authIpAddressCheckExcludedUsersIds' => [],
   'authIpAddressCheckExcludedUsersNames' => (object) [],
-  'cacheTimestamp' => 1725610884,
-  'microtime' => 1725610884.354026,
+  'cacheTimestamp' => 1725764160,
+  'microtime' => 1725764160.278143,
   'siteUrl' => 'http://localhost/digitalnestcrm',
   'fullTextSearchMinLength' => 4,
   'appTimestamp' => 1724991562,
   'maintenanceMode' => false,
   'cronDisabled' => false,
   'adminPanelIframeUrl' => 'https://s.espocrm.com/?sales-pack=bcd3361258b6d66fc350488ed9575786&advanced-pack=02847865974db42443189e5f30908f60',
-  'userThemesDisabled' => false,
+  'userThemesDisabled' => true,
   'avatarsDisabled' => false,
   'scopeColorsDisabled' => false,
   'tabIconsDisabled' => false,
   'dashletsOptions' => (object) [],
-  'companyLogoId' => '66863b83955f7f698',
-  'companyLogoName' => 'Screenshot_2024-07-04_at_12.58.19-removebg-preview.png',
+  'companyLogoId' => '66dd0a737d4aef056',
+  'companyLogoName' => 'top(1).png',
   'warehousesEnabled' => true,
   'inventoryTransactionsEnabled' => true,
   'priceBooksEnabled' => true,

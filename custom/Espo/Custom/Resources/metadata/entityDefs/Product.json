@@ -21,52 +21,19 @@
             "style": {
                 "Same as List": null,
                 "Fixed": null,
-                "Discount from List": null,
-                "Markup over Cost": null,
-                "Profit Margin": null
-            }
+                "Discount from List": null
+            },
+            "options": [
+                "Same as List",
+                "Fixed",
+                "Discount from List"
+            ],
+            "audited": true
         },
         "weight": {
             "tooltip": false
         },
-        "cPanjang": {
-            "notNull": false,
-            "type": "float",
-            "min": 0,
-            "tooltip": false,
-            "isCustom": true
-        },
-        "cLebar": {
-            "notNull": false,
-            "type": "float",
-            "min": 0,
-            "tooltip": false,
-            "isCustom": true
-        },
-        "cTinggi": {
-            "notNull": false,
-            "type": "float",
-            "tooltip": false,
-            "isCustom": true,
-            "min": 0
-        },
         "expirationDays": {
-            "audited": false
-        },
-        "status": {
-            "options": [
-                "Aktif",
-                "Non-Aktif",
-                "Menunggu Persetujuan",
-                "Draft"
-            ],
-            "default": "Menunggu Persetujuan",
-            "style": {
-                "Aktif": "success",
-                "Non-Aktif": "ordercancelled",
-                "Menunggu Persetujuan": "processed",
-                "Draft": "info"
-            },
             "audited": false
         },
         "partNumber": {
@@ -77,31 +44,6 @@
         "inventoryNumberType": {
             "default": "Batch",
             "readOnly": true
-        },
-        "cBerat": {
-            "notNull": false,
-            "type": "float",
-            "isCustom": true
-        },
-        "cBeratUnit": {
-            "type": "enum",
-            "options": [
-                "",
-                "Kg",
-                "Gram",
-                "Ton"
-            ],
-            "style": {
-                "": null,
-                "Kg": null,
-                "Gram": null,
-                "Ton": null
-            },
-            "default": null,
-            "maxLength": 100,
-            "isCustom": true,
-            "required": false,
-            "labelType": "state"
         },
         "unitPrice": {
             "required": false
@@ -200,6 +142,53 @@
             "link": "category",
             "field": "name",
             "view": "views/fields/foreign-varchar",
+            "isCustom": true
+        },
+        "status": {
+            "options": [
+                "",
+                "Available",
+                "Unavailable",
+                "Waiting Approval",
+                "Draft"
+            ],
+            "style": {
+                "": null,
+                "Available": null,
+                "Unavailable": "ordercancelled",
+                "Waiting Approval": "processed",
+                "Draft": "info"
+            },
+            "default": null,
+            "required": true
+        },
+        "cMeasurementUnit": {
+            "type": "enum",
+            "options": [
+                "KG"
+            ],
+            "default": "KG",
+            "style": {
+                "KG": null
+            },
+            "maxLength": 100,
+            "isCustom": true
+        },
+        "cWidth": {
+            "notNull": false,
+            "type": "float",
+            "audited": true,
+            "isCustom": true
+        },
+        "cLength": {
+            "notNull": false,
+            "type": "float",
+            "audited": true,
+            "isCustom": true
+        },
+        "cHeight": {
+            "notNull": false,
+            "type": "float",
             "isCustom": true
         }
     },

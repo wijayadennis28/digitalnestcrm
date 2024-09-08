@@ -1,6 +1,8 @@
 {
     "fields": {
         "cDueDateForPaymentToSupplier": "Jatuh Tempo Pembayaran ke Supplier",
-        "name": "Order Id"
+        "name": "Order Id",
+        "billingAddress": "Billing Address",
+        "billingContact": "Billing Contact"
     }
 }

@@ -9,7 +9,7 @@
         "product": "Product"
     },
     "labels": {
-        "Create CProductFormulaList": "Create Komposisi Produk"
+        "Create CProductFormulaList": "Create Product Formula List"
     },
     "layouts": {
         "productFormula": "List (product formula)"

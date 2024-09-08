@@ -88,45 +88,6 @@
                     ]
                 }
             },
-            "cBeratUnit": {
-                "required": {
-                    "conditionGroup": [
-                        {
-                            "type": "and",
-                            "value": [
-                                {
-                                    "type": "isNotEmpty",
-                                    "attribute": "cBerat"
-                                },
-                                {
-                                    "type": "equals",
-                                    "attribute": "cBeratUnit",
-                                    "value": null
-                                }
-                            ]
-                        }
-                    ]
-                },
-                "visible": null,
-                "invalid": {
-                    "conditionGroup": [
-                        {
-                            "type": "and",
-                            "value": [
-                                {
-                                    "type": "isNotEmpty",
-                                    "attribute": "cBerat"
-                                },
-                                {
-                                    "type": "equals",
-                                    "attribute": "cBeratUnit",
-                                    "value": null
-                                }
-                            ]
-                        }
-                    ]
-                }
-            },
             "unitPrice": {
                 "readOnly": {
                     "conditionGroup": [
@@ -187,17 +148,6 @@
                     ]
                 }
             },
-            "status": {
-                "visible": {
-                    "conditionGroup": [
-                        {
-                            "type": "equals",
-                            "attribute": "cCategoryName",
-                            "value": "Product"
-                        }
-                    ]
-                }
-            },
             "cSku": {
                 "visible": {
                     "conditionGroup": [
@@ -244,39 +194,6 @@
                             "type": "equals",
                             "attribute": "cCategoryName",
                             "value": "Ingredient"
-                        }
-                    ]
-                }
-            },
-            "cPanjang": {
-                "visible": {
-                    "conditionGroup": [
-                        {
-                            "type": "equals",
-                            "attribute": "cCategoryName",
-                            "value": "Product"
-                        }
-                    ]
-                }
-            },
-            "cLebar": {
-                "visible": {
-                    "conditionGroup": [
-                        {
-                            "type": "equals",
-                            "attribute": "cCategoryName",
-                            "value": "Product"
-                        }
-                    ]
-                }
-            },
-            "cTinggi": {
-                "visible": {
-                    "conditionGroup": [
-                        {
-                            "type": "equals",
-                            "attribute": "cCategoryName",
-                            "value": "Product"
                         }
                     ]
                 }

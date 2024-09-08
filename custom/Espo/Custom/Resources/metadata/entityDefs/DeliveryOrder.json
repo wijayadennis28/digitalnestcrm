@@ -21,18 +21,22 @@
             "notNull": false,
             "type": "datetime",
             "minuteStep": 1,
-            "isCustom": true
+            "isCustom": true,
+            "required": true,
+            "audited": true
         },
         "cCourier": {
             "type": "enum",
             "options": [
                 "Internal",
-                "External"
+                "External (CDE)",
+                "External (CDD)"
             ],
             "default": "Internal",
             "style": {
                 "Internal": null,
-                "External": null
+                "External (CDE)": null,
+                "External (CDD)": null
             },
             "maxLength": 100,
             "isCustom": true
@@ -40,11 +44,13 @@
         "cVehicleDetailsExternal": {
             "type": "enum",
             "options": [
+                "",
                 "CDE",
                 "CDD"
             ],
-            "default": "CDE",
+            "default": null,
             "style": {
+                "": null,
                 "CDE": null,
                 "CDD": null
             },
@@ -79,6 +85,15 @@
             "type": "varchar",
             "maxLength": 11,
             "options": [],
+            "isCustom": true,
+            "required": true,
+            "audited": true
+        },
+        "cVehicleDetails": {
+            "type": "varchar",
+            "maxLength": 100,
+            "options": [],
+            "tooltip": true,
             "isCustom": true
         }
     },
