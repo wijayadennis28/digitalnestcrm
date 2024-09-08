@@ -164,36 +164,64 @@
                 "required": null
             },
             "weight": {
-                "visible": {
-                    "conditionGroup": [
-                        {
-                            "type": "or",
-                            "value": [
-                                {
-                                    "type": "equals",
-                                    "attribute": "cCategoryName",
-                                    "value": "Ingredient"
-                                },
-                                {
-                                    "type": "equals",
-                                    "attribute": "cCategoryName",
-                                    "value": "Stationary"
-                                },
-                                {
-                                    "type": "equals",
-                                    "attribute": "cCategoryName",
-                                    "value": "Product"
-                                }
-                            ]
-                        }
-                    ]
-                },
+                "visible": null,
                 "required": {
                     "conditionGroup": [
                         {
                             "type": "equals",
                             "attribute": "cCategoryName",
                             "value": "Ingredient"
+                        }
+                    ]
+                }
+            },
+            "cWidth": {
+                "visible": {
+                    "conditionGroup": [
+                        {
+                            "type": "equals",
+                            "attribute": "categoryId",
+                            "data": {
+                                "field": "category",
+                                "values": {
+                                    "categoryName": "Product"
+                                }
+                            },
+                            "value": "66cd4776393a1674c"
+                        }
+                    ]
+                }
+            },
+            "cLength": {
+                "visible": {
+                    "conditionGroup": [
+                        {
+                            "type": "equals",
+                            "attribute": "categoryId",
+                            "data": {
+                                "field": "category",
+                                "values": {
+                                    "categoryName": "Product"
+                                }
+                            },
+                            "value": "66cd4776393a1674c"
+                        }
+                    ]
+                }
+            },
+            "cHeight": {
+                "visible": {
+                    "conditionGroup": [
+                        {
+                            "type": "equals",
+                            "attribute": "categoryId",
+                            "data": {
+                                "field": "category",
+                                "values": {
+                                    "categoryName": "Product"
+                                }
+                            },
+                            "value": "66cd4776393a1674c"
                         }
                     ]
                 }
