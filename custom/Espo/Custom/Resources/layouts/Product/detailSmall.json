@@ -61,15 +61,25 @@
         "dynamicLogicVisible": {
             "conditionGroup": [
                 {
-                    "type": "equals",
-                    "attribute": "categoryId",
-                    "data": {
-                        "field": "category",
-                        "values": {
-                            "categoryName": "Machine & Spare Part"
+                    "type": "or",
+                    "value": [
+                        {
+                            "type": "equals",
+                            "attribute": "categoryId",
+                            "data": {
+                                "field": "category",
+                                "values": {
+                                    "categoryName": "Machine & Spare Part"
+                                }
+                            },
+                            "value": "66d5f9f70a0af074c"
+                        },
+                        {
+                            "type": "equals",
+                            "attribute": "cCategoryName",
+                            "value": "Machine & Spare Part"
                         }
-                    },
-                    "value": "66d5f9f70a0af074c"
+                    ]
                 }
             ]
         },
@@ -92,15 +102,25 @@
         "dynamicLogicVisible": {
             "conditionGroup": [
                 {
-                    "type": "equals",
-                    "attribute": "categoryId",
-                    "data": {
-                        "field": "category",
-                        "values": {
-                            "categoryName": "Product"
+                    "type": "or",
+                    "value": [
+                        {
+                            "type": "equals",
+                            "attribute": "categoryId",
+                            "data": {
+                                "field": "category",
+                                "values": {
+                                    "categoryName": "Product"
+                                }
+                            },
+                            "value": "66cd4776393a1674c"
+                        },
+                        {
+                            "type": "equals",
+                            "attribute": "cCategoryName",
+                            "value": "Product"
                         }
-                    },
-                    "value": "66cd4776393a1674c"
+                    ]
                 }
             ]
         },
@@ -168,6 +188,21 @@
                                 }
                             },
                             "value": "66d5fa0bf090d6e98"
+                        },
+                        {
+                            "type": "equals",
+                            "attribute": "cCategoryName",
+                            "value": "Product"
+                        },
+                        {
+                            "type": "equals",
+                            "attribute": "cCategoryName",
+                            "value": "Ingredient"
+                        },
+                        {
+                            "type": "equals",
+                            "attribute": "cCategoryName",
+                            "value": "Stationary"
                         }
                     ]
                 }
