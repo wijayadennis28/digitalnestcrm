@@ -45,9 +45,6 @@
             "default": "Batch",
             "readOnly": true
         },
-        "unitPrice": {
-            "required": false
-        },
         "cSku": {
             "type": "varchar",
             "maxLength": 7,

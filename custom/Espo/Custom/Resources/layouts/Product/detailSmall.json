@@ -21,9 +21,6 @@
             ],
             [
                 {
-                    "name": "unitPrice"
-                },
-                {
                     "name": "expirationDays"
                 }
             ],
@@ -31,115 +28,24 @@
                 {
                     "name": "description"
                 }
-            ]
-        ],
-        "style": "default",
-        "noteStyle": "info",
-        "label": ""
-    },
-    {
-        "rows": [
-            [
-                {
-                    "name": "quantity"
-                },
-                {
-                    "name": "quantityOnHand"
-                }
             ],
             [
                 {
-                    "name": "quantityReserved"
+                    "name": "isInventory"
                 },
                 {
-                    "name": "quantitySoftReserved"
+                    "name": "inventoryNumberType"
                 }
             ]
         ],
         "dynamicLogicVisible": null,
         "style": "default",
+        "dynamicLogicStyled": null,
         "tabBreak": false,
+        "tabLabel": "Overview",
         "hidden": false,
         "noteText": null,
-        "noteStyle": "info",
-        "customLabel": "Quantity"
-    },
-    {
-        "rows": [
-            [
-                {
-                    "name": "cPanjang"
-                },
-                {
-                    "name": "cLebar"
-                },
-                {
-                    "name": "cTinggi"
-                }
-            ],
-            [
-                {
-                    "name": "weight"
-                },
-                false
-            ]
-        ],
-        "dynamicLogicVisible": {
-            "conditionGroup": [
-                {
-                    "type": "or",
-                    "value": [
-                        {
-                            "type": "equals",
-                            "attribute": "cCategoryName",
-                            "value": "Ingredient"
-                        },
-                        {
-                            "type": "equals",
-                            "attribute": "cCategoryName",
-                            "value": "Product"
-                        },
-                        {
-                            "type": "equals",
-                            "attribute": "cCategoryName",
-                            "value": "Stationary"
-                        }
-                    ]
-                }
-            ]
-        },
-        "style": "default",
-        "tabBreak": false,
-        "tabLabel": "Ukuran",
-        "hidden": false,
-        "noteText": null,
-        "noteStyle": "info",
-        "customLabel": "Size"
-    },
-    {
-        "rows": [
-            [
-                {
-                    "name": "cCProductFormulas"
-                }
-            ]
-        ],
-        "dynamicLogicVisible": {
-            "conditionGroup": [
-                {
-                    "type": "equals",
-                    "attribute": "cCategoryName",
-                    "value": "Product"
-                }
-            ]
-        },
-        "style": "default",
-        "tabBreak": false,
-        "tabLabel": "Formula",
-        "hidden": false,
-        "noteText": null,
-        "noteStyle": "info",
-        "customLabel": "Formula"
+        "customLabel": "Inventory Information"
     },
     {
         "rows": [
@@ -156,17 +62,159 @@
             "conditionGroup": [
                 {
                     "type": "equals",
-                    "attribute": "cCategoryName",
-                    "value": "Machine & Spare Part"
+                    "attribute": "categoryId",
+                    "data": {
+                        "field": "category",
+                        "values": {
+                            "categoryName": "Machine & Spare Part"
+                        }
+                    },
+                    "value": "66d5f9f70a0af074c"
                 }
             ]
         },
         "style": "default",
-        "tabBreak": true,
-        "tabLabel": "Maintenance",
+        "tabBreak": false,
+        "tabLabel": null,
         "hidden": false,
         "noteText": null,
         "noteStyle": "info",
-        "customLabel": ""
+        "customLabel": "Maintenance"
+    },
+    {
+        "rows": [
+            [
+                {
+                    "name": "cCProductFormulas"
+                }
+            ]
+        ],
+        "dynamicLogicVisible": {
+            "conditionGroup": [
+                {
+                    "type": "equals",
+                    "attribute": "categoryId",
+                    "data": {
+                        "field": "category",
+                        "values": {
+                            "categoryName": "Product"
+                        }
+                    },
+                    "value": "66cd4776393a1674c"
+                }
+            ]
+        },
+        "style": "default",
+        "tabBreak": false,
+        "tabLabel": null,
+        "hidden": false,
+        "noteText": null,
+        "noteStyle": "info",
+        "customLabel": "Formula"
+    },
+    {
+        "rows": [
+            [
+                {
+                    "name": "cLength"
+                },
+                {
+                    "name": "cWidth"
+                },
+                {
+                    "name": "cHeight"
+                }
+            ],
+            [
+                {
+                    "name": "weight"
+                }
+            ]
+        ],
+        "dynamicLogicVisible": {
+            "conditionGroup": [
+                {
+                    "type": "or",
+                    "value": [
+                        {
+                            "type": "equals",
+                            "attribute": "categoryId",
+                            "data": {
+                                "field": "category",
+                                "values": {
+                                    "categoryName": "Product"
+                                }
+                            },
+                            "value": "66cd4776393a1674c"
+                        },
+                        {
+                            "type": "equals",
+                            "attribute": "categoryId",
+                            "data": {
+                                "field": "category",
+                                "values": {
+                                    "categoryName": "Ingredient"
+                                }
+                            },
+                            "value": "66d5f9e5323ca336e"
+                        },
+                        {
+                            "type": "equals",
+                            "attribute": "categoryId",
+                            "data": {
+                                "field": "category",
+                                "values": {
+                                    "categoryName": "Stationary"
+                                }
+                            },
+                            "value": "66d5fa0bf090d6e98"
+                        }
+                    ]
+                }
+            ]
+        },
+        "style": "default",
+        "tabBreak": false,
+        "tabLabel": null,
+        "hidden": false,
+        "noteText": null,
+        "noteStyle": "info",
+        "customLabel": "Inventory Size"
+    },
+    {
+        "rows": [
+            [
+                {
+                    "name": "costPrice"
+                },
+                {
+                    "name": "pricingType"
+                }
+            ],
+            [
+                {
+                    "name": "listPrice"
+                },
+                {
+                    "name": "pricingFactor"
+                }
+            ],
+            [
+                {
+                    "name": "unitPrice"
+                },
+                {
+                    "name": "isTaxFree"
+                }
+            ]
+        ],
+        "dynamicLogicVisible": null,
+        "style": "default",
+        "tabBreak": false,
+        "tabLabel": null,
+        "hidden": false,
+        "noteText": null,
+        "noteStyle": "info",
+        "customLabel": "Price"
     }
 ]
