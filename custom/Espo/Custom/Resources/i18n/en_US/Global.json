@@ -4,7 +4,7 @@
         "CFormula": "Formula",
         "CIngredientsAmount": "Ingredients Amount",
         "Stream": "Activity Log",
-        "CProductFormulaList": "Komposisi Produk",
+        "CProductFormulaList": "Product Composition ",
         "CProductFormula": "Product Formula",
         "Account": "Account",
         "CWorkingShift": "Working Shift",
@@ -13,7 +13,7 @@
     "scopeNamesPlural": {
         "CProductionLog": "Production Logs",
         "CProductFormula": "Product Formulas",
-        "CProductFormulaList": "Komposisi Produk List",
+        "CProductFormulaList": "Product Composition List",
         "CFormula": "Formulas",
         "CIngredientsAmount": "Ingredients Amounts",
         "Stream": "Activity Log",
