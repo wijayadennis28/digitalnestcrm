@@ -20206,20 +20206,20 @@ body[data-navbar="side"]
     .navbar-brand
     img {
     max-width: 184px;
-    height: 39px;
+    height: 100px;
   }
 
   body[data-navbar="side"] #navbar a.navbar-brand,
   body[data-navbar="side"].minimized.side-menu-opened #navbar a.navbar-brand {
     max-width: 184px;
-    height: 39px;
+    height: 80px;
     margin-left: 0;
   }
 
   body[data-navbar="side"] #navbar .navbar-header,
   body[data-navbar="side"].minimized.side-menu-opened #navbar .navbar-header {
     width: 232px;
-    height: 65px;
+    height: 100px;
     display: block;
     padding-bottom: 13px;
     padding-top: 13px;
