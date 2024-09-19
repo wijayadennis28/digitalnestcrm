@@ -12469,7 +12469,7 @@ define("view", ["exports", "bullbone"], function (e, t) {
         confirm: function (i, e, s, a) {
           const o = (e = e || {}).confirmText,
             n = e.cancelText,
-            r = e.confirmStyle || "danger";
+            r = e.confirmStyle || "success";
           let l = e.backdrop,
             d = (void 0 === l && (l = !1), !1);
           const h = () => {
