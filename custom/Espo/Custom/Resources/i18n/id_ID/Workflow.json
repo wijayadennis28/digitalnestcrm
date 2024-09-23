@@ -1,0 +1,32 @@
+{
+    "actionTypes": {
+        "applyAssignmentRule": "Terapkan Aturan Penugasan",
+        "createEntity": "Buat Record",
+        "createNotification": "Buat Notifikasi",
+        "createRelatedEntity": "Buat Entitas Terkait",
+        "executeFormula": "Jalankan Formula Skrip",
+        "makeFollowed": "Untuk Diikuti",
+        "relateWithEntity": "Hubungkan Dengan Catatan Lain",
+        "runService": "Eksekusi Layanan",
+        "sendEmail": "Kirim E-mail",
+        "sendRequest": "Mengirim Permintaan HTTP",
+        "startBpmnProcess": "Memulai Process BPM",
+        "triggerWorkflow": "Memicu Aliran Yang Lain",
+        "unrelateFromEntity": "Putuskan hubungan dengan data lain",
+        "updateCreatedEntity": "Perbarui Catatan yang dibuat",
+        "updateEntity": "Perbarui catatan target",
+        "updateProcessEntity": "Perbarui process catatan",
+        "updateRelatedEntity": "Perbarui catatan terkait"
+    },
+    "emailAddressOptions": {
+        "assignedUser": "Pengguna yang ditugaskan",
+        "currentUser": "Pengguna sekarang",
+        "followers": "Pengikut",
+        "followersExcludingAssignedUser": "Pengikut selain pegguna yang ditugaskan",
+        "fromOrReplyTo": "Alamat Dari/Ditujukan Ke",
+        "specifiedContacts": "Kontak yang ditentukan",
+        "specifiedEmailAddress": "Alamat E-mail yang ditentukan",
+        "specifiedTeams": "Pengguna Tim Tertentu",
+        "specifiedUsers": "Pengguna Tertentu"
+    }
+}

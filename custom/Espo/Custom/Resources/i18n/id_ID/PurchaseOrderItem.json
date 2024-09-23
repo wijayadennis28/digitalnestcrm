@@ -1,0 +1,35 @@
+{
+    "fields": {
+        "account": "Akun",
+        "allowFractionalQuantity": "Izinkan Kuantitas Pecahan",
+        "amount": "Nominal",
+        "amountConverted": "Nominal (Diubah)",
+        "amountCurrency": "Mata Uang Nominal",
+        "cInventoryType": "Tipe Inventaris",
+        "createdBy": "Dibuat Oleh",
+        "description": "Deskripsi",
+        "discount": "Diskon (%)",
+        "inventoryNumberType": "Tipe Nomor Inventaris",
+        "listPrice": "Harga Terdaftar",
+        "listPriceConverted": "Harga Terdaftar (Converted)",
+        "listPriceCurrency": "Mata Uang Harga Terdaftar",
+        "name": "Nama",
+        "product": "Produk",
+        "qty": "Kuantitas",
+        "quantity": "Kuantitas",
+        "quantityInt": "Kuantitas (Int)",
+        "taxRate": "Rate Pajak",
+        "unitPrice": "Harga Satuan",
+        "unitPriceConverted": "Harga Satuan (Diubah)",
+        "unitPriceCurrency": "Mata Uang Harga Satuan",
+        "unitWeight": "Berat Satuan",
+        "weight": "Berat"
+    },
+    "labels": {
+        "Purchase Orders": "Purchase Order"
+    },
+    "links": {
+        "account": "Akun",
+        "product": "Produk"
+    }
+}

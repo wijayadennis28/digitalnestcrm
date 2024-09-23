@@ -12,7 +12,7 @@ return [
   'recordsPerPageSmall' => 5,
   'recordsPerPageSelect' => 10,
   'recordsPerPageKanban' => 5,
-  'applicationName' => 'ERP TOP',
+  'applicationName' => 'Triniti Optima Packindo',
   'version' => '8.3.1',
   'timeZone' => 'Asia/Jakarta',
   'dateFormat' => 'DD/MM/YYYY',
@@ -36,7 +36,7 @@ return [
   'smtpAuth' => false,
   'smtpSecurity' => 'TLS',
   'smtpUsername' => '',
-  'language' => 'en_US',
+  'language' => 'en_GB',
   'authenticationMethod' => 'Espo',
   'globalSearchEntityList' => [
     0 => 'Account',
@@ -93,7 +93,8 @@ return [
         2 => 'CWorkingShift'
       ]
     ],
-    5 => 'Report'
+    5 => 'CProductFormula',
+    6 => 'Report'
   ],
   'quickCreateList' => [
     0 => 'Account',
@@ -297,8 +298,8 @@ return [
   'authIpAddressWhitelist' => [],
   'authIpAddressCheckExcludedUsersIds' => [],
   'authIpAddressCheckExcludedUsersNames' => (object) [],
-  'cacheTimestamp' => 1726932500,
-  'microtime' => 1726932500.453531,
+  'cacheTimestamp' => 1727076873,
+  'microtime' => 1727076873.008463,
   'siteUrl' => 'https://erp.trinitioptimapackindo.com',
   'fullTextSearchMinLength' => 4,
   'appTimestamp' => 1724991562,
@@ -310,8 +311,8 @@ return [
   'scopeColorsDisabled' => false,
   'tabIconsDisabled' => false,
   'dashletsOptions' => (object) [],
-  'companyLogoId' => '66eee4324cca4bb5a',
-  'companyLogoName' => 'top(1).png',
+  'companyLogoId' => '66f0fa66aaffc6cc2',
+  'companyLogoName' => 'Untitled drawing (6).png',
   'warehousesEnabled' => true,
   'inventoryTransactionsEnabled' => true,
   'priceBooksEnabled' => true,

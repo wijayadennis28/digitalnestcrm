@@ -1,0 +1,29 @@
+{
+    "fields": {
+        "attachments": "Lampiran",
+        "bccEmailAddresses": "BCC Alamat Email",
+        "ccEmailAddresses": "CC Alamat Email",
+        "createdBy": "Dibuat Oleh",
+        "deliveryDate": "Tanggal Pengiriman",
+        "emailAccounts": "Akun Personal",
+        "emailAddress": "Alamat Email",
+        "folderId": "ID Folder",
+        "fromAddress": "Dari Alamat",
+        "fromEmailAddress": "Dari Address (link)",
+        "fromName": "Dari Nama",
+        "groupFolder": "Folder Grup",
+        "hasAttachment": "Lampiran Tersedia",
+        "isHtml": "Adalah HTML",
+        "inTrash": "Di Tempat Sampah",
+        "isNotRead": "Belum Dibaca",
+        "isNotReplied": "Belum Dibalas",
+        "isRead": "Sudah Dibaca",
+        "isReplied": "Sudah Dibalas",
+        "isUsers": "Pengguna",
+        "messageId": "Message ID",
+        "messageIdInternal": "Message ID (Internal)",
+        "replied": "Membalas",
+        "replies": "Balasan",
+        "users": "Pengguna"
+    }
+}

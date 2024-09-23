@@ -1,0 +1,47 @@
+{
+    "actions": {
+        "stream": "Stream"
+    },
+    "fields": {
+        "auditPermission": "Izin Audit",
+        "assignmentPermission": "Izin Penugasan",
+        "dataPrivacyPermission": "Izin Privasi Data",
+        "exportPermission": "Izin Ekspor",
+        "fieldData": "Data Field",
+        "followerManagementPermission": "Izin Pengaturan Pengikut",
+        "groupEmailAccountPermission": "Izin Akun Email Group",
+        "massUpdatePermission": "Update Izin Massa",
+        "mentionPermission": "Izin Mention",
+        "messagePermission": "Izin Pesan",
+        "roles": "Peran"
+    },
+    "labels": {
+        "Access": "Akses",
+        "Field Level": "Tingkat Lapangan",
+        "Scope Level": "Tingkat Lingkup"
+    },
+    "links": {
+        "teams": "Tim",
+        "users": "Pengguna"
+    },
+    "options": {
+        "accessList": {
+            "not-set": "Tidak diatur",
+            "enabled": "Diaktifkan",
+            "disabled": "Dimatikan"
+        },
+        "levelList": {
+            "all": "Semua",
+            "team": "Tim",
+            "account": "Akun",
+            "contact": "Kontak",
+            "own": "Sendiri",
+            "no": "Tidak",
+            "yes": "Ya",
+            "not-set": "Tidak diatur"
+        }
+    },
+    "tooltips": {
+        "assignmentPermission": "Membatasi kemampuan untuk menetapkan catatan dan pesan posting ke pengguna lain.\\nsemua - tidak ada pembatasanTim - dapat menetapkan dan posting hanya untuk rekantidak ada - dapat menetapkan dan posting hanya untuk diri"
+    }
+}

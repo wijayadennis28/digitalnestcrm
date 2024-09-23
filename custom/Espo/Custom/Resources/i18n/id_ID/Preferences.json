@@ -1,0 +1,13 @@
+{
+    "labels": {
+        "Locale": "Lokal",
+        "Notifications": "Notifikasi",
+        "User Interface": "UI Interface"
+    },
+    "fields": {
+        "tabList": "Daftar Tabel"
+    },
+    "tabFields": {
+        "color": "Warna"
+    }
+}

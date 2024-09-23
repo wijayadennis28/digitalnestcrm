@@ -1,14 +1,16 @@
 [
     {
-        "name": "product",
-        "align": "left",
-        "width": 35
+        "name": "name"
     },
     {
         "name": "cInventoryType"
     },
     {
         "name": "quantity",
+        "width": 9
+    },
+    {
+        "name": "taxRate",
         "width": 9
     },
     {

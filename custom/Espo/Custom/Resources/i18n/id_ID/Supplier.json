@@ -1,0 +1,24 @@
+{
+    "fields": {
+        "account": "Akun",
+        "billingAddressStreet": "Jalan",
+        "billingAddressState": "Provinsi"
+    },
+    "labels": {
+        "Create Supplier": "Buat Supplier"
+    },
+    "links": {
+        "account": "Akun",
+        "prices": "Harga",
+        "purchaseOrders": "Purchase Order"
+    },
+    "options": {
+        "status": {
+            "Active": "Aktif",
+            "Inactive": "Inaktif"
+        }
+    },
+    "presetFilters": {
+        "active": "Aktif"
+    }
+}

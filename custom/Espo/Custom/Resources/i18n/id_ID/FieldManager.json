@@ -1,0 +1,29 @@
+{
+    "labels": {
+        "Type": "Tipe",
+        "Name": "Nama"
+    },
+    "fieldParts": {
+        "address": {
+            "street": "Jalan",
+            "city": "Kota",
+            "state": "Provinsi",
+            "country": "Negara",
+            "postalCode": "Kode Pos",
+            "map": "Map"
+        },
+        "currency": {
+            "converted": "(Diubah)",
+            "currency": "(Mata Uang)"
+        },
+        "datetimeOptional": {
+            "date": "Tanggal"
+        },
+        "personName": {
+            "salutation": "Sapaan",
+            "first": "Pertama",
+            "middle": "Tengah",
+            "last": "Terakhir"
+        }
+    }
+}

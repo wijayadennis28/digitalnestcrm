@@ -1,0 +1,11 @@
+{
+    "options": {
+        "status": {
+            "Draft": "Draft",
+            "Pending Received Inventory": "Pending Received Inventory",
+            "Released": "Awaiting Payment",
+            "Completed": "Completed",
+            "Canceled": "Canceled"
+        }
+    }
+}

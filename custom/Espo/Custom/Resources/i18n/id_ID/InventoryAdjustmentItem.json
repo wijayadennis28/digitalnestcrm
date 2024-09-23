@@ -1,0 +1,28 @@
+{
+    "fields": {
+        "allowFractionalQuantity": "Izinkan Kuantitas Pecahan",
+        "createdBy": "Dibuat Oleh",
+        "description": "Deskripsi",
+        "inventoryAdjustment": "Penyesuaian",
+        "inventoryAdjustmentStatus": "Status Penyesuaian Inventaris",
+        "inventoryNumber": "Nomor Inventaris",
+        "inventoryNumberType": "Tipe Nomor Inventaris",
+        "isInventory": "Inventaris Tersedia",
+        "name": "Nama",
+        "newQtyOnHand": "Jumlah Yang Ada",
+        "newQuantityOnHand": "Jumlah Yang Ada (Baru)",
+        "product": "Produk",
+        "qty": "Disesuaikan",
+        "quantity": "Kuantitas",
+        "quantityInt": "Kuantitas (Int)",
+        "warehouse": "Gudang"
+    },
+    "links": {
+        "inventoryAdjustment": "Penyesuaian",
+        "inventoryNumber": "Nomor Inventaris",
+        "product": "Produk"
+    },
+    "presetFilters": {
+        "completed": "Selesai"
+    }
+}

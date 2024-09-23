@@ -1,0 +1,28 @@
+{
+    "fields": {
+        "addressState": "Provinsi",
+        "addressStreet": "Jalan",
+        "cCProductionLogs": "Log Produksi",
+        "isStock": "Stok",
+        "modifiedBy": "Dimodifikasi Oleh",
+        "isAvailableForStock": "Stok Tersedia"
+    },
+    "labels": {
+        "Create Warehouse": "Buat Gudang"
+    },
+    "links": {
+        "cCProductionLogs": "Log Produksi",
+        "inventoryNumbers": "Nomor Inventaris",
+        "inventoryTransactions": "Transaksi Inventaris",
+        "products": "Produk"
+    },
+    "options": {
+        "status": {
+            "Active": "Aktif",
+            "Inactive": "Tidak Aktif"
+        }
+    },
+    "presetFilters": {
+        "active": "Aktif"
+    }
+}

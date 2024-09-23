@@ -1,0 +1,93 @@
+{
+    "fields": {
+        "account": "Akun",
+        "amount": "Nominal",
+        "amountConverted": "Nominal (Diubah)",
+        "amountCurrency": "Mata Uang Nominal",
+        "billingAddress": "Alamat Penagihan",
+        "billingAddressState": "Provinsi",
+        "billingAddressStreet": "Jalan",
+        "billingContact": "Kontak Penagihan",
+        "createdBy": "Dibuat Oleh",
+        "currency": "Mata Uang",
+        "dateInvoiced": "Tanggal Invoice",
+        "dateOrdered": "Tangal Pemesanan",
+        "dateQuoted": "Tanggal Quoted",
+        "discountAmount": "Nominal Diskon",
+        "discountAmountConverted": "Nominal Diskon (Diubah)",
+        "discountAmountCurrency": "Mata Uang Nominal Diskon",
+        "grandTotalAmount": "Nominal Grand Total",
+        "grandTotalAmountConverted": "Nominal Grand Total (Diubah)",
+        "grandTotalAmountCurrency": "Mata Uang Nominal Grand Total",
+        "inventoryStatus": "Status Inventaris",
+        "invoiceNumber": "Nomor Invoice",
+        "isDone": "Selesai",
+        "isLocked": "Terkunci",
+        "isNotActual": "Tidak Aktual",
+        "itemList": "Daftar Item",
+        "number": "Nomor Quote",
+        "numberA": "Nomor Quote (auto-incremented)",
+        "opportunity": "Peluang",
+        "preDiscountedAmount": "Nominal Sebelum Diskon",
+        "preDiscountedAmountConverted": "Nominal Sebelum Diskon (Diubah)",
+        "preDiscountedAmountCurrency": "Mata Uang Nominal Sebelum Diskon",
+        "priceBook": "Buku Harga",
+        "shippingAddress": "Alamat Pengiriman",
+        "shippingContact": "Kontak Pengiriman",
+        "shippingCost": "Harga Pengiriman",
+        "shippingCostConverted": "Harga Pengiriman (Diubah)",
+        "shippingCostCurrency": "Mata Uang Harga Pengiriman",
+        "shippingProvider": "Penyedia Jasa Pengiriman",
+        "tax": "Pajak",
+        "taxAmount": "Nominal Pajak",
+        "taxAmountConverted": "Nominal Pajak (Diubah)",
+        "taxAmountCurrency": "Mata Uang Nominal Pajak",
+        "taxRate": "Rate Nominal Pajak",
+        "weight": "Berat"
+    },
+    "labels": {
+        "Add Item": "Tambah Item",
+        "Apply Price Book": "Terapkan Buku Harga",
+        "Create Quote": "Buat Quote",
+        "Items": "Item",
+        "Locked": "Terkunci",
+        "Quote Items": "Item Quote",
+        "Shipping Providers": "Penyedia Jasa Pengiriman",
+        "Taxes": "Pajak",
+        "Templates": "Template",
+        "Unlocked": "Tidak Terkunci"
+    },
+    "links": {
+        "account": "Akun",
+        "billingContact": "Kontak Penagihan",
+        "inventoryData": "Data Inventaris",
+        "invoices": "Invoice",
+        "items": "Item",
+        "opportunity": "Peluang",
+        "priceBook": "Buku Harga",
+        "shippingContact": "Kontak Pengiriman",
+        "shippingProvider": "Penyedia Jasa Pengiriman",
+        "tax": "Pajak"
+    },
+    "options": {
+        "status": {
+            "Draft": "Draft",
+            "In Review": "In Review",
+            "Presented": "Presented",
+            "Approved": "Disetujui",
+            "Rejected": "Rejected",
+            "Canceled": "Dibatalkan"
+        }
+    },
+    "presetFilters": {
+        "actual": "Aktual",
+        "approved": "Disetujui"
+    },
+    "texts": {
+        "availableQuantityInfo": "Tersedia",
+        "lackingQuantityInfo": "Kurang",
+        "onHandBatchInfo": "Jumlah Yang Ada di Batch",
+        "onHandQuantityInfo": "Jumlah Yang Ada",
+        "totalAvailableQuantityInfo": "Di semua gudang"
+    }
+}

@@ -1,0 +1,50 @@
+{
+    "fields": {
+        "amount": "Jumlah",
+        "createdBy": "Dibuat Oleh",
+        "date": "Tanggal",
+        "doneAt": "Selesai Pada",
+        "isDone": "Selesai",
+        "itemList": "Daftar Item",
+        "number": "Nomor",
+        "numberA": "Nomor (auto-incremented)",
+        "reason": "Alasan",
+        "warehouse": "Gudang"
+    },
+    "labels": {
+        "Add Item": "Tambah Item",
+        "Create InventoryAdjustment": "Buat Penyesuaian",
+        "Items": "Item"
+    },
+    "links": {
+        "inventoryTransactions": "Transaksi Inventaris",
+        "items": "Item",
+        "warehouse": "Gudang"
+    },
+    "messages": {
+        "duplicateItems": "Tidak dapat memiliki item yang sama dalam penyesuaian.",
+        "emptyNewQuantityInItem": "Jumlah yang ada tidak ditentukan untuk barang ini.",
+        "itemProductIsNotInventory": "Produk {name} bukan inventaris.",
+        "sameItemsInAnotherAdjustment": "Item yang sama sedang dalam proses penyesuaian."
+    },
+    "options": {
+        "reason": {
+            "Stocktaking": "Inventarisasi",
+            "Write-off": "Penghapusan",
+            "Waste": "Limbah",
+            "Shrinkage": "Penyusutan",
+            "Damage": "Rusak",
+            "Internal": "Internal"
+        },
+        "status": {
+            "Draft": "Draft",
+            "Started": "Dimulai",
+            "Completed": "Selesai",
+            "Canceled": "Dibatalkan"
+        }
+    },
+    "presetFilters": {
+        "actual": "Aktual",
+        "completed": "Selesai"
+    }
+}

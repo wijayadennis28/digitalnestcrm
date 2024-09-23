@@ -1,0 +1,23 @@
+{
+    "fields": {
+        "account": "Akun",
+        "allowFractionalQuantity": "Izinkan Kuantitas Pecahan",
+        "cInventoryType": "Tipe Inventori",
+        "description": "Deskripsi",
+        "inventoryNumberType": "Jenis Nomor Inventaris",
+        "isInventory": "Inventaris",
+        "product": "Produk",
+        "qtyReceived": "Kuantitas yang diterima",
+        "qty": "Kuantitas",
+        "quantity": "Kuantitas",
+        "quantityInt": "Kuantitas",
+        "quantityReceived": "Kuantitas yang diterima",
+        "quantityReceivedInt": "Kuantitas yang diterima",
+        "receiptOrderStatus": "Status Receipt Order",
+        "unitWeight": "Satuan Berat",
+        "weight": "Berat"
+    },
+    "links": {
+        "product": "Produk"
+    }
+}

@@ -1,0 +1,23 @@
+{
+    "fields": {
+        "exportAllFields": "Ekspor semua field",
+        "fieldList": "Daftar field",
+        "xlsxTitle": "Judul"
+    },
+    "messages": {
+        "exportProcessed": "Ekspor telah di proses. Unduh [file]({url}).",
+        "infoText": "Ekspor sedang diproses oleh cron. Proses ini dapat memakan waktu beberapa saat hingga selesai. Menutup dialog modal ini tidak akan memengaruhi proses eksekusi."
+    },
+    "options": {
+        "status": {
+            "Pending": "Pending",
+            "Running": "Sedang Diproses",
+            "Success": "Berhasil",
+            "Failed": "Gagal"
+        }
+    },
+    "tooltips": {
+        "xlsxLite": "Menggunakan lebih sedikit memori. Direkomendasikan untuk ekspor jumlah data yang besar.",
+        "xlsxTitle": "Cetak judul dan tanggal saat ini di header."
+    }
+}

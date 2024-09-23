@@ -1,0 +1,12 @@
+{
+    "fields": {
+        "data": "Data",
+        "enabled": "Aktif",
+        "isLocked": "Terkunci"
+    },
+    "labels": {
+        "Connected": "Terhubung",
+        "Disconnect": "Tidak Terhubung",
+        "Disconnected": "Tidak Terhubung"
+    }
+}

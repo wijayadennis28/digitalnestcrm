@@ -1,5 +1,43 @@
 {
-  "labels": {
-    "Create CProductionLog": "Buat Production Log"
-  }
+    "labels": {
+        "Create CProductionLog": "Buat Log Produksi"
+    },
+    "fields": {
+        "actionTaken": "Tindakan Pencegahan dan Perbaikan yang Diambil",
+        "batchCode": "Kode Batch",
+        "cIngredientsAmounts": "Jumlah Bahan Baku",
+        "cProductFormula": "Formula Produk",
+        "createdBy": "Dibuat Oleh",
+        "cWorkingShift": "Shift Kerja",
+        "inventoryNumber": "Nomor Inventaris",
+        "machine": "Mesin",
+        "name": "Nama",
+        "producedAt": "Diproduksi Pada",
+        "product": "Produk",
+        "productionLogNumber": "ID Log Produksi",
+        "productionStatus": "Status Produksi",
+        "reasonOfFailure": "Keterangan Kegagalan",
+        "recycledProduct": "Produk Daur Ulang",
+        "totalRecycledProduct": "Total Produk Daur Ulang",
+        "warehouse": "Gudang"
+    },
+    "links": {
+        "cIngredientsAmounts": "Jumlah Bahan Baku",
+        "cProductFormula": "Formula Produk",
+        "cWorkingShift": "Shift Kerja",
+        "inventoryNumber": "Nomor Inventaris",
+        "product": "Produk",
+        "recycledProduct": "Produk Daur Ulang",
+        "warehouse": "Gudang"
+    },
+    "options": {
+        "productionStatus": {
+            "Success": "Success",
+            "Failed": "Gagal",
+            "Successful": "Berhasil"
+        }
+    },
+    "tooltips": {
+        "total": "Jumlah produk yang diproduksi"
+    }
 }

@@ -1,0 +1,11 @@
+{
+    "labels": {
+        "Fields": "Field",
+        "Layouts": "Layout",
+        "Schedule": "Jadwal"
+    },
+    "fields": {
+        "activityStatusList": "Status Aktivitas",
+        "audited": "Diaudit"
+    }
+}

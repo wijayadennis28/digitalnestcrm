@@ -1,0 +1,58 @@
+{
+    "fields": {
+        "account": "Akun",
+        "amount": "Jumlah",
+        "currency": "Mata Uang",
+        "dateOrdered": "Tanggal Dipesan",
+        "dateReceived": "Tanggal Diterima",
+        "isDone": "Selesai",
+        "isHardLocked": "Terkunci",
+        "isLocked": "Terkunci",
+        "isNotActual": "Tidak Aktual",
+        "itemList": "List Item",
+        "receivedItemList": "Item List yang Diterima",
+        "shippingContact": "Kontak Pengriman",
+        "shippingCost": "Harga Pengiriman",
+        "shippingCostConverted": "Harga Pengiriman  (Diubah)",
+        "shippingCostCurrency": "Harga Pengiriman (Mata Uang)",
+        "shippingProvider": "Penyedia Pengriman",
+        "warehouse": "Gudang",
+        "weight": "Berat"
+    },
+    "labels": {
+        "Add Item": "Tambah Item",
+        "Create ReceiptOrder": "Buat Receipt Order",
+        "Received Inventory": "Inventory yang diterima"
+    },
+    "links": {
+        "account": "Akun",
+        "cFaktur": "Faktu",
+        "inventoryTransactions": "Transaksi Inventory",
+        "shippingContact": "Kontak Pengiriman",
+        "shippingProvider": "Penyedia Pengiriman",
+        "warehouse": "Gudang"
+    },
+    "messages": {
+        "emptyQuantityReceived": "Tentukan jumlah sebelum menysuaikan pesanan.",
+        "inventoryIsInAdjustment": "Tidak dapat menyimpan inventoris yang sedang dalam penyesuaian.",
+        "receivedInventoryNumberIsEmpty": "Nomor inventory tidak tersedia.",
+        "receivedInventoryNumberProductMismatch": "Nomor inventory tidak sesuai.",
+        "receivedQuantityMismatch": "Kuantitas tidak cocok.",
+        "receivedSerialNumberNotOne": "Jumlah barang dengan SKU tidak satu.",
+        "serialNumberAlreadyInStock": "Nomor seri produk telah tersedia.\\n{numbers}",
+        "serialNumberImportLimitExceeded": "Tidak boleh mengimpor lebih dari {maxSize}.",
+        "serialNumbersExists": "Nomor seri telah terdaftar.\\n{numbers}"
+    },
+    "options": {
+        "status": {
+            "Draft": "Draft",
+            "Ready": "Siap",
+            "Completed": "Selesai",
+            "Canceled": "Dibatalkan"
+        }
+    },
+    "presetFilters": {
+        "actual": "Aktual",
+        "completed": "Selesai"
+    }
+}

@@ -1,0 +1,17 @@
+{
+    "fields": {
+        "entityType": "Tipe Entitas",
+        "isActive": "Diaktifkan",
+        "report": "Laporan"
+    },
+    "labels": {
+        "Create ReportFilter": "Buat Filter"
+    },
+    "links": {
+        "report": "Laporan"
+    },
+    "tooltips": {
+        "report": "Daftar laporan yang akan digunakan untuk filter.",
+        "teams": "Filter diaplikasikan pada tim. Jika tidak ada tim yang ditentukan, maka tidak ada pembatasan berdasarkan tim yang akan diterapkan."
+    }
+}

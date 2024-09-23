@@ -1,0 +1,62 @@
+{
+    "fields": {
+        "acceptanceStatus": "Status Penerimaan",
+        "acceptanceStatusCalls": "Status Penerimaan (Panggilan)",
+        "acceptanceStatusMeetings": "Status Penerimaan (Rapat)",
+        "accountIsInactive": "Akun Non-Aktif",
+        "addressState": "Provinsi",
+        "createdBy": "Dibuat Oleh",
+        "doNotCall": "Jangan Panggil",
+        "emailAddressIsInvalid": "Alamat Email Tidak Valid",
+        "emailAddressIsOptedOut": "Alamat Email Tidak Disertakan",
+        "firstName": "Nama Depan",
+        "lastName": "Nama Belakang",
+        "opportunityRole": "Peran Peluang",
+        "originalEmail": "Email Original",
+        "originalLead": "Calon Pelanggan Original",
+        "phoneNumberIsInvalid": "Nomor Telfon Tidak Valid",
+        "phoneNumberIsOptedOut": "Nomor Telfon Tidak Disertakan",
+        "targetListIsOptedOut": "Tidak Disertakan (Daftar Target)",
+        "title": "Gelar"
+    },
+    "labels": {
+        "Create Contact": "Buat Kontak"
+    },
+    "links": {
+        "account": "Akun (Utama)",
+        "calls": "Panggilan",
+        "cases": "Kasus",
+        "casesPrimary": "Kasus (Utama)",
+        "deliveryOrdersShipping": "Delivery Orders (Pengiriman)",
+        "documents": "Dokumen",
+        "emails": "E-mail",
+        "invoicesBilling": "Invoice (Penagihan)",
+        "invoicesShipping": "Invoice (Pengiriman)",
+        "meetings": "Rapat",
+        "opportunities": "Peluang",
+        "opportunitiesPrimary": "Peluang (Utama)",
+        "originalLead": "Calon Pelanggan Orginal",
+        "purchaseOrdersBilling": "Purchase Orders (Penagihan)",
+        "purchaseOrdersShipping": "Purchase Orders (Pengiriman)",
+        "quotesBilling": "Quotes (Penagihan)",
+        "quotesShipping": "Quotes (Pengiriman)",
+        "receiptOrdersShipping": "Receipt Orders (Pengiriman)",
+        "returnOrdersBilling": "Return Orders (Penagihan)",
+        "returnOrdersShipping": "Return Orders (Pengiriman)",
+        "salesOrdersBilling": "Sales Orders (Penagihan)",
+        "salesOrdersShipping": "Sales Orders (Pengiriman)",
+        "tasks": "Tugas",
+        "tasksPrimary": "Tasks (Diperluas)"
+    },
+    "options": {
+        "opportunityRole": {
+            "": "",
+            "Decision Maker": "Pengambil Keputusan",
+            "Evaluator": "Penilai",
+            "Influencer": "Influencer"
+        }
+    },
+    "presetFilters": {
+        "accountActive": "Aktif"
+    }
+}

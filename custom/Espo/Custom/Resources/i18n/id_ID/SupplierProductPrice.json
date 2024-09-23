@@ -1,0 +1,31 @@
+{
+    "fields": {
+        "dateEnd": "Tanggal Berakhir",
+        "dateStart": "Tanggal Berlaku",
+        "minQty": "Min. Kuantitas",
+        "minQuantity": "Min. Kuantitas",
+        "partNumber": "Nomor Part",
+        "price": "Harga",
+        "priceConverted": "Harga Setelah Perubahan Mata Uang",
+        "priceCurrency": "Mata Uang Harga",
+        "product": "Produk"
+    },
+    "labels": {
+        "Create SupplierProductPrice": "Buat Harga Supplier"
+    },
+    "links": {
+        "product": "Produk"
+    },
+    "massActions": {
+        "updatePrice": "Update Harga"
+    },
+    "options": {
+        "status": {
+            "Active": "Aktif",
+            "Inactive": "Non-Aktif"
+        }
+    },
+    "presetFilters": {
+        "active": "Aktif"
+    }
+}

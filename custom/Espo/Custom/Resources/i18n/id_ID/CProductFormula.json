@@ -1,5 +1,16 @@
 {
-  "labels": {
-    "Create CProductFormula": "Buat Product Formula"
-  }
+    "labels": {
+        "Create CProductFormula": "Buat Formula Produk"
+    },
+    "fields": {
+        "cProductionLogs": "Log Produksi",
+        "cProductFormulaLists": "Daftar Formula Produk",
+        "createdBy": "Dibuat Oleh",
+        "product": "Produk"
+    },
+    "links": {
+        "cProductFormulaLists": "Daftar Formula Produk",
+        "cProductionLogs": "Log Produksi",
+        "product": "Produk"
+    }
 }

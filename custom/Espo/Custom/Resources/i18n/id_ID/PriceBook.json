@@ -1,0 +1,26 @@
+{
+    "fields": {
+        "cSalesOrders": "Sales Order",
+        "parentPriceBook": "Buku Harga Induk"
+    },
+    "labels": {
+        "Create PriceBook": "Buat Buku Harga"
+    },
+    "links": {
+        "accounts": "Akun",
+        "childPriceBooks": "Turunan Buku Harga",
+        "parentPriceBook": "Induk Price Book",
+        "prices": "Harga",
+        "products": "Produk",
+        "rules": "Aturan"
+    },
+    "options": {
+        "status": {
+            "Active": "Aktif",
+            "Inactive": "Non-Aktif"
+        }
+    },
+    "presetFilters": {
+        "active": "Aktif"
+    }
+}

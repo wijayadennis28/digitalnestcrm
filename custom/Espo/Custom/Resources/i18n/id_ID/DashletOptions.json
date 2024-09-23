@@ -1,0 +1,26 @@
+{
+    "fields": {
+        "autorefreshInterval": "Interval Auto-refresh",
+        "boolFilterList": "Filter Tambahan",
+        "column": "Kolom Penjumlahan",
+        "dateFilter": "Filter Tanggal",
+        "dateTo": "Tanggal Hingga",
+        "displayOnlyCount": "Hanya Tampilkan Total",
+        "displayRecords": "Tampilan Catatan",
+        "displayTotal": "Tampilkan Total",
+        "displayType": "Yang Ditampilkan",
+        "enabledScopeList": "Yang Ditampilkan",
+        "entityType": "Tipe Entitas",
+        "futureDays": "X Hari Selanjutnya",
+        "primaryFilter": "Filter Utama",
+        "report": "Laporan",
+        "skipOwn": "Tidak menampilkan catatan sendiri",
+        "team": "Tim",
+        "text": "Teks",
+        "useLastStage": "Kelompokkan berdasarkan tahap terakhir",
+        "users": "Pengguna"
+    },
+    "tooltips": {
+        "skipOwn": "Tindakan yang dilakukan oleh akun pengguna Anda tidak akan ditampilkan."
+    }
+}

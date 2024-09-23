@@ -11,9 +11,7 @@
         "name": "dateOrdered"
     },
     {
-        "name": "amount",
-        "width": 12,
-        "align": "right"
+        "name": "grandTotalAmount"
     },
     {
         "name": "status",

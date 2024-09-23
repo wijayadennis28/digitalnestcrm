@@ -1,0 +1,78 @@
+{
+    "fields": {
+        "account": "Akun",
+        "amount": "Nominal",
+        "amountConverted": "Nominal (Diubah)",
+        "amountCurrency": "Mata Uang Nominal",
+        "billingAddress": "Alamat Penagihan",
+        "billingAddressState": "Provinsi",
+        "billingAddressStreet": "Jalan",
+        "billingContact": "Kontak Penagihan",
+        "createdBy": "Dibuat Oleh",
+        "currency": "Mata Uang",
+        "dateInvoiced": "Tanggal di Invoice",
+        "discountAmount": "Nominal Diskon",
+        "discountAmountConverted": "Nominal Diskon (Diubah)",
+        "discountAmountCurrency": "Mata Uang Nominal Diskon",
+        "grandTotalAmount": "Nominal Grand Total",
+        "grandTotalAmountConverted": "Nominal Grand Total (Diubah)",
+        "grandTotalAmountCurrency": "Mata Uang Nominal Grand Total",
+        "isDone": "Selesai",
+        "isLocked": "Dikunci",
+        "isNotActual": "Tidak Aktual",
+        "itemList": "Daftar Item",
+        "number": "Nomor",
+        "numberA": "Nomor (auto-incremented)",
+        "opportunity": "Peluang",
+        "preDiscountedAmount": "Nominal Sebelum Diskon",
+        "preDiscountedAmountConverted": "Nominal Sebelum Diskon (Diubah)",
+        "preDiscountedAmountCurrency": "Mata Uang Nominal Sebelum Diskon",
+        "priceBook": "Buku Produk",
+        "shippingAddress": "Alamat Pengiriman",
+        "shippingContact": "Kontak Pengiriman",
+        "shippingCost": "Biaya Pengiriman",
+        "shippingCostConverted": "Biaya Pengiriman (Diubah)",
+        "shippingCostCurrency": "Mata Uang Biaya Pengiriman",
+        "shippingProvider": "Penyedia Jasa Pengiriman",
+        "tax": "Pajak",
+        "taxAmount": "Nominal Pajak",
+        "taxAmountConverted": "Nominal Pajak (Diubah)",
+        "taxAmountCurrency": "Mata Uang Nominal Pajak",
+        "taxRate": "Rate Pajak",
+        "weight": "Berat"
+    },
+    "labels": {
+        "Add Item": "Tambah Item",
+        "Create Invoice": "Buat Invoice",
+        "Invoice Items": "Item Invoice",
+        "Items": "Item",
+        "Shipping Providers": "Penyedia Jasa Pengiriman",
+        "Taxes": "Pajak",
+        "Templates": "Template"
+    },
+    "links": {
+        "account": "Akun",
+        "billingContact": "Kontak Penagihan",
+        "items": "Item",
+        "opportunity": "Peluang",
+        "priceBook": "Buku Harga",
+        "shippingContact": "Kontak Pengiriman",
+        "shippingProvider": "Penyedia Jasa Pengiriman",
+        "tax": "Pajak"
+    },
+    "options": {
+        "status": {
+            "Draft": "Draft",
+            "Sent": "Dikirim",
+            "In Review": "In Review",
+            "Confirmed": "Confirmed",
+            "Paid": "Dibayar",
+            "Rejected": "Ditolak",
+            "Canceled": "Dibatalkan"
+        }
+    },
+    "presetFilters": {
+        "actual": "Aktual",
+        "paid": "Dibayar"
+    }
+}

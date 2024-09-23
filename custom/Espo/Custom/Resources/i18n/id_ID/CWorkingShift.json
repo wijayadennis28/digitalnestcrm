@@ -1,5 +1,11 @@
 {
-  "labels": {
-    "Create CWorkingShift": "Buat Working Shift"
-  }
+    "labels": {
+        "Create CWorkingShift": "Shift Bekerja"
+    },
+    "fields": {
+        "workingDate": "Tanggal Bekerja"
+    },
+    "links": {
+        "users": "Pengguna"
+    }
 }

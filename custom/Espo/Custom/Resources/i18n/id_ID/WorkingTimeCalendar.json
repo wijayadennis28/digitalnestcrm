@@ -1,0 +1,26 @@
+{
+    "fields": {
+        "timeRanges": "Jadwal Hari Kerja",
+        "timeZone": "Zona Waktu",
+        "weekday0": "Minggu",
+        "weekday0TimeRanges": "Jadwal Minggu",
+        "weekday1": "Senin",
+        "weekday1TimeRanges": "Jadwal Senin",
+        "weekday2": "Selasa",
+        "weekday2TimeRanges": "Jadwal Selasa",
+        "weekday3": "Rabu",
+        "weekday3TimeRanges": "Jadwal Rabu",
+        "weekday4": "Kamis",
+        "weekday4TimeRanges": "Jadwal Kamis",
+        "weekday5": "Jumat",
+        "weekday5TimeRanges": "Jadwal Jumat",
+        "weekday6": "Sabtu",
+        "weekday6TimeRanges": "Jadwal Sabtu"
+    },
+    "labels": {
+        "Create WorkingTimeCalendar": "Buat Kalender"
+    },
+    "links": {
+        "ranges": "Pengecualian"
+    }
+}

@@ -7,5 +7,19 @@
             "layout": null,
             "selectPrimaryFilterName": null
         }
+    },
+    "dynamicLogic": {
+        "fields": {
+            "status": {
+                "readOnly": {
+                    "conditionGroup": [
+                        {
+                            "type": "isTrue",
+                            "attribute": "isLocked"
+                        }
+                    ]
+                }
+            }
+        }
     }
 }

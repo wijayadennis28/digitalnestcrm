@@ -1,0 +1,24 @@
+{
+    "fields": {
+        "account": "Akun",
+        "allowFractionalQuantity": "Izinkan Kuantitas Pecahan",
+        "createdBy": "Dibuat Oleh",
+        "deliveryOrderStatus": "Status Delivery Order",
+        "description": "Deskripsi",
+        "inventoryNumber": "Nomor Inventaris",
+        "inventoryNumberType": "Tipe Nomor Inventaris",
+        "isInventory": "Inventaris Tersedia",
+        "name": "Nama",
+        "product": "Produk",
+        "qty": "Kuantitas",
+        "quantity": "Kuantitas",
+        "quantityInt": "Kuantitas (Int)",
+        "unitWeight": "Berat Satuan",
+        "weight": "Berat"
+    },
+    "links": {
+        "account": "Akun",
+        "inventoryNumber": "Nomor Inventaris",
+        "product": "Produk"
+    }
+}

@@ -1,0 +1,8 @@
+{
+    "fields": {
+        "connectedAt": "Terhubung Pada",
+        "caseDistribution": "Distribusi Kasus",
+        "excludeFromReply": "Hilangkan dari Balasan",
+        "createCase": "Buat Kasus"
+    }
+}

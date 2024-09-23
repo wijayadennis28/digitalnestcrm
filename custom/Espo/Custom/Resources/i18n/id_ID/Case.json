@@ -1,0 +1,47 @@
+{
+    "fields": {
+        "attachments": "Lampiran",
+        "cActionTaken": "Tindakan Yang Diambil",
+        "contacts": "Kontak",
+        "createdBy": "Dibuat Oleh",
+        "inboundEmail": "Group Akun Email",
+        "lead": "Calon Pelanggan",
+        "originalEmail": "Email Original",
+        "status": "Status Insiden",
+        "type": "Tipe"
+    },
+    "labels": {
+        "Create Case": "Buat Kasus",
+        "Reject": "Tolak"
+    },
+    "links": {
+        "attachments": "Lampiran",
+        "calls": "Panggilan",
+        "contact": "Kontak (Utama)",
+        "contacts": "Kontak",
+        "Contacts": "Kontak",
+        "emails": "E-mail",
+        "inboundEmail": "Group Akun Email",
+        "lead": "Calon Pelanggan",
+        "meetings": "Rapat",
+        "tasks": "Tugas"
+    },
+    "options": {
+        "status": {
+            "New": "Baru",
+            "Assigned": "Ditugaskan",
+            "Pending": "Pending",
+            "Closed": "Tertutup",
+            "Rejected": "Ditolak",
+            "Duplicate": "Duplikat"
+        },
+        "type": {
+            "Question": "Pertanyaan",
+            "Incident": "Insiden",
+            "Problem": "Masalah"
+        }
+    },
+    "presetFilters": {
+        "open": "Terbuka"
+    }
+}

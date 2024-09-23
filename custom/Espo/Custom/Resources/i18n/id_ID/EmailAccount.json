@@ -1,0 +1,31 @@
+{
+    "fields": {
+        "connectedAt": "Terhubung Pada",
+        "createdBy": "Dibuat Oleh",
+        "emailAddress": "Alamat E-mail",
+        "keepFetchedEmailsUnread": "E-mail diambil sebagai belum terbaca",
+        "emailFolder": "Masukkan di Folder",
+        "monitoredFolders": "Folder yang Dipantau"
+    },
+    "labels": {
+        "Send Test Email": "Kirim Email Tes"
+    },
+    "links": {
+        "filters": "Filter",
+        "emails": "Email"
+    },
+    "messages": {
+        "couldNotConnectToImap": "Tidak bisa terhubung ke server IMAP",
+        "imapNotConnected": "Tidak bisa terhubung ke [IMAP account](#EmailAccount/view/{id}).",
+        "connectionIsOk": "Koneksi OK"
+    },
+    "options": {
+        "status": {
+            "Active": "Aktif",
+            "Inactive": "Non-aktif"
+        }
+    },
+    "presetFilters": {
+        "active": "Aktif"
+    }
+}

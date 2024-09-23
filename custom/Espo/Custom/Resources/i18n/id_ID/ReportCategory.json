@@ -1,0 +1,13 @@
+{
+    "fields": {
+        "childList": "Daftar Turunan"
+    },
+    "labels": {
+        "Create ReportCategory": "Buat Kategori",
+        "Manage Categories": "Pengaturan Kategori",
+        "Reports": "Laporan"
+    },
+    "links": {
+        "reports": "Laporan"
+    }
+}

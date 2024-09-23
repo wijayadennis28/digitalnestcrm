@@ -1,0 +1,8 @@
+{
+    "fields": {
+        "invalid": "Tidak Valid",
+        "numeric": "Value Numerik",
+        "optOut": "Tidak Disertakan",
+        "type": "Tipe"
+    }
+}

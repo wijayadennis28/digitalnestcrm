@@ -1,0 +1,10 @@
+{
+    "fields": {
+        "code": "Kode",
+        "isPreferred": "Dipilih",
+        "preferredName": "Nama Terpilih"
+    },
+    "labels": {
+        "Create AddressCountry": "Buat Alamat Negara"
+    }
+}

@@ -1,0 +1,39 @@
+{
+    "fields": {
+        "minQuantity": "Min. Kuantitas",
+        "minQty": "Min. Kuantitas",
+        "partNumber": "Nomor Part",
+        "price": "Harga",
+        "priceBook": "Buku Harga",
+        "priceConverted": "Harga Setelah Perubahan Mata Uang",
+        "priceCurrency": "Mata Uang Harga",
+        "product": "Produk",
+        "dateEnd": "Tanggal Berakhir",
+        "dateStart": "Tanggal Berlaku"
+    },
+    "labels": {
+        "Create ProductPrice": "Buat Harga"
+    },
+    "links": {
+        "priceBook": "Buku Harga",
+        "product": "Produk"
+    },
+    "massActions": {
+        "updatePrice": "Update Harga"
+    },
+    "messages": {
+        "priceMassUpdated": "Harga telah diupdate, jumlah: {count}"
+    },
+    "options": {
+        "status": {
+            "Active": "Aktif",
+            "Inactive": "Non-Aktif"
+        }
+    },
+    "presetFilters": {
+        "active": "Aktif"
+    },
+    "tooltips": {
+        "minQuantity": "Harga akan digunakan hanya apabila jumlah barang yang dijual melebihi nilai yang ditentukan."
+    }
+}

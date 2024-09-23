@@ -1,0 +1,24 @@
+{
+    "fields": {
+        "createdBy": "Dibuat Oleh",
+        "isBeingUploaded": "Sedang Diunggah",
+        "related": "Berhubungan",
+        "role": "Peran",
+        "size": "Ukuran (bytes)",
+        "storage": "Penyimpanan",
+        "type": "Tipe"
+    },
+    "insertFromSourceLabels": {
+        "Document": "Masukkan Dokumen"
+    },
+    "options": {
+        "role": {
+            "Attachment": "Lampiran",
+            "Inline Attachment": "Lampiran Inline",
+            "Import File": "Impor File",
+            "Export File": "Ekspor File",
+            "Mail Merge": "Satukan Mail",
+            "Mass Pdf": "PDF Massa"
+        }
+    }
+}

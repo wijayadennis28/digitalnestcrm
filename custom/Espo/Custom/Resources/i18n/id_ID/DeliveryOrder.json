@@ -1,0 +1,88 @@
+{
+    "fields": {
+        "account": "Akun",
+        "amount": "Nominal",
+        "amountCurrency": "Mata Uang Nominal",
+        "cCourier": "Kurir",
+        "cDeliveryDate": "Tanggal Pengiriman (dengan Waktu)",
+        "cPlateNumber": "Plat Nomor",
+        "createdBy": "Dibuat Oleh",
+        "currency": "Mata Uang",
+        "cUsers": "Pengguna",
+        "cVehicleDetails": "Detail Kendaraan",
+        "cVehicleDetailsExternal": "Detail Kendaraan (Eksternal)",
+        "cVehicleDetailsInternal": "Detail Kendaraan (Internal)",
+        "dateOrdered": "Tanggal Pemesanan",
+        "deliveryDate": "Tanggal Pengiriman",
+        "inventoryData": "Data Inventaris",
+        "inventoryStatus": "Status Inventaris",
+        "isDone": "Selesai",
+        "isLocked": "Terkunci",
+        "isNotActual": "Tidak Aktual",
+        "itemList": "Daftar Item",
+        "number": "Nomor",
+        "numberA": "Nomor (auto-incremented)",
+        "shippingAddress": "Alamat Pengiriman",
+        "shippingContact": "Kontak Pengiriman",
+        "shippingCost": "Biaya Pengiriman",
+        "shippingCostConverted": "Biaya Pengiriman (Diubah)",
+        "shippingCostCurrency": "Mata Uang Biaya Pengiriman",
+        "shippingDate": "Tanggal Pengiriman",
+        "shippingProvider": "Penyedia Jasa Pengiriman",
+        "taxAmount": "Nominal Pajak",
+        "warehouse": "Gudang",
+        "weight": "Berat"
+    },
+    "labels": {
+        "Add Item": "Tambah Item",
+        "Availability": "Ketersediaan",
+        "Create DeliveryOrder": "Buat Delivery Order",
+        "Invalid": "Tidak Valid",
+        "Items": "Item",
+        "Show Availability": "Tampilkan Kesediaan"
+    },
+    "links": {
+        "account": "Akun",
+        "cUsers": "Pengguna",
+        "inventoryTransactions": "Transaksi Inventaris",
+        "items": "Item",
+        "shippingContact": "Kontak Pengiriman",
+        "shippingProvider": "Penyedia Jasa Pengiriman",
+        "tax": "Pajak",
+        "warehouse": "Gudang"
+    },
+    "messages": {
+        "inventoryIsInAdjustment": "Tidak bisa menyimpan karena item sedang disesuaikan.",
+        "notAvailableInventory": "Jumlah inventaris tidak cukup.",
+        "notAvailableInventoryStatusChanged": "Jumlah inventaris tidak cukup. Tidak bisa merubah status."
+    },
+    "options": {
+        "cCourier": {
+            "Internal": "Internal",
+            "External": "External",
+            "External (CDE)": "Eksternal (CDE)",
+            "External (CDD)": "Eksternal (CDD)"
+        },
+        "status": {
+            "Draft": "Draft",
+            "Ready": "Ready",
+            "In Progress": "Menunggu Pembayaran",
+            "Completed": "Selesai",
+            "Canceled": "Canceled",
+            "Failed": "Failed",
+            "Processed": "Diproses",
+            "In Delivery": "Dalam Pengiriman"
+        }
+    },
+    "presetFilters": {
+        "actual": "Aktual",
+        "completed": "Selesai"
+    },
+    "texts": {
+        "itemTooFew": "Jumlah item kurang. Sebanyak {number} harus ditambahkan.",
+        "itemTooMany": "Jumlah item berlebih. Sebanyak {number} harus dikurangi."
+    },
+    "tooltips": {
+        "cVehicleDetails": "Internal: Deskripsi, Eksternal: CDE, CDD"
+    }
+}

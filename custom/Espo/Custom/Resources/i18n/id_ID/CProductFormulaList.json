@@ -1,5 +1,16 @@
 {
-  "labels": {
-    "Create CProductFormulaList": "Buat Product Formula List"
-  }
+    "labels": {
+        "Create CProductFormulaList": "Buat Daftar Formula Produk"
+    },
+    "fields": {
+        "product": "Inventaris",
+        "quantity": "Kuantitas"
+    },
+    "layouts": {
+        "productFormula": "Daftar (Formula Produk)"
+    },
+    "links": {
+        "cProductFormula": "Formula Produk",
+        "product": "Produk"
+    }
 }
