@@ -6,6 +6,10 @@
         "warehouse1": {
             "layout": null,
             "selectPrimaryFilterName": null
+        },
+        "user": {
+            "layout": null,
+            "selectPrimaryFilterName": null
         }
     },
     "dynamicLogic": {

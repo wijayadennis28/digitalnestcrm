@@ -19,6 +19,13 @@
             "field": "cType",
             "view": "views/fields/foreign-enum",
             "isCustom": true
+        },
+        "cDeliveryDate": {
+            "notNull": false,
+            "type": "date",
+            "isCustom": true,
+            "audited": true,
+            "useNumericFormat": true
         }
     }
 }

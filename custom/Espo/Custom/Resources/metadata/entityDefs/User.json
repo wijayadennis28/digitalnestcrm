@@ -5,6 +5,11 @@
         },
         "cCWorkingShift": {
             "type": "link"
+        },
+        "cESignature": {
+            "type": "image",
+            "previewSize": "small",
+            "isCustom": true
         }
     },
     "links": {
@@ -21,6 +26,12 @@
             "entity": "CWorkingShift",
             "audited": true,
             "isCustom": true
+        },
+        "cESignature": {
+            "type": "belongsTo",
+            "entity": "Attachment",
+            "skipOrmDefs": true,
+            "utility": true
         }
     }
 }

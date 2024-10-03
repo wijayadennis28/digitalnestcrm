@@ -6,6 +6,10 @@
         "name": "cInventoryType"
     },
     {
+        "name": "cDeliveryDate",
+        "align": "left"
+    },
+    {
         "name": "quantity",
         "width": 9
     },
@@ -14,9 +18,15 @@
         "width": 9
     },
     {
+        "name": "listPrice"
+    },
+    {
         "name": "unitPrice",
         "align": "right",
         "width": 15
+    },
+    {
+        "name": "discount"
     },
     {
         "name": "amount",

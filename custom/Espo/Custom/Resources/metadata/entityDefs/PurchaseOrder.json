@@ -50,6 +50,12 @@
                 "Completed": "success",
                 "Canceled": "info"
             }
+        },
+        "cTermOfPayment": {
+            "type": "varchar",
+            "maxLength": 100,
+            "options": [],
+            "isCustom": true
         }
     }
 }

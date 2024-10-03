@@ -1,6 +1,5 @@
 {
     "fields": {
-        "cInventoryType": "Inventory Type",
         "cDeliveryDate": "Delivery Date"
     }
 }

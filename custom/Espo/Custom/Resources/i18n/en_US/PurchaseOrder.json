@@ -3,6 +3,7 @@
         "cDueDateForPaymentToSupplier": "Payment Due Date",
         "name": "Order Id",
         "billingAddress": "Billing Address",
-        "billingContact": "Billing Contact"
+        "billingContact": "Billing Contact",
+        "cTermOfPayment": "Term of Payment"
     }
 }

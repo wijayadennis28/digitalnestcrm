@@ -1,0 +1,9 @@
+{
+    "fields": {
+        "addressState": "County",
+        "billingAddressState": "County"
+    },
+    "labels": {
+        "State": "County"
+    }
+}

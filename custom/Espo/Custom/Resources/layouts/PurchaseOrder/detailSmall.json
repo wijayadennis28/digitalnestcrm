@@ -4,6 +4,9 @@
             [
                 {
                     "name": "dateOrdered"
+                },
+                {
+                    "name": "cUser"
                 }
             ],
             [

@@ -23,7 +23,17 @@
             ],
             [
                 {
+                    "name": "cTermOfPayment"
+                }
+            ],
+            [
+                {
                     "name": "warehouse"
+                }
+            ],
+            [
+                {
+                    "name": "tax"
                 }
             ]
         ],

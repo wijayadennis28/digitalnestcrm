@@ -7,5 +7,10 @@
             "Completed": "Completed",
             "Canceled": "Canceled"
         }
+    },
+    "fields": {
+        "billingAddressState": "State",
+        "shippingAddressState": "State",
+        "cTermOfPayment": "Term of Payment"
     }
 }
