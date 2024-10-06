@@ -11,6 +11,11 @@
             "field": "cType",
             "view": "views/fields/foreign-enum",
             "isCustom": true
+        },
+        "cDateReceived": {
+            "notNull": false,
+            "type": "date",
+            "isCustom": true
         }
     }
 }

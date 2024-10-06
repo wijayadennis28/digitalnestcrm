@@ -13,5 +13,8 @@
     {
         "name": "quantityReceived",
         "width": 9
+    },
+    {
+        "name": "cDateReceived"
     }
 ]

@@ -95,6 +95,15 @@
             "options": [],
             "tooltip": true,
             "isCustom": true
+        },
+        "numberA": {
+            "nextNumber": 1
+        },
+        "cDriver": {
+            "type": "varchar",
+            "maxLength": 100,
+            "options": [],
+            "isCustom": true
         }
     },
     "links": {

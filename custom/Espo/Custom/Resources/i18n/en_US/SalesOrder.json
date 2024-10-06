@@ -4,7 +4,8 @@
         "account": "Customer",
         "cPaymentDueDate": "Payment Due Date",
         "cDeliveryNote": "Delivery note",
-        "cPriceBooks": "Price Books"
+        "cPriceBooks": "Price Books",
+        "cTermOfPayment": "Term of Payment"
     },
     "options": {
         "status": {

@@ -26,19 +26,19 @@
                 }
             ]
         ],
+        "dynamicLogicVisible": null,
         "style": "default",
-        "label": "Overview"
+        "dynamicLogicStyled": null,
+        "tabBreak": false,
+        "hidden": false,
+        "noteText": null,
+        "customLabel": "Overview"
     },
     {
         "rows": [
             [
                 {
                     "name": "cCourier"
-                }
-            ],
-            [
-                {
-                    "name": "cDriver"
                 }
             ],
             [
@@ -58,6 +58,7 @@
         "dynamicLogicVisible": null,
         "style": "default",
         "tabBreak": false,
+        "tabLabel": null,
         "hidden": false,
         "noteText": null,
         "noteStyle": "info",
@@ -83,10 +84,11 @@
         ],
         "dynamicLogicVisible": null,
         "style": "default",
-        "dynamicLogicStyled": null,
         "tabBreak": false,
+        "tabLabel": null,
         "hidden": false,
         "noteText": null,
+        "noteStyle": "info",
         "customLabel": "Sales Order Details"
     }
 ]

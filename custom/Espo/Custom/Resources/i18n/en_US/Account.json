@@ -1,5 +1,12 @@
 {
     "labels": {
         "Create Account": "Create Account"
+    },
+    "options": {
+        "type": {
+            "": "",
+            "Customer": "Customer",
+            "Supplier": "Supplier"
+        }
     }
 }

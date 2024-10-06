@@ -4,6 +4,11 @@
             "readOnly": false,
             "decimalPlaces": null,
             "min": 0
+        },
+        "cDeliveryDate": {
+            "notNull": false,
+            "type": "date",
+            "isCustom": true
         }
     }
 }

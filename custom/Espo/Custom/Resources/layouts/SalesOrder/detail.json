@@ -19,6 +19,9 @@
                     "name": "dateOrdered"
                 },
                 {
+                    "name": "cTermOfPayment"
+                },
+                {
                     "name": "cPaymentDueDate"
                 }
             ]

@@ -9,5 +9,19 @@
         "fullTextSearch": false,
         "countDisabled": false
     },
-    "optimisticConcurrencyControl": true
+    "optimisticConcurrencyControl": true,
+    "fields": {
+        "type": {
+            "options": [
+                "",
+                "Customer",
+                "Supplier"
+            ],
+            "style": {
+                "": null,
+                "Customer": null,
+                "Supplier": null
+            }
+        }
+    }
 }

@@ -27,7 +27,8 @@
         "cRit": "RIT",
         "cUsers": "Users",
         "cPlateNumber": "Plate Number",
-        "cVehicleDetails": "Vehicle Details"
+        "cVehicleDetails": "Vehicle Details",
+        "cDriver": "Driver"
     },
     "links": {
         "cUsers": "Users"
