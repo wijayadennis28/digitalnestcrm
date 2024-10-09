@@ -4,7 +4,6 @@
         "weight": "Weight (Kg)",
         "cSku": "SKU",
         "cCProductFormulas": "Product Formulas",
-        "cCProductFormulaList": "Product Formula List",
         "cRecycledProductionLogs": "Recycled Production Logs",
         "cCIngredientsAmounts": "Ingredients Amounts",
         "cType": "Inventory Type",
@@ -15,15 +14,16 @@
         "cMeasurementUnit": "MeasurementUnit",
         "cWidth": "Width (Meter)",
         "cLength": "Length (Meter)",
-        "cHeight": "Height (Meter)"
+        "cHeight": "Height (Meter)",
+        "cCProductFormulaLists": "Product Formula Lists"
     },
     "links": {
         "cCProductionLogs": "Production Logs",
         "cCProductFormulas": "Product Formulas",
-        "cCProductFormulaList": "Product Formula List",
         "cRecycledProductionLogs": "Recycled Production Logs",
         "cCIngredientsAmounts": "Ingredients Amounts",
-        "cCMaintenances": "Maintenances"
+        "cCMaintenances": "Maintenances",
+        "cCProductFormulaLists": "Product Formula Lists"
     },
     "tooltips": {
         "weight": "Dalam Kilogram"

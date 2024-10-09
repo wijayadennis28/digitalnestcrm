@@ -106,6 +106,9 @@
             "maxLength": 100,
             "options": [],
             "isCustom": true
+        },
+        "dateOrdered": {
+            "useNumericFormat": true
         }
     },
     "links": {

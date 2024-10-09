@@ -11,6 +11,10 @@
         "product": {
             "layout": null,
             "selectPrimaryFilterName": null
+        },
+        "product1": {
+            "layout": null,
+            "selectPrimaryFilterName": null
         }
     },
     "additionalLayouts": {

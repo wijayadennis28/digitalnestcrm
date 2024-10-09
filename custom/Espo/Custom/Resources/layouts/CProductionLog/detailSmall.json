@@ -4,6 +4,9 @@
             [
                 {
                     "name": "productionLogNumber"
+                },
+                {
+                    "name": "batchCode"
                 }
             ],
             [
@@ -47,30 +50,18 @@
             ],
             [
                 {
-                    "name": "total"
-                }
-            ],
-            [
-                {
-                    "name": "batchCode"
-                }
-            ],
-            [
-                {
-                    "name": "recycledProduct"
+                    "name": "estQuantityProduced"
                 },
                 {
-                    "name": "totalRecycledProduct"
+                    "name": "qtyProduced"
+                },
+                {
+                    "name": "qtyFailed"
                 }
             ],
             [
                 {
-                    "name": "reasonOfFailure"
-                }
-            ],
-            [
-                {
-                    "name": "actionTaken"
+                    "name": "notes"
                 }
             ]
         ],

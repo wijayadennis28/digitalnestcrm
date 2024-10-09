@@ -101,10 +101,12 @@
             "type": "enum",
             "options": [
                 "Failed",
+                "Partial",
                 "Successful"
             ],
             "style": {
                 "Failed": "danger",
+                "Partial": "processed",
                 "Successful": "success"
             },
             "default": "Failed",
@@ -166,6 +168,28 @@
         },
         "cWorkingShift": {
             "type": "link"
+        },
+        "estQuantityProduced": {
+            "type": "int",
+            "isCustom": true,
+            "readOnly": true,
+            "tooltip": true
+        },
+        "notes": {
+            "type": "text",
+            "rowsMin": 2,
+            "cutHeight": 200,
+            "isCustom": true
+        },
+        "qtyProduced": {
+            "type": "int",
+            "tooltip": true,
+            "isCustom": true
+        },
+        "qtyFailed": {
+            "type": "int",
+            "tooltip": true,
+            "isCustom": true
         }
     },
     "links": {

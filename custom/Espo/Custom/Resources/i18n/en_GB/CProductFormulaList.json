@@ -1,1 +1,8 @@
-{}
+{
+    "fields": {
+        "product1": "Product1"
+    },
+    "links": {
+        "product1": "Product1"
+    }
+}

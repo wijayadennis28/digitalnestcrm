@@ -18,13 +18,20 @@
         "productionLogNumber": "Production Log ID",
         "inventoryNumber": "Inventory Number",
         "name": "name",
-        "cWorkingShift": "Working Shift"
+        "cWorkingShift": "Working Shift",
+        "estQuantityProduced": "Estimated Quantity Produced",
+        "notes": "Notes",
+        "qtyProduced": "Qty Produced",
+        "qtyFailed": "Qty Failed"
     },
     "labels": {
         "Create CProductionLog": "Create Production Log"
     },
     "tooltips": {
-        "total": "Amount of product produced"
+        "total": "Amount of product produced",
+        "estQuantityProduced": "Estimated quantity produced based on formula",
+        "qtyProduced": "Quantity produced based on production",
+        "qtyFailed": "Number of failed quantity based on production"
     },
     "options": {
         "shift": {
@@ -37,7 +44,8 @@
         "productionStatus": {
             "Success": "Success",
             "Failed": "Failed",
-            "Successful": "Successful"
+            "Successful": "Successful",
+            "Partial": "Partial"
         }
     },
     "links": {

@@ -1,1 +1,20 @@
-{}
+{
+    "options": {
+        "productionStatus": {
+            "Failed": "Failed",
+            "Partial": "Partial",
+            "Successful": "Successful"
+        }
+    },
+    "fields": {
+        "estQuantityProduced": "Estimated Quantity Produced",
+        "notes": "Notes",
+        "qtyProduced": "Qty Produced",
+        "qtyFailed": "Qty Failed"
+    },
+    "tooltips": {
+        "estQuantityProduced": "Estimated quantity produced based on formula",
+        "qtyProduced": "Quantity produced based on production",
+        "qtyFailed": "Number of failed quantity based on production"
+    }
+}

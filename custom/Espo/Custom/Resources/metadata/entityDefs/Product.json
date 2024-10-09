@@ -63,10 +63,6 @@
             "customizationDisabled": true,
             "isCustom": true
         },
-        "cCProductFormulaList": {
-            "type": "linkOne",
-            "isCustom": true
-        },
         "cRecycledProductionLogs": {
             "type": "linkMultiple",
             "layoutDetailDisabled": true,
@@ -187,6 +183,17 @@
             "notNull": false,
             "type": "float",
             "isCustom": true
+        },
+        "cCProductFormulaLists": {
+            "type": "linkMultiple",
+            "layoutDetailDisabled": true,
+            "layoutMassUpdateDisabled": true,
+            "layoutListDisabled": true,
+            "noLoad": true,
+            "importDisabled": true,
+            "exportDisabled": true,
+            "customizationDisabled": true,
+            "isCustom": true
         }
     },
     "links": {
@@ -221,16 +228,17 @@
             "audited": false,
             "isCustom": true
         },
-        "cCProductFormulaList": {
-            "type": "hasOne",
-            "foreign": "product",
-            "entity": "CProductFormulaList",
-            "isCustom": true
-        },
         "cCMaintenances": {
             "type": "hasMany",
             "foreign": "product",
             "entity": "CMaintenance",
+            "audited": false,
+            "isCustom": true
+        },
+        "cCProductFormulaLists": {
+            "type": "hasMany",
+            "foreign": "product1",
+            "entity": "CProductFormulaList",
             "audited": false,
             "isCustom": true
         }

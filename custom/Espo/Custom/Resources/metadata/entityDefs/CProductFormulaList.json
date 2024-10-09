@@ -51,6 +51,9 @@
             "isCustom": true,
             "createButton": true,
             "autocompleteOnEmpty": true
+        },
+        "product1": {
+            "type": "link"
         }
     },
     "links": {
@@ -83,6 +86,13 @@
             "type": "belongsTo",
             "foreign": "cCProductFormulaList",
             "entity": "Product",
+            "isCustom": true
+        },
+        "product1": {
+            "type": "belongsTo",
+            "foreign": "cCProductFormulaLists",
+            "entity": "Product",
+            "audited": false,
             "isCustom": true
         }
     },

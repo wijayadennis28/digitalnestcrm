@@ -2,11 +2,13 @@
     "fields": {
         "quantity": "Quantity",
         "cProductFormula": "Product Formula",
-        "product": "Inventory"
+        "product": "Inventory",
+        "product1": "Product1"
     },
     "links": {
         "cProductFormula": "Product Formula",
-        "product": "Product"
+        "product": "Product",
+        "product1": "Product1"
     },
     "labels": {
         "Create CProductFormulaList": "Create Product Formula List"
