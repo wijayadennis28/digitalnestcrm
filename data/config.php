@@ -94,7 +94,8 @@ return [
       ]
     ],
     5 => 'CProductFormula',
-    6 => 'Report'
+    6 => 'Report',
+    7 => 'InventoryTransaction'
   ],
   'quickCreateList' => [
     0 => 'Account',
@@ -298,8 +299,8 @@ return [
   'authIpAddressWhitelist' => [],
   'authIpAddressCheckExcludedUsersIds' => [],
   'authIpAddressCheckExcludedUsersNames' => (object) [],
-  'cacheTimestamp' => 1728376139,
-  'microtime' => 1728376139.619006,
+  'cacheTimestamp' => 1728532782,
+  'microtime' => 1728532782.647161,
   'siteUrl' => 'https://erp.trinitioptimapackindo.com',
   'fullTextSearchMinLength' => 4,
   'appTimestamp' => 1724991562,

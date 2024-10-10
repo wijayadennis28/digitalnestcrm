@@ -1,4 +1,15 @@
 {
+    "sidePanels": {
+        "detail": [
+            "__APPEND__",
+            {
+                "name": "stream",
+                "label": "Stream",
+                "view": "views/stream/panel",
+                "aclScope": "Stream"
+            }
+        ]
+    },
     "controller": "controllers/record",
     "boolFilterList": [
         "onlyMy"
@@ -10,9 +21,19 @@
                 "visible": {
                     "conditionGroup": [
                         {
-                            "type": "equals",
-                            "attribute": "productionStatus",
-                            "value": "Failed"
+                            "type": "or",
+                            "value": [
+                                {
+                                    "type": "equals",
+                                    "attribute": "productionStatus",
+                                    "value": "Partial"
+                                },
+                                {
+                                    "type": "equals",
+                                    "attribute": "productionStatus",
+                                    "value": "Failed"
+                                }
+                            ]
                         }
                     ]
                 }
@@ -21,31 +42,19 @@
                 "visible": {
                     "conditionGroup": [
                         {
-                            "type": "equals",
-                            "attribute": "productionStatus",
-                            "value": "Failed"
-                        }
-                    ]
-                }
-            },
-            "totalRecycledProduct": {
-                "visible": {
-                    "conditionGroup": [
-                        {
-                            "type": "equals",
-                            "attribute": "productionStatus",
-                            "value": "Failed"
-                        }
-                    ]
-                }
-            },
-            "recycledProduct": {
-                "visible": {
-                    "conditionGroup": [
-                        {
-                            "type": "equals",
-                            "attribute": "productionStatus",
-                            "value": "Failed"
+                            "type": "or",
+                            "value": [
+                                {
+                                    "type": "equals",
+                                    "attribute": "productionStatus",
+                                    "value": "Partial"
+                                },
+                                {
+                                    "type": "equals",
+                                    "attribute": "productionStatus",
+                                    "value": "Failed"
+                                }
+                            ]
                         }
                     ]
                 }
@@ -53,18 +62,6 @@
         }
     },
     "relationshipPanels": {
-        "product": {
-            "layout": null,
-            "selectPrimaryFilterName": "available"
-        },
-        "recycledProduct": {
-            "layout": null,
-            "selectPrimaryFilterName": null
-        },
-        "cProductFormula": {
-            "layout": null,
-            "selectPrimaryFilterName": null
-        },
         "cIngredientsAmounts": {
             "layout": null,
             "selectPrimaryFilterName": null
@@ -73,11 +70,11 @@
             "layout": null,
             "selectPrimaryFilterName": null
         },
-        "inventoryNumber": {
+        "cWorkingShift": {
             "layout": null,
             "selectPrimaryFilterName": null
         },
-        "cWorkingShift": {
+        "cProductionLogItems": {
             "layout": null,
             "selectPrimaryFilterName": null
         }

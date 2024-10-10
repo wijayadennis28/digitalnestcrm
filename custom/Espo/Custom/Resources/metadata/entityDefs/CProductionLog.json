@@ -41,21 +41,6 @@
             "type": "linkMultiple",
             "view": "views/fields/teams"
         },
-        "total": {
-            "type": "int",
-            "required": false,
-            "min": null,
-            "tooltip": true,
-            "isCustom": true,
-            "readOnly": true,
-            "default": 0
-        },
-        "producedAt": {
-            "notNull": false,
-            "type": "date",
-            "required": true,
-            "isCustom": true
-        },
         "shift": {
             "type": "enum",
             "required": true,
@@ -125,20 +110,6 @@
             "cutHeight": 200,
             "isCustom": true
         },
-        "product": {
-            "type": "link"
-        },
-        "recycledProduct": {
-            "type": "link"
-        },
-        "totalRecycledProduct": {
-            "type": "int",
-            "default": 0,
-            "isCustom": true
-        },
-        "cProductFormula": {
-            "type": "link"
-        },
         "cIngredientsAmounts": {
             "type": "linkMultiple",
             "layoutDetailDisabled": true,
@@ -163,33 +134,38 @@
             "prefix": "PL0000-",
             "isCustom": true
         },
-        "inventoryNumber": {
-            "type": "link"
-        },
         "cWorkingShift": {
             "type": "link"
         },
-        "estQuantityProduced": {
-            "type": "int",
+        "cProductionLogItems": {
+            "type": "linkMultiple",
+            "layoutDetailDisabled": true,
+            "layoutMassUpdateDisabled": true,
+            "layoutListDisabled": true,
+            "noLoad": true,
+            "importDisabled": true,
+            "exportDisabled": true,
+            "customizationDisabled": true,
+            "isCustom": true
+        },
+        "startProductionTime": {
+            "notNull": false,
+            "type": "datetime",
+            "useNumericFormat": true,
+            "minuteStep": 1,
             "isCustom": true,
-            "readOnly": true,
-            "tooltip": true
+            "required": true,
+            "default": null,
+            "audited": true
         },
-        "notes": {
-            "type": "text",
-            "rowsMin": 2,
-            "cutHeight": 200,
-            "isCustom": true
-        },
-        "qtyProduced": {
-            "type": "int",
-            "tooltip": true,
-            "isCustom": true
-        },
-        "qtyFailed": {
-            "type": "int",
-            "tooltip": true,
-            "isCustom": true
+        "endProductionTime": {
+            "notNull": false,
+            "type": "datetime",
+            "minuteStep": 1,
+            "isCustom": true,
+            "required": true,
+            "useNumericFormat": true,
+            "audited": true
         }
     },
     "links": {
@@ -211,27 +187,6 @@
             "relationName": "entityTeam",
             "layoutRelationshipsDisabled": true
         },
-        "product": {
-            "type": "belongsTo",
-            "foreign": "cCProductionLogs",
-            "entity": "Product",
-            "audited": false,
-            "isCustom": true
-        },
-        "recycledProduct": {
-            "type": "belongsTo",
-            "foreign": "cRecycledProductionLogs",
-            "entity": "Product",
-            "audited": false,
-            "isCustom": true
-        },
-        "cProductFormula": {
-            "type": "belongsTo",
-            "foreign": "cProductionLogs",
-            "entity": "CProductFormula",
-            "audited": false,
-            "isCustom": true
-        },
         "cIngredientsAmounts": {
             "type": "hasMany",
             "foreign": "cProductionLog",
@@ -246,18 +201,18 @@
             "audited": false,
             "isCustom": true
         },
-        "inventoryNumber": {
-            "type": "belongsTo",
-            "foreign": "cCProductionLogs",
-            "entity": "InventoryNumber",
-            "audited": false,
-            "isCustom": true
-        },
         "cWorkingShift": {
             "type": "belongsTo",
             "foreign": "cProductionLogs",
             "entity": "CWorkingShift",
             "audited": true,
+            "isCustom": true
+        },
+        "cProductionLogItems": {
+            "type": "hasMany",
+            "foreign": "cProductionLog",
+            "entity": "CProductionLogItem",
+            "audited": false,
             "isCustom": true
         }
     },

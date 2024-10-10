@@ -1,0 +1,16 @@
+{
+    "fields": {
+        "cProductionLog": "Production Log",
+        "qtyProduced": "Qty Produced",
+        "qtyFailed": "Qty Failed",
+        "product": "Product",
+        "inventoryNumber": "Inventory Number",
+        "cProductFormula": "Product Formula"
+    },
+    "links": {
+        "cProductionLog": "Production Log",
+        "product": "Product",
+        "inventoryNumber": "Inventory Number",
+        "cProductFormula": "Product Formula"
+    }
+}

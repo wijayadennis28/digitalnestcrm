@@ -12,7 +12,7 @@
             "layout": "productFormula",
             "selectPrimaryFilterName": null
         },
-        "cProductionLogs": {
+        "cProductionLogItems": {
             "layout": null,
             "selectPrimaryFilterName": null
         }

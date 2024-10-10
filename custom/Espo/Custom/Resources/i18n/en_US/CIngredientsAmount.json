@@ -1,8 +1,8 @@
 {
     "fields": {
         "product": "Product",
-        "amount": "Amount",
-        "cProductionLog": "Production Log"
+        "cProductionLog": "Production Log",
+        "amount": "Amount"
     },
     "links": {
         "product": "Product",

@@ -14,6 +14,14 @@
                     "name": "producedAt"
                 },
                 {
+                    "name": "startProductionTime"
+                },
+                {
+                    "name": "endProductionTime"
+                }
+            ],
+            [
+                {
                     "name": "shift"
                 },
                 {
@@ -22,20 +30,13 @@
             ],
             [
                 {
-                    "name": "product"
+                    "name": "batch"
                 },
                 {
-                    "name": "batch"
-                }
-            ],
-            [
-                {
-                    "name": "inventoryNumber"
-                }
-            ],
-            [
-                {
                     "name": "productionStatus"
+                },
+                {
+                    "name": "machine"
                 }
             ],
             [
@@ -45,26 +46,12 @@
             ],
             [
                 {
-                    "name": "cProductFormula"
-                },
-                {
-                    "name": "machine"
+                    "name": "actionTaken"
                 }
             ],
             [
                 {
-                    "name": "estQuantityProduced"
-                },
-                {
-                    "name": "qtyProduced"
-                },
-                {
-                    "name": "qtyFailed"
-                }
-            ],
-            [
-                {
-                    "name": "notes"
+                    "name": "reasonOfFailure"
                 }
             ]
         ],

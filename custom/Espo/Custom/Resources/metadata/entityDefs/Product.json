@@ -1,16 +1,5 @@
 {
     "fields": {
-        "cCProductionLogs": {
-            "type": "linkMultiple",
-            "layoutDetailDisabled": true,
-            "layoutMassUpdateDisabled": true,
-            "layoutListDisabled": true,
-            "noLoad": true,
-            "importDisabled": true,
-            "exportDisabled": true,
-            "customizationDisabled": true,
-            "isCustom": true
-        },
         "category": {
             "autocompleteOnEmpty": true,
             "createButton": true,
@@ -60,17 +49,6 @@
             "noLoad": false,
             "importDisabled": false,
             "exportDisabled": false,
-            "customizationDisabled": true,
-            "isCustom": true
-        },
-        "cRecycledProductionLogs": {
-            "type": "linkMultiple",
-            "layoutDetailDisabled": true,
-            "layoutMassUpdateDisabled": true,
-            "layoutListDisabled": true,
-            "noLoad": true,
-            "importDisabled": true,
-            "exportDisabled": true,
             "customizationDisabled": true,
             "isCustom": true
         },
@@ -194,23 +172,20 @@
             "exportDisabled": true,
             "customizationDisabled": true,
             "isCustom": true
+        },
+        "cCProductionLogItems": {
+            "type": "linkMultiple",
+            "layoutDetailDisabled": true,
+            "layoutMassUpdateDisabled": true,
+            "layoutListDisabled": true,
+            "noLoad": true,
+            "importDisabled": true,
+            "exportDisabled": true,
+            "customizationDisabled": true,
+            "isCustom": true
         }
     },
     "links": {
-        "cCProductionLogs": {
-            "type": "hasMany",
-            "foreign": "product",
-            "entity": "CProductionLog",
-            "audited": false,
-            "isCustom": true
-        },
-        "cRecycledProductionLogs": {
-            "type": "hasMany",
-            "foreign": "recycledProduct",
-            "entity": "CProductionLog",
-            "audited": false,
-            "isCustom": true
-        },
         "cCIngredientsAmounts": {
             "type": "hasMany",
             "foreign": "product",
@@ -239,6 +214,13 @@
             "type": "hasMany",
             "foreign": "product1",
             "entity": "CProductFormulaList",
+            "audited": false,
+            "isCustom": true
+        },
+        "cCProductionLogItems": {
+            "type": "hasMany",
+            "foreign": "product",
+            "entity": "CProductionLogItem",
             "audited": false,
             "isCustom": true
         }

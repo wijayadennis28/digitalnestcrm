@@ -7,14 +7,11 @@
         }
     },
     "fields": {
-        "estQuantityProduced": "Estimated Quantity Produced",
-        "notes": "Notes",
-        "qtyProduced": "Qty Produced",
-        "qtyFailed": "Qty Failed"
+        "cProductionLogItems": "Production Log Items",
+        "startProductionTime": "Start Production Time",
+        "endProductionTime": "End Production Time"
     },
-    "tooltips": {
-        "estQuantityProduced": "Estimated quantity produced based on formula",
-        "qtyProduced": "Quantity produced based on production",
-        "qtyFailed": "Number of failed quantity based on production"
+    "links": {
+        "cProductionLogItems": "Production Log Items"
     }
 }

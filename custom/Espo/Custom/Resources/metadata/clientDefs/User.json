@@ -1,4 +1,15 @@
 {
+    "sidePanels": {
+        "detail": [
+            "__APPEND__",
+            {
+                "name": "stream",
+                "label": "Stream",
+                "view": "views/stream/panel",
+                "aclScope": "Stream"
+            }
+        ]
+    },
     "relationshipPanels": {
         "deliveryOrder": {
             "layout": null,

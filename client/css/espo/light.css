@@ -7958,7 +7958,7 @@ button.close {
   --default-box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.09);
   --top-bar-box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.09);
   --vertical-gap: 16px;
-  --record-grid-max-width: 1300px;
+  --record-grid-max-width: 2000px;
 }
 
 .selectize-control.plugin-drag_drop.multi
@@ -31330,7 +31330,7 @@ body {
   --default-box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.04);
   --top-bar-box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.09);
   --vertical-gap: 16px;
-  --record-grid-max-width: 1300px;
+  --record-grid-max-width: 2000px;
 }
 
 body {

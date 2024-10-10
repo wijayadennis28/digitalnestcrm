@@ -39,14 +39,14 @@
         "product": {
             "type": "link"
         },
-        "amount": {
-            "type": "int",
-            "required": true,
-            "default": 0,
-            "isCustom": true
-        },
         "cProductionLog": {
             "type": "link"
+        },
+        "amount": {
+            "notNull": false,
+            "type": "float",
+            "decimalPlaces": 1,
+            "isCustom": true
         }
     },
     "links": {

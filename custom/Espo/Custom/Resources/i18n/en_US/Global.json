@@ -9,7 +9,8 @@
         "Account": "Account",
         "CWorkingShift": "Working Shift",
         "Product": "Inventory",
-        "CMaintenance": "Maintenance"
+        "CMaintenance": "Maintenance",
+        "CProductionLogItem": "Production Log Item"
     },
     "scopeNamesPlural": {
         "CProductionLog": "Production Logs",
@@ -21,7 +22,8 @@
         "Account": "Accounts",
         "CWorkingShift": "Working Shifts",
         "Product": "Inventories",
-        "CMaintenance": "Maintenance"
+        "CMaintenance": "Maintenance",
+        "CProductionLogItem": "Production Log Items"
     },
     "dashlets": {
         "Stream": "Log"

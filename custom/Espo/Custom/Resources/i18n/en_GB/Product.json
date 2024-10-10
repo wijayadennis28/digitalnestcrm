@@ -1,8 +1,10 @@
 {
     "fields": {
-        "cCProductFormulaLists": "Product Formula Lists"
+        "cCProductFormulaLists": "Product Formula Lists",
+        "cCProductionLogItems": "Production Log Items"
     },
     "links": {
-        "cCProductFormulaLists": "Product Formula Lists"
+        "cCProductFormulaLists": "Product Formula Lists",
+        "cCProductionLogItems": "Production Log Items"
     }
 }

@@ -1,1 +1,8 @@
-{}
+{
+    "fields": {
+        "cProductionLogItems": "Production Log Items"
+    },
+    "links": {
+        "cProductionLogItems": "Production Log Items"
+    }
+}

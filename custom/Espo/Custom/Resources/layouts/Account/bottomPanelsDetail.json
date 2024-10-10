@@ -1,4 +1,7 @@
 {
+    "stream": {
+        "disabled": true
+    },
     "_delimiter_": {
         "disabled": true
     },
@@ -13,9 +16,5 @@
     },
     "documents": {
         "index": 3
-    },
-    "stream": {
-        "sticked": true,
-        "index": 4
     }
 }

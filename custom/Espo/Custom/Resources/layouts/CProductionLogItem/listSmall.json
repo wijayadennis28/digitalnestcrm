@@ -1,0 +1,17 @@
+[
+    {
+        "name": "product"
+    },
+    {
+        "name": "inventoryNumber"
+    },
+    {
+        "name": "cProductFormula"
+    },
+    {
+        "name": "qtyProduced"
+    },
+    {
+        "name": "qtyFailed"
+    }
+]

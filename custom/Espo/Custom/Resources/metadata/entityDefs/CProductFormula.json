@@ -50,7 +50,7 @@
             "customizationDisabled": true,
             "isCustom": true
         },
-        "cProductionLogs": {
+        "cProductionLogItems": {
             "type": "linkMultiple",
             "layoutDetailDisabled": true,
             "layoutMassUpdateDisabled": true,
@@ -95,10 +95,10 @@
             "audited": false,
             "isCustom": true
         },
-        "cProductionLogs": {
+        "cProductionLogItems": {
             "type": "hasMany",
             "foreign": "cProductFormula",
-            "entity": "CProductionLog",
+            "entity": "CProductionLogItem",
             "audited": false,
             "isCustom": true
         }

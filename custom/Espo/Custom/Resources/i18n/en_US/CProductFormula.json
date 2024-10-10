@@ -2,12 +2,12 @@
     "fields": {
         "product": "Product",
         "cProductFormulaLists": "Product Formula List",
-        "cProductionLogs": "Production Logs"
+        "cProductionLogItems": "Production Log Items"
     },
     "links": {
         "product": "Product",
         "cProductFormulaLists": "Product Formula List",
-        "cProductionLogs": "Production Logs"
+        "cProductionLogItems": "Production Log Items"
     },
     "labels": {
         "Create CProductFormula": "Create Product Formula"

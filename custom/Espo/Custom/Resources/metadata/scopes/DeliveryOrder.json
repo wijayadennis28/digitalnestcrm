@@ -1,0 +1,22 @@
+{
+    "stream": true,
+    "disabled": false,
+    "statusField": null,
+    "kanbanStatusIgnoreList": null,
+    "stars": false,
+    "softReserveStatusList": [
+        "Draft"
+    ],
+    "reserveStatusList": [
+        "Ready"
+    ],
+    "canceledStatusList": [
+        "Canceled"
+    ],
+    "doneStatusList": [
+        "Completed"
+    ],
+    "failedStatusList": [
+        "Failed"
+    ]
+}

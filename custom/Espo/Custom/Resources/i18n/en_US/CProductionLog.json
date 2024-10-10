@@ -1,7 +1,5 @@
 {
     "fields": {
-        "total": "Total",
-        "producedAt": "Produced At",
         "shift": "Shift",
         "batchCode": "Batch code",
         "batch": "Batch",
@@ -9,29 +7,17 @@
         "productionStatus": "Production Status",
         "reasonOfFailure": "Reason of Failure",
         "actionTaken": "Preventive and Corrective Action Taken",
-        "product": "Product",
-        "recycledProduct": "Recycled Product",
-        "totalRecycledProduct": "Total Recycled Product",
-        "cProductFormula": "Product Formula",
         "cIngredientsAmounts": "Ingredients Amounts",
         "warehouse": "Warehouse",
         "productionLogNumber": "Production Log ID",
-        "inventoryNumber": "Inventory Number",
         "name": "name",
         "cWorkingShift": "Working Shift",
-        "estQuantityProduced": "Estimated Quantity Produced",
-        "notes": "Notes",
-        "qtyProduced": "Qty Produced",
-        "qtyFailed": "Qty Failed"
+        "cProductionLogItems": "Production Log Items",
+        "startProductionTime": "Start Production Time",
+        "endProductionTime": "End Production Time"
     },
     "labels": {
         "Create CProductionLog": "Create Production Log"
-    },
-    "tooltips": {
-        "total": "Amount of product produced",
-        "estQuantityProduced": "Estimated quantity produced based on formula",
-        "qtyProduced": "Quantity produced based on production",
-        "qtyFailed": "Number of failed quantity based on production"
     },
     "options": {
         "shift": {
@@ -49,12 +35,9 @@
         }
     },
     "links": {
-        "product": "Product",
-        "recycledProduct": "Recycled Product",
-        "cProductFormula": "Product Formula",
         "cIngredientsAmounts": "Ingredients Amounts",
         "warehouse": "Warehouse",
-        "inventoryNumber": "Inventory Number",
-        "cWorkingShift": "Working Shift"
+        "cWorkingShift": "Working Shift",
+        "cProductionLogItems": "Production Log Items"
     }
 }

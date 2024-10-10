@@ -14,12 +14,6 @@
         "name": "shift"
     },
     {
-        "name": "product"
-    },
-    {
-        "name": "total"
-    },
-    {
         "name": "producedAt"
     }
 ]

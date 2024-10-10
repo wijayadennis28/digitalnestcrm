@@ -4,7 +4,7 @@
             "pattern": "$latinLettersDigits",
             "options": []
         },
-        "cCProductionLogs": {
+        "cCProductionLogItems": {
             "type": "linkMultiple",
             "layoutDetailDisabled": true,
             "layoutMassUpdateDisabled": true,
@@ -17,10 +17,10 @@
         }
     },
     "links": {
-        "cCProductionLogs": {
+        "cCProductionLogItems": {
             "type": "hasMany",
             "foreign": "inventoryNumber",
-            "entity": "CProductionLog",
+            "entity": "CProductionLogItem",
             "audited": false,
             "isCustom": true
         }

@@ -1,0 +1,40 @@
+[
+    {
+        "rows": [
+            [
+                {
+                    "name": "product"
+                },
+                {
+                    "name": "number"
+                }
+            ],
+            [
+                {
+                    "name": "quantity"
+                },
+                {
+                    "name": "parent"
+                }
+            ],
+            [
+                {
+                    "name": "type"
+                },
+                {
+                    "name": "warehouse"
+                }
+            ],
+            [
+                {
+                    "name": "inventoryNumber"
+                },
+                {
+                    "name": "productionLog"
+                }
+            ]
+        ],
+        "style": "default",
+        "label": ""
+    }
+]

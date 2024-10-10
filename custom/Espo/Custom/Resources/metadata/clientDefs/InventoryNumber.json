@@ -7,6 +7,14 @@
         "cProductionLogs": {
             "layout": null,
             "selectPrimaryFilterName": null
+        },
+        "cProductionLogItem": {
+            "layout": null,
+            "selectPrimaryFilterName": null
+        },
+        "cProductionLogItems": {
+            "layout": null,
+            "selectPrimaryFilterName": null
         }
     }
 }

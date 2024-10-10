@@ -8,10 +8,6 @@
             "layout": null,
             "selectPrimaryFilterName": null
         },
-        "cCProductionLogs": {
-            "layout": null,
-            "selectPrimaryFilterName": null
-        },
         "inventoryNumbers": {
             "layout": "listForProduct",
             "selectPrimaryFilterName": null
@@ -57,6 +53,18 @@
             "selectPrimaryFilterName": null
         },
         "cPriceList": {
+            "layout": null,
+            "selectPrimaryFilterName": null
+        },
+        "cProductionLogItems": {
+            "layout": null,
+            "selectPrimaryFilterName": null
+        },
+        "products": {
+            "layout": null,
+            "selectPrimaryFilterName": null
+        },
+        "productParent": {
             "layout": null,
             "selectPrimaryFilterName": null
         }
