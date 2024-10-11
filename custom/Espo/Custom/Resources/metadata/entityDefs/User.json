@@ -3,12 +3,20 @@
         "cDeliveryOrder": {
             "type": "link"
         },
-        "cCWorkingShift": {
-            "type": "link"
-        },
         "cESignature": {
             "type": "image",
             "previewSize": "small",
+            "isCustom": true
+        },
+        "cCWorkingShifts": {
+            "type": "linkMultiple",
+            "layoutDetailDisabled": false,
+            "layoutMassUpdateDisabled": false,
+            "layoutListDisabled": false,
+            "noLoad": false,
+            "importDisabled": false,
+            "exportDisabled": false,
+            "customizationDisabled": false,
             "isCustom": true
         }
     },
@@ -20,18 +28,19 @@
             "audited": false,
             "isCustom": true
         },
-        "cCWorkingShift": {
-            "type": "belongsTo",
-            "foreign": "users",
-            "entity": "CWorkingShift",
-            "audited": true,
-            "isCustom": true
-        },
         "cESignature": {
             "type": "belongsTo",
             "entity": "Attachment",
             "skipOrmDefs": true,
             "utility": true
+        },
+        "cCWorkingShifts": {
+            "type": "hasMany",
+            "relationName": "cUserCWorkingShift",
+            "foreign": "users",
+            "entity": "CWorkingShift",
+            "audited": true,
+            "isCustom": true
         }
     }
 }

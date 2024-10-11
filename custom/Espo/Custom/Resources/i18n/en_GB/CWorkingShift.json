@@ -1,1 +1,8 @@
-{}
+{
+    "fields": {
+        "users": "Users"
+    },
+    "links": {
+        "users": "Users"
+    }
+}

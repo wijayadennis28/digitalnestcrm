@@ -1,11 +1,11 @@
 {
     "fields": {
         "cDeliveryOrder": "Delivery Order",
-        "cCWorkingShift": "Working Shift",
-        "cESignature": "E-Signature"
+        "cESignature": "E-Signature",
+        "cCWorkingShifts": "Working Shifts"
     },
     "links": {
         "cDeliveryOrder": "Delivery Order",
-        "cCWorkingShift": "Working Shift"
+        "cCWorkingShifts": "Working Shifts"
     }
 }

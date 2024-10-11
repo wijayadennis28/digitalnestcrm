@@ -1,5 +1,9 @@
 {
     "fields": {
-        "cESignature": "E-Signature"
+        "cESignature": "E-Signature",
+        "cCWorkingShifts": "Working Shifts"
+    },
+    "links": {
+        "cCWorkingShifts": "Working Shifts"
     }
 }

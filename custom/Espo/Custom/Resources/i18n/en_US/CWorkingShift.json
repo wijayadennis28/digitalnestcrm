@@ -1,16 +1,16 @@
 {
     "fields": {
-        "users": "Users",
         "workingDate": "Working Date",
         "startTime": "Start Time",
         "endTime": "End Time",
         "shift": "Shift",
         "name": "Shift ID",
-        "cProductionLogs": "Production Logs"
+        "cProductionLogs": "Production Logs",
+        "users": "Users"
     },
     "links": {
-        "users": "Users",
-        "cProductionLogs": "Production Logs"
+        "cProductionLogs": "Production Logs",
+        "users": "Users"
     },
     "labels": {
         "Create CWorkingShift": "Create Working Shift"
