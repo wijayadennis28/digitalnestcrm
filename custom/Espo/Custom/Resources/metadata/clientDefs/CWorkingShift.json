@@ -16,11 +16,11 @@
     ],
     "iconClass": "fas fa-user-clock",
     "relationshipPanels": {
-        "users": {
+        "cProductionLogs": {
             "layout": null,
             "selectPrimaryFilterName": null
         },
-        "cProductionLogs": {
+        "users": {
             "layout": null,
             "selectPrimaryFilterName": null
         }

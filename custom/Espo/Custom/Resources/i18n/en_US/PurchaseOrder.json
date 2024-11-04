@@ -5,5 +5,15 @@
         "billingAddress": "Billing Address",
         "billingContact": "Billing Contact",
         "cTermOfPayment": "Term of Payment"
+    },
+    "options": {
+        "status": {
+            "Draft": "Draft",
+            "Canceled": "Canceled",
+            "Pending Received Inventory": "Pending Received Inventory",
+            "Wating for Payment": "Menunggu Pembayaran",
+            "Released": "Released",
+            "Completed": "Completed"
+        }
     }
 }

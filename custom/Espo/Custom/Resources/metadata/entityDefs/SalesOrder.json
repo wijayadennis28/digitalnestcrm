@@ -99,7 +99,8 @@
         "discountAmount": {
             "readOnly": false,
             "conversionDisabled": true,
-            "onlyDefaultCurrency": true
+            "onlyDefaultCurrency": true,
+            "tooltip": true
         },
         "cTermOfPayment": {
             "type": "varchar",
@@ -109,6 +110,14 @@
         },
         "dateOrdered": {
             "useNumericFormat": true
+        },
+        "cDiscountAmount": {
+            "type": "currency",
+            "onlyDefaultCurrency": true,
+            "conversionDisabled": true,
+            "decimal": true,
+            "audited": true,
+            "isCustom": true
         }
     },
     "links": {

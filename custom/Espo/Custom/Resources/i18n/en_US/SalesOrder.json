@@ -5,7 +5,11 @@
         "cPaymentDueDate": "Payment Due Date",
         "cDeliveryNote": "Delivery note",
         "cPriceBooks": "Price Books",
-        "cTermOfPayment": "Term of Payment"
+        "cTermOfPayment": "Term of Payment",
+        "discountAmount": "Discount (%)",
+        "cDiscountAmount": "Discount Amount",
+        "cDiscountAmountCurrency": "Discount Amount (Currency)",
+        "cDiscountAmountConverted": "Discount Amount (Converted)"
     },
     "options": {
         "status": {
@@ -30,5 +34,8 @@
     },
     "links": {
         "cPriceBooks": "Price Books"
+    },
+    "tooltips": {
+        "discountAmount": "Discount calculates from items discount"
     }
 }

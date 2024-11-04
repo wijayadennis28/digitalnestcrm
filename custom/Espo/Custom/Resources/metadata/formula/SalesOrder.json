@@ -1,3 +1,3 @@
 {
-    "beforeSaveCustomScript": null
+    "beforeSaveCustomScript": "if (shippingCost > 0) {\n    shippingCost = shippingCost;\n}\n\nif (cDiscountAmount > 0) {\n    grandTotalAmount = amount + taxAmount + shippingCost - cDiscountAmount;\n}"
 }

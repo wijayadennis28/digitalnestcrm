@@ -38,17 +38,19 @@
         "status": {
             "options": [
                 "Draft",
+                "Canceled",
                 "Pending Received Inventory",
+                "Wating for Payment",
                 "Released",
-                "Completed",
-                "Canceled"
+                "Completed"
             ],
             "style": {
                 "Draft": null,
+                "Canceled": "info",
                 "Pending Received Inventory": "processed",
+                "Wating for Payment": "waitingpayment",
                 "Released": "primary",
-                "Completed": "success",
-                "Canceled": "info"
+                "Completed": "success"
             }
         },
         "cTermOfPayment": {

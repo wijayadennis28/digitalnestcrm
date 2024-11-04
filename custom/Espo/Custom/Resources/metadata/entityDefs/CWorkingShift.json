@@ -37,17 +37,6 @@
             "type": "linkMultiple",
             "view": "views/fields/teams"
         },
-        "users": {
-            "type": "linkMultiple",
-            "layoutDetailDisabled": false,
-            "layoutMassUpdateDisabled": false,
-            "layoutListDisabled": false,
-            "noLoad": false,
-            "importDisabled": false,
-            "exportDisabled": false,
-            "customizationDisabled": false,
-            "isCustom": true
-        },
         "workingDate": {
             "notNull": false,
             "type": "date",
@@ -93,6 +82,17 @@
             "exportDisabled": false,
             "customizationDisabled": false,
             "isCustom": true
+        },
+        "users": {
+            "type": "linkMultiple",
+            "layoutDetailDisabled": false,
+            "layoutMassUpdateDisabled": false,
+            "layoutListDisabled": false,
+            "noLoad": false,
+            "importDisabled": false,
+            "exportDisabled": false,
+            "customizationDisabled": false,
+            "isCustom": true
         }
     },
     "links": {
@@ -114,18 +114,19 @@
             "relationName": "entityTeam",
             "layoutRelationshipsDisabled": true
         },
-        "users": {
-            "type": "hasMany",
-            "foreign": "cCWorkingShift",
-            "entity": "User",
-            "audited": false,
-            "isCustom": true
-        },
         "cProductionLogs": {
             "type": "hasMany",
             "foreign": "cWorkingShift",
             "entity": "CProductionLog",
             "audited": true,
+            "isCustom": true
+        },
+        "users": {
+            "type": "hasMany",
+            "relationName": "cUserCWorkingShift",
+            "foreign": "cCWorkingShifts",
+            "entity": "User",
+            "audited": false,
             "isCustom": true
         }
     },

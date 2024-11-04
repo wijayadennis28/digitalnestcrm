@@ -11,9 +11,6 @@
             ],
             [
                 {
-                    "name": "producedAt"
-                },
-                {
                     "name": "startProductionTime"
                 },
                 {
