@@ -74,7 +74,7 @@ class Pdf implements EntryPoint
 
         $contents = $this->service->generate($entityType, $entityId, $templateId);
 
-        $fileName = Util::sanitizeFileName($entity->get('name') ?? 'unnamed');
+        $fileName = Util::sanitizeFileName($entity->get('name').'-'.$entity->get('accountName') ?? 'unnamed');
 
         $fileName = $fileName . '.pdf';
 
