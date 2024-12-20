@@ -1,0 +1,61 @@
+[
+    {
+        "rows": [
+            [
+                {
+                    "name": "number"
+                },
+                {
+                    "name": "salesOrder"
+                }
+            ],
+            [
+                {
+                    "name": "account"
+                },
+                {
+                    "name": "status"
+                }
+            ],
+            [
+                {
+                    "name": "amount"
+                },
+                {
+                    "name": "dateInvoiced"
+                }
+            ],
+            [
+                {
+                    "name": "cTermOfPayment"
+                },
+                {
+                    "name": "cPaymentDueDate"
+                }
+            ]
+        ],
+        "style": "default",
+        "label": "Overview"
+    },
+    {
+        "rows": [
+            [
+                {
+                    "name": "shippingAddress"
+                }
+            ],
+            [
+                {
+                    "name": "shippingContact"
+                }
+            ],
+            [
+                {
+                    "name": "description"
+                }
+            ]
+        ],
+        "style": "default",
+        "label": "Details"
+    }
+]

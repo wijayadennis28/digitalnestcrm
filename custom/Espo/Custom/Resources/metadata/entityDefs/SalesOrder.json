@@ -6,7 +6,7 @@
         "numberA": {
             "prefix": "SO0000-",
             "padLength": 4,
-            "nextNumber": 1
+            "nextNumber": 80
         },
         "status": {
             "options": [

@@ -3,34 +3,46 @@
         "rows": [
             [
                 {
-                    "name": "userName"
-                },
+                    "name": "name"
+                }
+            ],
+            [
                 {
                     "name": "cStaffStatus"
                 }
             ],
             [
                 {
-                    "name": "name"
-                },
-                {
-                    "name": "title"
+                    "name": "userName"
                 }
             ],
             [
                 {
                     "name": "emailAddress"
-                },
-                {
-                    "name": "phoneNumber"
                 }
             ],
             [
                 {
-                    "name": "gender"
+                    "name": "phoneNumber"
+                }
+            ]
+        ],
+        "style": "default",
+        "label": ""
+    },
+    {
+        "rows": [
+            [
+                {
+                    "name": "type"
                 },
                 {
-                    "name": "cESignature"
+                    "name": "isActive"
+                }
+            ],
+            [
+                {
+                    "name": "teams"
                 }
             ]
         ],

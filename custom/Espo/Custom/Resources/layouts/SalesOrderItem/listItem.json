@@ -1,34 +1,42 @@
 [
     {
-        "name": "name"
+        "name": "name",
+        "align": "left",
+        "width": 30
     },
     {
         "name": "quantity",
-        "width": 9
+        "align": "left",
+        "width": 5
     },
     {
-        "name": "cDeliveryDate"
+        "name": "cDeliveryDate",
+        "align": "left",
+        "width": 14
     },
     {
         "name": "taxRate",
-        "width": 9
+        "align": "left",
+        "width": 5
     },
     {
         "name": "listPrice",
         "align": "right",
-        "width": 15
+        "width": 10
     },
     {
         "name": "unitPrice",
         "align": "right",
-        "width": 15
+        "width": 10
     },
     {
-        "name": "discount"
+        "name": "discount",
+        "align": "left",
+        "width": 7
     },
     {
         "name": "amount",
-        "align": "right",
-        "width": 15
+        "align": "left",
+        "width": 10
     }
 ]

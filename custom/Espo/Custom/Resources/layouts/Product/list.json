@@ -1,18 +1,28 @@
 [
     {
-        "name": "cSku"
+        "name": "cSku",
+        "width": 10,
+        "align": "left"
     },
     {
         "name": "name",
-        "link": true
+        "width": 50,
+        "link": true,
+        "align": "left"
     },
     {
-        "name": "cCategoryName"
+        "name": "weight"
     },
     {
-        "name": "unitPrice"
+        "name": "cCategoryName",
+        "align": "left"
     },
     {
-        "name": "quantity"
+        "name": "unitPrice",
+        "align": "left"
+    },
+    {
+        "name": "quantity",
+        "align": "left"
     }
 ]

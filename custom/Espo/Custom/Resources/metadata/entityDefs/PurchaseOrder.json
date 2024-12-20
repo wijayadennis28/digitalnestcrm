@@ -22,7 +22,8 @@
             "default": "javascript: return this.dateTime.getToday();"
         },
         "supplier": {
-            "createButton": true
+            "createButton": true,
+            "audited": true
         },
         "billingContact": {
             "createButton": true,

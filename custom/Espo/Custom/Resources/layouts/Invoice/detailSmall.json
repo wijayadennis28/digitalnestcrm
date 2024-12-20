@@ -1,0 +1,38 @@
+[
+    {
+        "rows": [
+            [
+                {
+                    "name": "number"
+                }
+            ],
+            [
+                {
+                    "name": "status"
+                }
+            ],
+            [
+                {
+                    "name": "salesOrder"
+                }
+            ],
+            [
+                {
+                    "name": "account"
+                }
+            ],
+            [
+                {
+                    "name": "dateInvoiced"
+                }
+            ],
+            [
+                {
+                    "name": "amount"
+                }
+            ]
+        ],
+        "style": "default",
+        "label": ""
+    }
+]

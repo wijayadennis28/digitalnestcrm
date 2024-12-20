@@ -4,7 +4,8 @@
             "type": "varchar",
             "required": false,
             "pattern": "$noBadCharacters",
-            "options": []
+            "options": [],
+            "audited": true
         },
         "description": {
             "type": "text"
@@ -14,8 +15,11 @@
             "readOnly": true
         },
         "modifiedAt": {
+            "notNull": false,
             "type": "datetime",
-            "readOnly": true
+            "readOnly": true,
+            "audited": true,
+            "minuteStep": 30
         },
         "createdBy": {
             "type": "link",
@@ -25,7 +29,8 @@
         "modifiedBy": {
             "type": "link",
             "readOnly": true,
-            "view": "views/fields/user"
+            "view": "views/fields/user",
+            "audited": true
         },
         "assignedUser": {
             "type": "link",
@@ -37,7 +42,8 @@
             "view": "views/fields/teams"
         },
         "product": {
-            "type": "link"
+            "type": "link",
+            "audited": true
         },
         "cProductionLog": {
             "type": "link"
@@ -46,7 +52,8 @@
             "notNull": false,
             "type": "float",
             "decimalPlaces": 1,
-            "isCustom": true
+            "isCustom": true,
+            "audited": true
         }
     },
     "links": {

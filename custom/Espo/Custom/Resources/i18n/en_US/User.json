@@ -2,10 +2,18 @@
     "fields": {
         "cDeliveryOrder": "Delivery Order",
         "cESignature": "E-Signature",
-        "cCWorkingShifts": "Working Shifts"
+        "cCWorkingShifts": "Working Shifts",
+        "cStaffStatus": "Staff Status"
     },
     "links": {
         "cDeliveryOrder": "Delivery Order",
         "cCWorkingShifts": "Working Shifts"
+    },
+    "options": {
+        "cStaffStatus": {
+            "Active": "Active",
+            "Inactive": "Inactive",
+            "": ""
+        }
     }
 }

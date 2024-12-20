@@ -1,0 +1,17 @@
+[
+    {
+        "name": "name",
+        "link": true
+    },
+    {
+        "name": "cStaffStatus"
+    },
+    {
+        "name": "userName",
+        "width": 30
+    },
+    {
+        "name": "emailAddress",
+        "width": 30
+    }
+]

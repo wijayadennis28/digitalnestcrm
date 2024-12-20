@@ -1,0 +1,53 @@
+{
+    "fields": {
+        "numberA": {
+            "prefix": "INV0000-",
+            "nextNumber": 1,
+            "padLength": 4
+        },
+        "name": {
+            "options": []
+        },
+        "cTermOfPayment": {
+            "type": "varchar",
+            "maxLength": 100,
+            "options": [],
+            "isCustom": true,
+            "audited": true
+        },
+        "cPaymentDueDate": {
+            "notNull": false,
+            "type": "date",
+            "audited": true,
+            "isCustom": true
+        },
+        "cDeliveryNote": {
+            "type": "attachmentMultiple",
+            "previewSize": "medium",
+            "audited": true,
+            "maxFileSize": 2,
+            "maxCount": 1,
+            "sourceList": [],
+            "accept": [],
+            "isCustom": true
+        },
+        "cDiscountAmount": {
+            "type": "currency",
+            "onlyDefaultCurrency": true,
+            "conversionDisabled": true,
+            "decimal": true,
+            "audited": true,
+            "isCustom": true
+        }
+    },
+    "links": {
+        "cDeliveryNote": {
+            "type": "hasChildren",
+            "entity": "Attachment",
+            "foreign": "parent",
+            "layoutRelationshipsDisabled": true,
+            "relationName": "attachments",
+            "utility": true
+        }
+    }
+}

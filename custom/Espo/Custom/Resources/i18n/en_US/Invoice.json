@@ -1,0 +1,13 @@
+{
+    "fields": {
+        "account": "Customer",
+        "name": "Invoice ID",
+        "cTermOfPayment": "Term of Payment",
+        "cPaymentDueDate": "Payment Due Date",
+        "cDeliveryNote": "Delivery Note",
+        "cDiscountAmount": "Discount Amount",
+        "cDiscountAmountCurrency": "Discount Amount (Currency)",
+        "cDiscountAmountConverted": "Discount Amount (Converted)",
+        "discountAmount": "Discount Amount (%)"
+    }
+}

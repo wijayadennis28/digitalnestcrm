@@ -4,7 +4,8 @@
             "type": "varchar",
             "required": false,
             "pattern": "$noBadCharacters",
-            "options": []
+            "options": [],
+            "audited": true
         },
         "description": {
             "type": "text"
@@ -30,7 +31,8 @@
         "assignedUser": {
             "type": "link",
             "required": false,
-            "view": "views/fields/assigned-user"
+            "view": "views/fields/assigned-user",
+            "audited": true
         },
         "teams": {
             "type": "linkMultiple",
@@ -55,7 +57,8 @@
         },
         "product": {
             "type": "link",
-            "required": true
+            "required": true,
+            "audited": true
         },
         "inventoryNumber": {
             "type": "link",

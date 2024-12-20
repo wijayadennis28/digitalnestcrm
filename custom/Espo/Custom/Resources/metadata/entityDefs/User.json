@@ -18,6 +18,23 @@
             "exportDisabled": false,
             "customizationDisabled": false,
             "isCustom": true
+        },
+        "cStaffStatus": {
+            "type": "enum",
+            "options": [
+                "",
+                "Active",
+                "Inactive"
+            ],
+            "style": {
+                "": null,
+                "Active": "success",
+                "Inactive": "danger"
+            },
+            "default": null,
+            "audited": true,
+            "maxLength": 100,
+            "isCustom": true
         }
     },
     "links": {

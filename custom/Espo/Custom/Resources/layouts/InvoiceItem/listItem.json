@@ -5,17 +5,14 @@
         "width": 30
     },
     {
-        "name": "cInventoryType"
+        "name": "quantity",
+        "align": "left",
+        "width": 5
     },
     {
         "name": "cDeliveryDate",
         "align": "left",
-        "width": 10
-    },
-    {
-        "name": "quantity",
-        "align": "left",
-        "width": 5
+        "width": 14
     },
     {
         "name": "taxRate",
@@ -24,22 +21,22 @@
     },
     {
         "name": "listPrice",
-        "align": "left",
-        "width": 10
+        "align": "right",
+        "width": 15
     },
     {
         "name": "unitPrice",
-        "align": "left",
-        "width": 10
+        "align": "right",
+        "width": 15
     },
     {
         "name": "discount",
         "align": "left",
-        "width": 10
+        "width": 5
     },
     {
         "name": "amount",
-        "align": "left",
+        "align": "right",
         "width": 10
     }
 ]

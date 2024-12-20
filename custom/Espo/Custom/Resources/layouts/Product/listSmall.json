@@ -7,6 +7,9 @@
         "link": true
     },
     {
+        "name": "weight"
+    },
+    {
         "name": "cCategoryName"
     },
     {
