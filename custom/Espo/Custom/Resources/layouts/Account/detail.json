@@ -24,6 +24,11 @@
                 {
                     "name": "shippingAddress"
                 }
+            ],
+            [
+                {
+                    "name": "cTaxNumber"
+                }
             ]
         ],
         "style": "default",

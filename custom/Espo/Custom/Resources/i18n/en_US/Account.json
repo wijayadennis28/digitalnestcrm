@@ -8,5 +8,8 @@
             "Customer": "Customer",
             "Supplier": "Supplier"
         }
+    },
+    "fields": {
+        "cTaxNumber": "Tax Number"
     }
 }

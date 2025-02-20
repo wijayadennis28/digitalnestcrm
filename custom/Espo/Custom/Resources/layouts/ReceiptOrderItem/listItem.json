@@ -1,20 +1,27 @@
 [
     {
         "name": "product",
-        "align": "left"
+        "align": "left",
+        "width": 55
     },
     {
-        "name": "cInventoryType"
+        "name": "cInventoryType",
+        "align": "left",
+        "width": 15
     },
     {
         "name": "quantity",
-        "width": 9
+        "align": "left",
+        "width": 10
     },
     {
         "name": "quantityReceived",
-        "width": 9
+        "align": "left",
+        "width": 10
     },
     {
-        "name": "cDateReceived"
+        "name": "cDateReceived",
+        "align": "left",
+        "width": 10
     }
 ]

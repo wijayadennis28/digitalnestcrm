@@ -1,0 +1,22 @@
+[
+    {
+        "name": "name",
+        "link": true
+    },
+    {
+        "name": "website",
+        "width": 25,
+        "notSortable": true
+    },
+    {
+        "name": "type",
+        "width": 16
+    },
+    {
+        "name": "billingAddressCountry",
+        "width": 18
+    },
+    {
+        "name": "createdAt"
+    }
+]

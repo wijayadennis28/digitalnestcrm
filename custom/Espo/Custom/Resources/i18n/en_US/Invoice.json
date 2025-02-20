@@ -8,6 +8,9 @@
         "cDiscountAmount": "Discount Amount",
         "cDiscountAmountCurrency": "Discount Amount (Currency)",
         "cDiscountAmountConverted": "Discount Amount (Converted)",
-        "discountAmount": "Discount Amount (%)"
+        "discountAmount": "Discount Amount (%)",
+        "cDpp": "DPP (Nilai Lain)",
+        "cDppCurrency": "DPP (Nilai Lain) (Currency)",
+        "cDppConverted": "DPP (Nilai Lain) (Converted)"
     }
 }

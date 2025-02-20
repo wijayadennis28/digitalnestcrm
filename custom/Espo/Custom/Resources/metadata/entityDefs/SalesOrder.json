@@ -118,6 +118,13 @@
             "decimal": true,
             "audited": true,
             "isCustom": true
+        },
+        "cDpp": {
+            "type": "currency",
+            "decimal": true,
+            "readOnly": true,
+            "inlineEditDisabled": true,
+            "isCustom": true
         }
     },
     "links": {

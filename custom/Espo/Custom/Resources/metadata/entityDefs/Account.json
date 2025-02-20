@@ -22,6 +22,12 @@
                 "Customer": null,
                 "Supplier": null
             }
+        },
+        "cTaxNumber": {
+            "type": "varchar",
+            "maxLength": 100,
+            "options": [],
+            "isCustom": true
         }
     }
 }

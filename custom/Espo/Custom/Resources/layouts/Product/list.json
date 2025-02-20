@@ -1,7 +1,6 @@
 [
     {
         "name": "cSku",
-        "width": 10,
         "align": "left"
     },
     {
@@ -11,7 +10,8 @@
         "align": "left"
     },
     {
-        "name": "weight"
+        "name": "weight",
+        "align": "left"
     },
     {
         "name": "cCategoryName",
