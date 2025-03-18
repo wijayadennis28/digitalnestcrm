@@ -1,0 +1,9 @@
+{
+    "fields": {
+        "numberA": {
+            "prefix": "SRO2025-",
+            "padLength": 4,
+            "nextNumber": 1
+        }
+    }
+}

@@ -97,7 +97,9 @@
             "isCustom": true
         },
         "numberA": {
-            "nextNumber": 1
+            "nextNumber": 1,
+            "prefix": "DO2025-",
+            "padLength": 4
         },
         "cDriver": {
             "type": "varchar",

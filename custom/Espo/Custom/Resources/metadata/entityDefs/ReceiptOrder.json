@@ -28,6 +28,11 @@
                 "Canceled": "info"
             },
             "default": "Completed"
+        },
+        "numberA": {
+            "prefix": "RO2025-",
+            "padLength": 4,
+            "nextNumber": 1
         }
     },
     "links": {

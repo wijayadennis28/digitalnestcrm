@@ -1,7 +1,7 @@
 {
     "fields": {
         "numberA": {
-            "prefix": "INV0000-",
+            "prefix": "INV2025-",
             "nextNumber": 1,
             "padLength": 4
         },

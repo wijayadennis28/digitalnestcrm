@@ -59,6 +59,11 @@
             "maxLength": 100,
             "options": [],
             "isCustom": true
+        },
+        "numberA": {
+            "prefix": "PO2025-",
+            "padLength": 4,
+            "nextNumber": 1
         }
     }
 }
