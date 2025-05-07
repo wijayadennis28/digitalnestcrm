@@ -27,5 +27,49 @@
             "layout": "listForAccount",
             "selectPrimaryFilterName": null
         }
+    },
+    "dynamicLogic": {
+        "fields": {
+            "number": {
+                "visible": {
+                    "conditionGroup": [
+                        {
+                            "type": "isNotEmpty",
+                            "attribute": "id"
+                        }
+                    ]
+                },
+                "readOnly": {
+                    "conditionGroup": [
+                        {
+                            "type": "notEquals",
+                            "attribute": "$user.id",
+                            "data": {
+                                "values": {
+                                    "name": "Dennis W"
+                                }
+                            },
+                            "value": "66efe35c2276c9bd0"
+                        }
+                    ]
+                }
+            },
+            "name": {
+                "visible": {
+                    "conditionGroup": [
+                        {
+                            "type": "equals",
+                            "attribute": "$user.id",
+                            "data": {
+                                "values": {
+                                    "name": "Dennis W"
+                                }
+                            },
+                            "value": "66efe35c2276c9bd0"
+                        }
+                    ]
+                }
+            }
+        }
     }
 }

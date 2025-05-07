@@ -4,9 +4,9 @@
             "options": []
         },
         "numberA": {
-            "prefix": "SO0000-",
+            "prefix": "SO2025-",
             "padLength": 4,
-            "nextNumber": 1
+            "nextNumber": 354
         },
         "status": {
             "options": [
@@ -125,6 +125,10 @@
             "readOnly": true,
             "inlineEditDisabled": true,
             "isCustom": true
+        },
+        "number": {
+            "readOnly": false,
+            "options": []
         }
     },
     "links": {

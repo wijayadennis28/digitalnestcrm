@@ -4,6 +4,9 @@
             [
                 {
                     "name": "number"
+                },
+                {
+                    "name": "name"
                 }
             ],
             [
