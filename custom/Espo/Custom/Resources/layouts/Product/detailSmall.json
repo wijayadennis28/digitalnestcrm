@@ -35,6 +35,9 @@
                 },
                 {
                     "name": "inventoryNumberType"
+                },
+                {
+                    "name": "allowFractionalQuantity"
                 }
             ]
         ],
