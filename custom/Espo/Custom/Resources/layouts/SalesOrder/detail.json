@@ -25,6 +25,9 @@
                     "name": "cTermOfPayment"
                 },
                 {
+                    "name": "cPaymentDate"
+                },
+                {
                     "name": "cPaymentDueDate"
                 }
             ]

@@ -19,5 +19,8 @@
     {
         "name": "status",
         "width": 15
+    },
+    {
+        "name": "cPaymentDate"
     }
 ]

@@ -12,7 +12,8 @@
         "cDiscountAmountConverted": "Discount Amount (Converted)",
         "cDpp": "DPP (Nilai Lain)",
         "cDppCurrency": "DPP (Nilai Lain) (Currency)",
-        "cDppConverted": "DPP (Nilai Lain) (Converted)"
+        "cDppConverted": "DPP (Nilai Lain) (Converted)",
+        "cPaymentDate": "Payment Date"
     },
     "options": {
         "status": {

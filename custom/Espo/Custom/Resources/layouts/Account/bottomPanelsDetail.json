@@ -11,10 +11,13 @@
     "salesOrders": {
         "index": 1
     },
-    "cases": {
+    "purchaseOrders": {
         "index": 2
     },
-    "documents": {
+    "cases": {
         "index": 3
+    },
+    "documents": {
+        "index": 4
     }
 }

@@ -4,9 +4,9 @@
             "options": []
         },
         "numberA": {
-            "prefix": "SO2025-",
+            "prefix": "SO2026-",
             "padLength": 4,
-            "nextNumber": 354
+            "nextNumber": 1
         },
         "status": {
             "options": [
@@ -129,6 +129,11 @@
         "number": {
             "readOnly": false,
             "options": []
+        },
+        "cPaymentDate": {
+            "notNull": false,
+            "type": "date",
+            "isCustom": true
         }
     },
     "links": {
