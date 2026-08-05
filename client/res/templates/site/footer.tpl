@@ -1,4 +1,4 @@
-<p class="credit small">&copy; {$smarty.now|date_format:"%Y"}
+<p class="credit small">&copy;
 <a
     href="https://digital-nest.tech/"
     title="Powered by DigitalNest"
