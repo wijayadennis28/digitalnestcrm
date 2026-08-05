@@ -307,6 +307,7 @@ return [
   'maintenanceMode' => false,
   'cronDisabled' => false,
   'adminPanelIframeUrl' => 'https://s.espocrm.com/?sales-pack=bcd3361258b6d66fc350488ed9575786&advanced-pack=02847865974db42443189e5f30908f60',
+  'adminPanelIframeDisabled' => true,
   'userThemesDisabled' => true,
   'avatarsDisabled' => false,
   'scopeColorsDisabled' => false,
