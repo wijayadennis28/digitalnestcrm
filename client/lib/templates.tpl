@@ -1387,7 +1387,7 @@ res/templates/site/header.tpl
 
 _delimiter_aij2y6nstkv
 res/templates/site/footer.tpl
-<p class="credit small">&copy; {$smarty.now|date_format:"%Y"}
+<p class="credit small">&copy;
 <a
     href="https://digital-nest.tech/"
     title="Powered by DigitalNest"
