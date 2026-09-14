@@ -1387,13 +1387,7 @@ res/templates/site/header.tpl
 
 _delimiter_aij2y6nstkv
 res/templates/site/footer.tpl
-<p class="credit small">&copy;
-<a
-    href="https://digital-nest.tech/"
-    title="Powered by DigitalNest"
-    rel="noopener" target="_blank"
-    tabindex="-1"
->DigitalNest</a></p>
+<p class="credit small" style="font-size: 70%;">&copy; <a href="https://digital-nest.tech/" title="Powered by DigitalNest" rel="noopener" target="_blank" tabindex="-1">DigitalNest</a> <span class="text-muted">· <a class="text-muted" href="http://www.espocrm.com" rel="noopener" target="_blank" tabindex="-1">EspoCRM</a></span></p>
 
 _delimiter_aij2y6nstkv
 res/templates/settings/fields/dashboard-layout/edit.tpl
